@@ -28,6 +28,9 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8
+
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
 
