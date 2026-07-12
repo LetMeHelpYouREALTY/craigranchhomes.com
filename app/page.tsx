@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/layouts/Navbar";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -8,35 +9,20 @@ import Link from "next/link";
 import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 
+// The site-wide RealEstateAgent + WebSite JSON-LD (rendered in app/layout.tsx) already
+// covers the homepage with data that matches the Google Business Profile NAP exactly, so
+// no page-specific schema is duplicated here. Only the canonical needs to be self-referencing.
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default async function Home() {
   const config = await getPageDomainConfig();
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: `Dr. Jan Duffy - ${config.neighborhood} Real Estate`,
-    url: `https://${config.domain !== "default" ? config.domain : "heyberkshire.com"}`,
-    telephone: "+17022221964",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89134",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
-    },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
       <Navbar />
       <main>
         {/* Domain-Aware Hero */}
