@@ -74,3 +74,21 @@ export function getDomainConfig(hostname: string): DomainConfig {
   const clean = hostname.replace(/^www\./, "").toLowerCase();
   return DOMAIN_CONFIGS[clean] ?? DEFAULT_CONFIG;
 }
+
+/** Primary/fallback domain used when the request hostname isn't a recognized site in the network. */
+export const CANONICAL_DOMAIN = "heyberkshire.com";
+
+/**
+ * Resolve the canonical apex domain (no protocol, no "www.") for a given request hostname.
+ * Used to build self-referencing canonical URLs, sitemaps, and robots directives so every
+ * domain in the network points Google to itself instead of a different property.
+ */
+export function getCanonicalDomain(hostname: string): string {
+  const clean = hostname.replace(/^www\./, "").toLowerCase().split(":")[0];
+  return clean && DOMAIN_CONFIGS[clean] ? clean : CANONICAL_DOMAIN;
+}
+
+/** Resolve the canonical `https://` base URL (no trailing slash) for a given request hostname. */
+export function getCanonicalBaseUrl(hostname: string): string {
+  return `https://${getCanonicalDomain(hostname)}`;
+}

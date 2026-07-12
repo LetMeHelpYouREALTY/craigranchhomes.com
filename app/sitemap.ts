@@ -1,7 +1,13 @@
 import { MetadataRoute } from "next";
+import { headers } from "next/headers";
+import { getCanonicalBaseUrl } from "@/lib/domain-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://heyberkshire.com";
+  // Self-reference the requesting domain so each site in the network (heyberkshire.com
+  // plus every neighborhood-specific domain) submits its own URLs to Google Search Console
+  // instead of pointing every property at the same canonical host.
+  const hostname = headers().get("host") || "";
+  const baseUrl = getCanonicalBaseUrl(hostname);
   const lastModified = new Date();
 
   // Core pages
@@ -50,7 +56,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const fiftyPlusCommunityPages = [
     { url: `${baseUrl}/55-plus-communities/sun-city-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities/sun-city-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/sun-city-aliante`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities/del-webb-lake-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/heritage-stonebridge`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/solera-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/trilogy-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
   // Neighborhood pages
