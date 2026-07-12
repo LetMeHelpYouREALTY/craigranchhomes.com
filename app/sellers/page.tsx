@@ -20,6 +20,9 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/sellers",
+  },
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
     "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 500-1942.",

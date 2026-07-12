@@ -21,6 +21,9 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/buyers",
+  },
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
   description:
     "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 500-1942.",
