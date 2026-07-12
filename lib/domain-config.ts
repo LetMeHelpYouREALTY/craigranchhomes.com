@@ -21,6 +21,7 @@ export interface DomainConfig {
 const REALSCOUT_AGENT_ID = "QWdlbnQtMjI1MDUw";
 
 export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
+  "craigranchhomes.com": { domain: "craigranchhomes.com", neighborhood: "Craig Ranch", tagline: "Craig Ranch Homes for Sale", description: "Search Craig Ranch homes for sale in North Las Vegas. Expert real estate guidance from Dr. Jan Duffy.", heroHeadline: "Craig Ranch Homes for Sale", heroSubheadline: "Established North Las Vegas living next to Craig Ranch Regional Park's trails, lake, and dog park.", keywords: ["Craig Ranch homes for sale", "Craig Ranch North Las Vegas", "Craig Ranch real estate"], pageType: "community", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Craig Ranch Specialist", ctaHeadline: "Find Your Craig Ranch Home", ctaSubheadline: "I know every street and floor plan in Craig Ranch. Let me help you find the right one." },
   "consenzaestates.com": { domain: "consenzaestates.com", neighborhood: "Consenza Estates", tagline: "Luxury Living in Consenza Estates", description: "Find your dream home in Consenza Estates, Las Vegas. Expert guidance from Dr. Jan Duffy.", heroHeadline: "Consenza Estates Homes for Sale", heroSubheadline: "Exclusive properties in one of Las Vegas' most sought-after communities.", keywords: ["Consenza Estates homes", "Las Vegas luxury real estate", "Consenza Estates Las Vegas"], pageType: "luxury", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Consenza Estates Expert", ctaHeadline: "Find Your Consenza Estates Home", ctaSubheadline: "I know every listing in this community. Let me match you with the right home." },
   "aliantehomesforsale.com": { domain: "aliantehomesforsale.com", neighborhood: "Aliante", tagline: "Aliante Homes for Sale", description: "Search Aliante homes for sale in North Las Vegas. Expert real estate guidance from Dr. Jan Duffy.", heroHeadline: "Aliante Homes for Sale", heroSubheadline: "Master-planned living in the heart of North Las Vegas.", keywords: ["Aliante homes for sale", "Aliante North Las Vegas", "Aliante real estate"], pageType: "community", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Aliante Specialist", ctaHeadline: "Search Aliante Homes Today", ctaSubheadline: "Get instant access to all Aliante listings with expert guidance." },
   "californiaforeverbroker.com": { domain: "californiaforeverbroker.com", neighborhood: "Las Vegas", tagline: "Relocating from California to Las Vegas", description: "California to Las Vegas relocation specialist. Find your Nevada dream home with Dr. Jan Duffy.", heroHeadline: "Leaving California for Las Vegas?", heroSubheadline: "No state income tax, lower cost of living, and year-round sunshine. Let me help you make the move.", keywords: ["California to Las Vegas move", "relocation Las Vegas", "Nevada real estate for Californians"], pageType: "lifestyle", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Relocation Expert", ctaHeadline: "Your Nevada Fresh Start Awaits", ctaSubheadline: "I've helped hundreds of California families make the move. Let's talk." },
@@ -75,17 +76,29 @@ export function getDomainConfig(hostname: string): DomainConfig {
   return DOMAIN_CONFIGS[clean] ?? DEFAULT_CONFIG;
 }
 
-/** Primary/fallback domain used when the request hostname isn't a recognized site in the network. */
+/** Primary/fallback domain used when the request hostname isn't a real custom domain (e.g. localhost, an IP, or a Vercel preview URL). */
 export const CANONICAL_DOMAIN = "heyberkshire.com";
+
+/** Hostnames that should never be treated as a self-referencing canonical domain. */
+const NON_CANONICAL_HOSTNAME_PATTERN =
+  /^(localhost|127\.0\.0\.1|0\.0\.0\.0|\d{1,3}(\.\d{1,3}){3})$/i;
 
 /**
  * Resolve the canonical apex domain (no protocol, no "www.") for a given request hostname.
  * Used to build self-referencing canonical URLs, sitemaps, and robots directives so every
  * domain in the network points Google to itself instead of a different property.
+ *
+ * Deliberately does NOT require the hostname to already be a key in DOMAIN_CONFIGS - any
+ * real custom domain the app is served on (whether or not its neighborhood-specific content
+ * has been added yet) should self-reference. Only obviously-non-production hosts (localhost,
+ * bare IPs, and *.vercel.app preview deployments) fall back to the primary domain.
  */
 export function getCanonicalDomain(hostname: string): string {
   const clean = hostname.replace(/^www\./, "").toLowerCase().split(":")[0];
-  return clean && DOMAIN_CONFIGS[clean] ? clean : CANONICAL_DOMAIN;
+  if (!clean || NON_CANONICAL_HOSTNAME_PATTERN.test(clean) || clean.endsWith(".vercel.app")) {
+    return CANONICAL_DOMAIN;
+  }
+  return clean;
 }
 
 /** Resolve the canonical `https://` base URL (no trailing slash) for a given request hostname. */

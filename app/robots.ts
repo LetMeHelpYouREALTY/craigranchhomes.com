@@ -13,7 +13,11 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/admin/", "/monitoring/"],
+        // /cdn-cgi/ is a Cloudflare-injected path (email address obfuscation rewrites
+        // mailto: links into /cdn-cgi/l/email-protection#...), not an app route - it 404s
+        // at the Vercel origin and shows up in Search Console's Page Indexing report.
+        // Disallow it so Googlebot stops trying to (re)crawl it.
+        disallow: ["/api/", "/admin/", "/monitoring/", "/cdn-cgi/"],
       },
       {
         // Google's AI training/SGE crawler - explicitly allowed for AI Overviews visibility.
