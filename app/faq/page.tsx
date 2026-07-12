@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "selling a home Henderson",
     "BHHS agent questions",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/faq",
+  },
 };
 
 // Breadcrumb items
@@ -173,6 +176,7 @@ const pageSchemas = combineSchemas(
       "Comprehensive FAQ about Las Vegas real estate, buying, selling, investing, and working with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
     url: "/faq",
     dateModified: "2026-01-25",
+    speakableSelectors: ["h1", "[data-speakable]"],
   }),
   generateFAQSchema(allFaqs)
 );
@@ -208,7 +212,7 @@ export default function FAQPage() {
                 </h2>
                 <div className="space-y-4">
                   {category.faqs.map((faq, index) => (
-                    <div key={index} className="bg-slate-50 rounded-lg p-6">
+                    <div key={index} className="bg-slate-50 rounded-lg p-6" data-speakable>
                       <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
                       <p className="text-slate-600">{faq.a}</p>
                     </div>

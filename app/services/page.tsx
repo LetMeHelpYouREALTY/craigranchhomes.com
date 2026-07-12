@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     "55+ community specialist",
     "California relocation Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/services",
+  },
 };
 
 const servicesSchema = {

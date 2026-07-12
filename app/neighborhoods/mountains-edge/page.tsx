@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "southwest Las Vegas homes",
     "affordable Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/mountains-edge",
+  },
 };
 
 const faqSchema = {

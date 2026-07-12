@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "Henderson real estate market",
     "Las Vegas home prices",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/market-update",
+  },
 };
 
 const articleSchema = {

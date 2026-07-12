@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "MacDonald Highlands Henderson",
     "luxury real estate agent Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/luxury-homes",
+  },
 };
 
 const luxurySchema = {

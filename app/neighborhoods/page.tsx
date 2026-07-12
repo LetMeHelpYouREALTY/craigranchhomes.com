@@ -4,6 +4,8 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
+import { BreadcrumbSchema } from "@/components/SchemaScript";
+import SchemaScript from "@/components/SchemaScript";
 
 export const metadata: Metadata = {
   title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
@@ -16,7 +18,15 @@ export const metadata: Metadata = {
     "best neighborhoods Las Vegas",
     "where to live Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods",
+  },
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Neighborhoods", url: "/neighborhoods" },
+];
 
 const neighborhoods = [
   {
@@ -111,9 +121,29 @@ const neighborhoods = [
   },
 ];
 
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Las Vegas & Henderson Neighborhoods",
+  description:
+    "Guide to the best Las Vegas and Henderson neighborhoods, with median prices, highlights, and expert guidance from Dr. Jan Duffy.",
+  url: "https://heyberkshire.com/neighborhoods",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: neighborhoods.map((n, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `https://heyberkshire.com/neighborhoods/${n.slug}`,
+      name: n.name,
+    })),
+  },
+};
+
 export default function NeighborhoodsPage() {
   return (
     <>
+      <SchemaScript schema={collectionSchema} id="collection-schema" />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

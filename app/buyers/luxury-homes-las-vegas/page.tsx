@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     "guard gated communities Las Vegas",
     "Berkshire Hathaway luxury homes",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/buyers/luxury-homes-las-vegas",
+  },
 };
 
 const faqSchema = {

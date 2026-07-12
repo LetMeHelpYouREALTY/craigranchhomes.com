@@ -12,6 +12,13 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import SchemaScript from "@/components/SchemaScript";
+import {
+  generateBreadcrumbSchema,
+  generateSeniorCommunitySchema,
+  generateFAQSchema,
+  combineSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Del Webb at Lake Las Vegas Homes | Berkshire Hathaway HomeServices",
@@ -24,11 +31,66 @@ export const metadata: Metadata = {
     "lakefront retirement community",
     "Berkshire Hathaway Del Webb",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities/del-webb-lake-las-vegas",
+  },
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "55+ Communities", url: "/55-plus-communities" },
+  { name: "Del Webb at Lake Las Vegas", url: "/55-plus-communities/del-webb-lake-las-vegas" },
+];
+
+const communityAmenities = [
+  { name: "Resort-Style Pool & Spa", description: "Indoor/outdoor pools with lap swimming" },
+  { name: "Modern Fitness Center", description: "State-of-the-art equipment and classes" },
+  { name: "Pickleball & Tennis Courts", description: "Dedicated courts plus bocce ball" },
+  { name: "Lake Las Vegas Access", description: "Kayaking, paddleboarding, and village shops/restaurants" },
+  { name: "Reflection Bay Golf Club", description: "Championship golf on Lake Las Vegas" },
+  { name: "Del Webb Lifestyle Programming", description: "Organized clubs, travel, and social events" },
+];
+
+const delWebbFaqs = [
+  {
+    question: "What is the age requirement at Del Webb at Lake Las Vegas?",
+    answer:
+      "Del Webb at Lake Las Vegas is a 55+ active adult community. At least one resident per home must be 55 or older, and permanent residents under 19 are not permitted, per standard Del Webb community guidelines.",
+  },
+  {
+    question: "What are the HOA fees at Del Webb at Lake Las Vegas?",
+    answer:
+      "Monthly HOA fees at Del Webb at Lake Las Vegas typically range from $200-$280, covering amenity center access, common-area maintenance, and Del Webb lifestyle programming.",
+  },
+  {
+    question: "What makes Del Webb at Lake Las Vegas different from other 55+ communities?",
+    answer:
+      "It's the only 55+ community directly on Lake Las Vegas, combining Del Webb's newest construction (2016-present) with lakefront and mountain views, plus access to Reflection Bay Golf Club and the Lake Las Vegas Village.",
+  },
+];
+
+const communitySchema = generateSeniorCommunitySchema({
+  name: "Del Webb at Lake Las Vegas",
+  description:
+    "Lakefront 55+ active adult community by Del Webb on the shores of Lake Las Vegas, featuring modern homes, resort amenities, and Del Webb lifestyle programming.",
+  priceRange: "$400K-$900K",
+  numberOfHomes: 1800,
+  yearBuilt: "2016",
+  amenities: communityAmenities,
+  hoaFees: "$200-$280/month",
+  city: "Henderson",
+});
+
+const pageSchema = combineSchemas(
+  communitySchema,
+  generateBreadcrumbSchema(breadcrumbs),
+  generateFAQSchema(delWebbFaqs)
+);
 
 export default function DelWebbLakeLasVegasPage() {
   return (
     <>
+      <SchemaScript schema={pageSchema} id="del-webb-schema" />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

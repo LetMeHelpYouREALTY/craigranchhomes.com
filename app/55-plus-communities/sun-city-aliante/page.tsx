@@ -33,6 +33,9 @@ export const metadata: Metadata = {
       "Full amenities at the lowest price point. Golf, pools, fitness, 100+ clubs. From $280K. Dr. Jan Duffy, BHHS Nevada Properties.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities/sun-city-aliante",
+  },
 };
 
 const communitySchema = {

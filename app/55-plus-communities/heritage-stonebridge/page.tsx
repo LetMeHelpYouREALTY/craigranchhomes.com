@@ -34,6 +34,9 @@ export const metadata: Metadata = {
       "Boutique community with premium Summerlin location. Guard-gated security, near Downtown Summerlin. From $400K. Dr. Jan Duffy, BHHS.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities/heritage-stonebridge",
+  },
 };
 
 const communitySchema = {

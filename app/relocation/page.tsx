@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     "moving from California to Nevada",
     "Las Vegas real estate relocation",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/relocation",
+  },
 };
 
 const relocationSchema = {

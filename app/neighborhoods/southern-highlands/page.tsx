@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Las Vegas golf community",
     "guard gated Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/southern-highlands",
+  },
 };
 
 const faqSchema = {

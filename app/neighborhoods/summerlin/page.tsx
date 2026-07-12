@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "Summerlin Las Vegas",
     "luxury homes Summerlin",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/summerlin",
+  },
 };
 
 // Breadcrumb items for this page

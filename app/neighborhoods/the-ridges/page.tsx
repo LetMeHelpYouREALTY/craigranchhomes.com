@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "luxury homes Las Vegas",
     "guard gated Summerlin",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/the-ridges",
+  },
 };
 
 const faqSchema = {

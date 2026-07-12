@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Nevada housing market",
     "Berkshire Hathaway market report",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/market-report",
+  },
 };
 
 // Report Schema

@@ -47,6 +47,9 @@ export const metadata: Metadata = {
       "Sun City, Del Webb, Heritage at Stonebridge & more—Dr. Duffy specializes in active adult living. Berkshire Hathaway HomeServices Nevada Properties.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities",
+  },
 };
 
 const faqSchema = {

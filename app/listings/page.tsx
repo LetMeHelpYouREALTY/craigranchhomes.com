@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     "houses for sale Las Vegas",
     "Berkshire Hathaway listings",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/listings",
+  },
 };
 
 const listingsSchema = {

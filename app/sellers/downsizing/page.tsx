@@ -14,6 +14,9 @@ import {
   Sun,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { BreadcrumbSchema, FAQSchema } from "@/components/SchemaScript";
+import SchemaScript from "@/components/SchemaScript";
+import { generateServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Downsizing in Las Vegas | Berkshire Hathaway HomeServices",
@@ -26,11 +29,58 @@ export const metadata: Metadata = {
     "empty nester Las Vegas",
     "Berkshire Hathaway HomeServices downsizing",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/sellers/downsizing",
+  },
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Sellers", url: "/sellers" },
+  { name: "Downsizing", url: "/sellers/downsizing" },
+];
+
+const faqs = [
+  {
+    question: "How much can I expect to pocket when downsizing?",
+    answer:
+      "Most downsizers moving from large family homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
+  },
+  {
+    question: "What if my home needs repairs before selling?",
+    answer:
+      "Dr. Jan helps you prioritize repairs that matter—and skip those that don't. Often, minor cosmetic updates (paint, landscaping) provide the best ROI. For larger issues, she can connect you with contractors or explore as-is selling options.",
+  },
+  {
+    question: "How do I choose between 55+ communities?",
+    answer:
+      "Key factors include HOA fees and what they cover, community size and culture, amenities that match your interests, location relative to family/healthcare, and financial stability of the HOA. Dr. Jan tours communities with you and provides unbiased comparisons.",
+  },
+  {
+    question: "Can I buy before selling my current home?",
+    answer:
+      "Yes, several options exist: bridge loans, HELOCs, or making offers contingent on selling. Dr. Jan works with lenders who specialize in these scenarios and can advise on the best approach for your financial situation.",
+  },
+  {
+    question: "What about all my stuff?",
+    answer:
+      "Decluttering is part of downsizing. Dr. Jan recommends starting early—months before listing. She can refer you to professional organizers and estate sale companies if needed. Many clients find the process liberating once they start.",
+  },
+];
+
+const serviceSchema = generateServiceSchema({
+  name: "Downsizing Real Estate Services",
+  description:
+    "Expert guidance for Las Vegas homeowners downsizing from large family homes to 55+ communities, single-story homes, or low-maintenance condos.",
+  url: "/sellers/downsizing",
+});
 
 export default function DownsizingPage() {
   return (
     <>
+      <SchemaScript schema={serviceSchema} id="service-schema" />
+      <BreadcrumbSchema items={breadcrumbs} />
+      <FAQSchema faqs={faqs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -395,31 +445,10 @@ export default function DownsizingPage() {
               Downsizing FAQs
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  q: "How much can I expect to pocket when downsizing?",
-                  a: "Most downsizers moving from large family homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
-                },
-                {
-                  q: "What if my home needs repairs before selling?",
-                  a: "Dr. Jan helps you prioritize repairs that matter—and skip those that don't. Often, minor cosmetic updates (paint, landscaping) provide the best ROI. For larger issues, she can connect you with contractors or explore as-is selling options.",
-                },
-                {
-                  q: "How do I choose between 55+ communities?",
-                  a: "Key factors include HOA fees and what they cover, community size and culture, amenities that match your interests, location relative to family/healthcare, and financial stability of the HOA. Dr. Jan tours communities with you and provides unbiased comparisons.",
-                },
-                {
-                  q: "Can I buy before selling my current home?",
-                  a: "Yes, several options exist: bridge loans, HELOCs, or making offers contingent on selling. Dr. Jan works with lenders who specialize in these scenarios and can advise on the best approach for your financial situation.",
-                },
-                {
-                  q: "What about all my stuff?",
-                  a: "Decluttering is part of downsizing. Dr. Jan recommends starting early—months before listing. She can refer you to professional organizers and estate sale companies if needed. Many clients find the process liberating once they start.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+              {faqs.map((faq) => (
+                <div key={faq.question} className="bg-white border border-slate-200 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

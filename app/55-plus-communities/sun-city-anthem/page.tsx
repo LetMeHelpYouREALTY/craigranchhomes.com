@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     "active adult Henderson",
     "Berkshire Hathaway Sun City Anthem",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities/sun-city-anthem",
+  },
 };
 
 // Breadcrumb items

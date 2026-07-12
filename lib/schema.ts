@@ -55,6 +55,7 @@ export interface SeniorCommunityData {
   longitude?: number;
   hoaFees?: string;
   ageRestriction?: string;
+  city?: string;
 }
 
 // ============================================================================
@@ -235,6 +236,20 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
 }
 
 /**
+ * Generate SpeakableSpecification for voice assistants and AI answer engines
+ * (Google Assistant, AI Overviews, ChatGPT/Perplexity browsing, etc.)
+ * Improves GEO/AEO by telling answer engines which on-page content is
+ * safe to read aloud / quote verbatim.
+ * @see https://schema.org/SpeakableSpecification
+ */
+export function generateSpeakableSchema(cssSelectors: string[] = ["h1", "[data-speakable]"]) {
+  return {
+    "@type": "SpeakableSpecification",
+    cssSelector: cssSelectors,
+  };
+}
+
+/**
  * Generate WebSite schema with search action
  */
 export function generateWebSiteSchema() {
@@ -383,7 +398,7 @@ export function generateSeniorCommunitySchema(community: SeniorCommunityData) {
     description: community.description,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Henderson",
+      addressLocality: community.city || "Henderson",
       addressRegion: "NV",
       addressCountry: "US",
     },
@@ -532,6 +547,8 @@ export function generateWebPageSchema(page: {
   url: string;
   datePublished?: string;
   dateModified?: string;
+  /** CSS selectors for AEO/GEO answer engines (voice assistants, AI Overviews). */
+  speakableSelectors?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -548,6 +565,9 @@ export function generateWebPageSchema(page: {
     },
     ...(page.datePublished && { datePublished: page.datePublished }),
     ...(page.dateModified && { dateModified: page.dateModified }),
+    ...(page.speakableSelectors && {
+      speakable: generateSpeakableSchema(page.speakableSelectors),
+    }),
   };
 }
 

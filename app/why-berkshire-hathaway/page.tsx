@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "trusted real estate brand",
     "BHHS Nevada Properties",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/why-berkshire-hathaway",
+  },
 };
 
 // Organization Schema

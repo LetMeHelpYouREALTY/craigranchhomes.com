@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "retirement community Las Vegas",
     "Berkshire Hathaway Sun City",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities/sun-city-summerlin",
+  },
 };
 
 const communitySchema = {

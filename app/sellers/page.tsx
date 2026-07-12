@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     "Las Vegas real estate agent",
     "Summerlin home selling",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/sellers",
+  },
 };
 
 const sellerSchema = {
