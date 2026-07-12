@@ -6,7 +6,13 @@ import { getDomainConfig, getCanonicalBaseUrl } from "@/lib/domain-config";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import SchemaScript from "@/components/SchemaScript";
-import { generateRealEstateAgentSchema, generateWebSiteSchema, combineSchemas } from "@/lib/schema";
+import {
+  generateRealEstateAgentSchema,
+  generateWebSiteSchema,
+  combineSchemas,
+} from "@/lib/schema";
+
+export const runtime = "edge";
 
 export async function generateMetadata(): Promise<Metadata> {
   const domain = headers().get("x-domain") || "";
@@ -25,7 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
       title: config.heroHeadline,
       description: config.description,
       url: baseUrl,
-      siteName: "Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada Properties",
+      siteName:
+        "Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada Properties",
       type: "website",
     },
     robots: {
@@ -46,11 +53,18 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   // Site-wide LocalBusiness/RealEstateAgent + WebSite structured data, rendered on every
   // page so Google Search Console and Rich Results can resolve the business entity
   // consistently across the whole domain network (NAP always matches the GBP profile).
-  const siteSchema = combineSchemas(generateRealEstateAgentSchema(), generateWebSiteSchema());
+  const siteSchema = combineSchemas(
+    generateRealEstateAgentSchema(),
+    generateWebSiteSchema(),
+  );
 
   return (
     <html lang="en" className={GeistSans.className}>
