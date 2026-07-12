@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Henderson Nevada",
     "Green Valley Henderson",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/henderson",
+  },
 };
 
 const neighborhoodSchema = {

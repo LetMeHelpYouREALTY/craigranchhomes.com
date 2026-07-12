@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Henderson master planned",
     "resort style community",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/inspirada",
+  },
 };
 
 const faqSchema = {

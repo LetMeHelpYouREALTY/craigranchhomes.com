@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "northwest Las Vegas homes",
     "new construction Skye Canyon",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/skye-canyon",
+  },
 };
 
 const faqSchema = {

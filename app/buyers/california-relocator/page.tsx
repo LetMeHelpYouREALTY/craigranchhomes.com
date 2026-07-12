@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "Las Vegas homes California buyers",
     "Berkshire Hathaway HomeServices relocation",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/buyers/california-relocator",
+  },
 };
 
 const faqSchema = {

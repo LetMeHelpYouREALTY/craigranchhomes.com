@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     "Summerlin home value",
     "Henderson home value",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/home-valuation",
+  },
 };
 
 // FAQ Schema for SEO

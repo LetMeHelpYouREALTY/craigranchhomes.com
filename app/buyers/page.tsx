@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "California relocation Las Vegas",
     "55+ communities Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/buyers",
+  },
 };
 
 const buyerSchema = {

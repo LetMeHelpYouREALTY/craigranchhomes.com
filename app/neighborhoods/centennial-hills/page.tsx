@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "northwest Las Vegas real estate",
     "family homes Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/centennial-hills",
+  },
 };
 
 const faqSchema = {

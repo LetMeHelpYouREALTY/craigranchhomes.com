@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "Las Vegas tech hub",
     "Berkshire Hathaway market insights",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/market-insights",
+  },
 };
 
 const reportSchema = {

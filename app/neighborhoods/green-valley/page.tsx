@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Green Valley real estate",
     "Green Valley Ranch",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/green-valley",
+  },
 };
 
 const faqSchema = {

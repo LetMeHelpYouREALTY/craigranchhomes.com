@@ -34,6 +34,9 @@ export const metadata: Metadata = {
       "Close-knit community with guard-gated security. Lower HOA fees, Henderson safety. From $380K. Dr. Jan Duffy, BHHS.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://heyberkshire.com/55-plus-communities/solera-anthem",
+  },
 };
 
 const communitySchema = {

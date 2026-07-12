@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "first time home buyer Las Vegas",
     "new construction North Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/neighborhoods/north-las-vegas",
+  },
 };
 
 const faqSchema = {

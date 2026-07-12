@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "Las Vegas realtor contact",
     "schedule real estate appointment",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/contact",
+  },
 };
 
 const contactSchema = {

@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "Henderson real estate agent",
     "Summerlin realtor",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/about",
+  },
 };
 
 // Person Schema for Dr. Jan Duffy

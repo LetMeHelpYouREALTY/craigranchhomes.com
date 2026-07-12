@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     "Lennar Las Vegas",
     "KB Home Las Vegas",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/new-construction",
+  },
 };
 
 const faqSchema = {

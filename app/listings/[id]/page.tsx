@@ -4,10 +4,20 @@ import Image from "next/image";
 import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
+import SchemaScript, { BreadcrumbSchema } from "@/components/SchemaScript";
+import { generateRealEstateListingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Property Details | Las Vegas & Henderson Real Estate",
   description: "View detailed information about this property listing in Las Vegas or Henderson, NV.",
+  // This route currently renders placeholder/demo data (see getProperty below),
+  // not a real MLS-backed listing, so it must stay out of the search index
+  // until it's wired up to RealScout to avoid indexing identical thin/duplicate
+  // content under every :id.
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 // This would typically fetch from RealScout API
@@ -36,8 +46,33 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
   const { id } = await params;
   const property = await getProperty(id);
 
+  const listingSchema = generateRealEstateListingSchema({
+    name: property.name,
+    description: property.description,
+    price: Number(property.price.replace(/[^0-9.]/g, "")),
+    address: {
+      street: "",
+      city: "Las Vegas",
+      state: "NV",
+      zip: "",
+    },
+    bedrooms: property.bedrooms,
+    bathrooms: property.bathrooms,
+    sqft: property.squareFeet,
+    images: [property.image],
+    url: `/listings/${id}`,
+  });
+
   return (
     <>
+      <SchemaScript schema={listingSchema} id="listing-schema" />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Listings", url: "/listings" },
+          { name: property.name, url: `/listings/${id}` },
+        ]}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

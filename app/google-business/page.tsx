@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     url: "https://heyberkshire.com/google-business",
     type: "profile",
   },
+  alternates: {
+    canonical: "https://heyberkshire.com/google-business",
+  },
 };
 
 export default function GoogleBusinessPage() {

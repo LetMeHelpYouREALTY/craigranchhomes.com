@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "VA loans Las Vegas",
     "Berkshire Hathaway HomeServices first time buyer",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/buyers/first-time-buyers",
+  },
 };
 
 const faqSchema = {

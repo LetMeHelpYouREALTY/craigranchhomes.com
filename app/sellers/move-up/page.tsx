@@ -13,6 +13,9 @@ import {
   Shield,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { BreadcrumbSchema, FAQSchema } from "@/components/SchemaScript";
+import SchemaScript from "@/components/SchemaScript";
+import { generateServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Move-Up Sellers Las Vegas | Berkshire Hathaway HomeServices",
@@ -25,11 +28,58 @@ export const metadata: Metadata = {
     "upgrade home Las Vegas",
     "Berkshire Hathaway HomeServices seller",
   ],
+  alternates: {
+    canonical: "https://heyberkshire.com/sellers/move-up",
+  },
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Sellers", url: "/sellers" },
+  { name: "Move-Up Sellers", url: "/sellers/move-up" },
+];
+
+const faqs = [
+  {
+    question: "How much equity do I need to move up?",
+    answer:
+      "Most move-up buyers have 20-40% equity in their current home. If you purchased between 2015-2021, Las Vegas appreciation means you likely have $100,000-$250,000+ in equity. Dr. Jan provides free equity analysis to show exactly what you have to work with.",
+  },
+  {
+    question: "What if I can't find a new home before selling?",
+    answer:
+      "Several options exist: negotiate a rent-back agreement (stay in your sold home for 30-60 days), arrange temporary housing, or use a bridge loan to buy before selling. Dr. Jan helps you choose the best strategy for your situation.",
+  },
+  {
+    question: "Should I upgrade or just get more space?",
+    answer:
+      "It depends on your goals. Sometimes moving to a larger home in your current neighborhood is the best value. Other times, upgrading to a premium location provides better long-term appreciation. Dr. Jan analyzes both options to help you decide.",
+  },
+  {
+    question: "How do schools factor into a move-up decision?",
+    answer:
+      "Schools significantly impact both your quality of life and resale value. Moving to better school zones (like Summerlin's Palo Verde High School district or Henderson's Coronado) often justifies higher prices through appreciation and demand.",
+  },
+  {
+    question: "What are the tax implications of selling and buying?",
+    answer:
+      "If you've lived in your home 2+ years, up to $250,000 ($500,000 for couples) in gains are tax-free. For larger gains, consult a tax advisor. Dr. Jan can refer you to trusted CPAs who specialize in real estate transactions.",
+  },
+];
+
+const serviceSchema = generateServiceSchema({
+  name: "Move-Up Seller Services",
+  description:
+    "Guidance for Las Vegas homeowners leveraging home equity to move up into a larger or upgraded property, with coordinated sell-and-buy transactions.",
+  url: "/sellers/move-up",
+});
 
 export default function MoveUpSellerPage() {
   return (
     <>
+      <SchemaScript schema={serviceSchema} id="service-schema" />
+      <BreadcrumbSchema items={breadcrumbs} />
+      <FAQSchema faqs={faqs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -344,31 +394,10 @@ export default function MoveUpSellerPage() {
               Move-Up Seller FAQs
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  q: "How much equity do I need to move up?",
-                  a: "Most move-up buyers have 20-40% equity in their current home. If you purchased between 2015-2021, Las Vegas appreciation means you likely have $100,000-$250,000+ in equity. Dr. Jan provides free equity analysis to show exactly what you have to work with.",
-                },
-                {
-                  q: "What if I can't find a new home before selling?",
-                  a: "Several options exist: negotiate a rent-back agreement (stay in your sold home for 30-60 days), arrange temporary housing, or use a bridge loan to buy before selling. Dr. Jan helps you choose the best strategy for your situation.",
-                },
-                {
-                  q: "Should I upgrade or just get more space?",
-                  a: "It depends on your goals. Sometimes moving to a larger home in your current neighborhood is the best value. Other times, upgrading to a premium location provides better long-term appreciation. Dr. Jan analyzes both options to help you decide.",
-                },
-                {
-                  q: "How do schools factor into a move-up decision?",
-                  a: "Schools significantly impact both your quality of life and resale value. Moving to better school zones (like Summerlin's Palo Verde High School district or Henderson's Coronado) often justifies higher prices through appreciation and demand.",
-                },
-                {
-                  q: "What are the tax implications of selling and buying?",
-                  a: "If you've lived in your home 2+ years, up to $250,000 ($500,000 for couples) in gains are tax-free. For larger gains, consult a tax advisor. Dr. Jan can refer you to trusted CPAs who specialize in real estate transactions.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+              {faqs.map((faq) => (
+                <div key={faq.question} className="bg-white border border-slate-200 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
