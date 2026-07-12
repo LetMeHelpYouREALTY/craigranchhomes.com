@@ -7,16 +7,19 @@ import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
 import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
+import SchemaScript from "@/components/SchemaScript";
+import { combineSchemas, generateWebPageSchema } from "@/lib/schema";
 
 export default async function Home() {
   const config = await getPageDomainConfig();
+  const domainUrl = `https://${config.domain !== "default" ? config.domain : "heyberkshire.com"}`;
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: `Dr. Jan Duffy - ${config.neighborhood} Real Estate`,
-    url: `https://${config.domain !== "default" ? config.domain : "heyberkshire.com"}`,
-    telephone: "+17022221964",
+    url: domainUrl,
+    telephone: "+17025001942",
     address: {
       "@type": "PostalAddress",
       streetAddress: "9406 W Lake Mead Blvd, Suite 100",
@@ -31,12 +34,22 @@ export default async function Home() {
     },
   };
 
+  // Speakable markup helps voice assistants and AI answer engines (Google
+  // AI Overviews, Siri/Apple Intelligence, etc.) read the headline and
+  // subheadline aloud verbatim.
+  const pageSchema = combineSchemas(
+    organizationSchema,
+    generateWebPageSchema({
+      name: config.heroHeadline,
+      description: config.description,
+      url: domainUrl,
+      speakableSelectors: ["h1", "[data-speakable]"],
+    })
+  );
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
+      <SchemaScript schema={pageSchema} id="homepage-schema" />
       <Navbar />
       <main>
         {/* Domain-Aware Hero */}
@@ -54,7 +67,7 @@ export default async function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {config.heroHeadline}
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto" data-speakable>
               {config.heroSubheadline}
             </p>
 
@@ -162,11 +175,11 @@ export default async function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17022221964"
+                href="tel:+17025001942"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call 702-222-1964
+                Call (702) 500-1942
               </a>
               <Link
                 href="/contact"
