@@ -42,6 +42,7 @@ import {
   Search,
 } from 'lucide-react';
 import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import {
   generateMetadata as genMetadata,
@@ -69,9 +70,9 @@ export default function NeighborhoodPage() {
   const highlights = [
     {
       icon: School,
-      title: 'Top-Rated Schools',
+      title: 'Nearby Schools',
       description:
-        'Excellent public and private schools serving the Craig Ranch community',
+        'Eva G. Simmons Elementary, Clifford O. Pete Findlay Middle School, and Mojave High School serve Craig Ranch',
       color: 'text-[#3A8DDE]',
       bgColor: 'bg-[#3A8DDE]/10',
     },
@@ -117,8 +118,17 @@ export default function NeighborhoodPage() {
 
   return (
     <PageLayout>
-      <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='relative text-white py-16 md:py-24 overflow-hidden'>
+        <Image
+          src='/images/craig-ranch/aerial-community.jpg'
+          alt='Aerial view of Craig Ranch neighborhood streets and homes in North Las Vegas'
+          fill
+          priority
+          sizes='100vw'
+          className='object-cover'
+        />
+        <div className='absolute inset-0 bg-gradient-to-r from-[#0A2540]/90 via-[#0A2540]/75 to-[#3A8DDE]/60' />
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Welcome to Craig Ranch
           </h1>
@@ -186,13 +196,13 @@ export default function NeighborhoodPage() {
                   convenient place to live.
                 </p>
                 <p>
-                  Winning "Best Planned Community" in 2020 in the Las Vegas
-                  Review-Journal's Best of Las Vegas annual contest, Craig
-                  Ranch&apos;s appeal extends beyond its strategic location and
-                  luxury modern homes. It&apos;s also home to 5 miles of trails,
-                  is a short drive to Lake Las Vegas and the Frenchman Mountains,
-                  and activity centers on Craig Ranch Regional Park, which hosts
-                  community events and celebrations for the area.
+                  Winning &quot;Best Planned Community&quot; in 2020 in the Las
+                  Vegas Review-Journal&apos;s Best of Las Vegas annual contest,
+                  Craig Ranch&apos;s appeal extends beyond its strategic location
+                  and luxury modern homes. It&apos;s also home to 5 miles of
+                  trails, is a short drive to Lake Las Vegas and the Frenchman
+                  Mountains, and activity centers on Craig Ranch Regional Park,
+                  which hosts community events and celebrations for the area.
                 </p>
                 <p>
                   Developed by homebuilder Century Communities, Craig Ranch
@@ -203,25 +213,39 @@ export default function NeighborhoodPage() {
                 </p>
               </div>
             </div>
-            <div className='bg-[#F7F9FC] rounded-xl p-8'>
-              <h3 className='text-2xl font-bold text-[#0A2540] mb-6'>
-                Craig Ranch Community Stats
-              </h3>
-              <div className='grid grid-cols-2 gap-6'>
-                {stats.map((stat, index) => {
-                  const Icon = stat.icon;
-                  return (
-                    <div key={index} className='text-center'>
-                      <div className='w-12 h-12 bg-[#3A8DDE]/10 rounded-lg flex items-center justify-center mx-auto mb-3'>
-                        <Icon className='h-6 w-6 text-[#3A8DDE]' />
+            <div className='space-y-6'>
+              <div className='relative aspect-[4/3] w-full overflow-hidden rounded-xl'>
+                <Image
+                  src='/images/craig-ranch/gated-home.jpg'
+                  alt='Gated Craig Ranch home exterior in North Las Vegas'
+                  fill
+                  sizes='(max-width: 1024px) 100vw, 50vw'
+                  className='object-cover'
+                  loading='lazy'
+                />
+              </div>
+              <div className='bg-[#F7F9FC] rounded-xl p-8'>
+                <h3 className='text-2xl font-bold text-[#0A2540] mb-6'>
+                  Craig Ranch Community Stats
+                </h3>
+                <div className='grid grid-cols-2 gap-6'>
+                  {stats.map((stat, index) => {
+                    const Icon = stat.icon;
+                    return (
+                      <div key={index} className='text-center'>
+                        <div className='w-12 h-12 bg-[#3A8DDE]/10 rounded-lg flex items-center justify-center mx-auto mb-3'>
+                          <Icon className='h-6 w-6 text-[#3A8DDE]' />
+                        </div>
+                        <div className='text-2xl font-bold text-[#0A2540] mb-1'>
+                          {stat.value}
+                        </div>
+                        <div className='text-sm text-gray-600'>
+                          {stat.label}
+                        </div>
                       </div>
-                      <div className='text-2xl font-bold text-[#0A2540] mb-1'>
-                        {stat.value}
-                      </div>
-                      <div className='text-sm text-gray-600'>{stat.label}</div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -321,16 +345,26 @@ export default function NeighborhoodPage() {
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
               Craig Ranch Regional Park
             </h2>
-            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto mb-8'>
               A true asset to the community, Craig Ranch Regional Park measures
-              170 acres in size. The community's crown jewel, within walking
-              distance of residents' front doors. The expansive space offers
+              170 acres in size. The community&apos;s crown jewel, within walking
+              distance of residents&apos; front doors. The expansive space offers
               three dog parks, a 65,000-square-foot skate park, an amphitheater
               with seating for over 10,000, two basketball courts, a community
               garden and plenty of open green space. The park hosts over 40
               events a year, including concerts, 5K runs, movie nights, and
               festivals.
             </p>
+            <div className='relative mx-auto aspect-[21/9] max-w-5xl overflow-hidden rounded-xl'>
+              <Image
+                src='/images/craig-ranch/aerial-park.jpg'
+                alt='Aerial photo of Craig Ranch Regional Park and nearby homes in North Las Vegas'
+                fill
+                sizes='(max-width: 1280px) 100vw, 1024px'
+                className='object-cover'
+                loading='lazy'
+              />
+            </div>
           </div>
 
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>

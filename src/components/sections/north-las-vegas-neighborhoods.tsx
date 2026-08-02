@@ -1,166 +1,83 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-type Neighborhood = {
+type LocalSpotlight = {
   name: string;
   description: string;
-  avgPrice: string;
-  homesAvailable: number;
-  amenities: string[];
+  detail: string;
   image: string;
+  alt: string;
 };
 
-const neighborhoods: Neighborhood[] = [
+const spotlights: LocalSpotlight[] = [
   {
-    name: 'Aliante',
-    description: 'Master-planned community with parks, golf, and shopping',
-    avgPrice: '$450K',
-    homesAvailable: 18,
-    amenities: ['Nearby Schools', 'Parks', 'Shopping Center', 'Golf Course'],
-    image: '/images/aliante.jpg',
+    name: 'Craig Ranch Aerial View',
+    description: 'Master-planned streets and open space from above',
+    detail: 'North Las Vegas 89031',
+    image: '/images/craig-ranch/aerial-community.jpg',
+    alt: 'Aerial drone view of Craig Ranch homes and streets in North Las Vegas',
   },
   {
-    name: 'Ardiente',
-    description: 'Luxury homes with resort-style amenities and mountain views',
-    avgPrice: '$750K',
-    homesAvailable: 12,
-    amenities: ['Resort Pool', 'Fitness Center', 'Mountain Views', 'Clubhouse'],
-    image: '/images/ardiente.jpg',
+    name: 'Craig Ranch Regional Park',
+    description: '170-acre park with trails, sports fields, and amphitheater',
+    detail: '5 miles of interconnecting trails',
+    image: '/images/craig-ranch/aerial-park.jpg',
+    alt: 'Aerial view of Craig Ranch Regional Park and surrounding homes',
   },
   {
-    name: 'Craig Ranch',
-    description:
-      'Prestigious community with luxury homes and premium amenities',
-    avgPrice: '$875K',
-    homesAvailable: 25,
-    amenities: ['Golf Course', 'Clubhouse', 'Tennis Courts', 'Walking Trails'],
-    image: '/images/craig-ranch.jpg',
+    name: 'Single-Story Homes',
+    description: 'Single-level floor plans in Spanish and Mediterranean styles',
+    detail: 'About 1,519–2,638 sq ft',
+    image: '/images/craig-ranch/single-story-home.jpg',
+    alt: 'Single-story Craig Ranch home with desert landscaping in North Las Vegas',
   },
   {
-    name: 'Del Webb at North Ranch',
-    description: 'Active adult community for 55+ with resort-style living',
-    avgPrice: '$550K',
-    homesAvailable: 15,
-    amenities: [
-      '55+ Community',
-      'Resort Pool',
-      'Fitness Center',
-      'Social Activities',
-    ],
-    image: '/images/del-webb.jpg',
+    name: 'Two-Story Homes',
+    description: 'Two-story residences with 2-bay garages',
+    detail: 'Up to 5 bedrooms',
+    image: '/images/craig-ranch/two-story-home.jpg',
+    alt: 'Two-story Craig Ranch home on a residential street in North Las Vegas',
   },
   {
-    name: 'Eldorado',
-    description: 'Established neighborhood with mature landscaping and charm',
-    avgPrice: '$380K',
-    homesAvailable: 22,
-    amenities: [
-      'Mature Trees',
-      'Established Community',
-      'Convenient Location',
-      'Parks',
-    ],
-    image: '/images/eldorado.jpg',
+    name: 'Gated Living',
+    description: 'Gated entries across Craig Ranch subdivisions',
+    detail: 'Century Communities collections',
+    image: '/images/craig-ranch/gated-home.jpg',
+    alt: 'Gated Craig Ranch community entrance and homes in North Las Vegas',
   },
   {
-    name: 'Heartland at Tule Springs',
-    description: 'New construction community with modern amenities',
-    avgPrice: '$520K',
-    homesAvailable: 30,
-    amenities: [
-      'New Construction',
-      'Modern Amenities',
-      'Community Pool',
-      'Playground',
-    ],
-    image: '/images/heartland.jpg',
-  },
-  {
-    name: 'Sun City Aliante',
-    description:
-      'Active adult community with extensive amenities and activities',
-    avgPrice: '$480K',
-    homesAvailable: 20,
-    amenities: [
-      '55+ Community',
-      'Extensive Amenities',
-      'Social Activities',
-      'Golf',
-    ],
-    image: '/images/sun-city.jpg',
-  },
-  {
-    name: 'Valley Vista',
-    description: 'Affordable family community with great location',
-    avgPrice: '$420K',
-    homesAvailable: 28,
-    amenities: ['Affordable Homes', 'Family Friendly', 'Good Schools', 'Parks'],
-    image: '/images/valley-vista.jpg',
-  },
-  {
-    name: 'The Villages at Tule Springs',
-    description: 'Master-planned community with luxury homes and amenities',
-    avgPrice: '$680K',
-    homesAvailable: 16,
-    amenities: [
-      'Master Planned',
-      'Luxury Homes',
-      'Resort Amenities',
-      'Nature Trails',
-    ],
-    image: '/images/villages-tule-springs.jpg',
+    name: 'Community Guide',
+    description: 'Schools, parks, shopping, and local amenities nearby',
+    detail: 'Eva G. Simmons · Findlay · Mojave',
+    image: '/images/craig-ranch/community-guide.png',
+    alt: 'Craig Ranch community guide highlighting schools, parks, and local amenities',
   },
 ];
 
-const NeighborhoodCard = ({ neighborhood }: { neighborhood: Neighborhood }) => {
+function SpotlightCard({ spotlight }: { spotlight: LocalSpotlight }) {
   return (
-    <div className='bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2'>
-      {/* Placeholder for neighborhood image */}
-      <div className='h-48 bg-gradient-to-br from-[#0A2540] to-[#3A8DDE] flex items-center justify-center'>
-        <div className='text-white text-center'>
-          <div className='text-4xl mb-2'>🏘️</div>
-          <div className='text-sm opacity-80'>{neighborhood.name}</div>
-        </div>
+    <article className='bg-white overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300'>
+      <div className='relative h-52 w-full'>
+        <Image
+          src={spotlight.image}
+          alt={spotlight.alt}
+          fill
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          className='object-cover'
+          loading='lazy'
+        />
       </div>
 
       <div className='p-6'>
         <h3 className='text-2xl font-semibold text-[#0A2540] mb-3'>
-          {neighborhood.name}
+          {spotlight.name}
         </h3>
         <p className='text-gray-600 mb-4 leading-relaxed'>
-          {neighborhood.description}
+          {spotlight.description}
         </p>
-
-        <div className='space-y-3 mb-4'>
-          <div className='flex justify-between items-center'>
-            <span className='text-gray-600'>Average Price:</span>
-            <span className='text-[#16B286] font-semibold text-lg'>
-              {neighborhood.avgPrice}
-            </span>
-          </div>
-          <div className='flex justify-between items-center'>
-            <span className='text-gray-600'>Homes Available:</span>
-            <span className='text-[#3A8DDE] font-semibold'>
-              {neighborhood.homesAvailable}
-            </span>
-          </div>
-        </div>
-
-        <div className='mb-6'>
-          <h4 className='text-sm font-semibold text-[#0A2540] mb-2'>
-            Key Amenities:
-          </h4>
-          <div className='flex flex-wrap gap-2'>
-            {neighborhood.amenities.map((amenity, index) => (
-              <span
-                key={index}
-                className='bg-[#F7F9FC] px-3 py-1 rounded-full text-sm text-[#0A2540] border border-gray-200'
-              >
-                {amenity}
-              </span>
-            ))}
-          </div>
-        </div>
-
+        <p className='text-sm font-medium text-[#16B286] mb-6'>
+          {spotlight.detail}
+        </p>
         <Link
           href='http://drjanduffy.realscout.com/onboarding'
           target='_blank'
@@ -168,45 +85,41 @@ const NeighborhoodCard = ({ neighborhood }: { neighborhood: Neighborhood }) => {
           prefetch={false}
           className='w-full bg-[#3A8DDE] text-white py-3 rounded-lg font-semibold hover:bg-[#2A7DCE] transition-colors duration-200 block text-center'
         >
-          View {neighborhood.name} Homes
+          Browse Craig Ranch Homes
         </Link>
       </div>
-    </div>
+    </article>
   );
-};
+}
 
-const NorthLasVegasNeighborhoods = () => {
+export default function NorthLasVegasNeighborhoods() {
   return (
     <section className='py-20 bg-[#F7F9FC]'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            North Las Vegas Neighborhoods
+            Craig Ranch Hyperlocal Photos
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Discover the diverse communities of North Las Vegas, each offering
-            unique amenities and lifestyle options
+            Real Craig Ranch homes, streets, and park views from North Las Vegas
+            — not stock or plugin placeholders
           </p>
         </div>
 
-        {/* Neighborhoods Grid */}
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {neighborhoods.map((neighborhood, index) => (
-            <NeighborhoodCard key={index} neighborhood={neighborhood} />
+          {spotlights.map((spotlight) => (
+            <SpotlightCard key={spotlight.name} spotlight={spotlight} />
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className='text-center mt-16'>
-          <div className='bg-white rounded-xl p-8 shadow-lg max-w-4xl mx-auto'>
+          <div className='bg-white p-8 shadow-lg max-w-4xl mx-auto'>
             <h3 className='text-2xl font-bold text-[#0A2540] mb-4'>
-              Find Your Perfect North Las Vegas Home
+              Tour Craig Ranch With Local Photos In Hand
             </h3>
             <p className='text-gray-600 mb-6 leading-relaxed'>
-              Whether you want golf-course living, new construction, or a
-              home near Craig Ranch Regional Park, North Las Vegas has options
-              across price points. Let us help you find the right property.
+              Compare floor plans, gated collections, and park-proximate streets
+              with Dr. Jan Duffy. Call (702) 820-5408 to schedule a showing.
             </p>
             <Link
               href='http://drjanduffy.realscout.com/onboarding'
@@ -222,6 +135,4 @@ const NorthLasVegasNeighborhoods = () => {
       </div>
     </section>
   );
-};
-
-export default NorthLasVegasNeighborhoods;
+}
