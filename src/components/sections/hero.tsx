@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { SITE_NAP } from '@/lib/site-nap';
+
+const AGENT_HEADSHOT = '/images/dr-jan-duffy-headshot.jpg';
 
 const HERO_WEBP_SRCSET =
   '/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w';
@@ -33,6 +36,25 @@ export default function Hero() {
       <div className='absolute inset-0 bg-[#0A2540]/70 z-1' />
 
       <div className='relative z-10 text-center text-white max-w-4xl mx-auto px-4'>
+        <div className='mb-6 flex flex-col items-center animate-fade-in'>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={AGENT_HEADSHOT}
+            alt={`${SITE_NAP.agentName}, REALTOR® for Craig Ranch homes in North Las Vegas`}
+            width={112}
+            height={112}
+            loading='lazy'
+            decoding='async'
+            className='h-24 w-24 md:h-28 md:w-28 rounded-full object-cover object-[center_20%] ring-2 ring-white/85 shadow-[0_8px_24px_rgba(0,0,0,0.35)]'
+          />
+          <p className='mt-3 text-lg md:text-xl font-semibold tracking-wide text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]'>
+            {SITE_NAP.agentName}
+          </p>
+          <p className='text-sm md:text-base text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
+            REALTOR® · Craig Ranch, North Las Vegas
+          </p>
+        </div>
+
         <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight text-white'>
           <span className='block drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
             Find Your Dream Home in
