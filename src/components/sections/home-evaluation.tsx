@@ -1,9 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Script from 'next/script';
+import { useEffect, useRef, useState } from 'react';
+import { useInView } from '@/hooks';
 
-// Extend Window interface for Homebot
+const HOMEBOT_SCRIPT_ID = 'homebot-widget-script';
+const HOMEBOT_SCRIPT_SRC = 'https://embed.homebotapp.com/lgw/v1/widget.js';
+const HOMEBOT_API_KEY =
+  '35de8cf0a487cf0fec06278f2023805ea02eba0b58960a43';
+
 declare global {
   interface Window {
     __hb_namespace?: string;
@@ -11,82 +15,131 @@ declare global {
   }
 }
 
-export default function HomeEvaluationSection() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isScriptReady, setIsScriptReady] = useState(false);
+function ensureHomebotNamespace() {
+  if (typeof window === 'undefined' || window.__hb_namespace) {
+    return;
+  }
 
-  // Set up Homebot namespace and queue function (without loading script)
-  // IMPORTANT: This only sets up the namespace/queue - it does NOT load the script
-  // The script is loaded ONLY via the Next.js Script component below
+  const w = window as Window & {
+    Homebot?: ((...args: unknown[]) => void) & { q?: unknown[] };
+  };
+  w.__hb_namespace = 'Homebot';
+  w.Homebot =
+    w.Homebot ||
+    function (...args: unknown[]) {
+      const fn = w.Homebot as ((...a: unknown[]) => void) & { q?: unknown[] };
+      fn.q = fn.q || [];
+      fn.q.push(args);
+    };
+}
+
+function loadHomebotScript(): Promise<void> {
+  if (typeof window === 'undefined') {
+    return Promise.resolve();
+  }
+
+  const existing = document.getElementById(
+    HOMEBOT_SCRIPT_ID
+  ) as HTMLScriptElement | null;
+  if (existing) {
+    return new Promise((resolve) => {
+      if (window.Homebot) {
+        resolve();
+        return;
+      }
+      existing.addEventListener('load', () => resolve(), { once: true });
+      existing.addEventListener('error', () => resolve(), { once: true });
+    });
+  }
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.id = HOMEBOT_SCRIPT_ID;
+    script.src = HOMEBOT_SCRIPT_SRC;
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load Homebot script'));
+    document.body.appendChild(script);
+  });
+}
+
+export default function HomeEvaluationSection() {
+  const { ref: setInViewRef, isInView } = useInView({
+    rootMargin: '200px',
+    threshold: 0,
+  });
+  const startedRef = useRef(false);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    if (typeof window !== 'undefined' && !window.__hb_namespace) {
-      const w = window as any;
-      w['__hb_namespace'] = 'Homebot';
-      w['Homebot'] =
-        w['Homebot'] ||
-        function (...args: any[]) {
-          (w['Homebot'].q = w['Homebot'].q || []).push(args);
-        };
-    }
-    // No script loading here - that's handled by the Script component below
+    ensureHomebotNamespace();
   }, []);
 
-  // Initialize widget once script is loaded
   useEffect(() => {
-    if (isScriptReady) {
-      let retryCount = 0;
-      const maxRetries = 10;
-      
-      const initWidget = () => {
-        const w = window as any;
-        const container = document.getElementById('homebot_homeowner');
-        
-        if (!container) {
-          console.error('Homebot container not found');
-          setIsLoading(false);
+    if (!isInView || startedRef.current) {
+      return;
+    }
+    startedRef.current = true;
+
+    let cancelled = false;
+
+    const init = async () => {
+      try {
+        await loadHomebotScript();
+        if (cancelled) {
           return;
         }
-        
-        if (w.Homebot && typeof w.Homebot === 'function') {
-          try {
-            // Make sure container is visible
-            container.style.display = 'block';
-            
-            w.Homebot(
-              '#homebot_homeowner',
-              '35de8cf0a487cf0fec06278f2023805ea02eba0b58960a43'
-            );
-            
-            // Wait a bit to see if widget renders
-            setTimeout(() => {
-              setIsLoading(false);
-            }, 500);
-          } catch (error) {
-            console.error('Error initializing Homebot widget:', error);
-            setIsLoading(false);
-          }
-        } else {
-          retryCount++;
-          if (retryCount < maxRetries) {
-            // Retry after a short delay if Homebot isn't ready yet
-            setTimeout(initWidget, 300);
-          } else {
-            console.error('Homebot widget failed to load after multiple retries');
-            setIsLoading(false);
-          }
-        }
-      };
 
-      // Small delay to ensure script is fully loaded
-      const timer = setTimeout(initWidget, 200);
-      return () => clearTimeout(timer);
-    }
-  }, [isScriptReady]);
+        let retryCount = 0;
+        const maxRetries = 10;
+
+        const initWidget = () => {
+          const container = document.getElementById('homebot_homeowner');
+          if (!container) {
+            setIsLoading(false);
+            return;
+          }
+
+          if (typeof window.Homebot === 'function') {
+            try {
+              container.style.display = 'block';
+              window.Homebot('#homebot_homeowner', HOMEBOT_API_KEY);
+              window.setTimeout(() => {
+                if (!cancelled) {
+                  setIsLoading(false);
+                }
+              }, 500);
+            } catch {
+              setIsLoading(false);
+            }
+            return;
+          }
+
+          retryCount += 1;
+          if (retryCount < maxRetries) {
+            window.setTimeout(initWidget, 300);
+          } else {
+            setIsLoading(false);
+          }
+        };
+
+        window.setTimeout(initWidget, 200);
+      } catch {
+        if (!cancelled) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    void init();
+    return () => {
+      cancelled = true;
+    };
+  }, [isInView]);
 
   return (
-    <section className='py-20 bg-white'>
+    <section ref={setInViewRef} className='py-20 bg-white'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
             Get Your Craig Ranch Home&apos;s Value
@@ -97,7 +150,6 @@ export default function HomeEvaluationSection() {
           </p>
         </div>
 
-        {/* Homebot Widget */}
         <div className='max-w-2xl mx-auto'>
           <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg'>
             {isLoading && (
@@ -110,23 +162,14 @@ export default function HomeEvaluationSection() {
             )}
             <div
               id='homebot_homeowner'
-              style={{ display: isLoading ? 'none' : 'block', minHeight: '400px' }}
+              style={{
+                display: isLoading ? 'none' : 'block',
+                minHeight: '400px',
+              }}
             ></div>
           </div>
         </div>
       </div>
-
-      {/* Load Homebot widget script via Next.js Script component */}
-      <Script
-        src='https://embed.homebotapp.com/lgw/v1/widget.js'
-        strategy='lazyOnload'
-        onLoad={() => {
-          setIsScriptReady(true);
-        }}
-        onError={() => {
-          setIsLoading(false);
-        }}
-      />
     </section>
   );
 }
