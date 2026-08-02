@@ -1,24 +1,29 @@
 import Link from 'next/link';
 
+const HERO_WEBP_SRCSET =
+  '/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w';
+const HERO_JPG_SRCSET =
+  '/hero-craig-ranch-480.jpg 480w, /hero-craig-ranch-828.jpg 828w, /hero-craig-ranch-mobile.jpg 1200w, /hero-craig-ranch.jpg 1920w';
+
 export default function Hero() {
   return (
     <section className='relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
-      {/* LCP background — picture/webp first, jpeg fallback */}
+      {/* LCP background — responsive webp first, jpeg fallback */}
       <div className='absolute inset-0 w-full h-full bg-[#0A2540]'>
         <picture>
           <source
             type='image/webp'
-            srcSet='/hero-craig-ranch-mobile.webp 1600w, /hero-craig-ranch.webp 1920w'
+            srcSet={HERO_WEBP_SRCSET}
             sizes='100vw'
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src='/hero-craig-ranch-mobile.jpg'
-            srcSet='/hero-craig-ranch-mobile.jpg 1600w, /hero-craig-ranch.jpg 1920w'
+            src='/hero-craig-ranch-828.jpg'
+            srcSet={HERO_JPG_SRCSET}
             sizes='100vw'
             alt='Craig Ranch neighborhood aerial view in North Las Vegas'
-            width={1600}
-            height={900}
+            width={828}
+            height={466}
             fetchPriority='high'
             decoding='async'
             className='absolute inset-0 h-full w-full object-cover'

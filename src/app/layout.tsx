@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { Source_Sans_3, Open_Sans } from 'next/font/google';
+import DeferredAnalytics from '@/components/analytics/deferred-analytics';
 import {
   generateOrganizationSchema,
   generateLocalBusinessSchema,
@@ -160,14 +160,15 @@ export default function RootLayout({
         {/* Apple Touch Icon for iOS devices */}
         <link rel='apple-touch-icon' href='/favicon.ico' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
-        {/* LCP hero: preload compressed WebP (JPEG fallback in <picture>) */}
+        {/* LCP hero: preload responsive WebP with high priority */}
         <link
           rel='preload'
           as='image'
-          href='/hero-craig-ranch-mobile.webp'
+          href='/hero-craig-ranch-828.webp'
           type='image/webp'
-          imageSrcSet='/hero-craig-ranch-mobile.webp 1600w, /hero-craig-ranch.webp 1920w'
+          imageSrcSet='/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w'
           imageSizes='100vw'
+          fetchPriority='high'
         />
         {/* Defer third-party discovery so LCP hero wins the network */}
         <link rel='dns-prefetch' href='https://em.realscout.com' />
@@ -185,60 +186,6 @@ export default function RootLayout({
             width: 100%;
           }
         `}</style>
-
-        {/* Google Analytics (GA4) - only load when configured */}
-        {isValidGaId(gaMeasurementId) ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
-                gaMeasurementId
-              )}`}
-              strategy='lazyOnload'
-            />
-            <Script id='google-analytics' strategy='lazyOnload'>
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaMeasurementId}');
-              `}
-            </Script>
-          </>
-        ) : null}
-
-        {/* Google Tag Manager - only load when configured (prevents gtm.js 404) */}
-        {isValidGtmId(gtmId) ? (
-          <Script id='google-tag-manager' strategy='lazyOnload'>
-            {`
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${gtmId}');
-            `}
-          </Script>
-        ) : null}
-
-        {/* Facebook Pixel - only load when configured
-            Note: Meta's script currently triggers a browser deprecation warning (unload listeners).
-            The only way to remove that warning is to not load the script.
-            Using lazyOnload to defer loading and reduce impact on initial page load. */}
-        {isValidFacebookPixelId(facebookPixelId) ? (
-          <Script id='facebook-pixel' strategy='lazyOnload'>
-            {`
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${facebookPixelId}');
-              fbq('track', 'PageView');
-            `}
-          </Script>
-        ) : null}
 
         {/* Structured Data for Real Estate Business */}
         <script
@@ -443,13 +390,19 @@ export default function RootLayout({
           </noscript>
         ) : null}
 
-        {/* RealScout: defer until idle; widgets mount into a non-React host node */}
-        <Script
-          id='realscout-script'
-          src='https://em.realscout.com/widgets/realscout-web-components.umd.js'
-          type='module'
-          strategy='lazyOnload'
+        {/* Analytics after interaction / delayed fallback — keeps lab TBT low */}
+        <DeferredAnalytics
+          gaMeasurementId={
+            isValidGaId(gaMeasurementId) ? gaMeasurementId : undefined
+          }
+          gtmId={isValidGtmId(gtmId) ? gtmId : undefined}
+          facebookPixelId={
+            isValidFacebookPixelId(facebookPixelId)
+              ? facebookPixelId
+              : undefined
+          }
         />
+        {/* RealScout loads on-demand when a widget scrolls into view */}
         {children}
       </body>
     </html>

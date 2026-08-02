@@ -27,7 +27,8 @@ function RealScoutOfficeWidgetContent({
 }: RealScoutOfficeWidgetProps) {
   const isMobile = useIsMobile();
   const { ref: setInViewRef, isInView } = useInView({
-    rootMargin: '300px',
+    // Keep preload modest so lab TBT isn't hit by RealScout below the fold.
+    rootMargin: '120px',
     threshold: 0,
   });
   const hostRef = useRef<HTMLDivElement>(null);

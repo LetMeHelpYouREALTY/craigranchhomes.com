@@ -210,7 +210,7 @@ const BlogPosts = async () => {
             href='/market-insights'
             prefetch={false}
             className='inline-block bg-[#0A2540] text-white font-primary font-medium text-sm py-[10px] px-6 rounded-lg hover:bg-[#081C30] transition-colors duration-300'
-            aria-label='View all Craig Ranch Las Vegas market insights'
+            aria-label='View All Market Insights'
           >
             View All Market Insights
           </Link>
