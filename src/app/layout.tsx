@@ -160,12 +160,13 @@ export default function RootLayout({
         {/* Apple Touch Icon for iOS devices */}
         <link rel='apple-touch-icon' href='/favicon.ico' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
-        {/* LCP hero: preload compressed static JPEG (no /_next/image hop) */}
+        {/* LCP hero: preload compressed WebP (JPEG fallback in <picture>) */}
         <link
           rel='preload'
           as='image'
-          href='/hero-craig-ranch-mobile.jpg'
-          imageSrcSet='/hero-craig-ranch-mobile.jpg 1600w, /hero-craig-ranch.jpg 1920w'
+          href='/hero-craig-ranch-mobile.webp'
+          type='image/webp'
+          imageSrcSet='/hero-craig-ranch-mobile.webp 1600w, /hero-craig-ranch.webp 1920w'
           imageSizes='100vw'
         />
         {/* Defer third-party discovery so LCP hero wins the network */}

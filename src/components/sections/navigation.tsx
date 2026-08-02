@@ -52,7 +52,7 @@ export default function Navigation() {
           <div className='hidden md:block'>
             <Button
               asChild
-              className='bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'
+              className='bg-[#1E6BB8] hover:bg-[#185A9C] text-white'
             >
               <Link
                 href='http://drjanduffy.realscout.com/onboarding'
@@ -89,7 +89,7 @@ export default function Navigation() {
                 <div className='pt-4'>
                   <Button
                     asChild
-                    className='w-full bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'
+                    className='w-full bg-[#1E6BB8] hover:bg-[#185A9C] text-white'
                   >
                     <Link
                       href='http://drjanduffy.realscout.com/onboarding'

@@ -1,37 +1,36 @@
 import Link from 'next/link';
 
 export default function Hero() {
-  // Pre-compressed hero assets (see public/hero-craig-ranch*.jpg).
-  // Static <img> + preload avoids the /_next/image hop on LCP.
-  const mobileSrc = '/hero-craig-ranch-mobile.jpg';
-  const desktopSrc = '/hero-craig-ranch.jpg';
-
   return (
-    <section className='relative min-h-[75vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
-      {/* Background Image */}
-      <div className='absolute inset-0 w-full h-full'>
-        <div className='absolute inset-0 bg-linear-to-r from-[#0A2540] to-[#3A8DDE]' />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={mobileSrc}
-          srcSet={`${mobileSrc} 1600w, ${desktopSrc} 1920w`}
-          sizes='100vw'
-          alt='Craig Ranch neighborhood aerial view in North Las Vegas'
-          width={1600}
-          height={900}
-          fetchPriority='high'
-          decoding='async'
-          className='absolute inset-0 h-full w-full object-cover'
-        />
+    <section className='relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
+      {/* LCP background — picture/webp first, jpeg fallback */}
+      <div className='absolute inset-0 w-full h-full bg-[#0A2540]'>
+        <picture>
+          <source
+            type='image/webp'
+            srcSet='/hero-craig-ranch-mobile.webp 1600w, /hero-craig-ranch.webp 1920w'
+            sizes='100vw'
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src='/hero-craig-ranch-mobile.jpg'
+            srcSet='/hero-craig-ranch-mobile.jpg 1600w, /hero-craig-ranch.jpg 1920w'
+            sizes='100vw'
+            alt='Craig Ranch neighborhood aerial view in North Las Vegas'
+            width={1600}
+            height={900}
+            fetchPriority='high'
+            decoding='async'
+            className='absolute inset-0 h-full w-full object-cover'
+          />
+        </picture>
       </div>
 
-      {/* Background Overlay - Darkens image for text readability */}
-      <div className='absolute inset-0 bg-linear-to-r from-[#0A2540]/85 to-[#0A2540]/55 z-1' />
+      <div className='absolute inset-0 bg-[#0A2540]/70 z-1' />
 
-      {/* Hero Content */}
       <div className='relative z-10 text-center text-white max-w-4xl mx-auto px-4'>
-        <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight'>
-          <span className='block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
+        <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight text-white'>
+          <span className='block drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
             Find Your Dream Home in
           </span>
           <span className='block mt-2 text-[#7DFFC8] drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
@@ -44,7 +43,6 @@ export default function Hero() {
           Century Communities floor plans from 1,519–2,638 sq ft
         </p>
 
-        {/* Hero CTA Buttons */}
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <Link
             href='http://drjanduffy.realscout.com/onboarding'
