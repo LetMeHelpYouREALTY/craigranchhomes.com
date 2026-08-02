@@ -25,10 +25,14 @@ export default function Navigation() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo/Brand */}
-          <Link href='/' className='flex items-center'>
-            <h1 className='text-2xl font-bold text-[#0A2540]'>
+          <Link
+            href='/'
+            className='flex items-center text-2xl font-bold text-[#0A2540]'
+            aria-label='Craig Ranch Homes — call (702) 820-5408'
+          >
+            <span className='text-2xl font-bold text-[#0A2540]'>
               (702) 820-5408
-            </h1>
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -71,7 +75,7 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
               <div className='flex flex-col space-y-4 mt-8'>
-                <h2 className='text-2xl font-bold text-[#0A2540] mb-4'>Menu</h2>
+                <p className='text-2xl font-bold text-[#0A2540] mb-4'>Menu</p>
                 {navLinks.map(link => (
                   <Link
                     key={link.href}

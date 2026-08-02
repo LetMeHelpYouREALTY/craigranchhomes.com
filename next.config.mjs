@@ -12,12 +12,12 @@ const nextConfig = {
       "frame-ancestors 'none'",
       "form-action 'self'",
       // Next.js + next/script inline blocks require unsafe-inline unless using nonces.
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://em.realscout.com",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://em.realscout.com https://cdn.realscout.com https://embed.homebotapp.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data: https:",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://*.realscout.com",
-      "frame-src 'self' https://www.google.com https://www.google.com/maps",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://*.realscout.com https://cdn.realscout.com https://embed.homebotapp.com https://*.homebotapp.com",
+      "frame-src 'self' https://www.google.com https://www.google.com/maps https://embed.homebotapp.com",
       'upgrade-insecure-requests',
     ].join('; ');
 

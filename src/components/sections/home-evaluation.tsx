@@ -119,13 +119,11 @@ export default function HomeEvaluationSection() {
       {/* Load Homebot widget script via Next.js Script component */}
       <Script
         src='https://embed.homebotapp.com/lgw/v1/widget.js'
-        strategy='afterInteractive'
+        strategy='lazyOnload'
         onLoad={() => {
-          console.log('Homebot script loaded');
           setIsScriptReady(true);
         }}
-        onError={(e) => {
-          console.error('Failed to load Homebot script:', e);
+        onError={() => {
           setIsLoading(false);
         }}
       />

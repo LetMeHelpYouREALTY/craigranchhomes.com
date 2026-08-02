@@ -88,7 +88,7 @@ export default function FeaturedCommunities() {
                     <span className='text-gray-600'>Average Price:</span>
                     <Badge
                       variant='default'
-                      className='bg-[#16B286] text-white font-semibold text-base px-3 py-1'
+                      className='bg-[#0B7A5A] text-white font-semibold text-base px-3 py-1'
                     >
                       {community.avgPrice}
                     </Badge>
@@ -105,9 +105,9 @@ export default function FeaturedCommunities() {
                 <Separator className='my-4' />
 
                 <div>
-                  <h4 className='text-sm font-semibold text-[#0A2540] mb-3'>
+                  <p className='text-sm font-semibold text-[#0A2540] mb-3'>
                     Key Amenities:
-                  </h4>
+                  </p>
                   <div className='flex flex-wrap gap-2'>
                     {community.amenities.map((amenity) => (
                       <Badge

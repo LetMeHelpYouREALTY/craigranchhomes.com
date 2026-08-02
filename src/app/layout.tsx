@@ -160,10 +160,20 @@ export default function RootLayout({
         {/* Apple Touch Icon for iOS devices */}
         <link rel='apple-touch-icon' href='/favicon.ico' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
+        {/* LCP hero: preload compressed static JPEG (no /_next/image hop) */}
+        <link
+          rel='preload'
+          as='image'
+          href='/hero-craig-ranch-mobile.jpg'
+          imageSrcSet='/hero-craig-ranch-mobile.jpg 1600w, /hero-craig-ranch.jpg 1920w'
+          imageSizes='100vw'
+        />
         {/* Defer third-party discovery so LCP hero wins the network */}
         <link rel='dns-prefetch' href='https://em.realscout.com' />
+        <link rel='dns-prefetch' href='https://cdn.realscout.com' />
         <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
+        <link rel='dns-prefetch' href='https://embed.homebotapp.com' />
 
         <style>{`
           realscout-office-listings {
@@ -429,13 +439,7 @@ export default function RootLayout({
           </noscript>
         ) : null}
 
-        {/* RealScout: defer until idle — widgets init via IntersectionObserver */}
-        <Script
-          id='realscout-script'
-          src='https://em.realscout.com/widgets/realscout-web-components.umd.js'
-          type='module'
-          strategy='lazyOnload'
-        />
+        {/* RealScout script loads only when a widget section approaches viewport */}
         {children}
       </body>
     </html>

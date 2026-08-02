@@ -1,55 +1,45 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Hero() {
-  // Drone photo background from public directory
-  const backgroundImage = '/54-DJI_20250707171528_0828_D.jpg';
+  // Pre-compressed hero assets (see public/hero-craig-ranch*.jpg).
+  // Static <img> + preload avoids the /_next/image hop on LCP.
+  const mobileSrc = '/hero-craig-ranch-mobile.jpg';
+  const desktopSrc = '/hero-craig-ranch.jpg';
 
   return (
-    <section className='relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
+    <section className='relative min-h-[75vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Background Image */}
       <div className='absolute inset-0 w-full h-full'>
-        {/* Fallback gradient background */}
-        <div className='absolute inset-0 bg-linear-to-r from-[#0A2540] to-[#3A8DDE]'></div>
-
-        {/* Hero Background Image - SSR + priority for LCP (no client boundary) */}
-        <div className='absolute inset-0 w-full h-full'>
-          <Image
-            src={backgroundImage}
-            alt='Craig Ranch neighborhood aerial view in North Las Vegas'
-            fill
-            priority
-            fetchPriority='high'
-            className='object-cover'
-            sizes='100vw'
-            quality={60}
-          />
-        </div>
-
-        {/* Video Embed Option - Uncomment if you want to use the homes.com video */}
-        {/* 
-        <iframe
-          src='https://www.homes.com/local-guide/north-las-vegas-nv/craig-ranch-neighborhood/video/jjc2l3y321hql/?autoplay=1&mute=1&loop=1&controls=0&playsinline=1'
-          className='absolute inset-0 w-full h-full object-cover'
-          allow='autoplay; encrypted-media'
-          allowFullScreen
-          title='Craig Ranch Neighborhood Video Background'
-          aria-hidden='true'
+        <div className='absolute inset-0 bg-linear-to-r from-[#0A2540] to-[#3A8DDE]' />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={mobileSrc}
+          srcSet={`${mobileSrc} 1600w, ${desktopSrc} 1920w`}
+          sizes='100vw'
+          alt='Craig Ranch neighborhood aerial view in North Las Vegas'
+          width={1600}
+          height={900}
+          fetchPriority='high'
+          decoding='async'
+          className='absolute inset-0 h-full w-full object-cover'
         />
-        */}
       </div>
 
       {/* Background Overlay - Darkens image for text readability */}
-      <div className='absolute inset-0 bg-linear-to-r from-[#0A2540]/80 to-[#3A8DDE]/60 z-1'></div>
+      <div className='absolute inset-0 bg-linear-to-r from-[#0A2540]/85 to-[#0A2540]/55 z-1' />
 
       {/* Hero Content */}
       <div className='relative z-10 text-center text-white max-w-4xl mx-auto px-4'>
         <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight'>
-          <span className='block hero-gold-text'>Find Your Dream Home in</span>
-          <span className='block mt-2 hero-green-text'>Craig Ranch</span>
+          <span className='block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
+            Find Your Dream Home in
+          </span>
+          <span className='block mt-2 text-[#7DFFC8] drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
+            Craig Ranch
+          </span>
         </h1>
 
-        <p className='text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'>
+        <p className='text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'>
           Browse homes in Craig Ranch, North Las Vegas — park, trails, and
           Century Communities floor plans from 1,519–2,638 sq ft
         </p>
@@ -61,7 +51,7 @@ export default function Hero() {
             target='_blank'
             rel='noopener noreferrer'
             prefetch={false}
-            className='bg-[#16B286] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#15A276] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105'
+            className='bg-[#0B7A5A] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#096B4E] transition-colors duration-200 shadow-lg'
           >
             View Available Homes
           </Link>
@@ -70,7 +60,7 @@ export default function Hero() {
             target='_blank'
             rel='noopener noreferrer'
             prefetch={false}
-            className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/30 transition-all duration-200 border border-white/30 hover:border-white/50 hover:scale-105'
+            className='bg-white text-[#0A2540] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 border border-white'
           >
             Schedule a Tour
           </Link>

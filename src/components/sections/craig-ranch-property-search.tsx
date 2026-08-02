@@ -1,6 +1,7 @@
 'use client';
 
 import { useIsMobile } from '@/hooks';
+import { ensureRealScoutScript } from '@/lib/realscout-script';
 import { useEffect, useRef } from 'react';
 
 export default function CraigRanchPropertySearch() {
@@ -8,8 +9,17 @@ export default function CraigRanchPropertySearch() {
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Create the RealScout property search widget element dynamically
-    if (widgetRef.current && typeof window !== 'undefined') {
+    let cancelled = false;
+
+    const initWidget = async () => {
+      try {
+        await ensureRealScoutScript();
+      } catch {
+        return;
+      }
+      if (cancelled || !widgetRef.current) return;
+      if (!customElements.get('realscout-property-search')) return;
+
       const widget = document.createElement('realscout-property-search');
       widget.setAttribute('office-id', 'QWdlbnQtMjI1MDUw');
       widget.setAttribute('layout', isMobile ? 'mobile' : 'desktop');
@@ -20,10 +30,14 @@ export default function CraigRanchPropertySearch() {
       widget.setAttribute('listings-per-page', '12');
       widget.setAttribute('show-pagination', 'true');
 
-      // Clear existing content and append the widget
       widgetRef.current.innerHTML = '';
       widgetRef.current.appendChild(widget);
-    }
+    };
+
+    void initWidget();
+    return () => {
+      cancelled = true;
+    };
   }, [isMobile]);
 
   return (
@@ -32,13 +46,9 @@ export default function CraigRanchPropertySearch() {
       className='real-estate-search-container min-h-[500px] flex items-center justify-center'
     >
       <div className='text-center'>
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4'></div>
-        <p className='text-gray-500 text-sm'>
-          Loading property search...
-        </p>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4' />
+        <p className='text-gray-600 text-sm'>Loading property search...</p>
       </div>
     </div>
   );
 }
-
-

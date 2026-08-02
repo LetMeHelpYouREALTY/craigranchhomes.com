@@ -19,11 +19,11 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className='text-lg font-semibold mb-4 text-white'>Quick Links</h4>
-            <ul className='space-y-2 text-gray-300'>
+            <ul className='space-y-2'>
               <li>
                 <Link
                   href='/homes'
-                  className='hover:text-white transition-colors duration-200 hover:underline'
+                  className='text-white hover:underline transition-colors duration-200'
                 >
                   Homes for Sale
                 </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
               <li>
                 <Link
                   href='/neighborhood'
-                  className='hover:text-white transition-colors duration-200 hover:underline'
+                  className='text-white hover:underline transition-colors duration-200'
                 >
                   Neighborhood
                 </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <Link
                   href='/market-data'
-                  className='hover:text-white transition-colors duration-200 hover:underline'
+                  className='text-white hover:underline transition-colors duration-200'
                 >
                   Market Data
                 </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
               <li>
                 <Link
                   href='/market-insights'
-                  className='hover:text-white transition-colors duration-200 hover:underline'
+                  className='text-white hover:underline transition-colors duration-200'
                 >
                   Market Insights
                 </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
               <li>
                 <Link
                   href='/home-valuation-craig-ranch'
-                  className='hover:text-white transition-colors duration-200 hover:underline'
+                  className='text-white hover:underline transition-colors duration-200'
                 >
                   Home Valuation
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li>
                 <Link
                   href='/contact'
-                  className='hover:text-white transition-colors duration-200 hover:underline'
+                  className='text-white hover:underline transition-colors duration-200'
                 >
                   Contact
                 </Link>
@@ -74,27 +74,30 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className='text-lg font-semibold mb-4 text-white'>Contact Info</h4>
-            <ul className='space-y-2 text-gray-300'>
+            <ul className='space-y-2 text-white'>
               <li className='flex items-center'>
-                <span className='mr-2'>📞</span>
-                <a
-                  href='tel:7028205408'
-                  className='hover:text-white transition-colors'
-                >
+                <span className='mr-2' aria-hidden='true'>
+                  📞
+                </span>
+                <a href='tel:7028205408' className='text-white hover:underline'>
                   (702) 820-5408
                 </a>
               </li>
               <li className='flex items-center'>
-                <span className='mr-2'>✉️</span>
+                <span className='mr-2' aria-hidden='true'>
+                  ✉️
+                </span>
                 <a
                   href='mailto:DrDuffy@CraigRanchHomes.com'
-                  className='hover:text-white transition-colors'
+                  className='text-white hover:underline'
                 >
                   DrDuffy@CraigRanchHomes.com
                 </a>
               </li>
               <li className='flex items-center'>
-                <span className='mr-2'>📍</span>
+                <span className='mr-2' aria-hidden='true'>
+                  📍
+                </span>
                 851 W Lone Mountain Rd, North Las Vegas, NV 89032
               </li>
             </ul>
@@ -225,24 +228,24 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-300 space-y-2 text-sm'>
+        <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-100 space-y-2 text-sm'>
           <p>
             &copy; 2007-2025 Craig Ranch Vegas | Homes By Dr. Jan Duffy. All rights
             reserved.
           </p>
           <p>&copy; 2025 BHH Affiliates, LLC.</p>
-          <p className='text-xs text-gray-400 max-w-4xl mx-auto'>
+          <p className='text-xs text-gray-200 max-w-4xl mx-auto'>
             Real Estate Brokerage Services are offered through the network member
             franchisees of BHH Affiliates, LLC. Most franchisees are independently
             owned and operated. Berkshire Hathaway HomeServices and the Berkshire
             Hathaway HomeServices symbol are registered marks of Columbia Insurance
             Company, a Berkshire Hathaway affiliate.
           </p>
-          <p className='text-xs text-gray-400'>
+          <p className='text-xs text-gray-200'>
             Dr. Jan Duffy | Nevada Real Estate License #S.0197614.
           </p>
-          <p className='text-xs text-gray-400'>Equal Housing Opportunity</p>
-          <p className='text-xs text-gray-400'>
+          <p className='text-xs text-gray-200'>Equal Housing Opportunity</p>
+          <p className='text-xs text-gray-200'>
             BHH Affiliates, LLC is a Delaware limited liability company. Its
             principal office is located at 18500 Von Karman Ave, Suite 400, Irvine,
             California 92612 USA.

@@ -98,11 +98,13 @@ export default function Home() {
               <Link href='/homes' className='block'>
                 <Button
                   variant='outline'
-                  className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  className='w-full h-auto py-6 flex-col gap-2 text-[#0A2540] hover:bg-[#F7F9FC] hover:text-[#0A2540]'
                 >
                   <HomeIcon className='h-8 w-8 text-[#3A8DDE]' />
-                  <span className='text-lg font-semibold'>Browse Homes</span>
-                  <span className='text-sm text-gray-600'>
+                  <span className='text-lg font-semibold text-[#0A2540]'>
+                    Browse Homes
+                  </span>
+                  <span className='text-sm text-gray-700'>
                     View all available properties
                   </span>
                 </Button>
@@ -110,13 +112,13 @@ export default function Home() {
               <Link href='/neighborhood' className='block'>
                 <Button
                   variant='outline'
-                  className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  className='w-full h-auto py-6 flex-col gap-2 text-[#0A2540] hover:bg-[#F7F9FC] hover:text-[#0A2540]'
                 >
-                  <MapPin className='h-8 w-8 text-[#16B286]' />
-                  <span className='text-lg font-semibold'>
+                  <MapPin className='h-8 w-8 text-[#0B7A5A]' />
+                  <span className='text-lg font-semibold text-[#0A2540]'>
                     Explore Craig Ranch
                   </span>
-                  <span className='text-sm text-gray-600'>
+                  <span className='text-sm text-gray-700'>
                     Learn about the neighborhood
                   </span>
                 </Button>
@@ -124,11 +126,13 @@ export default function Home() {
               <Link href='/market-data' className='block'>
                 <Button
                   variant='outline'
-                  className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  className='w-full h-auto py-6 flex-col gap-2 text-[#0A2540] hover:bg-[#F7F9FC] hover:text-[#0A2540]'
                 >
                   <TrendingUp className='h-8 w-8 text-[#0A2540]' />
-                  <span className='text-lg font-semibold'>Market Insights</span>
-                  <span className='text-sm text-gray-600'>
+                  <span className='text-lg font-semibold text-[#0A2540]'>
+                    Market Insights
+                  </span>
+                  <span className='text-sm text-gray-700'>
                     Latest trends and statistics
                   </span>
                 </Button>
@@ -191,7 +195,7 @@ export default function Home() {
             </div>
             <Button
               asChild
-              className='bg-[#16B286] hover:bg-[#15A276] text-white'
+              className='bg-[#0B7A5A] hover:bg-[#096B4E] text-white'
             >
               <Link href='/market-data'>
                 View Full Market Report <ArrowRight className='ml-2 h-4 w-4' />

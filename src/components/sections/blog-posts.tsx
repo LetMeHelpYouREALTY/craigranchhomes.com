@@ -139,26 +139,26 @@ const BlogPostCard = ({ post }: { post: BlogPost }) => {
       <CardHeader>
         <Badge
           variant='outline'
-          className='w-fit mb-2 text-[#3A8DDE] border-[#3A8DDE]/30'
+          className='w-fit mb-2 text-[#0A2540] border-[#0A2540]/30'
         >
           <Link
             href={post.categoryLink}
             target='_blank'
             rel='noopener noreferrer'
             prefetch={false}
-            className='hover:underline'
+            className='text-[#0A2540] hover:underline'
             aria-label={`View ${post.category} category`}
           >
             {post.category}
           </Link>
         </Badge>
-        <CardTitle className='group-hover:text-[#3A8DDE] transition-colors duration-300'>
+        <CardTitle className='text-[#0A2540] group-hover:text-[#2A7DCE] transition-colors duration-300'>
           <Link
             href={post.postLink}
             target='_blank'
             rel='noopener noreferrer'
             prefetch={false}
-            className='line-clamp-2'
+            className='line-clamp-2 text-[#0A2540]'
           >
             {post.title}
           </Link>
@@ -209,7 +209,7 @@ const BlogPosts = async () => {
           <Link
             href='/market-insights'
             prefetch={false}
-            className='inline-block bg-[#3A8DDE] text-white font-primary font-medium text-sm py-[10px] px-6 rounded-lg hover:bg-[#2A7DCE] transition-colors duration-300'
+            className='inline-block bg-[#0A2540] text-white font-primary font-medium text-sm py-[10px] px-6 rounded-lg hover:bg-[#081C30] transition-colors duration-300'
             aria-label='View all Craig Ranch Las Vegas market insights'
           >
             View All Market Insights

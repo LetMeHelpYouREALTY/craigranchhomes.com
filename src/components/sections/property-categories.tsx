@@ -94,7 +94,7 @@ export default function PropertyCategories() {
                   ))}
                 </div>
                 <div className='flex justify-between items-center pt-2'>
-                  <span className='text-[#16B286] font-semibold text-lg'>
+                  <span className='text-[#0B7A5A] font-semibold text-lg'>
                     {category.price}
                   </span>
                   <Badge variant='secondary' className='text-sm'>
