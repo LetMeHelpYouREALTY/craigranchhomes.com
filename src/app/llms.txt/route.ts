@@ -12,7 +12,7 @@ Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 - **License:** Nevada S.0197614.LLC
 - **Phone:** 702-820-5408
-- **Office:** 851 W Lone Mountain Rd, North Las Vegas, NV 89032
+- **Office:** 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
 - **Community ZIP:** 89031 (Craig Ranch)
 - **Website:** ${baseUrl}
 

@@ -98,7 +98,7 @@ export default function Footer() {
                 <span className='mr-2' aria-hidden='true'>
                   📍
                 </span>
-                851 W Lone Mountain Rd, North Las Vegas, NV 89032
+                851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
               </li>
             </ul>
           </div>

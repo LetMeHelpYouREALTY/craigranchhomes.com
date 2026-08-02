@@ -42,7 +42,7 @@ export default function FirstTimeBuyersCraigRanchPage() {
         },
         {
           heading: 'Local office support',
-          body: 'Meet at 851 W Lone Mountain Rd, North Las Vegas, NV 89032, or start remotely. View Google Reviews and get directions from the contact page, then schedule Craig Ranch showings around your work hours.',
+          body: 'Meet at 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032, or start remotely. View Google Reviews and get directions from the contact page, then schedule Craig Ranch showings around your work hours.',
         },
       ]}
       faqs={FIRST_TIME_BUYER_FAQS}

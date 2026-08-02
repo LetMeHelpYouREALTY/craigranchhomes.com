@@ -40,7 +40,7 @@ export const revalidate = false; // Static page, no revalidation needed
 export const metadata = genMetadata({
   title: 'Contact Dr. Jan Duffy - Craig Ranch Vegas | Homes By Dr. Jan Duffy | Las Vegas Real Estate',
   description:
-    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Craig Ranch, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@CraigRanchHomes.com.',
+    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Craig Ranch, Las Vegas. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@CraigRanchHomes.com.',
   keywords:
     'contact real estate agent, Dr. Jan Duffy, Craig Ranch real estate agent, Las Vegas realtor, Berkshire Hathaway, contact form, real estate consultation',
   path: '/contact',
@@ -130,7 +130,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className='text-lg font-semibold text-[#0A2540]'>
-                    851 W Lone Mountain Rd
+                    851 W Lone Mountain Rd, Suite 103
                   </p>
                   <p className='text-gray-600 text-sm mt-1'>
                     North Las Vegas, NV 89032
@@ -213,7 +213,7 @@ export default function ContactPage() {
               Find Us on the Map
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Visit us at 851 W Lone Mountain Rd, North Las Vegas, NV 89032. We
+              Visit us at 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. We
               serve clients throughout Las Vegas, Henderson, and surrounding
               communities.
             </p>
@@ -221,7 +221,7 @@ export default function ContactPage() {
           <div className='relative'>
             <Suspense fallback={<MapSkeleton />}>
               <GoogleMap
-                address='851 W Lone Mountain Rd, North Las Vegas, NV 89032'
+                address='851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032'
                 latitude={36.2465}
                 longitude={-115.1475}
                 zoom={14}
@@ -236,7 +236,7 @@ export default function ContactPage() {
             </Button>
             <Button asChild variant='outline'>
               <Link
-                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032'
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}
@@ -246,7 +246,7 @@ export default function ContactPage() {
             </Button>
             <Button asChild variant='outline'>
               <Link
-                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032'
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}

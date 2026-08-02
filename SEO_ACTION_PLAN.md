@@ -48,7 +48,7 @@
    - Complete verification process
 4. **Complete Profile:**
    - **Name:** Craig Ranch Vegas | Homes By Dr. Jan Duffy
-   - **Address:** 851 W Lone Mountain Rd, North Las Vegas, NV 89032
+   - **Address:** 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
    - **Phone:** (702) 820-5408
    - **Website:** https://www.craigranchhomes.com
    - **Hours:**

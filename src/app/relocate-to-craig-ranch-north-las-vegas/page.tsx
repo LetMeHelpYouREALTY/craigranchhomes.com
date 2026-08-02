@@ -24,7 +24,7 @@ export default function RelocateCraigRanchPage() {
       directAnswer={{
         question: 'How do I relocate and buy a home in Craig Ranch?',
         answer:
-          'Share your budget and arrival date, tour Craig Ranch homes via video or a focused in-person trip, then write an offer with electronic disclosures. Dr. Jan Duffy coordinates inspections and closing from 851 W Lone Mountain Rd, North Las Vegas. Call (702) 820-5408.',
+          'Share your budget and arrival date, tour Craig Ranch homes via video or a focused in-person trip, then write an offer with electronic disclosures. Dr. Jan Duffy coordinates inspections and closing from 851 W Lone Mountain Rd, Suite 103, North Las Vegas. Call (702) 820-5408.',
         bullets: [
           'Plan commute windows to work sites and Harry Reid International Airport',
           'Confirm HOA and school assignment for each MLS number',
