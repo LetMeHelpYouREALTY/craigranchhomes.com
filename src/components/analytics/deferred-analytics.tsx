@@ -26,7 +26,7 @@ export default function DeferredAnalytics({
 }: DeferredAnalyticsProps) {
   useEffect(() => {
     let loaded = false;
-    let timeoutId: number | undefined;
+    const timeoutIds: number[] = [];
 
     const loadGa = () => {
       if (!gaMeasurementId || document.getElementById('ga-gtag')) {
@@ -130,8 +130,8 @@ export default function DeferredAnalytics({
       for (const event of INTERACTION_EVENTS) {
         window.removeEventListener(event, loadAll, true);
       }
-      if (timeoutId !== undefined) {
-        window.clearTimeout(timeoutId);
+      for (const id of timeoutIds) {
+        window.clearTimeout(id);
       }
     };
 
@@ -144,7 +144,7 @@ export default function DeferredAnalytics({
     }
 
     // Fallback so analytics still fires without interaction (after lab window).
-    timeoutId = window.setTimeout(loadAll, 8000);
+    timeoutIds.push(window.setTimeout(loadAll, 8000));
 
     return cleanup;
   }, [facebookPixelId, gaMeasurementId, gtmId]);

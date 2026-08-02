@@ -16,7 +16,6 @@ export default function Hero() {
             srcSet={HERO_WEBP_SRCSET}
             sizes='100vw'
           />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src='/hero-craig-ranch-828.jpg'
             srcSet={HERO_JPG_SRCSET}
