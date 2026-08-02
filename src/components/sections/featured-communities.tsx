@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Card,
@@ -16,18 +17,22 @@ export default function FeaturedCommunities() {
     {
       name: '6 Neighborhoods',
       description:
-        'Multiple inspired home collections across 6 distinct neighborhoods',
+        'Multiple home collections across 6 distinct Craig Ranch subdivisions',
       avgPrice: '17 Floor Plans',
       homesAvailable: '1,519-2,947 sq.ft.',
       amenities: ['Single Story', 'Two Story', 'Up to 5 Bedrooms'],
+      image: '/images/craig-ranch/two-story-home.jpg',
+      alt: 'Two-story home in a Craig Ranch subdivision, North Las Vegas',
     },
     {
       name: 'Parks & Recreation',
       description:
-        '7 community parks plus a 3.5-acre park with miles of trails',
+        '7 community parks plus Craig Ranch Regional Park with miles of trails',
       avgPrice: 'Regional Park',
-      homesAvailable: 'Nearby Access',
+      homesAvailable: '170 Acres',
       amenities: ['Walking Trails', 'Playgrounds', 'Open Spaces'],
+      image: '/images/craig-ranch/aerial-park.jpg',
+      alt: 'Aerial view of Craig Ranch Regional Park recreation space',
     },
     {
       name: 'Prime Location',
@@ -35,13 +40,14 @@ export default function FeaturedCommunities() {
       avgPrice: 'Easy Access',
       homesAvailable: 'I-15 & 215',
       amenities: ['Nellis AFB', 'VA Hospital', 'Shopping'],
+      image: '/images/craig-ranch/single-story-home.jpg',
+      alt: 'Single-story Craig Ranch home near major North Las Vegas routes',
     },
   ];
 
   return (
     <section className='py-20 bg-white'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
             Featured Craig Ranch Communities
@@ -51,13 +57,22 @@ export default function FeaturedCommunities() {
           </p>
         </div>
 
-        {/* Communities Grid */}
         <div className='grid md:grid-cols-3 gap-8'>
-          {communities.map((community, index) => (
+          {communities.map((community) => (
             <Card
-              key={index}
-              className='bg-[#F7F9FC] hover:shadow-lg transition-all duration-300 border-0'
+              key={community.name}
+              className='bg-[#F7F9FC] hover:shadow-lg transition-all duration-300 border-0 overflow-hidden'
             >
+              <div className='relative h-48 w-full'>
+                <Image
+                  src={community.image}
+                  alt={community.alt}
+                  fill
+                  sizes='(max-width: 768px) 100vw, 33vw'
+                  className='object-cover'
+                  loading='lazy'
+                />
+              </div>
               <CardHeader>
                 <CardTitle className='text-2xl text-[#0A2540]'>
                   {community.name}
@@ -94,9 +109,9 @@ export default function FeaturedCommunities() {
                     Key Amenities:
                   </h4>
                   <div className='flex flex-wrap gap-2'>
-                    {community.amenities.map((amenity, amenityIndex) => (
+                    {community.amenities.map((amenity) => (
                       <Badge
-                        key={amenityIndex}
+                        key={amenity}
                         variant='outline'
                         className='bg-white text-[#0A2540] border-gray-200'
                       >
@@ -118,7 +133,7 @@ export default function FeaturedCommunities() {
                     rel='noopener noreferrer'
                     prefetch={false}
                   >
-                    Explore {community.name}
+                    Explore Homes
                   </Link>
                 </Button>
               </CardFooter>
