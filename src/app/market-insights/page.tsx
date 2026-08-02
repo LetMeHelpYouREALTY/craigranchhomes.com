@@ -224,7 +224,7 @@ export default async function MarketInsightsPage() {
       <HyperlocalRelatedLinks excludeHref='/market-insights' />
       <HyperlocalNapCta
         heading='Get Craig Ranch numbers behind the headlines'
-        supporting='Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Ask how today’s rates affect your Craig Ranch purchase or sale.'
+        supporting='Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Ask how today’s rates affect your Craig Ranch purchase or sale.'
       />
 
       <Script

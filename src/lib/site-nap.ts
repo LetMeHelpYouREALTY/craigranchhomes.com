@@ -13,8 +13,8 @@ export const SITE_NAP = {
   phoneHref: 'tel:7028205408',
   phoneE164: '+1-702-820-5408',
   email: 'DrDuffy@CraigRanchHomes.com',
-  addressLine: '851 W Lone Mountain Rd, North Las Vegas, NV 89032',
-  streetAddress: '851 W Lone Mountain Rd',
+  addressLine: '851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032',
+  streetAddress: '851 W Lone Mountain Rd, Suite 103',
   city: 'North Las Vegas',
   region: 'NV',
   postalCode: '89032',
@@ -23,9 +23,9 @@ export const SITE_NAP = {
   hoursLine:
     'Mon–Fri 9:00 AM–6:00 PM • Sat 10:00 AM–4:00 PM • Sun by appointment',
   mapsHref:
-    'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+    'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
   reviewsHref:
-    'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+    'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
   agentName: 'Dr. Jan Duffy',
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
 } as const;

@@ -34,12 +34,12 @@ export default function CraigRanchSchoolsPage() {
     name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
     phoneDisplay: '(702) 820-5408',
     phoneHref: 'tel:7028205408',
-    addressLine: '851 W Lone Mountain Rd, North Las Vegas, NV 89032',
+    addressLine: '851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032',
     hoursLine: 'Mon–Fri 9:00 AM–6:00 PM • Sat 10:00 AM–4:00 PM • Sun by appointment',
     mapsHref:
-      'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+      'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
     reviewsHref:
-      'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+      'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
   } as const;
 
   const faqs = [

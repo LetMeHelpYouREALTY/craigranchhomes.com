@@ -38,7 +38,7 @@ export default function HomesNearMojavePage() {
         },
         {
           heading: 'Next steps',
-          body: 'Browse homes, request a valuation if you are selling, or contact the office at 851 W Lone Mountain Rd, North Las Vegas, NV 89032.',
+          body: 'Browse homes, request a valuation if you are selling, or contact the office at 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032.',
         },
       ]}
       faqs={SCHOOL_MOJAVE_FAQS}

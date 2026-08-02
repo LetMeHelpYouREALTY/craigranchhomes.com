@@ -8,7 +8,7 @@ import {
 const siteUrl = SITE_URL;
 
 const businessAddress = {
-  streetAddress: '851 W Lone Mountain Rd',
+  streetAddress: '851 W Lone Mountain Rd, Suite 103',
   addressLocality: 'North Las Vegas',
   addressRegion: 'NV',
   postalCode: '89032',
@@ -178,7 +178,7 @@ export function generateLocalBusinessSchema() {
       ...businessGeo,
     },
     hasMap:
-      'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+      'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
     areaServed: [
       { '@type': 'City', name: 'North Las Vegas', addressRegion: 'NV' },
       { '@type': 'City', name: 'Las Vegas', addressRegion: 'NV' },

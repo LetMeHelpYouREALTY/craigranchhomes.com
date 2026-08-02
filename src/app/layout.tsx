@@ -219,7 +219,7 @@ export default function RootLayout({
               image: agentPhotoUrl,
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '851 W Lone Mountain Rd',
+                streetAddress: '851 W Lone Mountain Rd, Suite 103',
                 addressLocality: 'North Las Vegas',
                 addressRegion: 'NV',
                 postalCode: '89032',
@@ -302,7 +302,7 @@ export default function RootLayout({
               },
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '851 W Lone Mountain Rd',
+                streetAddress: '851 W Lone Mountain Rd, Suite 103',
                 addressLocality: 'North Las Vegas',
                 addressRegion: 'NV',
                 postalCode: '89032',
@@ -314,7 +314,7 @@ export default function RootLayout({
                 longitude: -115.1475,
               },
               hasMap:
-                'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+                'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',

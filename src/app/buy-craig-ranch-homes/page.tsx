@@ -8,7 +8,7 @@ export const metadata = genMetadata({
   title:
     'Buy Craig Ranch Homes | North Las Vegas 89031 Buyer Agent | Dr. Jan Duffy',
   description:
-    'Buy a home in Craig Ranch, North Las Vegas with Dr. Jan Duffy. Buyer representation, RealScout alerts, offer strategy, and comps for ZIP 89031. Call (702) 820-5408. Office: 851 W Lone Mountain Rd.',
+    'Buy a home in Craig Ranch, North Las Vegas with Dr. Jan Duffy. Buyer representation, RealScout alerts, offer strategy, and comps for ZIP 89031. Call (702) 820-5408. Office: 851 W Lone Mountain Rd, Suite 103.',
   keywords:
     'buy Craig Ranch homes, Craig Ranch buyer agent, homes for sale Craig Ranch, North Las Vegas 89031 real estate, Dr. Jan Duffy',
   path: '/buy-craig-ranch-homes',
@@ -24,7 +24,7 @@ export default function BuyCraigRanchHomesPage() {
       directAnswer={{
         question: 'How do I buy a home in Craig Ranch?',
         answer:
-          'Get pre-approved, define your Craig Ranch budget and must-haves, tour homes near Craig Ranch Regional Park and ZIP 89031, then write an offer backed by local comps. Dr. Jan Duffy, REALTOR®, manages showings, negotiations, and closing from the North Las Vegas office at 851 W Lone Mountain Rd.',
+          'Get pre-approved, define your Craig Ranch budget and must-haves, tour homes near Craig Ranch Regional Park and ZIP 89031, then write an offer backed by local comps. Dr. Jan Duffy, REALTOR®, manages showings, negotiations, and closing from the North Las Vegas office at 851 W Lone Mountain Rd, Suite 103.',
         bullets: [
           'Target price bands from about $370K to $1.8M depending on size and upgrades',
           'Confirm school assignment (e.g., Eva G. Simmons, Findlay Middle, Mojave High) per address',

@@ -135,7 +135,7 @@ export const ZIP_89031_FAQS: ReadonlyArray<FaqItem> = [
   {
     question: 'Where is your real estate office relative to Craig Ranch 89031?',
     answer:
-      'Dr. Jan Duffy’s office for this site is at 851 W Lone Mountain Rd, North Las Vegas, NV 89032. The Craig Ranch community commonly uses ZIP 89031. Call (702) 820-5408 for showings in either ZIP.',
+      'Dr. Jan Duffy’s office for this site is at 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. The Craig Ranch community commonly uses ZIP 89031. Call (702) 820-5408 for showings in either ZIP.',
   },
   {
     question: 'How do I get a market update for 89031 Craig Ranch homes?',
@@ -223,7 +223,7 @@ export const COMMUNITY_PAGE_FAQS: ReadonlyArray<FaqItem> = [
   {
     question: 'How do I get listing help for a Craig Ranch address?',
     answer:
-      'Call Dr. Jan Duffy at (702) 820-5408 or visit the Craig Ranch REALTOR® page. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032.',
+      'Call Dr. Jan Duffy at (702) 820-5408 or visit the Craig Ranch REALTOR® page. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032.',
   },
 ];
 
@@ -236,7 +236,7 @@ export const CONTACT_PAGE_FAQS: ReadonlyArray<FaqItem> = [
   {
     question: 'Where is the Craig Ranch Vegas office located?',
     answer:
-      '851 W Lone Mountain Rd, North Las Vegas, NV 89032. Get directions via Google Maps from the contact page, then schedule Craig Ranch showings with Dr. Jan Duffy.',
+      '851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Get directions via Google Maps from the contact page, then schedule Craig Ranch showings with Dr. Jan Duffy.',
   },
 ];
 
