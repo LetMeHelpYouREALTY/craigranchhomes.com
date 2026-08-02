@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import {
+  SITE_AGENT_PHOTO_URL,
+  SITE_LOGO_URL,
+  SITE_URL,
+} from '@/lib/site-nap';
 
-const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
-).replace(/\/$/, '');
+const siteUrl = SITE_URL;
 
 const businessAddress = {
   streetAddress: '851 W Lone Mountain Rd',
@@ -160,7 +163,12 @@ export function generateLocalBusinessSchema() {
     telephone: businessPhone,
     email: businessEmail,
     image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
-    logo: `${siteUrl}/globe.svg`,
+    logo: {
+      '@type': 'ImageObject',
+      url: SITE_LOGO_URL,
+      width: 512,
+      height: 512,
+    },
     address: {
       '@type': 'PostalAddress',
       ...businessAddress,
@@ -210,7 +218,7 @@ export function generateOrganizationSchema() {
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
-      url: `${siteUrl}/globe.svg`,
+      url: SITE_LOGO_URL,
       width: 512,
       height: 512,
     },
@@ -287,11 +295,11 @@ export function generateRealEstateAgentSchema() {
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
-      url: `${siteUrl}/globe.svg`,
+      url: SITE_LOGO_URL,
       width: 512,
       height: 512,
     },
-    image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
+    image: SITE_AGENT_PHOTO_URL,
     address: {
       '@type': 'PostalAddress',
       ...businessAddress,

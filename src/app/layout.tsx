@@ -6,6 +6,10 @@ import {
   generateLocalBusinessSchema,
   generateWebSiteSchema,
 } from '@/lib/metadata';
+import {
+  SITE_AGENT_PHOTO_URL,
+  SITE_LOGO_URL,
+} from '@/lib/site-nap';
 import './globals.css';
 
 const googleSiteVerification =
@@ -48,7 +52,8 @@ function isValidFacebookPixelId(value: string | undefined): value is string {
 
 // Ensure these assets exist in /public to avoid 404s for crawlers.
 const ogImageUrl = `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`;
-const logoUrl = `${siteUrl}/globe.svg`;
+const logoUrl = SITE_LOGO_URL;
+const agentPhotoUrl = SITE_AGENT_PHOTO_URL;
 
 // Optimize fonts with next/font
 const sourceSansPro = Source_Sans_3({
@@ -154,11 +159,12 @@ export default function RootLayout({
   return (
     <html lang='en' className={`${sourceSansPro.variable} ${openSans.variable}`}>
       <head>
-        {/* Favicon for Google Search results - must be square, at least 48x48px, stable URL */}
+        {/* Favicon / brand mark — square PNG + multi-size ICO for Google Search & GBP */}
         <link rel='icon' href='/favicon.ico' sizes='any' />
-        <link rel='icon' href='/favicon.ico' type='image/x-icon' />
-        {/* Apple Touch Icon for iOS devices */}
-        <link rel='apple-touch-icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon-32x32.png' type='image/png' sizes='32x32' />
+        <link rel='icon' href='/favicon-16x16.png' type='image/png' sizes='16x16' />
+        <link rel='icon' href='/logo.png' type='image/png' sizes='512x512' />
+        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
         {/* LCP hero: preload compressed WebP (JPEG fallback in <picture>) */}
         <link
@@ -257,8 +263,13 @@ export default function RootLayout({
                 name: 'Berkshire Hathaway HomeServices Nevada',
               },
               url: siteUrl,
-              logo: logoUrl,
-              image: ogImageUrl,
+              logo: {
+                '@type': 'ImageObject',
+                url: logoUrl,
+                width: 512,
+                height: 512,
+              },
+              image: agentPhotoUrl,
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '851 W Lone Mountain Rd',

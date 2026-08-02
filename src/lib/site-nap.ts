@@ -30,6 +30,12 @@ export const SITE_NAP = {
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
 } as const;
 
+/** Canonical brand mark for schema, favicon, and header (512×512 PNG). */
+export const SITE_LOGO_PATH = '/logo.png' as const;
+export const SITE_LOGO_URL = `${SITE_URL}${SITE_LOGO_PATH}`;
+export const SITE_AGENT_PHOTO_PATH = '/images/dr-jan-duffy-headshot.jpg' as const;
+export const SITE_AGENT_PHOTO_URL = `${SITE_URL}${SITE_AGENT_PHOTO_PATH}`;
+
 export type HyperlocalLink = {
   href: string;
   label: string;

@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { SITE_LOGO_PATH, SITE_NAP } from '@/lib/site-nap';
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -27,11 +29,24 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <Link
             href='/'
-            className='flex items-center text-2xl font-bold text-[#0A2540]'
-            aria-label='Craig Ranch Homes — call (702) 820-5408'
+            className='flex items-center gap-2.5 min-w-0'
+            aria-label={`${SITE_NAP.name} — call ${SITE_NAP.phoneDisplay}`}
           >
-            <span className='text-2xl font-bold text-[#0A2540]'>
-              (702) 820-5408
+            <Image
+              src={SITE_LOGO_PATH}
+              alt={`${SITE_NAP.agentName} — Craig Ranch Homes`}
+              width={40}
+              height={40}
+              priority
+              className='h-10 w-10 rounded-full object-cover shrink-0'
+            />
+            <span className='flex flex-col leading-tight min-w-0'>
+              <span className='text-sm sm:text-base font-bold text-[#0A2540] truncate'>
+                {SITE_NAP.agentName}
+              </span>
+              <span className='text-xs sm:text-sm font-semibold text-[#1E6BB8]'>
+                {SITE_NAP.phoneDisplay}
+              </span>
             </span>
           </Link>
 
@@ -75,7 +90,26 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
               <div className='flex flex-col space-y-4 mt-8'>
-                <p className='text-2xl font-bold text-[#0A2540] mb-4'>Menu</p>
+                <div className='flex items-center gap-3 mb-4'>
+                  <Image
+                    src={SITE_LOGO_PATH}
+                    alt={`${SITE_NAP.agentName} — Craig Ranch Homes`}
+                    width={48}
+                    height={48}
+                    className='h-12 w-12 rounded-full object-cover'
+                  />
+                  <div>
+                    <p className='text-lg font-bold text-[#0A2540]'>
+                      {SITE_NAP.agentName}
+                    </p>
+                    <a
+                      href={SITE_NAP.phoneHref}
+                      className='text-sm font-semibold text-[#1E6BB8]'
+                    >
+                      {SITE_NAP.phoneDisplay}
+                    </a>
+                  </div>
+                </div>
                 {navLinks.map(link => (
                   <Link
                     key={link.href}
