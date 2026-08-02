@@ -1,4 +1,4 @@
-# SEO Audit Report - Craig Ranch Vegas
+# SEO Audit Report - Craig Ranch Homes
 ## Based on Google's SEO Starter Guide
 
 **Date:** January 2025  
@@ -128,7 +128,7 @@
   - Descriptive and concise
   - Include business name and location
   - Examples:
-    - "Craig Ranch Vegas | Homes By Dr. Jan Duffy"
+    - "Craig Ranch Homes"
     - "Homes for Sale in Craig Ranch, Las Vegas | ..."
 - **Action:** None needed
 
@@ -145,7 +145,7 @@
 - **Status:** ✅ Implemented
 - **Details:**
   - WebSite structured data with site name
-  - Primary: "Craig Ranch Vegas"
+  - Primary: "Craig Ranch Homes"
   - Alternates: "Craig Ranch Homes", full name, domain
 - **Action:** Monitor appearance in search results
 

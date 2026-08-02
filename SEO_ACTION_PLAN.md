@@ -1,5 +1,5 @@
 # SEO Quick-Start Action Plan
-## Immediate Next Steps for Craig Ranch Vegas
+## Immediate Next Steps for Craig Ranch Homes
 
 **Created:** January 2025  
 **Status:** All technical SEO implemented ✅ | Manual actions required ⚠️
@@ -41,13 +41,13 @@
 #### Steps:
 1. **Go to:** https://business.google.com
 2. **Claim Your Business:**
-   - Search for "Craig Ranch Vegas | Homes By Dr. Jan Duffy"
+   - Search for "Craig Ranch Homes"
    - Or create new listing if it doesn't exist
 3. **Verify Business:**
    - Choose verification method (phone or postcard)
    - Complete verification process
 4. **Complete Profile:**
-   - **Name:** Craig Ranch Vegas | Homes By Dr. Jan Duffy
+   - **Name:** Craig Ranch Homes
    - **Address:** 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
    - **Phone:** (702) 820-5408
    - **Website:** https://www.craigranchhomes.com

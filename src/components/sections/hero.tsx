@@ -11,7 +11,6 @@ const HERO_JPG_SRCSET =
 export default function Hero() {
   return (
     <section className='relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
-      {/* LCP background — responsive webp first, jpeg fallback */}
       <div className='absolute inset-0 w-full h-full bg-[#0A2540]'>
         <picture>
           <source
@@ -50,7 +49,7 @@ export default function Hero() {
             {SITE_NAP.agentName}
           </p>
           <p className='text-sm md:text-base text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
-            REALTOR® · Craig Ranch, North Las Vegas
+            REALTOR® · License #{SITE_NAP.license}
           </p>
         </div>
 
@@ -63,26 +62,28 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className='text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'>
+        <p className='text-xl md:text-2xl mb-4 text-white max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'>
           Browse homes in Craig Ranch, North Las Vegas — park, trails, and
           Century Communities floor plans from 1,519–2,638 sq ft
         </p>
 
+        <p className='text-sm md:text-base text-white/90 mb-8 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
+          <a href={SITE_NAP.phoneHref} className='underline underline-offset-2'>
+            {SITE_NAP.phoneDisplay}
+          </a>
+          {' · '}
+          {SITE_NAP.addressLine}
+        </p>
+
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <Link
-            href='http://drjanduffy.realscout.com/onboarding'
-            target='_blank'
-            rel='noopener noreferrer'
-            prefetch={false}
+            href='/homes'
             className='bg-[#0B7A5A] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#096B4E] transition-colors duration-200 shadow-lg'
           >
             View Available Homes
           </Link>
           <Link
-            href='http://drjanduffy.realscout.com/onboarding'
-            target='_blank'
-            rel='noopener noreferrer'
-            prefetch={false}
+            href='/contact'
             className='bg-white text-[#0A2540] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 border border-white'
           >
             Schedule a Tour

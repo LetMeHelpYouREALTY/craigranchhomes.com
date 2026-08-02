@@ -7,9 +7,10 @@ import Link from 'next/link';
 import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
-  generateLocalBusinessSchema,
   generateFAQPageSchema,
   generateBreadcrumbSchema,
+  generateHowToSchema,
+  generateSpeakableSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
 import { CRAIG_RANCH_LONGFORM_PARAGRAPHS } from '@/lib/craig-ranch-longform';
@@ -31,7 +32,7 @@ export const metadata = genMetadata({
 
 export default function SellCraigRanchPage() {
   const nap = {
-    name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    name: 'Craig Ranch Homes',
     phoneDisplay: '(702) 820-5408',
     phoneHref: 'tel:7028205408',
     addressLine: '851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032',
@@ -256,7 +257,7 @@ export default function SellCraigRanchPage() {
                   longitude={-115.1475}
                   zoom={14}
                   height='460px'
-                  title='Craig Ranch Vegas | Homes By Dr. Jan Duffy Office Location'
+                  title='Craig Ranch Homes Office Location'
                 />
               </Suspense>
             </div>
@@ -310,7 +311,6 @@ export default function SellCraigRanchPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Sell a Home in Craig Ranch | Dr. Jan Duffy, REALTOR®',
               description:
@@ -326,6 +326,34 @@ export default function SellCraigRanchPage() {
               { name: 'Sell in Craig Ranch', url: `${baseUrl}/sell-craig-ranch` },
             ]),
             generateFAQPageSchema(faqs),
+            generateSpeakableSchema({
+              url: `${baseUrl}/sell-craig-ranch`,
+              name: 'Sell a Home in Craig Ranch | Dr. Jan Duffy, REALTOR®',
+              cssSelector: ['h1', '#craig-ranch-faqs'],
+            }),
+            generateHowToSchema({
+              name: 'How to sell a home in Craig Ranch',
+              description:
+                'Listing steps for Craig Ranch sellers working with Dr. Jan Duffy.',
+              steps: [
+                {
+                  name: 'Price with local comps',
+                  text: 'Review recent Craig Ranch and 89031 sales to set a competitive list price.',
+                },
+                {
+                  name: 'Prep the home',
+                  text: 'Complete repairs, staging priorities, and photo-ready presentation.',
+                },
+                {
+                  name: 'Market the listing',
+                  text: 'Launch MLS exposure, RealScout distribution, and targeted buyer outreach.',
+                },
+                {
+                  name: 'Negotiate and close',
+                  text: 'Manage offers, inspections, and closing timelines with clear next steps.',
+                },
+              ],
+            }),
           ]),
         }}
       />

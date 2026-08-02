@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   try {
     // Get parameters from URL using NextRequest's nextUrl
     const title =
-      request.nextUrl.searchParams.get('title') || 'Craig Ranch Vegas | Homes By Dr. Jan Duffy';
+      request.nextUrl.searchParams.get('title') || 'Craig Ranch Homes';
     const subtitle = request.nextUrl.searchParams.get('subtitle') || 'Luxury Real Estate in Las Vegas';
     const price = request.nextUrl.searchParams.get('price');
     const address = request.nextUrl.searchParams.get('address');

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import {
   SITE_AGENT_PHOTO_URL,
   SITE_LOGO_URL,
+  SITE_NAP,
   SITE_URL,
 } from '@/lib/site-nap';
 
@@ -22,7 +23,7 @@ const businessGeo = {
   longitude: -115.1475,
 } as const;
 
-const businessName = 'Craig Ranch Vegas | Homes By Dr. Jan Duffy';
+const businessName = 'Craig Ranch Homes';
 const businessPhone = '+1-702-820-5408';
 const businessEmail = 'DrDuffy@CraigRanchHomes.com';
 
@@ -324,16 +325,36 @@ export function generateRealEstateAgentSchema() {
         addressCountry: 'US',
       },
     ],
+    telephone: businessPhone,
+    email: businessEmail,
     serviceArea: {
       '@type': 'Place',
       name: 'Craig Ranch',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Las Vegas',
+        addressLocality: 'North Las Vegas',
         addressRegion: 'NV',
+        postalCode: '89031',
         addressCountry: 'US',
       },
     },
+    knowsAbout: [
+      'Craig Ranch real estate',
+      'North Las Vegas 89031 homes',
+      'Nellis AFB relocation',
+      'Craig Ranch Regional Park neighborhoods',
+      'Century Communities floor plans',
+    ],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Professional License',
+      name: `Nevada Real Estate License ${SITE_NAP.license}`,
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'Nevada Real Estate Division',
+      },
+    },
+    identifier: SITE_NAP.license,
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -474,11 +495,11 @@ export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Craig Ranch Vegas',
+    name: 'Craig Ranch Homes',
     alternateName: [
-      'Craig Ranch Homes',
-      'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+      'CraigRanchHomes.com',
       'craigranchhomes.com',
+      'Craig Ranch Homes by Dr. Jan Duffy',
     ],
     url: siteUrl,
     description:
@@ -487,11 +508,66 @@ export function generateWebSiteSchema() {
       '@type': 'Organization',
       '@id': `${siteUrl}#organization`,
     },
+    // Point SearchAction at an indexable listings page — /search is noindex/disallowed.
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${siteUrl}/search?q={search_term_string}`,
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteUrl}/homes`,
+      },
       'query-input': 'required name=search_term_string',
     },
+  };
+}
+
+/**
+ * SpeakableSpecification for answer engines / voice surfaces.
+ */
+export function generateSpeakableSchema({
+  url,
+  name,
+  cssSelector = ['h1', '#aeo-direct-answer', '#craig-ranch-faqs'],
+}: {
+  url: string;
+  name: string;
+  cssSelector?: ReadonlyArray<string>;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#speakable`,
+    url,
+    name,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: [...cssSelector],
+    },
+  };
+}
+
+/**
+ * HowTo schema for process queries (buy, sell, relocate, valuation).
+ */
+export function generateHowToSchema({
+  name,
+  description,
+  steps,
+}: {
+  name: string;
+  description: string;
+  steps: ReadonlyArray<{ name: string; text: string }>;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
   };
 }
 

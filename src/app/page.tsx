@@ -9,7 +9,8 @@ import FeaturedCommunities from '@/components/sections/featured-communities';
 import BlogPosts from '@/components/sections/blog-posts';
 import RealScoutOfficeWidget from '@/components/sections/realscout-office-widget';
 import ClientErrorBoundary from '@/components/shared/client-error-boundary';
-import FAQSection from '@/components/sections/faq-section';
+import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
 import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
@@ -21,13 +22,12 @@ import {
   generateMetadata as genMetadata,
   CRAIG_RANCH_FAQS,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateWebPageSchema,
-  generateRealEstateAgentSchema,
 } from '@/lib/metadata';
+import { SITE_NAP, SITE_URL } from '@/lib/site-nap';
 
-const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
-).replace(/\/$/, '');
+const baseUrl = SITE_URL;
 
 // Dynamically import heavy components with loading states
 const DynamicHomeEvaluation = dynamic(
@@ -78,9 +78,9 @@ const DynamicBlogPosts = dynamic(
 export const revalidate = 3600; // 1 hour
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Craig Ranch Homes | Dr. Jan Duffy REALTOR®',
   description:
-    'Find homes in Craig Ranch, Las Vegas from $370K to $1.8M. Award-winning master-planned community with 170-acre park and 5 miles of trails. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.',
+    'Craig Ranch homes in North Las Vegas from about $370K–$1.8M. Park, trails, and floor plans with Dr. Jan Duffy. Call (702) 820-5408.',
   keywords:
     'Craig Ranch, Las Vegas real estate, luxury homes, Las Vegas homes for sale, North Las Vegas, Nevada real estate, Craig Ranch community, luxury properties, real estate agent Las Vegas, Dr. Jan Duffy, Berkshire Hathaway',
   path: '/',
@@ -91,6 +91,16 @@ export default function Home() {
     <PageLayout>
       <article>
         <Hero />
+
+        <AeoAnswerBlock
+          question='What is Craig Ranch real estate in North Las Vegas?'
+          answer='Craig Ranch is a master-planned community in North Las Vegas ZIP 89031 with a 170-acre regional park, about 5 miles of trails, and homes commonly ranging from 1,519–2,638 sq ft. Dr. Jan Duffy, REALTOR® (Nevada license S.0197614.LLC), helps buyers and sellers compare listings, price with local comps, and close with clear timelines.'
+          bullets={[
+            'Price bands recently from about $370K to $1.8M depending on size and upgrades',
+            `Office: ${SITE_NAP.addressLine} · ${SITE_NAP.phoneDisplay}`,
+            'Confirm school assignment (e.g., Eva G. Simmons, Findlay Middle, Mojave High) per address',
+          ]}
+        />
 
         {/* Quick Links Section */}
         <section className='py-12 bg-white border-b'>
@@ -124,17 +134,17 @@ export default function Home() {
                   </span>
                 </Button>
               </Link>
-              <Link href='/market-data' className='block'>
+              <Link href='/craig-ranch-realtor' className='block'>
                 <Button
                   variant='outline'
                   className='w-full h-auto py-6 flex-col gap-2 text-[#0A2540] hover:bg-[#F7F9FC] hover:text-[#0A2540]'
                 >
                   <TrendingUp className='h-8 w-8 text-[#0A2540]' />
                   <span className='text-lg font-semibold text-[#0A2540]'>
-                    Market Insights
+                    Craig Ranch REALTOR®
                   </span>
                   <span className='text-sm text-gray-700'>
-                    Latest trends and statistics
+                    Work with Dr. Jan Duffy locally
                   </span>
                 </Button>
               </Link>
@@ -333,26 +343,31 @@ export default function Home() {
           </div>
         </section>
         
-        <FAQSection />
+        <AeoFaqSection
+          title='Craig Ranch real estate FAQs'
+          subtitle='Direct answers for buyers and sellers researching Craig Ranch, North Las Vegas.'
+          faqs={CRAIG_RANCH_FAQS}
+        />
       </article>
 
-      {/* Structured Data */}
+      {/* Page-level schema only — entity schemas live in root layout */}
       <Script
         id='homepage-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              name: 'Craig Ranch Homes | Dr. Jan Duffy REALTOR®',
               description:
-                'Find homes in Craig Ranch, Las Vegas. Browse listings, explore the neighborhood, and review park, trail, and floor-plan details with Dr. Jan Duffy.',
+                'Find homes in Craig Ranch, North Las Vegas. Browse listings, explore the neighborhood, and review park, trail, and floor-plan details with Dr. Jan Duffy.',
               url: baseUrl,
-              breadcrumb: [
-                { name: 'Home', url: baseUrl },
-              ],
+              breadcrumb: [{ name: 'Home', url: baseUrl }],
             }),
-            generateRealEstateAgentSchema(),
             generateFAQPageSchema(CRAIG_RANCH_FAQS),
+            generateSpeakableSchema({
+              url: baseUrl,
+              name: 'Craig Ranch Homes | Dr. Jan Duffy REALTOR®',
+            }),
           ]),
         }}
       />

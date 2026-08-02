@@ -14,11 +14,11 @@ export default function Navigation() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/homes', label: 'Homes' },
+    { href: '/buy-craig-ranch-homes', label: 'Buy' },
+    { href: '/sell-craig-ranch', label: 'Sell' },
+    { href: '/craig-ranch-realtor', label: 'REALTOR®' },
     { href: '/neighborhood', label: 'Neighborhood' },
-    { href: '/neighborhoods', label: 'Neighborhoods' },
-    { href: '/community', label: 'Community' },
-    { href: '/market-data', label: 'Market Data' },
-    { href: '/market-insights', label: 'Market Insights' },
+    { href: '/market-data', label: 'Market' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -42,7 +42,7 @@ export default function Navigation() {
             />
             <span className='flex flex-col leading-tight min-w-0'>
               <span className='text-sm sm:text-base font-bold text-[#0A2540] truncate'>
-                {SITE_NAP.agentName}
+                {SITE_NAP.name}
               </span>
               <span className='text-xs sm:text-sm font-semibold text-[#1E6BB8]'>
                 {SITE_NAP.phoneDisplay}
@@ -100,7 +100,7 @@ export default function Navigation() {
                   />
                   <div>
                     <p className='text-lg font-bold text-[#0A2540]'>
-                      {SITE_NAP.agentName}
+                      {SITE_NAP.name}
                     </p>
                     <a
                       href={SITE_NAP.phoneHref}

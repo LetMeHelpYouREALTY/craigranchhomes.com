@@ -14,7 +14,8 @@ import type { FaqItem } from '@/lib/hyperlocal-faqs';
 import {
   generateBreadcrumbSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
+  generateHowToSchema,
+  generateSpeakableSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
 import { SITE_NAP, SITE_URL } from '@/lib/site-nap';
@@ -23,6 +24,11 @@ export type HyperlocalSection = {
   heading: string;
   body: string;
   bullets?: ReadonlyArray<string>;
+};
+
+export type HowToStep = {
+  name: string;
+  text: string;
 };
 
 export type HyperlocalLandingProps = {
@@ -39,6 +45,11 @@ export type HyperlocalLandingProps = {
   primaryCta?: { href: string; label: string };
   secondaryCta?: { href: string; label: string };
   schemaId: string;
+  howTo?: {
+    name: string;
+    description: string;
+    steps: ReadonlyArray<HowToStep>;
+  };
 };
 
 export default function HyperlocalLanding({
@@ -54,8 +65,36 @@ export default function HyperlocalLanding({
     label: 'Get a Home Valuation',
   },
   schemaId,
+  howTo,
 }: HyperlocalLandingProps) {
   const pageUrl = `${SITE_URL}${path}`;
+
+  const schemaGraph = [
+    generateWebPageSchema({
+      name: h1,
+      description: intro,
+      url: pageUrl,
+      breadcrumb: [
+        { name: 'Home', url: SITE_URL },
+        { name: h1, url: pageUrl },
+      ],
+    }),
+    generateBreadcrumbSchema([
+      { name: 'Home', url: SITE_URL },
+      { name: h1, url: pageUrl },
+    ]),
+    generateFAQPageSchema(faqs),
+    generateSpeakableSchema({ url: pageUrl, name: h1 }),
+    ...(howTo
+      ? [
+          generateHowToSchema({
+            name: howTo.name,
+            description: howTo.description,
+            steps: howTo.steps,
+          }),
+        ]
+      : []),
+  ];
 
   return (
     <PageLayout>
@@ -85,6 +124,9 @@ export default function HyperlocalLanding({
               <Link href={secondaryCta.href}>{secondaryCta.label}</Link>
             </Button>
           </div>
+          <p className='mt-6 text-sm text-blue-100'>
+            {SITE_NAP.addressLine} · License #{SITE_NAP.license}
+          </p>
         </div>
       </div>
 
@@ -95,7 +137,10 @@ export default function HyperlocalLanding({
       />
 
       {sections.map((section) => (
-        <section key={section.heading} className='py-12 bg-white border-t border-gray-100'>
+        <section
+          key={section.heading}
+          className='py-12 bg-white border-t border-gray-100'
+        >
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
               {section.heading}
@@ -115,10 +160,7 @@ export default function HyperlocalLanding({
       ))}
 
       <RealtorServicesGrid />
-      <AeoFaqSection
-        title={`${SITE_NAP.communityName} FAQs`}
-        faqs={faqs}
-      />
+      <AeoFaqSection title={`${SITE_NAP.communityName} FAQs`} faqs={faqs} />
       <HyperlocalNapCta />
       <HyperlocalRelatedLinks excludeHref={path} />
 
@@ -140,34 +182,7 @@ export default function HyperlocalLanding({
         id={schemaId}
         type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            generateLocalBusinessSchema(),
-            generateWebPageSchema({
-              name: h1,
-              description: intro,
-              url: pageUrl,
-              breadcrumb: [
-                { name: 'Home', url: SITE_URL },
-                { name: h1, url: pageUrl },
-              ],
-            }),
-            generateBreadcrumbSchema([
-              { name: 'Home', url: SITE_URL },
-              { name: h1, url: pageUrl },
-            ]),
-            generateFAQPageSchema(faqs),
-            {
-              '@context': 'https://schema.org',
-              '@type': 'WebPage',
-              '@id': `${pageUrl}#speakable`,
-              url: pageUrl,
-              name: h1,
-              speakable: {
-                '@type': 'SpeakableSpecification',
-                cssSelector: ['h1', '#craig-ranch-faqs'],
-              },
-            },
-          ]),
+          __html: JSON.stringify(schemaGraph),
         }}
       />
     </PageLayout>

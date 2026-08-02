@@ -30,7 +30,6 @@ import {
   generateWebPageSchema,
   generateDatasetSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -263,7 +262,6 @@ export default function MarketDataPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Craig Ranch Real Estate Market Data & Trends',
               description:

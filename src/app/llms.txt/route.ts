@@ -13,6 +13,7 @@ Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with
 - **License:** Nevada S.0197614.LLC
 - **Phone:** 702-820-5408
 - **Office:** 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
+- **Hours:** Mon–Fri 9:00 AM–6:00 PM · Sat 10:00 AM–4:00 PM · Sun by appointment
 - **Community ZIP:** 89031 (Craig Ranch)
 - **Website:** ${baseUrl}
 
@@ -33,27 +34,38 @@ Craig Ranch and North Las Vegas 89031, plus nearby Las Vegas / Henderson as need
 - Clifford O. Pete Findlay Middle School
 - Mojave High School
 
-## Key Pages
-- [Home](${baseUrl}/)
-- [Homes for Sale](${baseUrl}/homes)
+## Answer-first pages (AEO)
 - [Buy Craig Ranch Homes](${baseUrl}/buy-craig-ranch-homes)
 - [Sell Craig Ranch](${baseUrl}/sell-craig-ranch)
 - [Home Valuation](${baseUrl}/home-valuation-craig-ranch)
 - [Craig Ranch REALTOR®](${baseUrl}/craig-ranch-realtor)
 - [89031 Real Estate](${baseUrl}/craig-ranch-89031-real-estate)
 - [First-Time Buyers](${baseUrl}/first-time-home-buyers-craig-ranch-89031)
+- [Nellis AFB Relocation](${baseUrl}/nellis-afb-relocation-craig-ranch)
 - [Luxury Homes](${baseUrl}/luxury-homes-craig-ranch-north-las-vegas)
 - [Investment Properties](${baseUrl}/craig-ranch-investment-properties)
-- [Relocate to Craig Ranch](${baseUrl}/relocate-to-craig-ranch-north-las-vegas)
-- [Nellis AFB Relocation](${baseUrl}/nellis-afb-relocation-craig-ranch)
+
+## Key Pages
+- [Home](${baseUrl}/)
+- [Homes for Sale](${baseUrl}/homes)
+- [Community](${baseUrl}/community)
+- [Neighborhood](${baseUrl}/neighborhood)
+- [Neighborhoods](${baseUrl}/neighborhoods)
+- [Market Data](${baseUrl}/market-data)
+- [Market Insights](${baseUrl}/market-insights)
+- [Market Report](${baseUrl}/craig-ranch-market-report)
+- [New Construction](${baseUrl}/new-construction-craig-ranch)
+- [Craig Ranch Schools](${baseUrl}/craig-ranch-schools)
+- [Craig Ranch Regional Park](${baseUrl}/craig-ranch-regional-park)
+- [Craig Ranch HOA](${baseUrl}/craig-ranch-hoa)
 - [Homes Near Eva G. Simmons](${baseUrl}/homes-near-eva-g-simmons-elementary)
 - [Homes Near Findlay Middle](${baseUrl}/homes-near-findlay-middle-school)
 - [Homes Near Mojave High](${baseUrl}/homes-near-mojave-high-school)
-- [Community](${baseUrl}/community)
-- [Neighborhood](${baseUrl}/neighborhood)
-- [Market Report](${baseUrl}/craig-ranch-market-report)
+- [Relocate to Craig Ranch](${baseUrl}/relocate-to-craig-ranch-north-las-vegas)
 - [Contact](${baseUrl}/contact)
 - [Sitemap](${baseUrl}/sitemap.xml)
+- [AI policy](${baseUrl}/ai.txt)
+- [Humans](${baseUrl}/humans.txt)
 
 ## Contact
 - **Call/Text:** 702-820-5408

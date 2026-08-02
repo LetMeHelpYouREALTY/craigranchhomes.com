@@ -8,7 +8,7 @@ export const SITE_URL = (
 ).replace(/\/$/, '');
 
 export const SITE_NAP = {
-  name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  name: 'Craig Ranch Homes',
   phoneDisplay: '(702) 820-5408',
   phoneHref: 'tel:7028205408',
   phoneE164: '+1-702-820-5408',
@@ -28,6 +28,7 @@ export const SITE_NAP = {
     'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
   agentName: 'Dr. Jan Duffy',
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
+  license: 'S.0197614.LLC',
 } as const;
 
 /** Canonical brand mark for schema, favicon, and header (512×512 PNG). */

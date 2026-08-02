@@ -24,7 +24,7 @@ export default function CraigRanch89031Page() {
       directAnswer={{
         question: 'Is Craig Ranch in ZIP code 89031?',
         answer:
-          'Many Craig Ranch homes are in North Las Vegas ZIP 89031. The Craig Ranch Vegas office for this site is at 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Search both the community name and 89031 for fuller inventory. Call (702) 820-5408.',
+          'Many Craig Ranch homes are in North Las Vegas ZIP 89031. The Craig Ranch Homes office for this site is at 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Search both the community name and 89031 for fuller inventory. Call (702) 820-5408.',
         bullets: [
           'Community focus: Craig Ranch master-planned streets',
           'ZIP focus: 89031 for broader North Las Vegas coverage',

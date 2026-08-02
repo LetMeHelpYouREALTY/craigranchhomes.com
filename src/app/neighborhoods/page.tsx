@@ -32,7 +32,6 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -452,7 +451,6 @@ export default function NeighborhoodsPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
             {
               '@context': 'https://schema.org',

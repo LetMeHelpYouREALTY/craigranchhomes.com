@@ -14,13 +14,12 @@ import {
   generateWebPageSchema,
   generateBreadcrumbSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 import { SITE_NAP, SITE_URL } from '@/lib/site-nap';
 
 export const metadata: Metadata = {
   ...genMetadata({
-    title: 'Search Craig Ranch Homes | Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    title: 'Search Craig Ranch Homes | Craig Ranch Homes',
     description:
       'Search Craig Ranch homes in North Las Vegas 89031. Browse listings, market data, and realtor services with Dr. Jan Duffy. Call (702) 820-5408.',
     keywords:
@@ -94,7 +93,6 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Search Craig Ranch Homes',
               description:

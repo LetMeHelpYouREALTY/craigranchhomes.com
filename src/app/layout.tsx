@@ -71,16 +71,19 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: {
+    default: 'Craig Ranch Homes | Dr. Jan Duffy',
+    template: '%s | Craig Ranch Homes',
+  },
   description:
-    'Craig Ranch homes in North Las Vegas with Dr. Jan Duffy. Master-planned community with 170-acre regional park, 5 miles of trails, and Century Communities floor plans from 1,519–2,638 sq ft. View current listings and call (702) 820-5408.',
+    'Craig Ranch Homes in North Las Vegas with Dr. Jan Duffy. Master-planned community with 170-acre regional park, 5 miles of trails, and Century Communities floor plans from 1,519–2,638 sq ft. Call (702) 820-5408.',
   keywords:
     'Craig Ranch, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Craig Ranch community, luxury homes Las Vegas, Craig Ranch properties, Las Vegas luxury real estate, Craig Ranch homes for sale, Las Vegas real estate agent, Craig Ranch neighborhood, luxury properties Las Vegas, Craig Ranch real estate market, Las Vegas home values',
   authors: [
-    { name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy', url: siteUrl },
+    { name: 'Dr. Jan Duffy', url: `${siteUrl}/craig-ranch-realtor` },
   ],
-  creator: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-  publisher: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  creator: 'Dr. Jan Duffy',
+  publisher: 'Craig Ranch Homes',
   formatDetection: {
     email: false,
     address: false,
@@ -91,11 +94,11 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    title: 'Craig Ranch Homes | Dr. Jan Duffy',
     description:
-      'Craig Ranch homes in North Las Vegas: 170-acre regional park, 5 miles of trails, shopping on West Craig Road, and homes from about $370K to $1.8M. Call (702) 820-5408.',
+      'Craig Ranch Homes in North Las Vegas: 170-acre regional park, 5 miles of trails, shopping on West Craig Road, and homes from about $370K to $1.8M. Call (702) 820-5408.',
     url: siteUrl,
-    siteName: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    siteName: 'Craig Ranch Homes',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -103,15 +106,15 @@ export const metadata: Metadata = {
         url: '/54-DJI_20250707171528_0828_D.jpg',
         width: 1200,
         height: 630,
-        alt: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+        alt: 'Craig Ranch Homes — Dr. Jan Duffy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    title: 'Craig Ranch Homes | Dr. Jan Duffy',
     description:
-      'Browse Craig Ranch homes in North Las Vegas with Dr. Jan Duffy — park, trails, and floor plans from 1,519–2,638 sq ft. Call (702) 820-5408.',
+      'Browse Craig Ranch Homes in North Las Vegas with Dr. Jan Duffy — park, trails, and floor plans from 1,519–2,638 sq ft. Call (702) 820-5408.',
     images: ['/54-DJI_20250707171528_0828_D.jpg'],
   },
   robots: {
@@ -135,19 +138,19 @@ export const metadata: Metadata = {
     'geo.placename': 'North Las Vegas, Las Vegas',
     'geo.position': '36.2465;-115.1475',
     ICBM: '36.2465, -115.1475',
-    'DC.title': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    'DC.creator': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    'DC.title': 'Craig Ranch Homes',
+    'DC.creator': 'Craig Ranch Homes',
     'DC.subject': 'Luxury Real Estate, Las Vegas, Craig Ranch',
     'DC.description': 'Luxury homes in Craig Ranch, Las Vegas',
-    'DC.publisher': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    'DC.contributor': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    'DC.date': '2024',
+    'DC.publisher': 'Craig Ranch Homes',
+    'DC.contributor': 'Craig Ranch Homes',
+    'DC.date': '2026',
     'DC.type': 'Text',
     'DC.format': 'text/html',
     'DC.identifier': siteUrl,
     'DC.language': 'en',
     'DC.coverage': 'Las Vegas, Nevada',
-    'DC.rights': 'Copyright 2007-2025 Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    'DC.rights': 'Copyright 2007-2026 Craig Ranch Homes',
   },
 };
 
@@ -250,8 +253,9 @@ export default function RootLayout({
                 name: 'Craig Ranch',
                 address: {
                   '@type': 'PostalAddress',
-                  addressLocality: 'Las Vegas',
+                  addressLocality: 'North Las Vegas',
                   addressRegion: 'NV',
+                  postalCode: '89031',
                   addressCountry: 'US',
                 },
               },
@@ -287,7 +291,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               '@id': `${siteUrl}#localbusiness`,
-              name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              name: 'Craig Ranch Homes',
               description:
                 'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Craig Ranch homes and properties.',
               url: siteUrl,

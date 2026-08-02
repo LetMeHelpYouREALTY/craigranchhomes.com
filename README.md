@@ -1,10 +1,10 @@
-# Craig Ranch Vegas Homes
+# Craig Ranch Homes Homes
 
-A modern, luxury real estate website for Craig Ranch Vegas Homes, showcasing premium properties in one of Las Vegas' most prestigious communities.
+A modern, luxury real estate website for Craig Ranch Homes Homes, showcasing premium properties in one of Las Vegas' most prestigious communities.
 
 ## 🏠 About
 
-Craig Ranch Vegas Homes is a comprehensive real estate platform designed to help potential buyers discover luxury homes in the Craig Ranch community of Las Vegas, Nevada. The website features a modern, responsive design with an intuitive user experience optimized for real estate search and discovery.
+Craig Ranch Homes Homes is a comprehensive real estate platform designed to help potential buyers discover luxury homes in the Craig Ranch community of Las Vegas, Nevada. The website features a modern, responsive design with an intuitive user experience optimized for real estate search and discovery.
 
 ## 🚀 Getting Started
 

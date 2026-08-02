@@ -234,7 +234,7 @@ export const CONTACT_PAGE_FAQS: ReadonlyArray<FaqItem> = [
       'Call (702) 820-5408, email DrDuffy@CraigRanchHomes.com, or use the contact form. Office hours are Mon–Fri 9:00 AM–6:00 PM, Sat 10:00 AM–4:00 PM, and Sunday by appointment.',
   },
   {
-    question: 'Where is the Craig Ranch Vegas office located?',
+    question: 'Where is the Craig Ranch Homes office located?',
     answer:
       '851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Get directions via Google Maps from the contact page, then schedule Craig Ranch showings with Dr. Jan Duffy.',
   },

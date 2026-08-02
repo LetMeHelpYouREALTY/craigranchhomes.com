@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
-  generateLocalBusinessSchema,
   generateFAQPageSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
@@ -28,7 +27,7 @@ export const metadata = genMetadata({
 
 export default function NewConstructionCraigRanchPage() {
   const nap = {
-    name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    name: 'Craig Ranch Homes',
     phoneDisplay: '(702) 820-5408',
     phoneHref: 'tel:7028205408',
     addressLine: '851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032',
@@ -277,7 +276,6 @@ export default function NewConstructionCraigRanchPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'New Construction Near Craig Ranch',
               description:

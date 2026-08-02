@@ -23,8 +23,8 @@ import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
 import { CONTACT_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
-  generateLocalBusinessSchema,
   generateBreadcrumbSchema,
+  generateSpeakableSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
 } from '@/lib/metadata';
@@ -38,7 +38,7 @@ export const dynamic = 'force-static';
 export const revalidate = false; // Static page, no revalidation needed
 
 export const metadata = genMetadata({
-  title: 'Contact Dr. Jan Duffy - Craig Ranch Vegas | Homes By Dr. Jan Duffy | Las Vegas Real Estate',
+  title: 'Contact Dr. Jan Duffy | Craig Ranch Homes',
   description:
     'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Craig Ranch, Las Vegas. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@CraigRanchHomes.com.',
   keywords:
@@ -96,7 +96,8 @@ export default function ContactPage() {
                     </a>
                   </div>
                   <p className='text-gray-600 text-sm mt-2'>
-                    Available Monday - Saturday, 9 AM - 6 PM
+                    Mon–Fri 9:00 AM–6:00 PM · Sat 10:00 AM–4:00 PM · Sun by
+                    appointment
                   </p>
                 </CardContent>
               </Card>
@@ -226,7 +227,7 @@ export default function ContactPage() {
                 longitude={-115.1475}
                 zoom={14}
                 height='500px'
-                title='Craig Ranch Vegas | Homes By Dr. Jan Duffy Office Location'
+                title='Craig Ranch Homes Office Location'
               />
             </Suspense>
           </div>
@@ -306,9 +307,8 @@ export default function ContactPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
-              name: 'Contact Dr. Jan Duffy - Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              name: 'Contact Dr. Jan Duffy - Craig Ranch Homes',
               description:
                 'Get in touch with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Contact our expert real estate team for buying, selling, or investing in Craig Ranch, Las Vegas.',
               url: `${baseUrl}/contact`,
@@ -322,6 +322,11 @@ export default function ContactPage() {
               { name: 'Home', url: baseUrl },
               { name: 'Contact', url: `${baseUrl}/contact` },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/contact`,
+              name: 'Contact Dr. Jan Duffy | Craig Ranch Homes',
+              cssSelector: ['h1', '#craig-ranch-faqs'],
+            }),
           ]),
         }}
       />

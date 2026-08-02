@@ -31,7 +31,6 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -379,7 +378,6 @@ export default function CommunityPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Craig Ranch Community Guide: Schools, Amenities & Lifestyle',
               description:

@@ -39,7 +39,6 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -50,7 +49,7 @@ const baseUrl = (
 export const revalidate = 1800; // 30 minutes
 
 export const metadata = genMetadata({
-  title: 'Homes for Sale in Craig Ranch, Las Vegas | Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Homes for Sale in Craig Ranch, Las Vegas | Craig Ranch Homes',
   description:
     "Browse luxury homes for sale in Craig Ranch, Las Vegas. View current listings from $370K to $1.8M with detailed photos, virtual tours, and market data. Average home value: $428K. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.",
   keywords:
@@ -349,7 +348,6 @@ export default function HomesPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateCollectionPageSchema({
               name: 'Homes for Sale in Craig Ranch, Las Vegas',
               description:

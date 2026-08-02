@@ -23,7 +23,6 @@ import {
   generateWebPageSchema,
   generateBlogSchema,
   generateFAQPageSchema,
-  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
@@ -32,7 +31,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Las Vegas Homes Market Insights | Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Craig Ranch Las Vegas Homes Market Insights | Craig Ranch Homes',
   description:
     'Read the latest real estate market insights and trends for Craig Ranch, North Las Vegas and Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 820-5408.',
   keywords:
@@ -232,7 +231,6 @@ export default async function MarketInsightsPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Craig Ranch Las Vegas Homes Market Insights',
               description:
@@ -249,7 +247,7 @@ export default async function MarketInsightsPage() {
                 'Real estate market insights and trends for Craig Ranch, North Las Vegas and Las Vegas, Nevada.',
               url: `${baseUrl}/market-insights`,
               author: 'Simplifying the Market',
-              publisher: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              publisher: 'Craig Ranch Homes',
             }),
             generateFAQPageSchema(MARKET_INSIGHTS_FAQS),
             generateBreadcrumbSchema([

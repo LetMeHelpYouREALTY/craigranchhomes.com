@@ -53,6 +53,33 @@ export default function BuyCraigRanchHomesPage() {
       faqs={BUY_CRAIG_RANCH_FAQS}
       primaryCta={{ href: '/homes', label: 'Browse Craig Ranch Homes' }}
       secondaryCta={{ href: '/contact', label: 'Book a Buyer Consult' }}
+      howTo={{
+        name: 'How to buy a home in Craig Ranch, North Las Vegas',
+        description:
+          'Step-by-step process to buy a Craig Ranch home in ZIP 89031 with Dr. Jan Duffy.',
+        steps: [
+          {
+            name: 'Get pre-approved',
+            text: 'Confirm your budget and financing before touring Craig Ranch listings.',
+          },
+          {
+            name: 'Define must-haves',
+            text: 'Prioritize price, square footage, single- vs two-story, and park proximity.',
+          },
+          {
+            name: 'Tour homes in 89031',
+            text: 'View active Craig Ranch listings and compare comps with your agent.',
+          },
+          {
+            name: 'Write a competitive offer',
+            text: 'Use local sales data, inspection strategy, and clear timelines.',
+          },
+          {
+            name: 'Close with confidence',
+            text: 'Complete disclosures, HOA review, and closing from the North Las Vegas office.',
+          },
+        ],
+      }}
     />
   );
 }

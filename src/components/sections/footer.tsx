@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className='text-2xl font-bold mb-4 text-white'>
-              Craig Ranch Vegas | Homes By Dr. Jan Duffy
+              Craig Ranch Homes
             </h3>
             <p className='text-gray-300 leading-relaxed'>
               Your trusted partner in finding the perfect home in Craig Ranch.
@@ -26,6 +26,30 @@ export default function Footer() {
                   className='text-white hover:underline transition-colors duration-200'
                 >
                   Homes for Sale
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/buy-craig-ranch-homes'
+                  className='text-white hover:underline transition-colors duration-200'
+                >
+                  Buy Craig Ranch
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/sell-craig-ranch'
+                  className='text-white hover:underline transition-colors duration-200'
+                >
+                  Sell Craig Ranch
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/craig-ranch-realtor'
+                  className='text-white hover:underline transition-colors duration-200'
+                >
+                  Craig Ranch REALTOR®
                 </Link>
               </li>
               <li>
@@ -107,8 +131,7 @@ export default function Footer() {
           <div>
             <h4 className='text-lg font-semibold mb-4 text-white'>Follow Us</h4>
             <p className='text-sm text-gray-300 mb-4'>
-              Follow us on social media for the latest updates on Las Vegas 55+
-              communities:
+              Follow us for Craig Ranch and Las Vegas real estate updates:
             </p>
             <div className='flex flex-wrap gap-4'>
               <Link
@@ -230,7 +253,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-100 space-y-2 text-sm'>
           <p>
-            &copy; 2007-2025 Craig Ranch Vegas | Homes By Dr. Jan Duffy. All rights
+            &copy; 2007-2026 Craig Ranch Homes. All rights
             reserved.
           </p>
           <p>&copy; 2025 BHH Affiliates, LLC.</p>
