@@ -5,97 +5,97 @@ export default function sitemap(): MetadataRoute.Sitemap {
     process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
   ).replace(/\/$/, '');
 
-  // Cache this metadata route so Google doesn't see "changes"
-  // on every request just because of runtime timestamps.
-  //
-  // Next.js will revalidate this route based on the exported constant below.
-  return [
+  const paths: Array<{
+    path: string;
+    changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+    priority: number;
+  }> = [
+    { path: '', changeFrequency: 'daily', priority: 1 },
+    { path: '/homes', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/buy-craig-ranch-homes', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/sell-craig-ranch', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/craig-ranch-realtor', changeFrequency: 'weekly', priority: 0.9 },
     {
-      url: baseUrl,
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/homes`,
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neighborhood`,
+      path: '/home-valuation-craig-ranch',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    { path: '/neighborhood', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/neighborhoods', changeFrequency: 'weekly', priority: 0.9 },
     {
-      url: `${baseUrl}/neighborhoods`,
+      path: '/craig-ranch-89031-real-estate',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    { path: '/community', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/market-data', changeFrequency: 'daily', priority: 0.8 },
+    { path: '/market-insights', changeFrequency: 'daily', priority: 0.8 },
     {
-      url: `${baseUrl}/community`,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/market-data`,
+      path: '/craig-ranch-market-report',
       changeFrequency: 'daily',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/market-insights`,
-      changeFrequency: 'daily',
+      path: '/first-time-home-buyers-craig-ranch-89031',
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/search`,
-      changeFrequency: 'daily',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-realtor`,
+      path: '/luxury-homes-craig-ranch-north-las-vegas',
       changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/sell-craig-ranch`,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/home-valuation-craig-ranch`,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-market-report`,
-      changeFrequency: 'daily',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/craig-ranch-schools`,
+      path: '/craig-ranch-investment-properties',
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      path: '/relocate-to-craig-ranch-north-las-vegas',
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      path: '/nellis-afb-relocation-craig-ranch',
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      path: '/homes-near-eva-g-simmons-elementary',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      path: '/homes-near-findlay-middle-school',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      path: '/homes-near-mojave-high-school',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    { path: '/craig-ranch-schools', changeFrequency: 'monthly', priority: 0.7 },
+    {
+      path: '/craig-ranch-regional-park',
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    { path: '/craig-ranch-hoa', changeFrequency: 'monthly', priority: 0.7 },
     {
-      url: `${baseUrl}/craig-ranch-regional-park`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-hoa`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/new-construction-craig-ranch`,
+      path: '/new-construction-craig-ranch',
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
+    // /search stays noindex; omit from sitemap for cleaner GSC coverage
   ];
+
+  return paths.map(({ path, changeFrequency, priority }) => ({
+    url: path ? `${baseUrl}${path}` : baseUrl,
+    changeFrequency,
+    priority,
+  }));
 }
 
 // Revalidate once per day (safe for a mostly-static marketing site).

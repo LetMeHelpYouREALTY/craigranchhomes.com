@@ -1,17 +1,20 @@
 import type { MetadataRoute } from 'next';
-import { headers } from 'next/headers';
 
-export default async function robots(): Promise<MetadataRoute.Robots> {
-  const headersList = await headers();
-  const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost';
-  const baseUrl = `https://${host.split(':')[0]}`;
+/**
+ * Always point crawlers at the canonical production host.
+ * Do not derive sitemap from request Host (preview/deploy URLs).
+ */
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = (
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  ).replace(/\/$/, '');
 
   return {
     rules: [
-      // Default: allow all crawlers
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/api/', '/search'],
       },
       // ── AI Retrieval Bots (power AI search results) ──
       {
@@ -46,7 +49,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         userAgent: 'Bytespider',
         allow: '/',
       },
-      // ── AI Training Bots (maximizes visibility in AI models) ──
+      // ── AI Training Bots ──
       {
         userAgent: 'Google-Extended',
         allow: '/',
@@ -65,5 +68,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl.replace(/^https?:\/\//, ''),
   };
 }

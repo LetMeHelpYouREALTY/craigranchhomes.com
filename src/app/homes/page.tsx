@@ -28,11 +28,18 @@ import { Home, MapPin, DollarSign, TrendingUp } from 'lucide-react';
 
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { HOMES_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateCollectionPageSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -328,18 +335,28 @@ export default function HomesPage() {
         </div>
       </section>
 
+      <RealtorServicesGrid
+        title='Need help choosing a Craig Ranch home?'
+        subtitle='Buyer representation, valuations, and listing services focused on Craig Ranch, North Las Vegas.'
+      />
+      <AeoFaqSection faqs={HOMES_PAGE_FAQS} />
+      <HyperlocalRelatedLinks excludeHref='/homes' />
+      <HyperlocalNapCta />
+
       {/* Structured Data */}
       <Script
         id='homes-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
             generateCollectionPageSchema({
               name: 'Homes for Sale in Craig Ranch, Las Vegas',
               description:
                 'Browse luxury homes for sale in Craig Ranch, Las Vegas. Floor plans from 1,519–2,638 sq ft near Craig Ranch Regional Park.',
               url: `${baseUrl}/homes`,
             }),
+            generateFAQPageSchema(HOMES_PAGE_FAQS),
             {
               '@context': 'https://schema.org',
               '@type': 'ItemList',

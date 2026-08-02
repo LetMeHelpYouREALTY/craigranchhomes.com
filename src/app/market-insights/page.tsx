@@ -11,11 +11,19 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { MARKET_INSIGHTS_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateBlogSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
@@ -118,7 +126,9 @@ export default async function MarketInsightsPage() {
               Craig Ranch Las Vegas Homes Market Insights
             </h1>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              The latest real estate insights and trends (source:{' '}
+              National and regional articles for context—then apply them to Craig
+              Ranch, North Las Vegas 89031 with local comps from Dr. Jan Duffy
+              (source:{' '}
               <Link
                 href='https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18'
                 target='_blank'
@@ -128,7 +138,7 @@ export default async function MarketInsightsPage() {
               >
                 Simplifying the Market
               </Link>
-              ).
+              ). Call (702) 820-5408 for address-level strategy.
             </p>
           </div>
 
@@ -202,11 +212,27 @@ export default async function MarketInsightsPage() {
         </div>
       </section>
 
+      <AeoAnswerBlock
+        question='How should Craig Ranch buyers use these market insights?'
+        answer='Use national rate and inventory articles for context, then confirm list price and offer strategy with Craig Ranch comps in North Las Vegas 89031. Dr. Jan Duffy translates headlines into local numbers—call (702) 820-5408 or open the Craig Ranch market report.'
+      />
+      <RealtorServicesGrid
+        title='Turn insights into Craig Ranch action'
+        subtitle='Buyer representation, listings, and valuations focused on Craig Ranch streets—not generic Las Vegas averages.'
+      />
+      <AeoFaqSection faqs={MARKET_INSIGHTS_FAQS} />
+      <HyperlocalRelatedLinks excludeHref='/market-insights' />
+      <HyperlocalNapCta
+        heading='Get Craig Ranch numbers behind the headlines'
+        supporting='Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Ask how today’s rates affect your Craig Ranch purchase or sale.'
+      />
+
       <Script
         id='market-insights-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Craig Ranch Las Vegas Homes Market Insights',
               description:
@@ -225,6 +251,7 @@ export default async function MarketInsightsPage() {
               author: 'Simplifying the Market',
               publisher: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
             }),
+            generateFAQPageSchema(MARKET_INSIGHTS_FAQS),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Market Insights', url: `${baseUrl}/market-insights` },

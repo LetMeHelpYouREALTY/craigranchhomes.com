@@ -259,10 +259,26 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
+                    href='/buy-craig-ranch-homes'
+                    className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
+                  >
+                    Buy in Craig Ranch
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href='/sell-craig-ranch'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Sell Your Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href='/craig-ranch-89031-real-estate'
+                    className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
+                  >
+                    89031 Real Estate
                   </Link>
                 </li>
                 <li>
@@ -279,6 +295,14 @@ export default function Home() {
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Schools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href='/nellis-afb-relocation-craig-ranch'
+                    className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
+                  >
+                    Nellis AFB Relocation
                   </Link>
                 </li>
                 <li>

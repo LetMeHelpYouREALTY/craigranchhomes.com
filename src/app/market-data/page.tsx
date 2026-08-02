@@ -19,11 +19,18 @@ import {
 
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { MARKET_DATA_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateDatasetSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -242,12 +249,21 @@ export default function MarketDataPage() {
         </div>
       </section>
 
+      <RealtorServicesGrid
+        title='Use this data with a Craig Ranch REALTOR®'
+        subtitle='Translate stats into list price, offer strategy, or a home valuation for your address.'
+      />
+      <AeoFaqSection faqs={MARKET_DATA_FAQS} />
+      <HyperlocalRelatedLinks excludeHref='/market-data' />
+      <HyperlocalNapCta />
+
       {/* Structured Data */}
       <Script
         id='market-data-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Craig Ranch Real Estate Market Data & Trends',
               description:
@@ -264,6 +280,7 @@ export default function MarketDataPage() {
                 'Comprehensive real estate market data and statistics for Craig Ranch, Las Vegas including average prices, days on market, inventory levels, and market trends.',
               url: `${baseUrl}/market-data`,
             }),
+            generateFAQPageSchema(MARKET_DATA_FAQS),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Market Data', url: `${baseUrl}/market-data` },

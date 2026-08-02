@@ -15,17 +15,23 @@ import {
   ShoppingCart,
   TreePine,
   Heart,
-  Users,
   Car,
   Building2,
 } from 'lucide-react';
 
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { COMMUNITY_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -105,10 +111,10 @@ export default function CommunityPage() {
 
   const lifestyle = [
     {
-      title: 'Family-Friendly',
+      title: 'Park Access',
       description:
-        'Safe, welcoming community perfect for families with children',
-      icon: Users,
+        '170-acre Craig Ranch Regional Park plus community parks and about 5 miles of trails',
+      icon: TreePine,
     },
     {
       title: 'Active Lifestyle',
@@ -148,11 +154,13 @@ export default function CommunityPage() {
               <School className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Top-Rated Schools in Craig Ranch
+              Schools Serving Craig Ranch
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Craig Ranch is served by excellent public and private schools,
-              making it an ideal location for families with children.
+              Named campuses often associated with Craig Ranch addresses include
+              Eva G. Simmons Elementary, Clifford O. Pete Findlay Middle School,
+              and Mojave High School. Always verify the assigned school for a
+              specific MLS address.
             </p>
           </div>
 
@@ -333,9 +341,9 @@ export default function CommunityPage() {
             Ready to Join the Craig Ranch Community?
           </h2>
           <p className='text-xl text-gray-200 mb-8'>
-            Discover why so many families choose to call Craig Ranch home.
-            Browse available properties or contact us for a personalized
-            community tour.
+            Compare Craig Ranch park access, floor plans from about 1,519–2,638
+            sq ft, and named schools—then tour homes with Dr. Jan Duffy. Call
+            (702) 820-5408.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
@@ -357,12 +365,21 @@ export default function CommunityPage() {
         </div>
       </section>
 
+      <RealtorServicesGrid
+        title='Buy or sell in the Craig Ranch community'
+        subtitle='Hyperlocal realtor services for Craig Ranch, North Las Vegas 89031.'
+      />
+      <AeoFaqSection faqs={COMMUNITY_PAGE_FAQS} />
+      <HyperlocalRelatedLinks excludeHref='/community' />
+      <HyperlocalNapCta />
+
       {/* Structured Data */}
       <Script
         id='community-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Craig Ranch Community Guide: Schools, Amenities & Lifestyle',
               description:
@@ -373,6 +390,7 @@ export default function CommunityPage() {
                 { name: 'Community Guide', url: `${baseUrl}/community` },
               ],
             }),
+            generateFAQPageSchema(COMMUNITY_PAGE_FAQS),
             {
               '@context': 'https://schema.org',
               '@type': 'Place',

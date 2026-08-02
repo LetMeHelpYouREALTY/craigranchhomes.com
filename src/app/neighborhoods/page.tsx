@@ -22,10 +22,17 @@ import {
 } from 'lucide-react';
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { NEIGHBORHOOD_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -434,12 +441,19 @@ export default function NeighborhoodsPage() {
         </div>
       </section>
 
+      <RealtorServicesGrid />
+      <AeoFaqSection faqs={NEIGHBORHOOD_PAGE_FAQS} />
+      <HyperlocalRelatedLinks excludeHref='/neighborhoods' />
+      <HyperlocalNapCta />
+
       {/* Structured Data */}
       <Script
         id='neighborhoods-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
+            generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
             {
               '@context': 'https://schema.org',
               '@type': 'ResidentialComplex',

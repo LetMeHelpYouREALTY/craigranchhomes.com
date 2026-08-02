@@ -44,10 +44,17 @@ import {
 import Script from 'next/script';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { NEIGHBORHOOD_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -698,9 +705,8 @@ export default function NeighborhoodPage() {
             Ready to Call Craig Ranch Home?
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
-            Discover why so many families choose Craig Ranch. Browse available
-            properties or contact us to learn more about this exceptional
-            community.
+            Compare Craig Ranch floor plans (about 1,519–2,638 sq ft), park
+            access, and named schools—then browse homes or call (702) 820-5408.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
@@ -720,12 +726,19 @@ export default function NeighborhoodPage() {
         </div>
       </section>
 
+      <RealtorServicesGrid />
+      <AeoFaqSection faqs={NEIGHBORHOOD_PAGE_FAQS} />
+      <HyperlocalRelatedLinks excludeHref='/neighborhood' />
+      <HyperlocalNapCta />
+
       {/* Structured Data for Neighborhood/Community */}
       <Script
         id='craig-ranch-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
+            generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
             {
             '@context': 'https://schema.org',
             '@type': 'ResidentialComplex',

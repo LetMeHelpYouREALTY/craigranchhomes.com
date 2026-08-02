@@ -17,11 +17,16 @@ import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { CONTACT_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateLocalBusinessSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQPageSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -288,6 +293,13 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <RealtorServicesGrid />
+      <AeoFaqSection
+        title='Contact & office FAQs'
+        faqs={CONTACT_PAGE_FAQS}
+      />
+      <HyperlocalRelatedLinks excludeHref='/contact' />
+
       {/* Structured Data */}
       <Script
         id='contact-schema'
@@ -305,6 +317,7 @@ export default function ContactPage() {
                 { name: 'Contact', url: `${baseUrl}/contact` },
               ],
             }),
+            generateFAQPageSchema(CONTACT_PAGE_FAQS),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Contact', url: `${baseUrl}/contact` },

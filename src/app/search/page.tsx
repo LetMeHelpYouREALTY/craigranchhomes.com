@@ -3,17 +3,26 @@ import Link from 'next/link';
 import Script from 'next/script';
 import PageLayout from '@/components/layout/page-layout';
 import { Button } from '@/components/ui/button';
+import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
+import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
+import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
+import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import { SEARCH_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateWebPageSchema,
   generateBreadcrumbSchema,
+  generateFAQPageSchema,
+  generateLocalBusinessSchema,
 } from '@/lib/metadata';
+import { SITE_NAP, SITE_URL } from '@/lib/site-nap';
 
 export const metadata: Metadata = {
   ...genMetadata({
     title: 'Search Craig Ranch Homes | Craig Ranch Vegas | Homes By Dr. Jan Duffy',
     description:
-      'Search Craig Ranch homes and explore real estate listings, market data, and neighborhood information in Craig Ranch, North Las Vegas, Nevada.',
+      'Search Craig Ranch homes in North Las Vegas 89031. Browse listings, market data, and realtor services with Dr. Jan Duffy. Call (702) 820-5408.',
     keywords:
       'Craig Ranch search, Craig Ranch homes search, Craig Ranch real estate search, North Las Vegas homes',
     path: '/search',
@@ -28,7 +37,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Mark as dynamic since it uses searchParams
 export const dynamic = 'force-dynamic';
 
 type SearchPageProps = {
@@ -48,8 +56,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           </h1>
           <p className='text-lg text-gray-600 mb-8'>
             {query
-              ? `You searched for "${query}". Use the links below to browse listings and market insights in Craig Ranch, North Las Vegas.`
-              : 'Use the links below to browse listings and market insights in Craig Ranch, North Las Vegas.'}
+              ? `You searched for "${query}". Use the Craig Ranch guides below for listings, schools, and realtor services in North Las Vegas.`
+              : 'Use the Craig Ranch guides below for listings, schools, and realtor services in North Las Vegas ZIP 89031.'}
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -57,37 +65,54 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               <Link href='/homes'>Browse Craig Ranch Homes for Sale</Link>
             </Button>
             <Button asChild variant='outline'>
-              <Link href='/market-data'>View Craig Ranch Market Data</Link>
+              <Link href='/buy-craig-ranch-homes'>Buyer Representation</Link>
+            </Button>
+            <Button asChild variant='outline'>
+              <a href={SITE_NAP.phoneHref}>Call {SITE_NAP.phoneDisplay}</a>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Structured Data */}
+      <AeoAnswerBlock
+        question='Where should I search for Craig Ranch real estate?'
+        answer='Start on the Craig Ranch homes page for current listings, then use the buyer guide for offer strategy and the 89031 ZIP guide for community context. Dr. Jan Duffy can run a custom MLS search—call (702) 820-5408.'
+        bullets={[
+          'Listings: /homes',
+          'Buyers: /buy-craig-ranch-homes',
+          'ZIP guide: /craig-ranch-89031-real-estate',
+        ]}
+      />
+
+      <RealtorServicesGrid />
+      <AeoFaqSection faqs={SEARCH_PAGE_FAQS} />
+      <HyperlocalRelatedLinks />
+      <HyperlocalNapCta />
+
       <Script
         id='search-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateLocalBusinessSchema(),
             generateWebPageSchema({
               name: 'Search Craig Ranch Homes',
               description:
                 'Search Craig Ranch homes and explore real estate listings, market data, and neighborhood information in Craig Ranch, North Las Vegas, Nevada.',
-              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'}/search`,
+              url: `${SITE_URL}/search`,
               breadcrumb: [
-                { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com' },
-                { name: 'Search', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'}/search` },
+                { name: 'Home', url: SITE_URL },
+                { name: 'Search', url: `${SITE_URL}/search` },
               ],
             }),
             generateBreadcrumbSchema([
-              { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com' },
-              { name: 'Search', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'}/search` },
+              { name: 'Home', url: SITE_URL },
+              { name: 'Search', url: `${SITE_URL}/search` },
             ]),
+            generateFAQPageSchema(SEARCH_PAGE_FAQS),
           ]),
         }}
       />
     </PageLayout>
   );
 }
-
-
