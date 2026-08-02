@@ -37,7 +37,6 @@ export default function Hero() {
 
       <div className='relative z-10 text-center text-white max-w-4xl mx-auto px-4'>
         <div className='mb-6 flex flex-col items-center animate-fade-in'>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={AGENT_HEADSHOT}
             alt={`${SITE_NAP.agentName}, REALTOR® for Craig Ranch homes in North Las Vegas`}
