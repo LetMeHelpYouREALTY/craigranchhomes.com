@@ -160,8 +160,9 @@ export default function RootLayout({
         {/* Apple Touch Icon for iOS devices */}
         <link rel='apple-touch-icon' href='/favicon.ico' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
-        <link rel='preconnect' href='https://em.realscout.com' crossOrigin='anonymous' />
-        <link rel='preconnect' href='https://www.googletagmanager.com' crossOrigin='anonymous' />
+        {/* Defer third-party discovery so LCP hero wins the network */}
+        <link rel='dns-prefetch' href='https://em.realscout.com' />
+        <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
 
         <style>{`
@@ -178,9 +179,9 @@ export default function RootLayout({
               src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
                 gaMeasurementId
               )}`}
-              strategy='afterInteractive'
+              strategy='lazyOnload'
             />
-            <Script id='google-analytics' strategy='afterInteractive'>
+            <Script id='google-analytics' strategy='lazyOnload'>
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -193,7 +194,7 @@ export default function RootLayout({
 
         {/* Google Tag Manager - only load when configured (prevents gtm.js 404) */}
         {isValidGtmId(gtmId) ? (
-          <Script id='google-tag-manager' strategy='afterInteractive'>
+          <Script id='google-tag-manager' strategy='lazyOnload'>
             {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -428,12 +429,12 @@ export default function RootLayout({
           </noscript>
         ) : null}
 
-        {/* RealScout Web Components Script - Load with high priority for better performance */}
+        {/* RealScout: defer until idle — widgets init via IntersectionObserver */}
         <Script
           id='realscout-script'
           src='https://em.realscout.com/widgets/realscout-web-components.umd.js'
           type='module'
-          strategy='afterInteractive'
+          strategy='lazyOnload'
         />
         {children}
       </body>

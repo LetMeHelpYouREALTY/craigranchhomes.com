@@ -15,7 +15,7 @@ export default function PropertyCategories() {
   const categories = [
     {
       title: 'Single Story Homes',
-      description: 'Spacious single-story homes perfect for families',
+      description: 'Spacious single-story homes with 2-bay garages',
       price: '1,519 - 2,947 sq.ft.',
       image: '/single story Craig Ranch Homes (2).jpg',
       count: '17 Floor Plans',
@@ -63,11 +63,12 @@ export default function PropertyCategories() {
               <div className='relative h-48 w-full overflow-hidden'>
                 <Image
                   src={category.image}
-                  alt={category.title}
+                  alt={`${category.title} in Craig Ranch, North Las Vegas`}
                   fill
                   className='object-cover'
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  priority={index === 0}
+                  loading='lazy'
+                  quality={70}
                 />
               </div>
 
