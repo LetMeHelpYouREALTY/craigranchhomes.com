@@ -1,7 +1,7 @@
 'use client';
 
 import { useIsMobile, useInView } from '@/hooks';
-import { ensureRealScoutScript } from '@/lib/realscout-script';
+import { waitForRealScoutElement } from '@/lib/realscout-script';
 import { useEffect, useRef, useState } from 'react';
 
 type RealScoutOfficeWidgetProps = {
@@ -13,6 +13,10 @@ type RealScoutOfficeWidgetProps = {
   className?: string;
 };
 
+/**
+ * Mount RealScout into an empty host node that React never manages as children.
+ * Clearing React-owned DOM with innerHTML caused removeChild crashes.
+ */
 function RealScoutOfficeWidgetContent({
   agentEncodedId = 'QWdlbnQtMjI1MDUw',
   showMap = true,
@@ -23,91 +27,72 @@ function RealScoutOfficeWidgetContent({
 }: RealScoutOfficeWidgetProps) {
   const isMobile = useIsMobile();
   const { ref: setInViewRef, isInView } = useInView({
-    rootMargin: '200px',
+    rootMargin: '300px',
     threshold: 0,
   });
-  const widgetRef = useRef<HTMLDivElement>(null);
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  const combinedRef = (node: HTMLDivElement | null) => {
-    widgetRef.current = node;
-    setInViewRef(node);
-  };
+  const hostRef = useRef<HTMLDivElement>(null);
+  const startedRef = useRef(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>(
+    'idle'
+  );
 
   useEffect(() => {
-    if (!isInView || isInitialized || !widgetRef.current) {
+    if (!isInView || startedRef.current) {
       return;
     }
-
+    startedRef.current = true;
     let cancelled = false;
+    setStatus('loading');
 
-    const initWidget = async () => {
-      try {
-        await ensureRealScoutScript();
-      } catch {
+    const mount = async () => {
+      const defined = await waitForRealScoutElement('realscout-office-listings');
+      if (cancelled || !hostRef.current) {
         return;
       }
 
-      if (cancelled || !widgetRef.current) {
+      if (!defined) {
+        setStatus('error');
         return;
       }
 
-      const mount = () => {
-        if (
-          cancelled ||
-          !widgetRef.current ||
-          typeof customElements === 'undefined' ||
-          !customElements.get('realscout-office-listings')
-        ) {
-          return false;
-        }
+      hostRef.current.replaceChildren();
 
-        const widget = document.createElement('realscout-office-listings');
-        widget.setAttribute('agent-encoded-id', agentEncodedId);
-        widget.setAttribute('sort-order', 'STATUS_AND_SIGNIFICANT_CHANGE');
-        widget.setAttribute('listing-status', 'For Sale');
-        widget.setAttribute('property-types', 'SFR,MF,TC');
-        if (priceMin) {
-          widget.setAttribute('price-min', priceMin);
-        }
-        if (priceMax) {
-          widget.setAttribute('price-max', priceMax);
-        }
-        widget.setAttribute('layout', isMobile ? 'mobile' : 'desktop');
-        widget.setAttribute('show-filters', 'true');
-        widget.setAttribute('show-sort', 'true');
-        widget.setAttribute('show-map', showMap ? 'true' : 'false');
-        widget.setAttribute('map-height', '400px');
-        widget.setAttribute('listings-per-page', listingsPerPage);
-        widget.setAttribute('show-pagination', 'true');
-
-        widgetRef.current.innerHTML = '';
-        widgetRef.current.appendChild(widget);
-        setIsInitialized(true);
-        return true;
-      };
-
-      if (mount()) {
-        return;
+      const widget = document.createElement('realscout-office-listings');
+      widget.setAttribute('agent-encoded-id', agentEncodedId);
+      widget.setAttribute('sort-order', 'STATUS_AND_SIGNIFICANT_CHANGE');
+      widget.setAttribute('listing-status', 'For Sale');
+      widget.setAttribute('property-types', 'SFR,MF,TC');
+      if (priceMin) {
+        widget.setAttribute('price-min', priceMin);
       }
+      if (priceMax) {
+        widget.setAttribute('price-max', priceMax);
+      }
+      widget.setAttribute('layout', isMobile ? 'mobile' : 'desktop');
+      widget.setAttribute('show-filters', 'true');
+      widget.setAttribute('show-sort', 'true');
+      widget.setAttribute('show-map', showMap ? 'true' : 'false');
+      widget.setAttribute('map-height', '400px');
+      widget.setAttribute('listings-per-page', listingsPerPage);
+      widget.setAttribute('show-pagination', 'true');
 
-      const checkInterval = window.setInterval(() => {
-        if (mount()) {
-          window.clearInterval(checkInterval);
-        }
-      }, 100);
-
-      window.setTimeout(() => window.clearInterval(checkInterval), 8000);
+      hostRef.current.appendChild(widget);
+      if (!cancelled) {
+        setStatus('ready');
+      }
     };
 
-    void initWidget();
+    void mount().catch(() => {
+      if (!cancelled) {
+        setStatus('error');
+      }
+    });
 
     return () => {
       cancelled = true;
     };
   }, [
     isInView,
-    isInitialized,
     isMobile,
     agentEncodedId,
     showMap,
@@ -118,15 +103,37 @@ function RealScoutOfficeWidgetContent({
 
   return (
     <div
-      ref={combinedRef}
+      ref={setInViewRef}
       className={`real-estate-office-widget-container min-h-[400px] ${className}`}
     >
-      {!isInitialized ? (
+      {status !== 'ready' ? (
         <div className='text-center py-8'>
-          <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4' />
-          <p className='text-gray-600 text-sm'>Loading office listings...</p>
+          {status === 'error' ? (
+            <p className='text-gray-700 text-sm'>
+              Listings are temporarily unavailable. Call{' '}
+              <a className='underline text-[#0A2540]' href='tel:7028205408'>
+                (702) 820-5408
+              </a>{' '}
+              or{' '}
+              <a
+                className='underline text-[#0A2540]'
+                href='http://drjanduffy.realscout.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                browse on RealScout
+              </a>
+              .
+            </p>
+          ) : (
+            <>
+              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#1E6BB8] mx-auto mb-4' />
+              <p className='text-gray-600 text-sm'>Loading office listings...</p>
+            </>
+          )}
         </div>
       ) : null}
+      <div ref={hostRef} />
     </div>
   );
 }

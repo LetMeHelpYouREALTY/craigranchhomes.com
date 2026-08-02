@@ -1,26 +1,28 @@
 'use client';
 
 import { useIsMobile } from '@/hooks';
-import { ensureRealScoutScript } from '@/lib/realscout-script';
-import { useEffect, useRef } from 'react';
+import { waitForRealScoutElement } from '@/lib/realscout-script';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
 export default function RealEstateListings() {
   const isMobile = useIsMobile();
-  const widgetRef = useRef<HTMLDivElement>(null);
+  const hostRef = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
 
-    const initWidget = async () => {
-      try {
-        await ensureRealScoutScript();
-      } catch {
+    const mount = async () => {
+      const defined = await waitForRealScoutElement('realscout-office-listings');
+      if (cancelled || !hostRef.current) return;
+      if (!defined) {
+        setError(true);
         return;
       }
-      if (cancelled || !widgetRef.current) return;
-      if (!customElements.get('realscout-office-listings')) return;
 
+      hostRef.current.replaceChildren();
       const widget = document.createElement('realscout-office-listings');
       widget.setAttribute('agent-encoded-id', 'QWdlbnQtMjI1MDUw');
       widget.setAttribute('sort-order', 'STATUS_AND_SIGNIFICANT_CHANGE');
@@ -35,12 +37,14 @@ export default function RealEstateListings() {
       widget.setAttribute('map-height', '400px');
       widget.setAttribute('listings-per-page', '12');
       widget.setAttribute('show-pagination', 'true');
-
-      widgetRef.current.innerHTML = '';
-      widgetRef.current.appendChild(widget);
+      hostRef.current.appendChild(widget);
+      if (!cancelled) setReady(true);
     };
 
-    void initWidget();
+    void mount().catch(() => {
+      if (!cancelled) setError(true);
+    });
+
     return () => {
       cancelled = true;
     };
@@ -69,32 +73,34 @@ export default function RealEstateListings() {
             </p>
           </div>
 
-          <div
-            ref={widgetRef}
-            className='real-estate-listings-container min-h-[400px] flex items-center justify-center'
-          >
-            <div className='text-center'>
-              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4' />
-              <p className='text-gray-600 text-sm'>
-                Loading luxury properties in Craig Ranch...
-              </p>
-            </div>
-          </div>
-
-          <div className='mt-8 text-center'>
-            <p className='text-gray-600 text-xs'>
-              If listings don&apos;t appear, please refresh the page or{' '}
-              <Link href='/contact' className='text-[#0A2540] underline'>
-                contact us
-              </Link>
-              .
-            </p>
+          <div className='real-estate-listings-container min-h-[400px]'>
+            {!ready ? (
+              <div className='text-center py-8'>
+                {error ? (
+                  <p className='text-gray-700 text-sm'>
+                    Listings are temporarily unavailable.{' '}
+                    <Link href='/contact' className='underline text-[#0A2540]'>
+                      Contact us
+                    </Link>
+                    .
+                  </p>
+                ) : (
+                  <>
+                    <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#1E6BB8] mx-auto mb-4' />
+                    <p className='text-gray-600 text-sm'>
+                      Loading luxury properties in Craig Ranch...
+                    </p>
+                  </>
+                )}
+              </div>
+            ) : null}
+            <div ref={hostRef} />
           </div>
         </div>
 
         <div className='mt-12 grid md:grid-cols-3 gap-8'>
           <div className='text-center'>
-            <div className='bg-[#3A8DDE] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+            <div className='bg-[#1E6BB8] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
               <span className='text-2xl' aria-hidden='true'>
                 🏠
               </span>
@@ -106,7 +112,6 @@ export default function RealEstateListings() {
               Hand-selected luxury homes with exceptional quality and amenities
             </p>
           </div>
-
           <div className='text-center'>
             <div className='bg-[#0B7A5A] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
               <span className='text-2xl' aria-hidden='true'>
@@ -120,7 +125,6 @@ export default function RealEstateListings() {
               Properties across Craig Ranch subdivisions and price points
             </p>
           </div>
-
           <div className='text-center'>
             <div className='bg-[#0A2540] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
               <span className='text-2xl' aria-hidden='true'>

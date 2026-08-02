@@ -172,9 +172,12 @@ export default function RootLayout({
         {/* Defer third-party discovery so LCP hero wins the network */}
         <link rel='dns-prefetch' href='https://em.realscout.com' />
         <link rel='dns-prefetch' href='https://cdn.realscout.com' />
+        <link rel='dns-prefetch' href='https://www.realscout.com' />
         <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
         <link rel='dns-prefetch' href='https://embed.homebotapp.com' />
+        <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='https://fonts.gstatic.com' />
 
         <style>{`
           realscout-office-listings {
@@ -440,7 +443,13 @@ export default function RootLayout({
           </noscript>
         ) : null}
 
-        {/* RealScout script loads only when a widget section approaches viewport */}
+        {/* RealScout: defer until idle; widgets mount into a non-React host node */}
+        <Script
+          id='realscout-script'
+          src='https://em.realscout.com/widgets/realscout-web-components.umd.js'
+          type='module'
+          strategy='lazyOnload'
+        />
         {children}
       </body>
     </html>

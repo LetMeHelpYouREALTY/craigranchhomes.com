@@ -8,6 +8,7 @@ import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import BlogPosts from '@/components/sections/blog-posts';
 import RealScoutOfficeWidget from '@/components/sections/realscout-office-widget';
+import ClientErrorBoundary from '@/components/shared/client-error-boundary';
 import FAQSection from '@/components/sections/faq-section';
 import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
@@ -154,13 +155,15 @@ export default function Home() {
               </p>
             </div>
             <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg border border-gray-200'>
-              <Suspense fallback={<ListingsSkeleton />}>
-                <RealScoutOfficeWidget
-                  agentEncodedId='QWdlbnQtMjI1MDUw'
-                  showMap={true}
-                  listingsPerPage='12'
-                />
-              </Suspense>
+              <ClientErrorBoundary>
+                <Suspense fallback={<ListingsSkeleton />}>
+                  <RealScoutOfficeWidget
+                    agentEncodedId='QWdlbnQtMjI1MDUw'
+                    showMap={true}
+                    listingsPerPage='12'
+                  />
+                </Suspense>
+              </ClientErrorBoundary>
             </div>
           </div>
         </section>
