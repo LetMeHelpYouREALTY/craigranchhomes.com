@@ -62,20 +62,9 @@ export default function SouthernHighlandsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main id="main-content" className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
-              {" / "}
-              <span className="text-slate-900">Southern Highlands</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -140,8 +129,8 @@ export default function SouthernHighlandsPage() {
                 and sellers in Southern Highlands for over two decades. Dr. Jan Duffy understands the
                 community's various sections—from the guard-gated luxury estates surrounding the golf
                 course to the residential neighborhoods with parks and trails in the community's newer phases. Whether
-                you're seeking a golf course lot with Strip views or a spacious family home with top-rated
-                schools, BHHS has the local expertise to guide your search.
+                you're seeking a golf course lot with Strip views or a 4-bedroom home near Elise Wolff
+                Elementary, BHHS has the local expertise to guide your search.
               </p>
 
               {/* Community Highlights */}
@@ -177,14 +166,13 @@ export default function SouthernHighlandsPage() {
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands School Districts</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  Southern Highlands is served by Clark County School District with some of southwest
-                  Las Vegas's highest-rated schools:
+                  Southern Highlands is served by Clark County School District campuses including:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Elise Wolff Elementary (9/10)</li>
+                      <li>• Elise Wolff Elementary</li>
                       <li>• Janet Lundahl Elementary</li>
                       <li>• Robert Forbuss Elementary</li>
                       <li>• Floyd Elementary</li>
@@ -193,7 +181,7 @@ export default function SouthernHighlandsPage() {
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School (8/10)</li>
+                      <li>• Coronado High School</li>
                       <li>• Liberty High School</li>
                       <li>• Del Webb Middle School</li>
                       <li>• Mannion Middle School</li>

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Phone, Mail, Calendar } from "lucide-react";
-import { ctaPhone, nap } from "@/lib/contact";
+import { Phone, Mail, Calendar, Navigation, Star } from "lucide-react";
+import { ctaPhone, nap, maps, googleReviewsUrl } from "@/lib/contact";
 
 type PageCTAProps = {
   headline?: string;
@@ -43,6 +43,26 @@ export default function PageCTA({
           {nap.shortName} | License {nap.license} | {nap.brokerage}
         </p>
         <p className="mt-2 text-blue-200 text-sm">{nap.fullAddress}</p>
+        <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm">
+          <a
+            href={maps.directionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-blue-100 hover:text-white underline-offset-2 hover:underline"
+          >
+            <Navigation className="h-4 w-4 mr-1" aria-hidden="true" />
+            Directions
+          </a>
+          <a
+            href={googleReviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-blue-100 hover:text-white underline-offset-2 hover:underline"
+          >
+            <Star className="h-4 w-4 mr-1" aria-hidden="true" />
+            View Google Reviews
+          </a>
+        </div>
       </div>
     </section>
   );

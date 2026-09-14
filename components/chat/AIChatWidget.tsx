@@ -101,7 +101,7 @@ export default function AIChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-50 transition-transform hover:scale-110"
+          className="fixed bottom-20 right-4 md:bottom-6 md:right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-50 transition-transform hover:scale-110"
           aria-label="Open chat"
         >
           <MessageCircle className="h-6 w-6" />
@@ -111,7 +111,7 @@ export default function AIChatWidget() {
       {/* Chat Widget */}
       {isOpen && (
         <div
-          className="fixed bottom-6 right-6 w-[min(24rem,calc(100vw-1.5rem))] h-[min(600px,calc(100dvh-6rem))] bg-white rounded-lg shadow-2xl z-50 flex flex-col border border-slate-200 overscroll-contain"
+          className="fixed bottom-20 right-4 md:bottom-6 md:right-6 w-[min(24rem,calc(100vw-1.5rem))] h-[min(560px,calc(100dvh-9rem))] bg-white rounded-lg shadow-2xl z-50 flex flex-col border border-slate-200 overscroll-contain"
           role="dialog"
           aria-label="Real estate chat assistant"
         >

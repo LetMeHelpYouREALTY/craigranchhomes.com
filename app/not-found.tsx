@@ -3,7 +3,7 @@ import { ctaPhone } from "@/lib/contact";
 
 export default function NotFound() {
   return (
-    <main id="main-content" className="pt-28 pb-16 min-h-[70vh] flex items-center">
+    <main id="main-content" className="pb-16 min-h-[70vh] flex items-center">
       <div className="container mx-auto px-4 text-center max-w-2xl">
         <p className="text-blue-600 font-semibold mb-3">404</p>
         <h1 className="text-4xl font-bold text-slate-900 mb-4">Page Not Found</h1>

@@ -112,7 +112,7 @@ const neighborhoods = [
 export default function NeighborhoodsPage() {
   return (
     <>
-      <main id="main-content" className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -196,7 +196,7 @@ export default function NeighborhoodsPage() {
                 <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-2">School Research</h3>
                 <p className="text-slate-400 text-sm">
-                  Detailed school district information, ratings, and enrollment guidance
+                  Named campuses, commute times, and enrollment contacts
                 </p>
               </div>
               <div className="text-center">

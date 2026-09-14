@@ -1,4 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RealScoutHomeValue from "@/components/realscout/RealScoutHomeValue";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
@@ -37,7 +38,7 @@ const faqSchema = {
       name: "What factors affect my Las Vegas home's value?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Key factors include location (neighborhood, school zone, proximity to amenities), square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
+        text: "Key factors include location, square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, named nearby campuses, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
       },
     },
     {
@@ -66,20 +67,9 @@ export default function HomeValuationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main id="main-content" className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
-              {" / "}
-              <span className="text-slate-900">Home Valuation</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -93,6 +83,17 @@ export default function HomeValuationPage() {
               of Las Vegas market expertise and $127M+ in closed transactions.
             </p>
           </div>
+
+          <section className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3 text-center">
+              Instant Home Value Estimate
+            </h2>
+            <p className="text-slate-600 text-center mb-6">
+              Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with
+              Dr. Jan Duffy for a price backed by recent comps.
+            </p>
+            <RealScoutHomeValue />
+          </section>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
             {/* Calendly Widget */}
@@ -430,7 +431,7 @@ export default function HomeValuationPage() {
                 },
                 {
                   q: "What factors affect my Las Vegas home's value?",
-                  a: "Key factors include location (neighborhood, school zone, proximity to amenities), square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
+                  a: "Key factors include location, square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, named nearby campuses, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
                 },
                 {
                   q: "How long does a home valuation take?",

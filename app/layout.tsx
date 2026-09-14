@@ -10,6 +10,9 @@ import Footer from "@/components/layouts/Footer";
 import SkipLink from "@/components/shared/SkipLink";
 import SchemaScript from "@/components/SchemaScript";
 import AIChatWidget from "@/components/chat/AIChatWidget";
+import MobileStickyCTA from "@/components/layouts/MobileStickyCTA";
+import InnerPageChrome from "@/components/layouts/InnerPageChrome";
+import { absoluteUrl } from "@/lib/seo";
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
@@ -20,34 +23,29 @@ import { realscout, SITE_URL, nap } from "@/lib/contact";
 
 export async function generateMetadata(): Promise<Metadata> {
   const domain = headers().get("x-domain") || "";
+  const pathname = headers().get("x-pathname") || "/";
   const config = getDomainConfig(domain);
   const title = `${config.neighborhood} Real Estate | Dr. Jan Duffy, REALTOR® | BHHS Nevada`;
+  const canonical = absoluteUrl(pathname);
   return {
     metadataBase: new URL(SITE_URL),
-    title: {
-      default: title,
-      template: `%s | ${nap.shortName} | BHHS Nevada`,
-    },
+    title,
     description: config.description,
     keywords: config.keywords,
     authors: [{ name: nap.shortName }],
     creator: nap.shortName,
     robots: { index: true, follow: true },
+    alternates: { canonical },
     openGraph: {
-      title: config.heroHeadline,
-      description: config.description,
       type: "website",
-      url: SITE_URL,
+      url: canonical,
       locale: "en_US",
       siteName: nap.brokerage,
+      images: [{ url: absoluteUrl("/Image/hero_bg_1.jpg"), alt: "Las Vegas homes with Dr. Jan Duffy" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: config.heroHeadline,
-      description: config.description,
-    },
-    alternates: {
-      canonical: SITE_URL,
+      images: [absoluteUrl("/Image/hero_bg_1.jpg")],
     },
   };
 }
@@ -68,12 +66,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://assets.calendly.com" />
         <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
       </head>
-      <body className="bg-white text-slate-900 antialiased">
+      <body className="bg-white text-slate-900 antialiased pb-16 md:pb-0">
         <SkipLink />
         <SchemaScript schema={siteSchemas} id="site-schema" />
         <Navbar />
-        {children}
+        <InnerPageChrome>{children}</InnerPageChrome>
         <Footer />
+        <MobileStickyCTA />
         <AIChatWidget />
         <Analytics />
         <Script

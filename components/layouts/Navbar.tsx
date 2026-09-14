@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ctaPhone, nap } from "@/lib/contact";
+import LocalTrustBar from "@/components/layouts/LocalTrustBar";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -221,6 +222,7 @@ export default function Navbar() {
           </nav>
         )}
       </div>
+      <LocalTrustBar />
     </header>
   );
 }

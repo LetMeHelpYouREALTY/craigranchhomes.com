@@ -16,11 +16,15 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
   description:
     "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964.",
+  path: "/listings",
   keywords: [
     "Las Vegas homes for sale",
     "Henderson real estate",
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
     "houses for sale Las Vegas",
     "Berkshire Hathaway listings",
   ],
-};
+});
 
 const listingsSchema = {
   "@context": "https://schema.org",
@@ -59,7 +63,7 @@ const popularSearches = [
 
 const priceRanges = [
   { range: "Under $400K", description: "Starter homes, condos, townhomes", count: "1,500+" },
-  { range: "$400K - $600K", description: "Family homes, established neighborhoods", count: "2,100+" },
+  { range: "$400K - $600K", description: "3–4 bedroom homes, 1,800–2,400 sq ft typical", count: "2,100+" },
   { range: "$600K - $1M", description: "Premium locations, larger homes", count: "1,200+" },
   { range: "$1M - $2M", description: "Luxury homes, guard-gated communities", count: "450+" },
   { range: "$2M+", description: "Ultra-luxury estates, custom builds", count: "180+" },
@@ -68,13 +72,13 @@ const priceRanges = [
 const neighborhoods = [
   {
     name: "Summerlin",
-    description: "Master-planned community with Red Rock views, top schools, and 150+ parks",
+    description: "Master-planned community with Red Rock views, 150+ parks, and 150+ miles of trails",
     medianPrice: "$625,000",
     daysOnMarket: 22,
   },
   {
     name: "Henderson",
-    description: "Nevada's second-largest city with residential communities with parks and recreation and HOA-maintained streets",
+    description: "Nevada's second-largest city with parks, recreation centers, and HOA-maintained streets",
     medianPrice: "$485,000",
     daysOnMarket: 24,
   },
@@ -111,10 +115,9 @@ export default function ListingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsSchema) }}
       />
-      <main id="main-content" className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Hero Section */}
-          <div className="max-w-4xl mx-auto text-center mb-12">
+<div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
@@ -126,11 +129,12 @@ export default function ListingsPage() {
               listings updated every 15 minutes. Find your dream home with expert guidance from 
               Dr. Jan Duffy at <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500 mb-8">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS Data</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Updated Every 15 Min</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> 5,000+ Active Listings</span>
             </div>
+            <RealScoutSearch />
           </div>
 
           {/* RealScout Widget - Live MLS Listings */}
@@ -146,6 +150,7 @@ export default function ListingsPage() {
                   ></realscout-office-listings>`,
                 }}
               />
+              <MlsDisclaimer className="mt-4" />
             </div>
           </section>
 
@@ -155,11 +160,10 @@ export default function ListingsPage() {
               Popular Property Searches in Las Vegas
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Whether you're 
-              seeking luxury estates in guard-gated communities, homes near named local schools, 
-              or affordable new construction, our comprehensive search tools help you find exactly 
-              what you're looking for. Browse the most popular searches below or use the advanced 
-              filters to customize your home search experience.
+              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Search luxury
+              estates in guard-gated communities, homes near Palo Verde High School or Coronado High
+              School, or new construction. Browse popular searches below or use the filters to
+              customize your home search.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {popularSearches.map((search) => (
@@ -217,7 +221,7 @@ export default function ListingsPage() {
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Each Las Vegas neighborhood offers a unique lifestyle, from the resort-style living 
-              of Summerlin to the residential communities with parks and recreation of Henderson. Understanding these 
+              of Summerlin to Henderson parks, recreation centers, and master-planned villages. Understanding these 
               differences is crucial to finding a home that fits your needs. As a Berkshire 
               Hathaway HomeServices agent serving Las Vegas since 2008, Dr. Jan Duffy provides 
               expert guidance on which neighborhoods match your priorities—whether that's schools, 

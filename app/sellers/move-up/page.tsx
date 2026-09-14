@@ -28,20 +28,9 @@ export const metadata: Metadata = {
 export default function MoveUpSellerPage() {
   return (
     <>
-      <main id="main-content" className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
-              {" / "}
-              <span className="text-slate-900">Move-Up Sellers</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <TrendingUp className="h-4 w-4 mr-2" />
@@ -356,7 +345,7 @@ export default function MoveUpSellerPage() {
                 },
                 {
                   q: "How do schools factor into a move-up decision?",
-                  a: "Schools significantly impact both your quality of life and resale value. Moving to better school zones (like Summerlin's Palo Verde High School district or Henderson's Coronado) often justifies higher prices through appreciation and demand.",
+                  a: "Name the campuses you care about and we will map commute times. Palo Verde High School in Summerlin and Coronado High School in Henderson are common comparisons. Price the home, the drive, and recent comps—not a school rating.",
                 },
                 {
                   q: "What are the tax implications of selling and buying?",

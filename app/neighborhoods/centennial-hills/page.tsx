@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Centennial Hills homes for sale",
     "Centennial Hills Las Vegas",
     "northwest Las Vegas real estate",
-    "family homes Las Vegas",
+    "homes for sale Las Vegas",
   ],
 };
 
@@ -62,20 +62,9 @@ export default function CentennialHillsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main id="main-content" className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
-              {" / "}
-              <span className="text-slate-900">Centennial Hills</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -118,7 +107,7 @@ export default function CentennialHillsPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Centennial Hills: Northwest Las Vegas's Established Family Community
+                Centennial Hills: Northwest Las Vegas Mountain-View Living
               </h2>
               <p>
                 <strong>Centennial Hills</strong> represents the best of established northwest Las Vegas
@@ -137,9 +126,9 @@ export default function CentennialHillsPage() {
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has represented
-                Centennial Hills families since the community's earliest phases. Dr. Jan Duffy knows
-                which streets offer the best mountain views, which school zones are most sought-after,
-                and which HOAs maintain their communities to the highest standards. This deep local
+                Centennial Hills buyers and sellers since the community's earliest phases. Dr. Jan Duffy knows
+                which streets offer the strongest mountain views, commute times to the Strip and
+                Downtown Summerlin, and which HOAs publish current reserve studies. This local
                 knowledge, combined with the BHHS commitment to client service, ensures Centennial
                 Hills buyers and sellers receive exceptional representation.
               </p>
@@ -150,13 +139,12 @@ export default function CentennialHillsPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Established Family Community</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Parks and Daily Conveniences</h4>
                   </div>
                   <p className="text-slate-600">
-                    Centennial Hills has matured into a true community where neighbors know each other
-                    and families put down roots. The area features multiple established parks including
-                    the popular Centennial Hills Park, community events throughout the year, and the
-                    kind of neighborhood stability that creates lifelong friendships and strong property values.
+                    Centennial Hills includes Centennial Hills Park, year-round community events, and
+                    HOA-maintained common areas. The mix of 1,800–3,500 sq ft floor plans and mountain
+                    views supports long-term occupancy and consistent resale demand.
                   </p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl">
@@ -183,7 +171,7 @@ export default function CentennialHillsPage() {
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Ober Elementary (8/10)</li>
+                      <li>• Ober Elementary</li>
                       <li>• Cashman Elementary</li>
                       <li>• Scherkenbach Elementary</li>
                       <li>• Hummel Elementary</li>
@@ -193,7 +181,7 @@ export default function CentennialHillsPage() {
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Centennial High School (7/10)</li>
+                      <li>• Centennial High School</li>
                       <li>• Shadow Ridge High School</li>
                       <li>• Arbor View High School</li>
                       <li>• Becker Middle School</li>
@@ -293,7 +281,7 @@ export default function CentennialHillsPage() {
                 partnering with agents who understand the community's evolution and can identify
                 properties that represent genuine value. Dr. Jan Duffy helps buyers look beyond
                 surface features to evaluate factors that matter long-term: construction quality,
-                lot positioning, HOA health, and school quality. That expertise translates into
+                lot positioning, HOA documents, and named school campuses. That expertise translates into
                 better purchase decisions and stronger long-term investments.
               </p>
             </div>
@@ -371,7 +359,7 @@ export default function CentennialHillsPage() {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Centennial Hills expert,
-              for guidance in this established family community.
+              for guidance in this northwest Las Vegas community.
             </p>
             <a
               href="tel:+17022221964"
