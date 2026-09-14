@@ -227,7 +227,7 @@ export default function FirstTimeBuyersPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Family-friendly
+                    Parks and recreation
                   </li>
                 </ul>
                 <Link

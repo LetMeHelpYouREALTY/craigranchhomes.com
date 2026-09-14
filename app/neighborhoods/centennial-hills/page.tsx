@@ -84,7 +84,7 @@ export default function CentennialHillsPage() {
               Berkshire Hathaway HomeServices Centennial Hills
             </h1>
             <p className="text-xl text-slate-600">
-              Family-friendly northwest Las Vegas living. Find your Centennial Hills home with{" "}
+              Northwest Las Vegas living with parks and mountain access. Find your Centennial Hills home with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
