@@ -375,9 +375,6 @@ export default function MarketUpdatePage() {
               Contact Dr. Jan Duffy for a free consultation tailored to your goals.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
 
           {/* Newsletter Signup */}

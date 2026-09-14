@@ -4,6 +4,7 @@ import { Phone, Mountain, Users, Home as HomeIcon, GraduationCap } from "lucide-
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 import { nap } from "@/lib/contact";
@@ -318,47 +319,12 @@ export default function SkyeCanyonPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Skye Canyon
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Skye Canyon?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year.
-                  New construction ranges from $450,000 to $800,000, while resales offer additional
-                  options across all price points.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What amenities does Skye Canyon offer?
-                </h3>
-                <p className="text-slate-600">
-                  Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools,
-                  fitness center, sports courts, and event spaces. The community also offers miles of
-                  trails, parks, and is adjacent to Floyd Lamb Park.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What recreation and schools are near Skye Canyon?
-                </h3>
-                <p className="text-slate-600">
-                  Skye Canyon includes new school campuses, sports courts, Skye Center events, miles of
-                  trails, and adjacency to Floyd Lamb Park. Call (702) 222-1964 for current listings.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?
-                </h3>
-                <p className="text-slate-600">
-                  BHHS provides free buyer representation on new construction purchases—the builder pays
-                  our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure
-                  your interests are protected when builder sales agents work for the builder.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in Skye Canyon?", a: "As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year. New construction ranges from $450,000 to $800,000, while resales offer additional options across all price points." },
+              { q: "What amenities does Skye Canyon offer?", a: "Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools, fitness center, sports courts, and event spaces. The community also offers miles of trails, parks, and is adjacent to Floyd Lamb Park." },
+              { q: "What recreation and schools are near Skye Canyon?", a: "Skye Canyon includes new school campuses, sports courts, Skye Center events, miles of trails, and adjacency to Floyd Lamb Park. Call (702) 222-1964 for current listings." },
+              { q: "Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?", a: "BHHS provides free buyer representation on new construction purchases—the builder pays our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure your interests are protected when builder sales agents work for the builder." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -371,9 +337,6 @@ export default function SkyeCanyonPage() {
               for expert guidance on new construction and resale homes.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

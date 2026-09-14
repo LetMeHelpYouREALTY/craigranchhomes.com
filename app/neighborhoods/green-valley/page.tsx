@@ -4,6 +4,7 @@ import { Phone, TreePine, ShoppingBag, GraduationCap, MapPin } from "lucide-reac
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 import { nap } from "@/lib/contact";
@@ -294,47 +295,12 @@ export default function GreenValleyPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Green Valley Real Estate
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Green Valley?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation
-                  year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for
-                  luxury properties.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How long do homes stay on the market in Green Valley?
-                </h3>
-                <p className="text-slate-600">
-                  Green Valley homes average 26 days on market. Properties near The District at Green Valley
-                  Ranch and those with upgraded features often sell faster, sometimes within the first two weeks.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What makes Green Valley different from newer Henderson communities?
-                </h3>
-                <p className="text-slate-600">
-                  Green Valley, established in 1988, offers what newer communities can't: mature trees,
-                  established schools with proven track records, larger lots, and a genuine sense of
-                  community built over 35+ years.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Is Green Valley a good investment?
-                </h3>
-                <p className="text-slate-600">
-                  Green Valley has shown consistent appreciation due to its Henderson location,
-                  parks, shopping at The District, and named campuses such as Green Valley High School.
-                  BHHS agents can provide detailed market analysis.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in Green Valley?", a: "As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for luxury properties." },
+              { q: "How long do homes stay on the market in Green Valley?", a: "Green Valley homes average 26 days on market. Properties near The District at Green Valley Ranch and those with upgraded features often sell faster, sometimes within the first two weeks." },
+              { q: "What makes Green Valley different from newer Henderson communities?", a: "Green Valley, established in 1988, offers what newer communities can't: mature trees, established schools with proven track records, larger lots, and a genuine sense of community built over 35+ years." },
+              { q: "Is Green Valley a good investment?", a: "Green Valley has shown consistent appreciation due to its Henderson location, parks, shopping at The District, and named campuses such as Green Valley High School. BHHS agents can provide detailed market analysis." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -347,9 +313,6 @@ export default function GreenValleyPage() {
               for expert guidance in this Henderson community.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

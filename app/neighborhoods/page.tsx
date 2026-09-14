@@ -224,9 +224,6 @@ export default function NeighborhoodsPage() {
               neighborhood recommendations.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
 

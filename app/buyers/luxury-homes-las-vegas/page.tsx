@@ -374,9 +374,6 @@ export default function LuxuryHomesPage() {
               confidential, expert guidance for discerning buyers.
             </p>
             <CtaActions variant="onDark" bookLabel="Request Private Showing" />
-            <p className="mt-6 text-slate-400 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

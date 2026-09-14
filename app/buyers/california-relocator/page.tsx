@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { nap } from "@/lib/contact";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -370,8 +371,7 @@ export default function CaliforniaRelocatorPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               California Relocator FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much can I save moving from California to Nevada?",
                   a: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a household earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
@@ -392,18 +392,7 @@ export default function CaliforniaRelocatorPage() {
                   q: "What about named school campuses compared to California?",
                   a: "Ask about commute times to named campuses such as Palo Verde High School in Summerlin and Coronado High School in Henderson. Dr. Jan provides campus names and drive times for every neighborhood she shows.",
                 },
-              ].map((faq) => (
-                <details key={faq.q} className="bg-white border border-slate-200 rounded-lg p-6 group">
-                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                    {faq.q}
-                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p className="text-slate-600 mt-3">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* Expert Quote */}
@@ -433,9 +422,6 @@ export default function CaliforniaRelocatorPage() {
               what your California equity buys in Las Vegas and help you find the perfect neighborhood.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-6 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

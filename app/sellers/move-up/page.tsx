@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -326,8 +327,7 @@ export default function MoveUpSellerPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Move-Up Seller FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much equity do I need to move up?",
                   a: "Most move-up buyers have 20-40% equity in their current home. If you purchased between 2015-2021, Las Vegas appreciation means you likely have $100,000-$250,000+ in equity. Dr. Jan provides free equity analysis to show exactly what you have to work with.",
@@ -348,13 +348,7 @@ export default function MoveUpSellerPage() {
                   q: "What are the tax implications of selling and buying?",
                   a: "If you've lived in your home 2+ years, up to $250,000 ($500,000 for couples) in gains are tax-free. For larger gains, consult a tax advisor. Dr. Jan can refer you to trusted CPAs who specialize in real estate transactions.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}

@@ -4,6 +4,7 @@ import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
 
@@ -296,8 +297,7 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "What should I expect during my first consultation?",
                   a: "Your consultation is a no-pressure conversation about your real estate goals. We'll discuss your timeline, budget, preferences, and answer any questions you have about the Las Vegas market. Whether you're buying, selling, or exploring options, I'll provide honest guidance tailored to your situation.",
@@ -314,18 +314,7 @@ export default function ContactPage() {
                   q: "Do you charge for consultations?",
                   a: "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
                 },
-              ].map((faq) => (
-                <details key={faq.q} className="bg-slate-50 rounded-lg p-6 group">
-                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                    {faq.q}
-                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p className="text-slate-600 mt-3">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+               ]} />
           </section>
         </div>
 

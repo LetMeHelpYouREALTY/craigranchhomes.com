@@ -4,6 +4,7 @@ import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 import { nap } from "@/lib/contact";
 import SchemaScript from "@/components/SchemaScript";
@@ -208,19 +209,7 @@ export default function FAQPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">
                   {category.title}
                 </h2>
-                <div className="space-y-4">
-                  {category.faqs.map((faq, index) => (
-                    <details key={index} className="bg-slate-50 rounded-lg p-6 group">
-                      <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between">
-                        {faq.q}
-                        <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                          +
-                        </span>
-                      </summary>
-                      <p className="text-slate-600 mt-3">{faq.a}</p>
-                    </details>
-                  ))}
-                </div>
+                <FaqAccordion items={category.faqs} />
               </section>
             ))}
           </div>
@@ -233,9 +222,6 @@ export default function FAQPage() {
               with Berkshire Hathaway HomeServices.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
 

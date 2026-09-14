@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -427,8 +428,7 @@ export default function HomeValuationPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Home Valuations
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How accurate are online home value estimates like Zillow's Zestimate?",
                   a: "Online estimates like Zillow's Zestimate can be off by 5-15% or more, especially in markets like Las Vegas where home features vary significantly. They cannot account for upgrades, condition, views, or lot characteristics. A professional CMA from a local expert provides far more accurate pricing.",
@@ -449,13 +449,7 @@ export default function HomeValuationPage() {
                   q: "Do I need to have my home ready to show for a valuation?",
                   a: "Not necessarily. Dr. Jan can provide an initial valuation based on property records, MLS data, and information you provide. However, a brief walk-through helps identify features and upgrades that add value. There's no need to stage or prepare extensively.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -468,9 +462,6 @@ export default function HomeValuationPage() {
               HomeServices Nevada Properties. Accurate pricing. Expert guidance. Zero pressure.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
         </div>
 

@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -382,8 +383,7 @@ export default function LuxuryHomesPage() {
               Luxury real estate transactions involve unique considerations. Here are answers 
               to common questions from buyers and sellers in this market segment.
             </p>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "What defines a luxury home in Las Vegas?",
                   a: "Generally, homes priced at $1 million and above are considered luxury in Las Vegas. The ultra-luxury segment starts around $3 million. Features typically include custom architecture, premium locations in guard-gated communities, high-end finishes, and exclusive amenities like private pools, home theaters, and wine cellars.",
@@ -408,13 +408,7 @@ export default function LuxuryHomesPage() {
                   q: "What's the process for buying a luxury home in Las Vegas?",
                   a: "The process is similar to standard purchases but with additional considerations. Proof of funds is typically required before showings. Inspections are more extensive. Dr. Jan coordinates all aspects, including working with attorneys, financial advisors, and other professionals as needed.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -428,9 +422,6 @@ export default function LuxuryHomesPage() {
               available for discerning clients.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
         </div>
 

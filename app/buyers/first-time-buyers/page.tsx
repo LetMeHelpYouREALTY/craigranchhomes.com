@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { nap } from "@/lib/contact";
 
 
@@ -412,8 +413,7 @@ export default function FirstTimeBuyersPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               First-Time Buyer FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much down payment do I need?",
                   a: "Down payment requirements vary: FHA loans require 3.5%, conventional can be as low as 3%, VA loans require 0% for eligible veterans. Nevada assistance programs can provide up to $15,000 for qualified buyers.",
@@ -430,18 +430,7 @@ export default function FirstTimeBuyersPage() {
                   q: "Should I buy new construction or resale?",
                   a: "Both have advantages. New construction offers modern features, warranties, and current builder incentives. Resales may have established landscaping and lower HOA dues. Dr. Jan helps you weigh options based on your specific situation.",
                 },
-              ].map((faq) => (
-                <details key={faq.q} className="bg-white border border-slate-200 rounded-lg p-6 group">
-                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                    {faq.q}
-                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p className="text-slate-600 mt-3">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* Expert Quote */}
@@ -470,9 +459,6 @@ export default function FirstTimeBuyersPage() {
               afford and create a plan to make homeownership happen.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-6 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

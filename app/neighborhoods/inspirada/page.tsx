@@ -4,6 +4,7 @@ import { Phone, Waves, TreePine, GraduationCap, Home as HomeIcon } from "lucide-
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 import { nap } from "@/lib/contact";
@@ -314,48 +315,12 @@ export default function InspiradaPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Inspirada
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Inspirada?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year.
-                  New construction ranges from $450,000 to $750,000, while resales offer additional
-                  options with established landscaping.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What amenities does Inspirada offer residents?
-                </h3>
-                <p className="text-slate-600">
-                  Inspirada features resort-style pools with water features, miles of walking trails,
-                  multiple parks, sports courts, and community gathering spaces. The HOA maintains
-                  these amenities to resort standards, creating a vacation-like atmosphere.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How are the schools in Inspirada?
-                </h3>
-                <p className="text-slate-600">
-                  Inspirada is served by Henderson-area schools including newer facilities
-                  built specifically for the growing community. The area attracts families specifically
-                  for its educational options and parks, trails, and recreation amenities.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Is Inspirada a good investment?
-                </h3>
-                <p className="text-slate-600">
-                  Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned
-                  communities. The combination of resort amenities, Henderson location, and continued
-                  development suggests ongoing demand and value growth.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in Inspirada?", a: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with established landscaping." },
+              { q: "What amenities does Inspirada offer residents?", a: "Inspirada features resort-style pools with water features, miles of walking trails, multiple parks, sports courts, and community gathering spaces. The HOA maintains these amenities to resort standards, creating a vacation-like atmosphere." },
+              { q: "How are the schools in Inspirada?", a: "Inspirada is served by Henderson-area schools including newer facilities built specifically for the growing community. The area attracts families specifically for its educational options and parks, trails, and recreation amenities." },
+              { q: "Is Inspirada a good investment?", a: "Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned communities. The combination of resort amenities, Henderson location, and continued development suggests ongoing demand and value growth." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -368,9 +333,6 @@ export default function InspiradaPage() {
               for expert guidance in Henderson's premier resort-style community.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-blue-200 text-sm">
-              {nap.brokerage} · {nap.fullAddress}
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

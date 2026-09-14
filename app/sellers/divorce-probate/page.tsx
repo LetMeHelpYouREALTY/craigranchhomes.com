@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -393,8 +394,7 @@ export default function DivorceProbatePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "Can one spouse sell the house without the other's consent?",
                   a: "In Nevada, generally no. Both spouses must agree to sell community property. If one spouse refuses, the other can petition the court for an order to sell. Dr. Jan has worked with many cases where court intervention was needed and can provide valuations and testimony if required.",
@@ -419,13 +419,7 @@ export default function DivorceProbatePage() {
                   q: "What happens to the mortgage during a divorce sale?",
                   a: "The mortgage is paid off at closing from the sale proceeds. If the home is underwater (worth less than owed), options include short sale negotiation with the lender or other arrangements. Dr. Jan can advise on the best approach for your situation.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* Why BHHS Matters */}
@@ -490,9 +484,6 @@ export default function DivorceProbatePage() {
               professional guidance to help you move forward.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-6 text-slate-400 text-sm">
-              All communications are confidential.
-            </p>
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

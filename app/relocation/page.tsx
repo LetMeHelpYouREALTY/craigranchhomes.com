@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -383,8 +384,7 @@ export default function RelocationPage() {
               Moving to a new city raises many questions. Here are answers to the most common 
               concerns from people relocating to Las Vegas.
             </p>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "Can you help me find a home before I move?",
                   a: "Absolutely. Dr. Jan provides virtual tours, video walkthroughs, and detailed neighborhood analysis so you can purchase confidently before relocating. Many clients buy their Las Vegas home without ever visiting in person until closing day.",
@@ -409,18 +409,7 @@ export default function RelocationPage() {
                   q: "How do I compare neighborhoods beyond listing photos?",
                   a: "Ask for commute times to the Strip and airport, HOA fees, park acreage, and named school campuses. Dr. Jan Duffy walks relocators through those facts for Summerlin, Green Valley, Inspirada, and Skye Canyon so you can decide from data, not slogans.",
                 },
-              ].map((faq) => (
-                <details key={faq.q} className="bg-slate-50 rounded-lg p-6 group">
-                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                    {faq.q}
-                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p className="text-slate-600 mt-3">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -432,9 +421,6 @@ export default function RelocationPage() {
               you understand the Las Vegas market and plan your transition.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
         </div>
 

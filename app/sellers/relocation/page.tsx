@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -381,8 +382,7 @@ export default function RelocationPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Relocation FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "My job starts in 3 weeks. Is that enough time to sell?",
                   a: "Yes—urgently, but it's possible. We can list immediately, price aggressively for quick sale, and leverage our investor/cash buyer network. You may leave before closing, but we manage everything remotely. Dr. Jan has helped many clients sell within 2-4 weeks when necessary.",
@@ -403,13 +403,7 @@ export default function RelocationPage() {
                   q: "What about my stuff? Should I move it before listing?",
                   a: "Partially furnished homes often show better than empty ones. Dr. Jan advises on what to take, what to leave, and whether professional staging makes sense. For urgent sales, we can list with minimal preparation.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* Coming TO Las Vegas */}

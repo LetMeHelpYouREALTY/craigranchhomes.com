@@ -1,7 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 export interface FAQ {
   question: string;
@@ -56,12 +53,6 @@ export default function FAQSection({
   className = "",
   includeSchema = true,
 }: FAQSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className={`py-16 md:py-24 bg-white ${className}`}>
       {includeSchema && (
@@ -87,46 +78,8 @@ export default function FAQSection({
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">{subtitle}</p>
         </div>
-
         <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => {
-            const panelId = `faq-panel-${index}`;
-            const buttonId = `faq-button-${index}`;
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={faq.question}
-                className="border border-slate-200 rounded-lg mb-4 overflow-hidden"
-              >
-                <h3 className="m-0">
-                  <button
-                    id={buttonId}
-                    type="button"
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600 min-h-[44px]"
-                    aria-expanded={isOpen}
-                    aria-controls={panelId}
-                  >
-                    <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
-                    {isOpen ? (
-                      <ChevronUp className="h-5 w-5 text-blue-600 flex-shrink-0" aria-hidden="true" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0" aria-hidden="true" />
-                    )}
-                  </button>
-                </h3>
-                <div
-                  id={panelId}
-                  role="region"
-                  aria-labelledby={buttonId}
-                  hidden={!isOpen}
-                  className={isOpen ? "px-6 py-4 bg-slate-50 border-t border-slate-200" : undefined}
-                >
-                  {isOpen && <p className="text-slate-700">{faq.answer}</p>}
-                </div>
-              </div>
-            );
-          })}
+          <FaqAccordion items={faqs} />
         </div>
       </div>
     </section>

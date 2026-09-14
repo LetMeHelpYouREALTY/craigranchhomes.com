@@ -4,6 +4,7 @@ import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calcula
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -400,8 +401,7 @@ export default function InvestmentPropertiesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Investment Property FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "What returns can I expect from Las Vegas rental property?",
                   a: "Typical cap rates range from 4-6%, with appreciation adding another 4-5% annually in recent years. Total returns of 8-10% are achievable in the right neighborhoods. Dr. Jan provides detailed ROI analysis on any property you're considering.",
@@ -418,13 +418,7 @@ export default function InvestmentPropertiesPage() {
                   q: "What's the best area for investment properties?",
                   a: "It depends on your strategy. North Las Vegas offers the best cap rates, while Summerlin provides stronger appreciation. Henderson balances both. Dr. Jan analyzes your goals to recommend the right areas.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -437,9 +431,6 @@ export default function InvestmentPropertiesPage() {
               Berkshire Hathaway HomeServices.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
         </div>
 

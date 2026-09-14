@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -399,8 +400,7 @@ export default function BuyersPage() {
               Get answers to the most common questions from Las Vegas home buyers. If you don't 
               see your question here, call Dr. Jan Duffy at (702) 222-1964 for a free consultation.
             </p>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much do I need for a down payment in Las Vegas?",
                   a: "Down payments vary by loan type: FHA requires 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans, and USDA loans 0% for rural areas. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in low down payment programs.",
@@ -425,18 +425,7 @@ export default function BuyersPage() {
                   q: "Which neighborhoods have the most parks, trails, and named school campuses?",
                   a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills have extensive parks, recreation centers, and named campuses such as Palo Verde High School, Coronado High School, and Arbor View High School. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
                 },
-              ].map((faq) => (
-                <details key={faq.q} className="bg-slate-50 rounded-lg p-6 group">
-                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                    {faq.q}
-                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p className="text-slate-600 mt-3">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -448,9 +437,6 @@ export default function BuyersPage() {
               seller pays the commission, so representation is free for you.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
         </div>
 

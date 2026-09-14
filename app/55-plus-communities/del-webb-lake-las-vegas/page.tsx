@@ -12,6 +12,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -45,6 +46,13 @@ export default function DelWebbLakeLasVegasPage() {
             <p className="text-xl text-slate-600">
               Modern homes. Lake views. Resort living. The newest Del Webb in Las Vegas.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}

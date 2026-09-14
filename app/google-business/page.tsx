@@ -13,6 +13,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import {
   ctaPhone,
   officePhone,
@@ -134,7 +135,6 @@ export default function GoogleBusinessPage() {
                   <p className="text-3xl font-bold mb-2">4.9 / 5.0</p>
                   <p className="text-blue-200 mb-6">200+ Client Reviews</p>
                   <CtaActions variant="onDark" />
-                  <p className="text-sm text-blue-300 mt-3">Free consultation · {hoursSummary}</p>
                 </div>
               </div>
             </div>
@@ -313,19 +313,7 @@ export default function GoogleBusinessPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
-              {gbpFAQs.map((faq) => (
-                <details key={faq.question} className="bg-white border border-slate-200 rounded-lg p-6 group">
-                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                    {faq.question}
-                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p className="text-slate-600 mt-3">{faq.answer}</p>
-                </details>
-              ))}
-            </div>
+            <FaqAccordion items={gbpFAQs} />
           </section>
 
           <section className="max-w-4xl mx-auto mb-16">
@@ -356,9 +344,6 @@ export default function GoogleBusinessPage() {
                 Contact Dr. Jan Duffy for a free consultation about buying or selling in Las Vegas.
               </p>
               <CtaActions variant="onDark" />
-              <p className="text-slate-400 text-sm mt-6">
-                {nap.brokerage} · {nap.fullAddress} · Call {ctaPhone.display}
-              </p>
             </div>
           </section>
         </div>

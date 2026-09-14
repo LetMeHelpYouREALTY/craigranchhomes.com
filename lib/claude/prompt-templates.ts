@@ -90,7 +90,7 @@ export const propertySearchTemplate: PromptTemplate = {
 
 ## Search Criteria to Gather
 1. **Budget**: Price range, down payment, pre-approval status
-2. **Location**: Neighborhoods, school districts, commute requirements
+2. **Location**: Neighborhoods, named school campuses, commute times
 3. **Property Type**: Single family, condo, townhome
 4. **Features**: Bedrooms, bathrooms, square footage, lot size
 5. **Special Needs**: Pool, garage, HOA, age of home, specific amenities
@@ -192,36 +192,35 @@ export const neighborhoodExpertTemplate: PromptTemplate = {
 - **Overview**: Separate city, southeast of Las Vegas
 - **Population**: ~330,000 residents
 - **Price Range**: $350K - $3M+
-- **Schools**: Top-rated in Nevada
+- **Named campuses**: Coronado High School, Green Valley High School, Basic High School
 - **Features**: Green Valley area, Lake Las Vegas, growing tech sector
 - **Lifestyle notes**: Parks, trails, recreation centers, commute times to the Strip and airport
 - **HOA**: Varies by community
 
 ### Green Valley (Henderson)
-- **Overview**: Established master-planned community
+- **Overview**: Master-planned Henderson community
 - **Population**: ~50,000 residents
 - **Price Range**: $400K - $1M
-- **Schools**: Excellent schools
+- **Named campuses**: Green Valley High School
 - **Features**: Golf courses, parks, shopping, mature landscaping
-- **Demographics**: Upper-middle class families
+- **Notes**: Upper-middle price band, HOA common
 - **HOA**: Yes, most communities
 
 ### Southern Highlands
 - **Overview**: Luxury master-planned community, southwest Las Vegas
 - **Population**: ~10,000 residents
 - **Price Range**: $500K - $5M+
-- **Schools**: Good (private schools nearby)
+- **Named campuses**: Silverado High School
 - **Features**: Golf course, gated communities, mountain views
-- **Demographics**: Affluent families and professionals
+- **Notes**: Golf, guard-gated sections, mountain views
 - **HOA**: Yes, typically $100-$300/month
 
 ### The Ridges (Summerlin)
 - **Overview**: Ultra-luxury guard-gated community
 - **Population**: ~2,000 residents
 - **Price Range**: $1M - $10M+
-- **Schools**: Private schools primarily
+- **Notes**: Guard-gated custom estates; Red Rock views
 - **Features**: Guard gate, golf, stunning Red Rock views, custom homes
-- **Demographics**: High net worth individuals, executives
 - **HOA**: Yes, premium services
 
 ### 55+ Communities
@@ -233,9 +232,8 @@ export const neighborhoodExpertTemplate: PromptTemplate = {
 ### North Las Vegas
 - **Overview**: Affordable, growing area, north of Las Vegas
 - **Price Range**: $250K - $500K
-- **Schools**: Improving
 - **Features**: Newer developments, affordability, access to I-15
-- **Demographics**: First-time buyers, growing families
+- **Notes**: First-time buyers and investors; Legacy High School commute
 
 ## How to Use This Knowledge
 - Match client needs to appropriate neighborhoods

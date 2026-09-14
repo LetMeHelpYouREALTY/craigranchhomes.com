@@ -4,6 +4,7 @@ import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "luc
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -239,8 +240,7 @@ export default function WhyBerkshireHathawayPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About BHHS
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "Is Berkshire Hathaway HomeServices owned by Warren Buffett?",
                   a: "Berkshire Hathaway HomeServices is part of HSF Affiliates LLC, which is a joint venture of Berkshire Hathaway Inc. (Warren Buffett's company) and HomeServices of America. The brand carries the trusted Berkshire Hathaway name and upholds its values of integrity and excellence.",
@@ -257,13 +257,7 @@ export default function WhyBerkshireHathawayPage() {
                   q: "Can BHHS help with relocations to Las Vegas?",
                   a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, commute times, and named school campuses.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -275,9 +269,6 @@ export default function WhyBerkshireHathawayPage() {
               Ready to work with the most trusted name in real estate? Contact Dr. Jan Duffy today.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
           </section>
         </div>
 

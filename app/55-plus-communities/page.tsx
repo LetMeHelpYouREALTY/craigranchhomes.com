@@ -10,7 +10,6 @@ import {
   DollarSign,
   MapPin,
   Heart,
-  HelpCircle,
   Sun,
   Trophy,
   Palmtree,
@@ -22,6 +21,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -681,70 +681,13 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               55+ Community Buying FAQs
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What are the age requirements for 55+ communities in Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  Per the Housing for Older Persons Act (HOPA), at least 80% of
-                  occupied units must have one resident 55 or older. The remaining
-                  20% can be younger, but some communities require all residents
-                  to be 55+. Spouses can be younger in most communities.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Can I buy in a 55+ community if I'm under 55?
-                </h3>
-                <p className="text-slate-600">
-                  Generally no, but there are exceptions. You may purchase if
-                  you'll be 55 by close of escrow, or as an investor who will rent
-                  to 55+ tenants. Some communities allow residents 45-54 in
-                  limited circumstances. Dr. Jan can explain each community's
-                  specific rules.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What do HOA fees cover in 55+ communities?
-                </h3>
-                <p className="text-slate-600">
-                  HOA fees typically cover access to clubhouses, pools, fitness
-                  centers, golf courses, organized activities, landscaping, and
-                  exterior maintenance. Fees range from $140-$350/month depending
-                  on amenities. Some communities have separate golf memberships.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Why do California residents choose Las Vegas 55+ communities?
-                </h3>
-                <p className="text-slate-600">
-                  California retirees love Las Vegas for no state income tax,
-                  lower property prices (50-60% less), lower cost of living, warm
-                  weather, world-class healthcare, and the ability to get more
-                  home and amenities for their money. Many sell their California
-                  home and buy in Las Vegas with cash to spare.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Can grandchildren visit or stay in 55+ communities?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, most communities allow guests of any age to visit and stay
-                  temporarily (typically 30-90 days per year). However, children
-                  cannot be permanent residents. Each community has specific guest
-                  policies that Dr. Jan Duffy can explain.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What are the age requirements for 55+ communities in Las Vegas?", a: "Per the Housing for Older Persons Act (HOPA), at least 80% of occupied units must have one resident 55 or older. The remaining 20% can be younger, but some communities require all residents to be 55+. Spouses can be younger in most communities." },
+              { q: "Can I buy in a 55+ community if I'm under 55?", a: "Generally no, but there are exceptions. You may purchase if you'll be 55 by close of escrow, or as an investor who will rent to 55+ tenants. Some communities allow residents 45-54 in limited circumstances. Dr. Jan can explain each community's specific rules." },
+              { q: "What do HOA fees cover in 55+ communities?", a: "HOA fees typically cover access to clubhouses, pools, fitness centers, golf courses, organized activities, landscaping, and exterior maintenance. Fees range from $140-$350/month depending on amenities. Some communities have separate golf memberships." },
+              { q: "Why do California residents choose Las Vegas 55+ communities?", a: "California retirees love Las Vegas for no state income tax, lower property prices (50-60% less), lower cost of living, warm weather, world-class healthcare, and the ability to get more home and amenities for their money. Many sell their California home and buy in Las Vegas with cash to spare." },
+              { q: "Can grandchildren visit or stay in 55+ communities?", a: "Yes, most communities allow guests of any age to visit and stay temporarily (typically 30-90 days per year). However, children cannot be permanent residents. Each community has specific guest policies that Dr. Jan Duffy can explain." },
+            ]} />
           </section>
 
           {/* Why BHHS */}
@@ -825,12 +768,6 @@ export default function FiftyFiveCommunitiesPage() {
               recommendations.
             </p>
             <CtaActions variant="onDark" />
-            <p className="mt-6 text-blue-200 text-lg">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
-            </p>
             <p className="mt-4 text-blue-300 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties · 9406 W Lake Mead Blvd, Suite 100,
               Las Vegas, NV 89134
