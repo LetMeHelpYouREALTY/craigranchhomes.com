@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -28,7 +26,7 @@ export const metadata: Metadata = {
   title:
     "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
   description:
-    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 500-1942.",
+    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 222-1964.",
   keywords: [
     "55+ communities Las Vegas",
     "active adult communities Las Vegas",
@@ -110,7 +108,7 @@ const localBusinessSchema = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
     "55+ community specialist helping active adults find their perfect Las Vegas retirement home",
-  telephone: "(702) 500-1942",
+  telephone: "(702) 222-1964",
   url: "https://heyberkshire.com/55-plus-communities",
   areaServed: {
     "@type": "City",
@@ -161,7 +159,7 @@ const communities = [
       "Henderson's premier 55+ community",
       "2 championship golf courses",
       "Stunning mountain views",
-      "America's safest large city location",
+      "Henderson location with parks and recreation campuses",
     ],
     description:
       "Henderson's premier 55+ community with stunning mountain views and championship golf.",
@@ -333,8 +331,7 @@ export default function FiftyFiveCommunitiesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -367,11 +364,11 @@ export default function FiftyFiveCommunitiesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 222-1964
               </a>
               <a
                 href="http://drjanduffy.realscout.com/"
@@ -621,7 +618,7 @@ export default function FiftyFiveCommunitiesPage() {
                       </Link>
                     ) : (
                       <a
-                        href="tel:+17025001942"
+                        href="tel:+17022221964"
                         className="block text-center bg-slate-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-slate-700 transition-colors"
                       >
                         Call for {community.name} Info
@@ -857,11 +854,11 @@ export default function FiftyFiveCommunitiesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 500-1942
+                Call/Text (702) 222-1964
               </a>
               <Link
                 href="/contact"
@@ -886,7 +883,6 @@ export default function FiftyFiveCommunitiesPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

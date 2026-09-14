@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
@@ -8,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
   description:
-    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's family-friendly communities. Median price $485K. Call (702) 500-1942.",
+    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's residential communities with parks and recreation. Median price $485K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Henderson",
     "Henderson homes for sale",
@@ -22,7 +20,7 @@ const neighborhoodSchema = {
   "@context": "https://schema.org",
   "@type": "Place",
   name: "Henderson, Nevada",
-  description: "Nevada's second-largest city known for safety, schools, and family-friendly communities",
+  description: "Nevada's second-largest city known for parks, trails, and residential communities with parks and recreation",
   geo: {
     "@type": "GeoCoordinates",
     latitude: "36.0395",
@@ -44,10 +42,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How safe is Henderson compared to Las Vegas?",
+      name: "What amenities and commute times define Henderson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Henderson consistently ranks as one of America's safest cities. It has been named the safest city in Nevada and frequently appears in national 'Best Places to Live' rankings for its low crime rates and family-friendly environment.",
+        text: "Henderson is Nevada's second-largest city, with 60+ parks, recreation centers, and 15–25 minute commutes to the Las Vegas Strip depending on the village. Green Valley, Inspirada, MacDonald Highlands, and Lake Las Vegas each offer distinct HOA amenities and price points.",
       },
     },
     {
@@ -55,7 +53,7 @@ const faqSchema = {
       name: "What are the best neighborhoods in Henderson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Henderson's top neighborhoods include Green Valley (established, mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
+        text: "Henderson neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
       },
     },
     {
@@ -80,8 +78,7 @@ export default function HendersonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -103,7 +100,7 @@ export default function HendersonPage() {
               Berkshire Hathaway HomeServices Henderson
             </h1>
             <p className="text-xl text-slate-600">
-              Nevada's safest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
+              Nevada's second-largest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
             </p>
           </div>
@@ -147,11 +144,10 @@ export default function HendersonPage() {
                 and Dr. Jan Duffy brings unmatched expertise to every transaction.
               </p>
               <p>
-                What sets Henderson apart? Start with safety. Henderson consistently ranks as one of America's
-                safest large cities, making it the top choice for families with children. The city's excellent
-                schools, low crime rates, and community-oriented atmosphere create an environment where
-                families thrive. Add in the fact that Nevada has no state income tax, and you understand why
-                so many Californians are making Henderson their new home.
+                What sets Henderson apart is scale and planning: 60+ parks, recreation centers, and
+                master-planned villages 15–25 minutes from the Strip. Nevada has no state income tax,
+                which is why many California buyers compare Henderson floor plans and HOA amenities
+                before they list a West Coast home.
               </p>
               <p>
                 The Henderson real estate market offers remarkable diversity. From the established tree-lined
@@ -168,25 +164,23 @@ export default function HendersonPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">America's Safest City</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">60+ Parks &amp; Trails</h4>
                   </div>
                   <p className="text-slate-600">
-                    Henderson has been named the safest city in Nevada and consistently ranks among America's
-                    safest large cities. The Henderson Police Department's community policing approach and
-                    active neighborhood watch programs contribute to exceptionally low crime rates that give
-                    families peace of mind.
+                    Henderson operates more than 60 parks, multiple recreation centers, and miles of
+                    trails. Green Valley, Inspirada, and Anthem each add HOA pools, clubhouses, and
+                    programmed events on top of city amenities.
                   </p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Family-First Community</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Master-Planned Villages</h4>
                   </div>
                   <p className="text-slate-600">
-                    Henderson is designed for families. The city operates over 60 parks, multiple recreation
-                    centers, and hundreds of youth programs. The Henderson Libraries system is award-winning,
-                    and community events throughout the year—from the Henderson Farmers Market to the annual
-                    Heritage Parade—bring neighbors together.
+                    From Green Valley&apos;s mature landscaping to Inspirada&apos;s town center and
+                    MacDonald Highlands&apos; custom estates, Henderson villages are planned around
+                    parks, shopping, and commute times—not generic slogans.
                   </p>
                 </div>
               </div>
@@ -349,12 +343,12 @@ export default function HendersonPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  How safe is Henderson compared to Las Vegas?
+                  What amenities and commute times define Henderson?
                 </h3>
                 <p className="text-slate-600">
-                  Henderson consistently ranks as one of America's safest cities. It has been named the
-                  safest city in Nevada and frequently appears in national "Best Places to Live" rankings
-                  for its low crime rates and family-friendly environment.
+                  Henderson is Nevada&apos;s second-largest city, with 60+ parks, recreation centers,
+                  and 15–25 minute commutes to the Strip depending on the village. Call Dr. Jan Duffy
+                  at (702) 222-1964 for current inventory by community.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -363,7 +357,7 @@ export default function HendersonPage() {
                 </h3>
                 <p className="text-slate-600">
                   Henderson's top neighborhoods include Green Valley (established, mature landscaping),
-                  Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented),
+                  Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses),
                   and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.
                 </p>
               </div>
@@ -390,11 +384,11 @@ export default function HendersonPage() {
               for personalized guidance and local market insights.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -404,7 +398,6 @@ export default function HendersonPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

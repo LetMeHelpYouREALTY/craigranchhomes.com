@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, Users, Home as HomeIcon, GraduationCap } from "lucide-react";
@@ -8,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Skye Canyon | Northwest Las Vegas",
   description:
-    "Find Skye Canyon homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this premier northwest community. Median price $550K. Call (702) 500-1942.",
+    "Find Skye Canyon homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this premier northwest community. Median price $550K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Skye Canyon",
     "Skye Canyon homes for sale",
@@ -40,10 +38,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is Skye Canyon good for families?",
+      name: "What recreation and schools are near Skye Canyon?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Skye Canyon is designed for families with new schools, extensive children's amenities, community events, and safe neighborhoods. The community hosts family-friendly events throughout the year at Skye Center.",
+        text: "Skye Canyon includes new school campuses, sports courts, Skye Center events, miles of trails, and adjacency to Floyd Lamb Park. Ask Dr. Jan Duffy which villages match your commute and square-footage needs.",
       },
     },
     {
@@ -64,8 +62,7 @@ export default function SkyeCanyonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -306,7 +303,7 @@ export default function SkyeCanyonPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Skye Canyon is where young families want to be right now. The amenities are incredible,
+                "Skye Canyon is where buyers who want new construction and trail access want to be right now. The amenities are incredible,
                 the homes are modern and energy-efficient, and the community vibe is exactly what people
                 are looking for. As a Berkshire Hathaway HomeServices agent, I make sure my clients get
                 the best value—whether that's negotiating builder upgrades or finding a resale with
@@ -346,12 +343,11 @@ export default function SkyeCanyonPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Is Skye Canyon good for families?
+                  What recreation and schools are near Skye Canyon?
                 </h3>
                 <p className="text-slate-600">
-                  Yes, Skye Canyon is designed for families with new schools, extensive children's
-                  amenities, community events, and safe neighborhoods. The community hosts family-friendly
-                  events throughout the year at Skye Center.
+                  Skye Canyon includes new school campuses, sports courts, Skye Center events, miles of
+                  trails, and adjacency to Floyd Lamb Park. Call (702) 222-1964 for current listings.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -377,11 +373,11 @@ export default function SkyeCanyonPage() {
               for expert guidance on new construction and resale homes.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -391,7 +387,6 @@ export default function SkyeCanyonPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

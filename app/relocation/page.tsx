@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { 
@@ -23,7 +21,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Relocating to Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Moving to Las Vegas? Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties provides comprehensive relocation services. Schools, neighborhoods, cost of living. Call (702) 500-1942.",
+    "Moving to Las Vegas? Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties provides comprehensive relocation services. Schools, neighborhoods, cost of living. Call (702) 222-1964.",
   keywords: [
     "relocating to Las Vegas",
     "moving to Las Vegas",
@@ -59,7 +57,7 @@ const popularRelocationAreas = [
   {
     name: "Henderson",
     best: "Families, retirees",
-    highlights: "Lowest crime rates, excellent schools, community feel, diverse neighborhoods",
+    highlights: "nearby schools, community feel, diverse neighborhoods",
     from: "$450K",
   },
   {
@@ -110,8 +108,7 @@ export default function RelocationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(relocationSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -389,8 +386,8 @@ export default function RelocationPage() {
                   a: "Absolutely. Dr. Jan provides virtual tours, video walkthroughs, and detailed neighborhood analysis so you can purchase confidently before relocating. Many clients buy their Las Vegas home without ever visiting in person until closing day.",
                 },
                 {
-                  q: "What are the best areas for families relocating to Las Vegas?",
-                  a: "Summerlin, Henderson (especially Green Valley and Inspirada), and Skye Canyon consistently rank highest for families due to excellent schools, low crime, and family-friendly amenities. Dr. Jan can match you with the right area based on your specific priorities—schools, commute, budget, and lifestyle.",
+                  q: "Which areas have the most parks, trails, and nearby schools?",
+                  a: "Summerlin, Henderson (especially Green Valley and Inspirada), and Skye Canyon have extensive parks, pools, recreation centers, and nearby school campuses. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
                 },
                 {
                   q: "How does the cost of living compare to California?",
@@ -405,8 +402,8 @@ export default function RelocationPage() {
                   a: "Las Vegas has diversified beyond gaming and hospitality. Major growth sectors include healthcare (Intermountain Health, UMC), technology (Switch, various startups), sports (Raiders, Golden Knights, Aces), logistics (Amazon), and professional services. The economy is growing faster than the national average.",
                 },
                 {
-                  q: "Is Las Vegas safe for families?",
-                  a: "Yes, particularly in the suburban communities. Henderson consistently ranks as one of America's safest cities. Summerlin, Green Valley, and Inspirada also have very low crime rates. Dr. Jan can provide detailed crime statistics for any neighborhood you're considering.",
+                  q: "How do I compare neighborhoods beyond listing photos?",
+                  a: "Ask for commute times to the Strip and airport, HOA fees, park acreage, and named school campuses. Dr. Jan Duffy walks relocators through those facts for Summerlin, Green Valley, Inspirada, and Skye Canyon so you can decide from data, not slogans.",
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-slate-50 rounded-lg p-6">
@@ -427,11 +424,11 @@ export default function RelocationPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 222-1964
               </a>
               <Link
                 href="/contact"
@@ -450,7 +447,6 @@ export default function RelocationPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
@@ -24,27 +22,27 @@ const neighborhoods = [
     slug: "summerlin",
     medianPrice: "$625,000",
     priceChange: "+6.8%",
-    description: "Premier master-planned community with parks, trails, and top-rated schools",
-    highlights: ["150+ Parks", "Top Schools", "Red Rock Views", "Downtown Summerlin"],
-    bestFor: "Families, professionals, outdoor enthusiasts",
+    description: "Premier master-planned community with parks, trails, and nearby schools",
+    highlights: ["150+ Parks", "150+ Miles of Trails", "Red Rock Views", "Downtown Summerlin"],
+    bestFor: "Parks, trails, Red Rock access",
   },
   {
     name: "Henderson",
     slug: "henderson",
     medianPrice: "$485,000",
     priceChange: "+5.1%",
-    description: "Nevada's second-largest city known for safety, schools, and family-friendly living",
-    highlights: ["Low Crime Rate", "Excellent Schools", "Lake Las Vegas", "Green Valley"],
-    bestFor: "Families, retirees, commuters",
+    description: "Nevada's second-largest city known for parks, trails, and community recreation",
+    highlights: ["60+ Parks", "Recreation Centers", "Lake Las Vegas", "Green Valley"],
+    bestFor: "Master-planned villages, commute options",
   },
   {
     name: "Green Valley",
     slug: "green-valley",
     medianPrice: "$520,000",
     priceChange: "+4.8%",
-    description: "Established Henderson community with mature landscaping and excellent amenities",
+    description: "Henderson community with mature landscaping and golf amenities",
     highlights: ["Golf Courses", "Walking Trails", "The District", "Mature Trees"],
-    bestFor: "Established families, golfers, professionals",
+    bestFor: "Golf, shopping, established landscaping",
   },
   {
     name: "The Ridges",
@@ -53,7 +51,7 @@ const neighborhoods = [
     priceChange: "+8.5%",
     description: "Ultra-luxury guard-gated community with custom estates and celebrity residents",
     highlights: ["Guard-Gated", "Custom Estates", "Bear's Best Golf", "Strip Views"],
-    bestFor: "Luxury buyers, celebrities, executives",
+    bestFor: "Luxury estates, privacy, golf",
   },
   {
     name: "Southern Highlands",
@@ -62,16 +60,16 @@ const neighborhoods = [
     priceChange: "+7.2%",
     description: "Master-planned luxury community with championship golf and mountain views",
     highlights: ["Golf Community", "Guard-Gated", "Mountain Views", "Luxury Amenities"],
-    bestFor: "Golfers, luxury buyers, families",
+    bestFor: "Golf, mountain views, custom homes",
   },
   {
     name: "North Las Vegas",
     slug: "north-las-vegas",
     medianPrice: "$385,000",
     priceChange: "+3.2%",
-    description: "Rapidly growing area with affordable new construction and family-friendly communities",
-    highlights: ["New Construction", "Affordable", "Growing Area", "Family-Friendly"],
-    bestFor: "First-time buyers, young families, investors",
+    description: "Rapidly growing area with affordable new construction and parks",
+    highlights: ["New Construction", "Affordable", "Growing Area", "Parks and Trails"],
+    bestFor: "New construction, first-time buyers, investors",
   },
   {
     name: "Skye Canyon",
@@ -79,17 +77,17 @@ const neighborhoods = [
     medianPrice: "$550,000",
     priceChange: "+5.5%",
     description: "Newer master-planned community in northwest Las Vegas with mountain views",
-    highlights: ["New Homes", "Mountain Views", "Skye Center", "Great Schools"],
-    bestFor: "Young families, outdoor enthusiasts, commuters",
+    highlights: ["New Homes", "Mountain Views", "Skye Center", "Floyd Lamb Park"],
+    bestFor: "New homes, trails, northwest commute",
   },
   {
     name: "Centennial Hills",
     slug: "centennial-hills",
     medianPrice: "$495,000",
     priceChange: "+4.8%",
-    description: "Northwest Las Vegas community with mountain proximity and family amenities",
-    highlights: ["Mountain Access", "Parks", "Shopping", "Family-Friendly"],
-    bestFor: "Families, outdoor lovers, professionals",
+    description: "Northwest Las Vegas community with mountain proximity and recreation amenities",
+    highlights: ["Mountain Access", "Parks", "Shopping", "Recreation Centers"],
+    bestFor: "Mountain access, shopping, parks",
   },
   {
     name: "Inspirada",
@@ -97,8 +95,8 @@ const neighborhoods = [
     medianPrice: "$525,000",
     priceChange: "+5.0%",
     description: "Henderson master-planned community with resort-style living and modern homes",
-    highlights: ["Resort Pools", "Walking Trails", "New Construction", "Great Schools"],
-    bestFor: "Families, active adults, new home buyers",
+    highlights: ["Resort Pools", "Walking Trails", "New Construction", "Town Center"],
+    bestFor: "Resort amenities, new homes, walkability",
   },
   {
     name: "Mountains Edge",
@@ -107,15 +105,14 @@ const neighborhoods = [
     priceChange: "+4.5%",
     description: "Southwest Las Vegas master-planned community with mountain views and parks",
     highlights: ["Mountain Views", "Parks", "Growing Area", "Affordable Luxury"],
-    bestFor: "Families, commuters, value-seekers",
+    bestFor: "Southwest commute, parks, value",
   },
 ];
 
 export default function NeighborhoodsPage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -173,7 +170,7 @@ export default function NeighborhoodsPage() {
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Every Las Vegas neighborhood has its own personality. Whether you want the
-                family-friendly parks of Summerlin, the established charm of Green Valley, or the
+                community parks of Summerlin, the established charm of Green Valley, or the
                 luxury of The Ridges, I'll help you find the community that matches your lifestyle.
                 That's the Berkshire Hathaway HomeServices difference—personalized guidance backed
                 by local expertise."
@@ -222,11 +219,11 @@ export default function NeighborhoodsPage() {
               neighborhood recommendations.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -238,7 +235,6 @@ export default function NeighborhoodsPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function SecurityPolicyPage() {
   return (
-    <div className="min-h-screen bg-white py-12">
+    <div id="main-content" className="min-h-screen bg-white py-12 pt-28">
       <div className="container mx-auto max-w-4xl px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
           Security Policy
@@ -53,8 +53,8 @@ export default function SecurityPolicyPage() {
                 </li>
                 <li>
                   <strong>Phone:</strong>{' '}
-                  <a href="tel:+17025001942" className="underline">
-                    (702) 500-1942
+                  <a href="tel:+17022221964" className="underline">
+                    (702) 222-1964
                   </a>
                 </li>
                 <li>
@@ -252,8 +252,8 @@ export default function SecurityPolicyPage() {
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+17025001942" className="text-blue-600 underline">
-                  (702) 500-1942
+                <a href="tel:+17022221964" className="text-blue-600 underline">
+                  (702) 222-1964
                 </a>
               </p>
             </div>

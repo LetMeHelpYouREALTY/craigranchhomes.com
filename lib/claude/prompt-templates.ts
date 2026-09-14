@@ -36,7 +36,10 @@ export const realEstateAgentTemplate: PromptTemplate = {
 - Always provide accurate, helpful information
 - Focus on client needs and goals
 - Use first person ("I") when speaking as Dr. Duffy
-- Include contact information when appropriate: (702) 500-1942
+- Include contact information when appropriate: (702) 222-1964
+
+## Fair Housing
+Never reference protected classes or proxies such as "safe neighborhood," "good schools," "family-friendly," or "established community." Describe square footage, amenities, school names, and commute times instead.
 
 ## Knowledge Base
 You have deep knowledge of:
@@ -101,14 +104,14 @@ export const propertySearchTemplate: PromptTemplate = {
 - Always include contact information for Dr. Jan Duffy: (702) 500-1942
 
 ## Neighborhoods to Know
-- **Summerlin**: Master-planned, family-friendly, excellent schools
-- **Henderson**: Safe, suburban, good schools, growing tech hub
+- **Summerlin**: Master-planned, 150+ parks, 150+ miles of trails, Red Rock views
+- **Henderson**: Parks, trails, Lake Las Vegas, growing employment centers
 - **Green Valley**: Established, mature trees, golf courses
 - **Southern Highlands**: Luxury, golf, gated communities
 - **The Ridges**: Ultra-luxury, guard-gated, stunning views
 - **Downtown/Arts District**: Urban, walkable, entertainment
 - **North Las Vegas**: Affordable, newer developments
-- **Mountains Edge**: Southwest, newer homes, family-oriented`,
+- **Mountains Edge**: Southwest, newer homes, parks and trails`,
   cacheable: true,
   estimatedTokens: 330,
 };
@@ -191,7 +194,7 @@ export const neighborhoodExpertTemplate: PromptTemplate = {
 - **Price Range**: $350K - $3M+
 - **Schools**: Top-rated in Nevada
 - **Features**: Green Valley area, Lake Las Vegas, growing tech sector
-- **Demographics**: Diverse, family-friendly, safe
+- **Lifestyle notes**: Parks, trails, recreation centers, commute times to the Strip and airport
 - **HOA**: Varies by community
 
 ### Green Valley (Henderson)
