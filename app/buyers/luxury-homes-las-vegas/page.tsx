@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Shield,
   Eye,
   Building,
@@ -15,6 +14,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import { nap } from "@/lib/contact";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -84,13 +85,7 @@ export default function LuxuryHomesPage() {
             <p className="text-xl text-slate-600 mb-8">
               Guard-gated estates. Strip penthouses. Uncompromising privacy.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-800 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Schedule a Private Preview → (702) 222-1964
-            </a>
+            <CtaActions variant="onLight" bookLabel="Request Private Showing" />
           </div>
 
           {/* Market Performance */}
@@ -292,7 +287,7 @@ export default function LuxuryHomesPage() {
                     </li>
                     <li className="flex items-center text-sm text-slate-700">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
+                      Silverado High School commute
                     </li>
                   </ul>
                   <Link
@@ -378,23 +373,9 @@ export default function LuxuryHomesPage() {
               Schedule a private consultation to discuss your requirements. Dr. Jan Duffy provides
               confidential, expert guidance for discerning buyers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-100 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-amber-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-400 transition-colors"
-              >
-                Request Private Showing
-              </Link>
-            </div>
+            <CtaActions variant="onDark" bookLabel="Request Private Showing" />
             <p className="mt-6 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>

@@ -104,7 +104,7 @@ export const neighborhoods = [
   {
     name: "Summerlin",
     slug: "summerlin",
-    description: "Master-planned community with parks, trails, and nearby schools",
+    description: "Master-planned community with 150+ parks, trails, and Red Rock Canyon access",
     medianPrice: "$625,000",
     highlights: ["Red Rock views", "150+ parks", "150+ miles of trails", "Golf courses"],
   },
@@ -118,7 +118,7 @@ export const neighborhoods = [
   {
     name: "Green Valley",
     slug: "green-valley",
-    description: "Established Henderson community with mature landscaping",
+    description: "Henderson community with mature landscaping",
     medianPrice: "$520,000",
     highlights: ["Golf courses", "Walking trails", "Shopping", "Parks"],
   },

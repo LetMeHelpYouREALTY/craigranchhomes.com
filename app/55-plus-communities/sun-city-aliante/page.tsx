@@ -153,7 +153,7 @@ export default function SunCityAliantePage() {
                   <p className="text-slate-700 mb-4">
                     Compare Sun City Aliante to other Sun City communities and the
                     value becomes clear. You get the same lifestyle, amenities,
-                    and community feel—at significantly lower prices.
+                    and clubhouse programming—at significantly lower prices.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-lg p-4">

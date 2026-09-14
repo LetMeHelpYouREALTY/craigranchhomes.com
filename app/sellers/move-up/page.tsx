@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   TrendingUp,
   Home as HomeIcon,
   ArrowRight,
@@ -46,13 +45,7 @@ export default function MoveUpSellerPage() {
             <p className="text-xl text-slate-600 mb-8">
               Your home's equity unlocks your dream home. Let's make the upgrade seamless.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Start Your Upgrade → (702) 222-1964
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Equity Section */}
@@ -98,8 +91,8 @@ export default function MoveUpSellerPage() {
                 <div className="flex-grow">
                   <h3 className="font-bold text-slate-900 mb-1">Centennial Hills → Summerlin</h3>
                   <p className="text-slate-600 text-sm">
-                    Upgrade from $450K starter to $650K+ in Downtown Summerlin area. Better schools,
-                    walkable amenities, Red Rock views.
+                    Upgrade from $450K starter to $650K+ in Downtown Summerlin. Palo Verde High
+                    School commute, walkable amenities, Red Rock views.
                   </p>
                 </div>
                 <ArrowRight className="h-6 w-6 text-blue-600 flex-shrink-0 ml-4" />

@@ -422,14 +422,19 @@ export default function BuyersPage() {
                   a: "The Las Vegas market is moderately competitive with 2.1 months of inventory—a slight seller's market. Well-priced homes in desirable areas like Summerlin and Henderson often receive multiple offers within the first week. Having a pre-approval and experienced agent gives you a significant advantage.",
                 },
                 {
-                  q: "Which neighborhoods have the most parks, trails, and nearby schools?",
-                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills have extensive parks, recreation centers, and nearby school campuses. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
+                  q: "Which neighborhoods have the most parks, trails, and named school campuses?",
+                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills have extensive parks, recreation centers, and named campuses such as Palo Verde High School, Coronado High School, and Arbor View High School. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
+              ].map((faq) => (
+                <details key={faq.q} className="bg-slate-50 rounded-lg p-6 group">
+                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
+                    {faq.q}
+                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-slate-600 mt-3">{faq.a}</p>
+                </details>
               ))}
             </div>
           </section>

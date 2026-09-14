@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Shield,
   Scale,
   Heart,
@@ -48,13 +47,7 @@ export default function DivorceProbatePage() {
               When life gets complicated, you need an agent who handles sensitive transactions
               with discretion, expertise, and compassion.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Confidential Consultation → (702) 222-1964
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Situations We Help With */}

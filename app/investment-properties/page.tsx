@@ -313,22 +313,22 @@ export default function InvestmentPropertiesPage() {
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">Henderson</h3>
                 <p className="text-slate-600 mb-4">
-                  <strong>Best for: Balanced investors.</strong> Premium tenant quality, nearby schools,
-                  and steady appreciation. Lower vacancy rates and longer tenant retention offset
-                  slightly lower cap rates.
+                  <strong>Best for: Balanced investors.</strong> Lower vacancy, longer lease terms,
+                  and commute times to named campuses such as Coronado High School. Steady
+                  appreciation offsets slightly lower cap rates.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div><span className="font-medium">Entry:</span> $450K-$600K</div>
                   <div><span className="font-medium">Rent:</span> $2,100-$2,800</div>
-                  <div><span className="font-medium">Tenant Pool:</span> Professionals, families, retirees</div>
+                  <div><span className="font-medium">Tenant Pool:</span> Office, medical, and hospitality workers</div>
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">Summerlin</h3>
                 <p className="text-slate-600 mb-4">
                   <strong>Best for: Appreciation investors.</strong> Premium neighborhood with strongest
-                  appreciation (6.8% YoY). Lower cap rates but exceptional tenant quality and
-                  very low vacancy. Best-in-class schools and amenities.
+                  appreciation (6.8% YoY). Lower cap rates but longer lease terms and
+                  very low vacancy. Downtown Summerlin amenities and Palo Verde High School commute.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div><span className="font-medium">Entry:</span> $550K-$800K</div>

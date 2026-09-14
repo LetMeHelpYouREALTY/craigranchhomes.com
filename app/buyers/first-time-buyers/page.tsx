@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Home as HomeIcon,
   DollarSign,
   Key,
@@ -12,10 +11,11 @@ import {
   TrendingUp,
   Building,
   Shield,
-  HelpCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import { nap } from "@/lib/contact";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -58,7 +58,7 @@ const faqSchema = {
       name: "What neighborhoods are best for first-time buyers in Las Vegas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Top neighborhoods for first-time buyers include North Las Vegas ($350K-$450K), Mountains Edge ($380K-$480K), and Centennial Hills ($398K median). These areas offer new construction options, nearby schools, and strong appreciation potential.",
+        text: "Entry-level neighborhoods include North Las Vegas ($350K-$450K), Mountains Edge ($380K-$480K), and Centennial Hills ($398K median). These areas offer new construction, parks, and commute times to named campuses such as Legacy High School and Arbor View High School.",
       },
     },
     {
@@ -94,13 +94,7 @@ export default function FirstTimeBuyersPage() {
             <p className="text-xl text-slate-600 mb-8">
               Down payment assistance. Builder incentives. Expert guidance every step of the way.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Let's Make Homeownership Happen → (702) 222-1964
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Financing Options */}
@@ -205,8 +199,8 @@ export default function FirstTimeBuyersPage() {
                 </div>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$380K - $480K</div>
                 <p className="text-slate-600 text-sm mb-4">
-                  Southwest Las Vegas with the valley's largest park. Great community feel,
-                  mountain views, and easy freeway access.
+                  Southwest Las Vegas with the valley's largest park, mountain views, and
+                  easy freeway access.
                 </p>
                 <ul className="text-sm space-y-1 text-slate-700">
                   <li className="flex items-center">
@@ -418,51 +412,35 @@ export default function FirstTimeBuyersPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               First-Time Buyer FAQs
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  How much down payment do I need?
-                </h3>
-                <p className="text-slate-600">
-                  Down payment requirements vary: FHA loans require 3.5%, conventional can be as low as
-                  3%, VA loans require 0% for eligible veterans. Nevada assistance programs can provide
-                  up to $15,000 for qualified buyers.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What credit score do I need?
-                </h3>
-                <p className="text-slate-600">
-                  FHA loans accept scores as low as 580 (3.5% down) or 500 (10% down). Conventional loans
-                  typically require 620+. Better scores mean better rates. Dr. Jan can connect you with
-                  lenders who work with all credit situations.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Do I pay for Dr. Jan's services as a buyer?
-                </h3>
-                <p className="text-slate-600">
-                  No! Buyer's agent services are typically free to buyers—the seller pays the commission.
-                  You get full professional representation from Berkshire Hathaway HomeServices at no
-                  cost to you.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Should I buy new construction or resale?
-                </h3>
-                <p className="text-slate-600">
-                  Both have advantages. New construction offers modern features, warranties, and current
-                  builder incentives. Resales may have established landscaping and lower HOA dues.
-                  Dr. Jan helps you weigh options based on your specific situation.
-                </p>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How much down payment do I need?",
+                  a: "Down payment requirements vary: FHA loans require 3.5%, conventional can be as low as 3%, VA loans require 0% for eligible veterans. Nevada assistance programs can provide up to $15,000 for qualified buyers.",
+                },
+                {
+                  q: "What credit score do I need?",
+                  a: "FHA loans accept scores as low as 580 (3.5% down) or 500 (10% down). Conventional loans typically require 620+. Better scores mean better rates. Dr. Jan can connect you with lenders who work with all credit situations.",
+                },
+                {
+                  q: "Do I pay for Dr. Jan's services as a buyer?",
+                  a: "No! Buyer's agent services are typically free to buyers—the seller pays the commission. You get full professional representation from Berkshire Hathaway HomeServices at no cost to you.",
+                },
+                {
+                  q: "Should I buy new construction or resale?",
+                  a: "Both have advantages. New construction offers modern features, warranties, and current builder incentives. Resales may have established landscaping and lower HOA dues. Dr. Jan helps you weigh options based on your specific situation.",
+                },
+              ].map((faq) => (
+                <details key={faq.q} className="bg-white border border-slate-200 rounded-lg p-6 group">
+                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
+                    {faq.q}
+                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-slate-600 mt-3">{faq.a}</p>
+                </details>
+              ))}
             </div>
           </section>
 
@@ -491,23 +469,9 @@ export default function FirstTimeBuyersPage() {
               Let's talk about your options. Dr. Jan Duffy will help you understand what you can
               afford and create a plan to make homeownership happen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Free Consultation
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>

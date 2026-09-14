@@ -54,37 +54,37 @@ const relocationSchema = {
 const popularRelocationAreas = [
   {
     name: "Summerlin",
-    best: "Families, professionals",
-    highlights: "Top-rated schools, 150+ parks, Red Rock Canyon proximity, master-planned living",
+    best: "Red Rock access, Downtown Summerlin",
+    highlights: "150+ parks, trails, Palo Verde High School commute, master-planned villages",
     from: "$500K",
   },
   {
     name: "Henderson",
-    best: "Families, retirees",
-    highlights: "nearby schools, community feel, diverse neighborhoods",
+    best: "Parks, recreation centers, Green Valley Ranch",
+    highlights: "60+ parks, trails, Coronado High School commute, master-planned villages",
     from: "$450K",
   },
   {
     name: "Green Valley",
-    best: "Established families",
-    highlights: "Mature landscaping, championship golf, shopping and dining, Henderson location",
+    best: "Mature landscaping, golf, shopping",
+    highlights: "Championship golf, shopping and dining, Henderson location",
     from: "$480K",
   },
   {
     name: "Skye Canyon",
-    best: "Young families",
+    best: "New construction, mountain trails",
     highlights: "Newest construction, mountain trail access, modern amenities, growing area",
     from: "$500K",
   },
   {
     name: "Southern Highlands",
-    best: "Luxury buyers, golfers",
-    highlights: "Guard-gated sections, championship golf, mountain views, resort living",
+    best: "Golf, guard-gated sections, mountain views",
+    highlights: "Championship golf, mountain views, resort living",
     from: "$700K",
   },
   {
     name: "Inspirada",
-    best: "Families, active adults",
+    best: "Resort pools, trails, new homes",
     highlights: "Resort-style pools, extensive trails, new homes, Henderson convenience",
     from: "$450K",
   },
@@ -214,8 +214,8 @@ export default function RelocationPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Choosing the right neighborhood is crucial for a successful relocation. Each Las 
               Vegas community offers a unique lifestyle, price point, and amenities. Dr. Jan 
-              helps you identify which area matches your priorities—whether that's schools, 
-              commute times, outdoor access, or community feel.
+              helps you identify which area matches your priorities—whether that's named campuses,
+              commute times, outdoor access, or HOA amenities.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularRelocationAreas.map((area) => (
@@ -390,12 +390,12 @@ export default function RelocationPage() {
                   a: "Absolutely. Dr. Jan provides virtual tours, video walkthroughs, and detailed neighborhood analysis so you can purchase confidently before relocating. Many clients buy their Las Vegas home without ever visiting in person until closing day.",
                 },
                 {
-                  q: "Which areas have the most parks, trails, and nearby schools?",
-                  a: "Summerlin, Henderson (especially Green Valley and Inspirada), and Skye Canyon have extensive parks, pools, recreation centers, and nearby school campuses. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
+                  q: "Which areas have the most parks, trails, and named school campuses?",
+                  a: "Summerlin, Henderson (especially Green Valley and Inspirada), and Skye Canyon have extensive parks, pools, recreation centers, and named campuses such as Palo Verde High School and Coronado High School. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
                 },
                 {
                   q: "How does the cost of living compare to California?",
-                  a: "Las Vegas costs about 30-40% less than LA/Orange County and 50%+ less than San Francisco. The biggest savings come from no state income tax (California charges up to 13.3%) and significantly lower housing costs. A family earning $200K in California could save $20,000+ annually just in state taxes.",
+                  a: "Las Vegas costs about 30-40% less than LA/Orange County and 50%+ less than San Francisco. The biggest savings come from no state income tax (California charges up to 13.3%) and significantly lower housing costs. A household earning $200K in California could save $20,000+ annually just in state taxes.",
                 },
                 {
                   q: "Do you help coordinate the sale of my current home too?",
@@ -409,11 +409,16 @@ export default function RelocationPage() {
                   q: "How do I compare neighborhoods beyond listing photos?",
                   a: "Ask for commute times to the Strip and airport, HOA fees, park acreage, and named school campuses. Dr. Jan Duffy walks relocators through those facts for Summerlin, Green Valley, Inspirada, and Skye Canyon so you can decide from data, not slogans.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
+              ].map((faq) => (
+                <details key={faq.q} className="bg-slate-50 rounded-lg p-6 group">
+                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
+                    {faq.q}
+                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-slate-600 mt-3">{faq.a}</p>
+                </details>
               ))}
             </div>
           </section>

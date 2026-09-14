@@ -131,8 +131,8 @@ const faqCategories = [
         a: "Absolutely! Our global network of 50,000+ agents makes relocations seamless. Dr. Jan can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, schools, and communities.",
       },
       {
-        q: "Which neighborhoods have the most parks, trails, and nearby schools?",
-        a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills have extensive parks, recreation centers, and nearby school campuses. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
+        q: "Which neighborhoods have the most parks, trails, and named school campuses?",
+        a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills have extensive parks, recreation centers, and named campuses such as Palo Verde High School, Coronado High School, and Arbor View High School. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
       },
       {
         q: "How is the cost of living in Las Vegas?",

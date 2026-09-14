@@ -43,7 +43,7 @@ const communitySchema = {
   "@type": "Place",
   name: "Solera at Anthem",
   description:
-    "Guard-gated 55+ community in Henderson with 1,200+ homes and intimate community feel",
+    "Guard-gated 55+ community in Henderson with 1,200+ homes and a boutique clubhouse campus",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Henderson",
@@ -356,10 +356,10 @@ export default function SoleraAnthemPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Solera at Anthem is perfect for buyers who find Sun City
-                overwhelming. It's intimate, genuinely guard-gated, and everyone
-                is actually 55+. The community feels like a neighborhood, not a
-                small city. As a{" "}
+                "Solera at Anthem is a fit for buyers who find Sun City
+                overwhelming. It's 1,200 homes, genuinely guard-gated, and
+                every resident is 55+. The campus is smaller than a 7,700-home
+                Sun City. As a{" "}
                 <strong>Berkshire Hathaway HomeServices</strong> agent, I often
                 recommend Solera to buyers who prioritize community connection
                 over endless amenities."

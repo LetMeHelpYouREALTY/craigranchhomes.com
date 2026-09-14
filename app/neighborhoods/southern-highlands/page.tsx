@@ -301,8 +301,8 @@ export default function SouthernHighlandsPage() {
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Southern Highlands delivers luxury living at prices that often surprise buyers—especially
-                those relocating from California. You get championship golf, guard-gated security, mountain
-                views, and nearby schools, all just 15 minutes from the Strip. As a Berkshire Hathaway
+                those relocating from California. You get championship golf, guard-gated sections, mountain
+                views, and a 15-minute commute to the Strip. As a Berkshire Hathaway
                 HomeServices agent, I help clients see beyond the golf course to the community's full potential."
               </blockquote>
               <cite className="text-slate-900 font-semibold">

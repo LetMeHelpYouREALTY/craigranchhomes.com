@@ -218,8 +218,8 @@ const communities = [
     amenities: ["Clubhouse", "Pool & spa", "Fitness", "Social clubs"],
     highlights: [
       "Premium Summerlin location",
-      "Guard-gated security",
-      "Intimate community feel",
+      "Guard-gated entry",
+      "1,100+ homes",
       "Near Downtown Summerlin",
     ],
     description:

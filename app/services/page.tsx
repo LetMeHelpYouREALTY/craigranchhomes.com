@@ -265,7 +265,7 @@ export default function ServicesPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Beyond traditional buying and selling, Dr. Jan Duffy offers specialized services 
               for unique situations. Whether you're an investor building a rental portfolio, 
-              a California family relocating for tax savings, or a retiree seeking the perfect 
+              a California buyer relocating for tax savings, or a retiree seeking the perfect 
               55+ community, these focused services ensure you receive expert guidance tailored 
               to your specific needs.
             </p>

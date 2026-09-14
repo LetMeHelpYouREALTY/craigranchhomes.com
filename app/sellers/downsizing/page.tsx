@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Heart,
   Home as HomeIcon,
   DollarSign,
@@ -47,13 +46,7 @@ export default function DownsizingPage() {
             <p className="text-xl text-slate-600 mb-8">
               Extract your equity. Embrace low-maintenance living. Start your next chapter.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Let's Talk About Your Options → (702) 222-1964
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Equity Extraction */}

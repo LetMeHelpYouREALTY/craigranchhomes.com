@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   DollarSign,
   Sun,
   Home as HomeIcon,
@@ -17,6 +16,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { nap } from "@/lib/contact";
+import CtaActions from "@/components/sections/CtaActions";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "How much can I save moving from California to Nevada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a family earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
+        text: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a household earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
       },
     },
     {
@@ -124,13 +124,7 @@ export default function CaliforniaRelocatorPage() {
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
               Zero state income tax. 40-60% lower home prices. Same sunshine.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Start Your Tax-Free Life → (702) 222-1964
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Tax Savings Comparison */}
@@ -158,7 +152,7 @@ export default function CaliforniaRelocatorPage() {
             </div>
             <div className="text-center">
               <p className="text-green-100 text-lg">
-                A California family earning $250,000/year saves <strong>$25,000+ annually</strong> in state income tax alone by moving to Nevada.
+                A California household earning $250,000/year saves <strong>$25,000+ annually</strong> in state income tax alone by moving to Nevada.
               </p>
             </div>
           </section>
@@ -376,59 +370,39 @@ export default function CaliforniaRelocatorPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               California Relocator FAQs
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How much can I save moving from California to Nevada?
-                </h3>
-                <p className="text-slate-600">
-                  Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on
-                  income bracket. Combined with 40-60% lower home prices, a family earning $200K
-                  buying a $600K home could save $150K+ over 5 years compared to staying in California.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What neighborhoods do California relocators prefer?
-                </h3>
-                <p className="text-slate-600">
-                  California buyers typically gravitate toward Summerlin (similar to Irvine/coastal
-                  communities), Henderson (similar to San Diego suburbs in parks and recreation), and The Ridges
-                  (comparable to Newport Coast luxury). These areas offer the quality and amenities
-                  California buyers expect.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How long does it take to establish Nevada residency?
-                </h3>
-                <p className="text-slate-600">
-                  Nevada residency can be established immediately upon moving. To benefit from no
-                  state income tax, update your driver's license, register your vehicles, and
-                  register to vote in Nevada. Most people complete this within 30 days.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Are there direct flights from Las Vegas to California?
-                </h3>
-                <p className="text-slate-600">
-                  Yes! Las Vegas has extensive flight options to California. Southwest, United, and
-                  other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California
-                  airports. Flight times are typically 1-1.5 hours.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What about schools compared to California?
-                </h3>
-                <p className="text-slate-600">
-                  Nevada public schools overall rank lower than California's, but individual schools
-                  in Summerlin and Henderson rate highly. Many California families choose areas with
-                  nearby schools or consider private options. Dr. Jan provides school-specific
-                  guidance for every neighborhood.
-                </p>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How much can I save moving from California to Nevada?",
+                  a: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a household earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
+                },
+                {
+                  q: "What neighborhoods do California relocators prefer?",
+                  a: "California buyers typically gravitate toward Summerlin (similar to Irvine/coastal communities), Henderson (similar to San Diego suburbs in parks and recreation), and The Ridges (comparable to Newport Coast luxury). These areas offer the quality and amenities California buyers expect.",
+                },
+                {
+                  q: "How long does it take to establish Nevada residency?",
+                  a: "Nevada residency can be established immediately upon moving. To benefit from no state income tax, update your driver's license, register your vehicles, and register to vote in Nevada. Most people complete this within 30 days.",
+                },
+                {
+                  q: "Are there direct flights from Las Vegas to California?",
+                  a: "Yes! Las Vegas has extensive flight options to California. Southwest, United, and other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California airports. Flight times are typically 1-1.5 hours.",
+                },
+                {
+                  q: "What about named school campuses compared to California?",
+                  a: "Ask about commute times to named campuses such as Palo Verde High School in Summerlin and Coronado High School in Henderson. Dr. Jan provides campus names and drive times for every neighborhood she shows.",
+                },
+              ].map((faq) => (
+                <details key={faq.q} className="bg-white border border-slate-200 rounded-lg p-6 group">
+                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
+                    {faq.q}
+                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-slate-600 mt-3">{faq.a}</p>
+                </details>
+              ))}
             </div>
           </section>
 
@@ -436,7 +410,7 @@ export default function CaliforniaRelocatorPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "I've helped hundreds of California families make the move to Las Vegas. The most
+                "I've helped hundreds of California relocators make the move to Las Vegas. The most
                 common reaction? 'Why didn't we do this sooner?' Between the tax savings, the space,
                 and the lifestyle, most clients can't believe what their California equity buys here.
                 As a <strong>Berkshire Hathaway HomeServices</strong> agent, I coordinate with our
@@ -458,23 +432,9 @@ export default function CaliforniaRelocatorPage() {
               Get a personalized relocation consultation with Dr. Jan Duffy. She'll show you exactly
               what your California equity buys in Las Vegas and help you find the perfect neighborhood.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>

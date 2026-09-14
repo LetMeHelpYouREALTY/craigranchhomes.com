@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Building2,
   Shield,
   DollarSign,
@@ -18,6 +17,8 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import { nap } from "@/lib/contact";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -251,7 +252,7 @@ export default function NewConstructionPage() {
               Your complete buyer's guide to new homes in Las Vegas. Free representation,
               expert contract review, and insider knowledge of builder incentives.
             </p>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-left max-w-2xl mx-auto">
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-left max-w-2xl mx-auto mb-8">
               <div className="flex items-start">
                 <AlertTriangle className="h-6 w-6 text-amber-600 mr-3 flex-shrink-0 mt-1" />
                 <div>
@@ -266,6 +267,11 @@ export default function NewConstructionPage() {
                   </p>
                 </div>
               </div>
+            </div>
+            <CtaActions variant="onLight" bookLabel="Register Before You Tour" />
+            <div className="mt-8 max-w-xl mx-auto">
+              <p className="text-sm font-semibold text-slate-700 mb-3">Search live MLS inventory</p>
+              <RealScoutSearch />
             </div>
           </div>
 
@@ -661,7 +667,7 @@ export default function NewConstructionPage() {
             </p>
             <CtaActions variant="onDark" />
             <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>

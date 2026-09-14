@@ -3,9 +3,10 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import PageCTA from "@/components/sections/PageCTA";
+import CtaActions from "@/components/sections/CtaActions";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
+import { Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { ctaPhone, nap } from "@/lib/contact";
@@ -75,13 +76,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="mt-8">
-            <a
-              href={ctaPhone.href}
-              className="inline-flex items-center justify-center bg-white text-blue-700 px-6 py-3 rounded-md font-bold hover:bg-blue-50"
-            >
-              <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-              Call {ctaPhone.display}
-            </a>
+            <CtaActions variant="onDark" />
           </div>
         </div>
       </section>

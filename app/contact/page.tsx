@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, Star, Users, Shield 
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
 
@@ -56,11 +57,12 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Contact Dr. Jan Duffy
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
               Questions about Las Vegas real estate? Your{" "}
               <strong>Berkshire Hathaway HomeServices</strong> expert is here to help. 
               Schedule an appointment or reach out directly.
             </p>
+            <CtaActions variant="onLight" bookLabel="Book a Consultation" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -312,11 +314,16 @@ export default function ContactPage() {
                   q: "Do you charge for consultations?",
                   a: "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
+              ].map((faq) => (
+                <details key={faq.q} className="bg-slate-50 rounded-lg p-6 group">
+                  <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between gap-4">
+                    {faq.q}
+                    <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-slate-600 mt-3">{faq.a}</p>
+                </details>
               ))}
             </div>
           </section>

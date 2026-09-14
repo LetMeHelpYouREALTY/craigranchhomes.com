@@ -81,6 +81,9 @@ export default function PropertyPage({ params }: PropertyPageProps) {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
+                  <Link href="/contact">Send a Message</Link>
+                </Button>
+                <Button asChild variant="outline" className="w-full">
                   <Link href="/contact#schedule">Book a Showing</Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
