@@ -105,7 +105,7 @@ const specializedServices = [
     slug: "relocation",
     description:
       "Comprehensive relocation assistance for moves to Las Vegas. Berkshire Hathaway HomeServices' global network of 50,000+ agents makes interstate transitions seamless.",
-    highlights: ["Neighborhood matching", "School research", "Remote buying", "Moving coordination"],
+    highlights: ["Neighborhood matching", "Campus commute times", "Remote buying", "Moving coordination"],
   },
   {
     icon: Users,
@@ -202,6 +202,9 @@ export default function ServicesPage() {
                 <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                 <span>500+ Satisfied Clients</span>
               </div>
+            </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
             </div>
           </div>
 

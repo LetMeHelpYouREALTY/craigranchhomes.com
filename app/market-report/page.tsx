@@ -60,6 +60,9 @@ export default function MarketReportPage() {
               January 2026 | Expert analysis from{" "}
               <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Key Stats Overview */}

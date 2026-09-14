@@ -96,6 +96,9 @@ export default function SummerlinPage() {
               <strong>Berkshire Hathaway HomeServices</strong> Summerlin expert.
             </p>
             <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
               <RealScoutSearch />
             </div>
           </div>
@@ -132,9 +135,9 @@ export default function SummerlinPage() {
                 Why Summerlin Is Las Vegas's Most Sought-After Community
               </h2>
               <p>
-                When homebuyers search for the best neighborhoods in Las Vegas, <strong>Summerlin</strong> consistently
+                When homebuyers search Las Vegas master-planned communities, <strong>Summerlin</strong> consistently
                 ranks at the top. As a <strong>Berkshire Hathaway HomeServices</strong> agent specializing in Summerlin
-                real estate, Dr. Jan Duffy has helped hundreds of families find their perfect home in this
+                real estate, Dr. Jan Duffy has helped hundreds of buyers find the right home in this
                 award-winning master-planned community.
               </p>
               <p>

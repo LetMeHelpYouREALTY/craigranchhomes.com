@@ -87,6 +87,9 @@ export default function HomeValuationPage() {
               <strong>Berkshire Hathaway HomeServices</strong>. Accurate pricing backed by 17+ years
               of Las Vegas market expertise and $127M+ in closed transactions.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" bookLabel="Book a Valuation" />
+            </div>
           </div>
 
           <section className="max-w-4xl mx-auto mb-16">

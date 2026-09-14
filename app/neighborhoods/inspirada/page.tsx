@@ -45,10 +45,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How are the schools in Inspirada?",
+      name: "Which campuses serve Inspirada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Inspirada is served by Henderson-area schools including newer facilities built specifically for the growing community. The area attracts families specifically for its educational options and parks, trails, and recreation amenities.",
+        text: "Inspirada is served by Henderson-area campuses, including facilities built with the master plan. Compare drive times, HOA amenities, trails, and pools rather than ratings.",
       },
     },
     {
@@ -83,6 +83,9 @@ export default function InspiradaPage() {
               Resort-style living in Henderson. Discover Inspirada with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
             <div className="mt-8">
               <RealScoutSearch />
             </div>
@@ -173,11 +176,11 @@ export default function InspiradaPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Inspirada School Districts</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near Inspirada</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  Inspirada is served by excellent Henderson schools, with newer facilities built to
-                  serve the growing community:
+                  Inspirada is served by Henderson-area campuses, including facilities built with the
+                  master plan. Confirm zoning and drive time by address:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -288,7 +291,7 @@ export default function InspiradaPage() {
                 Choosing <strong>Berkshire Hathaway HomeServices</strong> for your Inspirada purchase
                 means working with agents who understand the community's various neighborhoods, which
                 builders offer the best quality, and which lots provide the best value. Dr. Jan Duffy
-                has helped dozens of families find their Inspirada homes, and that experience
+                has helped dozens of buyers find their Inspirada homes, and that experience
                 translates into better outcomes for buyers navigating this popular community.
               </p>
             </div>
@@ -318,7 +321,7 @@ export default function InspiradaPage() {
                         <FaqAccordion items={[
               { q: "What is the current median home price in Inspirada?", a: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with established landscaping." },
               { q: "What amenities does Inspirada offer residents?", a: "Inspirada features resort-style pools with water features, miles of walking trails, multiple parks, sports courts, and community gathering spaces. The HOA maintains these amenities to resort standards, creating a vacation-like atmosphere." },
-              { q: "How are the schools in Inspirada?", a: "Inspirada is served by Henderson-area schools including newer facilities built specifically for the growing community. The area attracts families specifically for its educational options and parks, trails, and recreation amenities." },
+              { q: "Which campuses serve Inspirada?", a: "Inspirada is served by Henderson-area campuses, including facilities built with the master plan. Compare drive times, HOA amenities, trails, and pools rather than ratings." },
               { q: "Is Inspirada a good investment?", a: "Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned communities. The combination of resort amenities, Henderson location, and continued development suggests ongoing demand and value growth." },
             ]} />
           </section>

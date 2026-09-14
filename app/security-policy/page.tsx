@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/security-policy",
@@ -248,8 +250,8 @@ export default function SecurityPolicyPage() {
               </p>
               <p className="mb-2">
                 Email:{' '}
-                <a href="mailto:info@heyberkshire.com" className="text-blue-600 underline">
-                  info@heyberkshire.com
+                <a href={`mailto:${nap.email}`} className="text-blue-600 underline">
+                  {nap.email}
                 </a>
               </p>
               <p>
@@ -263,6 +265,9 @@ export default function SecurityPolicyPage() {
                 <br />
                 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134
               </address>
+            </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
             </div>
           </section>
 

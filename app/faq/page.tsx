@@ -200,6 +200,9 @@ export default function FAQPage() {
               Everything you need to know about working with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> in Las Vegas
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* FAQ Categories */}

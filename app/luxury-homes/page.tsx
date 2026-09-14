@@ -144,6 +144,9 @@ export default function LuxuryHomesPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Global Buyer Network</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Discrete Transactions</span>
             </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" bookLabel="Request Private Showing" />
+            </div>
           </div>
 
           {/* Luxury Stats */}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
+import CtaActions from "@/components/sections/CtaActions";
 import { ctaPhone, nap } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
 
@@ -67,6 +68,9 @@ export default function PropertyPage({ params }: PropertyPageProps) {
               </li>
             </ul>
             <MlsDisclaimer />
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
           <aside className="md:col-span-1">
             <div className="bg-white border border-slate-200 rounded-lg p-6 sticky top-24">

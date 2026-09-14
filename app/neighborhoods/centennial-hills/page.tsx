@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/centennial-hills",
   title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
   description:
-    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this established northwest community. Median price $495K. Call (702) 222-1964.",
+    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy covers this northwest Las Vegas area near Arbor View High School and Centennial Hills Park. Median price $495K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Centennial Hills",
     "Centennial Hills homes for sale",
@@ -37,10 +37,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is Centennial Hills a good family neighborhood?",
+      name: "What amenities and commute times define Centennial Hills?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with highly-rated schools, safe streets, multiple parks including Centennial Hills Park, and convenient shopping at Centennial Center.",
+        text: "Centennial Hills includes Centennial Hills Park, shopping at Centennial Center, and named campuses such as Arbor View High School. Typical Strip commute is 20–25 minutes via US-95.",
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: "How far is Centennial Hills from the Las Vegas Strip?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access while maintaining a suburban, family-oriented atmosphere away from tourist areas.",
+        text: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access, mountain views on many streets, and retail at Centennial Center away from the tourist corridor.",
       },
     },
     {
@@ -83,6 +83,9 @@ export default function CentennialHillsPage() {
               Northwest Las Vegas living with parks and mountain access. Find your Centennial Hills home with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
             <div className="mt-8">
               <RealScoutSearch />
             </div>
@@ -120,12 +123,12 @@ export default function CentennialHillsPage() {
                 Centennial Hills: Northwest Las Vegas Mountain-View Living
               </h2>
               <p>
-                <strong>Centennial Hills</strong> represents the best of established northwest Las Vegas
+                <strong>Centennial Hills</strong> represents mature northwest Las Vegas
                 living. While newer communities like Skye Canyon attract attention, Centennial Hills
-                offers something they can't: mature neighborhoods with proven schools, established
-                landscaping, and a genuine sense of community built over nearly two decades.
-                <strong> Berkshire Hathaway HomeServices</strong> helps families discover why
-                Centennial Hills remains one of the valley's most desirable addresses.
+                offers something they can't: mature street trees, named campuses such as Arbor View High School, and
+                landscaping that has had nearly two decades to grow.
+                <strong> Berkshire Hathaway HomeServices</strong> helps buyers discover why
+                Centennial Hills remains a frequently compared northwest Las Vegas address.
               </p>
               <p>
                 The community's appeal starts with location. Positioned at the base of the mountains
@@ -172,10 +175,10 @@ export default function CentennialHillsPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Centennial Hills School Districts</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near Centennial Hills</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  Centennial Hills is served by established, well-regarded schools with proven track records:
+                  Named campuses buyers compare for commute time (confirm zoning by address):
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -301,11 +304,10 @@ export default function CentennialHillsPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Centennial Hills offers something newer communities are still building: a genuine
-                sense of community. The schools have track records, the neighbors have history, and
-                the landscaping is mature. As a Berkshire Hathaway HomeServices agent, I help families
-                see beyond the shiny new construction to communities that have proven their value
-                over time."
+                "Centennial Hills offers something newer communities are still building: mature
+                landscaping and published commute times. Arbor View High School is the named campus
+                many buyers compare, and Centennial Hills Park is the recreation hub. As a Berkshire Hathaway HomeServices agent, I help buyers
+                see beyond shiny new construction to HOA dues, lot size, and recent comps."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
@@ -320,8 +322,8 @@ export default function CentennialHillsPage() {
             </h2>
                         <FaqAccordion items={[
               { q: "What is the current median home price in Centennial Hills?", a: "As of January 2026, Centennial Hills' median home price is $495,000, up 4.8% year-over-year. Prices range from $380,000 for smaller homes to over $900,000 for larger properties with mountain views." },
-              { q: "Is Centennial Hills a good family neighborhood?", a: "Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with highly-rated schools, safe streets, multiple parks including Centennial Hills Park, and convenient shopping at Centennial Center." },
-              { q: "How far is Centennial Hills from the Las Vegas Strip?", a: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access while maintaining a suburban, family-oriented atmosphere away from tourist areas." },
+              { q: "What amenities and commute times define Centennial Hills?", a: "Centennial Hills includes Centennial Hills Park, shopping at Centennial Center, and named campuses such as Arbor View High School. Typical Strip commute is 20–25 minutes via US-95." },
+              { q: "How far is Centennial Hills from the Las Vegas Strip?", a: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access, mountain views on many streets, and retail at Centennial Center away from the tourist corridor." },
               { q: "What shopping and amenities are near Centennial Hills?", a: "Centennial Center provides extensive shopping, dining, and entertainment including Target, Costco, and numerous restaurants. Downtown Summerlin is also easily accessible for additional retail and entertainment options." },
             ]} />
           </section>

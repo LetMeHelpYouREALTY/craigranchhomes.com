@@ -48,7 +48,7 @@ const faqSchema = {
       name: "What makes Green Valley different from newer Henderson communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Green Valley, established in 1988, offers what newer communities can't: mature trees, established schools with proven track records, larger lots, and a genuine sense of community built over 35+ years.",
+        text: "Green Valley, founded in 1988, offers mature trees, larger lots, golf, The District shopping, and named campuses such as Green Valley High School. Typical Strip commute is 15–25 minutes.",
       },
     },
     {
@@ -83,6 +83,9 @@ export default function GreenValleyPage() {
               Henderson's original master-planned community. Find your Green Valley home with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
             <div className="mt-8">
               <RealScoutSearch />
             </div>
@@ -124,16 +127,15 @@ export default function GreenValleyPage() {
                 original master-planned community. Established in 1988, Green Valley pioneered the concept
                 of thoughtfully designed neighborhoods in Southern Nevada—long before master-planned
                 communities became the norm. Today, <strong>Berkshire Hathaway HomeServices</strong>
-                continues to serve Green Valley families, helping new generations discover what long-time
-                residents already know: this is one of the best places to live in Nevada.
+                continues to serve Green Valley buyers, helping new residents discover what long-time
+                residents already know: mature trees, golf, and a Henderson location with 15–25 minute Strip drives.
               </p>
               <p>
                 What makes Green Valley unique is something that can't be replicated: time. Over three
                 decades, the community has matured into a verdant oasis with towering trees, established
-                landscaping, and a genuine neighborhood feel. While newer communities offer shiny amenities,
-                Green Valley offers something more valuable—proven schools with track records of excellence,
-                neighbors who've built lifelong friendships, and the kind of community cohesion that only
-                develops over generations.
+                landscaping, and HOA-maintained parks. While newer communities offer newer amenities,
+                Green Valley offers named campuses such as Green Valley High School,
+                35-year-old street trees, and HOA amenities that have been operating since the late 1980s.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> agents have been selling
@@ -268,9 +270,8 @@ export default function GreenValleyPage() {
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent in Green Valley
                 means understanding the subtle differences between Green Valley proper, Green Valley Ranch,
                 and Green Valley South. Each area has distinct characteristics, price points, and lifestyle
-                offerings. Dr. Jan Duffy helps buyers navigate these nuances and find the perfect fit—whether
-                that's a starter home for a young family or a forever home for empty nesters looking to
-                downsize without leaving the community they love.
+                offerings. Dr. Jan Duffy helps buyers navigate these nuances and find the right fit—whether
+                that's a first purchase or a lower-maintenance resale without leaving Green Valley.
               </p>
             </div>
           </section>
@@ -279,10 +280,10 @@ export default function GreenValleyPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Green Valley offers something newer communities can't replicate—35 years of established
-                neighborhoods, proven schools, and a real sense of community. When clients tell me they
-                want tree-lined streets and neighbors who know each other's names, I show them Green Valley.
-                It's the original, and still one of the best."
+                "Green Valley offers something newer villages can't replicate—35 years of mature
+                street trees, Green Valley High School as a named campus, and golf-course HOA amenities. When clients tell me they
+                want tree-lined streets and published commute times, I show them Green Valley.
+                It is Henderson's original master plan, still compared for lot size and price."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
@@ -298,7 +299,7 @@ export default function GreenValleyPage() {
                         <FaqAccordion items={[
               { q: "What is the current median home price in Green Valley?", a: "As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for luxury properties." },
               { q: "How long do homes stay on the market in Green Valley?", a: "Green Valley homes average 26 days on market. Properties near The District at Green Valley Ranch and those with upgraded features often sell faster, sometimes within the first two weeks." },
-              { q: "What makes Green Valley different from newer Henderson communities?", a: "Green Valley, established in 1988, offers what newer communities can't: mature trees, established schools with proven track records, larger lots, and a genuine sense of community built over 35+ years." },
+              { q: "What makes Green Valley different from newer Henderson communities?", a: "Green Valley, founded in 1988, offers mature trees, larger lots, golf, The District shopping, and named campuses such as Green Valley High School. Typical Strip commute is 15–25 minutes." },
               { q: "Is Green Valley a good investment?", a: "Green Valley has shown consistent appreciation due to its Henderson location, parks, shopping at The District, and named campuses such as Green Valley High School. BHHS agents can provide detailed market analysis." },
             ]} />
           </section>

@@ -85,6 +85,9 @@ export default function InvestmentPropertiesPage() {
               investors choose Las Vegas—with guidance from{" "}
               <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Why Las Vegas */}

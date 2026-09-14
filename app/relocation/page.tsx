@@ -26,7 +26,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/relocation",
   title: "Relocating to Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Moving to Las Vegas? Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties provides comprehensive relocation services. Schools, neighborhoods, cost of living. Call (702) 222-1964.",
+    "Moving to Las Vegas? Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties provides comprehensive relocation services. Named campuses, commute times, cost of living. Call (702) 222-1964.",
   keywords: [
     "relocating to Las Vegas",
     "moving to Las Vegas",
@@ -132,7 +132,10 @@ export default function RelocationPage() {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> 50,000+ Agent Network</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Virtual Home Tours</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> School Research</span>
+              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Campus commute times</span>
+            </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
             </div>
           </div>
 
@@ -141,7 +144,7 @@ export default function RelocationPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">Why People Are Moving to Las Vegas</h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               Las Vegas has become one of the fastest-growing cities in America, attracting 
-              families, professionals, and retirees from across the country. Here's why so 
+              buyers from across the country. Here's why so 
               many people are making the move to Southern Nevada.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -176,7 +179,7 @@ export default function RelocationPage() {
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Moving to a new city is stressful enough. I handle everything from neighborhood
-                tours to school research to contractor referrals so you can focus on your new
+                tours to campus commute times to contractor referrals so you can focus on your new
                 beginning. And because Berkshire Hathaway HomeServices has agents nationwide, I can
                 coordinate with your agent back home to make the transition seamless. My goal is to 
                 make Las Vegas feel like home before you even arrive."
@@ -276,12 +279,12 @@ export default function RelocationPage() {
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-lg text-slate-900 mb-4 flex items-center">
                   <Home className="h-5 w-5 text-blue-600 mr-2" />
-                  School Research Services
+                  Campus commute information
                 </h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                    <span>School ratings and test score comparisons</span>
+                    <span>Named campuses and typical drive times</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
@@ -305,7 +308,7 @@ export default function RelocationPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">Moving from California?</h2>
             <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
               California to Nevada is one of the most popular relocation routes in the country. 
-              Thousands of California families move to Las Vegas each year seeking lower costs, 
+              Thousands of California buyers move to Las Vegas each year seeking lower costs, 
               no state income tax, and a better quality of life. Here's what the numbers look like.
             </p>
             <div className="grid md:grid-cols-2 gap-8">

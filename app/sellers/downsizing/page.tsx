@@ -300,7 +300,7 @@ export default function DownsizingPage() {
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong>Guest Space:</strong> Kids and grandkids still visit. Consider a home with a guest room or nearby vacation rentals for overflow.
+                      <strong>Guest Space:</strong> Overnight guests still visit. Consider a home with a guest room or nearby vacation rentals for overflow.
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -407,9 +407,9 @@ export default function DownsizingPage() {
             <div className="bg-slate-900 text-white rounded-xl p-8">
               <blockquote className="text-lg italic mb-4">
                 "Downsizing clients are some of my favorite to work with. They've worked hard,
-                raised families, and now deserve to enjoy life without maintaining a 4,000 square
+                built equity, and now want a home without maintaining a 4,000 square
                 foot house. I help them extract the equity they've earned, find a home that fits
-                their current lifestyle, and often pocket significant cash for travel, grandkids,
+                their current lifestyle, and often pocket significant cash for travel and hobbies,
                 or just peace of mind. As a <strong>Berkshire Hathaway HomeServices</strong> agent,
                 I have the experience and compassion this transition requires."
               </blockquote>

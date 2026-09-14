@@ -84,6 +84,9 @@ export default function SkyeCanyonPage() {
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
               <RealScoutSearch />
             </div>
           </div>
@@ -173,11 +176,10 @@ export default function SkyeCanyonPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Skye Canyon Schools</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near Skye Canyon</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  Skye Canyon features newer schools purpose-built for the community, plus access to
-                  established northwest schools:
+                  Skye Canyon includes campuses built with the master plan, plus named northwest campuses:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -284,7 +286,7 @@ export default function SkyeCanyonPage() {
                 The current Skye Canyon market shows <strong>124 active listings</strong> with homes
                 averaging just <strong>21 days on market</strong>—among the fastest in the valley.
                 The median price of <strong>$550,000</strong> reflects 5.5% year-over-year appreciation,
-                driven by continued demand from families seeking modern homes with exceptional amenities.
+                driven by continued demand from buyers seeking modern homes with exceptional amenities.
                 New construction from builders like Toll Brothers, Lennar, and Woodside Homes ranges
                 from $450,000 to $800,000.
               </p>
@@ -292,7 +294,7 @@ export default function SkyeCanyonPage() {
                 Choosing <strong>Berkshire Hathaway HomeServices</strong> for your Skye Canyon purchase
                 means working with agents who know which builders offer the best quality, which lots
                 have the best views, and which upgrades deliver the best value. Dr. Jan Duffy has
-                helped dozens of families find their Skye Canyon homes, and that experience translates
+                helped dozens of buyers find their Skye Canyon homes, and that experience translates
                 into better outcomes for buyers navigating this competitive market.
               </p>
             </div>

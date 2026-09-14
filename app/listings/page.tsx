@@ -88,7 +88,7 @@ const neighborhoods = [
   },
   {
     name: "Green Valley",
-    description: "Established Henderson community with mature landscaping and golf courses",
+    description: "Henderson community with mature landscaping and golf courses",
     medianPrice: "$520,000",
     daysOnMarket: 26,
   },
@@ -137,6 +137,9 @@ export default function ListingsPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS Data</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Updated Every 15 Min</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> 5,000+ Active Listings</span>
+            </div>
+            <div className="mb-8">
+              <CtaActions variant="onLight" />
             </div>
             <RealScoutSearch />
           </div>

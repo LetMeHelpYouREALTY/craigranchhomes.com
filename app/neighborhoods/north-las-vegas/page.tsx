@@ -84,6 +84,9 @@ export default function NorthLasVegasPage() {
               home with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
               <RealScoutSearch />
             </div>
           </div>
@@ -196,11 +199,11 @@ export default function NorthLasVegasPage() {
               </div>
 
               {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">North Las Vegas Schools</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near North Las Vegas</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  North Las Vegas is served by Clark County School District, with newer schools in
-                  master-planned communities often performing above area averages:
+                  North Las Vegas is served by Clark County School District campuses. Newer campuses sit
+                  inside several master-planned villages—confirm zoning by address:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>

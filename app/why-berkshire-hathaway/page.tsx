@@ -59,6 +59,9 @@ export default function WhyBerkshireHathawayPage() {
               backed by a name synonymous with trust, ethical standards, and financial strength—the
               same principles that built Warren Buffett's empire.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Warren Buffett Section */}

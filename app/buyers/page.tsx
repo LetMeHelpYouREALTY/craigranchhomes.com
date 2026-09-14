@@ -87,7 +87,7 @@ const buyingSteps = [
 const neighborhoods = [
   { name: "Summerlin", price: "$625K", description: "Master-planned community with Red Rock views" },
   { name: "Henderson", price: "$485K", description: "Parks, trails, and master-planned villages" },
-  { name: "Green Valley", price: "$520K", description: "Established with mature landscaping" },
+  { name: "Green Valley", price: "$520K", description: "Mature landscaping and golf courses" },
   { name: "The Ridges", price: "$2.5M", description: "Ultra-luxury guard-gated estates" },
   { name: "North Las Vegas", price: "$385K", description: "Affordable new construction" },
   { name: "Southern Highlands", price: "$750K", description: "Golf course community" },
@@ -119,6 +119,9 @@ export default function BuyersPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free Buyer Representation</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS Access</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
+            </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
             </div>
           </div>
 
@@ -260,7 +263,7 @@ export default function BuyersPage() {
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
                   0% state income tax, 40-60% lower home prices. See what your CA equity buys in 
-                  Las Vegas. Dr. Jan specializes in helping California families transition to Nevada.
+                  Las Vegas. Dr. Jan specializes in helping California buyers transition to Nevada.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
               </Link>
@@ -353,7 +356,7 @@ export default function BuyersPage() {
                 "My job isn't just to show you houses—it's to make sure you don't overpay, that you
                 understand what you're buying, and that you're protected through every step of the
                 transaction. That's what Berkshire Hathaway HomeServices representation means. I treat 
-                every client like family and won't stop until we find the right home for your needs."
+                every client with the same care and won't stop until we find the right home for your needs."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008

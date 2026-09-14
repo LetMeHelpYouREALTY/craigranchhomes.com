@@ -84,6 +84,9 @@ export default function SouthernHighlandsPage() {
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
               <RealScoutSearch />
             </div>
           </div>

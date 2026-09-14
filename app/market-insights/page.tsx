@@ -14,7 +14,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
+import { generateFAQSchema } from "@/lib/schema";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -48,12 +50,35 @@ const reportSchema = {
   },
 };
 
+const marketInsightsFaqs = [
+  {
+    q: "What is driving Las Vegas real estate in 2026?",
+    a: "Five forces: California inbound demand, data-center and tech hiring, no state income tax, new construction inventory, and 6.5% range mortgage rates. Median sale prices were about $450,000 in January 2026 with 28 days on market.",
+  },
+  {
+    q: "Should I buy or wait based on these insights?",
+    a: "Waiting has a cost when prices rise 4% year over year. Call (702) 222-1964 for a neighborhood-specific CMA from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+  },
+  {
+    q: "How do California buyers affect Las Vegas pricing?",
+    a: "California equity often stretches 40–60% further in Las Vegas. That inbound demand supports Summerlin, Henderson, and luxury villages more than it inflates every ZIP equally.",
+  },
+  {
+    q: "Where can I get a personalized 2026 forecast?",
+    a: "Book a consultation at heyberkshire.com/contact or call (702) 222-1964. Dr. Jan Duffy will map commute times, HOA dues, and recent comps for the villages you are comparing.",
+  },
+];
+
 export default function MarketInsightsPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(marketInsightsFaqs.map((f) => ({ question: f.q, answer: f.a })))) }}
       />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -70,6 +95,9 @@ export default function MarketInsightsPage() {
               Technology trends, economic forces, and market dynamics shaping Las Vegas
               real estate in 2026 and beyond.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Key Drivers */}
@@ -411,6 +439,13 @@ export default function MarketInsightsPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Market Insights FAQ
+            </h2>
+            <FaqAccordion items={marketInsightsFaqs} />
           </section>
 
           {/* CTA */}

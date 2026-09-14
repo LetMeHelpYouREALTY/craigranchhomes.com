@@ -237,9 +237,9 @@ export default function SunCitySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Established community with mature landscaping</strong>
+                  <strong className="text-slate-900">Mature landscaping and full-grown trees</strong>
                   <p className="text-slate-600 text-sm">
-                    No construction noise, trees and vegetation fully grown, neighborhood character established
+                    No construction noise; trees and vegetation fully grown
                   </p>
                 </div>
               </div>

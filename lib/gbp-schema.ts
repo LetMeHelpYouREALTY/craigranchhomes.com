@@ -154,7 +154,7 @@ With $127 million in closed transactions and hundreds of satisfied clients, Dr. 
 
 Specialized services include: buyer and seller representation, luxury home sales, 55+ active adult community expertise (Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation assistance, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
 
-Dr. Jan's approach is simple: treat every client like family, know the market inside and out, and never stop working until the deal closes successfully.`,
+Dr. Jan's approach is simple: treat every client with the same care, know the market inside and out, and never stop working until the deal closes successfully.`,
 
   // Section 3: Where - Areas served (~250 words)
   whereWeServe: `Dr. Jan serves the entire Las Vegas Valley with specialized knowledge of Las Vegas, Summerlin, Henderson, North Las Vegas, and all of Clark County. Neighborhood expertise includes Summerlin's master-planned communities, Henderson's Green Valley and Inspirada, the luxury enclaves of The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and Mountains Edge and North Las Vegas.

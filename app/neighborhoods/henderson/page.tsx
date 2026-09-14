@@ -57,7 +57,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What are the best neighborhoods in Henderson?",
+      name: "What neighborhoods define Henderson?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Henderson neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
@@ -100,6 +100,9 @@ export default function HendersonPage() {
               <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
             </p>
             <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
               <RealScoutSearch />
             </div>
           </div>
@@ -139,7 +142,7 @@ export default function HendersonPage() {
                 <strong>Henderson</strong> has quietly become one of the most desirable cities in the American
                 Southwest. As Nevada's second-largest city with over 320,000 residents, Henderson offers the
                 perfect balance of suburban tranquility and urban convenience. <strong>Berkshire Hathaway
-                HomeServices</strong> has been helping families find their Henderson dream homes for decades,
+                HomeServices</strong> has been helping buyers find Henderson homes for decades,
                 and Dr. Jan Duffy brings unmatched expertise to every transaction.
               </p>
               <p>

@@ -1,11 +1,11 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
+import { MapPin, Home, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
-
-import { nap } from "@/lib/contact";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods",
@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
     "Las Vegas neighborhoods",
     "Henderson communities",
     "Summerlin real estate",
-    "best neighborhoods Las Vegas",
+    "Las Vegas neighborhood guide",
     "where to live Las Vegas",
   ],
 });
@@ -128,9 +128,15 @@ export default function NeighborhoodsPage() {
               Las Vegas & Henderson Neighborhoods
             </h1>
             <p className="text-xl text-slate-600">
-              Explore the best communities in Southern Nevada with Dr. Jan Duffy, your{" "}
+              Compare Las Vegas and Henderson neighborhoods with Dr. Jan Duffy, your{" "}
               <strong>Berkshire Hathaway HomeServices</strong> neighborhood expert
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Neighborhood Grid */}
@@ -199,7 +205,7 @@ export default function NeighborhoodsPage() {
               </div>
               <div className="text-center">
                 <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">School Research</h3>
+                <h3 className="font-bold mb-2">Campus commute times</h3>
                 <p className="text-slate-400 text-sm">
                   Named campuses, commute times, and enrollment contacts
                 </p>
@@ -212,6 +218,28 @@ export default function NeighborhoodsPage() {
                 </p>
               </div>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Neighborhood FAQ
+            </h2>
+            <FaqAccordion
+              items={[
+                {
+                  q: "Which Las Vegas neighborhoods should I compare first?",
+                  a: "Start with commute, HOA dues, and home size. Summerlin median is about $625,000 with Red Rock trail access. Henderson is about $485,000 with 15–25 minute Strip drives. North Las Vegas is about $385,000 with newer construction.",
+                },
+                {
+                  q: "Can Dr. Jan Duffy tour more than one village in a day?",
+                  a: "Yes. Call (702) 222-1964 to book a clustered tour. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+                },
+                {
+                  q: "Do these neighborhood pages use live MLS data?",
+                  a: "Each neighborhood page includes a RealScout search widget fed by live MLS. Listings update throughout the day; confirm status with Dr. Jan Duffy before writing an offer.",
+                },
+              ]}
+            />
           </section>
 
           {/* CTA */}
