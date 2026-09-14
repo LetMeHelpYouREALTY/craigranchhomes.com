@@ -6,9 +6,24 @@ import PageCTA from "@/components/sections/PageCTA";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { ctaPhone, nap } from "@/lib/contact";
 import { marketStats as stats } from "@/lib/site-config";
+
+export const metadata = pageMetadata({
+  path: "/",
+  title: "Las Vegas Real Estate | Dr. Jan Duffy, REALTOR® | BHHS Nevada",
+  description:
+    "Buy or sell Las Vegas, Henderson, and Summerlin homes with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Live MLS search. Call (702) 222-1964.",
+  keywords: [
+    "Las Vegas real estate",
+    "Henderson homes for sale",
+    "Summerlin realtor",
+    "Berkshire Hathaway HomeServices Nevada",
+    "Dr. Jan Duffy",
+  ],
+});
 
 export default async function Home() {
   const config = await getPageDomainConfig();

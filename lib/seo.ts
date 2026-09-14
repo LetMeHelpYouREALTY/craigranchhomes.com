@@ -12,32 +12,43 @@ export function pageMetadata({
   description,
   path,
   keywords,
+  openGraph,
+  twitter,
+  robots,
+  ...rest
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
-}): Metadata {
+} & Omit<Metadata, "title" | "description" | "keywords" | "alternates">): Metadata {
   const url = absoluteUrl(path);
   return {
     title,
     description,
     keywords,
     alternates: { canonical: url },
+    robots,
     openGraph: {
-      title,
-      description,
-      url,
       type: "website",
       locale: "en_US",
       siteName: nap.brokerage,
       images: [{ url: absoluteUrl("/Image/hero_bg_1.jpg"), alt: title }],
+      ...openGraph,
+      title: openGraph && "title" in openGraph && openGraph.title ? openGraph.title : title,
+      description:
+        openGraph && "description" in openGraph && openGraph.description
+          ? openGraph.description
+          : description,
+      url,
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
       images: [absoluteUrl("/Image/hero_bg_1.jpg")],
+      ...twitter,
+      title: title,
+      description,
     },
+    ...rest,
   };
 }

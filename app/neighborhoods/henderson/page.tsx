@@ -2,8 +2,14 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
-export const metadata: Metadata = {
+import { nap } from "@/lib/contact";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/neighborhoods/henderson",
   title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
   description:
     "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's residential communities with parks and recreation. Median price $485K. Call (702) 222-1964.",
@@ -14,7 +20,7 @@ export const metadata: Metadata = {
     "Henderson Nevada",
     "Green Valley Henderson",
   ],
-};
+});
 
 const neighborhoodSchema = {
   "@context": "https://schema.org",
@@ -92,6 +98,9 @@ export default function HendersonPage() {
               Nevada's second-largest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
             </p>
+            <div className="mt-8">
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -372,15 +381,9 @@ export default function HendersonPage() {
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Henderson expert,
               for personalized guidance and local market insights.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 222-1964
-            </a>
+            <CtaActions variant="onDark" />
             <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>

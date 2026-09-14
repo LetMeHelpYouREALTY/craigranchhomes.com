@@ -2,8 +2,12 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calculator } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/investment-properties",
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
   description:
     "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 222-1964.",
@@ -15,7 +19,7 @@ export const metadata: Metadata = {
     "1031 exchange Las Vegas",
     "cash flow properties Las Vegas",
   ],
-};
+});
 
 const investmentAreas = [
   {
@@ -298,12 +302,12 @@ export default function InvestmentPropertiesPage() {
                 <p className="text-slate-600 mb-4">
                   <strong>Best for: Cash flow investors.</strong> Highest cap rates in the valley (5.2%+)
                   with lower entry prices. Growing population as Amazon, Fanatics, and other employers
-                  expand. School quality varies by area—research specific zones.
+                  expand. Compare commute times to named campuses such as Legacy High School.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div><span className="font-medium">Entry:</span> $350K-$450K</div>
                   <div><span className="font-medium">Rent:</span> $1,800-$2,200</div>
-                  <div><span className="font-medium">Tenant Pool:</span> Working families, warehouse workers</div>
+                  <div><span className="font-medium">Tenant Pool:</span> Warehouse, logistics, and service employees</div>
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6">
@@ -432,13 +436,7 @@ export default function InvestmentPropertiesPage() {
               Get expert guidance on Las Vegas investment properties from Dr. Jan Duffy and
               Berkshire Hathaway HomeServices.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 222-1964
-            </a>
+            <CtaActions variant="onDark" />
             <p className="mt-4 text-slate-400 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>

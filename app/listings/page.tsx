@@ -16,6 +16,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+
+import { nap } from "@/lib/contact";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import { pageMetadata } from "@/lib/seo";
@@ -477,23 +480,9 @@ export default function ListingsPage() {
               representation backed by Berkshire Hathaway HomeServices. Free buyer consultations 
               available—the seller pays the commission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>

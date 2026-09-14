@@ -12,8 +12,12 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/sellers/divorce-probate",
   title: "Divorce & Probate Home Sales Las Vegas | Berkshire Hathaway HomeServices",
   description:
     "Sensitive real estate situations handled with discretion. Dr. Jan Duffy helps with divorce sales, probate, estate liquidation, and court-ordered sales. Call (702) 222-1964.",
@@ -24,7 +28,7 @@ export const metadata: Metadata = {
     "court ordered sale Nevada",
     "Berkshire Hathaway HomeServices divorce",
   ],
-};
+});
 
 export default function DivorceProbatePage() {
   return (
@@ -492,21 +496,7 @@ export default function DivorceProbatePage() {
               Discuss your situation privately with Dr. Jan. No pressure, no judgment—just
               professional guidance to help you move forward.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-100 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-500 transition-colors"
-              >
-                Email Confidentially
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="mt-6 text-slate-400 text-sm">
               All communications are confidential.
             </p>

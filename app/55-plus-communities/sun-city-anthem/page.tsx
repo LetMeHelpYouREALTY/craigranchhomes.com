@@ -11,6 +11,9 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import { pageMetadata } from "@/lib/seo";
+
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
@@ -19,7 +22,8 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/sun-city-anthem",
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
   description:
     "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
@@ -30,7 +34,7 @@ export const metadata: Metadata = {
     "active adult Henderson",
     "Berkshire Hathaway Sun City Anthem",
   ],
-};
+});
 
 // Breadcrumb items
 const breadcrumbs = [
@@ -113,7 +117,7 @@ export default function SunCityAnthemPage() {
               Sun City Anthem
             </h1>
             <p className="text-xl text-slate-600">
-              7,100+ homes. Mountain views. Henderson safety. Championship golf.
+              7,100+ homes. Mountain views. Championship golf. Anthem Center recreation.
             </p>
           </div>
 
@@ -307,21 +311,7 @@ export default function SunCityAnthemPage() {
               Experience Henderson's premier 55+ community. Dr. Jan Duffy provides tours and
               expert guidance for Sun City Anthem home buyers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-green-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-green-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-green-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>

@@ -21,8 +21,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities",
   title:
     "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
   description:
@@ -45,7 +49,7 @@ export const metadata: Metadata = {
       "Sun City, Del Webb, Heritage at Stonebridge & more—Dr. Duffy specializes in active adult living. Berkshire Hathaway HomeServices Nevada Properties.",
     type: "website",
   },
-};
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -272,7 +276,7 @@ const communities = [
     highlights: [
       "Most affordable Summerlin 55+ option",
       "18-hole golf course",
-      "Established community (1990s)",
+      "Opened in the 1990s with an 18-hole golf course",
       "Strong sense of community",
     ],
     description:
@@ -347,24 +351,7 @@ export default function FiftyFiveCommunitiesPage() {
               <br className="hidden md:block" />
               <strong>Dr. Duffy specializes in active adult living</strong>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <a
-                href="http://drjanduffy.realscout.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors"
-              >
-                Explore Communities
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </a>
-            </div>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Quick Stats */}
@@ -837,29 +824,16 @@ export default function FiftyFiveCommunitiesPage() {
               Duffy for a free consultation and personalized community
               recommendations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Request Information
-              </Link>
-            </div>
-            <p className="text-blue-200 text-lg">
+            <CtaActions variant="onDark" />
+            <p className="mt-6 text-blue-200 text-lg">
               Here to make your transition smooth, Dr. Jan{" "}
               <span role="img" aria-label="sunshine">
                 ☀️
               </span>
             </p>
             <p className="mt-4 text-blue-300 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Berkshire Hathaway HomeServices Nevada Properties · 9406 W Lake Mead Blvd, Suite 100,
+              Las Vegas, NV 89134
             </p>
           </section>
         </div>

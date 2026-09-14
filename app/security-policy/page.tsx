@@ -1,13 +1,15 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/security-policy",
   title: 'Security Policy',
   description: 'Security policy and responsible disclosure information for heyberkshire.com',
   robots: {
     index: true,
     follow: true,
   },
-}
+})
 
 export default function SecurityPolicyPage() {
   return (
@@ -256,6 +258,11 @@ export default function SecurityPolicyPage() {
                   (702) 222-1964
                 </a>
               </p>
+              <address className="not-italic mt-4 text-gray-700">
+                Dr. Jan Duffy — Berkshire Hathaway HomeServices Nevada Properties
+                <br />
+                9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134
+              </address>
             </div>
           </section>
 

@@ -2,6 +2,10 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+
+import { nap } from "@/lib/contact";
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
@@ -10,7 +14,8 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/faq",
   title: "FAQ | Berkshire Hathaway HomeServices Las Vegas Real Estate",
   description:
     "Frequently asked questions about Las Vegas real estate, Berkshire Hathaway HomeServices, buying, selling, and working with Dr. Jan Duffy at BHHS Nevada Properties.",
@@ -21,7 +26,7 @@ export const metadata: Metadata = {
     "selling a home Henderson",
     "BHHS agent questions",
   ],
-};
+});
 
 // Breadcrumb items
 const breadcrumbs = [
@@ -205,10 +210,15 @@ export default function FAQPage() {
                 </h2>
                 <div className="space-y-4">
                   {category.faqs.map((faq, index) => (
-                    <div key={index} className="bg-slate-50 rounded-lg p-6">
-                      <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                      <p className="text-slate-600">{faq.a}</p>
-                    </div>
+                    <details key={index} className="bg-slate-50 rounded-lg p-6 group">
+                      <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between">
+                        {faq.q}
+                        <span className="text-slate-400 group-open:rotate-45 text-2xl leading-none" aria-hidden="true">
+                          +
+                        </span>
+                      </summary>
+                      <p className="text-slate-600 mt-3">{faq.a}</p>
+                    </details>
                   ))}
                 </div>
               </section>
@@ -222,15 +232,9 @@ export default function FAQPage() {
               Dr. Jan Duffy is happy to answer any questions about Las Vegas real estate or working
               with Berkshire Hathaway HomeServices.
             </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 222-1964
-            </a>
+            <CtaActions variant="onDark" />
             <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              {nap.brokerage} · {nap.fullAddress}
             </p>
           </section>
         </div>
