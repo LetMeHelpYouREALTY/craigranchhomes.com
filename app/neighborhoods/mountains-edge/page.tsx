@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Mountain, TreePine, DollarSign, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,8 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodParks from "@/components/sections/NeighborhoodParks";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +61,9 @@ export default function MountainsEdgePage() {
           <UniqueInterior path="/neighborhoods/mountains-edge" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Mountains Edge Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/mountains-edge">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              234 listings, 27 days — January 2026 Mountains Edge snapshot from Blue Diamond
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -113,34 +113,7 @@ export default function MountainsEdgePage() {
                 or Henderson, Mountains Edge delivers comparable lifestyle at accessible prices.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Exploration Peak Park</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    The valley's largest park spans 120 acres with hiking trails, picnic areas,
-                    playgrounds, and an iconic summit offering 360-degree views of Las Vegas. On
-                    clear days, you can see the Strip's towers glittering against the mountain
-                    backdrop—a view that never gets old. This park alone makes Mountains Edge unique.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <DollarSign className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Exceptional Value</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Mountains Edge's median price of $475,000 is roughly $150,000 less than Summerlin
-                    and $50,000 less than Henderson for comparable homes. Buyers get modern
-                    construction, master-planned amenities, and mountain views at prices that
-                    allow for better financial flexibility. It's affordable luxury done right.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/mountains-edge" />
 
               <NamedCampuses path="/neighborhoods/mountains-edge" />
 
@@ -148,25 +121,7 @@ export default function MountainsEdgePage() {
 
               <NeighborhoodAmenities path="/neighborhoods/mountains-edge" />
 
-              {/* Parks & Recreation */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>
-              <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Mountains Edge features exceptional outdoor amenities centered around Exploration Peak Park:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Exploration Peak Park:</strong> 120 acres—valley's largest park. Hiking trails to summit with 360° views of Strip and mountains.</li>
-                    <li><strong>Mountains Edge Regional Park:</strong> Sports fields, playground, splash pad, walking trails</li>
-                    <li><strong>Community Pools:</strong> Multiple pool facilities throughout the community</li>
-                  </ul>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Trail System:</strong> Miles of walking/biking trails connecting neighborhoods</li>
-                    <li><strong>Dog Parks:</strong> Multiple off-leash areas for pets</li>
-                    <li><strong>Golf:</strong> Rhodes Ranch Golf Club and Southern Highlands Golf Club nearby</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodParks path="/neighborhoods/mountains-edge" />
 
               <p className="mt-8">
                 The current market shows <strong>234 active listings</strong> with homes averaging
@@ -193,7 +148,7 @@ export default function MountainsEdgePage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Discover Mountains Edge Value
+              Walk Exploration Peak before you compare the $475,000 median
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Mountains Edge and Exploration Peak listings sit 20–30 minutes southwest on the Beltway.

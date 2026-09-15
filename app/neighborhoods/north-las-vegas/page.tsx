@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, DollarSign, TrendingUp, Home as HomeIcon, Users } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +60,9 @@ export default function NorthLasVegasPage() {
           <UniqueInterior path="/neighborhoods/north-las-vegas" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              North Las Vegas Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/north-las-vegas">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              892 listings, 32 days — January 2026 North Las Vegas snapshot from Aliante
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -114,34 +113,7 @@ export default function NorthLasVegasPage() {
                 upgrades and negotiations.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <DollarSign className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Most Affordable in the Valley</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    North Las Vegas offers the lowest median home prices in the Las Vegas Valley, making
-                    homeownership attainable for first-time buyers and investors. Entry-level
-                    homes start in the $320,000s, while new construction from quality builders ranges
-                    from $380,000 to $550,000—prices that would buy a condo elsewhere.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <TrendingUp className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Rapid Growth & Development</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    North Las Vegas is experiencing unprecedented growth with new retail centers, improved
-                    roads, and major employers moving to the area. The city's population has grown over
-                    30% in the past decade, bringing new amenities, restaurants, and services. This growth
-                    trajectory suggests continued appreciation for today's buyers.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/north-las-vegas" />
 
               {/* Major Employers */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Major North Las Vegas Employers</h3>
@@ -219,7 +191,7 @@ export default function NorthLasVegasPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Start Your Homeownership Journey
+              Start at Aliante rec, then Craig Road — one north loop
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               North Las Vegas and Aliante new-construction villages are 20–25 minutes via US-95/I-15.

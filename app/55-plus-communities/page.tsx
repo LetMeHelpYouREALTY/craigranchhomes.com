@@ -561,9 +561,9 @@ export default function FiftyFiveCommunitiesPage() {
 
 
           {/* Why BHHS */}
-          <section className="mb-16 max-w-4xl mx-auto">
+          <section className="mb-16 max-w-4xl mx-auto" data-fifty-five-why="/55-plus-communities">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Why Choose Dr. Jan Duffy for 55+ Communities?
+              HOA packets at Suite 100 before any 55+ clubhouse drive
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">

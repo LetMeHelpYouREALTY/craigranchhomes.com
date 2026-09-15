@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -77,9 +76,9 @@ export default function HendersonPage() {
           <UniqueInterior path="/neighborhoods/henderson" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Henderson Real Estate Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/henderson">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              1,280 listings, 24 days — January 2026 Henderson city snapshot, not one village
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -127,32 +126,7 @@ export default function HendersonPage() {
                 communities intimately.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">60+ Parks &amp; Trails</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Henderson operates more than 60 parks, multiple recreation centers, and miles of
-                    trails. Green Valley, Inspirada, and Anthem each add HOA pools, clubhouses, and
-                    programmed events on top of city amenities.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Master-Planned Villages</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    From Green Valley&apos;s mature landscaping to Inspirada&apos;s town center and
-                    MacDonald Highlands&apos; custom estates, Henderson villages are planned around
-                    parks, shopping, and commute times—not generic slogans.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/henderson" />
 
               <NamedCampuses path="/neighborhoods/henderson" />
 
@@ -206,7 +180,7 @@ export default function HendersonPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Find Your Henderson Home Today
+              Pick two Henderson villages from Suite 100 — trees or rec campus
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Compare Green Valley, Anthem, Inspirada, and Water Street from one Henderson day.

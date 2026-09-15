@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, MapPin, TreePine, Mountain, GraduationCap, ShoppingBag } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -90,9 +89,9 @@ export default function SummerlinPage() {
           <UniqueInterior path="/neighborhoods/summerlin" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Summerlin Real Estate Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/summerlin">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              342 listings, 22 days — January 2026 Summerlin snapshot from Suite 100
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -139,34 +138,7 @@ export default function SummerlinPage() {
                 has the expertise to guide you through the process.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Red Rock Canyon Access</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Summerlin's western location provides unmatched access to Red Rock Canyon National
-                    Conservation Area. Residents enjoy world-class hiking, rock climbing, and scenic drives
-                    within a 10-minute drive. The community's trail system connects directly to Red Rock,
-                    making outdoor adventures a daily possibility.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <GraduationCap className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Named Schools Nearby</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Summerlin is served by Clark County School District campuses including Palo Verde
-                    High School, West Career & Technical Academy, Sig Rogich Middle School, and
-                    elementary campuses such as William R. Lummis and Marion Earl. Private options
-                    nearby include The Meadows School and Bishop Gorman High School.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/summerlin" />
 
               <NamedCampuses path="/neighborhoods/summerlin" />
 
@@ -198,7 +170,7 @@ export default function SummerlinPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Find Your Summerlin Home?
+              Book a Red Rock and Trails loop from Lake Mead Blvd
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Tour Red Rock trailheads and Summerlin villages with Dr. Jan Duffy. Same-day showings

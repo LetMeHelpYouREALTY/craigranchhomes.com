@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, TreePine, ShoppingBag, GraduationCap, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +60,9 @@ export default function GreenValleyPage() {
           <UniqueInterior path="/neighborhoods/green-valley" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Green Valley Real Estate Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/green-valley">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              187 listings, 26 days — January 2026 Green Valley snapshot from The District
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -112,34 +111,7 @@ export default function GreenValleyPage() {
                 resources and reputation of BHHS, gives Green Valley buyers and sellers a distinct advantage.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <TreePine className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Mature Landscaping & Character</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Green Valley's 35+ years of growth have created tree-lined streets and lush landscaping
-                    that newer communities simply can't match. The 35-year-old street trees provide shade,
-                    privacy, and a sense of permanence. Many homes feature larger lots than you'll find in
-                    newer developments, with mature fruit trees and professional landscaping.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <ShoppingBag className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">The District at Green Valley Ranch</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    The District is Henderson's premier outdoor shopping and entertainment destination.
-                    This pedestrian-friendly center features upscale retailers, diverse dining options,
-                    a luxury movie theater, and regular community events. Green Valley residents enjoy
-                    easy access to this lifestyle amenity that draws visitors from across the valley.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/green-valley" />
 
               <NamedCampuses path="/neighborhoods/green-valley" />
 
@@ -170,7 +142,7 @@ export default function GreenValleyPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Discover Green Valley Living
+              Park at The District, then walk 1988 street trees
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Meet at The District, then tour Green Valley's mature-tree streets. Henderson is

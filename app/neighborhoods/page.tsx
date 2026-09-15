@@ -229,13 +229,12 @@ export default function NeighborhoodsPage() {
           <NeighborhoodFaqs path="/neighborhoods" />
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto" data-neighborhood-cta="/neighborhoods">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Need Help Choosing a Neighborhood?
+              Time one west loop and one Henderson loop from Suite 100
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Dr. Jan Duffy knows every Las Vegas community inside and out. Call for personalized
-              neighborhood recommendations.
+              Summerlin is 10–15 minutes. Green Valley is 25–35. Call (702) 222-1964 with two ZIPs — we will not city-swap a recommendation.
             </p>
             <CtaActions variant="onDark" />
           </section>

@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Mountain, Users, ShoppingBag, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,8 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodParks from "@/components/sections/NeighborhoodParks";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +61,9 @@ export default function CentennialHillsPage() {
           <UniqueInterior path="/neighborhoods/centennial-hills" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Centennial Hills Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/centennial-hills">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              203 listings, 25 days — January 2026 Centennial Hills snapshot via US-95
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -113,33 +113,7 @@ export default function CentennialHillsPage() {
                 Hills buyers and sellers receive exceptional representation.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Parks and Daily Conveniences</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Centennial Hills includes Centennial Hills Park, year-round community events, and
-                    HOA-maintained common areas. The mix of 1,800–3,500 sq ft floor plans and mountain
-                    views supports long-term occupancy and consistent resale demand.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <ShoppingBag className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Centennial Center Convenience</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Centennial Center provides residents with comprehensive shopping, dining, and
-                    entertainment options without leaving the neighborhood. Major retailers like Target,
-                    Costco, and Home Depot anchor the center, while diverse restaurants and services
-                    meet daily needs. Downtown Summerlin is also just minutes away.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/centennial-hills" />
 
               <NamedCampuses path="/neighborhoods/centennial-hills" />
 
@@ -150,25 +124,7 @@ export default function CentennialHillsPage() {
 
               <NeighborhoodAmenities path="/neighborhoods/centennial-hills" />
 
-              {/* Parks & Recreation */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>
-              <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Centennial Hills offers extensive parks and recreation facilities:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Centennial Hills Park:</strong> 120 acres with sports fields, playground, skate park, dog park</li>
-                    <li><strong>Centennial Hills YMCA:</strong> Full fitness facility, pools, youth programs</li>
-                    <li><strong>Centennial Hills Library:</strong> Modern library with programs and events</li>
-                  </ul>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Angel Park Golf Club:</strong> Two public courses, 36 holes of golf</li>
-                    <li><strong>Floyd Lamb Park:</strong> 15 minutes—680 acres, lakes, wildlife viewing</li>
-                    <li><strong>Mountain Trails:</strong> Easy access to BLM land for hiking and biking</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodParks path="/neighborhoods/centennial-hills" />
 
               <p className="mt-8">
                 The current market shows <strong>203 active listings</strong> with homes averaging
@@ -195,7 +151,7 @@ export default function CentennialHillsPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Find Your Centennial Hills Home
+              Time Arbor View and the 120-acre park in one US-95 run
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Centennial Hills mountain-view streets sit 15–20 minutes up US-95 from the office.

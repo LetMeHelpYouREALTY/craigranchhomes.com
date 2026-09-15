@@ -595,6 +595,30 @@ export function lifestylePhotoForPath(path: string): SitePhoto {
   return photos.consultation;
 }
 
+/** Seventeenth still for village Community Highlights H3s. */
+export function highlightPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/summerlin")) return photos.henderson;
+  if (path.startsWith("/neighborhoods/the-ridges")) return photos.summerlinTrail;
+  if (path.startsWith("/neighborhoods/southern-highlands")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.consultation;
+  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.summerlin;
+  if (path.startsWith("/neighborhoods/green-valley")) return photos.office;
+  if (path.startsWith("/neighborhoods/henderson")) return photos.market;
+  if (path.startsWith("/neighborhoods/inspirada")) return photos.luxuryPool;
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.greenValley;
+  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.aliante;
+  if (path.startsWith("/neighborhoods")) return photos.fiftyFiveFitness;
+  return photos.consultation;
+}
+
+/** Eighteenth still for village Parks H3s — Centennial Hills and Mountains Edge. */
+export function parkPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/centennial-hills"))
+    return photos.mountainsEdge;
+  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.henderson;
+  return photos.consultation;
+}
+
 export type FaqHubCategoryId =
   | "bhhs"
   | "buying"
@@ -643,6 +667,15 @@ export function occupiedHeadingStills(path: string): Set<string> {
       amenityPhotoForPath(path).src,
       lifestylePhotoForPath(path).src
     );
+  }
+  if (path.startsWith("/neighborhoods/")) {
+    srcs.push(highlightPhotoForPath(path).src);
+  }
+  if (
+    path.startsWith("/neighborhoods/centennial-hills") ||
+    path.startsWith("/neighborhoods/mountains-edge")
+  ) {
+    srcs.push(parkPhotoForPath(path).src);
   }
   if (path.startsWith("/55-plus")) {
     srcs.push(

@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Shield, Star, Mountain, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +60,9 @@ export default function TheRidgesPage() {
           <UniqueInterior path="/neighborhoods/the-ridges" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              The Ridges Luxury Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/the-ridges">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              42 listings, 67 days — January 2026 Ridges gate-list snapshot
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -114,35 +113,7 @@ export default function TheRidgesPage() {
                 investments in Las Vegas.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Guard-gated check-in from Suite 100</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    The Ridges uses 24/7 guard-gated check-in with roving patrols. About 900 home
-                    sites sit across nearly 800 acres. Gate lists and off-market windows are
-                    confirmed at 9406 W Lake Mead Blvd, Suite 100, typically a 15–20 minute drive
-                    to the guardhouse. We do not text estate addresses on unsecured threads.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Unrivaled Views & Location</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Positioned along Red Rock Canyon's foothills, The Ridges offers views that no other
-                    Las Vegas community can match. Properties feature vistas of the Strip's glittering
-                    skyline, the rugged Spring Mountains, and the desert floor stretching to the horizon.
-                    Bear's Best Golf Club, designed by Jack Nicklaus, winds through the community, adding
-                    another layer of prestige.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/the-ridges" />
 
               {/* The Six Villages */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">The Six Villages of The Ridges</h3>
@@ -205,7 +176,7 @@ export default function TheRidgesPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience The Ridges Luxury
+              Put your name on a Ridges gate list from Suite 100
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Book a confidential Ridges gate tour. Estate showings are sequenced from the

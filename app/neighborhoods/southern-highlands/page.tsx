@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Shield, Mountain, Star, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +60,9 @@ export default function SouthernHighlandsPage() {
           <UniqueInterior path="/neighborhoods/southern-highlands" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Southern Highlands Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/southern-highlands">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              156 listings, 35 days — January 2026 I-15 south golf-and-ridge snapshot
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -113,34 +112,7 @@ export default function SouthernHighlandsPage() {
                 Elementary, BHHS has the local expertise to guide your search.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Star className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Championship Golf Course</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    The Robert Trent Jones Jr. designed course at Southern Highlands Golf Club is
-                    consistently rated among Nevada's finest. The private club offers members exceptional
-                    playing conditions year-round, a fully appointed clubhouse, fine dining, and a
-                    calendar of social events. Golf course homes enjoy premium values and stunning views.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Guard-Gated Luxury Sections</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Multiple guard-gated enclaves within Southern Highlands offer enhanced security
-                    and exclusivity. These sections feature custom and semi-custom homes on larger lots,
-                    with architectural standards ensuring estate-quality construction. 24/7 security
-                    provides residents peace of mind and protects property values.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/southern-highlands" />
 
               <NamedCampuses path="/neighborhoods/southern-highlands" />
 
@@ -194,7 +166,7 @@ export default function SouthernHighlandsPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Explore Southern Highlands Living
+              Lock a Southern Highlands I-15 south block
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Southern Highlands golf and ridge-top listings are a 25–35 minute I-15 run from

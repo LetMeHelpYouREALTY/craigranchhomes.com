@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Mountain, Users, Home as HomeIcon, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +60,9 @@ export default function SkyeCanyonPage() {
           <UniqueInterior path="/neighborhoods/skye-canyon" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Skye Canyon Real Estate Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/skye-canyon">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              124 listings, 21 days — January 2026 Skye Canyon model-and-resale snapshot
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -112,34 +111,7 @@ export default function SkyeCanyonPage() {
                 nothing—builders pay the commission.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Skye Center Amenities</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Skye Center is the community's social hub, featuring resort-style pools, a modern
-                    fitness center, sports courts, and community gathering spaces. The facility hosts
-                    year-round events from outdoor movie nights to fitness classes, creating a vibrant
-                    community atmosphere. Nothing else in northwest Las Vegas compares.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Mountain Views & Open Space</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Skye Canyon's position at the base of the mountains provides stunning views and
-                    easy access to outdoor recreation. Adjacent Floyd Lamb Park offers 680 acres of
-                    lakes, wildlife, and natural beauty. The community's trail system connects to
-                    regional paths, perfect for walking, running, and cycling.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/skye-canyon" />
 
               <NamedCampuses path="/neighborhoods/skye-canyon" />
 
@@ -193,7 +165,7 @@ export default function SkyeCanyonPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Discover Skye Canyon Living
+              Register at Suite 100, then walk Skye Center the same day
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Walk Skye Canyon model rows and resale streets in one northwest loop. The 215

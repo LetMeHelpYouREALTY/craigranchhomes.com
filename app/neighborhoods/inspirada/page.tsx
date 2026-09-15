@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { Phone, Waves, TreePine, GraduationCap, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -61,9 +60,9 @@ export default function InspiradaPage() {
           <UniqueInterior path="/neighborhoods/inspirada" />
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Inspirada Real Estate Market | January 2026
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/inspirada">
+            <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
+              98 listings, 23 days — January 2026 Inspirada rec-campus snapshot
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -113,34 +112,7 @@ export default function InspiradaPage() {
                 smart upgrade decisions, delivering better value than comparable new construction.
               </p>
 
-              {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-<div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <Waves className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Resort-Style Pools & Amenities</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Inspirada's pools aren't typical community pools—they're resort experiences.
-                    Water slides, splash pads for kids, lap lanes for exercise, and shaded cabanas
-                    for relaxation create a vacation atmosphere steps from your front door. The
-                    HOA maintains these facilities to exceptional standards year-round.
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <TreePine className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Trails, Parks & Active Living</h4>
-                  </div>
-                  <p className="text-slate-600">
-                    Miles of walking and biking trails connect Inspirada's neighborhoods, parks,
-                    and amenity centers. Whether you're training for a marathon or taking an evening
-                    stroll, the trail system encourages an active lifestyle. Community events—from
-                    outdoor movies to fitness classes—bring neighbors together throughout the year.
-                  </p>
-                </div>
-              </div>
+              <CommunityHighlights path="/neighborhoods/inspirada" />
 
               <NamedCampuses path="/neighborhoods/inspirada" />
 
@@ -190,7 +162,7 @@ export default function InspiradaPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience Inspirada Living
+              Walk the Town Center pool before any Inspirada model
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Inspirada amenity centers and builder rows are a 30–40 minute south Henderson block.

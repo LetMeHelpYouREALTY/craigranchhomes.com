@@ -1,8 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { expertQuotes } from "@/lib/expert-quotes";
+import { communityHighlights } from "@/lib/community-highlights";
 import { fiftyFiveAmenities } from "@/lib/fifty-five-amenities";
 import { neighborhoodAmenities } from "@/lib/neighborhood-amenities";
 import { neighborhoodLifestyles } from "@/lib/neighborhood-lifestyle";
+import { neighborhoodParks } from "@/lib/neighborhood-parks";
 import { occupiedHeadingStills, quotePhotoForPath } from "@/lib/media";
 import { uniqueInteriors } from "@/lib/unique-interiors";
 
@@ -49,6 +51,12 @@ describe("expertQuotes", () => {
       }
       if (fiftyFiveAmenities[path]) {
         expect(h2).not.toBe(fiftyFiveAmenities[path].h2);
+      }
+      if (communityHighlights[path]) {
+        expect(h2).not.toBe(communityHighlights[path].h3);
+      }
+      if (neighborhoodParks[path]) {
+        expect(h2).not.toBe(neighborhoodParks[path].h3);
       }
     }
   });
