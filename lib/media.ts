@@ -226,17 +226,28 @@ export type PhotoKey = keyof typeof photos;
 export function photoForPath(path: string): SitePhoto {
   if (path === "/" || path === "") return photos.homeHero;
   if (path.startsWith("/about")) return photos.agent;
-  if (path.startsWith("/contact") || path.startsWith("/google-business") || path.startsWith("/security-policy")) {
+  if (
+    path.startsWith("/contact") ||
+    path.startsWith("/google-business") ||
+    path.startsWith("/security-policy")
+  ) {
     return photos.office;
   }
   if (path.startsWith("/market")) return photos.market;
-  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.lakeLasVegas;
-  if (path.startsWith("/55-plus-communities/sun-city-aliante")) return photos.aliante;
-  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) return photos.fiftyFiveClubhouse;
-  if (path.startsWith("/55-plus-communities/sun-city-anthem")) return photos.sunCityAnthemGolf;
-  if (path.startsWith("/55-plus-communities/solera-anthem")) return photos.soleraClubhouse;
-  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) return photos.heritageGate;
-  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) return photos.fiftyFive;
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas"))
+    return photos.lakeLasVegas;
+  if (path.startsWith("/55-plus-communities/sun-city-aliante"))
+    return photos.aliante;
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin"))
+    return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/55-plus-communities/sun-city-anthem"))
+    return photos.sunCityAnthemGolf;
+  if (path.startsWith("/55-plus-communities/solera-anthem"))
+    return photos.soleraClubhouse;
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge"))
+    return photos.heritageGate;
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin"))
+    return photos.fiftyFive;
   if (path.startsWith("/55-plus")) return photos.fiftyFive;
   if (path.startsWith("/new-construction")) return photos.newConstruction;
   if (
@@ -246,19 +257,27 @@ export function photoForPath(path: string): SitePhoto {
   ) {
     return photos.ridges;
   }
-  if (path.startsWith("/neighborhoods/southern-highlands")) return photos.southernHighlands;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.southernHighlands;
   if (path.startsWith("/buyers")) return photos.buyers;
-  if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) return photos.sellers;
+  if (path.startsWith("/sellers") || path.startsWith("/home-valuation"))
+    return photos.sellers;
   if (path.startsWith("/investment")) return photos.investment;
   if (path.startsWith("/neighborhoods/summerlin")) return photos.summerlin;
   if (path.startsWith("/neighborhoods/green-valley")) return photos.greenValley;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.inspirada;
   if (path.startsWith("/neighborhoods/henderson")) return photos.henderson;
-  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.centennial;
+  if (path.startsWith("/neighborhoods/centennial-hills"))
+    return photos.centennial;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.aliante;
-  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.mountainsEdge;
+  if (path.startsWith("/neighborhoods/mountains-edge"))
+    return photos.mountainsEdge;
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.skyeCanyon;
-  if (path.startsWith("/faq") || path.startsWith("/services") || path.startsWith("/why-berkshire")) {
+  if (
+    path.startsWith("/faq") ||
+    path.startsWith("/services") ||
+    path.startsWith("/why-berkshire")
+  ) {
     return photos.consultation;
   }
   if (path.startsWith("/neighborhoods")) return photos.summerlin;
@@ -268,60 +287,123 @@ export function photoForPath(path: string): SitePhoto {
   return photos.homeHero;
 }
 
-/** H2 photos stay distinct from H1 so market/stats bands are not a duplicate hero. */
+/** H2 photos stay distinct from H1 so unique-interior bands are not a duplicate hero. */
 export function h2PhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/about")) return photos.office;
-  if (path.startsWith("/contact") || path.startsWith("/google-business") || path.startsWith("/security-policy")) {
+  if (
+    path.startsWith("/contact") ||
+    path.startsWith("/google-business") ||
+    path.startsWith("/security-policy")
+  ) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) {
+    return photos.consultation;
+  }
+  if (
+    path.startsWith("/luxury") ||
+    path.includes("luxury-homes") ||
+    path.startsWith("/neighborhoods/the-ridges")
+  ) {
     return photos.officeExterior;
   }
-  if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) return photos.consultation;
   if (path.startsWith("/buyers")) return photos.homeHero;
-  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.fiftyFiveClubhouse;
-  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) return photos.sunCitySummerlinRec;
-  if (path.startsWith("/55-plus-communities/sun-city-aliante")) return photos.alianteRec;
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) {
+    return photos.fiftyFiveClubhouse;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) {
+    return photos.sunCitySummerlinRec;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) {
+    return photos.alianteRec;
+  }
   if (path.startsWith("/55-plus")) return photos.fiftyFiveFitness;
   if (path.startsWith("/new-construction")) return photos.skyeCanyon;
-  if (path.startsWith("/market") || path.startsWith("/neighborhoods")) return photos.market;
+  if (path.startsWith("/market")) return photos.office;
+  if (path.startsWith("/neighborhoods")) return photos.officeExterior;
   if (path.startsWith("/investment")) return photos.market;
-  if (path.startsWith("/luxury") || path.includes("luxury-homes")) return photos.luxuryPool;
-  if (path.startsWith("/faq") || path.startsWith("/services") || path.startsWith("/why-berkshire")) {
+  if (
+    path.startsWith("/faq") ||
+    path.startsWith("/services") ||
+    path.startsWith("/why-berkshire")
+  ) {
     return photos.office;
   }
-  if (path.startsWith("/relocation")) return photos.market;
+  if (path.startsWith("/relocation") || path.startsWith("/listings")) {
+    return photos.market;
+  }
   return photos.market;
 }
 
 /** H3 photos match amenities, trails, golf, or office details under the heading. */
 export function h3PhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/summerlin")) return photos.summerlinTrail;
-  if (path.startsWith("/neighborhoods/green-valley")) return photos.greenValley;
-  if (path.startsWith("/neighborhoods/inspirada")) return photos.inspirada;
-  if (path.startsWith("/neighborhoods/henderson")) return photos.henderson;
-  if (path.startsWith("/neighborhoods/the-ridges") || path.startsWith("/luxury") || path.includes("luxury-homes")) {
+  if (path.startsWith("/neighborhoods/green-valley")) return photos.henderson;
+  if (path.startsWith("/neighborhoods/inspirada"))
+    return photos.fiftyFiveFitness;
+  if (path.startsWith("/neighborhoods/henderson")) return photos.greenValley;
+  if (
+    path.startsWith("/neighborhoods/the-ridges") ||
+    path.startsWith("/luxury") ||
+    path.includes("luxury-homes")
+  ) {
     return photos.luxuryPool;
   }
-  if (path.startsWith("/neighborhoods/southern-highlands")) return photos.southernHighlands;
-  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.mountainsEdge;
-  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.centennial;
-  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.aliante;
-  if (path.startsWith("/55-plus-communities/sun-city-aliante")) return photos.fiftyFiveFitness;
-  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.skyeCanyon;
-  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.fiftyFiveFitness;
-  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) return photos.summerlinTrail;
-  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) return photos.summerlin;
-  if (path.startsWith("/55-plus-communities/solera-anthem")) return photos.henderson;
-  if (path.startsWith("/55-plus-communities/sun-city-anthem")) return photos.henderson;
-  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) return photos.summerlinTrail;
-  if (path.startsWith("/55-plus")) return photos.fiftyFiveFitness;
-  if (path.startsWith("/investment")) return photos.investment;
-  if (path.startsWith("/google-business") || path.startsWith("/contact") || path.startsWith("/about")) {
+  if (path.startsWith("/neighborhoods/southern-highlands")) {
+    return photos.fiftyFiveClubhouse;
+  }
+  if (path.startsWith("/neighborhoods/mountains-edge")) {
+    return photos.newConstruction;
+  }
+  if (path.startsWith("/neighborhoods/centennial-hills"))
+    return photos.skyeCanyon;
+  if (path.startsWith("/neighborhoods/north-las-vegas"))
+    return photos.alianteRec;
+  if (path.startsWith("/neighborhoods/skye-canyon"))
+    return photos.newConstruction;
+  if (path.startsWith("/neighborhoods")) return photos.market;
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) {
+    return photos.fiftyFiveFitness;
+  }
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) {
+    return photos.fiftyFiveFitness;
+  }
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) {
+    return photos.summerlinTrail;
+  }
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) {
+    return photos.summerlin;
+  }
+  if (path.startsWith("/55-plus-communities/solera-anthem")) {
+    return photos.henderson;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-anthem")) {
+    return photos.henderson;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) {
+    return photos.summerlinTrail;
+  }
+  if (path.startsWith("/55-plus")) return photos.lakeLasVegas;
+  if (path.startsWith("/investment")) return photos.luxuryPool;
+  if (
+    path.startsWith("/google-business") ||
+    path.startsWith("/contact") ||
+    path.startsWith("/about") ||
+    path.startsWith("/security-policy")
+  ) {
     return photos.officeExterior;
   }
-  if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) return photos.sellers;
-  if (path.startsWith("/buyers")) return photos.buyers;
-  if (path.startsWith("/new-construction")) return photos.newConstruction;
-  if (path.startsWith("/faq") || path.startsWith("/services") || path.startsWith("/why-berkshire")) {
-    return photos.consultation;
+  if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) {
+    return photos.officeExterior;
+  }
+  if (path.startsWith("/buyers")) return photos.consultation;
+  if (path.startsWith("/new-construction")) return photos.consultation;
+  if (
+    path.startsWith("/faq") ||
+    path.startsWith("/services") ||
+    path.startsWith("/why-berkshire")
+  ) {
+    return photos.officeExterior;
   }
   return photos.consultation;
 }

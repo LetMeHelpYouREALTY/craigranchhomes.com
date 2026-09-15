@@ -22,9 +22,26 @@ export default function HeadingPhoto({
   className = "",
   priority,
 }: HeadingPhotoProps) {
-  const asset =
-    photo ??
-    (level === "h1" ? photoForPath(path) : level === "h3" ? h3PhotoForPath(path) : h2PhotoForPath(path));
+  let asset: SitePhoto;
+  if (photo) {
+    asset = photo;
+  } else {
+    switch (level) {
+      case "h1":
+        asset = photoForPath(path);
+        break;
+      case "h2":
+        asset = h2PhotoForPath(path);
+        break;
+      case "h3":
+        asset = h3PhotoForPath(path);
+        break;
+      default: {
+        const _exhaustive: never = level;
+        throw new Error(`Unhandled heading level: ${_exhaustive}`);
+      }
+    }
+  }
   const isH1 = level === "h1";
   const heightClass = isH1
     ? "h-48 md:h-72 lg:h-80"
@@ -33,13 +50,19 @@ export default function HeadingPhoto({
       : "h-28 md:h-36";
 
   return (
-    <figure className={`relative w-full overflow-hidden rounded-xl mb-8 ${heightClass} ${className}`.trim()}>
+    <figure
+      className={`relative w-full overflow-hidden rounded-xl mb-8 ${heightClass} ${className}`.trim()}
+    >
       <Image
         src={mediaUrl(asset.src)}
         alt={asset.alt}
         fill
         className="object-cover"
-        sizes={isH1 ? "(max-width: 768px) 100vw, 896px" : "(max-width: 768px) 100vw, 768px"}
+        sizes={
+          isH1
+            ? "(max-width: 768px) 100vw, 896px"
+            : "(max-width: 768px) 100vw, 768px"
+        }
         priority={priority ?? isH1}
       />
     </figure>
