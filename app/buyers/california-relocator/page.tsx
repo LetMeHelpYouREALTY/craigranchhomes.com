@@ -20,7 +20,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import BuyerFaqs from "@/components/sections/BuyerFaqs";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -38,52 +38,6 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much can I save moving from California to Nevada?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a household earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What neighborhoods do California relocators prefer in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "California buyers typically gravitate toward Summerlin (similar to Irvine/coastal communities), Henderson (similar to San Diego suburbs in parks and recreation), and The Ridges (comparable to Newport Coast luxury). These areas offer the quality and amenities California buyers expect.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to establish Nevada residency?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nevada residency can be established immediately upon moving. To benefit from no state income tax, you should update your driver's license, register your vehicles, and register to vote in Nevada. Most people complete this within 30 days of their move.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does my California home equity buy in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A typical $1.2M California home translates to $500K-$700K in Las Vegas with similar or better features. Many California sellers can buy a larger Las Vegas home AND pocket significant equity for retirement or investment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there direct flights from Las Vegas to California?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Las Vegas has extensive flight options to California. Southwest, United, and other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California airports. Flight times are typically 1-1.5 hours.",
-      },
-    },
-  ],
-};
 
 const realEstateAgentSchema = {
   "@context": "https://schema.org",
@@ -105,10 +59,6 @@ const realEstateAgentSchema = {
 export default function CaliforniaRelocatorPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateAgentSchema) }}
@@ -373,35 +323,8 @@ export default function CaliforniaRelocatorPage() {
               </div>
             </div>
           </section>
+          <BuyerFaqs path="/buyers/california-relocator" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              California Relocator FAQs
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "How much can I save moving from California to Nevada?",
-                  a: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a household earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
-                },
-                {
-                  q: "What neighborhoods do California relocators prefer?",
-                  a: "California buyers typically gravitate toward Summerlin (similar to Irvine/coastal communities), Henderson (similar to San Diego suburbs in parks and recreation), and The Ridges (comparable to Newport Coast luxury). These areas offer the quality and amenities California buyers expect.",
-                },
-                {
-                  q: "How long does it take to establish Nevada residency?",
-                  a: "Nevada residency can be established immediately upon moving. To benefit from no state income tax, update your driver's license, register your vehicles, and register to vote in Nevada. Most people complete this within 30 days.",
-                },
-                {
-                  q: "Are there direct flights from Las Vegas to California?",
-                  a: "Yes! Las Vegas has extensive flight options to California. Southwest, United, and other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California airports. Flight times are typically 1-1.5 hours.",
-                },
-                {
-                  q: "What about named school campuses compared to California?",
-                  a: "Ask about commute times to named campuses such as Palo Verde High School in Summerlin and Coronado High School in Henderson. Dr. Jan provides campus names and drive times for every neighborhood she shows.",
-                },
-               ]} />
-          </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

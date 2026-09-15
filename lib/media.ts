@@ -489,3 +489,12 @@ export function fiftyFiveFaqPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/55-plus-communities")) return photos.office;
   return photos.market;
 }
+
+/** Eighth still for buyer-intent FAQ H2s — distinct from that path's H1/H2/H3. */
+export function buyerFaqPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/buyers/first-time-buyers")) return photos.officeExterior;
+  if (path.startsWith("/buyers/california-relocator")) return photos.greenValley;
+  if (path.startsWith("/buyers/luxury-homes-las-vegas")) return photos.market;
+  if (path.startsWith("/buyers")) return photos.office;
+  return photos.consultation;
+}

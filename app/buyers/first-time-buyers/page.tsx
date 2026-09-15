@@ -18,7 +18,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import BuyerFaqs from "@/components/sections/BuyerFaqs";
 import { nap } from "@/lib/contact";
 
 
@@ -37,52 +37,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much down payment do I need for my first home in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Down payment requirements vary by loan type: FHA loans require 3.5% down, conventional loans can be as low as 3%, VA loans require 0% down for eligible veterans, and Nevada down payment assistance programs can provide up to $15,000 for qualified buyers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the FHA loan limit in Las Vegas for 2026?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The 2026 FHA loan limit for Las Vegas (Clark County) is $498,257 for a single-family home. This allows first-time buyers to purchase homes up to approximately $515,000 with 3.5% down.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What neighborhoods are best for first-time buyers in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Entry-level neighborhoods include North Las Vegas ($350K-$450K), Mountains Edge ($380K-$480K), and Centennial Hills ($398K median). These areas offer new construction, parks, and commute times to named campuses such as Legacy High School and Arbor View High School.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there builder incentives for first-time buyers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! Las Vegas builders currently offer significant incentives: closing cost credits up to 6%, rate buydowns as low as 4.99%, and upgrade packages worth $15K-$50K. These incentives can make new construction more affordable than resale homes.",
-      },
-    },
-  ],
-};
 
 export default function FirstTimeBuyersPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -349,97 +307,8 @@ export default function FirstTimeBuyersPage() {
           </section>
 
           {/* Timeline */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              First-Time Buyer Timeline
-            </h2>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  1
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Get Pre-Approved (1-3 days)</h3>
-                  <p className="text-slate-600">
-                    We connect you with trusted lenders who specialize in first-time buyers. Know exactly
-                    what you can afford before you start looking.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  2
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Find Your Home (2-8 weeks)</h3>
-                  <p className="text-slate-600">
-                    Dr. Jan shows you homes that fit your budget and wishlist. She'll explain what to look
-                    for and help you avoid common first-time buyer mistakes.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  3
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Make an Offer & Negotiate (1-5 days)</h3>
-                  <p className="text-slate-600">
-                    We craft a competitive offer and negotiate on your behalf. Dr. Jan's experience means
-                    you don't overpay and get favorable terms.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  4
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Inspections & Due Diligence (10-14 days)</h3>
-                  <p className="text-slate-600">
-                    Professional inspections ensure you know exactly what you're buying. We negotiate
-                    repairs or credits if issues are found.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  5
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Close & Get Your Keys (30-45 days total)</h3>
-                  <p className="text-slate-600">
-                    Sign the final paperwork, get your keys, and celebrate! You're officially a homeowner.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <BuyerFaqs path="/buyers/first-time-buyers" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              First-Time Buyer FAQs
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "How much down payment do I need?",
-                  a: "Down payment requirements vary: FHA loans require 3.5%, conventional can be as low as 3%, VA loans require 0% for eligible veterans. Nevada assistance programs can provide up to $15,000 for qualified buyers.",
-                },
-                {
-                  q: "What credit score do I need?",
-                  a: "FHA loans accept scores as low as 580 (3.5% down) or 500 (10% down). Conventional loans typically require 620+. Better scores mean better rates. Dr. Jan can connect you with lenders who work with all credit situations.",
-                },
-                {
-                  q: "Do I pay for Dr. Jan's services as a buyer?",
-                  a: "No! Buyer's agent services are typically free to buyers—the seller pays the commission. You get full professional representation from Berkshire Hathaway HomeServices at no cost to you.",
-                },
-                {
-                  q: "Should I buy new construction or resale?",
-                  a: "Both have advantages. New construction offers modern features, warranties, and current builder incentives. Resales may have mature yards and lower HOA dues. Dr. Jan helps you weigh options based on your specific situation.",
-                },
-               ]} />
-          </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

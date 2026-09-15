@@ -18,6 +18,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import BuyerFaqs from "@/components/sections/BuyerFaqs";
 import { nap } from "@/lib/contact";
 
 
@@ -36,44 +37,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the luxury home market like in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Las Vegas luxury ($1M+) has appreciated 161% since 2015, making it #4 nationally for luxury growth. The December 2025 luxury median is $1.45M. Cash buyers represent approximately 60% of luxury transactions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are the most exclusive luxury communities in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The Ridges in Summerlin ($1.5M-$10M+) is the valley's most prestigious address. MacDonald Highlands and Ascaya in Henderson ($2M-$15M) offer Strip views. For high-rise luxury, Waldorf Astoria, Veer Towers, and Panorama Towers dominate the Strip corridor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do luxury buyers need representation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Luxury transactions involve complex negotiations, privacy concerns, and significant financial exposure. One wrong move can cost hundreds of thousands. Berkshire Hathaway HomeServices provides discrete, sophisticated representation for discerning buyers.",
-      },
-    },
-  ],
-};
 
 export default function LuxuryHomesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -371,6 +338,8 @@ export default function LuxuryHomesPage() {
               </cite>
             </div>
           </section>
+
+          <BuyerFaqs path="/buyers/luxury-homes-las-vegas" />
 
           {/* CTA */}
           <section className="text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
