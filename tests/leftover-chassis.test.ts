@@ -7,6 +7,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     file: "app/55-plus-communities/sun-city-anthem/page.tsx",
     needles: [
       '<LeftoverBand path="/55-plus-communities/sun-city-anthem" />',
+      "7,100+ Homes, $180–$230 HOA, $350K–$1.2M Band",
     ],
     banned: [
       "Henderson's Premier 55+ Community",
@@ -14,16 +15,24 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       "Property Crime",
       "Sun City lifestyle",
       ">About Sun City Anthem<",
+      "at a Glance",
     ],
   },
   {
     file: "app/55-plus-communities/page.tsx",
-    needles: ['<LeftoverBand path="/55-plus-communities" />'],
+    needles: [
+      '<LeftoverBand path="/55-plus-communities" />',
+      '<LeftoverBand path="/55-plus-communities" slot={1} />',
+      '<LeftoverBand path="/55-plus-communities" slot={2} />',
+    ],
     banned: [
       ">Why Active Adults Choose Las Vegas<",
       "like-minded",
       "peace of mind",
       "Summerlin lifestyle",
+      ">Las Vegas 55+ Market Overview | January 2026<",
+      ">Las Vegas 55+ Communities<",
+      "No-Pressure Approach",
     ],
   },
   {
@@ -73,12 +82,23 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: [
       '<LeftoverBand path="/google-business" />',
       '<LeftoverBand path="/google-business" slot={1} />',
+      "Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 100",
+      "Maps pin at 9406 W Lake Mead Blvd",
     ],
-    banned: [">Real Estate Services<", ">Service Areas<"],
+    banned: [
+      ">Real Estate Services<",
+      ">Service Areas<",
+      ">Business Hours<",
+      ">Visit the Office<",
+      ">Your Review Helps Others Find Quality Service<",
+    ],
   },
   {
     file: "app/55-plus-communities/del-webb-lake-las-vegas/page.tsx",
-    needles: ["1,800+ homes, pickleball, and a 320-acre lake"],
+    needles: [
+      "1,800+ homes, pickleball, and a 320-acre lake",
+      '<LeftoverBand path="/55-plus-communities/del-webb-lake-las-vegas" />',
+    ],
     banned: [
       "lifestyle programming",
       "lifestyle activities",
@@ -88,8 +108,12 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/55-plus-communities/sun-city-aliante/page.tsx",
-    needles: ["Aliante is a North"],
-    banned: ["same lifestyle"],
+    needles: [
+      '<LeftoverBand path="/55-plus-communities/sun-city-aliante" />',
+      "2,800+ Homes, $140–$175 HOA, $280K–$550K Band",
+      "Aliante Casino, I-215, and Harry Reid International (LAS)",
+    ],
+    banned: ["same lifestyle", ">About Sun City Aliante<", ">Location Advantages<", "at a Glance"],
   },
   {
     file: "app/about/page.tsx",
@@ -134,11 +158,15 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       '<LeftoverBand path="/sellers" />',
       '<LeftoverBand path="/sellers" slot={1} />',
       '<LeftoverBand path="/sellers" slot={2} />',
+      '<LeftoverBand path="/sellers" slot={3} />',
+      '<LeftoverBand path="/sellers" slot={4} />',
     ],
     banned: [
       ">The Berkshire Hathaway HomeServices Selling Advantage<",
       ">The Home Selling Process<",
       ">Specialized Services for Every Seller<",
+      ">What's Included When You List with BHHS<",
+      ">What's Your Home Worth?<",
     ],
   },
   {
@@ -189,9 +217,18 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/home-valuation/page.tsx",
-    needles: ['<LeftoverBand path="/home-valuation" />'],
+    needles: [
+      '<LeftoverBand path="/home-valuation" />',
+      '<LeftoverBand path="/home-valuation" slot={1} />',
+    ],
     banned: [
       ">Why Online Home Value Estimates Often Miss the Mark<",
+      ">Key Factors That Affect Your Las Vegas Home's Value<",
+      "School zones",
+      ">The BHHS Home Valuation Process<",
+      ">Ready to Know What Your Home Is Worth?<",
+      ">Schedule Your Free Valuation<",
+      ">Las Vegas Neighborhood Home Values | January 2026<",
     ],
   },
   {
@@ -199,11 +236,14 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: [
       '<LeftoverBand path="/buyers/first-time-buyers" />',
       '<LeftoverBand path="/buyers/first-time-buyers" slot={1} />',
+      '<LeftoverBand path="/buyers/first-time-buyers" slot={2} />',
     ],
     banned: [
       ">First-Time Buyer Financing Options<",
       ">Best Neighborhoods for First-Time Buyers<",
       "new schools",
+      ">Rent vs. Buy in Las Vegas<",
+      ">Ready to Stop Renting?<",
     ],
   },
   {
@@ -271,6 +311,38 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     file: "app/faq/page.tsx",
     needles: ['<LeftoverBand path="/faq" />'],
     banned: [">Still Have Questions?<"],
+  },
+  {
+    file: "app/55-plus-communities/sun-city-summerlin/page.tsx",
+    needles: [
+      '<LeftoverBand path="/55-plus-communities/sun-city-summerlin" />',
+      "7,700+ Homes, $155–$195 HOA, $320K–$850K Band",
+    ],
+    banned: [">About Sun City Summerlin<", "at a Glance"],
+  },
+  {
+    file: "app/55-plus-communities/trilogy-summerlin/page.tsx",
+    needles: [
+      '<LeftoverBand path="/55-plus-communities/trilogy-summerlin" />',
+      "800+ Shea Homes, $250–$350 HOA, $500K–$1.1M Band",
+    ],
+    banned: [">About Trilogy at Summerlin<", "at a Glance"],
+  },
+  {
+    file: "app/55-plus-communities/heritage-stonebridge/page.tsx",
+    needles: [
+      '<LeftoverBand path="/55-plus-communities/heritage-stonebridge" />',
+      "1,100+ Homes, $175–$220 HOA, $400K–$750K Band",
+    ],
+    banned: [">About Heritage at Stonebridge<", "at a Glance"],
+  },
+  {
+    file: "app/55-plus-communities/solera-anthem/page.tsx",
+    needles: [
+      '<LeftoverBand path="/55-plus-communities/solera-anthem" />',
+      "1,200+ Homes, $170–$210 HOA, $380K–$650K Band",
+    ],
+    banned: [">About Solera at Anthem<", "at a Glance"],
   },
 ];
 

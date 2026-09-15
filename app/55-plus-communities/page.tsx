@@ -268,86 +268,8 @@ export default function FiftyFiveCommunitiesPage() {
 
           </div>
 
-          {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Las Vegas 55+ Market Overview | January 2026
-            </h2>
-<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-1">
-                  25,000+
-                </div>
-                <div className="text-slate-300 text-sm">55+ Homes Available</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">
-                  $280K-$1.2M
-                </div>
-                <div className="text-slate-300 text-sm">Price Range</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">$140-$350</div>
-                <div className="text-slate-300 text-sm">Monthly HOA Range</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">
-                  +5.8%
-                </div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-            </div>
-          </section>
-
-          {/* California Relocator Section */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 rounded-r-xl p-8">
-              <div className="flex items-start">
-                <Palmtree className="h-10 w-10 text-amber-600 mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                    Relocating from California?
-                  </h3>
-                  <p className="text-lg text-slate-700 mb-4">
-                    Many of our 55+ buyers are relocating from California—and for
-                    good reason. <strong>Enjoy more home for your money</strong>{" "}
-                    with no state income tax, lower property taxes, and a cost of
-                    living that stretches your retirement dollars further.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4 mb-4">
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <div className="text-2xl font-bold text-green-600">0%</div>
-                      <div className="text-sm text-slate-600">
-                        State Income Tax
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <div className="text-2xl font-bold text-green-600">
-                        50-60%
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        Less Than CA Prices
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <div className="text-2xl font-bold text-green-600">
-                        45 min
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        Flight to See Family
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-slate-600 italic">
-                    Sell your California home, buy a larger home in Las Vegas
-                    with cash to spare, and enjoy your retirement tax-free.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <LeftoverBand path="/55-plus-communities" />
+          <LeftoverBand path="/55-plus-communities" slot={1} />
 
           {/* Age Requirements */}
           <section className="mb-16 max-w-5xl mx-auto">
@@ -356,25 +278,20 @@ export default function FiftyFiveCommunitiesPage() {
                 <Users className="h-8 w-8 text-blue-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Understanding 55+ Age Requirements
+                    HOPA 80/20 occupancy — packet at Suite 100 before any clubhouse
                   </h3>
-<div className="text-slate-700 space-y-3">
+                  <div className="text-slate-700 space-y-3">
                     <p>
-                      <strong>Federal HOPA Guidelines:</strong> At least 80% of
-                      occupied units must have one resident 55 or older. The
-                      remaining 20% can include younger residents, though
-                      individual communities may be more restrictive.
+                      <strong>Federal HOPA:</strong> At least 80% of occupied units must have one
+                      resident 55 or older. Individual HOAs can be stricter. We read the packet at
+                      9406 W Lake Mead Blvd before we drive.
                     </p>
                     <p>
-                      <strong>Spouse/Partner Rules:</strong> Most communities
-                      allow a spouse or partner under 55 to reside with a
-                      qualifying resident. Minimum ages for non-qualifying
-                      residents vary (often 40-45 minimum).
+                      <strong>Co-occupant rules:</strong> Minimum ages for a co-occupant vary by
+                      campus (often 40–45). Confirm in writing. Call (702) 222-1964.
                     </p>
                     <p className="text-blue-800 font-medium">
-                      Each community has specific rules. Dr. Jan Duffy provides
-                      detailed guidance on requirements for any community you're
-                      considering.
+                      Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Pick one clock.
                     </p>
                   </div>
                 </div>
@@ -382,14 +299,8 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
-          {/* Communities Grid */}
+          <LeftoverBand path="/55-plus-communities" slot={2} />
           <section id="communities" className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas 55+ Communities
-            </h2>
-            <p className="text-lg text-slate-600 text-center mb-8">
-              Click "View Homes" to explore each community in detail
-            </p>
             <div className="grid md:grid-cols-2 gap-8">
               {communities.map((community) => (
                 <div
@@ -553,12 +464,12 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    No-Pressure Approach
+                    One campus per afternoon — occupancy packet before the drive
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    55+ buyers often take time to decide. Dr. Jan provides
-                    information and guidance without pressure, letting you move at
-                    your own pace.
+                    We review HOA occupancy and guest rules at 9406 W Lake Mead Blvd, Suite 100,
+                    then tour one rec building. Call (702) 222-1964. We do not stack Summerlin and
+                    Henderson 55+ on the same morning.
                   </p>
                 </div>
               </div>

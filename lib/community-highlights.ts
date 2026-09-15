@@ -135,7 +135,7 @@ export const communityHighlights: Record<string, CommunityHighlightCopy> = {
     pins: [
       {
         name: "Entry listings often in the $320,000s–$450,000s",
-        note: "Newer product and first-time buyer inventory are common on this north loop. Confirm current list prices the week you tour — we do not invent a number.",
+        note: "Newer product in published $320K–$450K bands is common on this north loop. Confirm current list prices the week you tour — we do not invent a number.",
       },
       {
         name: "Aliante golf and rec campus",

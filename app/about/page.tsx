@@ -159,11 +159,9 @@ export default function AboutPage() {
                     deliver exceptional results.
                   </p>
                   <p>
-                    I believe in treating every client with the same care. Whether you're a first-time 
-                    buyer navigating the process for the first time, a luxury home seeker requiring 
-                    discretion, or an investor building a rental portfolio, I provide the same 
-                    level of dedication, expertise, and personalized attention. Real estate is 
-                    more than a transaction—it's about helping people find the right property.
+                    Files start at Suite 100. Square-footage tours, listing APNs, 55+ occupancy
+                    packets, and California inbound nets get the same dated CMA. Real estate is a
+                    walkthrough and a number, not a caption.
                   </p>
                 </div>
 

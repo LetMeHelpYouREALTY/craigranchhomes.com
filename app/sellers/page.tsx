@@ -4,7 +4,6 @@ import {
   Phone,
   Camera,
   Globe,
-  DollarSign,
   TrendingUp,
   CheckCircle,
   BarChart,
@@ -146,16 +145,9 @@ export default function SellersPage() {
 
           <ExpertQuote path="/sellers" />
 
-          {/* What's Included */}
+          <LeftoverBand path="/sellers" slot={3} />
+
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              What's Included When You List with BHHS
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              When you list with Dr. Jan Duffy at Berkshire Hathaway HomeServices, you receive 
-              comprehensive marketing and support services designed to maximize your home's 
-              exposure and sale price.
-            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {includedServices.map((item) => (
                 <div key={item} className="flex items-center bg-white p-4 rounded-lg border border-slate-200">
@@ -166,31 +158,15 @@ export default function SellersPage() {
             </div>
           </section>
 
-          {/* Home Valuation CTA */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-4">What's Your Home Worth?</h2>
-                <p className="text-blue-100 mb-6">
-                  Get a free, no-obligation home valuation from Dr. Jan Duffy. Using current MLS
-                  data and expertise serving Las Vegas since 2008, you'll know exactly what your 
-                  home could sell for in today's market. No algorithms—just real analysis from 
-                  a local expert.
-                </p>
-                <Link
-                  href="/home-valuation"
-                  className="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors"
-                >
-                  Get Free Valuation
-                </Link>
-              </div>
-              <div className="text-center">
-                <TrendingUp className="h-24 w-24 text-blue-200 mx-auto mb-4" />
-                <p className="text-2xl font-bold">$450,000</p>
-                <p className="text-blue-200">Median Home Price (Jan 2026)</p>
-                <p className="text-blue-300 text-sm mt-2">Up 4.2% from last year</p>
-              </div>
-            </div>
+          <LeftoverBand path="/sellers" slot={4} />
+
+          <section className="mb-16 text-center max-w-5xl mx-auto">
+            <Link
+              href="/home-valuation"
+              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-md font-bold hover:bg-blue-700 transition-colors"
+            >
+              Get Free Valuation
+            </Link>
           </section>
           <SellerFaqs path="/sellers" />
 

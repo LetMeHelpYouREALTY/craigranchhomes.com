@@ -16,6 +16,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import LeftoverBand from "@/components/sections/LeftoverBand";
+import { leftoverPhotoForPath } from "@/lib/media";
 import {
   ctaPhone,
   officePhone,
@@ -139,11 +140,28 @@ export default function GoogleBusinessPage() {
           <UniqueInterior path="/google-business" />
           <ExpertQuote path="/google-business" />
 
-          <section className="max-w-5xl mx-auto mb-16">
+          <section
+            className="max-w-5xl mx-auto mb-16"
+            data-leftover-band="/google-business#2"
+          >
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 100 — Sunday by appointment
+            </h2>
+            <HeadingPhoto
+              path="/google-business"
+              level="h2"
+              photo={leftoverPhotoForPath("/google-business", 2)}
+              priority
+            />
+            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-6">
+              Hours on this URL must match Google Business. Walk-ins welcome during posted hours.
+              Call (702) 222-1964. Office/GBP (702) 500-1942. 9406 W Lake Mead Blvd, Suite 100,
+              Las Vegas, NV 89134.
+            </p>
             <div className="bg-slate-50 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Clock className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                <h2 className="text-xl font-bold text-slate-900">Business Hours</h2>
+                <p className="text-sm font-semibold text-slate-900">Posted hours grid</p>
               </div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                 {businessHours.map((row) => (
@@ -155,8 +173,24 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
-          <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Visit the Office</h2>
+          <section
+            className="max-w-5xl mx-auto mb-16"
+            data-leftover-band="/google-business#3"
+          >
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Maps pin at 9406 W Lake Mead Blvd — Directions and Google Reviews on this URL
+            </h2>
+            <HeadingPhoto
+              path="/google-business"
+              level="h2"
+              photo={leftoverPhotoForPath("/google-business", 3)}
+              priority
+            />
+            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-6">
+              The embed, Get Directions, and View Google Reviews buttons are the GBP actions. Call
+              or text (702) 222-1964. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada
+              Properties.
+            </p>
 <div className="rounded-xl overflow-hidden border border-slate-200 mb-6">
               <iframe
                 title="Map to Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd"
@@ -203,7 +237,7 @@ export default function GoogleBusinessPage() {
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-xl p-8 text-center">
               <Star className="h-12 w-12 text-yellow-500 mx-auto mb-4" aria-hidden="true" />
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                Your Review Helps Others Find Quality Service
+                Write the GBP review on this URL — Maps ranking uses the Suite 100 pin
               </h2>
               <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                 If Dr. Jan helped you buy or sell a home, please consider sharing your experience.

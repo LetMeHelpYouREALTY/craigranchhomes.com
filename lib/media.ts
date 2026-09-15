@@ -717,6 +717,37 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path.startsWith("/about") && slot === 0) return photos.homeHero;
   if (path === "/buyers" && slot === 0) return photos.summerlin;
   if (path.startsWith("/faq") && slot === 0) return photos.henderson;
+  if (path === "/55-plus-communities" && slot === 1) return photos.homeHero;
+  if (path === "/55-plus-communities" && slot === 2) return photos.summerlin;
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin") && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge") && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/55-plus-communities/solera-anthem") && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-aliante") && slot === 0) {
+    return photos.office;
+  }
+  if (
+    path.startsWith("/55-plus-communities/del-webb-lake-las-vegas") &&
+    slot === 0
+  ) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/google-business") && slot === 2) return photos.henderson;
+  if (path.startsWith("/google-business") && slot === 3) return photos.market;
+  if (path === "/sellers" && slot === 3) return photos.agent;
+  if (path === "/sellers" && slot === 4) return photos.buyers;
+  if (path.startsWith("/buyers/first-time-buyers") && slot === 2) {
+    return photos.henderson;
+  }
+  if (path.startsWith("/home-valuation") && slot === 1) return photos.summerlin;
   return photos.consultation;
 }
 
@@ -807,8 +838,28 @@ export function occupiedHeadingStills(path: string): Set<string> {
   if (path === "/55-plus-communities/sun-city-anthem") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
   }
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/55-plus-communities/solera-anthem")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
   if (path === "/55-plus-communities") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
   }
   if (path === "/buyers/luxury-homes-las-vegas") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
@@ -832,11 +883,15 @@ export function occupiedHeadingStills(path: string): Set<string> {
   if (path.startsWith("/google-business")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
   }
   if (path === "/sellers") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
     srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
   }
   if (path.startsWith("/sellers/downsizing")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
@@ -861,10 +916,12 @@ export function occupiedHeadingStills(path: string): Set<string> {
   }
   if (path.startsWith("/home-valuation")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/buyers/first-time-buyers")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
   }
   if (path === "/contact") {
     srcs.push(leftoverPhotoForPath(path, 0).src);

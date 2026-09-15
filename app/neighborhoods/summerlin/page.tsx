@@ -133,9 +133,9 @@ export default function SummerlinPage() {
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has deep roots in Summerlin,
                 and our agents understand the nuances of each village—from the parks and recreation amenities of
-                The Paseos to the luxury estates of The Ridges. Whether you're a first-time buyer looking at
-                condos in Affinity or a move-up buyer seeking a custom home in Red Rock Country Club, BHHS
-                has the expertise to guide you through the process.
+                The Paseos parks to The Ridges estate streets. Affinity condo square footage and
+                Red Rock Country Club custom lots are separate files. BHHS
+                maps both from Suite 100.
               </p>
 
               <CommunityHighlights path="/neighborhoods/summerlin" />

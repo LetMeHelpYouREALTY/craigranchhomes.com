@@ -119,7 +119,7 @@ export default function SunCityAnthemPage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Sun City Anthem at a Glance
+              7,100+ Homes, $180–$230 HOA, $350K–$1.2M Band — Stats Before Anthem Center
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">

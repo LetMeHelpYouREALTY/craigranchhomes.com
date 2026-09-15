@@ -17,6 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
@@ -103,7 +104,7 @@ export default function TrilogySummerlinPage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Trilogy at Summerlin at a Glance
+              800+ Shea Homes, $250–$350 HOA, $500K–$1.1M Band — Stats Before the Clubhouse
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -131,82 +132,7 @@ export default function TrilogySummerlinPage() {
             </div>
           </section>
 
-          {/* About */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Trilogy at Summerlin
-              </h2>
-<p>
-                <strong>Trilogy at Summerlin</strong> redefines what a 55+
-                community can be. Developed by Shea Homes, Trilogy brings a
-                resort hospitality approach to active adult living—think
-                boutique hotel amenities in a residential community setting.
-              </p>
-              <p>
-                The centerpiece is the stunning clubhouse featuring an on-site
-                farm-to-table restaurant (residents dine, not just grab coffee),
-                a full-service spa and wellness center, state-of-the-art fitness
-                facilities, and indoor/outdoor event spaces. The homes
-                themselves feature contemporary architecture with open floor
-                plans, designer finishes, and modern smart home technology.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>{" "}
-                serves 55+ buyers comparing Trilogy's clubhouse restaurant and spa to four-building
-                Sun City rec campuses. Dr. Jan Duffy sequences Trilogy from Suite 100 so you are
-                not mixing a Henderson Anthem day with this west-valley stop.
-              </p>
-            </div>
-          </section>
-
-          {/* Resort Experience */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-r from-rose-50 to-pink-50 border-l-4 border-rose-500 rounded-r-xl p-8">
-              <div className="flex items-start">
-                <Star className="h-8 w-8 text-rose-600 mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    The Trilogy Difference: Resort-Style Living
-                  </h3>
-                  <p className="text-slate-700 mb-4">
-                    Trilogy isn't just a 55+ community with a nice clubhouse—it's
-                    a resort experience you happen to live in. The difference is
-                    in the details.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <UtensilsCrossed className="h-6 w-6 text-rose-600 mx-auto mb-2" />
-                      <div className="font-bold text-slate-900 text-sm">
-                        Farm-to-Table Restaurant
-                      </div>
-                      <div className="text-xs text-slate-600">
-                        Full-service dining, not a snack bar
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <Sparkles className="h-6 w-6 text-rose-600 mx-auto mb-2" />
-                      <div className="font-bold text-slate-900 text-sm">
-                        Full-Service Spa
-                      </div>
-                      <div className="text-xs text-slate-600">
-                        Treatments, not just a hot tub
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <HomeIcon className="h-6 w-6 text-rose-600 mx-auto mb-2" />
-                      <div className="font-bold text-slate-900 text-sm">
-                        Contemporary Homes
-                      </div>
-                      <div className="text-xs text-slate-600">
-                        Designer finishes throughout
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/trilogy-summerlin" />
 
           <FiftyFiveAmenities path="/55-plus-communities/trilogy-summerlin" />
 

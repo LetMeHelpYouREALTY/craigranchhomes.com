@@ -15,6 +15,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
@@ -66,30 +67,7 @@ export default function DelWebbLakeLasVegasPage() {
           <UniqueInterior path="/55-plus-communities/del-webb-lake-las-vegas" />
 
 
-          {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Del Webb at Lake Las Vegas at a Glance
-            </h2>
-<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$400K-$900K</div>
-                <div className="text-slate-300 text-sm">Price Range</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$200-$280</div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">1,800+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">2016+</div>
-                <div className="text-slate-300 text-sm">Construction</div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/del-webb-lake-las-vegas" />
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">

@@ -2,7 +2,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import RealScoutHomeValue from "@/components/realscout/RealScoutHomeValue";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
-import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
+import { Phone, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
@@ -74,7 +74,7 @@ export default function HomeValuationPage() {
             {/* Calendly Widget */}
             <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
               <div className="bg-blue-600 text-white p-4 text-center">
-                <h2 className="text-2xl font-bold">Schedule Your Free Valuation</h2>
+                <h2 className="text-2xl font-bold">Book the CMA at Suite 100 — Calendly on this column</h2>
                 <p className="text-blue-100 text-sm mt-1">
                   Book a consultation with Dr. Jan Duffy
                 </p>
@@ -154,67 +154,12 @@ export default function HomeValuationPage() {
 
           <LeftoverBand path="/home-valuation" />
 
-          {/* Factors Affecting Value */}
-          <section className="max-w-5xl mx-auto mb-16 bg-slate-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Key Factors That Affect Your Las Vegas Home's Value
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <MapPin className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Location & Neighborhood</h3>
-                <p className="text-slate-600 text-sm">
-                  Summerlin commands 20-40% premiums over comparable homes in other areas. School
-                  zones, HOA quality, and proximity to amenities significantly impact value.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <Home className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Size & Layout</h3>
-                <p className="text-slate-600 text-sm">
-                  Square footage, bedroom/bathroom count, and functional floor plans matter. Open
-                  concepts and first-floor master suites command premiums in today's market.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <TrendingUp className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Upgrades & Condition</h3>
-                <p className="text-slate-600 text-sm">
-                  Updated kitchens and bathrooms return 60-80% of investment. Flooring, paint,
-                  fixtures, and overall maintenance affect buyer perception and offers.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <DollarSign className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Market Conditions</h3>
-                <p className="text-slate-600 text-sm">
-                  Interest rates, inventory levels, and seasonal demand fluctuate. January 2026
-                  shows 2.1 months inventory—still a seller's market but more balanced than 2021-2022.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <Calculator className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Lot Characteristics</h3>
-                <p className="text-slate-600 text-sm">
-                  Lot size, views, privacy, and outdoor features like pools add 5-15% to value.
-                  Corner lots, cul-de-sacs, and premium positions command higher prices.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <Clock className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Age & Systems</h3>
-                <p className="text-slate-600 text-sm">
-                  Newer homes (built 2015+) often sell for more per square foot. However, older
-                  homes with updated HVAC, roof, and electrical can compete effectively.
-                </p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/home-valuation" slot={1} />
 
           {/* Neighborhood Values */}
           <section className="max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Las Vegas Neighborhood Home Values | January 2026
+              January 2026 medians: Summerlin $625K, Henderson $485K, NLV $385K — not your APN
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-slate-200 rounded-lg">
@@ -253,7 +198,7 @@ export default function HomeValuationPage() {
           {/* The Valuation Process */}
           <section className="max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              The BHHS Home Valuation Process
+              APN, street comps, then a dated CMA at Suite 100 — four steps
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
@@ -308,7 +253,7 @@ export default function HomeValuationPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Know What Your Home Is Worth?
+              Bring the APN to Suite 100 — (702) 222-1964 or Calendly
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get a free, no-obligation home valuation from Dr. Jan Duffy and Berkshire Hathaway

@@ -17,6 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -95,7 +96,7 @@ export default function SunCitySummerlinPage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Sun City Summerlin at a Glance
+              7,700+ Homes, $155–$195 HOA, $320K–$850K Band — Stats Before the Rec Walk
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -117,33 +118,7 @@ export default function SunCitySummerlinPage() {
             </div>
           </section>
 
-          {/* About */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Sun City Summerlin
-              </h2>
-<p>
-                <strong>Sun City Summerlin</strong> isn't just Nevada's largest 55+ community—it's
-                the model by which all others are measured. Established by Del Webb in 1989, this
-                2,400-acre community against the Spring Mountains has evolved into a self-contained
-                city for active adults, with amenities that rival any resort.
-              </p>
-              <p>
-                The community's three championship golf courses—Highland Falls, Palm Valley, and
-                Eagle Crest—offer varied terrain and challenges. Four recreation centers provide
-                fitness equipment, pools, tennis and pickleball courts, craft rooms, and gathering
-                spaces. Over 100 clubs cover everything from golf and tennis to hiking, ceramics,
-                woodworking, and ballroom dancing.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has helped
-                hundreds of buyers find their Sun City Summerlin home. Dr. Jan Duffy understands
-                the community's various neighborhoods, floor plans, and which areas offer the best
-                value or views.
-              </p>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/sun-city-summerlin" />
 
           <FiftyFiveAmenities path="/55-plus-communities/sun-city-summerlin" />
 

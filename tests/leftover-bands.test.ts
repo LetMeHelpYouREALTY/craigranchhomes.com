@@ -41,7 +41,13 @@ describe("leftoverBands", () => {
   it("covers leftover slogan H2 chassis paths", () => {
     expect(Object.keys(leftoverBands).sort()).toEqual([
       "/55-plus-communities",
+      "/55-plus-communities/del-webb-lake-las-vegas",
+      "/55-plus-communities/heritage-stonebridge",
+      "/55-plus-communities/solera-anthem",
+      "/55-plus-communities/sun-city-aliante",
       "/55-plus-communities/sun-city-anthem",
+      "/55-plus-communities/sun-city-summerlin",
+      "/55-plus-communities/trilogy-summerlin",
       "/about",
       "/buyers",
       "/buyers/first-time-buyers",
@@ -68,9 +74,11 @@ describe("leftoverBands", () => {
       "/why-berkshire-hathaway",
     ]);
     expect(leftoverBands["/services"]).toHaveLength(2);
-    expect(leftoverBands["/sellers"]).toHaveLength(3);
-    expect(leftoverBands["/google-business"]).toHaveLength(2);
-    expect(leftoverBands["/buyers/first-time-buyers"]).toHaveLength(2);
+    expect(leftoverBands["/sellers"]).toHaveLength(5);
+    expect(leftoverBands["/google-business"]).toHaveLength(4);
+    expect(leftoverBands["/buyers/first-time-buyers"]).toHaveLength(3);
+    expect(leftoverBands["/home-valuation"]).toHaveLength(2);
+    expect(leftoverBands["/55-plus-communities"]).toHaveLength(3);
     expect(leftoverBands["/contact"]).toHaveLength(2);
     expect(leftoverBands["/market-insights"]).toHaveLength(6);
     expect(leftoverBands["/market-update"]).toHaveLength(5);

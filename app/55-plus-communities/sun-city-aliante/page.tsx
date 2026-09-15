@@ -16,6 +16,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
@@ -102,7 +103,7 @@ export default function SunCityAliantePage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Sun City Aliante at a Glance
+              2,800+ Homes, $140–$175 HOA, $280K–$550K Band — Stats Before the North Loop
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -128,99 +129,14 @@ export default function SunCityAliantePage() {
             </div>
           </section>
 
-          {/* About */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Sun City Aliante
-              </h2>
-<p>
-                <strong>Sun City Aliante</strong> proves you don't have to
-                sacrifice quality for value. Built by Del Webb from 2003-2010,
-                this 2,800+ home community in North Las Vegas delivers the full
-                Sun City experience—championship golf, resort pools, state-of-the-art
-                fitness, and 100+ clubs—at the lowest price point of any Sun City
-                in Las Vegas.
-              </p>
-              <p>
-                The community's 18-hole championship golf course winds through the
-                neighborhood, offering beautiful views and affordable resident
-                rates. The 42,000 square foot recreation center rivals those of
-                more expensive communities, with multiple pools, a fitness center,
-                tennis and pickleball courts, and gathering spaces for the
-                community's many clubs and activities.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>{" "}
-                helps buyers understand why Sun City Aliante represents
-                exceptional value. Dr. Jan Duffy guides clients through the
-                community's various floor plans and helps identify homes that
-                offer the best combination of features, location, and price.
-              </p>
-            </div>
-          </section>
-
-          {/* Value Proposition */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="bg-green-50 border-l-4 border-green-600 rounded-r-xl p-8">
-              <div className="flex items-start">
-                <TrendingUp className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Aliante rec vs Sun City Summerlin rec — two 55+ price clocks
-                  </h3>
-                  <p className="text-slate-700 mb-4">
-                    Compare rec square footage and HOA packets at Suite 100. Aliante is a North
-                    Las Vegas clock. Sun City Summerlin is 10–15 minutes from 9406 W Lake Mead Blvd.
-                    Published January 2026 bands start near $280K here vs $320K Summerlin and $350K
-                    Anthem — confirm the week you tour. Call (702) 222-1964.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="bg-white rounded-lg p-4">
-                      <div className="text-sm text-slate-500 mb-1">
-                        Sun City Aliante
-                      </div>
-                      <div className="text-xl font-bold text-green-600">
-                        From $280K
-                      </div>
-                      <div className="text-xs text-slate-500">
-                        HOA: $140-$175/mo
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <div className="text-sm text-slate-500 mb-1">
-                        Sun City Summerlin
-                      </div>
-                      <div className="text-xl font-bold text-slate-600">
-                        From $320K
-                      </div>
-                      <div className="text-xs text-slate-500">
-                        HOA: $155-$195/mo
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <div className="text-sm text-slate-500 mb-1">
-                        Sun City Anthem
-                      </div>
-                      <div className="text-xl font-bold text-slate-600">
-                        From $350K
-                      </div>
-                      <div className="text-xs text-slate-500">
-                        HOA: $180-$230/mo
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/sun-city-aliante" />
 
           <FiftyFiveAmenities path="/55-plus-communities/sun-city-aliante" />
 
           {/* Location Benefits */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Location Advantages
+              Aliante Casino, I-215, and Harry Reid International (LAS) from this North Campus
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-slate-200">

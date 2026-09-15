@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/north-las-vegas",
   title: "Berkshire Hathaway HomeServices North Las Vegas | Affordable Homes",
   description:
-    "Find affordable North Las Vegas homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy helps first-time buyers and investors. Median price $385K. Call (702) 222-1964.",
+    "Find North Las Vegas homes with Berkshire Hathaway HomeServices Nevada Properties. January 2026 median $385K. Named campuses and commute minutes from Suite 100. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices North Las Vegas",
     "North Las Vegas homes for sale",
@@ -93,23 +93,23 @@ export default function NorthLasVegasPage() {
                 <strong>North Las Vegas</strong> has undergone a remarkable transformation over the past
                 decade. What was once considered a distant suburb is now a thriving city with new
                 master-planned communities, major employers, and infrastructure improvements that make
-                it the Las Vegas Valley's best opportunity for affordable homeownership. <strong>Berkshire
-                Hathaway HomeServices</strong> is proud to help first-time buyers and investors
-                discover North Las Vegas's potential.
+                it an inventory band to compare at Suite 100. <strong>Berkshire
+                Hathaway HomeServices</strong> compares $385K median listings, named campuses, and
+                commute minutes on this north clock.
               </p>
               <p>
                 With a median home price of <strong>$385,000</strong>—roughly $65,000 less than Las Vegas
-                and $100,000 less than Henderson—North Las Vegas offers entry to homeownership that's
-                increasingly difficult to find elsewhere in Southern Nevada. First-time buyers priced
-                out of Summerlin or Henderson find that North Las Vegas delivers modern homes with
-                contemporary features at prices they can actually afford. And with Nevada's lack of
-                state income tax, more of their income goes toward building equity.
+                and $100,000 less than Henderson—North Las Vegas listings at that band are compared
+                by square footage and commute, not a caption. Buyers priced
+                out of Summerlin $625K or Henderson $485K January 2026 medians can walk North Las Vegas
+                product at $385K. And with Nevada's lack of
+                state income tax, more of a paycheck can go toward the PITI line.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> provides the same
                 expert service in North Las Vegas as we do in the valley's luxury markets. Dr. Jan Duffy
-                helps first-time buyers understand the purchase process, navigate financing options, and
-                avoid common pitfalls. For new construction—where builders' sales agents represent the
+                helps compare square footage, named campuses, and financing files on this north clock.
+                For new construction—where builders' sales agents represent the
                 builder, not you—BHHS provides free buyer representation that can save thousands in
                 upgrades and negotiations.
               </p>

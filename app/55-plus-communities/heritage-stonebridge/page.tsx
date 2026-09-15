@@ -17,6 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
@@ -103,7 +104,7 @@ export default function HeritageAtStonebridgePage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Heritage at Stonebridge at a Glance
+              1,100+ Homes, $175–$220 HOA, $400K–$750K Band — Stats Before the Guest List
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -131,80 +132,7 @@ export default function HeritageAtStonebridgePage() {
             </div>
           </section>
 
-          {/* About */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Heritage at Stonebridge
-              </h2>
-<p>
-                <strong>Heritage at Stonebridge</strong> offers what larger 55+
-                communities can't—a boutique, guard-gated campus in southwest Las Vegas.
-                With just over 1,100 homes,
-                this 1,100-home campus provides a staffed gate and
-                a private enclave while still offering resort-style amenities.
-              </p>
-              <p>
-                The community's prime Summerlin location puts residents minutes
-                from Downtown Summerlin's world-class shopping, dining, and
-                entertainment, while Red Rock Canyon's hiking trails are a short
-                drive away. The TPC Las Vegas and several other championship golf
-                courses are nearby for residents who prefer to pay-as-you-play
-                rather than committing to a community course.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>{" "}
-                helps buyers who value privacy and location over massive amenity
-                complexes. Dr. Jan Duffy understands why Heritage at Stonebridge
-                appeals to buyers seeking a more exclusive, intimate 55+
-                experience.
-              </p>
-            </div>
-          </section>
-
-          {/* Guard-Gated Security */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="bg-purple-50 border-l-4 border-purple-600 rounded-r-xl p-8">
-              <div className="flex items-start">
-                <Shield className="h-8 w-8 text-purple-600 mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Guard-Gated Security & Privacy
-                  </h3>
-                  <p className="text-slate-700 mb-4">
-                    Unlike many 55+ communities with simple gate codes, Heritage
-                    at Stonebridge features 24/7 guard-gated security. Every
-                    visitor is screened, providing genuine privacy and peace of
-                    mind.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <div className="text-xl font-bold text-purple-600">24/7</div>
-                      <div className="text-sm text-slate-600">
-                        Manned Guard Gate
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <div className="text-xl font-bold text-purple-600">
-                        Visitor
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        Verification Required
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 text-center">
-                      <div className="text-xl font-bold text-purple-600">
-                        Patrol
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        Regular Security Rounds
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/heritage-stonebridge" />
 
           <FiftyFiveAmenities path="/55-plus-communities/heritage-stonebridge" />
 

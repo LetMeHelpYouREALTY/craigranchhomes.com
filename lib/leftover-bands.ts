@@ -64,6 +64,50 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "25,000+ 55+ homes, $280K–$1.2M published bands, HOA $140–$350 — packet at Suite 100",
+      body: "January 2026 snapshot on this hub. Occupancy rules are reviewed at 9406 W Lake Mead Blvd before any clubhouse. Call (702) 222-1964. Pick one west campus or one Henderson campus.",
+      pins: [
+        {
+          name: "West first",
+          note: "Sun City Summerlin 10–15 minutes. Trilogy and Heritage 12–18. Same west clock as Suite 100.",
+        },
+        {
+          name: "Henderson second",
+          note: "Anthem Center, Solera, Del Webb at Lake Las Vegas are 30–45 minutes. Do not stack with Summerlin the same morning.",
+        },
+        {
+          name: "North loop",
+          note: "Sun City Aliante is 20–25 minutes. Craig Road employers first if you still work.",
+        },
+        {
+          name: "HOA packet",
+          note: "Dues bands on this page are $140–$350. Confirm the week you tour. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Open one 55+ campus page, then book the rec building from W Lake Mead Blvd",
+      body: "The card grid is a menu. The decision is a drive. Call (702) 222-1964. Named rec square footage and commute minutes beat a slogan row.",
+      pins: [
+        {
+          name: "Sun City Summerlin",
+          note: "Four rec campuses. 7,700+ homes. 10–15 minutes from Suite 100.",
+        },
+        {
+          name: "Trilogy / Heritage",
+          note: "Clubhouse-scale vs staffed gate. Downtown Summerlin retail on the same west hop.",
+        },
+        {
+          name: "Anthem / Solera / Del Webb",
+          note: "Henderson 55+ block. Anthem Center about 64,000 sq ft. Lake campus is a longer east clock.",
+        },
+        {
+          name: "Aliante",
+          note: "42,000 sq ft rec and 18-hole course on the north loop. Not a Summerlin swap.",
+        },
+      ],
+    },
   ],
   "/buyers/luxury-homes-las-vegas": [
     {
@@ -276,6 +320,50 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 100 — Sunday by appointment",
+      body: "Hours on this URL must match Google Business. Walk-ins welcome during posted hours. Call (702) 222-1964. Office/GBP (702) 500-1942. 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+      pins: [
+        {
+          name: "Monday–Friday",
+          note: "9am–6pm. Visitor parking faces W Lake Mead Blvd.",
+        },
+        {
+          name: "Saturday",
+          note: "10am–4pm. Showing blocks can start here and continue to the listing.",
+        },
+        {
+          name: "Sunday",
+          note: "By appointment. Call (702) 222-1964 for a window.",
+        },
+        {
+          name: "GBP match",
+          note: "If hours change on Google, this page updates the same day. Inconsistent hours leak Maps ranking.",
+        },
+      ],
+    },
+    {
+      h2: "Maps pin at 9406 W Lake Mead Blvd — Directions and Google Reviews on this URL",
+      body: "The embed, Get Directions, and View Google Reviews buttons are the GBP actions. Call or text (702) 222-1964. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada Properties.",
+      pins: [
+        {
+          name: "Get Directions",
+          note: "Opens the Suite 100 pin. Do not use a different street for GBP.",
+        },
+        {
+          name: "View Google Reviews",
+          note: "Review schema and the GBP reviews link stay on this page.",
+        },
+        {
+          name: "Call",
+          note: "Client CTA (702) 222-1964. Office line on Google is (702) 500-1942.",
+        },
+        {
+          name: "Address line",
+          note: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Same as the footer NAP.",
+        },
+      ],
+    },
   ],
   "/sellers": [
     {
@@ -341,6 +429,50 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Outbound relocation",
           note: "Las Vegas closing dates lined up with the next city. BHHS destination agent briefed from this desk.",
+        },
+      ],
+    },
+    {
+      h2: "Photo set, MLS remarks, HOA vendor list, and showing calendar — initialed at Suite 100",
+      body: "What you get when you list is a punch list, not a slogan. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100. We do not promise a portal we cannot name.",
+      pins: [
+        {
+          name: "Photography",
+          note: "Interior, exterior, and drone rules confirmed with the HOA before shoot day.",
+        },
+        {
+          name: "MLS remarks",
+          note: "Square footage, HOA dues, and occupancy dates beat a caption. Attribution stays on the listing.",
+        },
+        {
+          name: "Paid placement",
+          note: "BHHS channels you initial. Social stays off until you approve the set.",
+        },
+        {
+          name: "Showing calendar",
+          note: "Lockbox and occupancy windows written at the desk. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "January 2026 valley median $450K is not your CMA — bring the APN to Suite 100",
+      body: "Open /home-valuation with the address. We will not invent your number from a metro headline. Call (702) 222-1964. Typical close cited on this site: $450,000 valley snapshot.",
+      pins: [
+        {
+          name: "MLS comps",
+          note: "Recent closes on your street, not a portal average.",
+        },
+        {
+          name: "Condition and HOA",
+          note: "Interiors and packets are walked, then written.",
+        },
+        {
+          name: "No obligation to list",
+          note: "Valuation first. Listing paperwork is a separate appointment.",
+        },
+        {
+          name: "Dated CMA",
+          note: "DOM and inventory move. The sheet is dated the day we pull it.",
         },
       ],
     },
@@ -536,6 +668,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "Square footage, named campuses, HOA dues, 2.1 months inventory — comps at Suite 100",
+      body: "School-zone slogans are not a CMA. Palo Verde, Coronado, Arbor View, and Legacy High School minutes are mapped by address at ccsd.net/zoning. Call (702) 222-1964. January 2026 inventory cited on this page: 2.1 months.",
+      pins: [
+        {
+          name: "ZIP and commute",
+          note: "Summerlin 10–15 minutes from Suite 100. Henderson 25–35. Not a caption premium.",
+        },
+        {
+          name: "Beds, baths, square footage",
+          note: "Layout and first-floor primary suites are listing facts. Confirm the week you price.",
+        },
+        {
+          name: "Kitchens, HVAC, roof",
+          note: "Condition is walked. We will not invent a dollar-per-upgrade from a blog average.",
+        },
+        {
+          name: "Lot and views",
+          note: "Measure from the file. Pool and lot size vary by APN.",
+        },
+      ],
+    },
   ],
   "/buyers/first-time-buyers": [
     {
@@ -579,6 +733,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Do not tour twelve ZIPs",
           note: "One ZIP per afternoon. Seller-paid buyer-broker fee is typical here — confirm on the listing.",
+        },
+      ],
+    },
+    {
+      h2: "$1,800 rent vs $1,900 PITI on a $400K / 3.5% FHA file — run the sheet at Suite 100",
+      body: "Figures on this page are a worked example, not your payment. Rate cited here: 6.5%. 2026 FHA limit: $498,257. Call (702) 222-1964. Lender letter before the first showing.",
+      pins: [
+        {
+          name: "Rent column",
+          note: "$1,800/month cited here. Five-year rent spend on this page: $108,000 with $0 equity.",
+        },
+        {
+          name: "Buy column",
+          note: "$1,900/month PITI on a $400K / 3.5% down example. Equity line on this page: $600+/month.",
+        },
+        {
+          name: "FHA 3.5%",
+          note: "Limit $498,257 for 2026 on this URL. Confirm with your lender the week you write.",
+        },
+        {
+          name: "Then two ZIPs",
+          note: "North Las Vegas, Centennial Hills, or Green Valley. Named campuses by address. Call (702) 222-1964.",
         },
       ],
     },
@@ -989,6 +1165,150 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Maps pin",
           note: "Berkshire Hathaway HomeServices Nevada Properties. License S.0197614.LLC.",
+        },
+      ],
+    },
+  ],
+  "/55-plus-communities/sun-city-summerlin": [
+    {
+      h2: "7,700 homes, four rec campuses, 10–15 minutes from 9406 W Lake Mead Blvd",
+      body: "Highland Falls, Palm Valley, and Eagle Crest are three courses. Mountain Shadows, Sun Shadows, Pinnacle, and Desert Vista are four rec buildings. Call (702) 222-1964. HOA cited on this page: $155–$195. Age-restriction rules at Suite 100 first.",
+      pins: [
+        {
+          name: "Mountain Shadows",
+          note: "Rec campus walk before you pick a street. Same west clock as Suite 100.",
+        },
+        {
+          name: "Highland Falls",
+          note: "Original golf campus. Published band on this page starts near $320K. Confirm the week you tour.",
+        },
+        {
+          name: "Eagle Crest",
+          note: "Newer plan rows on this campus. Do not tour all three courses in one afternoon.",
+        },
+        {
+          name: "Mountain View Hospital",
+          note: "Adjacent pin. Commute minutes mapped from the listing, not a valley average.",
+        },
+      ],
+    },
+  ],
+  "/55-plus-communities/trilogy-summerlin": [
+    {
+      h2: "Shea clubhouse, spa, and plan rows — 12–18 minutes from Suite 100",
+      body: "Trilogy sits on the office side of the valley. Downtown Summerlin retail is a short hop after the clubhouse. Call (702) 222-1964. HOA cited on this page: $250–$350. Register before walking models.",
+      pins: [
+        {
+          name: "Clubhouse restaurant",
+          note: "On-site dining is a HOA amenity you pay for. Walk it before any plan row.",
+        },
+        {
+          name: "Spa and fitness",
+          note: "Square footage is clubhouse-scale, not a four-building Sun City rec campus.",
+        },
+        {
+          name: "Shea plans",
+          note: "About 800+ homes on this page. Open floor plans are listing facts — confirm the week you tour.",
+        },
+        {
+          name: "Do not add Anthem",
+          note: "Henderson 55+ is a separate east clock. Call (702) 222-1964 from 9406 W Lake Mead Blvd.",
+        },
+      ],
+    },
+  ],
+  "/55-plus-communities/heritage-stonebridge": [
+    {
+      h2: "Staffed gate, 1,100+ homes, Downtown Summerlin retail — 12–18 minutes from Suite 100",
+      body: "Guest lists are booked from 9406 W Lake Mead Blvd so arrival is not improvised. Call (702) 222-1964. Published band on this page: $400K–$750K. HOA $175–$220. This is not a 7,700-home campus.",
+      pins: [
+        {
+          name: "Staffed gate",
+          note: "We put you on the list that morning. Gate codes stay off group texts.",
+        },
+        {
+          name: "Clubhouse",
+          note: "Smaller rec building than Sun City Summerlin. Walk it before you pick a street.",
+        },
+        {
+          name: "Downtown Summerlin",
+          note: "Retail on the same west hop as Suite 100. Not a Henderson add-on.",
+        },
+        {
+          name: "Occupancy packet",
+          note: "Age-restriction and guest rules at the desk. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/55-plus-communities/solera-anthem": [
+    {
+      h2: "1,200-home Henderson campus, staffed gate — 30–35 minutes from Suite 100",
+      body: "All residents must be 55+ here — confirm the HOA occupancy rule in writing. Call (702) 222-1964. Published band on this page: $380K–$650K. HOA $170–$210. Compare Sun City Anthem on the same east clock only if that is the brief.",
+      pins: [
+        {
+          name: "Occupancy in writing",
+          note: "This campus is all-55+. Packet at 9406 W Lake Mead Blvd before the drive.",
+        },
+        {
+          name: "Clubhouse and pool",
+          note: "Boutique rec, not Anthem Center's 64,000 sq ft. Walk one building.",
+        },
+        {
+          name: "Staffed gate",
+          note: "Guest list from Suite 100. Do not mix with a Summerlin 55+ morning.",
+        },
+        {
+          name: "Anthem parks",
+          note: "Nearby parks are on this Henderson clock. Call (702) 222-1964.",
+        },
+      ],
+    },
+  ],
+  "/55-plus-communities/sun-city-aliante": [
+    {
+      h2: "42,000 sq ft rec, 18-hole course, 2,800+ homes — 20–25 minutes north from Suite 100",
+      body: "Golf and rec sit next to the Aliante retail strip. Call (702) 222-1964. Occupancy rules at 9406 W Lake Mead Blvd before the north loop. Do not add Henderson the same day.",
+      pins: [
+        {
+          name: "42,000 sq ft rec",
+          note: "Pools, fitness, tennis, pickleball. Walk the building before fairway vs interior lots.",
+        },
+        {
+          name: "18-hole course",
+          note: "Winds through the campus. Resident rates are in the packet — confirm the week you tour.",
+        },
+        {
+          name: "Aliante retail",
+          note: "Adjacent strip. Craig Road and I-15 commutes mapped if you still work.",
+        },
+        {
+          name: "North Vista Hospital",
+          note: "Hospital pin on this north clock. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/55-plus-communities/del-webb-lake-las-vegas": [
+    {
+      h2: "$400K–$900K, pickleball, 320-acre lake — 35–45 minutes from Suite 100",
+      body: "Del Webb at Lake Las Vegas is a 2016-to-present 55+ campus. Occupancy at 9406 W Lake Mead Blvd before the Henderson drive. Call (702) 222-1964. HOA cited on this page: $200–$280. Do not stack with a Summerlin 55+ morning.",
+      pins: [
+        {
+          name: "320-acre lake",
+          note: "Shoreline and golf are on this east-Henderson clock. Measure from the listing.",
+        },
+        {
+          name: "Pickleball and rec",
+          note: "Walk the rec building before any plan row. About 1,800+ homes on this page.",
+        },
+        {
+          name: "2016+ construction",
+          note: "Newer product than 1989 Sun City Summerlin. Confirm HOA packet the week you tour.",
+        },
+        {
+          name: "East clock only",
+          note: "35–45 minutes from Suite 100. Office/GBP (702) 500-1942.",
         },
       ],
     },

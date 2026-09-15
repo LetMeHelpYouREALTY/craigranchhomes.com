@@ -17,6 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
@@ -102,7 +103,7 @@ export default function SoleraAnthemPage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Solera at Anthem at a Glance
+              1,200+ Homes, $170–$210 HOA, $380K–$650K Band — Stats Before the Henderson Drive
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -130,75 +131,7 @@ export default function SoleraAnthemPage() {
             </div>
           </section>
 
-          {/* About */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Solera at Anthem
-              </h2>
-<p>
-                <strong>Solera at Anthem</strong> offers something increasingly
-                rare in Las Vegas 55+ living—a 1,200-home campus with a staffed gate.
-                With approximately 1,200 homes, Solera
-                is significantly smaller than Sun City's 7,000+ home developments,
-                creating a smaller scale that 7,000-home campuses simply
-                can't replicate.
-              </p>
-              <p>
-                Built by Del Webb from 2002-2006, Solera features guard-gated
-                security, a beautiful clubhouse, resort-style pool, fitness
-                center, and active social programming. Unlike some 55+
-                communities where one spouse can be younger, Solera requires{" "}
-                <strong>all residents to be 55+</strong>, ensuring a consistent
-                community demographic.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>{" "}
-                helps buyers who value community over amenity overload. Dr. Jan
-                Duffy understands why some buyers prefer Solera's 1,200-home scale
-                and all-55+ requirement to larger developments.
-              </p>
-            </div>
-          </section>
-
-          {/* Key Differentiator */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="bg-teal-50 border-l-4 border-teal-600 rounded-r-xl p-8">
-              <div className="flex items-start">
-                <Users className="h-8 w-8 text-teal-600 mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    All Residents 55+
-                  </h3>
-                  <p className="text-slate-700 mb-4">
-                    Most 55+ communities allow younger spouses under the 80/20
-                    HOPA rule. Solera is different—
-                    <strong>every resident must be 55 or older</strong>. This
-                    creates a truly age-matched community where everyone shares
-                    similar life stages and interests.
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-white rounded-lg p-4">
-                      <div className="font-bold text-teal-600 mb-1">
-                        Solera at Anthem
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        100% of residents 55+
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <div className="font-bold text-slate-500 mb-1">
-                        Most 55+ Communities
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        80% with 55+ resident, 20% can be younger
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/solera-anthem" />
 
           <FiftyFiveAmenities path="/55-plus-communities/solera-anthem" />
 

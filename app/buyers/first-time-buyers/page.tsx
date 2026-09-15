@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Home as HomeIcon,
   DollarSign,
   Key,
   CheckCircle,
@@ -70,43 +69,7 @@ export default function FirstTimeBuyersPage() {
 
           <LeftoverBand path="/buyers/first-time-buyers" slot={1} />
 
-          {/* Rent vs Buy */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Rent vs. Buy in Las Vegas
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-                <h3 className="font-bold text-lg text-red-900 mb-4 flex items-center">
-                  <HomeIcon className="h-5 w-5 mr-2" />
-                  Renting: $1,800/month
-                </h3>
-                <ul className="space-y-2 text-red-800">
-                  <li>• No equity building</li>
-                  <li>• Rent increases each year</li>
-                  <li>• No tax benefits</li>
-                  <li>• Landlord controls your living situation</li>
-                  <li>• After 5 years: $108,000 spent, $0 equity</li>
-                </ul>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                <h3 className="font-bold text-lg text-green-900 mb-4 flex items-center">
-                  <Key className="h-5 w-5 mr-2" />
-                  Buying: $1,900/month*
-                </h3>
-                <ul className="space-y-2 text-green-800">
-                  <li>• Building $600+/month in equity</li>
-                  <li>• Payment stays mostly fixed</li>
-                  <li>• Mortgage interest tax deduction</li>
-                  <li>• Freedom to customize your home</li>
-                  <li>• After 5 years: $36,000+ equity built</li>
-                </ul>
-                <p className="text-xs text-green-600 mt-3">
-                  *Based on $400K home with 3.5% down, 6.5% rate
-                </p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/buyers/first-time-buyers" slot={2} />
 
           {/* Timeline */}
           <BuyerFaqs path="/buyers/first-time-buyers" />
@@ -117,7 +80,7 @@ export default function FirstTimeBuyersPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Stop Renting?
+              Lender letter at Suite 100, then two ZIPs — Calendly or (702) 222-1964
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Let's talk about your options. Dr. Jan Duffy will help you understand what you can
