@@ -119,14 +119,13 @@ export default function TheRidgesPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Unmatched Privacy & Security</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Guard-gated check-in from Suite 100</h4>
                   </div>
                   <p className="text-slate-600">
-                    The Ridges offers 24/7 guard-gated security with roving patrols, giving residents
-                    the peace of mind they expect at this price point. The community's exclusivity—only
-                    900 homes across nearly 800 acres—ensures privacy that's impossible to find in
-                    higher-density developments. Many residents include celebrities, executives, and
-                    individuals for whom privacy is non-negotiable.
+                    The Ridges uses 24/7 guard-gated check-in with roving patrols. About 900 home
+                    sites sit across nearly 800 acres. Gate lists and off-market windows are
+                    confirmed at 9406 W Lake Mead Blvd, Suite 100, typically a 15–20 minute drive
+                    to the guardhouse. We do not text estate addresses on unsecured threads.
                   </p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl">

@@ -16,7 +16,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -329,89 +329,8 @@ export default function SunCityAliantePage() {
           </section>
 
           {/* Why Choose Sun City Aliante */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Buyers Choose Sun City Aliante
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Lowest entry price of any Sun City
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Homes starting around $280K—$40K-$70K less than other Sun City
-                    communities
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Lowest HOA fees in the Sun City family
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    $140-$175/month—up to $75/month less than other communities
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Same amenities as more expensive communities
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Golf, pools, fitness, 100+ clubs—everything you'd expect from
-                    Sun City
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Newer construction than Summerlin
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Built 2003-2010, so homes have more modern floor plans and
-                    features
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveFaqs path="/55-plus-communities/sun-city-aliante" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Sun City Aliante is my top recommendation for buyers who want the
-                full Sun City lifestyle at the best possible price. The amenities
-                are excellent, the community is active and welcoming, and you
-                simply can't beat the value. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I help
-                buyers compare all the Sun City options and understand why Aliante
-                often makes the most financial sense."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Sun City Aliante FAQ
-            </h2>
-            <FaqAccordion items={[
-              { q: "What is the price range at Sun City Aliante?", a: "Homes typically range from about $280,000 to $550,000 as of January 2026. Monthly HOA is about $140–$175, among the lowest Sun City dues in the valley." },
-              { q: "Does Sun City Aliante have golf?", a: "Yes. Residents have access to an 18-hole golf course plus pools, fitness, and 100+ clubs." },
-              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

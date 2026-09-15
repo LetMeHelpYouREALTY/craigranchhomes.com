@@ -15,7 +15,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 
@@ -204,76 +204,8 @@ export default function DelWebbLakeLasVegasPage() {
           </section>
 
           {/* Why Del Webb Lake Las Vegas */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Buyers Choose Del Webb Lake Las Vegas
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Newest construction in Las Vegas 55+ market</strong>
-                  <p className="text-slate-600 text-sm">
-                    Modern floor plans, current building codes, energy efficiency, warranties
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Unique lakefront setting</strong>
-                  <p className="text-slate-600 text-sm">
-                    The only 55+ community on Lake Las Vegas—waterfront views and activities
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Resort-style living</strong>
-                  <p className="text-slate-600 text-sm">
-                    Access to Westin, Reflection Bay, and Lake Las Vegas Village amenities
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Del Webb lifestyle programming</strong>
-                  <p className="text-slate-600 text-sm">
-                    Organized activities, clubs, travel, and social events—built-in social life
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveFaqs path="/55-plus-communities/del-webb-lake-las-vegas" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Del Webb at Lake Las Vegas offers something no other 55+ community can—lakefront
-                living in the desert. The homes are modern, the setting is spectacular, and the
-                Del Webb programming creates instant community. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I help buyers understand
-                which lots offer the best views and which floor plans work for their lifestyle."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Del Webb Lake Las Vegas FAQ
-            </h2>
-            <FaqAccordion items={[
-              { q: "What is the price range at Del Webb Lake Las Vegas?", a: "Homes typically range from about $400,000 to $900,000 as of January 2026. Monthly HOA is about $200–$280." },
-              { q: "Is this a lakefront 55-plus community?", a: "Yes. Del Webb at Lake Las Vegas is a newer 55+ village with lake and mountain views and resort amenities in Henderson." },
-              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

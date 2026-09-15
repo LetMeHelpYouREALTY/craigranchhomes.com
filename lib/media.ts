@@ -462,3 +462,30 @@ export function faqPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods")) return photos.lakeLasVegas;
   return photos.officeExterior;
 }
+
+/** Seventh still for 55+ FAQ H2s — distinct from that path's H1/H2/H3 stills. */
+export function fiftyFiveFaqPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) {
+    return photos.officeExterior;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-anthem")) {
+    return photos.greenValley;
+  }
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) {
+    return photos.ridges;
+  }
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/55-plus-communities/solera-anthem")) {
+    return photos.inspirada;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) {
+    return photos.centennial;
+  }
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) {
+    return photos.southernHighlands;
+  }
+  if (path.startsWith("/55-plus-communities")) return photos.office;
+  return photos.market;
+}

@@ -16,14 +16,13 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import { pageMetadata } from "@/lib/seo";
 
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
   generateSeniorCommunitySchema,
-  generateFAQSchema,
   combineSchemas,
 } from "@/lib/schema";
 
@@ -62,29 +61,6 @@ const communityAmenities = [
   { name: "Social Clubs", description: "80+ clubs and activity groups" },
 ];
 
-// FAQ data for schema
-const sunCityAnthemFaqs = [
-  {
-    question: "What is the age requirement for Sun City Anthem?",
-    answer:
-      "Sun City Anthem is a 55+ active adult community. At least one resident in each home must be 55 or older, and no residents under 19 are permitted.",
-  },
-  {
-    question: "What are the HOA fees at Sun City Anthem?",
-    answer:
-      "Monthly HOA fees at Sun City Anthem range from $180-$230 depending on the neighborhood and home type. Fees cover access to all community amenities, common area maintenance, and some utilities.",
-  },
-  {
-    question: "What is the price range for homes in Sun City Anthem?",
-    answer:
-      "Homes in Sun City Anthem range from approximately $350,000 to $1.2 million. The Liberty section offers more affordable options, while Heritage and Eagle's Landing feature premium homes with the best views.",
-  },
-  {
-    question: "Does Sun City Anthem have golf courses?",
-    answer:
-      "Yes, Sun City Anthem residents have access to two championship golf courses: Anthem Country Club (members-only) and the adjacent Revere Golf Club (public). Residents enjoy discounted rates and priority tee times.",
-  },
-];
 
 // Combined page schemas
 const pageSchemas = combineSchemas(
@@ -102,13 +78,12 @@ const pageSchemas = combineSchemas(
     longitude: -115.0892,
     ageRestriction: "55+",
   }),
-  generateFAQSchema(sunCityAnthemFaqs)
 );
 
 export default function SunCityAnthemPage() {
   return (
     <>
-      {/* Combined JSON-LD Schema: Breadcrumb + ResidentialComplex + FAQ */}
+      {/* Combined JSON-LD Schema: Breadcrumb + ResidentialComplex */}
       <SchemaScript schema={pageSchemas} id="sun-city-anthem-schema" />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -319,13 +294,8 @@ export default function SunCityAnthemPage() {
               </cite>
             </div>
           </section>
+          <FiftyFiveFaqs path="/55-plus-communities/sun-city-anthem" />
 
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Sun City Anthem FAQ
-            </h2>
-            <FaqAccordion items={sunCityAnthemFaqs} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

@@ -17,7 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -315,90 +315,8 @@ export default function HeritageAtStonebridgePage() {
           </section>
 
           {/* Why Choose Heritage */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Buyers Choose Heritage at Stonebridge
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    True guard-gated security
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    24/7 manned gate with visitor verification—genuine privacy, not
-                    just a keypad
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Boutique 1,100-home campus
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    1,100+ homes means you know your neighbors—intimate atmosphere
-                    vs. massive 7,000+ home developments
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Unbeatable Summerlin location
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Downtown Summerlin, Red Rock Canyon, and top golf courses all
-                    minutes away
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    No mandatory golf fees
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Lower HOA because you're not subsidizing a golf course—play
-                    when and where you want
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveFaqs path="/55-plus-communities/heritage-stonebridge" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Heritage at Stonebridge attracts buyers who want exclusivity and
-                privacy without the sprawl of larger 55+ communities. The
-                guard-gated security is genuine—not just a code anyone can get.
-                And the location in Summerlin is simply unbeatable. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I help
-                buyers who prioritize quality over quantity find their perfect
-                fit here."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Heritage at Stonebridge FAQ
-            </h2>
-            <FaqAccordion items={[
-              { q: "What is the price range at Heritage at Stonebridge?", a: "Homes typically range from about $400,000 to $750,000 as of January 2026. Monthly HOA is about $175–$220." },
-              { q: "Is Heritage at Stonebridge guard-gated?", a: "Yes. It is a boutique guard-gated 55+ village in Summerlin near Downtown Summerlin shopping." },
-              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

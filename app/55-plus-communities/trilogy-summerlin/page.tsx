@@ -17,7 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -317,90 +317,8 @@ export default function TrilogySummerlinPage() {
           </section>
 
           {/* Why Choose Trilogy */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Buyers Choose Trilogy at Summerlin
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    True resort lifestyle, not just amenities
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    On-site restaurant, full-service spa, and hospitality-trained
-                    staff create a resort experience
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Contemporary homes, not dated designs
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Modern architecture with open floor plans and designer
-                    finishes—a departure from traditional 55+ construction
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Boutique community size
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    800+ homes—large enough for vibrant programming, small enough
-                    for genuine community
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Premium Summerlin location
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Near Downtown Summerlin, Red Rock Canyon, and top golf
-                    courses—the best of Las Vegas at your doorstep
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveFaqs path="/55-plus-communities/trilogy-summerlin" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Trilogy at Summerlin is for buyers who want more than a 55+
-                community—they want a lifestyle. The on-site restaurant, spa, and
-                contemporary homes create an experience you simply can't find
-                elsewhere. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent serving
-                luxury 55+ buyers, I recommend Trilogy to those who appreciate
-                quality and won't settle for ordinary."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Trilogy at Summerlin FAQ
-            </h2>
-            <FaqAccordion items={[
-              { q: "What is the price range at Trilogy at Summerlin?", a: "Homes typically range from about $500,000 to $1.1 million as of January 2026. Monthly HOA is about $250–$350 and includes the clubhouse, spa, and dining amenities." },
-              { q: "What amenities are on site?", a: "Farm-to-table dining, spa, fitness, and contemporary floor plans on the Summerlin west side near Red Rock Canyon." },
-              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-gradient-to-r from-rose-600 to-pink-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

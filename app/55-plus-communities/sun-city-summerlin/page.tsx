@@ -18,9 +18,8 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import { pageMetadata } from "@/lib/seo";
-import { generateFAQSchema } from "@/lib/schema";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -55,20 +54,6 @@ const communitySchema = {
   },
 };
 
-const sunCitySummerlinFaqs = [
-  {
-    q: "What is the price range in Sun City Summerlin?",
-    a: "Homes typically list from about $320,000 to $850,000 as of January 2026. HOA dues are about $155–$195 per month and include rec centers, golf access rules, and common-area maintenance.",
-  },
-  {
-    q: "How large is Sun City Summerlin?",
-    a: "About 7,700 homes with three golf courses, four recreation centers, and 100+ clubs. Mountain View Hospital sits adjacent to the campus.",
-  },
-  {
-    q: "How do I tour Sun City Summerlin with Dr. Jan Duffy?",
-    a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Register for a private tour before walking model streets.",
-  },
-];
 
 export default function SunCitySummerlinPage() {
   return (
@@ -76,16 +61,6 @@ export default function SunCitySummerlinPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            generateFAQSchema(
-              sunCitySummerlinFaqs.map((f) => ({ question: f.q, answer: f.a }))
-            )
-          ),
-        }}
       />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -255,72 +230,8 @@ export default function SunCitySummerlinPage() {
           </section>
 
           {/* Why Choose */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Buyers Choose Sun City Summerlin
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Lowest HOA fees in Las Vegas 55+ market</strong>
-                  <p className="text-slate-600 text-sm">
-                    $155-$195/month includes all amenities—significantly less than newer communities
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Mature landscaping and full-grown trees</strong>
-                  <p className="text-slate-600 text-sm">
-                    No construction noise; trees and vegetation fully grown
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Proximity to Red Rock Canyon and Summerlin amenities</strong>
-                  <p className="text-slate-600 text-sm">
-                    Downtown Summerlin shopping and dining minutes away, hiking trails nearby
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">Mountain View Hospital on property</strong>
-                  <p className="text-slate-600 text-sm">
-                    Full-service hospital adjacent to community—peace of mind for residents
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveFaqs path="/55-plus-communities/sun-city-summerlin" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Sun City Summerlin offers the best value in Las Vegas 55+ living. Where else can
-                you get three golf courses, four rec centers, and 100+ clubs for under $200/month?
-                As a <strong>Berkshire Hathaway HomeServices</strong> agent, I help buyers navigate
-                the community's various neighborhoods to find the perfect fit—whether they want
-                golf course views, mountain views, or proximity to their favorite rec center."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Sun City Summerlin FAQ
-            </h2>
-            <FaqAccordion items={sunCitySummerlinFaqs} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-amber-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

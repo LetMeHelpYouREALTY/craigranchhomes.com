@@ -24,7 +24,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -54,60 +54,6 @@ export const metadata: Metadata = pageMetadata({
   },
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What are the age requirements for 55+ communities in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Per the Housing for Older Persons Act (HOPA), at least 80% of occupied units must have one resident 55 or older. The remaining 20% can be younger, but some communities require all residents to be 55+. Spouses can be younger in most communities.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I buy in a 55+ community if I'm under 55?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Generally no, but there are exceptions. You may purchase if you'll be 55 by close of escrow, or as an investor who will rent to 55+ tenants. Some communities allow residents 45-54 in limited circumstances. A BHHS agent can explain each community's specific rules.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What do HOA fees cover in 55+ communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "HOA fees in Las Vegas 55+ communities typically cover access to clubhouses, pools, fitness centers, golf courses, organized activities, landscaping, and exterior maintenance. Fees range from $150-$500/month depending on amenities. Some communities have separate golf memberships.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are 55+ communities a good investment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Las Vegas 55+ communities have shown strong appreciation due to limited supply and growing demand from retiring Baby Boomers. Sun City Summerlin homes have appreciated 40%+ over 5 years. The lifestyle amenities also make properties easier to sell.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can grandchildren visit or stay in 55+ communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, most communities allow guests of any age to visit and stay temporarily (typically 30-90 days per year). However, children cannot be permanent residents. Each community has specific guest policies that Dr. Jan Duffy can explain.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why do California residents move to Las Vegas 55+ communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "California retirees choose Las Vegas for no state income tax, lower property prices (often 50-60% less than California), lower cost of living, warm weather, world-class healthcare, and the ability to get more home and amenities for their money. Many can sell their California home and buy in Las Vegas with cash to spare.",
-      },
-    },
-  ],
-};
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -330,10 +276,6 @@ const lifestyleBenefits = [
 export default function FiftyFiveCommunitiesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -683,20 +625,8 @@ export default function FiftyFiveCommunitiesPage() {
               </cite>
             </div>
           </section>
+          <FiftyFiveFaqs path="/55-plus-communities" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              55+ Community Buying FAQs
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What are the age requirements for 55+ communities in Las Vegas?", a: "Per the Housing for Older Persons Act (HOPA), at least 80% of occupied units must have one resident 55 or older. The remaining 20% can be younger, but some communities require all residents to be 55+. Spouses can be younger in most communities." },
-              { q: "Can I buy in a 55+ community if I'm under 55?", a: "Generally no, but there are exceptions. You may purchase if you'll be 55 by close of escrow, or as an investor who will rent to 55+ tenants. Some communities allow residents 45-54 in limited circumstances. Dr. Jan can explain each community's specific rules." },
-              { q: "What do HOA fees cover in 55+ communities?", a: "HOA fees typically cover access to clubhouses, pools, fitness centers, golf courses, organized activities, landscaping, and exterior maintenance. Fees range from $140-$350/month depending on amenities. Some communities have separate golf memberships." },
-              { q: "Why do California residents choose Las Vegas 55+ communities?", a: "California retirees love Las Vegas for no state income tax, lower property prices (50-60% less), lower cost of living, warm weather, world-class healthcare, and the ability to get more home and amenities for their money. Many sell their California home and buy in Las Vegas with cash to spare." },
-              { q: "Can grandchildren visit or stay in 55+ communities?", a: "Yes, most communities allow guests of any age to visit and stay temporarily (typically 30-90 days per year). However, children cannot be permanent residents. Each community has specific guest policies that Dr. Jan Duffy can explain." },
-            ]} />
-          </section>
 
           {/* Why BHHS */}
           <section className="mb-16 max-w-4xl mx-auto">

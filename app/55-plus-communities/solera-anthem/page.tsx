@@ -17,7 +17,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -315,88 +315,8 @@ export default function SoleraAnthemPage() {
           </section>
 
           {/* Why Choose Solera */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Buyers Choose Solera at Anthem
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Intimate community where neighbors become friends
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    1,200 homes vs. 7,000+—you'll actually know your neighbors
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    All residents 55+—no exceptions
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Consistent community demographic with shared life experiences
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Guard-gated 55+ living in Henderson
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Staffed gate 24/7 plus Henderson police and fire stations within typical
-                    suburban response distance
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <div>
-                  <strong className="text-slate-900">
-                    Lower HOA than mega-communities
-                  </strong>
-                  <p className="text-slate-600 text-sm">
-                    Pay for what you use, not massive golf courses and rec centers
-                    you may not need
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveFaqs path="/55-plus-communities/solera-anthem" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Solera at Anthem is a fit for buyers who find Sun City
-                overwhelming. It's 1,200 homes, genuinely guard-gated, and
-                every resident is 55+. The campus is smaller than a 7,700-home
-                Sun City. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I often
-                recommend Solera to buyers who prioritize community connection
-                over endless amenities."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Solera at Anthem FAQ
-            </h2>
-            <FaqAccordion items={[
-              { q: "What is the price range at Solera at Anthem?", a: "Homes typically range from about $380,000 to $650,000 as of January 2026. Monthly HOA is about $170–$210." },
-              { q: "How many homes are in Solera?", a: "About 1,200 homes behind a staffed gate in Henderson, with a boutique clubhouse campus." },
-              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-teal-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
