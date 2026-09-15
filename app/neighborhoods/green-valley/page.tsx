@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -94,6 +95,8 @@ export default function GreenValleyPage() {
             </div>
           </div>
 
+          <OfficeProximity path="/neighborhoods/green-valley" />
+
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
@@ -125,7 +128,7 @@ export default function GreenValleyPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Green Valley: Where Henderson Families Have Thrived for 35+ Years
+                Green Valley: 35+ Years of Mature Trees, Golf, and The District
               </h2>
               <p>
                 <strong>Green Valley</strong> holds a special place in Henderson's history as the city's
@@ -316,8 +319,8 @@ export default function GreenValleyPage() {
               Discover Green Valley Living
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Green Valley specialist,
-              for expert guidance in this Henderson community.
+              Meet at The District, then tour Green Valley's mature-tree streets. Henderson is
+              25–35 minutes east of the Lake Mead Blvd office via I-215.
             </p>
             <CtaActions variant="onDark" />
           </section>

@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -92,6 +93,8 @@ export default function TrilogySummerlinPage() {
               <RealScoutSearch />
             </div>
           </div>
+          <OfficeProximity path="/55-plus-communities/trilogy-summerlin" />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -411,10 +414,7 @@ export default function TrilogySummerlinPage() {
             </p>
             <CtaActions variant="onDark" />
             <p className="text-rose-200">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
+              Clubhouse, spa, and Shea plans are 12–18 minutes from the Lake Mead Blvd office.
             </p>
           </section>
         </div>

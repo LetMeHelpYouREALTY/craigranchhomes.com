@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -91,6 +92,8 @@ export default function SoleraAnthemPage() {
               <RealScoutSearch />
             </div>
           </div>
+          <OfficeProximity path="/55-plus-communities/solera-anthem" />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -407,10 +410,7 @@ export default function SoleraAnthemPage() {
             </p>
             <CtaActions variant="onDark" />
             <p className="text-teal-200">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
+              Solera tours run with Anthem parks on a 30–35 minute Henderson block from the office.
             </p>
           </section>
         </div>

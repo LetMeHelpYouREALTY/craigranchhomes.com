@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -58,6 +59,8 @@ export default function DelWebbLakeLasVegasPage() {
               <RealScoutSearch />
             </div>
           </div>
+          <OfficeProximity path="/55-plus-communities/del-webb-lake-las-vegas" />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

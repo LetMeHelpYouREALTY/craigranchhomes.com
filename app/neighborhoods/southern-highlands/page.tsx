@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -93,6 +94,8 @@ export default function SouthernHighlandsPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/southern-highlands" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -340,8 +343,8 @@ export default function SouthernHighlandsPage() {
               Explore Southern Highlands Living
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Southern Highlands specialist,
-              for expert guidance in this premier golf community.
+              Southern Highlands golf and ridge-top listings are a 25–35 minute I-15 run from
+              the office. Call for a south-valley tour block.
             </p>
             <CtaActions variant="onDark" />
           </section>

@@ -81,7 +81,7 @@ export default function LuxuryHomesPage() {
               $1.2M - $10M+
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Luxury Real Estate
+              Private Luxury Home Search in Las Vegas
             </h1>
             <HeadingPhoto path="/buyers/luxury-homes-las-vegas" />
 

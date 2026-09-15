@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -93,6 +94,8 @@ export default function CentennialHillsPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/centennial-hills" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -340,8 +343,8 @@ export default function CentennialHillsPage() {
               Find Your Centennial Hills Home
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Centennial Hills expert,
-              for guidance in this northwest Las Vegas community.
+              Centennial Hills mountain-view streets sit 15–20 minutes up US-95 from the office.
+              Ask Dr. Jan to pair a Floyd Lamb Park loop with live MLS.
             </p>
             <CtaActions variant="onDark" />
           </section>

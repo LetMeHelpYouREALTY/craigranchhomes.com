@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -93,6 +94,8 @@ export default function MountainsEdgePage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/mountains-edge" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -339,8 +342,8 @@ export default function MountainsEdgePage() {
               Discover Mountains Edge Value
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Mountains Edge specialist,
-              for expert guidance in finding exceptional value in southwest Las Vegas.
+              Mountains Edge and Exploration Peak listings sit 20–30 minutes southwest on the Beltway.
+              Value comps versus Summerlin are reviewed before you leave the office.
             </p>
             <CtaActions variant="onDark" />
           </section>

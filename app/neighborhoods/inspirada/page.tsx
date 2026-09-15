@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -93,6 +94,8 @@ export default function InspiradaPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/inspirada" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -249,7 +252,7 @@ export default function InspiradaPage() {
                   <ul className="text-slate-600 text-sm space-y-2">
                     <li>• Resort-style pool with cabanas</li>
                     <li>• Water slides and splash features</li>
-                    <li>• Zero-entry family pool</li>
+                    <li>• Zero-entry pool</li>
                     <li>• Lap lanes for fitness swimming</li>
                     <li>• Poolside WiFi and refreshments</li>
                     <li>• Extended summer hours</li>
@@ -307,11 +310,11 @@ export default function InspiradaPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Inspirada isn't just a place to live—it's a lifestyle. Families move here for the
-                pools, the trails, and the community events that make weekends special. As a
-                Berkshire Hathaway HomeServices agent, I help clients find the specific neighborhood
-                within Inspirada that matches how they want to live, whether that's close to the
-                main pool complex or on a quiet cul-de-sac backing to open space."
+                "Inspirada buyers pick it for the amenity campus, 10+ miles of trails, and builder
+                rows from Toll Brothers to Lennar. As a Berkshire Hathaway HomeServices agent, I
+                match square footage and HOA amenities to how you actually use the park, pool, and
+                trail system—whether that is next to the main pool complex or on a cul-de-sac
+                backing to open space."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
@@ -338,8 +341,8 @@ export default function InspiradaPage() {
               Experience Inspirada Living
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Inspirada specialist,
-              for expert guidance in Henderson's premier resort-style community.
+              Inspirada amenity centers and builder rows are a 30–40 minute south Henderson block.
+              Dr. Jan sequences Toll Brothers, Lennar, and resale in one trip.
             </p>
             <CtaActions variant="onDark" />
           </section>

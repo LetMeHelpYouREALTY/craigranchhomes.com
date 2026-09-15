@@ -273,6 +273,10 @@ export function h3PhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.skyeCanyon;
   if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.lakeLasVegas;
   if (path.startsWith("/55-plus-communities/trilogy-summerlin")) return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) return photos.summerlin;
+  if (path.startsWith("/55-plus-communities/solera-anthem")) return photos.henderson;
+  if (path.startsWith("/55-plus-communities/sun-city-anthem")) return photos.henderson;
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) return photos.summerlinTrail;
   if (path.startsWith("/55-plus")) return photos.fiftyFiveFitness;
   if (path.startsWith("/investment")) return photos.investment;
   if (path.startsWith("/google-business") || path.startsWith("/contact") || path.startsWith("/about")) {

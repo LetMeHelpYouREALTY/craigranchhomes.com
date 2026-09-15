@@ -37,8 +37,8 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             </h1>
             <p className="text-slate-700 mb-6">
               Live MLS details for listing reference <span className="font-semibold">{params.id}</span>{" "}
-              are shown through RealScout. Dr. Jan Duffy at {nap.brokerage} can pull the full
-              listing packet, comparable sales, and a private tour time.
+              are shown through RealScout. Tours start from {nap.fullAddress} unless we meet at the
+              property. Dr. Jan Duffy can pull the listing packet, comps, and a private showing time.
             </p>
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden mb-6">
               <Image

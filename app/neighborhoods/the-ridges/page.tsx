@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -93,6 +94,8 @@ export default function TheRidgesPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/the-ridges" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -339,8 +342,8 @@ export default function TheRidgesPage() {
               Experience The Ridges Luxury
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy for a confidential consultation about buying or selling
-              in Las Vegas's most prestigious community.
+              Book a confidential Ridges gate tour. Estate showings are sequenced from the
+              9406 W Lake Mead Blvd office so you are not sitting in valley traffic between villages.
             </p>
             <CtaActions variant="onDark" />
           </section>

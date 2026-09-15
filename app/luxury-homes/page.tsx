@@ -132,7 +132,7 @@ export default function LuxuryHomesPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Luxury Real Estate
+              List or Buy Las Vegas Luxury Homes With BHHS
             </h1>
             <HeadingPhoto path="/luxury-homes" />
 

@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -93,6 +94,8 @@ export default function NorthLasVegasPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/north-las-vegas" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -343,8 +346,8 @@ export default function NorthLasVegasPage() {
               Start Your Homeownership Journey
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices North Las Vegas expert,
-              for guidance on finding affordable homes that fit your budget.
+              North Las Vegas and Aliante new-construction villages are 20–25 minutes via US-95/I-15.
+              Dr. Jan groups Craig Road employment-corridor stops into one north loop.
             </p>
             <CtaActions variant="onDark" />
           </section>

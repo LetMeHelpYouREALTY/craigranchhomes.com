@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -92,6 +93,8 @@ export default function HeritageAtStonebridgePage() {
               <RealScoutSearch />
             </div>
           </div>
+          <OfficeProximity path="/55-plus-communities/heritage-stonebridge" />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -409,10 +412,7 @@ export default function HeritageAtStonebridgePage() {
             </p>
             <CtaActions variant="onDark" />
             <p className="text-purple-200">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
+              The Heritage gate is 12–18 minutes from 9406 W Lake Mead Blvd, next to Downtown Summerlin.
             </p>
           </section>
         </div>

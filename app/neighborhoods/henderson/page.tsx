@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -109,6 +110,8 @@ export default function HendersonPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/henderson" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -351,8 +354,8 @@ export default function HendersonPage() {
               Find Your Henderson Home Today
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Henderson expert,
-              for personalized guidance and local market insights.
+              Compare Green Valley, Anthem, Inspirada, and Water Street from one Henderson day.
+              Drive time from the office is typically 25–35 minutes.
             </p>
             <CtaActions variant="onDark" />
           </section>

@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -105,6 +106,8 @@ export default function SummerlinPage() {
               <RealScoutSearch />
             </div>
           </div>
+
+          <OfficeProximity path="/neighborhoods/summerlin" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -332,8 +335,8 @@ export default function SummerlinPage() {
               Ready to Find Your Summerlin Home?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Summerlin specialist,
-              for a personalized home search or free market analysis.
+              Tour Red Rock trailheads and Summerlin villages with Dr. Jan Duffy. Same-day showings
+              start 10–15 minutes from the Lake Mead Blvd office.
             </p>
             <CtaActions variant="onDark" />
           </section>

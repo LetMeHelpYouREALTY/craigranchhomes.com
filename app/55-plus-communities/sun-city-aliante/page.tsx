@@ -14,6 +14,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -91,6 +92,8 @@ export default function SunCityAliantePage() {
               <RealScoutSearch />
             </div>
           </div>
+          <OfficeProximity path="/55-plus-communities/sun-city-aliante" />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -417,15 +420,11 @@ export default function SunCityAliantePage() {
               Discover Sun City Aliante's Value
             </h2>
             <p className="text-xl text-green-100 mb-8">
-              See why Sun City Aliante offers the best value in Las Vegas 55+
-              living. Tour the community with Dr. Jan Duffy.
+              See Sun City Aliante's course, rec campus, and HOA dues on a 20–25 minute north loop.
             </p>
             <CtaActions variant="onDark" />
             <p className="text-green-200">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
+              Aliante 55+ and the adjoining retail strip fit one north-valley tour from the office.
             </p>
           </section>
         </div>

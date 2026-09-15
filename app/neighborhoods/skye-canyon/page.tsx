@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -94,6 +95,8 @@ export default function SkyeCanyonPage() {
             </div>
           </div>
 
+          <OfficeProximity path="/neighborhoods/skye-canyon" />
+
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
@@ -137,7 +140,7 @@ export default function SkyeCanyonPage() {
               <p>
                 What sets Skye Canyon apart is Skye Center—a stunning 15-acre amenity complex that
                 rivals resort facilities. The facility features multiple pools including a zero-entry
-                family pool and lap pool, a state-of-the-art fitness center, tennis and pickleball
+                resort pool and lap pool, a state-of-the-art fitness center, tennis and pickleball
                 courts, and flexible event spaces that host community gatherings throughout the year.
                 From summer movie nights to holiday celebrations, Skye Center creates the kind of
                 community connections that transform neighborhoods into true communities.
@@ -268,7 +271,7 @@ export default function SkyeCanyonPage() {
                   <h5 className="font-bold text-slate-900 mb-3">Skye Center Features</h5>
                   <ul className="text-slate-600 text-sm space-y-2">
                     <li>• Resort-style pool with cabanas</li>
-                    <li>• Zero-entry family pool and splash pad</li>
+                    <li>• Zero-entry pool and splash pad</li>
                     <li>• Lap pool for fitness swimming</li>
                     <li>• State-of-the-art fitness center</li>
                     <li>• Tennis and pickleball courts</li>
@@ -341,8 +344,8 @@ export default function SkyeCanyonPage() {
               Discover Skye Canyon Living
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Skye Canyon specialist,
-              for expert guidance on new construction and resale homes.
+              Walk Skye Canyon model rows and resale streets in one northwest loop. The 215
+              puts the community 20–25 minutes from the office pin.
             </p>
             <CtaActions variant="onDark" />
           </section>

@@ -350,13 +350,12 @@ export default function ListingsPage() {
           {/* Home Buying Process */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Home Buying Process in Las Vegas
+              How to Use This Live MLS Search
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Buying a home is one of the most significant financial decisions you'll make. 
-              Understanding the process helps reduce stress and ensures you're prepared at each 
-              step. Here's what to expect when purchasing a home in Las Vegas with Dr. Jan Duffy 
-              and Berkshire Hathaway HomeServices.
+              Use this page to search live MLS, then book a showing. Pre-approval, offer strategy,
+              and tour logistics are handled on the buyers page. Here the job is inventory: filter
+              by beds, baths, and map, then call Dr. Jan Duffy at (702) 222-1964.
             </p>
             <div className="space-y-6">
               <div className="flex items-start">
