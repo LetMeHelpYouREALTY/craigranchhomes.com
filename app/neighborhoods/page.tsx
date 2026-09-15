@@ -8,6 +8,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
@@ -234,6 +236,8 @@ export default function NeighborhoodsPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <NamedCampuses path="/neighborhoods" />
             <NeighborhoodCommute path="/neighborhoods" />
+            <NeighborhoodAmenities path="/neighborhoods" />
+            <NeighborhoodLifestyle path="/neighborhoods" />
           </section>
           <NeighborhoodFaqs path="/neighborhoods" />
 

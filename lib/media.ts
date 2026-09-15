@@ -534,6 +534,67 @@ export function supportFaqPhotoForPath(path: string): SitePhoto {
   return photos.officeExterior;
 }
 
+/** Thirteenth still for neighborhood amenity H3s. */
+export function amenityPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/summerlin")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods/the-ridges")) return photos.agent;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.luxuryPool;
+  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.alianteRec;
+  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.market;
+  if (path.startsWith("/neighborhoods/green-valley")) return photos.lakeLasVegas;
+  if (path.startsWith("/neighborhoods/henderson")) return photos.inspirada;
+  if (path.startsWith("/neighborhoods/inspirada")) return photos.greenValley;
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.centennial;
+  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.fiftyFive;
+  if (path.startsWith("/neighborhoods")) return photos.newConstruction;
+  return photos.consultation;
+}
+
+/** Fourteenth still for 55+ amenity H2s. */
+export function fiftyFiveAmenityPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-anthem")) {
+    return photos.lakeLasVegas;
+  }
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) {
+    return photos.agent;
+  }
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) {
+    return photos.buyers;
+  }
+  if (path.startsWith("/55-plus-communities/solera-anthem")) {
+    return photos.mountainsEdge;
+  }
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) {
+    return photos.ridges;
+  }
+  if (path.startsWith("/55-plus-communities")) return photos.sellers;
+  return photos.office;
+}
+
+/** Fifteenth still for village lifestyle H2s — distinct from H1–H3, campus, commute, FAQ, amenity. */
+export function lifestylePhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/summerlin")) return photos.ridges;
+  if (path.startsWith("/neighborhoods/the-ridges")) return photos.market;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.greenValley;
+  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.lakeLasVegas;
+  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.inspirada;
+  if (path.startsWith("/neighborhoods/green-valley")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods/henderson")) return photos.agent;
+  if (path.startsWith("/neighborhoods/inspirada")) return photos.market;
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods")) return photos.fiftyFive;
+  return photos.consultation;
+}
+
 export type FaqHubCategoryId =
   | "bhhs"
   | "buying"

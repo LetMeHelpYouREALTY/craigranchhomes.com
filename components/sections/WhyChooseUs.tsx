@@ -1,5 +1,9 @@
 import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
 import Link from "next/link";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import { ctaPhone, nap } from "@/lib/contact";
+import { photos } from "@/lib/media";
 
 const features = [
   {
@@ -37,17 +41,23 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-white" aria-labelledby="why-choose-heading">
+    <section
+      className="py-16 md:py-24 bg-white"
+      aria-labelledby="why-choose-heading"
+      data-why-choose-us="/"
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 max-w-4xl mx-auto">
           <h2
             id="why-choose-heading"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4"
           >
-            Why Work With Dr. Jan Duffy
+            Start at 9406 W Lake Mead Blvd — then we drive Summerlin or Henderson
           </h2>
+          <HeadingPhoto path="/" level="h2" photo={photos.agent} priority />
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Local Las Vegas expertise with Berkshire Hathaway HomeServices Nevada Properties.
+            Appointments start at Berkshire Hathaway HomeServices Nevada Properties,
+            Suite 100. We sequence the tour from this desk — not a call center.
           </p>
         </div>
 
@@ -68,6 +78,10 @@ export default function WhyChooseUs() {
             );
           })}
         </div>
+        <p className="text-sm text-slate-600 mt-10 mb-6 text-center">
+          {nap.brokerage} · {nap.fullAddress} · Call or text {ctaPhone.display}.
+        </p>
+        <CtaActions variant="onLight" />
         <div className="text-center mt-10">
           <Link href="/about" className="inline-flex text-blue-600 hover:text-blue-800 font-semibold">
             Meet Dr. Jan Duffy →

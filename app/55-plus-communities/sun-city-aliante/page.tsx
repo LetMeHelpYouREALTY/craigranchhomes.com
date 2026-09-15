@@ -17,6 +17,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -165,7 +166,7 @@ export default function SunCityAliantePage() {
                 <TrendingUp className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Why Sun City Aliante Is the Best Value
+                    Aliante rec vs Sun City Summerlin rec — two 55+ price clocks
                   </h3>
                   <p className="text-slate-700 mb-4">
                     Compare Sun City Aliante to other Sun City communities and the
@@ -212,56 +213,7 @@ export default function SunCityAliantePage() {
             </div>
           </section>
 
-          {/* Amenities */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Full Sun City Amenities
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Trophy className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">
-                  18-Hole Golf Course
-                </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Championship layout</li>
-                  <li>• Affordable resident rates</li>
-                  <li>• Pro shop & instruction</li>
-                  <li>• Golf club memberships</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Recreation Center (42,000 sf)
-                </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Indoor & outdoor pools</li>
-                  <li>• Modern fitness center</li>
-                  <li>• Tennis & pickleball</li>
-                  <li>• Ballroom & meeting rooms</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">
-                  100+ Clubs & Activities
-                </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Sports leagues</li>
-                  <li>• Arts & crafts</li>
-                  <li>• Travel groups</li>
-                  <li>• Social clubs</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveAmenities path="/55-plus-communities/sun-city-aliante" />
 
           {/* Location Benefits */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

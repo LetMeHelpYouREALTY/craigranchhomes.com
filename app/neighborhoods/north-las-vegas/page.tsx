@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,9 +87,7 @@ export default function NorthLasVegasPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                North Las Vegas: The Valley's Best Value for First-Time Buyers
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/north-las-vegas" />
               <p>
                 <strong>North Las Vegas</strong> has undergone a remarkable transformation over the past
                 decade. What was once considered a distant suburb is now a thriving city with new
@@ -167,6 +167,8 @@ export default function NorthLasVegasPage() {
               <NamedCampuses path="/neighborhoods/north-las-vegas" />
 
               <NeighborhoodCommute path="/neighborhoods/north-las-vegas" />
+
+              <NeighborhoodAmenities path="/neighborhoods/north-las-vegas" />
 
               {/* New Construction Communities */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">New Construction Communities</h3>

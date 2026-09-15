@@ -25,6 +25,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -552,59 +553,7 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
-          {/* Amenities Overview */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              What 55+ Community Amenities Include
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Fitness & Recreation
-                </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• State-of-the-art fitness centers</li>
-                  <li>• Indoor & outdoor pools</li>
-                  <li>• Tennis & pickleball courts</li>
-                  <li>• Golf courses (many communities)</li>
-                  <li>• Walking/biking trails</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Calendar className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Social & Activities
-                </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• 100+ clubs in larger communities</li>
-                  <li>• Organized travel groups</li>
-                  <li>• Classes (art, dance, computers)</li>
-                  <li>• Card rooms & game nights</li>
-                  <li>• Community events & parties</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Convenience & Security
-                </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Guard-gated entries (many)</li>
-                  <li>• Exterior maintenance included</li>
-                  <li>• On-site restaurants (select)</li>
-                  <li>• Healthcare facilities nearby</li>
-                  <li>• Concierge services (luxury)</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveAmenities path="/55-plus-communities" />
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

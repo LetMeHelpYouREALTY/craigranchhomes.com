@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,9 +87,7 @@ export default function InspiradaPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Inspirada: Henderson's Award-Winning Resort-Style Community
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/inspirada" />
               <p>
                 <strong>Inspirada</strong> redefines what a master-planned community can be. This
                 2,000-acre development in Henderson consistently ranks among the nation's top-selling
@@ -145,32 +145,7 @@ export default function InspiradaPage() {
 
               <NeighborhoodCommute path="/neighborhoods/inspirada" />
 
-              {/* Amenities Detail */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Inspirada Amenity Centers</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Resort Pool Complex</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li>• Resort-style pool with cabanas</li>
-                    <li>• Water slides and splash features</li>
-                    <li>• Zero-entry pool</li>
-                    <li>• Lap lanes for fitness swimming</li>
-                    <li>• Poolside WiFi and refreshments</li>
-                    <li>• Extended summer hours</li>
-                  </ul>
-                </div>
-                <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Active Living Amenities</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li>• 10+ miles of walking/biking trails</li>
-                    <li>• Multiple neighborhood parks</li>
-                    <li>• Tennis and pickleball courts</li>
-                    <li>• Basketball courts</li>
-                    <li>• Dog parks</li>
-                    <li>• Community fitness classes</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/inspirada" />
 
               {/* Builders */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Builders in Inspirada</h3>
@@ -191,8 +166,8 @@ export default function InspiradaPage() {
 
               <p className="mt-8">
                 The current Inspirada market shows <strong>98 active listings</strong> with homes
-                averaging <strong>23 days on market</strong>—reflecting strong demand for this
-                sought-after community. The median price of <strong>$525,000</strong> represents
+                averaging <strong>23 days on market</strong>—reflecting demand for the Town Center
+                rec campus. The median price of <strong>$525,000</strong> represents
                 solid 5.0% year-over-year appreciation. New construction from builders like Toll
                 Brothers, Lennar, and Beazer ranges from $450,000 to $750,000, while resales with
                 resale yards with mature trees and upgraded features offer compelling alternatives.

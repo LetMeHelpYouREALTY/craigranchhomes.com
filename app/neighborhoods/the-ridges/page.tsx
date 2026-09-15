@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,16 +87,14 @@ export default function TheRidgesPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                The Ridges: Las Vegas's Ultimate Address for Discerning Buyers
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/the-ridges" />
               <p>
                 <strong>The Ridges</strong> represents the pinnacle of Las Vegas luxury living. Nestled
                 within Summerlin along the foothills of Red Rock Canyon, this ultra-exclusive guard-gated
                 community offers estate-quality homes with panoramic views of the Las Vegas Strip, the
-                surrounding mountains, and the pristine desert landscape. When the most discerning buyers
-                search for Las Vegas luxury, they turn to <strong>Berkshire Hathaway HomeServices</strong>—the
-                brand that matches The Ridges' standard of excellence.
+                surrounding mountains, and the desert landscape. When buyers compare ridge-top lots
+                to Downtown Summerlin retail, they start with <strong>Berkshire Hathaway HomeServices</strong>
+                so gate lists and showing windows are confirmed from Suite 100.
               </p>
               <p>
                 The Ridges comprises six distinctive villages—Bear's Best, Falcon Ridge, Azure, Talon Ridge,
@@ -174,28 +174,7 @@ export default function TheRidgesPage() {
 
               <NeighborhoodCommute path="/neighborhoods/the-ridges" />
 
-              {/* Luxury Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Nearby Luxury Amenities</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Golf & Recreation</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Bear's Best Golf Club:</strong> Jack Nicklaus "tribute" course with 18 replica holes from his best designs.</li>
-                    <li><strong>Red Rock Country Club:</strong> Two Arnold Palmer courses, just outside The Ridges gates.</li>
-                    <li><strong>TPC Las Vegas:</strong> 15 minutes away, hosts PGA Tour events.</li>
-                    <li><strong>Red Rock Canyon:</strong> World-class hiking, biking, and rock climbing minutes away.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Downtown Summerlin:</strong> High-end shopping including Apple, Nordstrom, Williams Sonoma.</li>
-                    <li><strong>Tivoli Village:</strong> Upscale outdoor shopping with Restoration Hardware, fine dining.</li>
-                    <li><strong>Concierge Services:</strong> Private chefs, housekeeping, property management available.</li>
-                    <li><strong>Private Aviation:</strong> Henderson Executive Airport for private jet access.</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/the-ridges" />
 
               <NamedCampuses path="/neighborhoods/the-ridges" />
 

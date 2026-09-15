@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,9 +87,7 @@ export default function CentennialHillsPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Centennial Hills: Northwest Las Vegas Mountain-View Living
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/centennial-hills" />
               <p>
                 <strong>Centennial Hills</strong> represents mature northwest Las Vegas
                 living. While newer communities like Skye Canyon attract attention, Centennial Hills
@@ -147,28 +147,7 @@ export default function CentennialHillsPage() {
                 Centennial Hills' proximity to US-95 provides excellent north-south access throughout the valley.
               </p>
 
-              {/* Shopping & Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Centennial Center</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Major Retail:</strong> Target, Costco, Home Depot, Best Buy, Kohl's</li>
-                    <li><strong>Grocery:</strong> Smith's, Trader Joe's, Whole Foods nearby</li>
-                    <li><strong>Dining:</strong> 50+ restaurants including Red Robin, BJ's, Cheesecake Factory</li>
-                    <li><strong>Entertainment:</strong> Century 18 Theatres, bowling, fitness centers</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Centennial Hills Hospital:</strong> Full-service hospital, 24/7 ER, maternity center</li>
-                    <li><strong>Southwest Medical:</strong> Multiple primary care and urgent care locations</li>
-                    <li><strong>Dignity Health:</strong> Clinics and specialty services</li>
-                    <li><strong>VA Medical Center:</strong> 10 minutes for veteran services</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/centennial-hills" />
 
               {/* Parks & Recreation */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>

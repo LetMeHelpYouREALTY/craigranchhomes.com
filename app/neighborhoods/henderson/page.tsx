@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -101,9 +103,7 @@ export default function HendersonPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Green Valley trees vs Inspirada rec campus — two Henderson days
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/henderson" />
               <p>
                 <strong>Henderson</strong> is Nevada's second-largest city with over 320,000 residents.
                 Compare streets by square footage, HOA dues, parks, and commute minutes from
@@ -178,28 +178,7 @@ export default function HendersonPage() {
                 </ul>
               </div>
 
-              {/* Local Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>The District at Green Valley Ranch:</strong> Outdoor shopping, restaurants, movie theater.</li>
-                    <li><strong>Galleria at Sunset:</strong> Major mall with Macy's, Dillard's, 140+ stores.</li>
-                    <li><strong>Green Valley Ranch Resort:</strong> Casino, spa, restaurants, concerts.</li>
-                    <li><strong>Henderson Farmers Market:</strong> Weekly local produce and artisan goods.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare Facilities</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Henderson Hospital:</strong> Full-service hospital, 24/7 ER, labor & delivery.</li>
-                    <li><strong>St. Rose Dominican:</strong> Three locations in Henderson—Siena, San Martin, Rose de Lima.</li>
-                    <li><strong>Southwest Medical:</strong> Multiple clinics throughout Henderson.</li>
-                    <li><strong>Dignity Health:</strong> Urgent care and primary care facilities.</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/henderson" />
 
               <p className="mt-8">
                 With <strong>1,280 active listings</strong> and homes averaging just <strong>24 days on market</strong>,

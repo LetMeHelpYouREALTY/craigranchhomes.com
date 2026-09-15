@@ -19,6 +19,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -143,50 +144,7 @@ export default function SunCitySummerlinPage() {
             </div>
           </section>
 
-          {/* Amenities */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              World-Class Amenities
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Trophy className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">3 Golf Courses</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Highland Falls (executive)</li>
-                  <li>• Palm Valley (championship)</li>
-                  <li>• Eagle Crest (championship)</li>
-                  <li>• Affordable resident rates</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">4 Recreation Centers</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Mountain Shadows</li>
-                  <li>• Sun Shadows</li>
-                  <li>• Pinnacle</li>
-                  <li>• Desert Vista</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">100+ Clubs & Activities</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Sports leagues</li>
-                  <li>• Arts & crafts</li>
-                  <li>• Travel groups</li>
-                  <li>• Social clubs</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveAmenities path="/55-plus-communities/sun-city-summerlin" />
 
           {/* Neighborhoods */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

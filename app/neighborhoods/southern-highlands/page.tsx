@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,9 +87,7 @@ export default function SouthernHighlandsPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Southern Highlands: Southwest Las Vegas's Premier Master-Planned Community
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/southern-highlands" />
               <p>
                 <strong>Southern Highlands</strong> stands as southwest Las Vegas's answer to Summerlin—a
                 meticulously planned 2,200-acre community centered around an award-winning championship
@@ -145,28 +145,7 @@ export default function SouthernHighlandsPage() {
 
               <NeighborhoodCommute path="/neighborhoods/southern-highlands" />
 
-              {/* Local Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Southern Highlands Marketplace:</strong> Grocery, restaurants, services within the community.</li>
-                    <li><strong>Town Square Las Vegas:</strong> 10 minutes—outdoor mall with Apple, Whole Foods, movie theater.</li>
-                    <li><strong>Las Vegas Premium Outlets South:</strong> 5 minutes—designer outlet shopping.</li>
-                    <li><strong>M Resort Spa Casino:</strong> Adjacent to community—gaming, dining, entertainment.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>St. Rose Dominican - Siena:</strong> Full-service hospital, 10 minutes.</li>
-                    <li><strong>Southern Hills Hospital:</strong> 24/7 ER, comprehensive services, 12 minutes.</li>
-                    <li><strong>Southwest Medical:</strong> Multiple urgent care and primary care locations nearby.</li>
-                    <li><strong>Dignity Health:</strong> Clinics throughout the southwest valley.</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/southern-highlands" />
 
               {/* Golf Club Details */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands Golf Club</h3>

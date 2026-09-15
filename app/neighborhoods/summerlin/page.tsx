@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -114,21 +116,19 @@ export default function SummerlinPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Why Summerlin Is Las Vegas's Most Sought-After Community
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/summerlin" />
               <p>
-                When homebuyers search Las Vegas master-planned communities, <strong>Summerlin</strong> consistently
-                ranks at the top. As a <strong>Berkshire Hathaway HomeServices</strong> agent specializing in Summerlin
-                real estate, Dr. Jan Duffy has helped hundreds of buyers find the right home in this
-                award-winning master-planned community.
+                When homebuyers compare Las Vegas master-planned communities, <strong>Summerlin</strong> is
+                the Howard Hughes 22,500-acre west-valley plat. As a <strong>Berkshire Hathaway HomeServices</strong>
+                agent specializing in Summerlin real estate, Dr. Jan Duffy times village tours from Suite 100
+                so you compare The Trails, Downtown Summerlin, and Red Rock trailheads on the same clock.
               </p>
               <p>
                 Developed by The Howard Hughes Corporation since 1990, Summerlin spans 22,500 acres along the
                 western rim of the Las Vegas Valley. The community offers an unparalleled lifestyle with Red Rock
                 Canyon as its backdrop—providing hiking, biking, and outdoor recreation just minutes from your
                 front door. With over 150 parks, 150 miles of trails, and nine golf courses, Summerlin residents
-                enjoy an active, healthy lifestyle that's hard to find elsewhere in the desert Southwest.
+                use 150 parks, 150 miles of trails, and nine golf courses on the same west-valley loop.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has deep roots in Summerlin,
@@ -171,34 +171,7 @@ export default function SummerlinPage() {
 
               <NeighborhoodCommute path="/neighborhoods/summerlin" />
 
-              {/* Local Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <div className="flex items-center mb-4">
-                    <ShoppingBag className="h-6 w-6 text-blue-600 mr-2" />
-                    <h5 className="font-bold text-slate-900">Shopping & Dining</h5>
-                  </div>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Downtown Summerlin:</strong> 125+ stores, restaurants, movie theater. Apple, Nordstrom, Williams Sonoma.</li>
-                    <li><strong>Boca Park:</strong> Trader Joe's, Whole Foods, local restaurants on West Charleston.</li>
-                    <li><strong>Tivoli Village:</strong> Upscale outdoor shopping with Restoration Hardware, boutiques, and fine dining.</li>
-                    <li><strong>Red Rock Casino Resort:</strong> Gaming, spa, multiple restaurants including T-Bones Chophouse.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <div className="flex items-center mb-4">
-                    <TreePine className="h-6 w-6 text-blue-600 mr-2" />
-                    <h5 className="font-bold text-slate-900">Healthcare & Services</h5>
-                  </div>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Summerlin Hospital:</strong> Full-service hospital with ER, labor & delivery, cardiology center.</li>
-                    <li><strong>Red Rock Medical Campus:</strong> Outpatient surgery, imaging, specialty clinics.</li>
-                    <li><strong>Dignity Health:</strong> Multiple urgent care and primary care locations throughout Summerlin.</li>
-                    <li><strong>Southwest Medical:</strong> Multi-specialty clinics with pharmacy services.</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/summerlin" />
 
               <p className="mt-8">
                 The current Summerlin real estate market shows strong demand with <strong>342 active listings</strong> and

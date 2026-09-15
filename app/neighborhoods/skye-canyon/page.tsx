@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,15 +87,12 @@ export default function SkyeCanyonPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Skye Canyon: Northwest Las Vegas's Most Exciting New Community
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/skye-canyon" />
               <p>
                 <strong>Skye Canyon</strong> represents the future of Las Vegas master-planned living.
-                This 1,700-acre community in northwest Las Vegas has quickly become one of the valley's
-                most sought-after addresses, consistently ranking among the nation's top-selling
-                master-planned communities. <strong>Berkshire Hathaway HomeServices</strong> is proud
-                to help buyers discover what makes Skye Canyon special.
+                This 1,700-acre community in northwest Las Vegas sits next to Floyd Lamb Park
+                with Skye Center as the rec campus. <strong>Berkshire Hathaway HomeServices</strong>
+                registers you at Suite 100 before the first model row so builder tours stay on one northwest clock.
               </p>
               <p>
                 What sets Skye Canyon apart is Skye Center—a stunning 15-acre amenity complex that
@@ -166,32 +165,7 @@ export default function SkyeCanyonPage() {
                 </div>
               </div>
 
-              {/* Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Skye Canyon Amenities</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Skye Center Features</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li>• Resort-style pool with cabanas</li>
-                    <li>• Zero-entry pool and splash pad</li>
-                    <li>• Lap pool for fitness swimming</li>
-                    <li>• State-of-the-art fitness center</li>
-                    <li>• Tennis and pickleball courts</li>
-                    <li>• Community event lawn</li>
-                  </ul>
-                </div>
-                <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Outdoor Recreation</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li>• Floyd Lamb Park (680 acres adjacent)</li>
-                    <li>• 10+ miles of community trails</li>
-                    <li>• Multiple neighborhood parks</li>
-                    <li>• Dog parks throughout community</li>
-                    <li>• Mountain biking access</li>
-                    <li>• Desert hiking nearby</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/skye-canyon" />
 
               <p className="mt-8">
                 The current Skye Canyon market shows <strong>124 active listings</strong> with homes

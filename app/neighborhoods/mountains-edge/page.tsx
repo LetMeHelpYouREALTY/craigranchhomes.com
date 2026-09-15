@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,9 +87,7 @@ export default function MountainsEdgePage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Mountains Edge: Southwest Las Vegas's Best Value for Master-Planned Living
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/mountains-edge" />
               <p>
                 <strong>Mountains Edge</strong> delivers what many Las Vegas buyers are seeking:
                 master-planned community amenities at prices significantly below Summerlin or
@@ -145,28 +145,7 @@ export default function MountainsEdgePage() {
 
               <NeighborhoodCommute path="/neighborhoods/mountains-edge" />
 
-              {/* Shopping & Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Mountains Edge Marketplace:</strong> Smith's, CVS, restaurants, services within community</li>
-                    <li><strong>Town Square Las Vegas:</strong> 10 min—Whole Foods, Apple, AMC Theatre, 150+ stores</li>
-                    <li><strong>Las Vegas Premium Outlets South:</strong> 10 min—Designer outlet shopping</li>
-                    <li><strong>M Resort Spa Casino:</strong> 10 min—Gaming, dining, spa, entertainment</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Southern Hills Hospital:</strong> Full-service hospital, 24/7 ER, 10 minutes</li>
-                    <li><strong>St. Rose Dominican - Siena:</strong> Comprehensive healthcare, 12 minutes</li>
-                    <li><strong>Southwest Medical:</strong> Multiple clinics throughout southwest valley</li>
-                    <li><strong>Dignity Health:</strong> Urgent care and primary care locations</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/mountains-edge" />
 
               {/* Parks & Recreation */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>

@@ -18,6 +18,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -204,50 +205,7 @@ export default function HeritageAtStonebridgePage() {
             </div>
           </section>
 
-          {/* Amenities */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Community Amenities
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <HomeIcon className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">Clubhouse</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Community gathering space</li>
-                  <li>• Meeting rooms</li>
-                  <li>• Social event venue</li>
-                  <li>• Kitchen facilities</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">Pool, Spa & Fitness</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Resort-style pool</li>
-                  <li>• Relaxing spa</li>
-                  <li>• Fitness center</li>
-                  <li>• Outdoor spaces</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">Social Activities</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Organized clubs</li>
-                  <li>• Community events</li>
-                  <li>• Holiday parties</li>
-                  <li>• Interest groups</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveAmenities path="/55-plus-communities/heritage-stonebridge" />
 
           {/* Location Benefits */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -324,8 +282,8 @@ export default function HeritageAtStonebridgePage() {
               Experience Guard-Gated 55+ Living
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Discover why Heritage at Stonebridge offers the privacy and location
-              discerning buyers seek. Tour with Dr. Jan Duffy.
+              Heritage sits 10–20 minutes from Suite 100. Tour the staffed gate
+              and clubhouse with Dr. Jan Duffy, then Downtown Summerlin if time remains.
             </p>
             <CtaActions variant="onDark" />
             <p className="text-purple-200">

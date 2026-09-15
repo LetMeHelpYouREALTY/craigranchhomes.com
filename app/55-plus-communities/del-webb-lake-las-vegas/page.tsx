@@ -16,6 +16,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 
@@ -158,50 +159,7 @@ export default function DelWebbLakeLasVegasPage() {
             </div>
           </section>
 
-          {/* Amenities */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Del Webb Amenities
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">Fitness & Pools</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Resort-style pool & spa</li>
-                  <li>• Modern fitness center</li>
-                  <li>• Indoor/outdoor spaces</li>
-                  <li>• Lap swimming</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Star className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">Courts & Sports</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Pickleball courts</li>
-                  <li>• Tennis courts</li>
-                  <li>• Bocce ball</li>
-                  <li>• Cornhole & games</li>
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <HomeIcon className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">Modern Homes</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Open floor plans</li>
-                  <li>• 2-4 bedrooms</li>
-                  <li>• Energy efficient</li>
-                  <li>• Smart home ready</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <FiftyFiveAmenities path="/55-plus-communities/del-webb-lake-las-vegas" />
 
           {/* Why Del Webb Lake Las Vegas */}
           <FiftyFiveFaqs path="/55-plus-communities/del-webb-lake-las-vegas" />

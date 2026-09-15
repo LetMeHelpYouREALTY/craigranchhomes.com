@@ -9,6 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
+import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -85,9 +87,7 @@ export default function GreenValleyPage() {
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Green Valley: 35+ Years of Mature Trees, Golf, and The District
-              </h2>
+              <NeighborhoodLifestyle path="/neighborhoods/green-valley" />
               <p>
                 <strong>Green Valley</strong> holds a special place in Henderson's history as the city's
                 original master-planned community. Established in 1988, Green Valley pioneered the concept
@@ -144,28 +144,7 @@ export default function GreenValleyPage() {
 
               <NeighborhoodCommute path="/neighborhoods/green-valley" />
 
-              {/* Local Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Recreation</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>The District at Green Valley Ranch:</strong> Premier outdoor shopping with Anthropologie, Crate & Barrel, REI, and 60+ shops.</li>
-                    <li><strong>Green Valley Ranch Resort:</strong> Casino, spa, multiple restaurants, concert venue.</li>
-                    <li><strong>Trader Joe's & Whole Foods:</strong> Both locations within 5 minutes of most Green Valley homes.</li>
-                    <li><strong>Galleria at Sunset:</strong> 10-minute drive to major mall with Macy's, Dillard's, 140+ stores.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Parks & Recreation</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Whitney Mesa Recreation Area:</strong> Dog park, trails, mountain views.</li>
-                    <li><strong>Paseo Verde Park:</strong> 19-acre park with splash pad, tennis courts, playground.</li>
-                    <li><strong>Green Valley Athletic Club:</strong> Full-service gym with pools, tennis, dining.</li>
-                    <li><strong>Legacy Golf Club:</strong> Challenging 18-hole public course designed by Arthur Hills.</li>
-                  </ul>
-                </div>
-              </div>
+              <NeighborhoodAmenities path="/neighborhoods/green-valley" />
 
               <p className="mt-8">
                 The current Green Valley market shows <strong>187 active listings</strong> with homes
