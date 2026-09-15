@@ -16,7 +16,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 import {
   ctaPhone,
   officePhone,
@@ -30,9 +30,7 @@ import {
 import {
   businessInfo,
   gbpDescription,
-  gbpFAQs,
   generateLocalBusinessSchema,
-  generateFAQSchema,
 } from "@/lib/gbp-schema";
 
 export const metadata: Metadata = pageMetadata({
@@ -60,17 +58,12 @@ export const metadata: Metadata = pageMetadata({
 
 export default function GoogleBusinessPage() {
   const localBusinessSchema = generateLocalBusinessSchema();
-  const faqSchema = generateFAQSchema();
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -316,12 +309,7 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
-          <section className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions
-            </h2>
-            <FaqAccordion items={gbpFAQs} />
-          </section>
+          <SupportFaqs path="/google-business" />
 
           <section className="max-w-4xl mx-auto mb-16">
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-xl p-8 text-center">

@@ -520,3 +520,46 @@ export function intentFaqPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/investment")) return photos.aliante;
   return photos.office;
 }
+
+/** Eleventh still for remaining desk/support FAQ H2s. */
+export function supportFaqPhotoForPath(path: string): SitePhoto {
+  if (path === "/" || path === "") return photos.office;
+  if (path.startsWith("/contact")) return photos.agent;
+  if (path.startsWith("/why-berkshire")) return photos.sellers;
+  if (path.startsWith("/listings")) return photos.summerlin;
+  if (path.startsWith("/google-business")) return photos.buyers;
+  if (path.startsWith("/market-report")) return photos.ridges;
+  if (path.startsWith("/market-insights")) return photos.henderson;
+  if (path.startsWith("/market-update")) return photos.centennial;
+  return photos.officeExterior;
+}
+
+export type FaqHubCategoryId =
+  | "bhhs"
+  | "buying"
+  | "selling"
+  | "investment"
+  | "relocating"
+  | "working";
+
+/** Twelfth stills for /faq category H2s — distinct from /faq H1/H2/H3. */
+export function faqHubPhotoForCategory(id: FaqHubCategoryId): SitePhoto {
+  switch (id) {
+    case "bhhs":
+      return photos.homeHero;
+    case "buying":
+      return photos.sellers;
+    case "selling":
+      return photos.buyers;
+    case "investment":
+      return photos.investment;
+    case "relocating":
+      return photos.summerlin;
+    case "working":
+      return photos.agent;
+    default: {
+      const _exhaustive: never = id;
+      return _exhaustive;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
 
@@ -300,30 +300,7 @@ export default function ContactPage() {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="max-w-4xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "What should I expect during my first consultation?",
-                  a: "Your consultation is a no-pressure conversation about your real estate goals. We'll discuss your timeline, budget, preferences, and answer any questions you have about the Las Vegas market. Whether you're buying, selling, or exploring options, I'll provide honest guidance tailored to your situation.",
-                },
-                {
-                  q: "Do I need to be pre-approved before scheduling a showing?",
-                  a: "For buyers, having a pre-approval letter strengthens your position, but it's not required for an initial consultation. I can connect you with trusted local lenders during our first meeting if you haven't started the financing process yet.",
-                },
-                {
-                  q: "How quickly can you respond to inquiries?",
-                  a: "I typically respond to calls, texts, and emails within 2 hours during business hours (9am-6pm daily). For urgent matters, calling or texting (702) 222-1964 is the fastest way to reach me.",
-                },
-                {
-                  q: "Do you charge for consultations?",
-                  a: "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
-                },
-               ]} />
-          </section>
+          <SupportFaqs path="/contact" />
         </div>
 
         {/* Last Updated */}

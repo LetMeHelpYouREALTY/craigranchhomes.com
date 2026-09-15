@@ -16,9 +16,8 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 import { pageMetadata } from "@/lib/seo";
-import { generateFAQSchema } from "@/lib/schema";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -59,35 +58,12 @@ const articleSchema = {
   },
 };
 
-const marketUpdateFaqs = [
-  {
-    q: "How current is this weekly Las Vegas market update?",
-    a: "This update covers the week of January 20, 2026. Median sale price was $452,500 with 847 closings. Call (702) 222-1964 for same-week comps in your ZIP.",
-  },
-  {
-    q: "Which areas moved fastest this week?",
-    a: "Summerlin averaged 21 days on market at a $628,000 median. Henderson was 23 days at $487,500. North Las Vegas was 31 days at $387,000.",
-  },
-  {
-    q: "Can I get this update emailed each week?",
-    a: "Yes. Use the signup on this page or message Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
-  },
-  {
-    q: "Does a weekly bump mean I should list now?",
-    a: "A one-week move is noise until it stacks. Dr. Jan Duffy will compare your home to the last 90 days of sold comps before you set a list price.",
-  },
-];
-
 export default function MarketUpdatePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(marketUpdateFaqs.map((f) => ({ question: f.q, answer: f.a })))) }}
       />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -401,12 +377,7 @@ export default function MarketUpdatePage() {
             </div>
           </section>
 
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Weekly Update FAQ
-            </h2>
-            <FaqAccordion items={marketUpdateFaqs} />
-          </section>
+          <SupportFaqs path="/market-update" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

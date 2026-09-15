@@ -7,7 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -246,30 +246,7 @@ export default function WhyBerkshireHathawayPage() {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About BHHS
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "Is Berkshire Hathaway HomeServices owned by Warren Buffett?",
-                  a: "Berkshire Hathaway HomeServices is part of HSF Affiliates LLC, which is a joint venture of Berkshire Hathaway Inc. (Warren Buffett's company) and HomeServices of America. The brand carries the trusted Berkshire Hathaway name and upholds its values of integrity and excellence.",
-                },
-                {
-                  q: "What makes BHHS different from other real estate companies?",
-                  a: "BHHS is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This provides unmatched financial stability, a global network of 50,000+ agents, world-class marketing resources, and a commitment to ethical standards that goes beyond industry requirements.",
-                },
-                {
-                  q: "Does using a Berkshire Hathaway agent cost more?",
-                  a: "No. Commission rates are negotiable and comparable to other brokerages. The value you receive—global marketing exposure, trusted brand recognition, and experienced agents—often helps homes sell faster and for more money.",
-                },
-                {
-                  q: "Can BHHS help with relocations to Las Vegas?",
-                  a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, commute times, and named school campuses.",
-                },
-               ]} />
-          </section>
+          <SupportFaqs path="/why-berkshire-hathaway" />
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

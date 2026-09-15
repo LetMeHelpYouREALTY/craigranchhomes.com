@@ -7,9 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
-
-import { nap } from "@/lib/contact";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 
 export const metadata: Metadata = pageMetadata({
   path: "/market-report",
@@ -275,30 +273,7 @@ export default function MarketReportPage() {
             </div>
           </section>
 
-          {/* FAQ */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Market Questions We're Hearing
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "Is now a good time to buy in Las Vegas?",
-                  a: "Yes. With more inventory, returning negotiating power, and stable interest rates, buyers have more options than they've had in years. Well-priced homes are still moving quickly, but you won't face the bidding wars of 2021-2022.",
-                },
-                {
-                  q: "Should I wait for prices to drop?",
-                  a: "Las Vegas prices have historically been resilient. Current appreciation of 4.2% YoY, strong job growth, and continued California migration suggest prices will remain stable or continue gradual increases. Waiting typically costs more than potential savings.",
-                },
-                {
-                  q: "Is this a buyer's or seller's market?",
-                  a: "With 2.1 months of inventory, Las Vegas is technically still a seller's market (6 months is balanced). However, buyers have more leverage than they've had since 2019. It's a balanced environment that rewards proper pricing.",
-                },
-                {
-                  q: "What's happening with interest rates?",
-                  a: "Rates have stabilized around 6.5% for conventional loans. Many buyers are using builder incentives or rate buydowns to achieve effective rates in the low 5% range. VA and FHA options remain competitive.",
-                },
-               ]} />
-          </section>
+          <SupportFaqs path="/market-report" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

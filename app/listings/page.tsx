@@ -20,9 +20,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
-
-import { nap } from "@/lib/contact";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import { pageMetadata } from "@/lib/seo";
@@ -428,18 +426,7 @@ export default function ListingsPage() {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Las Vegas Real Estate
-            </h2>
-                        <FaqAccordion items={[
-              { q: "How competitive is the Las Vegas housing market in 2026?", a: "The Las Vegas market is moderately competitive with 2.1 months of inventory—a slight seller's market. Well-priced homes in desirable areas like Summerlin and Henderson often receive multiple offers within the first week. Having a pre-approval and experienced agent gives you a significant advantage." },
-              { q: "What's the best time of year to buy a home in Las Vegas?", a: "Las Vegas has a year-round real estate market, but inventory typically peaks in spring (March-May) while competition is lowest in winter (November-January). The best time depends on your priorities: more selection in spring, potentially better deals in winter." },
-              { q: "How much do I need for a down payment in Las Vegas?", a: "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in various loan programs." },
-              { q: "Are Las Vegas HOA fees expensive?", a: "HOA fees in Las Vegas range from $25/month for basic community maintenance to $400+/month for guard-gated luxury communities with extensive amenities. Most standard neighborhoods fall between $50-$150/month. Dr. Jan always reviews HOA documents to ensure you understand what's included and any special assessments." },
-            ]} />
-          </section>
+          <SupportFaqs path="/listings" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

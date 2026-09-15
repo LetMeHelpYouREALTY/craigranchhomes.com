@@ -1,7 +1,7 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
-import FAQSection from "@/components/sections/FAQSection";
+import SupportFaqs from "@/components/sections/SupportFaqs";
 import PageCTA from "@/components/sections/PageCTA";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
@@ -180,7 +180,7 @@ export default async function Home() {
       <RealScoutListings />
       <WhyChooseUs />
       <ReviewsSection />
-      <FAQSection />
+      <SupportFaqs path="/" />
       <PageCTA headline={config.ctaHeadline} subheadline={config.ctaSubheadline} />
       <p className="sr-only">
         {nap.name}. {nap.fullAddress}. Call {ctaPhone.display}.
