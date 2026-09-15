@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -44,6 +45,8 @@ export default function DownsizingPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Simplify. Downsize. Enjoy.
             </h1>
+            <HeadingPhoto path="/sellers/downsizing" />
+
             <p className="text-xl text-slate-600 mb-8">
               Extract your equity. Embrace low-maintenance living. Start your next chapter.
             </p>
@@ -55,6 +58,8 @@ export default function DownsizingPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Extract Your Equity, Enjoy Your Life
             </h2>
+            <HeadingPhoto path="/sellers/downsizing" level="h2" />
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-white/10 rounded-xl p-6">
                 <h3 className="font-bold text-xl mb-4 flex items-center">

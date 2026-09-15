@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -44,6 +45,8 @@ export default function DivorceProbatePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Difficult Situations,<br />Expert Guidance
             </h1>
+            <HeadingPhoto path="/sellers/divorce-probate" />
+
             <p className="text-xl text-slate-600 mb-8">
               When life gets complicated, you need an agent who handles sensitive transactions
               with discretion, expertise, and compassion.
@@ -56,6 +59,8 @@ export default function DivorceProbatePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Situations We Help Navigate
             </h2>
+            <HeadingPhoto path="/sellers/divorce-probate" level="h2" />
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">

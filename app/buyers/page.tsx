@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -110,6 +111,8 @@ export default function BuyersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Buy Your Las Vegas Home with Confidence
             </h1>
+            <HeadingPhoto path="/buyers" />
+
             <p className="text-xl text-slate-600 mb-8">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
               you're backed by the most trusted name in real estate—and it costs you nothing.
@@ -130,6 +133,8 @@ export default function BuyersPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
+            <HeadingPhoto path="/buyers" level="h2" />
+
                 <p className="text-slate-300 mb-6">
                   Here's what many buyers don't know: having your own agent costs you nothing. The
                   seller pays the commission, but the representation is yours.{" "}

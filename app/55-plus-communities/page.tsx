@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -346,6 +347,8 @@ export default function FiftyFiveCommunitiesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Find Your Perfect 55+ Community in Las Vegas
             </h1>
+            <HeadingPhoto path="/55-plus-communities" />
+
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
               Sun City, Del Webb, Heritage at Stonebridge & more—
               <br className="hidden md:block" />
@@ -359,6 +362,8 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Las Vegas 55+ Market Overview | January 2026
             </h2>
+            <HeadingPhoto path="/55-plus-communities" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">

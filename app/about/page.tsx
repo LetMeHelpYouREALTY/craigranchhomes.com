@@ -1,7 +1,8 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { 
-  Phone, 
+import Image from "next/image";
+import {
+  Phone,
   Mail, 
   Award, 
   Users, 
@@ -17,8 +18,10 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
+import { mediaUrl, photos } from "@/lib/media";
 
 export const metadata: Metadata = pageMetadata({
   path: "/about",
@@ -132,6 +135,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Meet Your Berkshire Hathaway HomeServices Agent
             </h1>
+            <HeadingPhoto path="/about" />
             <p className="text-xl text-slate-600">
               Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the most
               trusted name in real estate. Whether you're buying, selling, investing, or 
@@ -255,13 +259,15 @@ export default function AboutPage() {
 
               {/* Stats & Credentials */}
               <div className="space-y-6">
-                {/* Agent Photo Placeholder */}
-                <div className="bg-gradient-to-br from-blue-100 to-slate-100 rounded-lg p-8 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">👩‍💼</div>
-                    <p className="text-slate-600 font-semibold">Dr. Jan Duffy</p>
-                    <p className="text-sm text-slate-500">BHHS Nevada Properties</p>
-                  </div>
+                <div className="relative rounded-lg overflow-hidden aspect-square">
+                  <Image
+                    src={mediaUrl(photos.agent.src)}
+                    alt={photos.agent.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    priority
+                  />
                 </div>
 
                 {/* Stats Grid */}

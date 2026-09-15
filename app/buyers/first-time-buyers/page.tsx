@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { nap } from "@/lib/contact";
 
@@ -92,6 +93,8 @@ export default function FirstTimeBuyersPage() {
               Your First Home in Las Vegas<br />
               <span className="text-blue-600">Starts Here</span>
             </h1>
+            <HeadingPhoto path="/buyers/first-time-buyers" />
+
             <p className="text-xl text-slate-600 mb-8">
               Down payment assistance. Builder incentives. Expert guidance every step of the way.
             </p>
@@ -103,6 +106,8 @@ export default function FirstTimeBuyersPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               First-Time Buyer Financing Options
             </h2>
+            <HeadingPhoto path="/buyers/first-time-buyers" level="h2" />
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">

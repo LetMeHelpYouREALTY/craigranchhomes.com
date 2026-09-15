@@ -12,7 +12,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
 import SchemaScript from "@/components/SchemaScript";
@@ -117,6 +119,8 @@ export default function SunCityAnthemPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Anthem
             </h1>
+            <HeadingPhoto path="/55-plus-communities/sun-city-anthem" />
+
             <p className="text-xl text-slate-600">
               7,100+ homes. Mountain views. Championship golf. Anthem Center recreation.
             </p>
@@ -134,6 +138,8 @@ export default function SunCityAnthemPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Anthem at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/sun-city-anthem" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">$350K-$1.2M</div>
@@ -164,7 +170,7 @@ export default function SunCityAnthemPage() {
                 <strong>Sun City Anthem</strong> brings the legendary Sun City lifestyle to Henderson,
                 Nevada. Built by Del Webb from 1998-2008, this
                 7,100+ home community offers stunning mountain views, championship golf, and
-                resort-caliber amenities—all within Henderson's renowned safety and quality of life.
+                resort-caliber amenities—all with 15–25 minute Strip drives and Henderson recreation campuses.
               </p>
               <p>
                 The community's centerpiece is the Anthem Center, a 64,000 sq ft clubhouse featuring
@@ -187,12 +193,13 @@ export default function SunCityAnthemPage() {
                 <Shield className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Why Henderson Matters
+                    Why Henderson location matters
                   </h3>
                   <p className="text-slate-700 mb-4">
-                    Henderson consistently ranks as one of Henderson's master-planned communities. For 55+ buyers,
-                    this translates to peace of mind, stable property values, and a community that
-                    attracts similar residents who value safety and quality of life.
+                    Henderson is Nevada's second-largest city, with 60+ parks, recreation centers,
+                    and 15–25 minute Strip drives depending on the village. For 55+ buyers that
+                    means published commute minutes, HOA-maintained streets, and golf and trail
+                    access without Strip-corridor traffic.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center bg-white rounded-lg p-4">
@@ -298,8 +305,8 @@ export default function SunCityAnthemPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Sun City Anthem combines everything Henderson is known for—safety, quality, and
-                stunning scenery—with the Del Webb lifestyle. The views from the upper sections
+                "Sun City Anthem combines Henderson parks and recreation campuses with mountain
+                views and the Del Webb clubhouse model. The views from the upper sections
                 are spectacular, and the Anthem Center rivals any resort clubhouse I've seen.
                 As a <strong>Berkshire Hathaway HomeServices</strong> agent, I help buyers find
                 the right balance of views, price, and proximity to amenities."
@@ -308,6 +315,13 @@ export default function SunCityAnthemPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Sun City Anthem FAQ
+            </h2>
+            <FaqAccordion items={sunCityAnthemFaqs} />
           </section>
 
           {/* CTA */}

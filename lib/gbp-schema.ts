@@ -215,11 +215,15 @@ export function generateLocalBusinessSchema() {
     "@type": "RealEstateAgent",
     "@id": "https://heyberkshire.com/#organization",
     name: businessInfo.name,
-    image: "https://heyberkshire.com/images/dr-jan-duffy.jpg",
+    image: [
+      "https://heyberkshire.com/images/dr-jan-duffy.jpg",
+      "https://heyberkshire.com/images/hero/office-lake-mead-blvd.jpg",
+    ],
     url: businessInfo.url,
     telephone: businessInfo.phone.tel,
     email: businessInfo.email,
     priceRange: businessInfo.priceRange,
+    hasMap: "https://www.google.com/maps/search/?api=1&query=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134",
     address: {
       "@type": "PostalAddress",
       ...businessInfo.address,

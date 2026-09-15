@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 import { generateFAQSchema } from "@/lib/schema";
@@ -97,6 +98,8 @@ export default function MarketUpdatePage() {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Berkshire Hathaway HomeServices Las Vegas Market Update
             </h1>
+            <HeadingPhoto path="/market-update" />
+
             <p className="text-xl text-slate-600">
               Your weekly insider report on Las Vegas Valley real estate from{" "}
               <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>
@@ -114,6 +117,8 @@ export default function MarketUpdatePage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">
               5 Key Statistics This Week
             </h2>
+            <HeadingPhoto path="/market-update" level="h2" />
+
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {/* Stat 1 */}
               <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">

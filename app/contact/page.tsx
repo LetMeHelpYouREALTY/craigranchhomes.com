@@ -4,6 +4,7 @@ import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
@@ -58,6 +59,8 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Contact Dr. Jan Duffy
             </h1>
+            <HeadingPhoto path="/contact" />
+
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
               Questions about Las Vegas real estate? Your{" "}
               <strong>Berkshire Hathaway HomeServices</strong> expert is here to help. 
@@ -70,6 +73,8 @@ export default function ContactPage() {
             {/* Contact Info & Map */}
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h2>
+            <HeadingPhoto path="/contact" level="h2" />
+
               <p className="text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury property, or exploring
                 investment opportunities, I'm here to provide expert guidance backed by the trusted{" "}

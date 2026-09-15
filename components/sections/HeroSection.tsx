@@ -4,19 +4,20 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { realscout } from "@/lib/contact";
+import { mediaUrl, photos } from "@/lib/media";
 
 const images = [
   {
-    src: "/Image/hero_bg_1.jpg",
-    alt: "Las Vegas valley homes with mountain views at dusk",
+    src: mediaUrl(photos.homeHero.src),
+    alt: photos.homeHero.alt,
   },
   {
-    src: "/Image/hero_bg_2.jpg",
-    alt: "Henderson neighborhood street with desert landscaping",
+    src: mediaUrl(photos.henderson.src),
+    alt: photos.henderson.alt,
   },
   {
-    src: "/Image/hero_bg_3.jpg",
-    alt: "Summerlin community homes near Red Rock Canyon",
+    src: mediaUrl(photos.summerlin.src),
+    alt: photos.summerlin.alt,
   },
 ];
 

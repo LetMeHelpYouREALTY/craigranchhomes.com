@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
@@ -20,6 +21,8 @@ export default function SecurityPolicyPage() {
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
           Security Policy
         </h1>
+            <HeadingPhoto path="/security-policy" />
+
 
         <div className="prose prose-lg max-w-none">
           {/* Overview */}
@@ -27,6 +30,8 @@ export default function SecurityPolicyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
               Our Commitment to Security
             </h2>
+            <HeadingPhoto path="/security-policy" level="h2" />
+
             <p className="text-gray-700 leading-relaxed">
               At Berkshire Hathaway HomeServices Nevada Properties, we take the security
               of our systems and the privacy of our clients seriously. This page outlines

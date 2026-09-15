@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -142,6 +143,8 @@ export default function SellersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sell Your Las Vegas Home for Top Dollar
             </h1>
+            <HeadingPhoto path="/sellers" />
+
             <p className="text-xl text-slate-600 mb-8">
               When you list with <strong>Berkshire Hathaway HomeServices</strong>, you get
               world-class marketing, expert pricing, and a name that buyers trust. Dr. Jan Duffy 
@@ -163,6 +166,8 @@ export default function SellersPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Seller Market Statistics | January 2026
             </h2>
+            <HeadingPhoto path="/sellers" level="h2" />
+
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas housing market remains favorable for sellers with low inventory and 
               steady demand. Well-priced homes are selling quickly, and appreciation continues 

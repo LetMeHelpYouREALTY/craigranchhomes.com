@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -44,6 +45,8 @@ export default function RelocationPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               New Opportunity?<br />We Handle Your Sale.
             </h1>
+            <HeadingPhoto path="/sellers/relocation" />
+
             <p className="text-xl text-slate-600 mb-8">
               Sell your Las Vegas home while you focus on your new chapter.
               We coordinate both ends of your move.
@@ -56,6 +59,8 @@ export default function RelocationPage() {
             <div className="flex items-center justify-center mb-6">
               <Globe className="h-8 w-8 mr-3 text-blue-400" />
               <h2 className="text-3xl font-bold">Berkshire Hathaway HomeServices Network</h2>
+            <HeadingPhoto path="/sellers/relocation" level="h2" />
+
             </div>
             <p className="text-center text-slate-300 mb-8 max-w-2xl mx-auto">
               When you work with Dr. Jan, you're not just getting a Las Vegas agent—you're

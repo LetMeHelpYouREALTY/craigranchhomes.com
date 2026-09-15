@@ -4,6 +4,7 @@ import { MapPin, Home, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -127,6 +128,8 @@ export default function NeighborhoodsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas & Henderson Neighborhoods
             </h1>
+            <HeadingPhoto path="/neighborhoods" />
+
             <p className="text-xl text-slate-600">
               Compare Las Vegas and Henderson neighborhoods with Dr. Jan Duffy, your{" "}
               <strong>Berkshire Hathaway HomeServices</strong> neighborhood expert
@@ -153,6 +156,8 @@ export default function NeighborhoodsPage() {
                       <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                         {neighborhood.name}
                       </h2>
+            <HeadingPhoto path="/neighborhoods" level="h2" />
+
                       <p className="text-sm text-slate-500">{neighborhood.bestFor}</p>
                     </div>
                     <div className="text-right">

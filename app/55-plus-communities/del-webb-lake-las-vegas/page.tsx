@@ -12,6 +12,8 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 
@@ -43,6 +45,8 @@ export default function DelWebbLakeLasVegasPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Del Webb at Lake Las Vegas
             </h1>
+            <HeadingPhoto path="/55-plus-communities/del-webb-lake-las-vegas" />
+
             <p className="text-xl text-slate-600">
               Modern homes. Lake views. Resort living. The newest Del Webb in Las Vegas.
             </p>
@@ -60,6 +64,8 @@ export default function DelWebbLakeLasVegasPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Del Webb at Lake Las Vegas at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/del-webb-lake-las-vegas" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$400K-$900K</div>
@@ -253,6 +259,17 @@ export default function DelWebbLakeLasVegasPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Del Webb Lake Las Vegas FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Del Webb Lake Las Vegas?", a: "Homes typically range from about $400,000 to $900,000 as of January 2026. Monthly HOA is about $200–$280." },
+              { q: "Is this a lakefront 55-plus community?", a: "Yes. Del Webb at Lake Las Vegas is a newer 55+ village with lake and mountain views and resort amenities in Henderson." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
           </section>
 
           {/* CTA */}

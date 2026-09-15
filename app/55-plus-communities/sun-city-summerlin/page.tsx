@@ -14,8 +14,11 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
+import { generateFAQSchema } from "@/lib/schema";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -50,12 +53,37 @@ const communitySchema = {
   },
 };
 
+const sunCitySummerlinFaqs = [
+  {
+    q: "What is the price range in Sun City Summerlin?",
+    a: "Homes typically list from about $320,000 to $850,000 as of January 2026. HOA dues are about $155–$195 per month and include rec centers, golf access rules, and common-area maintenance.",
+  },
+  {
+    q: "How large is Sun City Summerlin?",
+    a: "About 7,700 homes with three golf courses, four recreation centers, and 100+ clubs. Mountain View Hospital sits adjacent to the campus.",
+  },
+  {
+    q: "How do I tour Sun City Summerlin with Dr. Jan Duffy?",
+    a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Register for a private tour before walking model streets.",
+  },
+];
+
 export default function SunCitySummerlinPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateFAQSchema(
+              sunCitySummerlinFaqs.map((f) => ({ question: f.q, answer: f.a }))
+            )
+          ),
+        }}
       />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -68,6 +96,8 @@ export default function SunCitySummerlinPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Summerlin
             </h1>
+            <HeadingPhoto path="/55-plus-communities/sun-city-summerlin" />
+
             <p className="text-xl text-slate-600">
               7,700+ homes. 3 golf courses. 4 recreation centers. The gold standard of active adult living.
             </p>
@@ -85,6 +115,8 @@ export default function SunCitySummerlinPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Summerlin at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/sun-city-summerlin" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">$320K-$850K</div>
@@ -278,6 +310,13 @@ export default function SunCitySummerlinPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Sun City Summerlin FAQ
+            </h2>
+            <FaqAccordion items={sunCitySummerlinFaqs} />
           </section>
 
           {/* CTA */}

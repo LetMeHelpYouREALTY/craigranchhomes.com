@@ -4,6 +4,7 @@ import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "luc
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 
@@ -54,6 +55,8 @@ export default function WhyBerkshireHathawayPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Why Choose Berkshire Hathaway HomeServices?
             </h1>
+            <HeadingPhoto path="/why-berkshire-hathaway" />
+
             <p className="text-xl text-slate-600 leading-relaxed">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> agent, you're
               backed by a name synonymous with trust, ethical standards, and financial strength—the
@@ -71,6 +74,8 @@ export default function WhyBerkshireHathawayPage() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Backed by Warren Buffett's Legacy
                 </h2>
+            <HeadingPhoto path="/why-berkshire-hathaway" level="h2" />
+
                 <p className="text-slate-300 mb-6">
                   <strong>Berkshire Hathaway HomeServices</strong> is the only real estate brand
                   backed by Berkshire Hathaway Inc., Warren Buffett's legendary holding company.

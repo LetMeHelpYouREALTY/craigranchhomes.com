@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -76,6 +78,8 @@ export default function SoleraAnthemPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Solera at Anthem
             </h1>
+            <HeadingPhoto path="/55-plus-communities/solera-anthem" />
+
             <p className="text-xl text-slate-600">
               Guard-gated 55+ living in Henderson's Anthem area.
             </p>
@@ -93,6 +97,8 @@ export default function SoleraAnthemPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Solera at Anthem at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/solera-anthem" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">
@@ -340,8 +346,8 @@ export default function SoleraAnthemPage() {
                     Guard-gated 55+ living in Henderson
                   </strong>
                   <p className="text-slate-600 text-sm">
-                    Double layer of security: Henderson's safety record plus 24/7
-                    guard gate
+                    Staffed gate 24/7 plus Henderson police and fire stations within typical
+                    suburban response distance
                   </p>
                 </div>
               </div>
@@ -376,6 +382,17 @@ export default function SoleraAnthemPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Solera at Anthem FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Solera at Anthem?", a: "Homes typically range from about $380,000 to $650,000 as of January 2026. Monthly HOA is about $170–$210." },
+              { q: "How many homes are in Solera?", a: "About 1,200 homes behind a staffed gate in Henderson, with a boutique clubhouse campus." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
           </section>
 
           {/* CTA */}

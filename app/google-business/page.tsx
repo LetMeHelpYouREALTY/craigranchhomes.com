@@ -13,6 +13,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import {
   ctaPhone,
@@ -82,6 +83,8 @@ export default function GoogleBusinessPage() {
                     </span>
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">Dr. Jan Duffy</h1>
+            <HeadingPhoto path="/google-business" />
+
                   <p className="text-xl text-blue-200 mb-2">
                     REALTOR® | License {businessInfo.license}
                   </p>
@@ -145,6 +148,8 @@ export default function GoogleBusinessPage() {
               <div className="flex items-center gap-2 mb-4">
                 <Clock className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 <h2 className="text-xl font-bold text-slate-900">Business Hours</h2>
+            <HeadingPhoto path="/google-business" level="h2" />
+
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                 {businessHours.map((row) => (

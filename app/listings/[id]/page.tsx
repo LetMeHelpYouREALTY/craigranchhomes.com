@@ -8,6 +8,7 @@ import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import CtaActions from "@/components/sections/CtaActions";
 import { ctaPhone, nap } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
+import { mediaUrl, photos } from "@/lib/media";
 
 type PropertyPageProps = {
   params: { id: string };
@@ -41,8 +42,8 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             </p>
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden mb-6">
               <Image
-                src="/Image/hero_bg_1.jpg"
-                alt="Las Vegas homes represented by Dr. Jan Duffy"
+                src={mediaUrl(photos.homeHero.src)}
+                alt={photos.homeHero.alt}
                 fill
                 className="object-cover"
                 priority

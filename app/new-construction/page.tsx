@@ -16,6 +16,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { nap } from "@/lib/contact";
@@ -248,6 +249,8 @@ export default function NewConstructionPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices New Construction Las Vegas
             </h1>
+            <HeadingPhoto path="/new-construction" />
+
             <p className="text-xl text-slate-600 mb-8">
               Your complete buyer's guide to new homes in Las Vegas. Free representation,
               expert contract review, and insider knowledge of builder incentives.
@@ -280,6 +283,8 @@ export default function NewConstructionPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Why Use a BHHS Agent for New Construction?
             </h2>
+            <HeadingPhoto path="/new-construction" level="h2" />
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="flex items-start">
                 <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">

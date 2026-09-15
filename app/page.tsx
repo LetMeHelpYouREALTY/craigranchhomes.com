@@ -11,6 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { ctaPhone, nap } from "@/lib/contact";
 import { marketStats as stats } from "@/lib/site-config";
+import { mediaUrl, photos } from "@/lib/media";
 
 export const metadata = pageMetadata({
   path: "/",
@@ -33,8 +34,8 @@ export default async function Home() {
     <main id="main-content">
       <section className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden">
         <Image
-          src="/Image/hero_bg_1.jpg"
-          alt="Las Vegas homes with mountain views"
+          src={mediaUrl(photos.homeHero.src)}
+          alt={photos.homeHero.alt}
           fill
           priority
           className="object-cover opacity-30"

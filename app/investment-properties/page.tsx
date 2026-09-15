@@ -4,6 +4,7 @@ import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calcula
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 
@@ -80,6 +81,8 @@ export default function InvestmentPropertiesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Investment Properties
             </h1>
+            <HeadingPhoto path="/investment-properties" />
+
             <p className="text-xl text-slate-600">
               No state income tax, strong appreciation, and excellent rental yields. Discover why
               investors choose Las Vegas—with guidance from{" "}
@@ -93,6 +96,8 @@ export default function InvestmentPropertiesPage() {
           {/* Why Las Vegas */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Invest in Las Vegas?</h2>
+            <HeadingPhoto path="/investment-properties" level="h2" />
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-3" />

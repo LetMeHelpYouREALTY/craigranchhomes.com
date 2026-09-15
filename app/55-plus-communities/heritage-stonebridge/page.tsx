@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -76,6 +78,8 @@ export default function HeritageAtStonebridgePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Heritage at Stonebridge
             </h1>
+            <HeadingPhoto path="/55-plus-communities/heritage-stonebridge" />
+
             <p className="text-xl text-slate-600">
               Boutique 55+ living with guard-gated privacy in the heart of
               Summerlin.
@@ -94,6 +98,8 @@ export default function HeritageAtStonebridgePage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Heritage at Stonebridge at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/heritage-stonebridge" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-1">
@@ -378,6 +384,17 @@ export default function HeritageAtStonebridgePage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Heritage at Stonebridge FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Heritage at Stonebridge?", a: "Homes typically range from about $400,000 to $750,000 as of January 2026. Monthly HOA is about $175–$220." },
+              { q: "Is Heritage at Stonebridge guard-gated?", a: "Yes. It is a boutique guard-gated 55+ village in Summerlin near Downtown Summerlin shopping." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
           </section>
 
           {/* CTA */}

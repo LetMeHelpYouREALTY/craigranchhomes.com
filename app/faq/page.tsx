@@ -4,6 +4,7 @@ import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 import { nap } from "@/lib/contact";
@@ -196,6 +197,8 @@ export default function FAQPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Frequently Asked Questions
             </h1>
+            <HeadingPhoto path="/faq" />
+
             <p className="text-xl text-slate-600">
               Everything you need to know about working with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> in Las Vegas
@@ -212,6 +215,8 @@ export default function FAQPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">
                   {category.title}
                 </h2>
+            <HeadingPhoto path="/faq" level="h2" />
+
                 <FaqAccordion items={category.faqs} />
               </section>
             ))}

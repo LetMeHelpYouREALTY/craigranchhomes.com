@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 import { nap } from "@/lib/contact";
@@ -128,6 +129,8 @@ export default function ListingsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Homes for Sale
             </h1>
+            <HeadingPhoto path="/listings" />
+
             <p className="text-xl text-slate-600 mb-8">
               Search thousands of Las Vegas, Henderson, and Summerlin properties with live MLS 
               listings updated every 15 minutes. Find your dream home with expert guidance from 
@@ -166,6 +169,8 @@ export default function ListingsPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Popular Property Searches in Las Vegas
             </h2>
+            <HeadingPhoto path="/listings" level="h2" />
+
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers diverse neighborhoods for every lifestyle and budget. Search luxury
               estates in guard-gated communities, homes near Palo Verde High School or Coronado High

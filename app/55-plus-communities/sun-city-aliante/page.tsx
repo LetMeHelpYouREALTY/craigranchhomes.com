@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
 
@@ -75,6 +77,8 @@ export default function SunCityAliantePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Aliante
             </h1>
+            <HeadingPhoto path="/55-plus-communities/sun-city-aliante" />
+
             <p className="text-xl text-slate-600">
               Full Sun City amenities at the best value. Golf, pools, fitness, and
               100+ clubs—from $280K.
@@ -93,6 +97,8 @@ export default function SunCityAliantePage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Aliante at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/sun-city-aliante" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">
@@ -391,6 +397,17 @@ export default function SunCityAliantePage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Sun City Aliante FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Sun City Aliante?", a: "Homes typically range from about $280,000 to $550,000 as of January 2026. Monthly HOA is about $140–$175, among the lowest Sun City dues in the valley." },
+              { q: "Does Sun City Aliante have golf?", a: "Yes. Residents have access to an 18-hole golf course plus pools, fitness, and 100+ clubs." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
           </section>
 
           {/* CTA */}

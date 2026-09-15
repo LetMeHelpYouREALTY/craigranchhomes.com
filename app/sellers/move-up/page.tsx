@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -43,6 +44,8 @@ export default function MoveUpSellerPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Ready for Your Next Chapter?
             </h1>
+            <HeadingPhoto path="/sellers/move-up" />
+
             <p className="text-xl text-slate-600 mb-8">
               Your home's equity unlocks your dream home. Let's make the upgrade seamless.
             </p>
@@ -54,6 +57,8 @@ export default function MoveUpSellerPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Your Equity Position is Stronger Than You Think
             </h2>
+            <HeadingPhoto path="/sellers/move-up" level="h2" />
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">$100K-$250K+</div>

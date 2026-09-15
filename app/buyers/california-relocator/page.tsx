@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { nap } from "@/lib/contact";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 
@@ -122,6 +123,8 @@ export default function CaliforniaRelocatorPage() {
               Relocating from California?<br />
               <span className="text-blue-600">Welcome Home to Las Vegas</span>
             </h1>
+            <HeadingPhoto path="/buyers/california-relocator" />
+
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
               Zero state income tax. 40-60% lower home prices. Same sunshine.
             </p>
@@ -133,6 +136,8 @@ export default function CaliforniaRelocatorPage() {
             <div className="flex items-center justify-center mb-6">
               <Calculator className="h-10 w-10 mr-3" />
               <h2 className="text-3xl font-bold">California vs. Nevada: The Numbers</h2>
+            <HeadingPhoto path="/buyers/california-relocator" level="h2" />
+
             </div>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">

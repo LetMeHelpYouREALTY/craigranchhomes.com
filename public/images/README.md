@@ -37,7 +37,17 @@ Before uploading, optimize images:
 2. **CLI**: `npx @squoosh/cli --webp '{"quality":80}' image.jpg`
 3. **Target**: <200KB for hero, <100KB for thumbnails
 
-## Usage in Code
+## Cloudflare (primary) + Git (backup)
+
+Originals in this folder are the git backup. Production should serve them from Cloudflare Images or an R2 custom domain:
+
+1. `pnpm cloudflare:sync-images` (needs `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`)
+2. Set Vercel env: `NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=true` and `NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH`
+   or `NEXT_PUBLIC_MEDIA_CDN=https://images.heyberkshire.com`
+
+Until those env vars exist, Next.js / Vercel serves the git copies from `/public/images/`.
+
+`lib/media.ts` and `HeadingPhoto` map each route’s H1/H2 to a heading-appropriate photo.
 
 ```tsx
 import Image from 'next/image'

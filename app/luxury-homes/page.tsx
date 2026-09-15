@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -133,6 +134,8 @@ export default function LuxuryHomesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Luxury Real Estate
             </h1>
+            <HeadingPhoto path="/luxury-homes" />
+
             <p className="text-xl text-slate-600 mb-8">
               <strong>Berkshire Hathaway HomeServices</strong> represents the gold standard in
               luxury real estate. When you're buying or selling a $1M+ home, trust matters more than
@@ -154,6 +157,8 @@ export default function LuxuryHomesPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Luxury Market Statistics | January 2026
             </h2>
+            <HeadingPhoto path="/luxury-homes" level="h2" />
+
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas luxury market continues to attract affluent buyers from California, 
               the Midwest, and international markets. Understanding current market conditions 

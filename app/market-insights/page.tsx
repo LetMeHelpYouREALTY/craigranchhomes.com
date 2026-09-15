@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 import { generateFAQSchema } from "@/lib/schema";
@@ -91,6 +92,8 @@ export default function MarketInsightsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Market Insights
             </h1>
+            <HeadingPhoto path="/market-insights" />
+
             <p className="text-xl text-slate-600">
               Technology trends, economic forces, and market dynamics shaping Las Vegas
               real estate in 2026 and beyond.
@@ -105,6 +108,8 @@ export default function MarketInsightsPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               5 Forces Driving Las Vegas Real Estate in 2026
             </h2>
+            <HeadingPhoto path="/market-insights" level="h2" />
+
             <div className="grid md:grid-cols-5 gap-4">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-2">37%</div>

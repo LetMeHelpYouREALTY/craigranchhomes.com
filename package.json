@@ -28,6 +28,7 @@
     "vercel:prod": "vercel deploy --prod --prebuilt",
     "cloudflare:dev": "wrangler dev",
     "cloudflare:deploy": "wrangler deploy",
+    "cloudflare:sync-images": "bash scripts/sync-images-to-cloudflare.sh",
     "cloudflare:pages": "npx @cloudflare/next-on-pages",
     "cloudflare:build": "npm run cloudflare:pages",
     "build:cloudflare": "npx @cloudflare/next-on-pages"

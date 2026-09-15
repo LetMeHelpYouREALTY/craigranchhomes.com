@@ -13,6 +13,7 @@ import AIChatWidget from "@/components/chat/AIChatWidget";
 import MobileStickyCTA from "@/components/layouts/MobileStickyCTA";
 import InnerPageChrome from "@/components/layouts/InnerPageChrome";
 import { absoluteUrl } from "@/lib/seo";
+import { photos } from "@/lib/media";
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
@@ -41,11 +42,11 @@ export async function generateMetadata(): Promise<Metadata> {
       url: canonical,
       locale: "en_US",
       siteName: nap.brokerage,
-      images: [{ url: absoluteUrl("/Image/hero_bg_1.jpg"), alt: "Las Vegas homes with Dr. Jan Duffy" }],
+      images: [{ url: absoluteUrl(photos.homeHero.src), alt: photos.homeHero.alt }],
     },
     twitter: {
       card: "summary_large_image",
-      images: [absoluteUrl("/Image/hero_bg_1.jpg")],
+      images: [absoluteUrl(photos.homeHero.src)],
     },
   };
 }

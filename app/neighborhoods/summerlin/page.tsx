@@ -4,6 +4,7 @@ import { Phone, MapPin, TreePine, Mountain, GraduationCap, ShoppingBag } from "l
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -91,6 +92,8 @@ export default function SummerlinPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices Summerlin
             </h1>
+            <HeadingPhoto path="/neighborhoods/summerlin" />
+
             <p className="text-xl text-slate-600">
               Discover Las Vegas's premier master-planned community with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Summerlin expert.
@@ -108,6 +111,8 @@ export default function SummerlinPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Summerlin Real Estate Market | January 2026
             </h2>
+            <HeadingPhoto path="/neighborhoods/summerlin" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$625,000</div>

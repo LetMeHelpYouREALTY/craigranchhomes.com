@@ -4,6 +4,7 @@ import { Phone, Shield, Mountain, Star, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -79,6 +80,8 @@ export default function SouthernHighlandsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices Southern Highlands
             </h1>
+            <HeadingPhoto path="/neighborhoods/southern-highlands" />
+
             <p className="text-xl text-slate-600">
               Premier golf course living in southwest Las Vegas. Discover Southern Highlands with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
@@ -96,6 +99,8 @@ export default function SouthernHighlandsPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Southern Highlands Market | January 2026
             </h2>
+            <HeadingPhoto path="/neighborhoods/southern-highlands" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$750,000</div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
 
@@ -82,6 +83,8 @@ export default function HomeValuationPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               What's Your Las Vegas Home Worth?
             </h1>
+            <HeadingPhoto path="/home-valuation" />
+
             <p className="text-xl text-slate-600">
               Get a free, no-obligation home valuation from Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>. Accurate pricing backed by 17+ years
@@ -96,6 +99,8 @@ export default function HomeValuationPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-3 text-center">
               Instant Home Value Estimate
             </h2>
+            <HeadingPhoto path="/home-valuation" level="h2" />
+
             <p className="text-slate-600 text-center mb-6">
               Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with
               Dr. Jan Duffy for a price backed by recent comps.
