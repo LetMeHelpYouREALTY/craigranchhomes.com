@@ -339,43 +339,40 @@ export default function AboutPage() {
 
           {/* Why BHHS Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-              Why Berkshire Hathaway HomeServices?
+            <h2 className="scroll-mt-32 text-3xl md:text-4xl font-bold mb-4 text-center">
+              License S.0197614.LLC on the card at 9406 W Lake Mead Blvd
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Berkshire Hathaway HomeServices is the only real estate brand backed by Warren 
-              Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, 
-              ethical standards, and a commitment to client service that defines every transaction.
+              Berkshire Hathaway HomeServices Nevada Properties holds the desk. Appointments start
+              at Suite 100. Call or text (702) 222-1964. The office line on Google is (702) 500-1942.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Award className="h-8 w-8" />
                 </div>
-                <h3 className="font-bold text-xl mb-2">Trusted Brand</h3>
+                <h3 className="font-bold text-xl mb-2">BHHS Nevada Properties on the paperwork</h3>
                 <p className="text-slate-300 text-sm">
-                  The only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc.—a 
-                  name synonymous with trust and integrity worldwide.
+                  The brokerage on the contract is Berkshire Hathaway HomeServices Nevada Properties,
+                  not a slogan. Suite 100 is the Maps pin.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-8 w-8" />
                 </div>
-                <h3 className="font-bold text-xl mb-2">Global Network</h3>
+                <h3 className="font-bold text-xl mb-2">West Coast sale timed against a Las Vegas purchase</h3>
                 <p className="text-slate-300 text-sm">
-                  50,000+ agents worldwide for seamless referrals and relocations. Whether you're 
-                  moving from California or anywhere else, our network has you covered.
+                  50,000+ BHHS agents for a California listing referral paired with a Suite 100 buyer file.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Shield className="h-8 w-8" />
                 </div>
-                <h3 className="font-bold text-xl mb-2">Ethical Standards</h3>
+                <h3 className="font-bold text-xl mb-2">No-pressure consult, then a dated tour block</h3>
                 <p className="text-slate-300 text-sm">
-                  Rigorous ethical guidelines ensure your interests always come first. No pressure, 
-                  no games—just honest advice and expert representation.
+                  We review HOA packets and commute minutes at the desk before we drive. Call (702) 222-1964.
                 </p>
               </div>
             </div>

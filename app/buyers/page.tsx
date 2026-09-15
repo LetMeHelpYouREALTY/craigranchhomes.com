@@ -309,50 +309,48 @@ export default function BuyersPage() {
 
           {/* Why BHHS */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Why Buy with Berkshire Hathaway HomeServices
+            <h2 className="scroll-mt-32 text-3xl font-bold text-slate-900 mb-4 text-center">
+              Buyer-agency paperwork at Suite 100 before any model row
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Not all real estate agents are created equal. When you choose a Berkshire Hathaway 
-              HomeServices agent, you're choosing the only real estate brand backed by Warren 
-              Buffett's Berkshire Hathaway Inc.—a name synonymous with trust, ethical standards, 
-              and financial strength.
+              Representation is signed at 9406 W Lake Mead Blvd, Suite 100. License S.0197614.LLC
+              is on the card. Call (702) 222-1964 before the first builder visit.
             </p>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Award className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Trusted Brand</h3>
+                <h3 className="font-bold text-slate-900 mb-2">Buyer-agency form at the desk</h3>
                 <p className="text-slate-600 text-sm">
-                  The only real estate brand backed by Berkshire Hathaway Inc.
+                  BHHS Nevada Properties is on the form. We do not walk models unregistered.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Global Network</h3>
+                <h3 className="font-bold text-slate-900 mb-2">California-to-Nevada referral desk</h3>
                 <p className="text-slate-600 text-sm">
-                  50,000+ agents worldwide for seamless relocations and referrals
+                  50,000+ BHHS agents for a West Coast sale timed against a Las Vegas purchase
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <MapPin className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Local Expertise</h3>
+                <h3 className="font-bold text-slate-900 mb-2">West-valley start, then the listing street</h3>
                 <p className="text-slate-600 text-sm">
-                  Dr. Jan has served Las Vegas since 2008 with $127M+ in transactions
+                  Dr. Jan has served Las Vegas since 2008 with $127M+ in transactions from Suite 100
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Expert Negotiation</h3>
+                <h3 className="font-bold text-slate-900 mb-2">Offer math at 9406 W Lake Mead Blvd</h3>
                 <p className="text-slate-600 text-sm">
-                  500+ successful transactions mean proven negotiation skills
+                  500+ closed files. Escalation and inspection terms are written at the desk.
                 </p>
               </div>
             </div>

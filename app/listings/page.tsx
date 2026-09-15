@@ -269,50 +269,48 @@ export default function ListingsPage() {
 
           {/* Why Use an Agent Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">
-              Why Work With a Berkshire Hathaway HomeServices Agent
+            <h2 className="scroll-mt-32 text-3xl font-bold mb-6 text-center">
+              Live MLS from Suite 100, then the first two ZIP loops
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              In today's competitive Las Vegas market, having expert representation can mean the 
-              difference between winning your dream home and losing out. Dr. Jan Duffy brings 
-              the resources of Berkshire Hathaway HomeServices—the most trusted name in real estate—
-              combined with deep local market knowledge from serving Las Vegas since 2008.
+              Search is opened at 9406 W Lake Mead Blvd. Dr. Jan Duffy sequences Summerlin
+              10–15 minutes west, then a Henderson loop if that is the brief. Call (702) 222-1964.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Search className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Off-Market Access</h3>
+                <h3 className="font-bold mb-2">Off-market windows from the desk</h3>
                 <p className="text-slate-400 text-sm">
-                  See listings before they hit the MLS through our network of 50,000+ agents
+                  Pocket listings come through the BHHS network. We do not text addresses on unsecured threads.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Expert Negotiation</h3>
+                <h3 className="font-bold mb-2">Escalation language written at Suite 100</h3>
                 <p className="text-slate-400 text-sm">
-                  $127M+ in closed transactions means proven negotiation skills on your behalf
+                  $127M+ in closed files. Inspection and appraisal terms are drafted before you leave the office.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <MapPin className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Local Expertise</h3>
+                <h3 className="font-bold mb-2">Named campuses and commute minutes by street</h3>
                 <p className="text-slate-400 text-sm">
-                  Insider knowledge of neighborhoods, schools, and upcoming developments
+                  Palo Verde, Coronado, Arbor View — mapped at ccsd.net/zoning, not as a slogan
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <CheckCircle className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Free for Buyers</h3>
+                <h3 className="font-bold mb-2">Buyer-agency is on the seller's commission</h3>
                 <p className="text-slate-400 text-sm">
-                  The seller pays the commission—you get full representation at no cost
+                  Full representation. The listing side pays the cooperating fee in a typical Las Vegas sale.
                 </p>
               </div>
             </div>
