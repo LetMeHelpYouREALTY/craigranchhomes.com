@@ -52,6 +52,11 @@ const byPath: Record<string, PlaceDrive> = {
     driveMinutes: "20–30 minutes via the southwest Beltway",
     note: "Exploration Peak trailheads and resale streets fit a single southwest loop.",
   },
+  "/neighborhoods/craig-ranch": {
+    place: "Craig Ranch",
+    driveMinutes: "20–25 minutes via US-95 / I-15",
+    note: "Gate list confirmed at Suite 100; 628 W. Craig Road park and 1494 Sound Lane streets are one north loop.",
+  },
   "/neighborhoods/north-las-vegas": {
     place: "North Las Vegas",
     driveMinutes: "20–25 minutes via US-95 / I-15",
@@ -93,9 +98,9 @@ const byPath: Record<string, PlaceDrive> = {
     note: "Lake-adjacent plans and Reflection Bay golf are blocked as an east-Henderson half day.",
   },
   "/": {
-    place: "Las Vegas, Henderson, and Summerlin tours",
-    driveMinutes: "same day from this pin",
-    note: "Buyer and seller appointments start at the west-valley office, then loop Summerlin first and Henderson second.",
+    place: "Craig Ranch tours from this pin",
+    driveMinutes: "20–25 minutes via US-95 / I-15",
+    note: "Buyer and seller appointments start at the west-valley office, then lock the 89031 gate list and walk 628 W. Craig Road on the same north clock.",
   },
   "/about": {
     place: "an in-person consult with Dr. Jan Duffy",

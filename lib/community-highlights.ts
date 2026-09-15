@@ -129,6 +129,20 @@ export const communityHighlights: Record<string, CommunityHighlightCopy> = {
       },
     ],
   },
+  "/neighborhoods/craig-ranch": {
+    h3: "Jasmine Ranch condos vs Seabreeze half-acre lots — two Craig Ranch product bands",
+    body: "Craig Ranch is 20–25 minutes via US-95 / I-15. Condo rows and larger-lot Seabreeze streets are two different showing clocks on the same gate list. Confirm live list prices the week you tour.",
+    pins: [
+      {
+        name: "Jasmine Ranch and Centennial Crossing",
+        note: "Two-bedroom condos vs larger condos/townhomes up to four bedrooms. Pool and fitness on the condo campus. Published entry band from $415,000.",
+      },
+      {
+        name: "Seabreeze larger lots",
+        note: "Lots often cited up to about half an acre; some guesthouses and extra garage bays. Published larger-lot band from $738,700+. Call (702) 222-1964.",
+      },
+    ],
+  },
   "/neighborhoods/north-las-vegas": {
     h3: "$320,000s entry product vs Aliante golf lots — two North Las Vegas price bands",
     body: "North Las Vegas is 20–25 minutes via US-95 / I-15. This is not a Summerlin retail swap. Entry product and Aliante golf-adjacent lots are two different showing clocks.",

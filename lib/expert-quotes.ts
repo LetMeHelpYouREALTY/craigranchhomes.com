@@ -56,6 +56,11 @@ export const expertQuotes: Record<string, ExpertQuoteCopy> = {
     quote:
       "Inspirada is 30–40 minutes from Suite 100. Walk the resort pool and trail loop before Toll Brothers or Lennar rows if you have not registered Dr. Jan. St. Rose Siena is the hospital pin on that Henderson clock.",
   },
+  "/neighborhoods/craig-ranch": {
+    h2: "I register the 89031 gate from Lake Mead Blvd, not the park lot",
+    quote:
+      "Craig Ranch is ZIP 89031, not an Aliante golf lot. I time 628 W. Craig Road and 1494 Sound Lane as one north loop. Mojave High School is mapped by street at ccsd.net/zoning. Call (702) 222-1964.",
+  },
   "/neighborhoods/north-las-vegas": {
     h2: "Aliante first when the ZIP is North Las Vegas",
     quote:
@@ -107,9 +112,9 @@ export const expertQuotes: Record<string, ExpertQuoteCopy> = {
       "MonteLago, the shoreline walk, and the Del Webb clubhouse are the pins. I do not add Sun City Summerlin on the same day. Measure the lake path from the listing, not the marketing aerial.",
   },
   "/": {
-    h2: "Same-day routing starts at the Maps pin, not a call center",
+    h2: "Craig Ranch days start at the Maps pin, not a call center",
     quote:
-      "Buyer and seller appointments start at 9406 W Lake Mead Blvd, Suite 100. Summerlin first, Henderson second, so you are not crisscrossing I-15. Call or text (702) 222-1964. The office line on Google is (702) 500-1942.",
+      "Buyer and seller appointments start at 9406 W Lake Mead Blvd, Suite 100. The north clock is 628 W. Craig Road, then the 89031 gate — not Summerlin first unless you ask. Call or text (702) 222-1964. The office line on Google is (702) 500-1942.",
   },
   "/about": {
     h2: "License S.0197614.LLC appointments are at Suite 100",

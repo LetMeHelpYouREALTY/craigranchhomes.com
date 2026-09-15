@@ -39,8 +39,8 @@ const forbidden = [
 describe("communityHighlights", () => {
   const paths = Object.keys(communityHighlights);
 
-  it("covers the ten village paths that used the chassis H3", () => {
-    expect(paths).toHaveLength(10);
+  it("covers the village paths that used the chassis H3", () => {
+    expect(paths).toHaveLength(11);
   });
 
   it("keeps highlight H3s unique per path", () => {

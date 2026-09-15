@@ -38,6 +38,17 @@ const nextConfig = {
         destination: 'https://www.heyberkshire.com/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'craigranchhomes.com',
+          },
+        ],
+        destination: 'https://www.craigranchhomes.com/:path*',
+        permanent: true,
+      },
     ]
   },
 

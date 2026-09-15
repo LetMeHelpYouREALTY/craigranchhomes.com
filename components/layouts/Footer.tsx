@@ -85,6 +85,7 @@ export default function Footer() {
             <h2 className="font-bold text-lg mb-4">Explore</h2>
             <ul className="space-y-2">
               {[
+                { href: "/neighborhoods/craig-ranch", label: "Craig Ranch Homes" },
                 { href: "/listings", label: "Las Vegas Homes for Sale" },
                 { href: "/neighborhoods", label: "Las Vegas Neighborhoods" },
                 { href: "/luxury-homes", label: "Luxury Homes" },

@@ -23,7 +23,7 @@ describe("neighborhoodFaqs", () => {
   const paths = Object.keys(neighborhoodFaqs);
 
   it("covers every neighborhood interior path plus the hub", () => {
-    expect(paths).toHaveLength(11);
+    expect(paths).toHaveLength(12);
   });
 
   it("keeps H2 copy unique per path", () => {

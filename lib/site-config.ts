@@ -10,9 +10,9 @@ export const siteConfig = {
     "Berkshire Hathaway HomeServices Nevada Properties | Private Client Real Estate Advisory",
   brandName: "Berkshire Hathaway HomeServices",
   shortName: "BHHS",
-  url: "https://heyberkshire.com",
+  url: "https://www.craigranchhomes.com",
   description:
-    "Expert real estate services in Las Vegas and Henderson, NV. Buy, sell, or invest with Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent.",
+    "Craig Ranch homes for sale in North Las Vegas ZIP 89031. Buy, sell, or relocate with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties.",
 };
 
 export const agentInfo = {
@@ -101,6 +101,13 @@ export const valuePropositions = {
 
 // Neighborhoods served
 export const neighborhoods = [
+  {
+    name: "Craig Ranch",
+    slug: "craig-ranch",
+    description: "Gated North Las Vegas plat next to 170-acre Craig Ranch Regional Park",
+    medianPrice: "$415,000+",
+    highlights: ["170-acre park", "Gated streets", "Century collections", "ZIP 89031"],
+  },
   {
     name: "Summerlin",
     slug: "summerlin",

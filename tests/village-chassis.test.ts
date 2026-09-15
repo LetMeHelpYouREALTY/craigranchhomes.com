@@ -13,6 +13,7 @@ const villages = [
   "inspirada",
   "north-las-vegas",
   "mountains-edge",
+  "craig-ranch",
 ];
 
 describe("village chassis replacements", () => {
@@ -50,6 +51,7 @@ describe("village chassis replacements", () => {
       henderson: '<VillageDetails path="/neighborhoods/henderson" />',
       "north-las-vegas":
         '<VillageDetails path="/neighborhoods/north-las-vegas" />',
+      "craig-ranch": '<VillageDetails path="/neighborhoods/craig-ranch" />',
     };
     for (const [slug, needle] of Object.entries(leftovers)) {
       const src = readFileSync(

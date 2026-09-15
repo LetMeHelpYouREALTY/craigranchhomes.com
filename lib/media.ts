@@ -269,6 +269,7 @@ export function photoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/henderson")) return photos.henderson;
   if (path.startsWith("/neighborhoods/centennial-hills"))
     return photos.centennial;
+  if (path.startsWith("/neighborhoods/craig-ranch")) return photos.aliante;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.aliante;
   if (path.startsWith("/neighborhoods/mountains-edge"))
     return photos.mountainsEdge;
@@ -357,6 +358,8 @@ export function h3PhotoForPath(path: string): SitePhoto {
   }
   if (path.startsWith("/neighborhoods/centennial-hills"))
     return photos.skyeCanyon;
+  if (path.startsWith("/neighborhoods/craig-ranch"))
+    return photos.fiftyFiveClubhouse;
   if (path.startsWith("/neighborhoods/north-las-vegas"))
     return photos.alianteRec;
   if (path.startsWith("/neighborhoods/skye-canyon"))
@@ -418,6 +421,8 @@ export function campusPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/green-valley")) return photos.inspirada;
   if (path.startsWith("/neighborhoods/henderson")) return photos.lakeLasVegas;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.sunCityAnthemGolf;
+  if (path.startsWith("/neighborhoods/craig-ranch"))
+    return photos.soleraClubhouse;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.market;
   if (path.startsWith("/neighborhoods/mountains-edge"))
     return photos.southernHighlands;
@@ -438,6 +443,8 @@ export function commutePhotoForPath(path: string): SitePhoto {
     return photos.soleraClubhouse;
   if (path.startsWith("/neighborhoods/henderson")) return photos.fiftyFive;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.heritageGate;
+  if (path.startsWith("/neighborhoods/craig-ranch"))
+    return photos.sunCityAnthemGolf;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.investment;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.luxuryPool;
   if (path.startsWith("/neighborhoods")) return photos.consultation;
@@ -457,6 +464,7 @@ export function faqPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/henderson"))
     return photos.sunCitySummerlinRec;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.ridges;
+  if (path.startsWith("/neighborhoods/craig-ranch")) return photos.centennial;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.sellers;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.skyeCanyon;
   if (path.startsWith("/neighborhoods")) return photos.lakeLasVegas;
@@ -545,6 +553,8 @@ export function amenityPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/green-valley")) return photos.lakeLasVegas;
   if (path.startsWith("/neighborhoods/henderson")) return photos.inspirada;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.greenValley;
+  if (path.startsWith("/neighborhoods/craig-ranch"))
+    return photos.summerlinTrail;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.centennial;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.fiftyFive;
   if (path.startsWith("/neighborhoods")) return photos.newConstruction;
@@ -589,6 +599,7 @@ export function lifestylePhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/green-valley")) return photos.homeHero;
   if (path.startsWith("/neighborhoods/henderson")) return photos.agent;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.market;
+  if (path.startsWith("/neighborhoods/craig-ranch")) return photos.ridges;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.homeHero;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.homeHero;
   if (path.startsWith("/neighborhoods")) return photos.fiftyFive;
@@ -605,6 +616,8 @@ export function highlightPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/green-valley")) return photos.office;
   if (path.startsWith("/neighborhoods/henderson")) return photos.market;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.luxuryPool;
+  if (path.startsWith("/neighborhoods/craig-ranch"))
+    return photos.fiftyFiveFitness;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.greenValley;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.aliante;
   if (path.startsWith("/neighborhoods")) return photos.fiftyFiveFitness;
@@ -613,6 +626,7 @@ export function highlightPhotoForPath(path: string): SitePhoto {
 
 /** Eighteenth still for village Parks H3s — Centennial Hills and Mountains Edge. */
 export function parkPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/craig-ranch")) return photos.skyeCanyon;
   if (path.startsWith("/neighborhoods/centennial-hills"))
     return photos.mountainsEdge;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.henderson;
@@ -635,6 +649,12 @@ export function villageDetailPhotoForPath(path: string, slot = 0): SitePhoto {
   }
   if (path.startsWith("/neighborhoods/henderson") && slot === 0) {
     return photos.ridges;
+  }
+  if (path.startsWith("/neighborhoods/craig-ranch") && slot === 0) {
+    return photos.sellers;
+  }
+  if (path.startsWith("/neighborhoods/craig-ranch") && slot === 1) {
+    return photos.investment;
   }
   if (path.startsWith("/neighborhoods/north-las-vegas") && slot === 0) {
     return photos.summerlinTrail;
@@ -804,12 +824,14 @@ export function occupiedHeadingStills(path: string): Set<string> {
     srcs.push(highlightPhotoForPath(path).src);
   }
   if (
+    path.startsWith("/neighborhoods/craig-ranch") ||
     path.startsWith("/neighborhoods/centennial-hills") ||
     path.startsWith("/neighborhoods/mountains-edge")
   ) {
     srcs.push(parkPhotoForPath(path).src);
   }
   if (
+    path.startsWith("/neighborhoods/craig-ranch") ||
     path.startsWith("/neighborhoods/the-ridges") ||
     path.startsWith("/neighborhoods/southern-highlands") ||
     path.startsWith("/neighborhoods/skye-canyon") ||
@@ -819,7 +841,10 @@ export function occupiedHeadingStills(path: string): Set<string> {
   ) {
     srcs.push(villageDetailPhotoForPath(path, 0).src);
   }
-  if (path.startsWith("/neighborhoods/north-las-vegas")) {
+  if (
+    path.startsWith("/neighborhoods/craig-ranch") ||
+    path.startsWith("/neighborhoods/north-las-vegas")
+  ) {
     srcs.push(villageDetailPhotoForPath(path, 1).src);
   }
   if (

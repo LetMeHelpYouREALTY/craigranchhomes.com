@@ -34,6 +34,9 @@ export const neighborhoodLifestyles: Record<string, NeighborhoodLifestyleCopy> =
     "/neighborhoods/inspirada": {
       h2: "Town Center pools vs St. Rose/Eastern — two Inspirada days",
     },
+    "/neighborhoods/craig-ranch": {
+      h2: "170-acre regional park vs gated interior streets — two Craig Ranch clocks",
+    },
     "/neighborhoods/north-las-vegas": {
       h2: "Aliante rec vs Nellis AFB commute — two North Las Vegas days",
     },

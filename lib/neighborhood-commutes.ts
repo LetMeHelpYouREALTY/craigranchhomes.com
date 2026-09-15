@@ -254,6 +254,32 @@ export const neighborhoodCommutes: Record<string, NeighborhoodCommuteCopy> = {
       },
     ],
   },
+  "/neighborhoods/craig-ranch": {
+    h3: "I-15 / Camino Al Norte: park pin first, then VA and Nellis minutes",
+    body: "Craig Ranch is 20–25 minutes via US-95 / I-15 from Suite 100. The first pin is 628 W. Craig Road, then the Sound Lane gate. Downtown Las Vegas was previously published at about 8 miles / 15 minutes off-peak from many North Las Vegas streets. We re-time the listing curb the week you tour.",
+    pins: [
+      {
+        pin: "Suite 100 via US-95 / I-15",
+        typical: "20–25 min",
+        why: "Gate list confirmed at 9406 W Lake Mead Blvd before the north drive",
+      },
+      {
+        pin: "Craig Ranch Regional Park, 628 W. Craig Road",
+        typical: "Same showing block as the listings",
+        why: "170-acre park pin unique to this plat — not a copied Skye Center",
+      },
+      {
+        pin: "VA Southern Nevada Healthcare / Craig Road",
+        typical: "North-tour employment pin",
+        why: "Medical-shift commute mapped from the listing street, not a valley average",
+      },
+      {
+        pin: "Harry Reid International (LAS)",
+        typical: "About 20 min off-peak / 30–45 min rush (15 miles)",
+        why: "North-to-airport run; longer than Henderson's 6–7 mile tables",
+      },
+    ],
+  },
   "/neighborhoods/north-las-vegas": {
     h3: "US-95 / I-15 north: Aliante rec first, Craig Road employment second",
     body: "North Las Vegas is 20–25 minutes via US-95 / I-15 from Suite 100. Aliante recreation is the north anchor. Downtown Las Vegas was previously published at 8 miles / about 15 minutes off-peak. Nellis-area streets can change campus zones — we do not copy a downtown magnet onto this commute.",

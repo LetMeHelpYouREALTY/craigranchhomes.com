@@ -135,6 +135,22 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     banned: ["Remote Work, Vegas Lifestyle"],
   },
   {
+    file: "app/neighborhoods/craig-ranch/page.tsx",
+    needles: [
+      "1494 Sound Lane",
+      "170-acre Craig Ranch Regional Park",
+      '<VillageDetails path="/neighborhoods/craig-ranch" />',
+      '<NeighborhoodParks path="/neighborhoods/craig-ranch" />',
+    ],
+    banned: [
+      "premier",
+      "family-friendly",
+      "good schools",
+      ">Community Highlights<",
+      "at a Glance",
+    ],
+  },
+  {
     file: "app/neighborhoods/henderson/page.tsx",
     needles: ["drive time from Suite 100"],
     banned: ["every lifestyle and budget"],

@@ -17,6 +17,56 @@ export type VillageDetailCopy = {
 };
 
 export const villageDetails: Record<string, VillageDetailCopy[]> = {
+  "/neighborhoods/craig-ranch": [
+    {
+      h3: "Jasmine Ranch, Centennial Crossing, Seabreeze — three Craig Ranch interiors",
+      body: "Three product types share one Sound Lane gate. We confirm which interior is on the appointment before we leave Suite 100 — 20–25 minutes via US-95 / I-15. Bands below are January 2026 published ranges on this page, not a live quote.",
+      pins: [
+        {
+          name: "Jasmine Ranch",
+          note: "Primarily two-bedroom condos. Pool and fitness building on the condo campus. Published entry band from $415,000.",
+        },
+        {
+          name: "Centennial Crossing",
+          note: "Larger condos and townhomes, some with up to four bedrooms. Mid-range published band $500,000–$650,000.",
+        },
+        {
+          name: "Seabreeze",
+          note: "Larger lots, some to about half an acre, guesthouses, extra garage bays. Published larger-lot band from $738,700+.",
+        },
+        {
+          name: "Kings Crossing rentals",
+          note: "AMH build-to-rent streets on the Craig Ranch map. A rental comparison, not the same clock as a Seabreeze resale. Call (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h3: "Mohave, Essence, Serenity, Olympic, Monarch — Century collections on one gate list",
+      body: "Century Communities grouped floor plans into named collections on this plat. Register Dr. Jan at Suite 100 before any remaining model or resale walk. Confirm which collection is on the listing sheet — they are not interchangeable.",
+      pins: [
+        {
+          name: "Mohave Collection",
+          note: "Named Century plan row on the 89031 gate list. Confirm square footage on the sheet.",
+        },
+        {
+          name: "Essence Collection",
+          note: "Named plan row. Walk it on the same afternoon as Serenity if both addresses are released.",
+        },
+        {
+          name: "Serenity Collection",
+          note: "Named plan row. Do not mix with a Seabreeze half-acre stop unless the brief names both.",
+        },
+        {
+          name: "Olympic Collection",
+          note: "Named plan row. Call (702) 222-1964 to sequence with Monarch.",
+        },
+        {
+          name: "Monarch Collection",
+          note: "Named plan row. Plan widths on older builder sheets ran about 1,519–2,947 sq ft — confirm live.",
+        },
+      ],
+    },
+  ],
   "/neighborhoods/the-ridges": [
     {
       h3: "Bear's Best, Falcon Ridge, Azure, Talon Ridge, Silver Ridge, Eagle Hills",

@@ -43,6 +43,7 @@ describe("villageDetails", () => {
 
   it("covers the leftover village H3 chassis paths", () => {
     expect(Object.keys(villageDetails).sort()).toEqual([
+      "/neighborhoods/craig-ranch",
       "/neighborhoods/henderson",
       "/neighborhoods/inspirada",
       "/neighborhoods/north-las-vegas",
@@ -51,6 +52,7 @@ describe("villageDetails", () => {
       "/neighborhoods/the-ridges",
     ]);
     expect(villageDetails["/neighborhoods/north-las-vegas"]).toHaveLength(2);
+    expect(villageDetails["/neighborhoods/craig-ranch"]).toHaveLength(2);
   });
 
   it("keeps every detail H3 unique", () => {
