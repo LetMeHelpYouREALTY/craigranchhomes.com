@@ -254,5 +254,333 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "License S.0197614.LLC, Suite 100 hours, and the Maps pin on one URL",
+      body: "This About band is for Google Business Profile alignment. Who, what, and where live here so GBP and heyberkshire.com do not drift. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+      pins: [
+        {
+          name: "Who",
+          note: "Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Closed volume cited on this site: $127M+ since 2008.",
+        },
+        {
+          name: "What",
+          note: "Buyer, listing, 55+ occupancy, California inbound, and new-construction registration. MLS is RealScout. Scheduling is Calendly.",
+        },
+        {
+          name: "Where",
+          note: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Summerlin 10–15 minutes. Henderson 25–35 via I-215 east.",
+        },
+        {
+          name: "Hours",
+          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. Match GBP the same day hours change.",
+        },
+      ],
+    },
+  ],
+  "/sellers": [
+    {
+      h2: "Photographer, remarks, and comps scoped at Suite 100 before go-live",
+      body: "Listing files start at 9406 W Lake Mead Blvd, Suite 100. Photos and MLS remarks wait until the walkthrough. Call (702) 222-1964. We do not promise a portal we cannot name.",
+      pins: [
+        {
+          name: "BHHS syndication punch list",
+          note: "MLS plus named BHHS channels are initialed before live. Social stays off until you approve the set.",
+        },
+        {
+          name: "Street comps, not a Zestimate",
+          note: "Bring the APN. January 2026 valley median cited on this site is $450K; your street is a different file.",
+        },
+        {
+          name: "Offer terms at the desk",
+          note: "Inspection, appraisal, and occupancy dates are drafted before you leave Suite 100.",
+        },
+        {
+          name: "Net sheet",
+          note: "HOA, title, and payoff lines are written here. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "CMA at the desk, photos at the house, then MLS — that is the listing clock",
+      body: "The selling sequence is dated at Suite 100. We do not skip the walkthrough. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Valuation",
+          note: "Open /home-valuation. Comps at 9406 W Lake Mead Blvd before photographer day.",
+        },
+        {
+          name: "Prep punch list",
+          note: "Paint, repairs, and staging are named in writing. We do not sell a caption.",
+        },
+        {
+          name: "Photography and MLS",
+          note: "Drone rules and HOA vendor lists confirmed before the shoot. Then MLS go-live.",
+        },
+        {
+          name: "Contract to close",
+          note: "Inspections and appraisal language live on the file. Call (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Move-up, downsize, probate, or outbound sale — open the matching seller URL",
+      body: "/sellers/move-up, /sellers/downsizing, /sellers/divorce-probate, and /sellers/relocation are separate clocks from Suite 100. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Move-up",
+          note: "Sale and next purchase share one west-valley start. Contingent vs cash is a numbers talk.",
+        },
+        {
+          name: "Downsize",
+          note: "List the larger home or tour Sun City Summerlin the same afternoon — 10–15 minutes from this pin.",
+        },
+        {
+          name: "Divorce or probate",
+          note: "Court orders and lockbox rules at Suite 100, not the lobby. Private slot required.",
+        },
+        {
+          name: "Outbound relocation",
+          note: "Las Vegas closing dates lined up with the next city. BHHS destination agent briefed from this desk.",
+        },
+      ],
+    },
+  ],
+  "/sellers/downsizing": [
+    {
+      h2: "List the larger house, then one 55+ rec campus — same afternoon from Suite 100",
+      body: "Sun City Summerlin is 10–15 minutes from 9406 W Lake Mead Blvd. Occupancy rules are reviewed before the clubhouse. Call (702) 222-1964. Do not guess at square footage you have not walked.",
+      pins: [
+        {
+          name: "Sun City Summerlin",
+          note: "Four rec campuses. Published January 2026 band often $375K–$650K. Confirm the week you tour.",
+        },
+        {
+          name: "Sun City Anthem",
+          note: "30–35 minutes. Anthem Center about 64,000 sq ft. Separate Henderson clock.",
+        },
+        {
+          name: "Heritage at Stonebridge",
+          note: "Staffed gate. Packet lists HOA-maintained exteriors. Open /55-plus-communities/heritage-stonebridge.",
+        },
+        {
+          name: "Del Webb Lake Las Vegas",
+          note: "35–45 minutes. 320-acre lake. Do not stack with a Summerlin 55+ morning.",
+        },
+      ],
+    },
+  ],
+  "/sellers/move-up": [
+    {
+      h2: "2015–2021 purchase equity is a CMA at Suite 100, not a slogan",
+      body: "If you bought in that window, bring the APN. We will not invent a gain. January 2026 DOM cited on this site is 28 days for priced-right listings. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Centennial Hills to Summerlin",
+          note: "Palo Verde High School commute mapped by next address at ccsd.net/zoning.",
+        },
+        {
+          name: "Inspirada to Southern Highlands",
+          note: "Published January 2026 bands ~$525K to $750K+. Robert Trent Jones Jr. card 74.1 / 140.",
+        },
+        {
+          name: "Two stops from this pin",
+          note: "Current house and next ZIP share 9406 W Lake Mead Blvd as the start.",
+        },
+        {
+          name: "Contingent vs non-contingent",
+          note: "Written at the desk before you list. Call (702) 222-1964.",
+        },
+      ],
+    },
+  ],
+  "/sellers/relocation": [
+    {
+      h2: "Las Vegas sale calendar plus a named BHHS agent in the next city",
+      body: "Outbound files start at Suite 100. Destination agents are briefed from 9406 W Lake Mead Blvd so two closings do not collide. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Remote listing",
+          note: "Photos, lockbox, and showing logs run from this desk. Addresses stay off group texts.",
+        },
+        {
+          name: "50,000-agent desk, local file",
+          note: "BHHS destination intro is a Suite 100 call. Local showings still start here until you leave.",
+        },
+        {
+          name: "Two-contract calendar",
+          note: "Bring both drafts. Occupancy dates are written before you fly.",
+        },
+        {
+          name: "Office/GBP",
+          note: "(702) 500-1942. Client CTA (702) 222-1964. Do not swap the lines.",
+        },
+      ],
+    },
+  ],
+  "/sellers/divorce-probate": [
+    {
+      h2: "Court orders, lockbox rules, and showing logs at Suite 100 — not the lobby",
+      body: "Confidential review is by appointment at 9406 W Lake Mead Blvd, Suite 100. Letters testamentary or court orders come with you. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Divorce file",
+          note: "Neutral process. Both attorneys on the written showing rules. No lobby briefings.",
+        },
+        {
+          name: "Probate / estate",
+          note: "Executor documents before the first lockbox. HOA contacts listed on the file.",
+        },
+        {
+          name: "Access",
+          note: "Preferred showing window in writing. We do not post occupancy gossip.",
+        },
+        {
+          name: "Offers",
+          note: "Documented, dated, and routed to counsel. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/relocation": [
+    {
+      h2: "No state income tax is a line item — then one Summerlin or Henderson clock",
+      body: "Inbound math starts at 9406 W Lake Mead Blvd, Suite 100. Housing prices 40–60% below many California coastal cities is a comparison, not a guarantee. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Nevada tax line",
+          note: "No state income tax. HOA dues and property tax still apply. Run the sheet at the desk.",
+        },
+        {
+          name: "Price comparison",
+          note: "January 2026 valley median cited on this site: $450K. Confirm the week you tour.",
+        },
+        {
+          name: "Trailheads and rec acres",
+          note: "Golf and hiking are compared by acreage and minutes from Suite 100, not a slogan.",
+        },
+        {
+          name: "Employers",
+          note: "Sports, healthcare, and tech briefs are dated. We will not invent a job count.",
+        },
+      ],
+    },
+  ],
+  "/market-report": [
+    {
+      h2: "January 2026 medians by ZIP — then a CMA on YOUR APN at Suite 100",
+      body: "Valley snapshot: $450K median, 28 DOM, 4,850 active listings, 2.1 months inventory. Area cards are not a substitute for one address. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Summerlin $625K",
+          note: "22 DOM on the January 2026 snapshot. 10–15 minutes from Suite 100.",
+        },
+        {
+          name: "Henderson $485K",
+          note: "24 DOM. 25–35 minutes via I-215 east.",
+        },
+        {
+          name: "North Las Vegas $385K",
+          note: "32 DOM. Aliante rec first. Not a Summerlin swap.",
+        },
+        {
+          name: "$1M+ $1.2M median",
+          note: "45 DOM. Gate lists from 9406 W Lake Mead Blvd. Confirm the week you tour.",
+        },
+      ],
+    },
+  ],
+  "/investment-properties": [
+    {
+      h2: "HOA rental caps and rent comps at Suite 100 before any area drive",
+      body: "Cap-rate review happens at 9406 W Lake Mead Blvd. Then one ZIP cluster: North Las Vegas, Henderson, or southwest. Call (702) 222-1964. We check rental rules before you fly in.",
+      pins: [
+        {
+          name: "No state income tax",
+          note: "Nevada line item. HOA and property tax still apply. Run the sheet at the desk.",
+        },
+        {
+          name: "North Las Vegas ~$385K",
+          note: "Published January 2026 average on this page. Confirm rent comps the week you tour.",
+        },
+        {
+          name: "Henderson ~$485K",
+          note: "Separate east clock. HOA rental caps kill deals — packet first.",
+        },
+        {
+          name: "1031 calendar",
+          note: "Identification windows are dated. Bring the relinquished APN. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/home-valuation": [
+    {
+      h2: "Zestimate screenshots stay in the parking lot — comps are pulled at Suite 100",
+      body: "Bring the APN to 9406 W Lake Mead Blvd. AVMs miss interiors and HOA packets. Call (702) 222-1964. A 10% miss on $450K is $45K — we will not invent your number.",
+      pins: [
+        {
+          name: "MLS comps",
+          note: "Recent closes on your street, not a portal average.",
+        },
+        {
+          name: "Interior and HOA",
+          note: "Condition, permits, and HOA rules are walked, then written.",
+        },
+        {
+          name: "Buyer demand that week",
+          note: "DOM and inventory move. The CMA is dated the day we pull it.",
+        },
+        {
+          name: "No obligation to list",
+          note: "Valuation first. Listing paperwork is a separate appointment.",
+        },
+      ],
+    },
+  ],
+  "/buyers/first-time-buyers": [
+    {
+      h2: "FHA 3.5% at $498,257, VA 0% down, or a builder credit — pick the file type",
+      body: "Lender letter is reviewed at 9406 W Lake Mead Blvd, Suite 100 before the first two-ZIP tour. 2026 FHA limit cited on this page: $498,257. Call (702) 222-1964. Confirm with your lender the week you write.",
+      pins: [
+        {
+          name: "FHA",
+          note: "3.5% down. Limit $498,257 on this page for 2026. Credit floors are lender-specific.",
+        },
+        {
+          name: "VA",
+          note: "Zero-down files for eligible veterans. Entitlement reviewed before models.",
+        },
+        {
+          name: "Conventional / down-payment programs",
+          note: "Nevada and Clark County flyers expire. Do not rely on last month's PDF.",
+        },
+        {
+          name: "Builder registration",
+          note: "Open /new-construction. Register Dr. Jan at Suite 100 before any model row.",
+        },
+      ],
+    },
+    {
+      h2: "NLV from $350K, Centennial, or Green Valley — one ZIP, named campuses, commute minutes",
+      body: "First-purchase tours start at Suite 100. Legacy High School, Arbor View, and Coronado High School commutes are mapped at ccsd.net/zoning by address. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "North Las Vegas",
+          note: "Published band $350K–$450K on this page. New-construction rows after registration.",
+        },
+        {
+          name: "Centennial Hills",
+          note: "Northwest clock from W Lake Mead Blvd. Arbor View High School commute by street.",
+        },
+        {
+          name: "Green Valley",
+          note: "Henderson. Coronado High School commute mapped by address. 25–35 minutes.",
+        },
+        {
+          name: "Do not tour twelve ZIPs",
+          note: "One ZIP per afternoon. Seller-paid buyer-broker fee is typical here — confirm on the listing.",
+        },
+      ],
+    },
   ],
 };

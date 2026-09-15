@@ -70,7 +70,10 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/google-business/page.tsx",
-    needles: ['<LeftoverBand path="/google-business" />'],
+    needles: [
+      '<LeftoverBand path="/google-business" />',
+      '<LeftoverBand path="/google-business" slot={1} />',
+    ],
     banned: [">Real Estate Services<", ">Service Areas<"],
   },
   {
@@ -92,11 +95,6 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     file: "app/about/page.tsx",
     needles: ["commute minutes from Suite 100"],
     banned: ["lifestyle offerings", "Areas Served by BHHS Nevada Properties"],
-  },
-  {
-    file: "app/relocation/page.tsx",
-    needles: ["one ZIP per inbound afternoon"],
-    banned: ["unique lifestyle", "Popular Relocation Destinations"],
   },
   {
     file: "app/buyers/california-relocator/page.tsx",
@@ -122,6 +120,84 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     file: "app/neighborhoods/green-valley/page.tsx",
     needles: ["tree canopy age"],
     banned: ["lifestyle offerings"],
+  },
+  {
+    file: "app/sellers/page.tsx",
+    needles: [
+      '<LeftoverBand path="/sellers" />',
+      '<LeftoverBand path="/sellers" slot={1} />',
+      '<LeftoverBand path="/sellers" slot={2} />',
+    ],
+    banned: [
+      ">The Berkshire Hathaway HomeServices Selling Advantage<",
+      ">The Home Selling Process<",
+      ">Specialized Services for Every Seller<",
+    ],
+  },
+  {
+    file: "app/sellers/downsizing/page.tsx",
+    needles: ['<LeftoverBand path="/sellers/downsizing" />'],
+    banned: [
+      ">Extract Your Equity, Enjoy Your Life<",
+      "maximize their lifestyle",
+      ">Top 55+ Communities for Las Vegas Downsizers<",
+    ],
+  },
+  {
+    file: "app/sellers/move-up/page.tsx",
+    needles: ['<LeftoverBand path="/sellers/move-up" />'],
+    banned: [">Your Equity Position is Stronger Than You Think<"],
+  },
+  {
+    file: "app/sellers/relocation/page.tsx",
+    needles: ['<LeftoverBand path="/sellers/relocation" />'],
+    banned: [">Berkshire Hathaway HomeServices Network<"],
+  },
+  {
+    file: "app/sellers/divorce-probate/page.tsx",
+    needles: ['<LeftoverBand path="/sellers/divorce-probate" />'],
+    banned: [">Situations We Help Navigate<"],
+  },
+  {
+    file: "app/relocation/page.tsx",
+    needles: [
+      "one ZIP per inbound afternoon",
+      '<LeftoverBand path="/relocation" />',
+    ],
+    banned: [
+      "unique lifestyle",
+      "Popular Relocation Destinations",
+      ">Why People Are Moving to Las Vegas<",
+    ],
+  },
+  {
+    file: "app/market-report/page.tsx",
+    needles: ['<LeftoverBand path="/market-report" />'],
+    banned: [">Market Data by Area<"],
+  },
+  {
+    file: "app/investment-properties/page.tsx",
+    needles: ['<LeftoverBand path="/investment-properties" />'],
+    banned: [">Why Invest in Las Vegas?<"],
+  },
+  {
+    file: "app/home-valuation/page.tsx",
+    needles: ['<LeftoverBand path="/home-valuation" />'],
+    banned: [
+      ">Why Online Home Value Estimates Often Miss the Mark<",
+    ],
+  },
+  {
+    file: "app/buyers/first-time-buyers/page.tsx",
+    needles: [
+      '<LeftoverBand path="/buyers/first-time-buyers" />',
+      '<LeftoverBand path="/buyers/first-time-buyers" slot={1} />',
+    ],
+    banned: [
+      ">First-Time Buyer Financing Options<",
+      ">Best Neighborhoods for First-Time Buyers<",
+      "new schools",
+    ],
   },
 ];
 

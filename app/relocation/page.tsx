@@ -23,6 +23,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -148,37 +149,7 @@ export default function RelocationPage() {
             </div>
           </div>
 
-          {/* Why Las Vegas */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center">Why People Are Moving to Las Vegas</h2>
-<p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas has become one of the fastest-growing cities in America, attracting 
-              buyers from across the country. Here's why so 
-              many people are making the move to Southern Nevada.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">No State Income Tax</h3>
-                <p className="text-slate-400 text-sm">Keep more of what you earn—California residents can save 10%+ on taxes</p>
-              </div>
-              <div className="text-center">
-                <Sun className="h-12 w-12 text-yellow-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">300+ Days of Sunshine</h3>
-                <p className="text-slate-400 text-sm">Golf, hiking trailheads, and rec campuses compared by acreage</p>
-              </div>
-              <div className="text-center">
-                <Building className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">Affordable Housing</h3>
-                <p className="text-slate-400 text-sm">40-60% lower home prices than California coastal cities</p>
-              </div>
-              <div className="text-center">
-                <Users className="h-12 w-12 text-purple-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">Growing Economy</h3>
-                <p className="text-slate-400 text-sm">Sports, tech, healthcare, and entertainment job growth</p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/relocation" />
 
           <ExpertQuote path="/relocation" />
 

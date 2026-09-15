@@ -6,8 +6,6 @@ import {
   Clock,
   Star,
   Award,
-  Users,
-  Home,
 } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -30,7 +28,6 @@ import {
 
 import {
   businessInfo,
-  gbpDescription,
   generateLocalBusinessSchema,
 } from "@/lib/gbp-schema";
 
@@ -196,33 +193,7 @@ export default function GoogleBusinessPage() {
             <p className="text-center text-sm text-slate-500 mt-4">{nap.fullAddress}</p>
           </section>
 
-          <section className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">About Dr. Jan Duffy</h2>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Users className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                Experience & Background
-              </h3>
-              <p className="text-slate-700 leading-relaxed">{gbpDescription.whoWeAre}</p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Home className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                Services & Value
-              </h3>
-              <p className="text-slate-700 leading-relaxed">{gbpDescription.whatWeDo}</p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                Areas Served
-              </h3>
-              <p className="text-slate-700 leading-relaxed">{gbpDescription.whereWeServe}</p>
-            </div>
-          </section>
+          <LeftoverBand path="/google-business" slot={1} />
 
           <LeftoverBand path="/google-business" />
 

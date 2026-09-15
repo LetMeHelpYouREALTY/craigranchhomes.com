@@ -17,6 +17,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -59,41 +60,7 @@ export default function DownsizingPage() {
 
           </div>
 
-          {/* Equity Extraction */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Extract Your Equity, Enjoy Your Life
-            </h2>
-<div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="bg-white/10 rounded-xl p-6">
-                <h3 className="font-bold text-xl mb-4 flex items-center">
-                  <HomeIcon className="h-6 w-6 mr-2 text-blue-400" />
-                  Your Current Home
-                </h3>
-                <p className="text-slate-300 mb-4">
-                  Large family home you've owned for 15+ years. 4-5 bedrooms, big yard,
-                  endless maintenance. Kids are gone, and it's more space than you need.
-                </p>
-                <div className="text-2xl font-bold text-blue-400">Value: $650K-$900K</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
-                <h3 className="font-bold text-xl mb-4 flex items-center">
-                  <ArrowDownRight className="h-6 w-6 mr-2 text-green-400" />
-                  Your New Life
-                </h3>
-                <p className="text-slate-300 mb-4">
-                  Low-maintenance 55+ community or modern condo. 2-3 bedrooms, no yard work,
-                  resort amenities. Travel when you want.
-                </p>
-                <div className="text-2xl font-bold text-green-400">Cost: $400K-$550K</div>
-                <div className="text-sm text-green-300 mt-1">+ $150K-$350K in your pocket</div>
-              </div>
-            </div>
-            <p className="text-center text-slate-300 text-lg">
-              Many downsizers walk away with <strong>$150,000-$350,000+ in equity</strong> while
-              moving to HOA-maintained exteriors and smaller square footage.
-            </p>
-          </section>
+          <LeftoverBand path="/sellers/downsizing" />
 
           {/* Transition Options */}
           <section className="mb-16 max-w-5xl mx-auto">
@@ -233,11 +200,11 @@ export default function DownsizingPage() {
           {/* 55+ Community Comparison */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Top 55+ Communities for Las Vegas Downsizers
+              Sun City, Heritage, Del Webb, Solera — HOA dues and rec campuses, January 2026 bands
             </h2>
             <p className="text-slate-600 text-center mb-8 max-w-3xl mx-auto">
-              Las Vegas offers some of the nation's best 55+ communities. Here's how the most popular
-              options compare for downsizers looking to maximize their lifestyle while minimizing maintenance.
+              Occupancy packets are reviewed at Suite 100. Compare HOA-maintained exteriors and rec
+              square footage, then drive one campus. Call (702) 222-1964.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-slate-200 rounded-lg">

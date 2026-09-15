@@ -9,6 +9,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -99,32 +100,7 @@ export default function InvestmentPropertiesPage() {
             </div>
           </div>
 
-          {/* Why Las Vegas */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">Why Invest in Las Vegas?</h2>
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">No State Income Tax</h3>
-                <p className="text-slate-400 text-sm">Keep more of your rental income</p>
-              </div>
-              <div className="text-center">
-                <TrendingUp className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">Strong Appreciation</h3>
-                <p className="text-slate-400 text-sm">+4.2% YoY in 2025</p>
-              </div>
-              <div className="text-center">
-                <Building className="h-12 w-12 text-purple-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">Growing Population</h3>
-                <p className="text-slate-400 text-sm">Constant rental demand</p>
-              </div>
-              <div className="text-center">
-                <BarChart className="h-12 w-12 text-yellow-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-1">Strong Cap Rates</h3>
-                <p className="text-slate-400 text-sm">4-6% typical returns</p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/investment-properties" />
 
           {/* Market Stats */}
           <section className="mb-16 max-w-6xl mx-auto">

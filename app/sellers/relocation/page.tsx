@@ -17,6 +17,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -60,35 +61,7 @@ export default function RelocationPage() {
 
           </div>
 
-          {/* Network Advantage */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <Globe className="h-8 w-8 mr-3 text-blue-400" />
-              <h2 className="text-3xl font-bold">Berkshire Hathaway HomeServices Network</h2>
-</div>
-            <p className="text-center text-slate-300 mb-8 max-w-2xl mx-auto">
-              When you work with Dr. Jan, you're not just getting a Las Vegas agent—you're
-              tapping into the most trusted real estate network in America.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold text-blue-400 mb-2">50,000+</div>
-                <div className="text-slate-300">Agents Nationwide</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold text-blue-400 mb-2">1,500+</div>
-                <div className="text-slate-300">Offices Across US</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold text-blue-400 mb-2">#1</div>
-                <div className="text-slate-300">Brand Trust Rating</div>
-              </div>
-            </div>
-            <p className="text-center text-slate-300 mt-8">
-              Moving to Dallas? Phoenix? Chicago? We connect you with experienced BHHS agents
-              in your new city at no extra cost.
-            </p>
-          </section>
+          <LeftoverBand path="/sellers/relocation" />
 
           {/* How We Help */}
           <section className="mb-16 max-w-5xl mx-auto">

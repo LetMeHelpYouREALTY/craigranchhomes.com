@@ -22,6 +22,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -53,66 +54,6 @@ const sellerSchema = {
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
   serviceType: "Seller Representation",
 };
-
-const sellingBenefits = [
-  {
-    icon: Globe,
-    title: "World-Class Marketing",
-    description:
-      "Your home gets exposure through the most recognized real estate brand in the world. Professional photography, virtual tours, drone video, and syndication to 100+ websites ensures maximum visibility to qualified buyers.",
-  },
-  {
-    icon: Users,
-    title: "Global Buyer Network",
-    description:
-      "Berkshire Hathaway's 50,000+ agents worldwide means your listing reaches qualified buyers from across the globe—especially important for Las Vegas's strong relocation and international buyer markets.",
-  },
-  {
-    icon: BarChart,
-    title: "Expert Pricing Strategy",
-    description:
-      "Dr. Jan has been serving Las Vegas since 2008, which means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit and lose value; well-priced homes generate competition and sell for more.",
-  },
-  {
-    icon: DollarSign,
-    title: "Skilled Negotiation",
-    description:
-      "From offer review to closing negotiations, Dr. Jan protects your interests and maximizes your net proceeds. $127M+ in closed transactions means she knows how to handle any situation and close deals successfully.",
-  },
-];
-
-const sellingProcess = [
-  {
-    step: 1,
-    title: "Free Home Valuation",
-    description: "Dr. Jan analyzes comparable sales, market conditions, and your home's unique features to determine optimal pricing. You'll understand exactly what your home could sell for before making any decisions.",
-  },
-  {
-    step: 2,
-    title: "Preparation & Staging",
-    description: "Receive a customized preparation checklist to maximize your home's appeal. Dr. Jan provides staging consultations and can recommend contractors for any needed repairs or updates.",
-  },
-  {
-    step: 3,
-    title: "Professional Marketing",
-    description: "Your home is photographed professionally, with virtual tours and drone video. It's listed on the MLS and syndicated to 100+ websites, plus promoted through BHHS's global network and targeted digital advertising.",
-  },
-  {
-    step: 4,
-    title: "Showings & Open Houses",
-    description: "Dr. Jan coordinates all showings and open houses, gathering feedback from every visit. You'll receive regular updates on activity and market response.",
-  },
-  {
-    step: 5,
-    title: "Offer Review & Negotiation",
-    description: "When offers come in, Dr. Jan analyzes each one for price, terms, contingencies, and buyer qualification. She negotiates on your behalf to get the best possible outcome.",
-  },
-  {
-    step: 6,
-    title: "Contract to Close",
-    description: "Dr. Jan manages every detail from accepted offer to closing—inspections, appraisals, repairs, and coordination with title, escrow, and the buyer's agent. You'll close with confidence.",
-  },
-];
 
 const includedServices = [
   "Professional photography & virtual tour",
@@ -197,128 +138,11 @@ export default function SellersPage() {
             </div>
           </section>
 
-          {/* Benefits */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Berkshire Hathaway HomeServices Selling Advantage
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Not all real estate agents can deliver the same results. When you choose a 
-              Berkshire Hathaway HomeServices agent, you're choosing world-class marketing, 
-              a global network of buyers, and the most trusted name in real estate.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              {sellingBenefits.map((benefit) => {
-                const Icon = benefit.icon;
-                return (
-                  <div
-                    key={benefit.title}
-                    className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-shadow"
-                  >
-                    <div className="bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-6">
-                      <Icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">{benefit.title}</h3>
-                    <p className="text-slate-600">{benefit.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <LeftoverBand path="/sellers" />
 
-          {/* Selling Process */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Home Selling Process
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Selling a home involves many steps, but you don't have to navigate them alone. 
-              Dr. Jan Duffy manages every detail from initial valuation to closing day, keeping 
-              you informed and in control throughout the process.
-            </p>
-            <div className="space-y-6">
-              {sellingProcess.map((item) => (
-                <div
-                  key={item.step}
-                  className="flex gap-6 items-start bg-white rounded-lg p-6 border border-slate-200"
-                >
-                  <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                    {item.step}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <LeftoverBand path="/sellers" slot={1} />
 
-          {/* Seller Types */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Specialized Services for Every Seller
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Every seller's situation is unique. Whether you're upgrading, downsizing, dealing 
-              with a life change, or relocating for work, Dr. Jan provides customized strategies 
-              that address your specific needs and timeline.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link
-                href="/sellers/move-up"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
-              >
-                <div className="text-3xl mb-4">🏡</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
-                  Move-Up Sellers
-                </h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Leverage your equity into your dream home. Coordinated buy & sell strategies.
-                </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
-              </Link>
-              <Link
-                href="/sellers/downsizing"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
-              >
-                <div className="text-3xl mb-4">🌴</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
-                  Downsizing
-                </h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Extract equity, simplify life. 55+ communities and low-maintenance options.
-                </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
-              </Link>
-              <Link
-                href="/sellers/divorce-probate"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
-              >
-                <div className="text-3xl mb-4">⚖️</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
-                  Divorce & Probate
-                </h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Sensitive situations handled with discretion and professionalism.
-                </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
-              </Link>
-              <Link
-                href="/sellers/relocation"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
-              >
-                <div className="text-3xl mb-4">✈️</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
-                  Relocation
-                </h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Moving for work? BHHS nationwide network coordinates both ends.
-                </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
-              </Link>
-            </div>
-          </section>
+          <LeftoverBand path="/sellers" slot={2} />
 
           <ExpertQuote path="/sellers" />
 

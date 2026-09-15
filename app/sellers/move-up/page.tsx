@@ -16,6 +16,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -58,33 +59,7 @@ export default function MoveUpSellerPage() {
 
           </div>
 
-          {/* Equity Section */}
-          <section className="mb-16 bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Your Equity Position is Stronger Than You Think
-            </h2>
-<div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">$100K-$250K+</div>
-                <div className="text-green-100">Typical Equity Gain</div>
-                <div className="text-sm text-green-200 mt-2">For 2015-2021 purchases</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">4 Months</div>
-                <div className="text-green-100">Current Inventory</div>
-                <div className="text-sm text-green-200 mt-2">Your purchase is easier</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">28 Days</div>
-                <div className="text-green-100">Avg. Days to Sell</div>
-                <div className="text-sm text-green-200 mt-2">Priced-right homes</div>
-              </div>
-            </div>
-            <p className="text-center text-green-100 text-lg">
-              If you bought between 2015-2021, you likely have significant equity to leverage.
-              <strong> We help you access it strategically.</strong>
-            </p>
-          </section>
+          <LeftoverBand path="/sellers/move-up" />
 
           {/* Upgrade Path */}
           <section className="mb-16 max-w-5xl mx-auto">

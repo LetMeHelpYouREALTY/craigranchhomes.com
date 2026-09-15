@@ -673,6 +673,28 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path.startsWith("/why-berkshire") && slot === 0) return photos.market;
   if (path.startsWith("/new-construction") && slot === 0) return photos.homeHero;
   if (path.startsWith("/google-business") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/google-business") && slot === 1) return photos.summerlin;
+  if (path === "/sellers" && slot === 0) return photos.homeHero;
+  if (path === "/sellers" && slot === 1) return photos.summerlin;
+  if (path === "/sellers" && slot === 2) return photos.henderson;
+  if (path.startsWith("/sellers/downsizing") && slot === 0) return photos.office;
+  if (path.startsWith("/sellers/move-up") && slot === 0) return photos.summerlin;
+  if (path.startsWith("/sellers/relocation") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/sellers/divorce-probate") && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path === "/relocation" && slot === 0) return photos.officeExterior;
+  if (path.startsWith("/market-report") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/investment-properties") && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/home-valuation") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/buyers/first-time-buyers") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/buyers/first-time-buyers") && slot === 1) {
+    return photos.summerlin;
+  }
   return photos.consultation;
 }
 
@@ -787,6 +809,40 @@ export function occupiedHeadingStills(path: string): Set<string> {
   }
   if (path.startsWith("/google-business")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+  }
+  if (path === "/sellers") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+  }
+  if (path.startsWith("/sellers/downsizing")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/sellers/move-up")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/sellers/relocation")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/sellers/divorce-probate")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path === "/relocation") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/market-report")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/investment-properties")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/home-valuation")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/buyers/first-time-buyers")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/55-plus")) {
     srcs.push(

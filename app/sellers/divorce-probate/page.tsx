@@ -17,6 +17,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -60,121 +61,7 @@ export default function DivorceProbatePage() {
 
           </div>
 
-          {/* Situations We Help With */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Situations We Help Navigate
-            </h2>
-<div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 rounded-full p-3 mr-4">
-                    <Scale className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-bold text-lg text-slate-900">Divorce Sales</h3>
-                </div>
-                <p className="text-slate-600 mb-4">
-                  Division of marital assets requires neutral, professional representation.
-                  We work with both parties and their attorneys to ensure a fair sale process.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Court-approved valuations
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Communication with both attorneys
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Neutral, documented process
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 rounded-full p-3 mr-4">
-                    <FileText className="h-6 w-6 text-purple-600" />
-                  </div>
-                  <h3 className="font-bold text-lg text-slate-900">Probate & Estate Sales</h3>
-                </div>
-                <p className="text-slate-600 mb-4">
-                  Handling a loved one's estate is emotionally and legally complex.
-                  We guide executors through the sale process while respecting the family.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Probate court compliance
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Estate attorney coordination
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Property preparation guidance
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="bg-amber-100 rounded-full p-3 mr-4">
-                    <Clock className="h-6 w-6 text-amber-600" />
-                  </div>
-                  <h3 className="font-bold text-lg text-slate-900">Urgent Sales</h3>
-                </div>
-                <p className="text-slate-600 mb-4">
-                  Job relocation, health issues, or financial pressure sometimes require
-                  fast action. We price strategically and market aggressively.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Accelerated marketing plans
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Cash buyer network access
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Quick close coordination
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="bg-green-100 rounded-full p-3 mr-4">
-                    <Users className="h-6 w-6 text-green-600" />
-                  </div>
-                  <h3 className="font-bold text-lg text-slate-900">Multi-Party Sales</h3>
-                </div>
-                <p className="text-slate-600 mb-4">
-                  Multiple heirs, business partners, or co-owners? We facilitate consensus
-                  and keep everyone informed throughout the process.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Multi-party communication
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Documented decision process
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Equitable distribution guidance
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/sellers/divorce-probate" />
 
           {/* Our Approach */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

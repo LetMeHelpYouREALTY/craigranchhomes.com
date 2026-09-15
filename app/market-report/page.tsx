@@ -9,6 +9,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 export const metadata: Metadata = pageMetadata({
   path: "/market-report",
@@ -112,83 +113,7 @@ export default function MarketReportPage() {
             </div>
           </section>
 
-          {/* Area Breakdown */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Market Data by Area
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  area: "Las Vegas (Overall)",
-                  median: "$450,000",
-                  change: "+4.2%",
-                  dom: 28,
-                  trend: "up",
-                },
-                {
-                  area: "Henderson",
-                  median: "$485,000",
-                  change: "+5.1%",
-                  dom: 24,
-                  trend: "up",
-                },
-                {
-                  area: "Summerlin",
-                  median: "$625,000",
-                  change: "+6.8%",
-                  dom: 22,
-                  trend: "up",
-                },
-                {
-                  area: "North Las Vegas",
-                  median: "$385,000",
-                  change: "+3.2%",
-                  dom: 32,
-                  trend: "up",
-                },
-                {
-                  area: "Southern Highlands",
-                  median: "$750,000",
-                  change: "+7.2%",
-                  dom: 35,
-                  trend: "up",
-                },
-                {
-                  area: "Luxury ($1M+)",
-                  median: "$1,200,000",
-                  change: "+8.5%",
-                  dom: 45,
-                  trend: "up",
-                },
-              ].map((item) => (
-                <div
-                  key={item.area}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
-                  <h3 className="font-bold text-lg text-slate-900 mb-4">{item.area}</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-slate-600">Median Price</span>
-                      <span className="font-semibold text-slate-900">{item.median}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-600">YoY Change</span>
-                      <span
-                        className={`font-semibold ${item.trend === "up" ? "text-green-600" : "text-red-600"}`}
-                      >
-                        {item.change}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-600">Days on Market</span>
-                      <span className="font-semibold text-slate-900">{item.dom} days</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <LeftoverBand path="/market-report" />
 
           {/* Buyer and seller takeaways */}
           <section className="mb-16 max-w-4xl mx-auto">

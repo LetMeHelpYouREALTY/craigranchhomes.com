@@ -10,6 +10,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -88,7 +89,7 @@ export default function HomeValuationPage() {
             {/* Value Prop */}
             <div className="space-y-8">
               <div className="bg-slate-900 text-white rounded-lg p-8">
-                <h2 className="text-2xl font-bold mb-4">Why Request a BHHS Valuation?</h2>
+                <h2 className="text-2xl font-bold mb-4">APN at Suite 100 — comps, not a portal screenshot</h2>
                 <p className="text-slate-300 mb-6">
                   Online estimators like Zillow's "Zestimate" can be off by 10% or more—that's
                   $45,000+ on a typical Las Vegas home. Dr. Jan Duffy provides a comprehensive
@@ -151,87 +152,7 @@ export default function HomeValuationPage() {
             </div>
           </div>
 
-          {/* Why Online Estimates Fall Short */}
-          <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Online Home Value Estimates Often Miss the Mark
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <p>
-                If you've checked Zillow, Redfin, or other online home value tools, you've likely
-                noticed the estimates can vary wildly—sometimes by $50,000 or more. That's because
-                these automated valuation models (AVMs) rely on algorithms that can't see inside
-                your home or understand the nuances of the Las Vegas market.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices</strong> agents like Dr. Jan Duffy provide
-                something these algorithms cannot: local expertise combined with a detailed
-                understanding of what makes your specific home valuable. A professional Comparative
-                Market Analysis (CMA) considers factors that online tools miss entirely.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                <h3 className="font-bold text-red-800 mb-4">What Online Estimates Miss</h3>
-                <ul className="space-y-2 text-red-700">
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">✗</span>
-                    Kitchen and bathroom upgrades
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">✗</span>
-                    Pool, spa, or outdoor living features
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">✗</span>
-                    Views (Strip, mountain, golf course)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">✗</span>
-                    Lot size and position (corner, cul-de-sac)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">✗</span>
-                    Solar panels and energy efficiency
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">✗</span>
-                    Current condition and maintenance
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="font-bold text-green-800 mb-4">What a BHHS CMA Includes</h3>
-                <ul className="space-y-2 text-green-700">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Recent comparable sales analysis
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Active competition review
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Feature-by-feature adjustments
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Neighborhood trend analysis
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Buyer demand assessment
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Strategic pricing recommendations
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/home-valuation" />
 
           {/* Factors Affecting Value */}
           <section className="max-w-5xl mx-auto mb-16 bg-slate-50 rounded-2xl p-8 md:p-12">
