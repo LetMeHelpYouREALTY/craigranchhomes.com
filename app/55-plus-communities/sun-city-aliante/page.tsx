@@ -170,9 +170,10 @@ export default function SunCityAliantePage() {
                     Aliante rec vs Sun City Summerlin rec — two 55+ price clocks
                   </h3>
                   <p className="text-slate-700 mb-4">
-                    Compare Sun City Aliante to other Sun City communities and the
-                    value becomes clear. You get the same lifestyle, amenities,
-                    and clubhouse programming—at significantly lower prices.
+                    Compare rec square footage and HOA packets at Suite 100. Aliante is a North
+                    Las Vegas clock. Sun City Summerlin is 10–15 minutes from 9406 W Lake Mead Blvd.
+                    Published January 2026 bands start near $280K here vs $320K Summerlin and $350K
+                    Anthem — confirm the week you tour. Call (702) 222-1964.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-lg p-4">

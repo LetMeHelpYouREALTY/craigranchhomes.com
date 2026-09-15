@@ -91,7 +91,7 @@ export default function DownsizingPage() {
             </div>
             <p className="text-center text-slate-300 text-lg">
               Many downsizers walk away with <strong>$150,000-$350,000+ in equity</strong> while
-              upgrading their lifestyle.
+              moving to HOA-maintained exteriors and smaller square footage.
             </p>
           </section>
 
@@ -107,8 +107,8 @@ export default function DownsizingPage() {
                 </div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">55+ Communities</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  Sun City Summerlin, Del Webb, Heritage at Stonebridge. Active lifestyle,
-                  built-in social network, exterior maintenance included.
+                  Sun City Summerlin, Del Webb, Heritage at Stonebridge. HOA-maintained exteriors,
+                  rec square footage listed in the occupancy packet.
                 </p>
                 <div className="text-blue-600 font-semibold">$375K - $650K</div>
                 <Link
@@ -304,7 +304,7 @@ export default function DownsizingPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-lg text-slate-900 mb-4">Lifestyle Factors</h3>
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Square footage, HOA, and guest-room counts</h3>
                 <ul className="space-y-3 text-slate-700">
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />

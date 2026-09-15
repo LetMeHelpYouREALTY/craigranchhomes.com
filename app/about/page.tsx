@@ -389,13 +389,12 @@ export default function AboutPage() {
           {/* Areas Served */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-              Areas Served by BHHS Nevada Properties
+              The Ridges, Summerlin, Henderson, NLV — commute minutes from Suite 100
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy serves the entire Las Vegas Valley with specialized knowledge of each 
-              neighborhood's unique characteristics, price points, and lifestyle offerings. From 
-              luxury estates in The Ridges to affordable new construction in North Las Vegas, 
-              she provides expert guidance wherever you want to buy or sell.
+              Files start at 9406 W Lake Mead Blvd, Suite 100. Summerlin is 10–15 minutes.
+              The Ridges gate is 15–20. Henderson is 25–35 via I-215 east. North Las Vegas
+              new construction is a separate afternoon. Call (702) 222-1964.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areasServed.map((area) => (

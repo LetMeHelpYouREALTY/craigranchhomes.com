@@ -95,21 +95,18 @@ export default function DelWebbLakeLasVegasPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Del Webb at Lake Las Vegas
+                1,800+ homes, pickleball, and a 320-acre lake — 35–45 minutes from Suite 100
               </h2>
 <p>
-                <strong>Del Webb at Lake Las Vegas</strong> represents the newest generation of
-                Del Webb communities—modern construction, contemporary floor plans, and a stunning
-                setting on the shores of Lake Las Vegas. This 1,800+ home community combines
-                Del Webb's legendary lifestyle programming with the resort atmosphere of Lake
-                Las Vegas.
+                <strong>Del Webb at Lake Las Vegas</strong> is a 2016-to-present 55+ campus on
+                Lake Las Vegas. Occupancy rules are reviewed at 9406 W Lake Mead Blvd, Suite 100
+                before the Henderson drive. Call (702) 222-1964. Do not stack this with a
+                Summerlin 55+ morning.
               </p>
               <p>
-                Built from 2016 to present, homes feature open floor plans, modern finishes,
-                and energy-efficient construction. Many homes offer lake, mountain, or golf
-                course views. The community's amenities center includes fitness facilities,
-                pools, pickleball courts, and gathering spaces for Del Webb's signature
-                lifestyle activities.
+                Open floor plans, fitness, pools, and pickleball sit on this campus. Lake, mountain,
+                or golf-course views vary by lot — measure from the listing. Club lists are in the
+                packet; we confirm them the week you tour.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> helps buyers
@@ -120,14 +117,14 @@ export default function DelWebbLakeLasVegasPage() {
             </div>
           </section>
 
-          {/* Lake Las Vegas Lifestyle */}
+          {/* Lake Las Vegas shoreline pins */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <div className="flex items-start">
                 <Waves className="h-8 w-8 text-blue-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    The Lake Las Vegas Experience
+                    320-acre lake, Reflection Bay, and the Village shops — timed as one Henderson clock
                   </h3>
                   <p className="text-slate-700 mb-4">
                     Lake Las Vegas is a 320-acre private lake surrounded by luxury resorts, golf

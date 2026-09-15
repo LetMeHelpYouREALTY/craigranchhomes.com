@@ -286,7 +286,7 @@ export default function CaliforniaRelocatorPage() {
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
               <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-slate-900">Remote Work, Vegas Lifestyle</h2>
+              <h2 className="text-3xl font-bold text-slate-900">Keep the California paycheck — run Nevada tax math at Suite 100</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>

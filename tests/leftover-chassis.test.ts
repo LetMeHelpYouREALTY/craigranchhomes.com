@@ -73,6 +73,56 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: ['<LeftoverBand path="/google-business" />'],
     banned: [">Real Estate Services<", ">Service Areas<"],
   },
+  {
+    file: "app/55-plus-communities/del-webb-lake-las-vegas/page.tsx",
+    needles: ["1,800+ homes, pickleball, and a 320-acre lake"],
+    banned: [
+      "lifestyle programming",
+      "lifestyle activities",
+      ">About Del Webb at Lake Las Vegas<",
+      "The Lake Las Vegas Experience",
+    ],
+  },
+  {
+    file: "app/55-plus-communities/sun-city-aliante/page.tsx",
+    needles: ["Aliante is a North"],
+    banned: ["same lifestyle"],
+  },
+  {
+    file: "app/about/page.tsx",
+    needles: ["commute minutes from Suite 100"],
+    banned: ["lifestyle offerings", "Areas Served by BHHS Nevada Properties"],
+  },
+  {
+    file: "app/relocation/page.tsx",
+    needles: ["one ZIP per inbound afternoon"],
+    banned: ["unique lifestyle", "Popular Relocation Destinations"],
+  },
+  {
+    file: "app/buyers/california-relocator/page.tsx",
+    needles: ["Keep the California paycheck"],
+    banned: ["Remote Work, Vegas Lifestyle"],
+  },
+  {
+    file: "app/neighborhoods/henderson/page.tsx",
+    needles: ["drive time from Suite 100"],
+    banned: ["every lifestyle and budget"],
+  },
+  {
+    file: "app/neighborhoods/inspirada/page.tsx",
+    needles: ["2,000-acre Henderson campus"],
+    banned: ["feel like a vacation", "engaged lifestyle"],
+  },
+  {
+    file: "app/neighborhoods/mountains-edge/page.tsx",
+    needles: ["compared by square footage"],
+    banned: ["comparable lifestyle"],
+  },
+  {
+    file: "app/neighborhoods/green-valley/page.tsx",
+    needles: ["tree canopy age"],
+    banned: ["lifestyle offerings"],
+  },
 ];
 
 describe("leftover chassis replacements", () => {

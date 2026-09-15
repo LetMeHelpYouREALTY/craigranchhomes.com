@@ -122,7 +122,8 @@ export default function HendersonPage() {
                 The Henderson real estate market offers remarkable diversity. From the tree-lined
                 streets of <strong>Green Valley</strong> to the town-center amenities of <strong>Inspirada</strong>,
                 from the luxury estates of <strong>MacDonald Highlands</strong> to the waterfront properties at
-                <strong> Lake Las Vegas</strong>—Henderson has a community for every lifestyle and budget.
+                <strong> Lake Las Vegas</strong>—Green Valley, Inspirada, MacDonald Highlands, and
+                the 320-acre lake are compared by square footage, HOA packet, and drive time from Suite 100.
                 <strong> Berkshire Hathaway HomeServices Nevada Properties</strong> agents know each of these
                 communities intimately.
               </p>

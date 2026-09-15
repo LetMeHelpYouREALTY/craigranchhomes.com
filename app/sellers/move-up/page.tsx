@@ -133,8 +133,8 @@ export default function MoveUpSellerPage() {
                 <div className="flex-grow">
                   <h3 className="font-bold text-slate-900 mb-1">Inspirada → Southern Highlands</h3>
                   <p className="text-slate-600 text-sm">
-                    Graduate from master-planned ($525K) to golf community luxury ($750K+).
-                    Country club lifestyle, guard-gated options.
+                    Inspirada (~$525K published January 2026) to Southern Highlands (~$750K+).
+                    Guard-gated streets and Robert Trent Jones Jr. card 74.1 / 140. Confirm the week you tour.
                   </p>
                 </div>
                 <ArrowRight className="h-6 w-6 text-purple-600 flex-shrink-0 ml-4" />

@@ -128,9 +128,8 @@ export default function GreenValleyPage() {
               <p>
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent in Green Valley
                 means understanding the subtle differences between Green Valley proper, Green Valley Ranch,
-                and Green Valley South. Each area has distinct characteristics, price points, and lifestyle
-                offerings. Dr. Jan Duffy helps buyers navigate these nuances and find the right fit—whether
-                that's a first purchase or a lower-maintenance resale without leaving Green Valley.
+                and Green Valley South. Each area is compared by tree canopy age, golf-course adjacency,
+                The District retail, and commute minutes from Suite 100. Call (702) 222-1964.
               </p>
             </div>
           </section>

@@ -90,19 +90,16 @@ export default function InspiradaPage() {
             <div className="prose prose-lg max-w-none text-slate-700">
               <NeighborhoodLifestyle path="/neighborhoods/inspirada" />
               <p>
-                <strong>Inspirada</strong> redefines what a master-planned community can be. This
-                2,000-acre development in Henderson consistently ranks among the nation's top-selling
-                communities, and for good reason: Inspirada delivers resort-style amenities that make
-                every day feel like a vacation. <strong>Berkshire Hathaway HomeServices</strong>
-                is proud to represent buyers and sellers in this exceptional community.
+                <strong>Inspirada</strong> is a 2,000-acre Henderson campus. Pools, slides, cabanas,
+                and trail mileage are in the HOA packet. Call (702) 222-1964 from 9406 W Lake Mead
+                Blvd, Suite 100. Do not stack this with a Summerlin gate afternoon.
               </p>
               <p>
                 The community's amenity package rivals many resorts. Multiple pools feature water
                 slides, splash pads, and cabanas. Miles of walking and biking trails wind through
                 the community, connecting to neighborhood parks and gathering spaces. Sports courts,
-                fitness facilities, and community events create an active, engaged lifestyle that
-                brings neighbors together. These amenities aren't afterthoughts—they're central
-                to Inspirada's identity.
+                fitness facilities, and a town-center calendar sit on this campus. Amenities are
+                listed in the HOA packet and confirmed the week you tour — not as a slogan.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> provides free

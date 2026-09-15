@@ -311,10 +311,10 @@ export default function RelocationPage() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { city: "Phoenix, AZ", insight: "Closer to family, lower cost than California. Strong job market in healthcare and tech.", time: "4-5 hour drive" },
+                { city: "Phoenix, AZ", insight: "Lower housing costs than coastal California. Healthcare and tech employers listed on the inbound brief.", time: "4-5 hour drive" },
                 { city: "Dallas/Fort Worth, TX", insight: "No state income tax, booming corporate relocation hub. Major employers: AT&T, Toyota, CBRE.", time: "3-hour flight" },
                 { city: "Los Angeles, CA", insight: "Entertainment, aerospace, tech. Higher cost but familiar Southwest climate.", time: "4-hour drive" },
-                { city: "Denver, CO", insight: "Outdoor lifestyle, growing tech hub. Higher altitude, four seasons.", time: "2-hour flight" },
+                { city: "Denver, CO", insight: "Trailheads and four seasons. Growing tech employers. Higher altitude — confirm with your physician.", time: "2-hour flight" },
                 { city: "Austin, TX", insight: "Tech boom, no state income tax. Tesla, Oracle, Apple campuses.", time: "2.5-hour flight" },
                 { city: "Seattle, WA", insight: "Amazon, Microsoft, Boeing. Rainy but vibrant tech scene.", time: "2.5-hour flight" },
               ].map((dest) => (

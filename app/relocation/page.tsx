@@ -102,7 +102,7 @@ const relocationServices = [
   "Coordination with your current BHHS agent",
   "Cost of living and budget comparison",
   "Commute time analysis to your workplace",
-  "Community and lifestyle matching",
+  "HOA packets and named-campus commute maps",
   "Moving company referrals and coordination",
   "Utility setup assistance and provider recommendations",
   "Local service provider recommendations",
@@ -165,7 +165,7 @@ export default function RelocationPage() {
               <div className="text-center">
                 <Sun className="h-12 w-12 text-yellow-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-1">300+ Days of Sunshine</h3>
-                <p className="text-slate-400 text-sm">Year-round outdoor lifestyle with golf, hiking, and recreation</p>
+                <p className="text-slate-400 text-sm">Golf, hiking trailheads, and rec campuses compared by acreage</p>
               </div>
               <div className="text-center">
                 <Building className="h-12 w-12 text-blue-400 mx-auto mb-3" />
@@ -205,13 +205,12 @@ export default function RelocationPage() {
           {/* Neighborhoods */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Popular Relocation Destinations
+              Summerlin, Henderson, or 55+ — one ZIP per inbound afternoon
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Choosing the right neighborhood is crucial for a successful relocation. Each Las 
-              Vegas community offers a unique lifestyle, price point, and amenities. Dr. Jan 
-              helps you identify which area matches your priorities—whether that's named campuses,
-              commute times, outdoor access, or HOA amenities.
+              Inbound itineraries start at 9406 W Lake Mead Blvd, Suite 100. Named campuses,
+              commute minutes, trailheads, and HOA packets are compared at the desk, then we
+              drive one ZIP. Call (702) 222-1964. We will not tour twelve ZIPs the day you land.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularRelocationAreas.map((area) => (

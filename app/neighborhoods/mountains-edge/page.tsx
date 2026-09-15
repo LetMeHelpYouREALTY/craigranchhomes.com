@@ -110,7 +110,8 @@ export default function MountainsEdgePage() {
                 Edge buyers with the same commitment to excellence we bring to the valley's luxury
                 markets. Dr. Jan Duffy understands that value doesn't mean compromise—it means
                 finding the right home at the right price. For buyers priced out of Summerlin
-                or Henderson, Mountains Edge delivers comparable lifestyle at accessible prices.
+                or Henderson, Mountains Edge is compared by square footage, HOA dues, and minutes
+                from Suite 100 — not as a swapped Summerlin caption.
               </p>
 
               <CommunityHighlights path="/neighborhoods/mountains-edge" />
