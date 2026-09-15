@@ -1,6 +1,4 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import { CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -10,6 +8,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -108,7 +107,7 @@ export default function WhyBerkshireHathawayPage() {
           {/* Stats Section */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              Berkshire Hathaway HomeServices By The Numbers
+              50,000 agents, $138B 2024 volume — then ask what Suite 100 puts on YOUR file
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -130,51 +129,7 @@ export default function WhyBerkshireHathawayPage() {
             </div>
           </section>
 
-          {/* Local Expert Section */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                  Your Local BHHS Expert in Las Vegas
-                </h2>
-                <p className="text-lg text-slate-700 mb-6">
-                  Dr. Jan Duffy brings the power of <strong>Berkshire Hathaway HomeServices</strong>{" "}
-                  to Las Vegas, Henderson, Summerlin, and all of Southern Nevada. Serving the area 
-                  since 2008 with $127M+ in closed transactions, you get global brand strength
-                  with hometown expertise.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "Serving Las Vegas since 2008",
-                    "$127M+ in closed transactions",
-                    "500+ satisfied clients",
-                    "Specializing in luxury, investment, and relocation",
-                    "Deep knowledge of every Las Vegas neighborhood",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/about"
-                  className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
-                >
-                  Meet Dr. Jan Duffy →
-                </Link>
-              </div>
-              <div className="bg-slate-100 rounded-lg p-8">
-                <p className="text-slate-700 mb-4">
-                  Marketing samples and referral paths are reviewed at 9406 W Lake Mead Blvd,
-                  Suite 100 before you sign a listing agreement. Call (702) 222-1964.
-                </p>
-                <p className="text-sm text-slate-600">
-                  Berkshire Hathaway HomeServices Nevada Properties · License S.0197614.LLC
-                </p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/why-berkshire-hathaway" />
 
           <SupportFaqs path="/why-berkshire-hathaway" />
 

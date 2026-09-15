@@ -27,6 +27,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -231,47 +232,8 @@ const communities = [
       "Strong sense of community",
     ],
     description:
-      "Siena offers the Summerlin lifestyle at more accessible price points.",
+      "Siena is a smaller Summerlin 55+ campus with an 18-hole course. Confirm occupancy rules at Suite 100.",
     color: "slate",
-  },
-];
-
-const lifestyleBenefits = [
-  {
-    icon: HomeIcon,
-    title: "Low-Maintenance Living",
-    description:
-      "Exterior maintenance handled by HOA. Spend time enjoying life, not maintaining your home.",
-  },
-  {
-    icon: Star,
-    title: "Resort-Style Amenities",
-    description:
-      "Golf courses, pools, fitness centers, spas, and clubhouses rivaling luxury resorts.",
-  },
-  {
-    icon: Calendar,
-    title: "Active Social Calendar",
-    description:
-      "100+ clubs, organized travel, classes, events, and built-in community of like-minded neighbors.",
-  },
-  {
-    icon: Shield,
-    title: "Gated Security",
-    description:
-      "Many communities offer guard-gated entries for added peace of mind and privacy.",
-  },
-  {
-    icon: DollarSign,
-    title: "Nevada Tax Advantages",
-    description:
-      "No state income tax means more money in your pocket. Social Security, pensions, and investments tax-free.",
-  },
-  {
-    icon: Sun,
-    title: "300+ Days of Sunshine",
-    description:
-      "Perfect weather for golf, hiking, and outdoor activities year-round.",
   },
 ];
 
@@ -385,32 +347,7 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
-          {/* Lifestyle Benefits */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Why Active Adults Choose Las Vegas
-            </h2>
-            <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
-              Beyond the world-class amenities, Las Vegas 55+ communities offer a
-              lifestyle that's hard to match anywhere else.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {lifestyleBenefits.map((benefit) => (
-                <div
-                  key={benefit.title}
-                  className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
-                >
-                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                    <benefit.icon className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-bold text-slate-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities" />
 
           {/* Age Requirements */}
           <section className="mb-16 max-w-5xl mx-auto">

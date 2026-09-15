@@ -19,6 +19,7 @@ import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { pageMetadata } from "@/lib/seo";
 
 import SchemaScript from "@/components/SchemaScript";
@@ -70,7 +71,7 @@ const pageSchemas = combineSchemas(
   generateSeniorCommunitySchema({
     name: "Sun City Anthem",
     description:
-      "Premier 55+ active adult community in Henderson, Nevada. Built by Del Webb, featuring 7,100+ homes, championship golf, 64,000 sq ft clubhouse, and stunning mountain views.",
+      "Del Webb 55+ campus in Henderson with 7,100+ homes, Anthem Center about 64,000 sq ft, two golf courses, and McCullough Range views on many upper streets.",
     priceRange: "$350,000 - $1,200,000",
     numberOfHomes: 7100,
     yearBuilt: "1998-2008",
@@ -93,7 +94,7 @@ export default function SunCityAnthemPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Mountain className="h-4 w-4 mr-2" />
-              Henderson's Premier 55+ Community
+              64,000 sq ft Anthem Center · 30–35 minutes from Suite 100
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Anthem
@@ -140,103 +141,9 @@ export default function SunCityAnthemPage() {
             </div>
           </section>
 
-          {/* About */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                About Sun City Anthem
-              </h2>
-<p>
-                <strong>Sun City Anthem</strong> brings the legendary Sun City lifestyle to Henderson,
-                Nevada. Built by Del Webb from 1998-2008, this
-                7,100+ home community offers stunning mountain views, championship golf, and
-                resort-caliber amenities—all with 15–25 minute Strip drives and Henderson recreation campuses.
-              </p>
-              <p>
-                The community's centerpiece is the Anthem Center, a 64,000 sq ft clubhouse featuring
-                indoor and outdoor pools, fitness facilities, tennis and pickleball courts, a restaurant,
-                and numerous activity rooms. Two championship golf courses—Anthem Country Club and
-                the adjacent Revere Golf Club—provide world-class golf experiences.
-              </p>
-              <p>
-                <strong>Berkshire Hathaway HomeServices</strong> agents know Sun City Anthem intimately.
-                Dr. Jan Duffy helps buyers understand the community's various phases, elevation differences,
-                and which neighborhoods offer the best mountain or Strip views.
-              </p>
-            </div>
-          </section>
-
-          {/* Why Henderson */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <div className="bg-green-50 border-l-4 border-green-600 rounded-r-xl p-8">
-              <div className="flex items-start">
-                <Shield className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Why Henderson location matters
-                  </h3>
-                  <p className="text-slate-700 mb-4">
-                    Henderson is Nevada's second-largest city, with 60+ parks, recreation centers,
-                    and 15–25 minute Strip drives depending on the village. For 55+ buyers that
-                    means published commute minutes, HOA-maintained streets, and golf and trail
-                    access without Strip-corridor traffic.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="text-center bg-white rounded-lg p-4">
-                      <div className="text-2xl font-bold text-green-600">#2</div>
-                      <div className="text-sm text-slate-600">Safest Large City</div>
-                    </div>
-                    <div className="text-center bg-white rounded-lg p-4">
-                      <div className="text-2xl font-bold text-green-600">A+</div>
-                      <div className="text-sm text-slate-600">Livability Score</div>
-                    </div>
-                    <div className="text-center bg-white rounded-lg p-4">
-                      <div className="text-2xl font-bold text-green-600">Low</div>
-                      <div className="text-sm text-slate-600">Property Crime</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/55-plus-communities/sun-city-anthem" />
 
           <FiftyFiveAmenities path="/55-plus-communities/sun-city-anthem" />
-
-          {/* Neighborhoods */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Sun City Anthem Neighborhoods
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Liberty</h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Original phase with mature street trees. Close to Anthem Center. Most
-                  affordable options starting around $350K.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Independence</h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Mid-range pricing with mountain views. Popular floor plans and good lot sizes.
-                  $450K-$700K range.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Heritage</h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Premium section with larger custom homes. Best views, largest lots. $700K-$1M+.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Eagle's Landing</h3>
-                <p className="text-slate-600 text-sm mb-3">
-                  Elevated homes with panoramic Strip and mountain views. Luxury finishes
-                  throughout. $800K-$1.2M.
-                </p>
-              </div>
-            </div>
-          </section>
 
           <ExpertQuote path="/55-plus-communities/sun-city-anthem" />
           <FiftyFiveFaqs path="/55-plus-communities/sun-city-anthem" />

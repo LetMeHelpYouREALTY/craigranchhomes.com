@@ -1,17 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import {
-  Shield,
-  Eye,
-  Building,
-  TrendingUp,
-  Lock,
-  Star,
-  Home as HomeIcon,
-  MapPin,
-  CheckCircle,
-  DollarSign,
-} from "lucide-react";
+import { Shield, Eye, Lock, Star, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -20,6 +8,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { nap } from "@/lib/contact";
 
 
@@ -93,195 +82,15 @@ export default function LuxuryHomesPage() {
             </p>
           </section>
 
-          {/* Luxury Communities */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Premier Luxury Communities
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* The Ridges */}
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg">
-                <div className="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-6">
-                  <h3 className="font-bold text-2xl mb-1">The Ridges</h3>
-                  <p className="text-amber-100">Summerlin's Most Prestigious Address</p>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-slate-900">$1.5M - $10M+</span>
-                    <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold">
-                      Guard-Gated
-                    </span>
-                  </div>
-                  <p className="text-slate-600 mb-4">
-                    The valley's most exclusive enclave, home to celebrities, executives, and those who
-                    demand absolute privacy. Custom estates, Bear's Best Golf Club, and Red Rock views.
-                  </p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      24/7 guard-gated security
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Custom home sites available
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Red Rock Canyon access
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Celebrity neighborhood
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/the-ridges"
-                    className="text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore The Ridges →
-                  </Link>
-                </div>
-              </div>
-
-              {/* MacDonald Highlands / Ascaya */}
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg">
-                <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6">
-                  <h3 className="font-bold text-2xl mb-1">MacDonald Highlands / Ascaya</h3>
-                  <p className="text-purple-100">Henderson's Finest Addresses</p>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-slate-900">$2M - $15M+</span>
-                    <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
-                      Strip Views
-                    </span>
-                  </div>
-                  <p className="text-slate-600 mb-4">
-                    Elevated luxury with dramatic Strip and valley views. DragonRidge Country Club,
-                    modern architecture, and Henderson's community watch programs and HOA standards create an unmatched combination.
-                  </p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Panoramic Strip views
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      DragonRidge Country Club
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Modern architecture
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Guard-gated MacDonald Highlands
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/henderson"
-                    className="text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore Henderson Luxury →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Strip High-Rises */}
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
-                  <h3 className="font-bold text-2xl mb-1">Strip High-Rise Residences</h3>
-                  <p className="text-blue-100">Lock-and-Leave Luxury Living</p>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-slate-900">$1M - $15M+</span>
-                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
-                      Full Service
-                    </span>
-                  </div>
-                  <p className="text-slate-600 mb-4">
-                    Waldorf Astoria, Veer Towers, Panorama Towers—full-service luxury for those who want
-                    turnkey living with world-class amenities and zero maintenance.
-                  </p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Concierge & valet services
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Strip & mountain views
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Pool, spa, fitness
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Perfect for part-time residents
-                    </li>
-                  </ul>
-                  <Link
-                    href="/contact"
-                    className="text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Request High-Rise Portfolio →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Southern Highlands */}
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg">
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
-                  <h3 className="font-bold text-2xl mb-1">Southern Highlands</h3>
-                  <p className="text-green-100">Golf Course Luxury</p>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-slate-900">$750K - $3M+</span>
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                      Golf Community
-                    </span>
-                  </div>
-                  <p className="text-slate-600 mb-4">
-                    Championship golf, guard-gated privacy, and proximity to the airport make Southern
-                    Highlands ideal for executives and frequent travelers.
-                  </p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      36-hole championship golf
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Guard-gated sections
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Near airport (15 min)
-                    </li>
-                    <li className="flex items-center text-sm text-slate-700">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Silverado High School commute
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/southern-highlands"
-                    className="text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore Southern Highlands →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/buyers/luxury-homes-las-vegas" />
 
           {/* Privacy & Discretion */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
               <Lock className="h-8 w-8 text-slate-700 mr-3" />
-              <h2 className="text-3xl font-bold text-slate-900">Privacy & Discretion</h2>
+              <h2 className="text-3xl font-bold text-slate-900">
+                Gate codes, LLC names, and showing logs stay off group texts
+              </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -331,11 +140,11 @@ export default function LuxuryHomesPage() {
           {/* CTA */}
           <section className="text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience Las Vegas Luxury
+              Ridges or MacDonald Highlands first — book the gate block from Suite 100
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Schedule a private consultation to discuss your requirements. Dr. Jan Duffy provides
-              confidential, expert guidance for discerning buyers.
+              Call (702) 222-1964. Addresses stay off unsecured threads. 9406 W Lake Mead Blvd,
+              Suite 100 is where the showing clock is written.
             </p>
             <CtaActions variant="onDark" bookLabel="Request Private Showing" />
           </section>

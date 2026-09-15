@@ -1,17 +1,13 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { 
-  CheckCircle,
-  Home,
-  DollarSign,
-  ArrowRight,
-} from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -97,19 +93,6 @@ const luxuryNeighborhoods = [
       "Resort-style living on a 320-acre private lake with Mediterranean-inspired architecture. Golf, water sports, and a European village atmosphere.",
     features: ["Lakefront living", "Resort amenities", "Golf courses", "Mediterranean style"],
   },
-];
-
-const luxuryServices = [
-  "Private, off-market listing opportunities",
-  "Professional architectural photography",
-  "Drone and aerial video production",
-  "Global syndication to luxury platforms",
-  "Targeted marketing to high-net-worth buyers",
-  "Confidential transactions available",
-  "International buyer connections",
-  "Concierge closing coordination",
-  "Staging consultations with luxury specialists",
-  "Market analysis for pricing strategy",
 ];
 
 export default function LuxuryHomesPage() {
@@ -230,90 +213,8 @@ export default function LuxuryHomesPage() {
             </div>
           </section>
 
-          {/* Luxury Services */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center">Luxury Home Marketing Services</h2>
-            <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
-              Selling a luxury home requires more than just an MLS listing. Dr. Jan Duffy provides 
-              comprehensive marketing services that showcase your property to qualified buyers 
-              worldwide through Berkshire Hathaway HomeServices' premium marketing channels.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              {luxuryServices.map((service) => (
-                <div key={service} className="flex items-center bg-blue-500/30 p-4 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-blue-200 mr-3 flex-shrink-0" />
-                  <span>{service}</span>
-                </div>
-              ))}
-            </div>
-          </section>
+          <LeftoverBand path="/luxury-homes" />
 
-          {/* Buying vs Selling */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Luxury Buyer & Seller Services
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-slate-50 rounded-xl p-8">
-                <h3 className="font-bold text-xl text-slate-900 mb-4 flex items-center">
-                  <Home className="h-6 w-6 text-blue-600 mr-2" />
-                  For Luxury Buyers
-                </h3>
-                <p className="text-slate-600 mb-4">
-                  Access to exclusive listings, off-market opportunities, and discrete showings. 
-                  Dr. Jan provides personalized search services for discerning buyers seeking 
-                  Las Vegas's finest properties.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Off-market property access
-                  </li>
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Private, scheduled showings
-                  </li>
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Expert negotiation
-                  </li>
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Confidential representation
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-slate-50 rounded-xl p-8">
-                <h3 className="font-bold text-xl text-slate-900 mb-4 flex items-center">
-                  <DollarSign className="h-6 w-6 text-blue-600 mr-2" />
-                  For Luxury Sellers
-                </h3>
-                <p className="text-slate-600 mb-4">
-                  World-class marketing that reaches qualified buyers globally. The Berkshire 
-                  Hathaway brand attracts serious buyers and commands premium prices for 
-                  exceptional properties.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Professional photography & video
-                  </li>
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Global marketing syndication
-                  </li>
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Off-market sale options
-                  </li>
-                  <li className="flex items-center text-slate-700">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Strategic pricing analysis
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
           <IntentFaqs path="/luxury-homes" />
 
 

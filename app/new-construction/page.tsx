@@ -1,17 +1,11 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Building2,
-  Shield,
-  DollarSign,
   Clock,
   CheckCircle,
   AlertTriangle,
-  Home as HomeIcon,
   MapPin,
   Calendar,
-  Users,
-  FileText,
 } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -21,6 +15,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 
@@ -56,7 +51,7 @@ const builders = [
     highlights: [
       "Luxury finishes standard",
       "Highly customizable floor plans",
-      "Premier locations",
+      "Mesa Ridge, Reverence, Inspirada",
     ],
   },
   {
@@ -91,7 +86,7 @@ const builders = [
     highlights: [
       "Built to Order™ customization",
       "Energy-efficient construction",
-      "First-time buyer friendly",
+      "Built to Order rows in North Las Vegas",
     ],
   },
   {
@@ -225,68 +220,7 @@ export default function NewConstructionPage() {
             </div>
           </div>
 
-          {/* Why Free Representation */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Why Use a BHHS Agent for New Construction?
-            </h2>
-<div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
-                  <DollarSign className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-2">100% Free to You</h3>
-                  <p className="text-blue-100">
-                    Builders pay the buyer's agent commission (2-3%) as part of their marketing
-                    budget. You get professional representation at zero cost.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
-                  <FileText className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-2">Contract Review</h3>
-                  <p className="text-blue-100">
-                    Builder contracts are 50+ pages of legal language favoring the builder.
-                    Dr. Jan reviews every clause and explains your rights.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
-                  <Shield className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-2">Your Advocate</h3>
-                  <p className="text-blue-100">
-                    The builder's sales rep works for the builder. You deserve someone who works
-                    exclusively for YOUR interests—negotiating, monitoring, and protecting you.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
-                  <Building2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-2">Construction Oversight</h3>
-                  <p className="text-blue-100">
-                    We schedule walkthroughs at framing, pre-drywall, and final stages. Problems
-                    caught early are fixed—problems missed become your problems.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <p className="text-xl font-semibold text-blue-100">
-                "Why would you negotiate against professionals without professional help—
-                especially when that help is free?"
-              </p>
-            </div>
-          </section>
+          <LeftoverBand path="/new-construction" />
 
           {/* Current Incentives Alert */}
           <section className="mb-16 max-w-5xl mx-auto">

@@ -1,17 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import {
-  Home,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Plane,
-  Calculator,
-  Star,
-  Users,
-  CheckCircle,
-  ArrowRight,
-} from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -20,8 +9,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-
-import { nap } from "@/lib/contact";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 export const metadata: Metadata = pageMetadata({
   path: "/services",
@@ -51,80 +39,6 @@ const servicesSchema = {
   serviceType: "Real Estate Services",
 };
 
-const coreServices = [
-  {
-    icon: Home,
-    title: "Home Buying Services",
-    slug: "buyers",
-    description:
-      "Expert guidance through every step of the home buying process. Free buyer representation—the seller pays the commission, so you get professional advocacy at no cost to you.",
-    highlights: ["Full MLS access", "Expert negotiation", "Contract protection", "Closing coordination"],
-    stats: { label: "Buyers Helped", value: "300+" },
-  },
-  {
-    icon: TrendingUp,
-    title: "Home Selling Services",
-    slug: "sellers",
-    description:
-      "Maximize your home's value with professional marketing, accurate pricing, and expert negotiation from Berkshire Hathaway HomeServices—the most trusted name in real estate.",
-    highlights: ["World-class marketing", "Accurate pricing", "Global exposure", "Staging guidance"],
-    stats: { label: "Homes Sold", value: "500+" },
-  },
-  {
-    icon: Star,
-    title: "Luxury Home Services",
-    slug: "luxury-homes",
-    description:
-      "Specialized expertise in Las Vegas luxury real estate. The Ridges, MacDonald Highlands, Southern Highlands, and the most prestigious communities in Southern Nevada.",
-    highlights: ["Discretion", "Global buyer network", "White-glove service", "Premium marketing"],
-    stats: { label: "Luxury Volume", value: "$45M+" },
-  },
-  {
-    icon: Building,
-    title: "New Construction Services",
-    slug: "new-construction",
-    description:
-      "Free buyer representation on any new construction purchase. The builder pays—you get contract review, upgrade negotiation, and construction monitoring at no cost.",
-    highlights: ["Free representation", "Upgrade negotiation", "Contract review", "Construction oversight"],
-    stats: { label: "New Builds", value: "150+" },
-  },
-];
-
-const specializedServices = [
-  {
-    icon: DollarSign,
-    title: "Investment Property Consulting",
-    slug: "investment-properties",
-    description:
-      "Strategic consulting for rental properties, fix-and-flip opportunities, and portfolio building. Las Vegas offers some of the best rental yields in the country.",
-    highlights: ["ROI analysis", "Market research", "1031 exchange help", "Property management referrals"],
-  },
-  {
-    icon: Plane,
-    title: "Relocation Services",
-    slug: "relocation",
-    description:
-      "Comprehensive relocation assistance for moves to Las Vegas. Berkshire Hathaway HomeServices' global network of 50,000+ agents makes interstate transitions seamless.",
-    highlights: ["Neighborhood matching", "Campus commute times", "Remote buying", "Moving coordination"],
-  },
-  {
-    icon: Users,
-    title: "55+ Community Specialist",
-    slug: "55-plus-communities",
-    description:
-      "Expert guidance for 55+ campuses including Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas, and other age-qualified communities in Las Vegas.",
-    highlights: ["Community tours", "HOA analysis", "Amenity comparisons", "Resale insights"],
-  },
-  {
-    icon: Calculator,
-    title: "Home Valuation Services",
-    slug: "home-valuation",
-    description:
-      "Free, no-obligation home valuations using current MLS data, recent comparable sales, and deep local market knowledge from serving Las Vegas since 2008.",
-    highlights: ["Accurate pricing", "No obligation", "Detailed analysis", "Market trends"],
-  },
-];
-
 const buyerTypes = [
   {
     title: "California Relocators",
@@ -147,7 +61,7 @@ const sellerTypes = [
   {
     title: "Move-Up Sellers",
     href: "/sellers/move-up",
-    description: "Leverage your equity to upgrade your lifestyle with coordinated buy-and-sell.",
+    description: "Coordinate the sale and the next purchase from Suite 100 so dates do not collide.",
   },
   {
     title: "Downsizing Sellers",
@@ -214,116 +128,19 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Core Services Section */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Core Real Estate Services
-            </h2>
-<p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              These foundational services cover the majority of real estate transactions in Las Vegas. 
-              Each service is delivered with the professionalism, resources, and ethical standards 
-              that define Berkshire Hathaway HomeServices—the only real estate brand backed by 
-              Warren Buffett's Berkshire Hathaway Inc.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {coreServices.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <Link
-                    key={service.slug}
-                    href={`/${service.slug}`}
-                    className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg hover:border-blue-300 transition-all group"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="bg-blue-100 rounded-lg p-3 group-hover:bg-blue-600 transition-colors flex-shrink-0">
-                        <Icon className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                            {service.title}
-                          </h3>
-                          <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
-                            {service.stats.value} {service.stats.label}
-                          </span>
-                        </div>
-                        <p className="text-slate-600 mb-4 text-sm">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.highlights.map((highlight) => (
-                            <span
-                              key={highlight}
-                              className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded"
-                            >
-                              {highlight}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
+          <LeftoverBand path="/services" />
 
-          {/* Specialized Services Section */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Specialized Real Estate Services
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Beyond traditional buying and selling, Dr. Jan Duffy offers specialized services 
-              for unique situations. Whether you're an investor building a rental portfolio, 
-              a California buyer relocating for tax savings, or a retiree seeking the perfect 
-              55+ community, these focused services ensure you receive expert guidance tailored 
-              to your specific needs.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {specializedServices.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <Link
-                    key={service.slug}
-                    href={`/${service.slug}`}
-                    className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 transition-all group"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="bg-slate-100 rounded-lg p-3 group-hover:bg-blue-600 transition-colors flex-shrink-0">
-                        <Icon className="h-5 w-5 text-slate-600 group-hover:text-white transition-colors" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                          {service.title}
-                        </h3>
-                        <p className="text-slate-600 text-sm mb-3">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.highlights.map((highlight) => (
-                            <span
-                              key={highlight}
-                              className="bg-slate-50 text-slate-600 text-xs px-2 py-1 rounded"
-                            >
-                              {highlight}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
+          <LeftoverBand path="/services" slot={1} />
 
           {/* Buyer Types */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Services for Every Type of Buyer
+              California inbound, first purchase, or Ridges gate — pick the buyer URL
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Different buyers have different needs. A first-time buyer needs education and 
-              hand-holding through the process. A California relocator needs tax guidance and 
-              neighborhood matching. A luxury buyer needs discretion and access. Dr. Jan Duffy 
-              tailors her approach to match your specific situation and goals.
+              /buyers/california-relocator, /buyers/first-time-buyers, and
+              /buyers/luxury-homes-las-vegas are separate clocks from Suite 100. We do not stack
+              a Henderson luxury afternoon with a first-purchase FHA briefing. Call (702) 222-1964.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {buyerTypes.map((type) => (
@@ -347,13 +164,12 @@ export default function ServicesPage() {
           {/* Seller Types */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Services for Every Type of Seller
+              Move-up, downsize, probate, or out-of-state listing — open the matching seller page
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Selling a home involves more than just listing it on the MLS. Your situation—whether 
-              you're upgrading, downsizing, dealing with a life change, or relocating—determines 
-              the best strategy. Dr. Jan provides customized selling solutions that address your 
-              specific timeline, financial goals, and circumstances.
+              /sellers/move-up, /sellers/downsizing, /sellers/divorce-probate, and
+              /sellers/relocation start with dates at 9406 W Lake Mead Blvd, Suite 100. The MLS
+              remarks wait until the occupancy and next-address clock is written. Call (702) 222-1964.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {sellerTypes.map((type) => (

@@ -5,7 +5,6 @@ import {
   MapPin,
   Clock,
   Star,
-  CheckCircle,
   Award,
   Users,
   Home,
@@ -18,6 +17,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import {
   ctaPhone,
   officePhone,
@@ -224,92 +224,7 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
-          <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Real Estate Services</h2>
-            <div className="grid md:grid-cols-3 gap-4">
-              {businessInfo.services.map((service) => (
-                <div
-                  key={service.name}
-                  className="bg-white border border-slate-200 rounded-lg p-4 hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                    <div>
-                      <h3 className="font-semibold text-slate-900">{service.name}</h3>
-                      <p className="text-sm text-slate-600">{service.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Service Areas</h2>
-            <div className="bg-blue-50 rounded-xl p-8">
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Primary Markets</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" /> Las Vegas, NV
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" /> Summerlin, NV
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Secondary Markets</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" /> Henderson, NV
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" /> North Las Vegas, NV
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Full Coverage</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" /> Clark County, NV
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" /> All Las Vegas Valley
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-blue-200">
-                <h3 className="font-bold text-slate-900 mb-4">Neighborhood Expertise</h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    { name: "Summerlin", slug: "summerlin" },
-                    { name: "Henderson", slug: "henderson" },
-                    { name: "Green Valley", slug: "green-valley" },
-                    { name: "The Ridges", slug: "the-ridges" },
-                    { name: "Southern Highlands", slug: "southern-highlands" },
-                    { name: "Centennial Hills", slug: "centennial-hills" },
-                    { name: "Skye Canyon", slug: "skye-canyon" },
-                    { name: "Inspirada", slug: "inspirada" },
-                    { name: "Mountains Edge", slug: "mountains-edge" },
-                    { name: "North Las Vegas", slug: "north-las-vegas" },
-                  ].map((area) => (
-                    <Link
-                      key={area.slug}
-                      href={`/neighborhoods/${area.slug}`}
-                      className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors"
-                    >
-                      {area.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/google-business" />
 
           <SupportFaqs path="/google-business" />
 

@@ -1,18 +1,10 @@
 import Link from "next/link";
 import {
-  Phone,
-  Home,
   MapPin,
   DollarSign,
   TrendingUp,
   Search,
-  Filter,
-  Heart,
-  Building2,
-  Users,
-  Clock,
   CheckCircle,
-  Star,
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -23,6 +15,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import { pageMetadata } from "@/lib/seo";
@@ -74,45 +67,6 @@ const priceRanges = [
   { range: "$600K - $1M", description: "Premium locations, larger homes", count: "1,200+" },
   { range: "$1M - $2M", description: "Luxury homes, guard-gated communities", count: "450+" },
   { range: "$2M+", description: "Ultra-luxury estates, custom builds", count: "180+" },
-];
-
-const neighborhoods = [
-  {
-    name: "Summerlin",
-    description: "Master-planned community with Red Rock views, 150+ parks, and 150+ miles of trails",
-    medianPrice: "$625,000",
-    daysOnMarket: 22,
-  },
-  {
-    name: "Henderson",
-    description: "Nevada's second-largest city with parks, recreation centers, and HOA-maintained streets",
-    medianPrice: "$485,000",
-    daysOnMarket: 24,
-  },
-  {
-    name: "Green Valley",
-    description: "Henderson community with mature landscaping and golf courses",
-    medianPrice: "$520,000",
-    daysOnMarket: 26,
-  },
-  {
-    name: "Southern Highlands",
-    description: "Guard-gated luxury community with championship golf and mountain views",
-    medianPrice: "$750,000",
-    daysOnMarket: 32,
-  },
-  {
-    name: "North Las Vegas",
-    description: "Affordable new construction and growing infrastructure",
-    medianPrice: "$385,000",
-    daysOnMarket: 18,
-  },
-  {
-    name: "Skye Canyon",
-    description: "Newer master-planned community with modern amenities and mountain access",
-    medianPrice: "$550,000",
-    daysOnMarket: 20,
-  },
 ];
 
 export default function ListingsPage() {
@@ -173,13 +127,12 @@ export default function ListingsPage() {
           {/* Popular Searches Section */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Popular Property Searches in Las Vegas
+              MLS slices already tagged — Summerlin, Henderson, Ridges, 55+, new builds
             </h2>
 <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Search luxury
-              estates in guard-gated communities, homes near Palo Verde High School or Coronado High
-              School, or new construction. Browse popular searches below or use the filters to
-              customize your home search.
+              Each card is a live GLVAR MLS slice: Summerlin, Henderson, Green Valley, The Ridges,
+              55+ campuses, and new construction. Palo Verde High School and Coronado High School
+              commutes are mapped by address at ccsd.net/zoning, not as a slogan. Call (702) 222-1964.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {popularSearches.map((search) => (
@@ -203,13 +156,12 @@ export default function ListingsPage() {
           {/* Price Range Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Home Price Guide
+              January 2026 price bands — under $400K through $2M+ estates
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas real estate market offers exceptional value compared to California and 
-              other western states. With no state income tax and housing prices 40-60% lower than 
-              coastal cities, your dollar stretches further in Southern Nevada. Here's what you can 
-              expect at different price points in the current January 2026 market.
+              Nevada has no state income tax. Confirm the week you tour: under $400K condos and
+              townhomes, $400K–$600K at 1,800–2,400 sq ft typical, $1M+ guard-gated product. Call
+              (702) 222-1964 from 9406 W Lake Mead Blvd, Suite 100.
             </p>
             <div className="space-y-4">
               {priceRanges.map((price, index) => (
@@ -230,43 +182,7 @@ export default function ListingsPage() {
             </div>
           </section>
 
-          {/* Neighborhood Overview */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Neighborhoods & Communities
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Each Las Vegas neighborhood offers a unique lifestyle, from the resort-style living 
-              of Summerlin to Henderson parks, recreation centers, and master-planned villages. Understanding these 
-              differences is crucial to finding a home that fits your needs. As a Berkshire 
-              Hathaway HomeServices agent serving Las Vegas since 2008, Dr. Jan Duffy provides 
-              expert guidance on which neighborhoods match your priorities—whether that's schools, 
-              commute times, amenities, or investment potential.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {neighborhoods.map((neighborhood) => (
-                <div
-                  key={neighborhood.name}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
-                  <h3 className="font-bold text-lg text-slate-900 mb-2">{neighborhood.name}</h3>
-                  <p className="text-slate-600 text-sm mb-4">{neighborhood.description}</p>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-slate-500">Median: <strong className="text-slate-900">{neighborhood.medianPrice}</strong></span>
-                    <span className="text-slate-500">DOM: <strong className="text-slate-900">{neighborhood.daysOnMarket} days</strong></span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link
-                href="/neighborhoods"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-              >
-                Explore All Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-            </div>
-          </section>
+          <LeftoverBand path="/listings" />
 
           {/* Why Use an Agent Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">

@@ -657,6 +657,25 @@ export function processPhotoForPath(path: string, slot = 0): SitePhoto {
   return photos.consultation;
 }
 
+/** Twenty-first stills for leftover slogan H2 interiors (not H1–H3, quote, or process). */
+export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
+  if (path === "/55-plus-communities/sun-city-anthem" && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path === "/55-plus-communities" && slot === 0) return photos.officeExterior;
+  if (path === "/buyers/luxury-homes-las-vegas" && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/luxury-homes") && slot === 0) return photos.office;
+  if (path === "/services" && slot === 0) return photos.summerlin;
+  if (path === "/services" && slot === 1) return photos.henderson;
+  if (path === "/listings" && slot === 0) return photos.officeExterior;
+  if (path.startsWith("/why-berkshire") && slot === 0) return photos.market;
+  if (path.startsWith("/new-construction") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/google-business") && slot === 0) return photos.homeHero;
+  return photos.consultation;
+}
+
 export type FaqHubCategoryId =
   | "bhhs"
   | "buying"
@@ -740,6 +759,34 @@ export function occupiedHeadingStills(path: string): Set<string> {
   }
   if (path === "/services") {
     srcs.push(processPhotoForPath(path, 1).src);
+  }
+  if (path === "/55-plus-communities/sun-city-anthem") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path === "/55-plus-communities") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path === "/buyers/luxury-homes-las-vegas") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/luxury-homes")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path === "/services") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+  }
+  if (path === "/listings") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/why-berkshire")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/new-construction")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/google-business")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
   }
   if (path.startsWith("/55-plus")) {
     srcs.push(
