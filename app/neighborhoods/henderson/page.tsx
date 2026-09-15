@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -160,8 +161,8 @@ export default function HendersonPage() {
                 before they list a West Coast home.
               </p>
               <p>
-                The Henderson real estate market offers remarkable diversity. From the established tree-lined
-                streets of <strong>Green Valley</strong> to the resort-style amenities of <strong>Inspirada</strong>,
+                The Henderson real estate market offers remarkable diversity. From the tree-lined
+                streets of <strong>Green Valley</strong> to the town-center amenities of <strong>Inspirada</strong>,
                 from the luxury estates of <strong>MacDonald Highlands</strong> to the waterfront properties at
                 <strong> Lake Las Vegas</strong>—Henderson has a community for every lifestyle and budget.
                 <strong> Berkshire Hathaway HomeServices Nevada Properties</strong> agents know each of these
@@ -195,46 +196,7 @@ export default function HendersonPage() {
                 </div>
               </div>
 
-              {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Henderson School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Henderson offers some of Nevada's best public schools through Clark County School District,
-                  plus excellent charter and private options:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• John C. Vanderburg</li>
-                      <li>• Elise L. Wolff Elementary</li>
-                      <li>• C.T. Sewell Elementary</li>
-                      <li>• Pinecrest Academy (Charter)</li>
-                      <li>• Coral Academy (Charter)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School</li>
-                      <li>• Green Valley High School</li>
-                      <li>• Foothill High School</li>
-                      <li>• Bob Miller Middle School</li>
-                      <li>• Del E. Webb Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Henderson International School</li>
-                      <li>• Coral Academy of Science</li>
-                      <li>• Pinecrest Academy</li>
-                      <li>• The Adelson School</li>
-                      <li>• St. Peter the Apostle</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/henderson" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Henderson</h3>

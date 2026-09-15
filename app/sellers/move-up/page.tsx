@@ -116,7 +116,7 @@ export default function MoveUpSellerPage() {
                 <div className="flex-grow">
                   <h3 className="font-bold text-slate-900 mb-1">Green Valley → MacDonald Ranch</h3>
                   <p className="text-slate-600 text-sm">
-                    Move from established Green Valley ($520K) to luxury Henderson ($800K+).
+                    Move from Green Valley ($520K) to MacDonald Ranch / luxury Henderson ($800K+).
                     Larger lots, custom features, mountain views.
                   </p>
                 </div>

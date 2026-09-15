@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -183,42 +184,7 @@ export default function SouthernHighlandsPage() {
                 </div>
               </div>
 
-              {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Southern Highlands is served by Clark County School District campuses including:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Elise Wolff Elementary</li>
-                      <li>• Janet Lundahl Elementary</li>
-                      <li>• Robert Forbuss Elementary</li>
-                      <li>• Floyd Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School</li>
-                      <li>• Liberty High School</li>
-                      <li>• Del Webb Middle School</li>
-                      <li>• Mannion Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Bishop Gorman High School</li>
-                      <li>• Pinecrest Academy</li>
-                      <li>• Henderson International</li>
-                      <li>• Coral Academy</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/southern-highlands" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Southern Highlands</h3>

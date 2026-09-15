@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -183,42 +184,7 @@ export default function SkyeCanyonPage() {
                 </div>
               </div>
 
-              {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near Skye Canyon</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Skye Canyon includes campuses built with the master plan, plus named northwest campuses:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Skye Canyon Elementary (New)</li>
-                      <li>• Floyd Elementary</li>
-                      <li>• Mabel Hoggard Elementary</li>
-                      <li>• Escobedo Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Shadow Ridge High School</li>
-                      <li>• Arbor View High School</li>
-                      <li>• Bilbray Middle School</li>
-                      <li>• Garrett Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Pinecrest Academy</li>
-                      <li>• Somerset Academy</li>
-                      <li>• Coral Academy</li>
-                      <li>• Faith Lutheran (15 min)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/skye-canyon" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Skye Canyon</h3>

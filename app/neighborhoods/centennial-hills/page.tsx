@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -182,45 +183,7 @@ export default function CentennialHillsPage() {
                 </div>
               </div>
 
-              {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near Centennial Hills</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Named campuses buyers compare for commute time (confirm zoning by address):
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Ober Elementary</li>
-                      <li>• Cashman Elementary</li>
-                      <li>• Scherkenbach Elementary</li>
-                      <li>• Hummel Elementary</li>
-                      <li>• McMillan Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Centennial High School</li>
-                      <li>• Shadow Ridge High School</li>
-                      <li>• Arbor View High School</li>
-                      <li>• Becker Middle School</li>
-                      <li>• Escobedo Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Pinecrest Academy</li>
-                      <li>• Somerset Academy</li>
-                      <li>• Coral Academy of Science</li>
-                      <li>• Faith Lutheran (nearby)</li>
-                      <li>• The Meadows School (nearby)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/centennial-hills" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Centennial Hills</h3>

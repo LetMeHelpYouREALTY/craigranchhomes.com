@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -140,8 +141,8 @@ export default function GreenValleyPage() {
               </p>
               <p>
                 What makes Green Valley unique is something that can't be replicated: time. Over three
-                decades, the community has matured into a verdant oasis with towering trees, established
-                landscaping, and HOA-maintained parks. While newer communities offer newer amenities,
+                decades, the community has matured into a verdant oasis with towering trees, HOA-maintained
+                landscaping, and parks. While newer villages offer newer amenity campuses,
                 Green Valley offers named campuses such as Green Valley High School,
                 35-year-old street trees, and HOA amenities that have been operating since the late 1980s.
               </p>
@@ -182,45 +183,7 @@ export default function GreenValleyPage() {
                 </div>
               </div>
 
-              {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Green Valley School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Green Valley is served by Clark County School District campuses with 35+ years
-                  of occupancy history:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Elise L. Wolff Elementary</li>
-                      <li>• C.T. Sewell Elementary</li>
-                      <li>• Gordon McCaw Elementary</li>
-                      <li>• John C. Vanderburg Elementary</li>
-                      <li>• Gene Ward Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Green Valley High School</li>
-                      <li>• Coronado High School</li>
-                      <li>• Bob Miller Middle School</li>
-                      <li>• Burkholder Middle School</li>
-                      <li>• Greenspun Junior High</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Henderson International School</li>
-                      <li>• Pinecrest Academy (Charter)</li>
-                      <li>• Coral Academy of Science</li>
-                      <li>• St. Peter the Apostle School</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/green-valley" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Green Valley</h3>
@@ -270,9 +233,8 @@ export default function GreenValleyPage() {
               <p className="mt-8">
                 The current Green Valley market shows <strong>187 active listings</strong> with homes
                 averaging <strong>26 days on market</strong>. The median price of <strong>$520,000</strong>
-                reflects the community's desirability and the premium buyers pay for established
-                neighborhoods. Properties range from well-maintained townhomes in the $400,000s to
-                custom homes exceeding $1.2 million in Green Valley's more exclusive enclaves.
+                reflects demand for 35-year-old street trees, golf, and The District retail. Properties range from well-maintained townhomes in the $400,000s to
+                custom homes exceeding $1.2 million in Green Valley Ranch and Green Valley South.
               </p>
               <p>
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent in Green Valley

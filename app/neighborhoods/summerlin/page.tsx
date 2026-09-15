@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -192,45 +193,7 @@ export default function SummerlinPage() {
                 </div>
               </div>
 
-              {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Summerlin School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Summerlin is served by the Clark County School District. Nearby campuses include:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Sig Rogich Middle School</li>
-                      <li>• William R. Lummis Elementary</li>
-                      <li>• Marion Earl Elementary</li>
-                      <li>• Helen Smith Elementary</li>
-                      <li>• John C. Vanderburg Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Palo Verde High School</li>
-                      <li>• West Career & Technical Academy</li>
-                      <li>• Del E. Webb Middle School</li>
-                      <li>• Sig Rogich Middle School</li>
-                      <li>• The Meadows School (Private)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Bishop Gorman High School</li>
-                      <li>• The Meadows School (K-12)</li>
-                      <li>• Faith Lutheran Middle & High</li>
-                      <li>• American Heritage Academy</li>
-                      <li>• Pinecrest Academy</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/summerlin" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Summerlin</h3>

@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FaqAccordion from "@/components/sections/FaqAccordion";
@@ -190,10 +191,10 @@ export default function NeighborhoodsPage() {
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Every Las Vegas neighborhood has its own personality. Whether you want the
-                community parks of Summerlin, the established charm of Green Valley, or the
-                luxury of The Ridges, I'll help you find the community that matches your lifestyle.
-                That's the Berkshire Hathaway HomeServices difference—personalized guidance backed
-                by local expertise."
+                community parks of Summerlin, the mature street trees of Green Valley, or the
+                ridge-top lots of The Ridges, I'll help you match commute minutes, square footage,
+                and HOA amenities. That's the Berkshire Hathaway HomeServices difference—personalized
+                guidance backed by local expertise."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
@@ -230,6 +231,7 @@ export default function NeighborhoodsPage() {
           </section>
 
           <section className="mb-16 max-w-4xl mx-auto">
+            <NamedCampuses path="/neighborhoods" />
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
               Neighborhood FAQ
             </h2>

@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -206,43 +207,7 @@ export default function NorthLasVegasPage() {
                 </div>
               </div>
 
-              {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near North Las Vegas</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  North Las Vegas is served by Clark County School District campuses. Newer campuses sit
-                  inside several master-planned villages—confirm zoning by address:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Top Elementary</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Aliante Elementary</li>
-                      <li>• Oran K. Gragson Elementary</li>
-                      <li>• Mabel Hoggard Elementary</li>
-                      <li>• Tate Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Canyon Springs High School</li>
-                      <li>• Legacy High School</li>
-                      <li>• Aliante Middle School</li>
-                      <li>• Sawyer Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Charter Options</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Pinecrest Academy North</li>
-                      <li>• Somerset Academy</li>
-                      <li>• Coral Academy of Science</li>
-                      <li>• SLAM! Academy</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/north-las-vegas" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from North Las Vegas</h3>
@@ -278,7 +243,7 @@ export default function NorthLasVegasPage() {
                   <ul className="text-slate-600 text-sm space-y-2">
                     <li><strong>Aliante:</strong> Master-planned with golf, casino, town center. Homes $400K-$550K.</li>
                     <li><strong>Tule Springs:</strong> Newer community near I-215. KB Home, Lennar. $380K-$500K.</li>
-                    <li><strong>Valley Vista:</strong> Family-focused with parks, pools. Century Communities. $350K-$450K.</li>
+                    <li><strong>Valley Vista:</strong> Parks and community pools. Century Communities. $350K-$450K.</li>
                     <li><strong>Camino Al Norte:</strong> Growing area near 215. Multiple builders. $380K-$480K.</li>
                   </ul>
                 </div>

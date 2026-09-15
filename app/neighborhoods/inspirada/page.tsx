@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -183,43 +184,7 @@ export default function InspiradaPage() {
                 </div>
               </div>
 
-              {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near Inspirada</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Inspirada is served by Henderson-area campuses, including facilities built with the
-                  master plan. Confirm zoning and drive time by address:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Inspirada Elementary (New)</li>
-                      <li>• Lomie Heard Elementary</li>
-                      <li>• Glen Taylor Elementary</li>
-                      <li>• Wright Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School</li>
-                      <li>• Foothill High School</li>
-                      <li>• Del Webb Middle School</li>
-                      <li>• Mannion Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Henderson International</li>
-                      <li>• Pinecrest Academy</li>
-                      <li>• Coral Academy</li>
-                      <li>• The Adelson School</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/inspirada" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Inspirada</h3>
@@ -293,7 +258,7 @@ export default function InspiradaPage() {
                 sought-after community. The median price of <strong>$525,000</strong> represents
                 solid 5.0% year-over-year appreciation. New construction from builders like Toll
                 Brothers, Lennar, and Beazer ranges from $450,000 to $750,000, while resales with
-                established yards and upgraded features offer compelling alternatives.
+                resale yards with mature trees and upgraded features offer compelling alternatives.
               </p>
               <p>
                 Choosing <strong>Berkshire Hathaway HomeServices</strong> for your Inspirada purchase

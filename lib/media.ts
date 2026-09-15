@@ -407,3 +407,9 @@ export function h3PhotoForPath(path: string): SitePhoto {
   }
   return photos.consultation;
 }
+
+/** Fourth still for named-campus H3s — must stay distinct from H1/H2/unique-interior H3. */
+export function campusPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods")) return photos.office;
+  return photos.officeExterior;
+}

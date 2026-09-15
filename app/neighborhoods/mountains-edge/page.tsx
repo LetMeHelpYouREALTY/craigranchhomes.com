@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import NamedCampuses from "@/components/sections/NamedCampuses";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -134,8 +135,8 @@ export default function MountainsEdgePage() {
                 <strong>Mountains Edge</strong> delivers what many Las Vegas buyers are seeking:
                 master-planned community amenities at prices significantly below Summerlin or
                 Henderson. This 3,500-acre community in southwest Las Vegas offers mountain views,
-                exceptional parks, and modern homes—without the premium prices of the valley's
-                more established luxury markets. <strong>Berkshire Hathaway HomeServices</strong>
+                exceptional parks, and modern homes—without the premium prices of Summerlin
+                or The Ridges. <strong>Berkshire Hathaway HomeServices</strong>
                 helps value-conscious buyers discover Mountains Edge's potential.
               </p>
               <p>
@@ -183,43 +184,7 @@ export default function MountainsEdgePage() {
                 </div>
               </div>
 
-              {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Mountains Edge School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  Mountains Edge is served by Clark County School District with several newer schools
-                  built for the growing community:
-                </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Stuckey Elementary</li>
-                      <li>• Wright Elementary</li>
-                      <li>• Cynthia Cunningham Elementary</li>
-                      <li>• Ernest Becker Elementary</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Sierra Vista High School</li>
-                      <li>• Liberty High School</li>
-                      <li>• Mannion Middle School</li>
-                      <li>• Del Webb Middle School</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Pinecrest Academy</li>
-                      <li>• Coral Academy of Science</li>
-                      <li>• Somerset Academy</li>
-                      <li>• Bishop Gorman (15 min)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <NamedCampuses path="/neighborhoods/mountains-edge" />
 
               {/* Commute Times */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Mountains Edge</h3>
