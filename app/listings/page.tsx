@@ -22,6 +22,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import { pageMetadata } from "@/lib/seo";
@@ -347,84 +348,7 @@ export default function ListingsPage() {
             </div>
           </section>
 
-          {/* Home Buying Process */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              How to Use This Live MLS Search
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Use this page to search live MLS, then book a showing. Pre-approval, offer strategy,
-              and tour logistics are handled on the buyers page. Here the job is inventory: filter
-              by beds, baths, and map, then call Dr. Jan Duffy at (702) 222-1964.
-            </p>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Get Pre-Approved for Financing</h3>
-                  <p className="text-slate-600 text-sm">
-                    A pre-approval letter shows sellers you're serious and gives you a clear budget. 
-                    Dr. Jan can connect you with trusted local lenders offering competitive rates. 
-                    This typically takes 1-3 days with proper documentation.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Define Your Priorities & Search</h3>
-                  <p className="text-slate-600 text-sm">
-                    Location, size, features, and budget all factor into your search. Dr. Jan helps 
-                    you identify which Las Vegas neighborhoods match your lifestyle while setting 
-                    up automated MLS alerts so you never miss a new listing.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Tour Properties & Make an Offer</h3>
-                  <p className="text-slate-600 text-sm">
-                    Visit homes that meet your criteria, either in person or virtually. When you 
-                    find "the one," Dr. Jan helps you craft a competitive offer with the right 
-                    price, contingencies, and terms to win in today's market.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  4
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Due Diligence & Inspections</h3>
-                  <p className="text-slate-600 text-sm">
-                    Once under contract, you'll have time for home inspections, appraisals, and 
-                    final financing approval. Dr. Jan coordinates with all parties and helps you 
-                    negotiate repairs or credits if issues arise.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  5
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Close & Get Your Keys</h3>
-                  <p className="text-slate-600 text-sm">
-                    The closing process typically takes 30-45 days from offer acceptance. You'll 
-                    sign final documents, transfer funds, and receive the keys to your new Las Vegas 
-                    home. Dr. Jan remains available for any questions even after closing.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ProcessSteps path="/listings" />
 
           <SupportFaqs path="/listings" />
 

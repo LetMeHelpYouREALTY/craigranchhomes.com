@@ -9,12 +9,7 @@ import {
   Calculator,
   Star,
   Users,
-  Phone,
   CheckCircle,
-  Award,
-  Shield,
-  Clock,
-  Heart,
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -24,6 +19,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import { nap } from "@/lib/contact";
 
@@ -376,122 +372,8 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* Value Proposition */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">
-              The Berkshire Hathaway HomeServices Difference
-            </h2>
-            <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name
-              synonymous with trust, ethical standards, and financial strength—the same principles
-              that built Warren Buffett's empire. This isn't just a logo; it's a commitment to 
-              putting your interests first.
-            </p>
-            <div className="grid md:grid-cols-4 gap-6 text-center mb-8">
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">50,000+</div>
-                <div className="text-slate-300 text-sm">Agents Worldwide</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">Since 2008</div>
-                <div className="text-slate-300 text-sm">Serving Las Vegas</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">$127M+</div>
-                <div className="text-slate-300 text-sm">Volume Closed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">4.9★</div>
-                <div className="text-slate-300 text-sm">Client Rating</div>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Shield className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Financial Strength</h3>
-                <p className="text-slate-400 text-sm">
-                  Backed by Berkshire Hathaway Inc., providing unmatched stability and trust
-                </p>
-              </div>
-              <div className="text-center">
-                <Award className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Ethical Standards</h3>
-                <p className="text-slate-400 text-sm">
-                  Rigorous ethical guidelines ensure your interests always come first
-                </p>
-              </div>
-              <div className="text-center">
-                <Users className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Global Network</h3>
-                <p className="text-slate-400 text-sm">
-                  Access to listings and referrals through 50,000+ agents worldwide
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Service Process */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              How Our Real Estate Services Work
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Whether you're buying or selling, the process begins with a free consultation 
-              to understand your goals, timeline, and unique circumstances. From there, 
-              Dr. Jan creates a customized strategy that leverages the full resources of 
-              Berkshire Hathaway HomeServices to achieve the best possible outcome.
-            </p>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Free Consultation</h3>
-                  <p className="text-slate-600 text-sm">
-                    Discuss your goals, timeline, and situation. No pressure, no obligation—just 
-                    honest conversation about how Dr. Jan can help you achieve your real estate goals.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Customized Strategy</h3>
-                  <p className="text-slate-600 text-sm">
-                    Based on your consultation, receive a tailored plan that addresses your specific 
-                    needs—whether that's finding the right neighborhood, pricing your home, or both.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Expert Execution</h3>
-                  <p className="text-slate-600 text-sm">
-                    Dr. Jan handles every detail—marketing, negotiations, paperwork, coordination—
-                    while keeping you informed and in control throughout the process.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  4
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Successful Closing & Beyond</h3>
-                  <p className="text-slate-600 text-sm">
-                    Close your transaction with confidence. Dr. Jan remains available for questions, 
-                    referrals, and future real estate needs long after the closing table.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ProcessSteps path="/services" />
+          <ProcessSteps path="/services" slot={1} />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

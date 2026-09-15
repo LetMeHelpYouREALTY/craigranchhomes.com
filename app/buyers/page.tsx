@@ -1,19 +1,12 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
-  Search,
-  FileText,
-  Home,
-  Key,
   CheckCircle,
-  DollarSign,
   Shield,
   MapPin,
   TrendingUp,
   Users,
   Award,
-  Clock,
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -23,6 +16,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -55,46 +49,13 @@ const buyerSchema = {
   serviceType: "Buyer Representation",
 };
 
-const buyingSteps = [
-  {
-    icon: DollarSign,
-    title: "Get Pre-Approved for Financing",
-    description:
-      "Know your budget before you start looking. Dr. Jan connects you with trusted local lenders who offer competitive rates and programs for every situation—FHA, VA, conventional, and down payment assistance programs.",
-  },
-  {
-    icon: Search,
-    title: "Define Your Priorities & Search",
-    description:
-      "Dr. Jan provides access to all MLS listings, off-market opportunities, and new construction. She'll help you identify which Las Vegas neighborhoods match your lifestyle while setting up automated alerts so you never miss a new listing.",
-  },
-  {
-    icon: FileText,
-    title: "Tour Properties & Make an Offer",
-    description:
-      "Dr. Jan's market expertise ensures your offer is competitive yet protects your interests. She negotiates on your behalf to get the best price and terms possible, with contingencies that protect you.",
-  },
-  {
-    icon: Home,
-    title: "Due Diligence & Inspections",
-    description:
-      "Coordinate home inspections, review disclosures, and ensure you understand exactly what you're buying. Dr. Jan helps negotiate repairs or credits if issues arise during the inspection period.",
-  },
-  {
-    icon: Key,
-    title: "Close & Get Your Keys",
-    description:
-      "Dr. Jan coordinates with lenders, title, and escrow to ensure a smooth closing. The typical closing process takes 30-45 days from offer acceptance—then you get the keys to your new Las Vegas home!",
-  },
-];
-
 const neighborhoods = [
-  { name: "Summerlin", price: "$625K", description: "Master-planned community with Red Rock views" },
-  { name: "Henderson", price: "$485K", description: "Parks, trails, and master-planned villages" },
-  { name: "Green Valley", price: "$520K", description: "Mature landscaping and golf courses" },
-  { name: "The Ridges", price: "$2.5M", description: "Ultra-luxury guard-gated estates" },
-  { name: "North Las Vegas", price: "$385K", description: "Affordable new construction" },
-  { name: "Southern Highlands", price: "$750K", description: "Golf course community" },
+  { name: "Summerlin", price: "$625K", description: "10–15 minutes from Suite 100. Red Rock trailheads and Downtown Summerlin on the same west clock." },
+  { name: "Henderson", price: "$485K", description: "25–35 minutes via I-215 east. Parks, trails, and named villages compared by square footage." },
+  { name: "Green Valley", price: "$520K", description: "35-year street trees and The District. Green Valley High School commute mapped by address." },
+  { name: "The Ridges", price: "$2.5M", description: "15–20 minutes to the guardhouse. Gate lists confirmed from Suite 100." },
+  { name: "North Las Vegas", price: "$385K", description: "Aliante rec and Craig Road employers first — not a Summerlin swap." },
+  { name: "Southern Highlands", price: "$750K", description: "25–35 minutes via I-15 south. Robert Trent Jones Jr. course on that clock." },
 ];
 
 export default function BuyersPage() {
@@ -118,13 +79,13 @@ export default function BuyersPage() {
 
             <p className="text-xl text-slate-600 mb-8">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
-              you're backed by the most trusted name in real estate—and it costs you nothing.
-              The seller pays the commission, but the representation is yours.
+              the seller-paid buyer-broker fee is explained at Suite 100 — and it costs you nothing
+              at the closing table. The representation is yours.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free Buyer Representation</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS Access</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
+              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Inspection coordination</span>
             </div>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -176,55 +137,17 @@ export default function BuyersPage() {
             </div>
           </section>
 
-          {/* Buying Process */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Home Buying Process in Las Vegas
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Buying a home is one of the most significant financial decisions you'll make. 
-              Understanding the process helps reduce stress and ensures you're prepared at each 
-              step. Here's what to expect when purchasing a home in Las Vegas with Dr. Jan Duffy 
-              and Berkshire Hathaway HomeServices.
-            </p>
-            <div className="space-y-6">
-              {buyingSteps.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div
-                    key={step.title}
-                    className="flex gap-6 items-start bg-white border border-slate-200 rounded-lg p-6"
-                  >
-                    <div className="flex-shrink-0">
-                      <div className="bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center">
-                        <Icon className="h-8 w-8 text-blue-600" />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                          Step {index + 1}
-                        </span>
-                        <h3 className="text-xl font-bold text-slate-900">{step.title}</h3>
-                      </div>
-                      <p className="text-slate-600">{step.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <ProcessSteps path="/buyers" />
 
           {/* Neighborhood Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Neighborhoods for Home Buyers
+              January 2026 medians by village — then we time the drive from Suite 100
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Whether you're 
-              seeking luxury estates in guard-gated communities, homes near named local schools, 
-              or affordable new construction, Dr. Jan helps you find the perfect neighborhood. Here's 
-              a quick guide to median prices and what each area offers.
+              Published January 2026 bands, not a live quote. Square footage, HOA dues, and commute
+              minutes from 9406 W Lake Mead Blvd beat a slogan. Named campuses are mapped by address
+              at ccsd.net/zoning.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {neighborhoods.map((neighborhood) => (
@@ -253,13 +176,12 @@ export default function BuyersPage() {
           {/* Buyer Types */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Specialized Guidance for Every Buyer
+              California, first-time, or $1M+ — three different first desks
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Different buyers have different needs. A first-time buyer needs education and 
-              hand-holding through the process. A California relocator needs tax guidance and 
-              neighborhood matching. A luxury buyer needs discretion and access. Dr. Jan Duffy 
-              tailors her approach to match your specific situation and goals.
+              First-time paperwork is FHA/VA at Suite 100. California relocators compare net proceeds
+              to ZIP targets, then a three-day itinerary. Luxury buyers confirm gate lists here.
+              Call (702) 222-1964.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Link

@@ -645,6 +645,18 @@ export function villageDetailPhotoForPath(path: string, slot = 0): SitePhoto {
   return photos.consultation;
 }
 
+/** Twentieth stills for process-step / Why-BHHS interiors (not the H1–H3 or quote still). */
+export function processPhotoForPath(path: string, slot = 0): SitePhoto {
+  if (path === "/buyers" && slot === 0) return photos.officeExterior;
+  if (path === "/listings" && slot === 0) return photos.office;
+  if (path === "/services" && slot === 0) return photos.homeHero;
+  if (path === "/services" && slot === 1) return photos.market;
+  if (path.startsWith("/why-berkshire") && slot === 0) return photos.homeHero;
+  if (path === "/contact" && slot === 0) return photos.summerlin;
+  if (path.startsWith("/luxury-homes") && slot === 0) return photos.consultation;
+  return photos.consultation;
+}
+
 export type FaqHubCategoryId =
   | "bhhs"
   | "buying"
@@ -715,6 +727,19 @@ export function occupiedHeadingStills(path: string): Set<string> {
   }
   if (path.startsWith("/neighborhoods/north-las-vegas")) {
     srcs.push(villageDetailPhotoForPath(path, 1).src);
+  }
+  if (
+    path === "/buyers" ||
+    path === "/listings" ||
+    path === "/services" ||
+    path.startsWith("/why-berkshire") ||
+    path === "/contact" ||
+    path.startsWith("/luxury-homes")
+  ) {
+    srcs.push(processPhotoForPath(path, 0).src);
+  }
+  if (path === "/services") {
+    srcs.push(processPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/55-plus")) {
     srcs.push(

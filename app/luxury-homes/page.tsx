@@ -1,25 +1,17 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { 
-  Phone, 
-  Star, 
-  Shield, 
-  Globe, 
-  Eye, 
   CheckCircle,
   Home,
-  MapPin,
   DollarSign,
-  Award,
   ArrowRight,
-  Camera,
-  Users,
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -146,9 +138,9 @@ export default function LuxuryHomesPage() {
               receives the exceptional service it deserves.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> White Glove Service</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Global Buyer Network</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Discrete Transactions</span>
+              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Gate lists confirmed at Suite 100</span>
+              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Off-market windows in writing</span>
+              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Addresses stay off group texts</span>
             </div>
             <div className="mt-8">
               <CtaActions variant="onLight" bookLabel="Request Private Showing" />
@@ -188,59 +180,14 @@ export default function LuxuryHomesPage() {
             </div>
           </section>
 
-          {/* Why BHHS for Luxury */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Why Choose Berkshire Hathaway for Luxury Real Estate
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              In luxury real estate, the agent you choose can impact both the sale price and 
-              the transaction experience. Berkshire Hathaway HomeServices agents bring resources, 
-              reputation, and expertise that make a measurable difference in this competitive segment.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  icon: Shield,
-                  title: "Trusted Brand",
-                  desc: "The Berkshire Hathaway name commands respect and attracts serious, qualified buyers to your property",
-                },
-                {
-                  icon: Globe,
-                  title: "Global Reach",
-                  desc: "50,000+ agents worldwide connecting your property to affluent buyers in every major market",
-                },
-                {
-                  icon: Eye,
-                  title: "Discretion",
-                  desc: "Privacy-focused marketing for clients who value confidentiality. Off-market sales available.",
-                },
-                {
-                  icon: Star,
-                  title: "White Glove",
-                  desc: "Concierge-level service for luxury transactions from first showing to closing and beyond",
-                },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="text-center p-6 bg-slate-50 rounded-xl">
-                    <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                      <Icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.desc}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <ProcessSteps path="/luxury-homes" />
 
           <ExpertQuote path="/luxury-homes" />
 
           {/* Luxury Neighborhoods */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Premier Las Vegas Luxury Communities
+              Ridges, Highlands, and Lake Las Vegas — one campus per afternoon
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Guard-gated, golf-course, and lakefront luxury product is compared by square footage,

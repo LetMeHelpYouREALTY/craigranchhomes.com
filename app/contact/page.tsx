@@ -1,5 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, Star, Users, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, Star } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -9,6 +9,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
 
@@ -213,43 +214,19 @@ export default function ContactPage() {
                 </div>
                 <CalendlyWidget height="600px" />
               </div>
-
-              {/* Why Contact BHHS */}
-              <div className="mt-6 bg-slate-900 text-white rounded-xl p-6">
-                <h3 className="font-bold text-lg mb-4">Why Contact Berkshire Hathaway HomeServices?</h3>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <Shield className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <p className="text-slate-300 text-sm">
-                      <strong className="text-white">Trusted Brand:</strong> The only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc.
-                    </p>
-                  </div>
-                  <div className="flex items-start">
-                    <Star className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <p className="text-slate-300 text-sm">
-                      <strong className="text-white">Proven Results:</strong> $127M+ in closed transactions serving Las Vegas since 2008.
-                    </p>
-                  </div>
-                  <div className="flex items-start">
-                    <Users className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <p className="text-slate-300 text-sm">
-                      <strong className="text-white">Global Network:</strong> 50,000+ agents worldwide for seamless relocations and referrals.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
+
+          <ProcessSteps path="/contact" />
 
           {/* Service Areas Section */}
           <section className="max-w-5xl mx-auto mt-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Areas We Serve
+              ZIPs we time from 9406 W Lake Mead Blvd
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy provides expert real estate services throughout the Las Vegas Valley. 
-              Whether you're buying, selling, or investing in any of these communities, contact us 
-              for personalized guidance backed by Berkshire Hathaway HomeServices.
+              Summerlin is 10–15 minutes. Henderson and Green Valley are 25–35. Southern Highlands
+              is 25–35 via I-15. Call (702) 222-1964. We will not tour twelve ZIPs in one afternoon.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
