@@ -8,7 +8,10 @@ type UniqueInteriorProps = {
   listingId?: string;
 };
 
-export default function UniqueInterior({ path, listingId }: UniqueInteriorProps) {
+export default function UniqueInterior({
+  path,
+  listingId,
+}: UniqueInteriorProps) {
   const copy = uniqueInteriors[path];
   if (!copy) return null;
 
@@ -24,7 +27,9 @@ export default function UniqueInterior({ path, listingId }: UniqueInteriorProps)
       className="max-w-4xl mx-auto mb-16"
       data-unique-interior={listingId ? `${path}#${listingId}` : path}
     >
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">{h2}</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+        {h2}
+      </h2>
       <HeadingPhoto path={path} level="h2" />
       <p className="text-slate-700 mb-6">{body}</p>
       <ul className="list-disc pl-5 space-y-2 text-slate-700 mb-8">
@@ -32,7 +37,9 @@ export default function UniqueInterior({ path, listingId }: UniqueInteriorProps)
           <li key={fact}>{fact}</li>
         ))}
       </ul>
-      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">{copy.h3}</h3>
+      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">
+        {copy.h3}
+      </h3>
       <HeadingPhoto path={path} level="h3" />
       <p className="text-slate-700 mb-6">{copy.h3Body}</p>
       <p className="text-sm text-slate-600 mb-6">

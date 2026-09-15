@@ -430,8 +430,7 @@ export const uniqueInteriors: Record<string, UniqueInteriorCopy> = {
       "Call (702) 222-1964",
     ],
     h3: "Do not let two closings collide",
-    h3Body:
-      "Bring both contract drafts to the desk. Call (702) 222-1964.",
+    h3Body: "Bring both contract drafts to the desk. Call (702) 222-1964.",
   },
   "/sellers/divorce-probate": {
     h2: "Court dates and showing access at Suite 100, not the lobby",
@@ -466,8 +465,7 @@ export const uniqueInteriors: Record<string, UniqueInteriorCopy> = {
       "Call (702) 222-1964",
     ],
     h3: "Do not buy the photo; buy the lease math",
-    h3Body:
-      "Bring target cap rate and cash-to-close. Call (702) 222-1964.",
+    h3Body: "Bring target cap rate and cash-to-close. Call (702) 222-1964.",
   },
   "/luxury-homes": {
     h2: "Luxury listing or search intake—Ridges, Highlands, or Lake Las Vegas",
@@ -502,8 +500,7 @@ export const uniqueInteriors: Record<string, UniqueInteriorCopy> = {
       "Call (702) 222-1964 to interpret YOUR address",
     ],
     h3: "Skyline photos are context; comps are the decision",
-    h3Body:
-      "Bring the address. Call (702) 222-1964.",
+    h3Body: "Bring the address. Call (702) 222-1964.",
   },
   "/market-update": {
     h2: "This week's numbers against your address or buyer criteria",
