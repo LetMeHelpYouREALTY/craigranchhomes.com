@@ -394,7 +394,7 @@ export default function BuyersPage() {
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Find Your Las Vegas Home?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Register as buyer agent at 9406 W Lake Mead Blvd before any model</h2>
             <p className="text-xl text-slate-300 mb-8">
               Questions about buying in Las Vegas? Call or text Dr. Jan Duffy for a free buyer
               consultation. Get expert guidance backed by Berkshire Hathaway HomeServices—the 

@@ -290,7 +290,7 @@ export default function SunCityAliantePage() {
           {/* CTA */}
           <section className="text-center bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Discover Sun City Aliante's Value
+              Sun City Aliante rec sits on the north loop with North Vista Hospital
             </h2>
             <p className="text-xl text-green-100 mb-8">
               See Sun City Aliante's course, rec campus, and HOA dues on a 20–25 minute north loop.

@@ -197,11 +197,10 @@ export default function SunCitySummerlinPage() {
           {/* CTA */}
           <section className="text-center bg-amber-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Explore Sun City Summerlin
+              Walk one rec building and one course — 10–15 minutes from Suite 100
             </h2>
             <p className="text-xl text-amber-100 mb-8">
-              Ready to experience Nevada's premier 55+ community? Dr. Jan Duffy offers private
-              tours and expert guidance on finding your perfect Sun City Summerlin home.
+              Highland Falls, Palm Valley, and Eagle Crest plus four rec campuses. Pick one course and one rec building per visit. Call (702) 222-1964.
             </p>
             <CtaActions variant="onDark" />
           </section>

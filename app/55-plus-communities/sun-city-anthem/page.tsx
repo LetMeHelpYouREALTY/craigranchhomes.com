@@ -245,11 +245,10 @@ export default function SunCityAnthemPage() {
           {/* CTA */}
           <section className="text-center bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Discover Sun City Anthem
+              Anthem Center first — 30–35 minutes east, packet at the desk
             </h2>
             <p className="text-xl text-green-100 mb-8">
-              Experience Henderson's premier 55+ community. Dr. Jan Duffy provides tours and
-              expert guidance for Sun City Anthem home buyers.
+              Anthem Center is about 64,000 sq ft. We review occupancy rules at Suite 100, then drive. Call (702) 222-1964.
             </p>
             <CtaActions variant="onDark" />
           </section>

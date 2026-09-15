@@ -282,7 +282,7 @@ export default function HeritageAtStonebridgePage() {
           {/* CTA */}
           <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience Guard-Gated 55+ Living
+              Get on the Heritage gate list from Suite 100, then Downtown Summerlin
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Heritage sits 10–20 minutes from Suite 100. Tour the staffed gate

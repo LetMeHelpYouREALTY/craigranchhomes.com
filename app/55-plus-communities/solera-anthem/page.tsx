@@ -276,7 +276,7 @@ export default function SoleraAnthemPage() {
           {/* CTA */}
           <section className="text-center bg-teal-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience a 1,200-Home 55+ Campus
+              Tour Solera's 1,200-home campus with nearby Anthem parks
             </h2>
             <p className="text-xl text-teal-100 mb-8">
               Discover why Solera at Anthem offers a staffed gate and boutique clubhouse

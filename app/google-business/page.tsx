@@ -336,7 +336,7 @@ export default function GoogleBusinessPage() {
 
           <section className="max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+              <h2 className="text-3xl font-bold mb-4">The Maps pin is 9406 W Lake Mead Blvd, Suite 100 — start there</h2>
               <p className="text-xl text-slate-300 mb-8">
                 Contact Dr. Jan Duffy for a free consultation about buying or selling in Las Vegas.
               </p>

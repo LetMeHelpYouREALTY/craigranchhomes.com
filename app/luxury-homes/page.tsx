@@ -373,7 +373,7 @@ export default function LuxuryHomesPage() {
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Discover Las Vegas Luxury Living
+              Gate lists for The Ridges and MacDonald Highlands start at the desk
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Whether buying or selling a luxury property, Dr. Jan Duffy provides the expertise and

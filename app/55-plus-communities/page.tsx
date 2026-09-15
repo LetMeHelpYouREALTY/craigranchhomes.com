@@ -630,12 +630,10 @@ export default function FiftyFiveCommunitiesPage() {
           {/* Final CTA */}
           <section className="text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let's Find Your Ideal Lifestyle Match
+              Compare two 55+ campuses from Suite 100 — west first, Henderson second
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Ready to explore active adult living in Las Vegas? Contact Dr. Jan
-              Duffy for a free consultation and personalized community
-              recommendations.
+              Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Call (702) 222-1964 with occupancy questions before we drive.
             </p>
             <CtaActions variant="onDark" />
             <p className="mt-4 text-blue-300 text-sm">
