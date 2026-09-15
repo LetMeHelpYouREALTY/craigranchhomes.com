@@ -424,3 +424,22 @@ export function campusPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods")) return photos.agent;
   return photos.officeExterior;
 }
+
+/** Fifth still for commute H3s — distinct from H1/H2/unique-interior H3/campus. */
+export function commutePhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/summerlin")) return photos.office;
+  if (path.startsWith("/neighborhoods/the-ridges")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.mountainsEdge;
+  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.aliante;
+  if (path.startsWith("/neighborhoods/centennial-hills"))
+    return photos.alianteRec;
+  if (path.startsWith("/neighborhoods/green-valley"))
+    return photos.soleraClubhouse;
+  if (path.startsWith("/neighborhoods/henderson")) return photos.fiftyFive;
+  if (path.startsWith("/neighborhoods/inspirada")) return photos.heritageGate;
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.investment;
+  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.luxuryPool;
+  if (path.startsWith("/neighborhoods")) return photos.consultation;
+  return photos.market;
+}

@@ -7,6 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
+import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FaqAccordion from "@/components/sections/FaqAccordion";
@@ -232,6 +233,7 @@ export default function NeighborhoodsPage() {
 
           <section className="mb-16 max-w-4xl mx-auto">
             <NamedCampuses path="/neighborhoods" />
+            <NeighborhoodCommute path="/neighborhoods" />
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
               Neighborhood FAQ
             </h2>

@@ -8,6 +8,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
+import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -44,6 +45,11 @@ const breadcrumbs = [
 // FAQ data for schema
 const summerlinFaqs = [
   {
+    question: "How long is a Summerlin village tour from 9406 W Lake Mead Blvd?",
+    answer:
+      "Most Summerlin streets are 10–15 minutes from Suite 100. We typically start in The Trails or Pueblo, time Palo Verde High School on Pavilion Center Drive, then add Red Rock Canyon Scenic Drive on the west end of the same loop. Call (702) 222-1964.",
+  },
+  {
     question: "What is the current median home price in Summerlin?",
     answer:
       "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million.",
@@ -54,14 +60,9 @@ const summerlinFaqs = [
       "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week.",
   },
   {
-    question: "What makes Summerlin different from other Las Vegas communities?",
+    question: "What makes a Summerlin loop different from a Henderson day?",
     answer:
-      "Summerlin offers 150+ parks, 150+ miles of trails, named campuses such as Palo Verde High School, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character.",
-  },
-  {
-    question: "Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?",
-    answer:
-      "Berkshire Hathaway HomeServices agents like Dr. Jan Duffy bring deep Summerlin expertise combined with the global resources and trusted reputation of the BHHS brand. This combination helps buyers compete in Summerlin's competitive market and helps sellers maximize their home's value.",
+      "Summerlin is a west-valley loop from the GBP office pin: 150+ parks, 150+ miles of trails, Palo Verde High School, and Red Rock trailheads. Henderson is a 25–35 minute I-215 east run with Green Valley High School or Coronado High School timed by street. Call (702) 222-1964 to book one afternoon, not two slogans.",
   },
 ];
 
@@ -195,27 +196,7 @@ export default function SummerlinPage() {
 
               <NamedCampuses path="/neighborhoods/summerlin" />
 
-              {/* Commute Times */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Summerlin</h3>
-              <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-35 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">25-40 min</td></tr>
-                    <tr><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">30-45 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
-                    <tr><td className="px-4 py-3">Red Rock Canyon</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">10-15 min</td></tr>
-                  </tbody>
-                </table>
-              </div>
+              <NeighborhoodCommute path="/neighborhoods/summerlin" />
 
               {/* Local Amenities */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
@@ -284,10 +265,10 @@ export default function SummerlinPage() {
               Frequently Asked Questions About Summerlin Real Estate
             </h2>
                         <FaqAccordion items={[
+              { q: "How long is a Summerlin village tour from 9406 W Lake Mead Blvd?", a: "Most Summerlin streets are 10–15 minutes from Suite 100. We typically start in The Trails or Pueblo, time Palo Verde High School on Pavilion Center Drive, then add Red Rock Canyon Scenic Drive on the west end of the same loop. Call (702) 222-1964." },
               { q: "What is the current median home price in Summerlin?", a: "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million." },
               { q: "How long do homes stay on the market in Summerlin?", a: "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week." },
-              { q: "What makes Summerlin different from other Las Vegas communities?", a: "Summerlin offers 150+ parks, 150+ miles of trails, named campuses such as Palo Verde High School, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character." },
-              { q: "Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?", a: "Berkshire Hathaway HomeServices agents like Dr. Jan Duffy bring deep Summerlin expertise combined with the global resources and trusted reputation of the BHHS brand. This combination helps buyers compete in Summerlin's competitive market and helps sellers maximize their home's value." },
+              { q: "What makes a Summerlin loop different from a Henderson day?", a: "Summerlin is a west-valley loop from the GBP office pin: 150+ parks, 150+ miles of trails, Palo Verde High School, and Red Rock trailheads. Henderson is a 25–35 minute I-215 east run with Green Valley High School or Coronado High School timed by street. Call (702) 222-1964 to book one afternoon, not two slogans." },
             ]} />
           </section>
 

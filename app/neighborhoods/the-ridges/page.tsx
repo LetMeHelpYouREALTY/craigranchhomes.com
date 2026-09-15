@@ -8,6 +8,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
+import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -216,26 +217,7 @@ export default function TheRidgesPage() {
                 </div>
               </div>
 
-              {/* Commute & Location */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Location & Accessibility</h3>
-              <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    <tr><td className="px-4 py-3">Downtown Summerlin</td><td className="px-4 py-3">3 miles</td><td className="px-4 py-3">8 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Red Rock Canyon</td><td className="px-4 py-3">4 miles</td><td className="px-4 py-3">10 min</td></tr>
-                    <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td></tr>
-                    <tr><td className="px-4 py-3">Private Aviation (HND)</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td></tr>
-                  </tbody>
-                </table>
-              </div>
+              <NeighborhoodCommute path="/neighborhoods/the-ridges" />
 
               {/* Luxury Amenities */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Nearby Luxury Amenities</h3>
