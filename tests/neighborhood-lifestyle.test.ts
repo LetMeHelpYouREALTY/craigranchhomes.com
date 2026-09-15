@@ -26,8 +26,8 @@ const forbidden = [
 describe("neighborhoodLifestyles", () => {
   const paths = Object.keys(neighborhoodLifestyles);
 
-  it("covers the hub plus ten village paths", () => {
-    expect(paths).toHaveLength(11);
+  it("covers the hub plus eleven village paths", () => {
+    expect(paths).toHaveLength(12);
   });
 
   it("keeps lifestyle H2s unique per path", () => {

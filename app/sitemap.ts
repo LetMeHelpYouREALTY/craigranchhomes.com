@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://heyberkshire.com";
+  const baseUrl = "https://www.craigranchhomes.com";
   const lastModified = new Date();
 
   // Core pages
@@ -60,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Neighborhood pages
   const neighborhoodPages = [
     { url: `${baseUrl}/neighborhoods`, priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${baseUrl}/neighborhoods/craig-ranch`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods/summerlin`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods/henderson`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods/green-valley`, priority: 0.7, changeFrequency: "weekly" as const },

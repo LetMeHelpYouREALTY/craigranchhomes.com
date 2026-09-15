@@ -215,6 +215,28 @@ export const namedCampuses: Record<string, NamedCampusCopy> = {
       },
     ],
   },
+  "/neighborhoods/craig-ranch": {
+    h3: "Eva G. Simmons, Findlay, and Mojave — ZIP 89031 names, not a magnet swap",
+    body: "Craig Ranch streets in 89031 often map to Eva G. Simmons Elementary, Clifford O. Pete Findlay Middle School, and Mojave High School. Canyon Springs High School is a different North Las Vegas campus. Nellis-area parcels can pull other feeders — ccsd.net/zoning before an offer.",
+    campuses: [
+      {
+        name: "Eva G. Simmons Elementary",
+        note: "Named elementary on many Craig Ranch showing sheets; still confirm the street",
+      },
+      {
+        name: "Clifford O. Pete Findlay Middle School",
+        note: "Named middle campus for 89031 tours from Suite 100",
+      },
+      {
+        name: "Mojave High School",
+        note: "Named high school we time with the Sound Lane gate, not a downtown magnet",
+      },
+      {
+        name: "CCSD Zoning Search",
+        note: "Official street-level assignment at ccsd.net/zoning before an offer",
+      },
+    ],
+  },
   "/neighborhoods/north-las-vegas": {
     h3: "Canyon Springs, Legacy, and Aliante campuses — not a downtown magnet",
     body: "North Las Vegas tours map Canyon Springs High School, Legacy High School, and Aliante-area campuses by address. Mabel Hoggard Elementary is a magnet near downtown Las Vegas, not a North Las Vegas zoned default, so it is off this list. Nellis-area streets can pull different feeders — CCSD search first.",

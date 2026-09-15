@@ -20,7 +20,7 @@ describe("neighborhoodCommutes", () => {
   const paths = Object.keys(neighborhoodCommutes);
 
   it("covers every neighborhood interior path plus the hub", () => {
-    expect(paths).toHaveLength(11);
+    expect(paths).toHaveLength(12);
     expect(paths).toEqual(
       expect.arrayContaining([
         "/neighborhoods",
@@ -34,6 +34,7 @@ describe("neighborhoodCommutes", () => {
         "/neighborhoods/inspirada",
         "/neighborhoods/north-las-vegas",
         "/neighborhoods/mountains-edge",
+        "/neighborhoods/craig-ranch",
       ])
     );
   });

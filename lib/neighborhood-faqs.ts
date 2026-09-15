@@ -206,6 +206,27 @@ export const neighborhoodFaqs: Record<string, NeighborhoodFaqCopy> = {
       },
     ],
   },
+  "/neighborhoods/craig-ranch": {
+    h2: "Sound Lane gate, 170-acre park, Mojave High — a 89031 FAQ",
+    items: [
+      {
+        q: "Do Craig Ranch tours start at Suite 100 or at the regional park?",
+        a: "Suite 100 first. Craig Ranch is 20–25 minutes via US-95 / I-15 from 9406 W Lake Mead Blvd. We confirm the Sound Lane gate list at the desk, then walk a ramada at 628 W. Craig Road on the same north loop. Call (702) 222-1964.",
+      },
+      {
+        q: "What January 2026 price bands were published for Craig Ranch?",
+        a: "Published bands on this page: entry from $415,000, mid-range $500,000–$650,000, larger-lot product from $738,700+. North Las Vegas city median on this site is $385,000. Confirm live MLS the week you tour — these are not a live quote.",
+      },
+      {
+        q: "Which interiors sit inside the Craig Ranch gate?",
+        a: "Jasmine Ranch (two-bedroom condos with pool and fitness), Centennial Crossing (larger condos/townhomes up to four bedrooms), and Seabreeze (larger lots, some to about half an acre with guesthouses). Century collections on the same gate list: Mohave, Essence, Serenity, Olympic, Monarch.",
+      },
+      {
+        q: "Which named campuses do Craig Ranch showing sheets map?",
+        a: "Eva G. Simmons Elementary, Clifford O. Pete Findlay Middle School, and Mojave High School by listing address. Canyon Springs High School is a different North Las Vegas campus. Confirm at ccsd.net/zoning before an offer.",
+      },
+    ],
+  },
   "/neighborhoods/north-las-vegas": {
     h2: "Aliante rec, Craig Road jobs, and Suite 100 — not a downtown FAQ",
     items: [

@@ -35,6 +35,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   "southern-highlands": "Southern Highlands",
   "mountains-edge": "Mountain's Edge",
   "centennial-hills": "Centennial Hills",
+  "craig-ranch": "Craig Ranch",
   "north-las-vegas": "North Las Vegas",
   "skye-canyon": "Skye Canyon",
   "sun-city-anthem": "Sun City Anthem",

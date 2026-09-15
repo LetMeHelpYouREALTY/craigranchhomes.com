@@ -34,9 +34,10 @@ describe("namedCampuses", () => {
         "/neighborhoods/inspirada",
         "/neighborhoods/north-las-vegas",
         "/neighborhoods/mountains-edge",
+        "/neighborhoods/craig-ranch",
       ])
     );
-    expect(paths).toHaveLength(11);
+    expect(paths).toHaveLength(12);
   });
 
   it("keeps H3 copy unique per path", () => {

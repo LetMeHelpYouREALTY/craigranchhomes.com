@@ -17,19 +17,28 @@ import LeftoverBand from "@/components/sections/LeftoverBand";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods",
-  title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
+  title: "Craig Ranch & Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
   description:
-    "Explore Las Vegas and Henderson neighborhoods with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, The Ridges, Southern Highlands & more.",
+    "Compare Craig Ranch in North Las Vegas ZIP 89031 with Summerlin, Henderson, and other Las Vegas neighborhoods. Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
   keywords: [
+    "Craig Ranch neighborhoods",
     "Las Vegas neighborhoods",
     "Henderson communities",
     "Summerlin real estate",
     "Las Vegas neighborhood guide",
-    "where to live Las Vegas",
   ],
 });
 
 const neighborhoods = [
+  {
+    name: "Craig Ranch",
+    slug: "craig-ranch",
+    medianPrice: "$415,000+",
+    priceChange: "Published bands",
+    description: "Gated Century Communities plat in ZIP 89031 next to 170-acre Craig Ranch Regional Park",
+    highlights: ["170-Acre Park", "Gated Streets", "Jasmine Ranch", "Seabreeze Lots"],
+    bestFor: "Park acreage, gated 89031 streets, Century collections",
+  },
   {
     name: "Summerlin",
     slug: "summerlin",
@@ -133,7 +142,7 @@ export default function NeighborhoodsPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas & Henderson Neighborhoods
+              Craig Ranch and Las Vegas Neighborhoods
             </h1>
             <HeadingPhoto path="/neighborhoods" />
 

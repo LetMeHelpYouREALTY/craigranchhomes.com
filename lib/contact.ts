@@ -4,7 +4,7 @@
  * Office/GBP NAP: (702) 500-1942 — footer schema and Google Business match.
  */
 
-export const SITE_URL = "https://heyberkshire.com";
+export const SITE_URL = "https://www.craigranchhomes.com";
 
 export const ctaPhone = {
   display: "(702) 222-1964",

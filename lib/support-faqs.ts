@@ -19,23 +19,23 @@ export type SupportFaqCopy = {
 
 export const supportFaqs: Record<string, SupportFaqCopy> = {
   "/": {
-    h2: "Desk hours, RealScout, then the first drive — home FAQ",
+    h2: "Desk hours, RealScout, then the 89031 gate — home FAQ",
     items: [
       {
-        q: "Where does a same-day Summerlin-then-Henderson tour actually start?",
-        a: "At 9406 W Lake Mead Blvd, Suite 100. Summerlin first (10–15 minutes), Henderson second (25–35 minutes via I-215 east). Call or text (702) 222-1964. Office/GBP line is (702) 500-1942.",
+        q: "Where does a same-day Craig Ranch tour actually start?",
+        a: "At 9406 W Lake Mead Blvd, Suite 100. Drive 20–25 minutes via US-95 / I-15, walk 628 W. Craig Road, then enter the Sound Lane gate. Call or text (702) 222-1964. Office/GBP line is (702) 500-1942.",
       },
       {
         q: "Is the live MLS search on this homepage or on /listings?",
-        a: "RealScout widgets appear here and on /listings. Matching stays in RealScout; we sequence the drive from this desk. Agent ID QWdlbnQtMjI1MDUw. Call (702) 222-1964 after you save a list.",
+        a: "RealScout widgets appear here and on /listings. Matching stays in RealScout; we sequence Craig Ranch streets from this desk. Agent ID QWdlbnQtMjI1MDUw. Call (702) 222-1964 after you save a list.",
       },
       {
         q: "What hours is Suite 100 open for a walk-in?",
         a: "Monday–Friday 9am–6pm, Saturday 10am–4pm, Sunday by appointment. License S.0197614.LLC. Directions and Google Reviews are in the footer on every page.",
       },
       {
-        q: "Are buyer-broker fees posted as a number on the homepage?",
-        a: "No. Buyer representation is typically paid by the listing side when the listing agreement allows it. Seller commission is negotiated in writing. Call (702) 222-1964 for a cost walkthrough before you sign.",
+        q: "What should I bring to a Craig Ranch consult?",
+        a: "Photo ID, lender contact if you have one, and whether the brief is Jasmine Ranch, Centennial Crossing, or Seabreeze. We map commute minutes before the first tour. Email homes@heyberkshire.com for documents — do not send listing keys by unsecured email.",
       },
     ],
   },

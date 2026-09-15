@@ -50,6 +50,7 @@ export default function Navbar() {
 
   const mainNavLinks = [
     { href: "/", label: "Home", external: false },
+    { href: "/neighborhoods/craig-ranch", label: "Craig Ranch", external: false },
     { href: "/listings", label: "Homes for Sale", external: false },
     { href: "/neighborhoods", label: "Neighborhoods", external: false },
     { href: "/about", label: "About", external: false },

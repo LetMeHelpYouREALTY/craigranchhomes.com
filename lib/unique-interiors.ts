@@ -121,6 +121,18 @@ export const uniqueInteriors: Record<string, UniqueInteriorCopy> = {
     h3Body:
       "We start at the trailhead so you see the recreation campus, then drive listing streets. Call (702) 222-1964 to lock the southwest loop.",
   },
+  "/neighborhoods/craig-ranch": {
+    h2: "Confirm the Sound Lane gate list before the first 89031 showing",
+    body: "Craig Ranch is a gated Century Communities plat at Lone Mountain and Camino Al Norte in ZIP 89031. From 9406 W Lake Mead Blvd, Suite 100 the drive is 20–25 minutes via US-95 / I-15. We confirm the gate list before we leave so the first stop is 1494 Sound Lane, not a second freeway hop.",
+    facts: [
+      "Published resale bands on this page start at $415,000; mid-range $500,000–$650,000; larger-lot product from $738,700+",
+      "170-acre Craig Ranch Regional Park at 628 W. Craig Road sits next to the plat",
+      "Plan range often cited 1,519–2,947 sq ft; confirm the listing sheet the week you tour",
+    ],
+    h3: "Park acreage first, then the gated streets",
+    h3Body:
+      "We walk a ramada or field at the regional park so acreage is a fact, then drive Jasmine Ranch, Centennial Crossing, or Seabreeze by the brief. Call (702) 222-1964.",
+  },
   "/neighborhoods/north-las-vegas": {
     h2: "Aliante, Craig Road, and new villages grouped as a north tour",
     body: "North Las Vegas is 20–25 minutes via US-95 / I-15. Aliante recreation, Craig Road employment corridors, and new-construction villages are sequenced together from Suite 100.",
@@ -218,14 +230,14 @@ export const uniqueInteriors: Record<string, UniqueInteriorCopy> = {
       "See the lake and golf setting, then walk interiors. Call (702) 222-1964. Start at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
   },
   "/": {
-    h2: "Same-day Summerlin-then-Henderson routing from the Maps pin",
-    body: "Buyer and seller appointments start at Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100. We loop Summerlin first (10–15 minutes) and Henderson second (25–35 minutes) so you are not crisscrossing I-15.",
+    h2: "North loop from Lake Mead Blvd: 170-acre park, then the 89031 gate",
+    body: "Craig Ranch tours start at Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100. We drive 20–25 minutes via US-95 / I-15, walk a ramada at 628 W. Craig Road, then enter the gated streets off Sound Lane. Summerlin and Henderson are separate days unless the brief names them.",
     facts: [
       "GBP name, address, and office line (702) 500-1942 match this pin",
-      "Call or text (702) 222-1964 for a same-day showing window",
-      "Live MLS search sits on RealScout; we sequence the tour from this desk",
+      "Call or text (702) 222-1964 for a same-day Craig Ranch showing window",
+      "Live MLS search sits on RealScout; we sequence 89031 from this desk",
     ],
-    h3: "Office hours and how to start",
+    h3: "Office hours and how to start a Craig Ranch day",
     h3Body:
       "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. License S.0197614.LLC. Book a consult, then we drive. Directions and Google Reviews links are in the footer on every page.",
   },

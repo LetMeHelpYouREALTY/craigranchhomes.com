@@ -18,15 +18,15 @@ import { mediaUrl, photos } from "@/lib/media";
 
 export const metadata = pageMetadata({
   path: "/",
-  title: "Las Vegas Real Estate | Dr. Jan Duffy, REALTOR® | BHHS Nevada",
+  title: "Craig Ranch Homes for Sale | Dr. Jan Duffy | North Las Vegas",
   description:
-    "Buy or sell Las Vegas, Henderson, and Summerlin homes with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Live MLS search. Call (702) 222-1964.",
+    "Buy or sell Craig Ranch homes in North Las Vegas ZIP 89031 with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. 170-acre park, gated streets, live MLS search. Call (702) 222-1964.",
   keywords: [
-    "Las Vegas real estate",
-    "Henderson homes for sale",
-    "Summerlin realtor",
-    "Berkshire Hathaway HomeServices Nevada",
+    "Craig Ranch homes for sale",
+    "Craig Ranch North Las Vegas",
+    "Craig Ranch realtor",
     "Dr. Jan Duffy",
+    "Berkshire Hathaway HomeServices Nevada",
   ],
 });
 
@@ -93,34 +93,44 @@ export default async function Home() {
       <section className="py-16 md:py-20 bg-white" data-home-compare="/">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-            What we compare first: Summerlin villages vs Henderson parks
+            What we compare first: Jasmine Ranch, Seabreeze, and the 170-acre park
           </h2>
-          <HeadingPhoto path="/" level="h2" photo={photos.summerlin} priority />
+          <HeadingPhoto path="/" level="h2" photo={photos.aliante} priority />
           <p className="text-lg text-slate-600 mb-8 text-center">
-            Same west-valley start at 9406 W Lake Mead Blvd, Suite 100. We pick two contrasting
-            pins so you are not averaging the whole valley.
+            Same west-valley start at 9406 W Lake Mead Blvd, Suite 100. Craig Ranch is 20–25 minutes
+            via US-95 / I-15. We pick two interiors plus the park so you are not averaging ZIP 89031.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-xl border border-slate-200 p-6">
-              <h3 className="font-bold text-lg mb-2">Summerlin (10–15 min)</h3>
+              <h3 className="font-bold text-lg mb-2">Jasmine Ranch condos</h3>
               <p className="text-slate-600 text-sm">
-                Downtown Summerlin retail, The Trails, then Red Rock trailheads on the same clock.
+                Two-bedroom condos with pool and fitness. Published entry band from $415,000 on this
+                site.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-6">
-              <h3 className="font-bold text-lg mb-2">Henderson (25–35 min)</h3>
+              <h3 className="font-bold text-lg mb-2">Seabreeze larger lots</h3>
               <p className="text-slate-600 text-sm">
-                Green Valley street trees vs Inspirada rec campus. One east afternoon, not both
-                plus Summerlin.
+                Lots often cited up to about half an acre. Published larger-lot band from $738,700+.
+                Not the same clock as a condo row.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-6">
-              <h3 className="font-bold text-lg mb-2">Sun City Summerlin (10–15 min)</h3>
+              <h3 className="font-bold text-lg mb-2">628 W. Craig Road park</h3>
               <p className="text-slate-600 text-sm">
-                Four rec buildings if the brief is 55+. Anthem is a separate Henderson day.
+                About 170 acres: fields, 65,000 sq ft skate park, dog parks, courts. Walk a ramada
+                before the gate.
               </p>
             </div>
           </div>
+          <p className="text-center mt-8">
+            <Link
+              href="/neighborhoods/craig-ranch"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold transition-colors"
+            >
+              Open the Craig Ranch community guide
+            </Link>
+          </p>
           <p className="text-sm text-slate-600 mt-8 mb-6 text-center">
             {nap.brokerage} · {nap.fullAddress} · Call or text {ctaPhone.display}.
           </p>
@@ -132,28 +142,28 @@ export default async function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-3">
-              January 2026 valley snapshot — then we apply it to your ZIP
+              January 2026 Craig Ranch bands — then we apply them to the listing street
             </h2>
             <HeadingPhoto path="/" level="h2" photo={photos.sellers} className="max-w-4xl mx-auto" />
-            <p className="text-slate-400">Current data — updated {stats.lastUpdated}</p>
+            <p className="text-slate-400">Published ranges — updated {stats.lastUpdated}. Confirm live MLS.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
               {
-                value: stats.lasVegas.medianPriceFormatted,
-                label: "Median Price",
-                sub: stats.lasVegas.yearOverYearChange + " YoY",
+                value: "$415K+",
+                label: "Entry band",
+                sub: "Condos / smaller plans",
               },
-              { value: String(stats.lasVegas.daysOnMarket), label: "Avg Days on Market", sub: "" },
+              { value: "$500–$650K", label: "Mid-range band", sub: "" },
               {
-                value: stats.lasVegas.activeListings.toLocaleString("en-US"),
-                label: "Active Listings",
+                value: "$738K+",
+                label: "Larger-lot band",
                 sub: "",
               },
               {
-                value: String(stats.lasVegas.inventoryMonths),
-                label: "Months Inventory",
-                sub: "",
+                value: "20–25 min",
+                label: "From Suite 100",
+                sub: "US-95 / I-15",
               },
             ].map(({ value, label, sub }) => (
               <div key={label} className="text-center">
@@ -165,10 +175,10 @@ export default async function Home() {
           </div>
           <div className="text-center mt-8">
             <Link
-              href="/market-report"
+              href="/neighborhoods/craig-ranch"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold transition-colors"
             >
-              Full Las Vegas Market Report
+              Craig Ranch streets, park, and campuses
             </Link>
           </div>
         </div>

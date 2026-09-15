@@ -179,6 +179,24 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
     ],
   },
+  "/neighborhoods/craig-ranch": {
+    h3: "628 W. Craig Road park, then VA, then Aliante retail if the brief adds it",
+    body: "Craig Ranch rec is the regional park, not a copied Skye Center. We time the park and the gate on the same north afternoon. Aliante Casino retail is an add-on only when you ask for that clock.",
+    pins: [
+      {
+        name: "Craig Ranch Regional Park",
+        note: "About 170 acres at 628 W. Craig Road: fields, skate park, dog parks, courts, gardens. First rec pin from Suite 100 on a Craig Ranch day.",
+      },
+      {
+        name: "VA Southern Nevada Healthcare",
+        note: "Craig Road medical pin. Timed from the listing curb if that is the commute brief. Call (702) 222-1964.",
+      },
+      {
+        name: "Aliante Casino retail",
+        note: "Optional add-on on the same north freeway, not the default Craig Ranch stop. Pair only when the brief names Aliante.",
+      },
+    ],
+  },
   "/neighborhoods/north-las-vegas": {
     h3: "Aliante rec, Craig Road jobs, then the hospital — northwest pins",
     body: "North Las Vegas is not interchangeable with Summerlin retail. We time Aliante first when the brief is this city.",

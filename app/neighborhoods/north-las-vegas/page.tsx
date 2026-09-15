@@ -1,5 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
@@ -111,7 +112,9 @@ export default function NorthLasVegasPage() {
                 helps compare square footage, named campuses, and financing files on this north clock.
                 For new construction—where builders' sales agents represent the
                 builder, not you—BHHS provides free buyer representation that can save thousands in
-                upgrades and negotiations.
+                upgrades and negotiations. For the gated 89031 plat next to the 170-acre city park,
+                see the{" "}
+                <Link href="/neighborhoods/craig-ranch">Craig Ranch community guide</Link>.
               </p>
 
               <CommunityHighlights path="/neighborhoods/north-las-vegas" />

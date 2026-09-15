@@ -21,6 +21,28 @@ export type NeighborhoodParkCopy = {
 };
 
 export const neighborhoodParks: Record<string, NeighborhoodParkCopy> = {
+  "/neighborhoods/craig-ranch": {
+    h3: "170 acres at 628 W. Craig Road vs the 3.5-acre HOA park inside the gate",
+    body: "Craig Ranch rec is two parks, not one caption. The city regional park is about 170 acres. The HOA campus is a private 3.5-acre park plus about 5 miles of trails with exercise stations. Suite 100 is 20–25 minutes west.",
+    pins: [
+      {
+        name: "Craig Ranch Regional Park",
+        note: "About 170 acres at 628 W. Craig Road. Hours published 6 a.m.–11 p.m. First rec stop from 9406 W Lake Mead Blvd on a Craig Ranch day.",
+      },
+      {
+        name: "65,000-square-foot skate park",
+        note: "Skate hours published 7 a.m.–10 p.m. Four civic plazas and eight reservable ramadas on the same city campus.",
+      },
+      {
+        name: "HOA 3.5-acre park and 5 miles of trails",
+        note: "Private community park plus trail mileage with exercise stations inside the gate — a different pin from the regional park.",
+      },
+      {
+        name: "Six multiuse fields",
+        note: "Three grass and three turf fields, two lighted competition baseball fields, tennis, volleyball, basketball, three dog parks, community gardens. Call (702) 222-1964.",
+      },
+    ],
+  },
   "/neighborhoods/centennial-hills": {
     h3: "120-acre Centennial Hills Park vs Floyd Lamb lakes — two northwest rec acres",
     body: "We measure park acreage on the same US-95 afternoon as mountain-view streets. Suite 100 is 15–20 minutes west. Do not treat a listing photo as the park.",

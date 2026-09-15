@@ -51,6 +51,7 @@ const buyerSchema = {
 };
 
 const neighborhoods = [
+  { name: "Craig Ranch", price: "$415K+", description: "20–25 minutes via US-95 / I-15. 170-acre park at 628 W. Craig Road, then the Sound Lane gate." },
   { name: "Summerlin", price: "$625K", description: "10–15 minutes from Suite 100. Red Rock trailheads and Downtown Summerlin on the same west clock." },
   { name: "Henderson", price: "$485K", description: "25–35 minutes via I-215 east. Parks, trails, and named villages compared by square footage." },
   { name: "Green Valley", price: "$520K", description: "35-year street trees and The District. Green Valley High School commute mapped by address." },

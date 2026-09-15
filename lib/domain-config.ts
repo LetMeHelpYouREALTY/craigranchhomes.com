@@ -21,6 +21,48 @@ export interface DomainConfig {
 const REALSCOUT_AGENT_ID = "QWdlbnQtMjI1MDUw";
 
 export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
+  "craigranchhomes.com": {
+    domain: "craigranchhomes.com",
+    neighborhood: "Craig Ranch",
+    tagline: "Craig Ranch Homes for Sale",
+    description:
+      "Search Craig Ranch homes for sale in North Las Vegas ZIP 89031. Hyperlocal guidance from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
+    heroHeadline: "Craig Ranch Homes for Sale",
+    heroSubheadline:
+      "Gated 89031 streets next to a 170-acre city park. Dr. Jan Duffy sequences the gate list from Suite 100.",
+    keywords: [
+      "Craig Ranch homes for sale",
+      "Craig Ranch North Las Vegas",
+      "Craig Ranch realtor",
+      "ZIP 89031 homes",
+    ],
+    pageType: "community",
+    realscoutAgentId: REALSCOUT_AGENT_ID,
+    ctaBadge: "Craig Ranch Specialist",
+    ctaHeadline: "Search Craig Ranch Homes Today",
+    ctaSubheadline: "Gate list, park acreage, and named campuses — not a valley slogan.",
+  },
+  "www.craigranchhomes.com": {
+    domain: "www.craigranchhomes.com",
+    neighborhood: "Craig Ranch",
+    tagline: "Craig Ranch Homes for Sale",
+    description:
+      "Search Craig Ranch homes for sale in North Las Vegas ZIP 89031. Hyperlocal guidance from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
+    heroHeadline: "Craig Ranch Homes for Sale",
+    heroSubheadline:
+      "Gated 89031 streets next to a 170-acre city park. Dr. Jan Duffy sequences the gate list from Suite 100.",
+    keywords: [
+      "Craig Ranch homes for sale",
+      "Craig Ranch North Las Vegas",
+      "Craig Ranch realtor",
+      "ZIP 89031 homes",
+    ],
+    pageType: "community",
+    realscoutAgentId: REALSCOUT_AGENT_ID,
+    ctaBadge: "Craig Ranch Specialist",
+    ctaHeadline: "Search Craig Ranch Homes Today",
+    ctaSubheadline: "Gate list, park acreage, and named campuses — not a valley slogan.",
+  },
   "consenzaestates.com": { domain: "consenzaestates.com", neighborhood: "Consenza Estates", tagline: "Luxury Living in Consenza Estates", description: "Find your dream home in Consenza Estates, Las Vegas. Expert guidance from Dr. Jan Duffy.", heroHeadline: "Consenza Estates Homes for Sale", heroSubheadline: "Exclusive properties in one of Las Vegas' most sought-after communities.", keywords: ["Consenza Estates homes", "Las Vegas luxury real estate", "Consenza Estates Las Vegas"], pageType: "luxury", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Consenza Estates Expert", ctaHeadline: "Find Your Consenza Estates Home", ctaSubheadline: "I know every listing in this community. Let me match you with the right home." },
   "aliantehomesforsale.com": { domain: "aliantehomesforsale.com", neighborhood: "Aliante", tagline: "Aliante Homes for Sale", description: "Search Aliante homes for sale in North Las Vegas. Expert real estate guidance from Dr. Jan Duffy.", heroHeadline: "Aliante Homes for Sale", heroSubheadline: "Master-planned living in the heart of North Las Vegas.", keywords: ["Aliante homes for sale", "Aliante North Las Vegas", "Aliante real estate"], pageType: "community", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Aliante Specialist", ctaHeadline: "Search Aliante Homes Today", ctaSubheadline: "Get instant access to all Aliante listings with expert guidance." },
   "californiaforeverbroker.com": { domain: "californiaforeverbroker.com", neighborhood: "Las Vegas", tagline: "Relocating from California to Las Vegas", description: "California to Las Vegas relocation specialist. Find your Nevada dream home with Dr. Jan Duffy.", heroHeadline: "Leaving California for Las Vegas?", heroSubheadline: "No state income tax, lower cost of living, and year-round sunshine. Let me help you make the move.", keywords: ["California to Las Vegas move", "relocation Las Vegas", "Nevada real estate for Californians"], pageType: "lifestyle", realscoutAgentId: REALSCOUT_AGENT_ID, ctaBadge: "Relocation Expert", ctaHeadline: "Your Nevada Fresh Start Awaits", ctaSubheadline: "I've helped hundreds of California buyers make the move. Let's talk." },
@@ -56,17 +98,23 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
 
 // Default config for any domain not specifically listed
 export const DEFAULT_CONFIG: DomainConfig = {
-  domain: "default",
-  neighborhood: "Las Vegas",
-  tagline: "Las Vegas Homes for Sale",
-  description: "Search Las Vegas homes for sale. Expert real estate guidance from Dr. Jan Duffy, BHHS Nevada Properties.",
-  heroHeadline: "Las Vegas Homes for Sale",
-  heroSubheadline: "Expert real estate guidance from Dr. Jan Duffy — 30+ years, 500+ families helped.",
-  keywords: ["Las Vegas homes for sale", "Las Vegas real estate", "Dr Jan Duffy"],
-  pageType: "search",
+  domain: "craigranchhomes.com",
+  neighborhood: "Craig Ranch",
+  tagline: "Craig Ranch Homes for Sale",
+  description:
+    "Search Craig Ranch homes for sale in North Las Vegas ZIP 89031. Expert real estate guidance from Dr. Jan Duffy, BHHS Nevada Properties.",
+  heroHeadline: "Craig Ranch Homes for Sale",
+  heroSubheadline:
+    "Hyperlocal 89031 service from Dr. Jan Duffy — gate list, 170-acre park, named campuses.",
+  keywords: [
+    "Craig Ranch homes for sale",
+    "Craig Ranch North Las Vegas",
+    "Dr Jan Duffy",
+  ],
+  pageType: "community",
   realscoutAgentId: REALSCOUT_AGENT_ID,
-  ctaBadge: "Las Vegas Expert",
-  ctaHeadline: "Find Your Las Vegas Home",
+  ctaBadge: "Craig Ranch Specialist",
+  ctaHeadline: "Find Your Craig Ranch Home",
   ctaSubheadline: "Call or text Dr. Jan at 702-222-1964 — I answer my own phone.",
 };
 

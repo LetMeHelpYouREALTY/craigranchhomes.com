@@ -34,9 +34,10 @@ const forbidden = [
 describe("neighborhoodParks", () => {
   const paths = Object.keys(neighborhoodParks);
 
-  it("covers Centennial Hills and Mountains Edge", () => {
+  it("covers Craig Ranch, Centennial Hills, and Mountains Edge", () => {
     expect(paths.sort()).toEqual([
       "/neighborhoods/centennial-hills",
+      "/neighborhoods/craig-ranch",
       "/neighborhoods/mountains-edge",
     ]);
   });
@@ -90,7 +91,7 @@ describe("neighborhoodParks", () => {
     expect(collisions).toEqual([]);
   });
 
-  it("keeps park stills unique across the two paths", () => {
+  it("keeps park stills unique across park paths", () => {
     const srcs = paths.map((path) => parkPhotoForPath(path).src);
     expect(new Set(srcs).size).toBe(srcs.length);
   });
