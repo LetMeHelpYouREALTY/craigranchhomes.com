@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/the-ridges",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in The Ridges?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, The Ridges median home price is $2.5 million. Properties range from $1.5 million for smaller homes to over $15 million for custom estates with Strip and Red Rock views.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How exclusive is The Ridges community?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security, only 900 home sites across six distinct villages, and strict architectural guidelines ensuring estate-quality construction throughout.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What celebrities and executives live in The Ridges?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "While privacy prevents naming residents, The Ridges is known for attracting professional athletes, entertainment executives, casino industry leaders, and high-net-worth individuals seeking privacy and luxury in Las Vegas.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why use Berkshire Hathaway HomeServices for luxury home purchases?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS represents a brand synonymous with trust and discretion—essential in luxury transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand high-end buyer requirements, and provide the confidentiality luxury clients expect.",
-      },
-    },
-  ],
-};
 
 export default function TheRidgesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -277,19 +233,8 @@ export default function TheRidgesPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/the-ridges" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About The Ridges
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in The Ridges?", a: "As of January 2026, The Ridges median home price is $2.5 million. Properties range from $1.5 million for smaller homes to over $15 million for custom estates with Strip and Red Rock views." },
-              { q: "How exclusive is The Ridges community?", a: "The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security, only 900 home sites across six distinct villages, and strict architectural guidelines ensuring estate-quality construction throughout." },
-              { q: "What celebrities and executives live in The Ridges?", a: "While privacy prevents naming residents, The Ridges is known for attracting professional athletes, entertainment executives, casino industry leaders, and high-net-worth individuals seeking privacy and luxury in Las Vegas." },
-              { q: "Why use Berkshire Hathaway HomeServices for luxury home purchases?", a: "BHHS represents a brand synonymous with trust and discretion—essential in luxury transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand high-end buyer requirements, and provide the confidentiality luxury clients expect." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

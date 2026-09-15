@@ -443,3 +443,22 @@ export function commutePhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods")) return photos.consultation;
   return photos.market;
 }
+
+/** Sixth still for neighborhood FAQ H2s — distinct from H1/H2/H3/campus/commute. */
+export function faqPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/neighborhoods/summerlin")) return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/neighborhoods/the-ridges")) return photos.greenValley;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.newConstruction;
+  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.summerlinTrail;
+  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.buyers;
+  if (path.startsWith("/neighborhoods/green-valley"))
+    return photos.fiftyFiveFitness;
+  if (path.startsWith("/neighborhoods/henderson"))
+    return photos.sunCitySummerlinRec;
+  if (path.startsWith("/neighborhoods/inspirada")) return photos.ridges;
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.sellers;
+  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.skyeCanyon;
+  if (path.startsWith("/neighborhoods")) return photos.lakeLasVegas;
+  return photos.officeExterior;
+}

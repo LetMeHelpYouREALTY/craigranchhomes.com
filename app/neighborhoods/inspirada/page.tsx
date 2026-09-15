@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/inspirada",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Inspirada?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with mature yards.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What amenities does Inspirada offer residents?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Inspirada features resort-style pools with water features, miles of walking trails, multiple parks, sports courts, and community gathering spaces. The HOA maintains these amenities to resort standards, creating a vacation-like atmosphere.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which campuses serve Inspirada?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Inspirada is served by Henderson-area campuses, including facilities built with the master plan. Compare drive times, HOA amenities, trails, and pools rather than ratings.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Inspirada a good investment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned communities. The combination of resort amenities, Henderson location, and continued development suggests ongoing demand and value growth.",
-      },
-    },
-  ],
-};
 
 export default function InspiradaPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -266,19 +222,8 @@ export default function InspiradaPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/inspirada" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Inspirada
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in Inspirada?", a: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with mature yards." },
-              { q: "What amenities does Inspirada offer residents?", a: "Inspirada features resort-style pools with water features, miles of walking trails, multiple parks, sports courts, and community gathering spaces. The HOA maintains these amenities to resort standards, creating a vacation-like atmosphere." },
-              { q: "Which campuses serve Inspirada?", a: "Inspirada is served by Henderson-area campuses, including facilities built with the master plan. Compare drive times, HOA amenities, trails, and pools rather than ratings." },
-              { q: "Is Inspirada a good investment?", a: "Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned communities. The combination of resort amenities, Henderson location, and continued development suggests ongoing demand and value growth." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

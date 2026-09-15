@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/skye-canyon",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Skye Canyon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year. New construction ranges from $450,000 to $800,000, while resales offer additional options across all price points.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What amenities does Skye Canyon offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools, fitness center, sports courts, and event spaces. The community also offers miles of trails, parks, and is adjacent to Floyd Lamb Park.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What recreation and schools are near Skye Canyon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Skye Canyon includes new school campuses, sports courts, Skye Center events, miles of trails, and adjacency to Floyd Lamb Park. Ask Dr. Jan Duffy which villages match your commute and square-footage needs.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS provides free buyer representation on new construction purchases—the builder pays our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure your interests are protected when builder sales agents work for the builder.",
-      },
-    },
-  ],
-};
 
 export default function SkyeCanyonPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -270,19 +226,8 @@ export default function SkyeCanyonPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/skye-canyon" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Skye Canyon
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in Skye Canyon?", a: "As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year. New construction ranges from $450,000 to $800,000, while resales offer additional options across all price points." },
-              { q: "What amenities does Skye Canyon offer?", a: "Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools, fitness center, sports courts, and event spaces. The community also offers miles of trails, parks, and is adjacent to Floyd Lamb Park." },
-              { q: "What recreation and schools are near Skye Canyon?", a: "Skye Canyon includes new school campuses, sports courts, Skye Center events, miles of trails, and adjacency to Floyd Lamb Park. Call (702) 222-1964 for current listings." },
-              { q: "Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?", a: "BHHS provides free buyer representation on new construction purchases—the builder pays our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure your interests are protected when builder sales agents work for the builder." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

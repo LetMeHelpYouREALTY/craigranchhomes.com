@@ -8,9 +8,9 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-import FaqAccordion from "@/components/sections/FaqAccordion";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods",
@@ -234,26 +234,8 @@ export default function NeighborhoodsPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <NamedCampuses path="/neighborhoods" />
             <NeighborhoodCommute path="/neighborhoods" />
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Neighborhood FAQ
-            </h2>
-            <FaqAccordion
-              items={[
-                {
-                  q: "Which Las Vegas neighborhoods should I compare first?",
-                  a: "Start with commute, HOA dues, and home size. Summerlin median is about $625,000 with Red Rock trail access. Henderson is about $485,000 with 15–25 minute Strip drives. North Las Vegas is about $385,000 with newer construction.",
-                },
-                {
-                  q: "Can Dr. Jan Duffy tour more than one village in a day?",
-                  a: "Yes. Call (702) 222-1964 to book a clustered tour. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
-                },
-                {
-                  q: "Do these neighborhood pages use live MLS data?",
-                  a: "Each neighborhood page includes a RealScout search widget fed by live MLS. Listings update throughout the day; confirm status with Dr. Jan Duffy before writing an offer.",
-                },
-              ]}
-            />
           </section>
+          <NeighborhoodFaqs path="/neighborhoods" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

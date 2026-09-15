@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/north-las-vegas",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in North Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, North Las Vegas' median home price is $385,000—the most affordable in the Las Vegas Valley. First-time buyers can find homes starting in the $320,000s, while new construction ranges from $380,000 to $550,000.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is North Las Vegas a good area to buy a home?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "North Las Vegas has transformed dramatically with new master-planned communities, improved infrastructure, and major employment centers. It offers excellent value for first-time buyers and investors seeking positive cash flow on rental properties.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What new construction is available in North Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Major builders including Lennar, KB Home, Richmond American, and Century Communities offer new construction in North Las Vegas. Communities like Aliante, Tule Springs, and Valley Vista feature modern designs with energy-efficient features.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why choose Berkshire Hathaway HomeServices for North Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS provides expert guidance for first-time buyers navigating the purchase process, plus free representation on new construction purchases. Dr. Jan Duffy helps clients find value while avoiding common pitfalls in emerging neighborhoods.",
-      },
-    },
-  ],
-};
 
 export default function NorthLasVegasPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -267,19 +223,8 @@ export default function NorthLasVegasPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/north-las-vegas" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About North Las Vegas
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in North Las Vegas?", a: "As of January 2026, North Las Vegas' median home price is $385,000—the most affordable in the Las Vegas Valley. First-time buyers can find homes starting in the $320,000s, while new construction ranges from $380,000 to $550,000." },
-              { q: "Is North Las Vegas a good area to buy a home?", a: "North Las Vegas has transformed dramatically with new master-planned communities, improved infrastructure, and major employment centers. It offers excellent value for first-time buyers and investors seeking positive cash flow on rental properties." },
-              { q: "What new construction is available in North Las Vegas?", a: "Major builders including Lennar, KB Home, Richmond American, and Century Communities offer new construction in North Las Vegas. Communities like Aliante, Tule Springs, and Valley Vista feature modern designs with energy-efficient features." },
-              { q: "Why choose Berkshire Hathaway HomeServices for North Las Vegas?", a: "BHHS provides expert guidance for first-time buyers navigating the purchase process, plus free representation on new construction purchases. Dr. Jan Duffy helps clients find value while avoiding common pitfalls in emerging neighborhoods." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

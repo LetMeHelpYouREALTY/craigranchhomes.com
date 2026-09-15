@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/mountains-edge",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Mountains Edge?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Mountains Edge's median home price is $475,000, up 4.5% year-over-year. Prices range from $380,000 for smaller homes to over $750,000 for larger properties with mountain and Strip views.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes Mountains Edge different from other Las Vegas communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Mountains Edge offers the largest park in the Las Vegas Valley—the 120-acre Exploration Peak Park with stunning views—plus master-planned amenities at prices below Summerlin or Henderson. It's ideal for buyers seeking value without sacrificing lifestyle.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How is the commute from Mountains Edge?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Mountains Edge provides easy access to I-215 and I-15, making commutes to the Strip (15-20 minutes), airport (20 minutes), and Henderson (25 minutes) straightforward. The southwest location offers multiple route options.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is new construction available in Mountains Edge?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, several builders offer new construction in Mountains Edge's expanding areas. BHHS provides free buyer representation on new construction purchases, helping buyers navigate builder contracts and negotiate upgrades.",
-      },
-    },
-  ],
-};
 
 export default function MountainsEdgePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -264,19 +220,8 @@ export default function MountainsEdgePage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/mountains-edge" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Mountains Edge
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in Mountains Edge?", a: "As of January 2026, Mountains Edge's median home price is $475,000, up 4.5% year-over-year. Prices range from $380,000 for smaller homes to over $750,000 for larger properties with mountain and Strip views." },
-              { q: "What makes Mountains Edge different from other Las Vegas communities?", a: "Mountains Edge offers the largest park in the Las Vegas Valley—the 120-acre Exploration Peak Park with stunning views—plus master-planned amenities at prices below Summerlin or Henderson. It's ideal for buyers seeking value without sacrificing lifestyle." },
-              { q: "How is the commute from Mountains Edge?", a: "Mountains Edge provides easy access to I-215 and I-15, making commutes to the Strip (15-20 minutes), airport (20 minutes), and Henderson (25 minutes) straightforward. The southwest location offers multiple route options." },
-              { q: "Is new construction available in Mountains Edge?", a: "Yes, several builders offer new construction in Mountains Edge's expanding areas. BHHS provides free buyer representation on new construction purchases, helping buyers navigate builder contracts and negotiate upgrades." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

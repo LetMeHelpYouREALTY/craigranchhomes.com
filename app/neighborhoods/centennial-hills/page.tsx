@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/centennial-hills",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Centennial Hills?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Centennial Hills' median home price is $495,000, up 4.8% year-over-year. Prices range from $380,000 for smaller homes to over $900,000 for larger properties with mountain views.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What amenities and commute times define Centennial Hills?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Centennial Hills includes Centennial Hills Park, shopping at Centennial Center, and named campuses such as Arbor View High School. Typical Strip commute is 20–25 minutes via US-95.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How far is Centennial Hills from the Las Vegas Strip?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access, mountain views on many streets, and retail at Centennial Center away from the tourist corridor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What shopping and amenities are near Centennial Hills?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Centennial Center provides extensive shopping, dining, and entertainment including Target, Costco, and numerous restaurants. Downtown Summerlin is also easily accessible for additional retail and entertainment options.",
-      },
-    },
-  ],
-};
 
 export default function CentennialHillsPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -266,19 +222,8 @@ export default function CentennialHillsPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/centennial-hills" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Centennial Hills
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in Centennial Hills?", a: "As of January 2026, Centennial Hills' median home price is $495,000, up 4.8% year-over-year. Prices range from $380,000 for smaller homes to over $900,000 for larger properties with mountain views." },
-              { q: "What amenities and commute times define Centennial Hills?", a: "Centennial Hills includes Centennial Hills Park, shopping at Centennial Center, and named campuses such as Arbor View High School. Typical Strip commute is 20–25 minutes via US-95." },
-              { q: "How far is Centennial Hills from the Las Vegas Strip?", a: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access, mountain views on many streets, and retail at Centennial Center away from the tourist corridor." },
-              { q: "What shopping and amenities are near Centennial Hills?", a: "Centennial Center provides extensive shopping, dining, and entertainment including Target, Costco, and numerous restaurants. Downtown Summerlin is also easily accessible for additional retail and entertainment options." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

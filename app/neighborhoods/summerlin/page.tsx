@@ -9,14 +9,12 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
-import { nap } from "@/lib/contact";
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
-  generateFAQSchema,
   generateNeighborhoodSchema,
   combineSchemas,
 } from "@/lib/schema";
@@ -42,31 +40,7 @@ const breadcrumbs = [
   { name: "Summerlin", url: "/neighborhoods/summerlin" },
 ];
 
-// FAQ data for schema
-const summerlinFaqs = [
-  {
-    question: "How long is a Summerlin village tour from 9406 W Lake Mead Blvd?",
-    answer:
-      "Most Summerlin streets are 10–15 minutes from Suite 100. We typically start in The Trails or Pueblo, time Palo Verde High School on Pavilion Center Drive, then add Red Rock Canyon Scenic Drive on the west end of the same loop. Call (702) 222-1964.",
-  },
-  {
-    question: "What is the current median home price in Summerlin?",
-    answer:
-      "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million.",
-  },
-  {
-    question: "How long do homes stay on the market in Summerlin?",
-    answer:
-      "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week.",
-  },
-  {
-    question: "What makes a Summerlin loop different from a Henderson day?",
-    answer:
-      "Summerlin is a west-valley loop from the GBP office pin: 150+ parks, 150+ miles of trails, Palo Verde High School, and Red Rock trailheads. Henderson is a 25–35 minute I-215 east run with Green Valley High School or Coronado High School timed by street. Call (702) 222-1964 to book one afternoon, not two slogans.",
-  },
-];
-
-// Combined page schemas
+// Combined page schemas (FAQ JSON-LD lives in NeighborhoodFaqs)
 const pageSchemas = combineSchemas(
   generateBreadcrumbSchema(breadcrumbs),
   generateNeighborhoodSchema({
@@ -77,14 +51,13 @@ const pageSchemas = combineSchemas(
     latitude: 36.1672,
     longitude: -115.331,
     containedIn: "Las Vegas",
-  }),
-  generateFAQSchema(summerlinFaqs)
+  })
 );
 
 export default function SummerlinPage() {
   return (
     <>
-      {/* Combined JSON-LD Schema: Breadcrumb + Place + FAQ */}
+      {/* Combined JSON-LD Schema: Breadcrumb + Place */}
       <SchemaScript schema={pageSchemas} id="summerlin-schema" />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -259,18 +232,7 @@ export default function SummerlinPage() {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Summerlin Real Estate
-            </h2>
-                        <FaqAccordion items={[
-              { q: "How long is a Summerlin village tour from 9406 W Lake Mead Blvd?", a: "Most Summerlin streets are 10–15 minutes from Suite 100. We typically start in The Trails or Pueblo, time Palo Verde High School on Pavilion Center Drive, then add Red Rock Canyon Scenic Drive on the west end of the same loop. Call (702) 222-1964." },
-              { q: "What is the current median home price in Summerlin?", a: "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million." },
-              { q: "How long do homes stay on the market in Summerlin?", a: "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week." },
-              { q: "What makes a Summerlin loop different from a Henderson day?", a: "Summerlin is a west-valley loop from the GBP office pin: 150+ parks, 150+ miles of trails, Palo Verde High School, and Red Rock trailheads. Henderson is a 25–35 minute I-215 east run with Green Valley High School or Coronado High School timed by street. Call (702) 222-1964 to book one afternoon, not two slogans." },
-            ]} />
-          </section>
+          <NeighborhoodFaqs path="/neighborhoods/summerlin" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

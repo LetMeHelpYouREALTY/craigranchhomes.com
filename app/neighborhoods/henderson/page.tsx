@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/henderson",
@@ -40,44 +38,6 @@ const neighborhoodSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Henderson?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Henderson's median home price is $485,000, up 5.1% from last year. Prices range from $350,000 for condos to over $2 million in luxury communities like MacDonald Highlands.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What amenities and commute times define Henderson?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Henderson is Nevada's second-largest city, with 60+ parks, recreation centers, and 15–25 minute commutes to the Las Vegas Strip depending on the village. Green Valley, Inspirada, MacDonald Highlands, and Lake Las Vegas each offer distinct HOA amenities and price points.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What neighborhoods define Henderson?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Henderson neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why choose Berkshire Hathaway HomeServices for Henderson real estate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy know HOA documents, commute times, and recent comps in Green Valley, Inspirada, and Anthem. The Berkshire Hathaway name provides trust and resources that benefit both buyers and sellers.",
-      },
-    },
-  ],
-};
 
 export default function HendersonPage() {
   return (
@@ -85,10 +45,6 @@ export default function HendersonPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(neighborhoodSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
@@ -276,19 +232,8 @@ export default function HendersonPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/henderson" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Henderson Real Estate
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in Henderson?", a: "As of January 2026, Henderson's median home price is $485,000, up 5.1% from last year. Prices range from $350,000 for condos to over $2 million in luxury communities like MacDonald Highlands." },
-              { q: "What amenities and commute times define Henderson?", a: "Henderson is Nevada's second-largest city, with 60+ parks, recreation centers, and 15–25 minute commutes to the Strip depending on the village. Call Dr. Jan Duffy at (702) 222-1964 for current inventory by community." },
-              { q: "What neighborhoods define Henderson?", a: "Henderson neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses), and Lake Las Vegas (waterfront living). Each offers distinct amenities and commute times." },
-              { q: "Why choose Berkshire Hathaway HomeServices for Henderson real estate?", a: "BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy know HOA documents, commute times, and recent comps in Green Valley, Inspirada, and Anthem. The Berkshire Hathaway name provides trust and resources that benefit both buyers and sellers." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

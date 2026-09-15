@@ -9,10 +9,8 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-
-import { nap } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/green-valley",
@@ -28,52 +26,10 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Green Valley?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for luxury properties.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long do homes stay on the market in Green Valley?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Green Valley homes average 26 days on market. Properties near The District at Green Valley Ranch and those with upgraded features often sell faster, sometimes within the first two weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes Green Valley different from newer Henderson communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Green Valley, founded in 1988, offers mature trees, larger lots, golf, The District shopping, and named campuses such as Green Valley High School. Typical Strip commute is 15–25 minutes.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Green Valley a good investment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Green Valley has shown consistent appreciation due to its Henderson location, parks, shopping at The District, and named campuses such as Green Valley High School. BHHS agents can provide detailed market analysis.",
-      },
-    },
-  ],
-};
 
 export default function GreenValleyPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -241,19 +197,8 @@ export default function GreenValleyPage() {
               </cite>
             </div>
           </section>
+          <NeighborhoodFaqs path="/neighborhoods/green-valley" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Green Valley Real Estate
-            </h2>
-                        <FaqAccordion items={[
-              { q: "What is the current median home price in Green Valley?", a: "As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for luxury properties." },
-              { q: "How long do homes stay on the market in Green Valley?", a: "Green Valley homes average 26 days on market. Properties near The District at Green Valley Ranch and those with upgraded features often sell faster, sometimes within the first two weeks." },
-              { q: "What makes Green Valley different from newer Henderson communities?", a: "Green Valley, founded in 1988, offers mature trees, larger lots, golf, The District shopping, and named campuses such as Green Valley High School. Typical Strip commute is 15–25 minutes." },
-              { q: "Is Green Valley a good investment?", a: "Green Valley has shown consistent appreciation due to its Henderson location, parks, shopping at The District, and named campuses such as Green Valley High School. BHHS agents can provide detailed market analysis." },
-            ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
