@@ -14,7 +14,12 @@ export default function NamedCampuses({ path }: NamedCampusesProps) {
   return (
     <div className="not-prose mt-12 mb-6" data-named-campuses={path}>
       <h3 className="text-2xl font-bold text-slate-900 mb-6">{copy.h3}</h3>
-      <HeadingPhoto path={path} level="h3" photo={campusPhotoForPath(path)} />
+      <HeadingPhoto
+        path={path}
+        level="h3"
+        photo={campusPhotoForPath(path)}
+        priority
+      />
       <div className="bg-white border border-slate-200 rounded-xl p-6">
         <p className="text-slate-700 mb-4">{copy.body}</p>
         <ul className="text-slate-600 text-sm space-y-2 mb-4">

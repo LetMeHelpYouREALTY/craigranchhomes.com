@@ -410,6 +410,17 @@ export function h3PhotoForPath(path: string): SitePhoto {
 
 /** Fourth still for named-campus H3s — must stay distinct from H1/H2/unique-interior H3. */
 export function campusPhotoForPath(path: string): SitePhoto {
-  if (path.startsWith("/neighborhoods")) return photos.office;
+  if (path.startsWith("/neighborhoods/summerlin")) return photos.buyers;
+  if (path.startsWith("/neighborhoods/the-ridges")) return photos.consultation;
+  if (path.startsWith("/neighborhoods/southern-highlands")) return photos.sellers;
+  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.centennial;
+  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.office;
+  if (path.startsWith("/neighborhoods/green-valley")) return photos.inspirada;
+  if (path.startsWith("/neighborhoods/henderson")) return photos.lakeLasVegas;
+  if (path.startsWith("/neighborhoods/inspirada")) return photos.sunCityAnthemGolf;
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.market;
+  if (path.startsWith("/neighborhoods/mountains-edge"))
+    return photos.southernHighlands;
+  if (path.startsWith("/neighborhoods")) return photos.agent;
   return photos.officeExterior;
 }

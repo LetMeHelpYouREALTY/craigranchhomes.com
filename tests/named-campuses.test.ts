@@ -63,14 +63,15 @@ describe("namedCampuses", () => {
       const h2 = h2PhotoForPath(path).src;
       const h3 = h3PhotoForPath(path).src;
       const campus = campusPhotoForPath(path).src;
-      if (
-        campus === h1 ||
-        campus === h2 ||
-        campus === h3
-      ) {
+      if (campus === h1 || campus === h2 || campus === h3) {
         collisions.push(`${path}: campus=${campus} H1=${h1} H2=${h2} H3=${h3}`);
       }
     }
     expect(collisions).toEqual([]);
+  });
+
+  it("keeps campus stills unique across neighborhood paths", () => {
+    const srcs = paths.map((path) => campusPhotoForPath(path).src);
+    expect(new Set(srcs).size).toBe(srcs.length);
   });
 });
