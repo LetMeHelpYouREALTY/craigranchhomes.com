@@ -8,7 +8,6 @@ import {
   Users, 
   Home, 
   TrendingUp, 
-  CheckCircle, 
   MapPin,
   Shield,
   Star,
@@ -22,6 +21,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
 import { mediaUrl, photos } from "@/lib/media";
@@ -79,33 +79,6 @@ const personSchema = {
     "California relocation",
   ],
 };
-
-const specializations = [
-  {
-    title: "Residential Home Sales",
-    description: "Single-family homes, condos, and townhomes throughout Las Vegas and Henderson",
-  },
-  {
-    title: "Luxury Properties ($1M+)",
-    description: "The Ridges, MacDonald Highlands, Southern Highlands, and exclusive communities",
-  },
-  {
-    title: "New Construction",
-    description: "Free buyer representation with Toll Brothers, Lennar, Century Communities, and more",
-  },
-  {
-    title: "Investment Properties",
-    description: "Rental properties, fix-and-flip opportunities, and portfolio building",
-  },
-  {
-    title: "55+ Active Adult Communities",
-    description: "Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas expertise",
-  },
-  {
-    title: "California Relocation",
-    description: "Helping California buyers transition to Nevada's tax advantages and lower costs",
-  },
-];
 
 const areasServed = [
   "Las Vegas",
@@ -314,28 +287,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Specializations Section */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-              Areas of Specialization
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy brings specialized expertise across multiple real estate categories. 
-              Whether you're a first-time buyer, luxury home seeker, investor, or retiree looking 
-              for the perfect 55+ community, you'll receive tailored guidance for your specific needs.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {specializations.map((spec) => (
-                <div key={spec.title} className="bg-white rounded-lg p-6 border border-slate-200">
-                  <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    {spec.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm">{spec.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <LeftoverBand path="/about" />
 
           {/* Why BHHS Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">

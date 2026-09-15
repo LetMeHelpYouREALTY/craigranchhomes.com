@@ -7,6 +7,7 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqHub from "@/components/sections/FaqHub";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import { faqHubAllItems } from "@/lib/faq-hub";
 import SchemaScript from "@/components/SchemaScript";
 import {
@@ -80,15 +81,7 @@ export default function FAQPage() {
 
           <FaqHub />
 
-          {/* CTA */}
-          <section className="mt-16 text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Have Questions?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Dr. Jan Duffy is happy to answer any questions about Las Vegas real estate or working
-              with Berkshire Hathaway HomeServices.
-            </p>
-            <CtaActions variant="onDark" />
-          </section>
+          <LeftoverBand path="/faq" />
         </div>
 
         {/* Last Updated */}

@@ -1,5 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Star } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -10,6 +10,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
 
@@ -80,13 +81,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Info & Map */}
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h2>
-<p className="text-slate-700 mb-8">
-                Whether you're buying your first home, selling a luxury property, or exploring
-                investment opportunities, I'm here to provide expert guidance backed by the trusted{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> brand. Serving Las Vegas since 2008 
-                with $127M+ in closed transactions.
-              </p>
+              <LeftoverBand path="/contact" />
 
               {/* NAP Information */}
               <div className="space-y-4 mb-8">
@@ -206,7 +201,7 @@ export default function ContactPage() {
               <div id="schedule" className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-blue-600 text-white p-6 text-center">
                   <Calendar className="h-10 w-10 mx-auto mb-3" />
-                  <h2 className="text-2xl font-bold mb-2">Schedule an Appointment</h2>
+                  <h2 className="text-2xl font-bold mb-2">Book Calendly for Suite 100, a phone consult, or a showing</h2>
                   <p className="text-blue-100">
                     Book a time that works for you—phone consultation, property showing, 
                     or in-person meeting at our office.
@@ -250,34 +245,7 @@ export default function ContactPage() {
             </div>
           </section>
 
-          {/* Quick Contact Options */}
-          <section className="max-w-4xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Prefer to Reach Out Directly?
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <a
-                href="tel:+17022221964"
-                className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-xl transition-colors"
-              >
-                <Phone className="h-8 w-8 mr-4" />
-                <div className="text-left">
-                  <div className="font-bold text-lg">Call Now</div>
-                  <div className="text-blue-100">(702) 222-1964</div>
-                </div>
-              </a>
-              <a
-                href="mailto:homes@heyberkshire.com"
-                className="flex items-center justify-center bg-slate-700 hover:bg-slate-800 text-white p-6 rounded-xl transition-colors"
-              >
-                <Mail className="h-8 w-8 mr-4" />
-                <div className="text-left">
-                  <div className="font-bold text-lg">Send Email</div>
-                  <div className="text-slate-300">Homes@HeyBerkshire.com</div>
-                </div>
-              </a>
-            </div>
-          </section>
+          <LeftoverBand path="/contact" slot={1} />
 
           <SupportFaqs path="/contact" />
         </div>

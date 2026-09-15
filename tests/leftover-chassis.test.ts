@@ -93,8 +93,15 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/about/page.tsx",
-    needles: ["commute minutes from Suite 100"],
-    banned: ["lifestyle offerings", "Areas Served by BHHS Nevada Properties"],
+    needles: [
+      "commute minutes from Suite 100",
+      '<LeftoverBand path="/about" />',
+    ],
+    banned: [
+      "lifestyle offerings",
+      "Areas Served by BHHS Nevada Properties",
+      ">Areas of Specialization<",
+    ],
   },
   {
     file: "app/buyers/california-relocator/page.tsx",
@@ -198,6 +205,72 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       ">Best Neighborhoods for First-Time Buyers<",
       "new schools",
     ],
+  },
+  {
+    file: "app/contact/page.tsx",
+    needles: [
+      '<LeftoverBand path="/contact" />',
+      '<LeftoverBand path="/contact" slot={1} />',
+    ],
+    banned: [">Get In Touch<", ">Prefer to Reach Out Directly?<"],
+  },
+  {
+    file: "app/market-insights/page.tsx",
+    needles: [
+      '<LeftoverBand path="/market-insights" />',
+      '<LeftoverBand path="/market-insights" slot={1} />',
+      '<LeftoverBand path="/market-insights" slot={2} />',
+      '<LeftoverBand path="/market-insights" slot={3} />',
+      '<LeftoverBand path="/market-insights" slot={4} />',
+      '<LeftoverBand path="/market-insights" slot={5} />',
+    ],
+    banned: [
+      ">5 Forces Driving Las Vegas Real Estate in 2026<",
+      ">Las Vegas Tech Transformation<",
+      ">California Migration Analysis<",
+      ">Economic Diversification<",
+      ">2026 Neighborhood Outlook<",
+      ">What This Means for You<",
+      "safety rankings",
+    ],
+  },
+  {
+    file: "app/market-update/page.tsx",
+    needles: [
+      '<LeftoverBand path="/market-update" />',
+      '<LeftoverBand path="/market-update" slot={1} />',
+      '<LeftoverBand path="/market-update" slot={2} />',
+      '<LeftoverBand path="/market-update" slot={3} />',
+      '<LeftoverBand path="/market-update" slot={4} />',
+    ],
+    banned: [
+      ">5 Key Statistics This Week<",
+      ">Notable Sale of the Week<",
+      ">Dr. Jan Duffy's Expert Analysis<",
+      ">What This Means for You<",
+      ">This Week by Area<",
+    ],
+  },
+  {
+    file: "app/neighborhoods/page.tsx",
+    needles: [
+      '<LeftoverBand path="/neighborhoods" />',
+      '<LeftoverBand path="/neighborhoods" slot={1} />',
+    ],
+    banned: [
+      ">Compare Valley Neighborhoods<",
+      ">Neighborhood Services<",
+    ],
+  },
+  {
+    file: "app/buyers/page.tsx",
+    needles: ['<LeftoverBand path="/buyers" />'],
+    banned: [">Las Vegas Buyer Market Statistics | January 2026<"],
+  },
+  {
+    file: "app/faq/page.tsx",
+    needles: ['<LeftoverBand path="/faq" />'],
+    banned: [">Still Have Questions?<"],
   },
 ];
 

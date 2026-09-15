@@ -695,6 +695,28 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path.startsWith("/buyers/first-time-buyers") && slot === 1) {
     return photos.summerlin;
   }
+  if (path === "/contact" && slot === 0) return photos.homeHero;
+  if (path === "/contact" && slot === 1) return photos.henderson;
+  if (path.startsWith("/market-insights") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/market-insights") && slot === 1) {
+    return photos.officeExterior;
+  }
+  if (path.startsWith("/market-insights") && slot === 2) return photos.summerlin;
+  if (path.startsWith("/market-insights") && slot === 3) return photos.buyers;
+  if (path.startsWith("/market-insights") && slot === 4) return photos.sellers;
+  if (path.startsWith("/market-insights") && slot === 5) return photos.ridges;
+  if (path.startsWith("/market-update") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/market-update") && slot === 1) {
+    return photos.officeExterior;
+  }
+  if (path.startsWith("/market-update") && slot === 2) return photos.summerlin;
+  if (path.startsWith("/market-update") && slot === 3) return photos.buyers;
+  if (path.startsWith("/market-update") && slot === 4) return photos.sellers;
+  if (path === "/neighborhoods" && slot === 0) return photos.homeHero;
+  if (path === "/neighborhoods" && slot === 1) return photos.henderson;
+  if (path.startsWith("/about") && slot === 0) return photos.homeHero;
+  if (path === "/buyers" && slot === 0) return photos.summerlin;
+  if (path.startsWith("/faq") && slot === 0) return photos.henderson;
   return photos.consultation;
 }
 
@@ -843,6 +865,38 @@ export function occupiedHeadingStills(path: string): Set<string> {
   if (path.startsWith("/buyers/first-time-buyers")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
+  }
+  if (path === "/contact") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+  }
+  if (path.startsWith("/market-insights")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
+    srcs.push(leftoverPhotoForPath(path, 5).src);
+  }
+  if (path.startsWith("/market-update")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
+  }
+  if (path === "/neighborhoods") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+  }
+  if (path.startsWith("/about")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path === "/buyers") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/faq")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
   }
   if (path.startsWith("/55-plus")) {
     srcs.push(

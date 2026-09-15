@@ -1,6 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { MapPin, Home, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
@@ -14,6 +13,7 @@ import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods",
@@ -82,7 +82,7 @@ const neighborhoods = [
     priceChange: "+3.2%",
     description: "Rapidly growing area with affordable new construction and parks",
     highlights: ["New Construction", "Affordable", "Growing Area", "Parks and Trails"],
-    bestFor: "New construction, first-time buyers, investors",
+    bestFor: "New construction, rental comps, northwest commute",
   },
   {
     name: "Skye Canyon",
@@ -152,10 +152,9 @@ export default function NeighborhoodsPage() {
             </div>
           </div>
 
-          {/* Neighborhood Grid */}
+          <LeftoverBand path="/neighborhoods" />
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Compare Valley Neighborhoods</h2>
-<div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {neighborhoods.map((neighborhood) => (
                 <Link
                   key={neighborhood.slug}
@@ -192,33 +191,7 @@ export default function NeighborhoodsPage() {
 
           <ExpertQuote path="/neighborhoods" />
 
-          {/* Neighborhood Services */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">Neighborhood Services</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Area Tours</h3>
-                <p className="text-slate-400 text-sm">
-                  Personalized neighborhood tours to help you experience each community firsthand
-                </p>
-              </div>
-              <div className="text-center">
-                <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Campus commute times</h3>
-                <p className="text-slate-400 text-sm">
-                  Named campuses, commute times, and enrollment contacts
-                </p>
-              </div>
-              <div className="text-center">
-                <Home className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Home Matching</h3>
-                <p className="text-slate-400 text-sm">
-                  Find homes that match your criteria in the neighborhoods you love
-                </p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/neighborhoods" slot={1} />
 
           <section className="mb-16 max-w-4xl mx-auto">
             <NamedCampuses path="/neighborhoods" />

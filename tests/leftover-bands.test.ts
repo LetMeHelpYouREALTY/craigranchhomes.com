@@ -42,14 +42,21 @@ describe("leftoverBands", () => {
     expect(Object.keys(leftoverBands).sort()).toEqual([
       "/55-plus-communities",
       "/55-plus-communities/sun-city-anthem",
+      "/about",
+      "/buyers",
       "/buyers/first-time-buyers",
       "/buyers/luxury-homes-las-vegas",
+      "/contact",
+      "/faq",
       "/google-business",
       "/home-valuation",
       "/investment-properties",
       "/listings",
       "/luxury-homes",
+      "/market-insights",
       "/market-report",
+      "/market-update",
+      "/neighborhoods",
       "/new-construction",
       "/relocation",
       "/sellers",
@@ -64,6 +71,10 @@ describe("leftoverBands", () => {
     expect(leftoverBands["/sellers"]).toHaveLength(3);
     expect(leftoverBands["/google-business"]).toHaveLength(2);
     expect(leftoverBands["/buyers/first-time-buyers"]).toHaveLength(2);
+    expect(leftoverBands["/contact"]).toHaveLength(2);
+    expect(leftoverBands["/market-insights"]).toHaveLength(6);
+    expect(leftoverBands["/market-update"]).toHaveLength(5);
+    expect(leftoverBands["/neighborhoods"]).toHaveLength(2);
   });
 
   it("keeps every leftover H2 unique", () => {
