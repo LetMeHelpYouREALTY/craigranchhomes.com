@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -125,6 +126,8 @@ export default function BuyersPage() {
             </div>
             <div className="mt-8">
               <CtaActions variant="onLight" />
+          <OfficeProximity path="/buyers" />
+
             </div>
           </div>
 

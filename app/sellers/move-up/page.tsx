@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -50,6 +51,8 @@ export default function MoveUpSellerPage() {
               Your home's equity unlocks your dream home. Let's make the upgrade seamless.
             </p>
             <CtaActions variant="onLight" />
+          <OfficeProximity path="/sellers/move-up" />
+
           </div>
 
           {/* Equity Section */}

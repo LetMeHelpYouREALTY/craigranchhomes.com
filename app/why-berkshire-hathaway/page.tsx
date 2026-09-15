@@ -4,6 +4,7 @@ import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "luc
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -64,6 +65,8 @@ export default function WhyBerkshireHathawayPage() {
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
+          <OfficeProximity path="/why-berkshire-hathaway" />
+
             </div>
           </div>
 

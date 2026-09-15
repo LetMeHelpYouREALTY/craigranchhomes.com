@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import { nap } from "@/lib/contact";
 
@@ -89,6 +90,8 @@ export default function LuxuryHomesPage() {
               Guard-gated estates. Strip penthouses. Uncompromising privacy.
             </p>
             <CtaActions variant="onLight" bookLabel="Request Private Showing" />
+          <OfficeProximity path="/buyers/luxury-homes-las-vegas" />
+
           </div>
 
           {/* Market Performance */}

@@ -16,6 +16,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
@@ -272,6 +273,8 @@ export default function NewConstructionPage() {
               </div>
             </div>
             <CtaActions variant="onLight" bookLabel="Register Before You Tour" />
+          <OfficeProximity path="/new-construction" />
+
             <div className="mt-8 max-w-xl mx-auto">
               <p className="text-sm font-semibold text-slate-700 mb-3">Search live MLS inventory</p>
               <RealScoutSearch />

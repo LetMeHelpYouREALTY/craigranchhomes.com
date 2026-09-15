@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -92,6 +93,8 @@ export default function HomeValuationPage() {
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" bookLabel="Book a Valuation" />
+          <OfficeProximity path="/home-valuation" />
+
             </div>
           </div>
 

@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import { ctaPhone, nap } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
 import { mediaUrl, photos } from "@/lib/media";
@@ -71,6 +72,8 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             <MlsDisclaimer />
             <div className="mt-8">
               <CtaActions variant="onLight" />
+          <OfficeProximity path="/listings" />
+
             </div>
           </div>
           <aside className="md:col-span-1">

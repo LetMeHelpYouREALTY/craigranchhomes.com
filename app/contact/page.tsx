@@ -4,6 +4,7 @@ import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -67,6 +68,8 @@ export default function ContactPage() {
               Schedule an appointment or reach out directly.
             </p>
             <CtaActions variant="onLight" bookLabel="Book a Consultation" />
+          <OfficeProximity path="/contact" />
+
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">

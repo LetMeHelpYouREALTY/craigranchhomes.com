@@ -4,6 +4,7 @@ import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -205,6 +206,8 @@ export default function FAQPage() {
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
+          <OfficeProximity path="/faq" />
+
             </div>
           </div>
 

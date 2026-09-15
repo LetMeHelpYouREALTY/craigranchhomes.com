@@ -1,4 +1,4 @@
-import { ctaPhone, maps, nap, officePhone } from "@/lib/contact";
+import { ctaPhone, googleReviewsUrl, maps, nap, officePhone } from "@/lib/contact";
 
 type PlaceDrive = {
   place: string;
@@ -92,6 +92,146 @@ const byPath: Record<string, PlaceDrive> = {
     driveMinutes: "35–45 minutes",
     note: "Lake-adjacent plans and Reflection Bay golf are blocked as an east-Henderson half day.",
   },
+  "/": {
+    place: "Las Vegas, Henderson, and Summerlin tours",
+    driveMinutes: "same day from this pin",
+    note: "Buyer and seller appointments start at the west-valley office, then loop Summerlin first and Henderson second.",
+  },
+  "/about": {
+    place: "an in-person consult with Dr. Jan Duffy",
+    driveMinutes: "you are already at the pin",
+    note: "License S.0197614.LLC appointments are held at Suite 100 unless we meet at a listing.",
+  },
+  "/contact": {
+    place: "the contact desk",
+    driveMinutes: "on-site",
+    note: "Walk-ins during posted hours are welcome; Calendly showings can start here and continue to the property.",
+  },
+  "/google-business": {
+    place: "the Google Business Profile address",
+    driveMinutes: "this is the Maps pin",
+    note: "Name, address, and office line (702) 500-1942 match the Google listing; call or text (702) 222-1964 for a same-day reply.",
+  },
+  "/faq": {
+    place: "a live Q&A",
+    driveMinutes: "10 minutes from most Summerlin villages",
+    note: "Bring loan pre-approval and a target ZIP; we map commute minutes to listings from this desk.",
+  },
+  "/services": {
+    place: "a service consult (buy, sell, 55+, relocation)",
+    driveMinutes: "on-site",
+    note: "Each service meeting starts here so paperwork, MLS, and showing routes use the same west-valley start.",
+  },
+  "/security-policy": {
+    place: "privacy questions",
+    driveMinutes: "email or office visit",
+    note: "Data and showing-access questions are handled at Suite 100; we do not collect listing keys by unsecured email.",
+  },
+  "/listings": {
+    place: "live MLS search follow-up",
+    driveMinutes: "same-day tours from this pin",
+    note: "Save the RealScout results, then we sequence Summerlin, Henderson, or 55+ stops from Lake Mead Blvd.",
+  },
+  "/home-valuation": {
+    place: "a CMA review",
+    driveMinutes: "on-site or at your property",
+    note: "Bring the APN or address; comps are pulled here before we drive to the house for photos and pricing.",
+  },
+  "/new-construction": {
+    place: "builder registration",
+    driveMinutes: "before any model-home visit",
+    note: "Register Dr. Jan as your buyer agent at this office first—most builders require it on the first visit.",
+  },
+  "/buyers": {
+    place: "buyer-agent onboarding",
+    driveMinutes: "on-site",
+    note: "Pre-approval, search criteria, and first-tour routing are set here so you are not touring without a plan.",
+  },
+  "/buyers/first-time-buyers": {
+    place: "first-time buyer paperwork",
+    driveMinutes: "on-site",
+    note: "FHA, VA, and Nevada down-payment programs are reviewed at this desk before we schedule model or resale tours.",
+  },
+  "/buyers/california-relocator": {
+    place: "California-to-Nevada intake",
+    driveMinutes: "video or on-site",
+    note: "We compare your California sale proceeds to Las Vegas ZIP targets, then schedule a concentrated tour week from this office.",
+  },
+  "/buyers/luxury-homes-las-vegas": {
+    place: "private luxury showings",
+    driveMinutes: "15–20 minutes to The Ridges",
+    note: "Gate codes and off-market times are confirmed here; we do not send luxury addresses over unsecured text threads.",
+  },
+  "/sellers": {
+    place: "listing appointment prep",
+    driveMinutes: "we come to your house after this brief",
+    note: "Pricing, photos, and BHHS marketing are scoped at Suite 100, then we go on-site for the CMA walkthrough.",
+  },
+  "/sellers/move-up": {
+    place: "sale-and-purchase timing",
+    driveMinutes: "two stops from this pin",
+    note: "We map your current home and your next ZIP so both tours share one west-valley start.",
+  },
+  "/sellers/downsizing": {
+    place: "downsize and 55+ options",
+    driveMinutes: "10–15 minutes to Sun City Summerlin",
+    note: "List the larger home first or tour 55+ campuses the same day—both start from Lake Mead Blvd.",
+  },
+  "/sellers/relocation": {
+    place: "outbound sale coordination",
+    driveMinutes: "on-site plus destination agent call",
+    note: "BHHS destination agents are briefed from this office so Las Vegas closing dates line up with your next city.",
+  },
+  "/sellers/divorce-probate": {
+    place: "confidential file review",
+    driveMinutes: "by appointment at Suite 100",
+    note: "Court dates, attorney contacts, and showing access are handled here—not in a public lobby conversation.",
+  },
+  "/relocation": {
+    place: "inbound relocation planning",
+    driveMinutes: "tour week from this pin",
+    note: "We build a three-day Summerlin-then-Henderson itinerary so you are not crisscrossing the valley.",
+  },
+  "/investment-properties": {
+    place: "rental and cap-rate review",
+    driveMinutes: "on-site plus area drive",
+    note: "Rent comps and HOA rental rules are checked here before we tour North Las Vegas, Henderson, or southwest ZIP clusters.",
+  },
+  "/luxury-homes": {
+    place: "luxury listing or search intake",
+    driveMinutes: "15–35 minutes to Ridges, Highlands, or Lake Las Vegas",
+    note: "Marketing or private-search scope is set at the office so photography and gate access are not improvised on site.",
+  },
+  "/why-berkshire-hathaway": {
+    place: "brand and representation questions",
+    driveMinutes: "on-site",
+    note: "BHHS network referrals and listing marketing samples are shown at Suite 100 before you commit to a listing agreement.",
+  },
+  "/market-insights": {
+    place: "market briefing",
+    driveMinutes: "on-site",
+    note: "January 2026 inventory, days on market, and ZIP-level notes are walked through here, then applied to your search or listing.",
+  },
+  "/market-update": {
+    place: "this week's numbers review",
+    driveMinutes: "on-site or phone from this desk",
+    note: "Weekly stats are interpreted against your address or buyer criteria—not as a valley-wide average only.",
+  },
+  "/market-report": {
+    place: "full CMA and report review",
+    driveMinutes: "on-site",
+    note: "Bring the property address; we pull comps at this desk and map them to your next step.",
+  },
+  "/neighborhoods": {
+    place: "neighborhood comparison",
+    driveMinutes: "Summerlin 10–15 min, Henderson 25–35 min",
+    note: "We pick two contrasting areas (for example Summerlin vs Green Valley) and tour them from this west-valley start.",
+  },
+  "/55-plus-communities": {
+    place: "55+ campus comparison",
+    driveMinutes: "Sun City Summerlin 10–15 min, Anthem 30–35 min",
+    note: "Age-restriction rules and HOA packets are reviewed here before we drive to clubhouses.",
+  },
 };
 
 type OfficeProximityProps = {
@@ -137,6 +277,14 @@ export default function OfficeProximity({ path }: OfficeProximityProps) {
           className="inline-flex items-center justify-center min-h-[44px] px-4 py-2 rounded-md border border-slate-300 text-slate-900 font-semibold hover:bg-white"
         >
           Open in Google Maps
+        </a>
+        <a
+          href={googleReviewsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center min-h-[44px] px-4 py-2 rounded-md border border-slate-300 text-slate-900 font-semibold hover:bg-white"
+        >
+          View Google Reviews
         </a>
       </div>
     </aside>

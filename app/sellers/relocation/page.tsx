@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -52,6 +53,8 @@ export default function RelocationPage() {
               We coordinate both ends of your move.
             </p>
             <CtaActions variant="onLight" />
+          <OfficeProximity path="/sellers/relocation" />
+
           </div>
 
           {/* Network Advantage */}

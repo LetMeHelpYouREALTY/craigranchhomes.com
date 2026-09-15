@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { nap } from "@/lib/contact";
@@ -99,6 +100,8 @@ export default function FirstTimeBuyersPage() {
               Down payment assistance. Builder incentives. Expert guidance every step of the way.
             </p>
             <CtaActions variant="onLight" />
+          <OfficeProximity path="/buyers/first-time-buyers" />
+
           </div>
 
           {/* Financing Options */}

@@ -18,6 +18,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
@@ -144,6 +145,8 @@ export default function AboutPage() {
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" bookLabel="Book a Consultation" />
+          <OfficeProximity path="/about" />
+
             </div>
           </div>
 

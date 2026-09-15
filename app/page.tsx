@@ -4,6 +4,7 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import PageCTA from "@/components/sections/PageCTA";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import Link from "next/link";
 import Image from "next/image";
 import { Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
@@ -82,6 +83,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-4">
+        <OfficeProximity path="/" />
+      </div>
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">

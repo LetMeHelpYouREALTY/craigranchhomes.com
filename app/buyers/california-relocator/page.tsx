@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { nap } from "@/lib/contact";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -129,6 +130,8 @@ export default function CaliforniaRelocatorPage() {
               Zero state income tax. 40-60% lower home prices. Same sunshine.
             </p>
             <CtaActions variant="onLight" />
+          <OfficeProximity path="/buyers/california-relocator" />
+
           </div>
 
           {/* Tax Savings Comparison */}

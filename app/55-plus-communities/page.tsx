@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -355,6 +356,8 @@ export default function FiftyFiveCommunitiesPage() {
               <strong>Dr. Duffy specializes in active adult living</strong>
             </p>
             <CtaActions variant="onLight" />
+          <OfficeProximity path="/55-plus-communities" />
+
           </div>
 
           {/* Quick Stats */}

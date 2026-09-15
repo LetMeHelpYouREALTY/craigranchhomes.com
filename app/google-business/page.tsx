@@ -13,6 +13,7 @@ import {
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import {
@@ -142,6 +143,7 @@ export default function GoogleBusinessPage() {
               </div>
             </div>
           </section>
+          <OfficeProximity path="/google-business" />
 
           <section className="max-w-5xl mx-auto mb-16">
             <div className="bg-slate-50 rounded-xl p-6">

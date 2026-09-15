@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -143,6 +144,8 @@ export default function ListingsPage() {
             </div>
             <div className="mb-8">
               <CtaActions variant="onLight" />
+          <OfficeProximity path="/listings" />
+
             </div>
             <RealScoutSearch />
           </div>

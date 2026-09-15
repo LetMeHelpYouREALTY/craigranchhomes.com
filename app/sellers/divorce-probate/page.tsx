@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
+import OfficeProximity from "@/components/sections/OfficeProximity";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -52,6 +53,8 @@ export default function DivorceProbatePage() {
               with discretion, expertise, and compassion.
             </p>
             <CtaActions variant="onLight" />
+          <OfficeProximity path="/sellers/divorce-probate" />
+
           </div>
 
           {/* Situations We Help With */}
