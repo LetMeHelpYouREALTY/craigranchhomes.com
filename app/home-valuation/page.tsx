@@ -1,15 +1,20 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RealScoutHomeValue from "@/components/realscout/RealScoutHomeValue";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/home-valuation",
   title: "Free Home Valuation Las Vegas | What's Your Home Worth? | Berkshire Hathaway HomeServices",
   description:
-    "Get a free, accurate home valuation in Las Vegas from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for Summerlin, Henderson, Green Valley & all Las Vegas neighborhoods. Call (702) 500-1942.",
+    "Get a free, accurate home valuation in Las Vegas from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for Summerlin, Henderson, Green Valley & all Las Vegas neighborhoods. Call (702) 222-1964.",
   keywords: [
     "home valuation Las Vegas",
     "what is my home worth Las Vegas",
@@ -19,7 +24,7 @@ export const metadata: Metadata = {
     "Summerlin home value",
     "Henderson home value",
   ],
-};
+});
 
 // FAQ Schema for SEO
 const faqSchema = {
@@ -39,7 +44,7 @@ const faqSchema = {
       name: "What factors affect my Las Vegas home's value?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Key factors include location (neighborhood, school zone, proximity to amenities), square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
+        text: "Key factors include location, square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, named nearby campuses, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
       },
     },
     {
@@ -68,21 +73,9 @@ export default function HomeValuationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
-              {" / "}
-              <span className="text-slate-900">Home Valuation</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -90,12 +83,30 @@ export default function HomeValuationPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               What's Your Las Vegas Home Worth?
             </h1>
+            <HeadingPhoto path="/home-valuation" />
+
             <p className="text-xl text-slate-600">
               Get a free, no-obligation home valuation from Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>. Accurate pricing backed by 17+ years
               of Las Vegas market expertise and $127M+ in closed transactions.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" bookLabel="Book a Valuation" />
+            </div>
           </div>
+
+          <section className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3 text-center">
+              Instant Home Value Estimate
+            </h2>
+            <HeadingPhoto path="/home-valuation" level="h2" />
+
+            <p className="text-slate-600 text-center mb-6">
+              Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with
+              Dr. Jan Duffy for a price backed by recent comps.
+            </p>
+            <RealScoutHomeValue />
+          </section>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
             {/* Calendly Widget */}
@@ -179,11 +190,11 @@ export default function HomeValuationPage() {
               <div className="text-center">
                 <p className="text-slate-600 mb-4">Prefer to talk? Call Dr. Jan directly:</p>
                 <a
-                  href="tel:+17025001942"
+                  href="tel:+17022221964"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  (702) 500-1942
+                  (702) 222-1964
                 </a>
               </div>
             </div>
@@ -425,15 +436,14 @@ export default function HomeValuationPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Home Valuations
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How accurate are online home value estimates like Zillow's Zestimate?",
                   a: "Online estimates like Zillow's Zestimate can be off by 5-15% or more, especially in markets like Las Vegas where home features vary significantly. They cannot account for upgrades, condition, views, or lot characteristics. A professional CMA from a local expert provides far more accurate pricing.",
                 },
                 {
                   q: "What factors affect my Las Vegas home's value?",
-                  a: "Key factors include location (neighborhood, school zone, proximity to amenities), square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
+                  a: "Key factors include location, square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, named nearby campuses, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
                 },
                 {
                   q: "How long does a home valuation take?",
@@ -447,13 +457,7 @@ export default function HomeValuationPage() {
                   q: "Do I need to have my home ready to show for a valuation?",
                   a: "Not necessarily. Dr. Jan can provide an initial valuation based on property records, MLS data, and information you provide. However, a brief walk-through helps identify features and upgrades that add value. There's no need to stage or prepare extensively.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -465,24 +469,7 @@ export default function HomeValuationPage() {
               Get a free, no-obligation home valuation from Dr. Jan Duffy and Berkshire Hathaway
               HomeServices Nevada Properties. Accurate pricing. Expert guidance. Zero pressure.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/sellers"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Learn About Selling
-              </Link>
-            </div>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -490,7 +477,6 @@ export default function HomeValuationPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

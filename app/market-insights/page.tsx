@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -15,11 +13,18 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
+import { generateFAQSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/market-insights",
   title: "Las Vegas Real Estate Market Insights 2026 | Berkshire Hathaway HomeServices",
   description:
-    "Technology trends, economic forecasts, and market analysis shaping Las Vegas real estate in 2026. AI, data centers, California migration, and what it means for buyers and sellers. Call (702) 500-1942.",
+    "Technology trends, economic forecasts, and market analysis shaping Las Vegas real estate in 2026. AI, data centers, California migration, and what it means for buyers and sellers. Call (702) 222-1964.",
   keywords: [
     "Las Vegas real estate trends 2026",
     "Las Vegas market forecast",
@@ -28,7 +33,7 @@ export const metadata: Metadata = {
     "Las Vegas tech hub",
     "Berkshire Hathaway market insights",
   ],
-};
+});
 
 const reportSchema = {
   "@context": "https://schema.org",
@@ -46,6 +51,25 @@ const reportSchema = {
   },
 };
 
+const marketInsightsFaqs = [
+  {
+    q: "What is driving Las Vegas real estate in 2026?",
+    a: "Five forces: California inbound demand, data-center and tech hiring, no state income tax, new construction inventory, and 6.5% range mortgage rates. Median sale prices were about $450,000 in January 2026 with 28 days on market.",
+  },
+  {
+    q: "Should I buy or wait based on these insights?",
+    a: "Waiting has a cost when prices rise 4% year over year. Call (702) 222-1964 for a neighborhood-specific CMA from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+  },
+  {
+    q: "How do California buyers affect Las Vegas pricing?",
+    a: "California equity often stretches 40–60% further in Las Vegas. That inbound demand supports Summerlin, Henderson, and luxury villages more than it inflates every ZIP equally.",
+  },
+  {
+    q: "Where can I get a personalized 2026 forecast?",
+    a: "Book a consultation at heyberkshire.com/contact or call (702) 222-1964. Dr. Jan Duffy will map commute times, HOA dues, and recent comps for the villages you are comparing.",
+  },
+];
+
 export default function MarketInsightsPage() {
   return (
     <>
@@ -53,19 +77,13 @@ export default function MarketInsightsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(marketInsightsFaqs.map((f) => ({ question: f.q, answer: f.a })))) }}
+      />
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <span className="text-slate-900">Market Insights</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <TrendingUp className="h-4 w-4 mr-2" />
@@ -74,10 +92,15 @@ export default function MarketInsightsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Market Insights
             </h1>
+            <HeadingPhoto path="/market-insights" />
+
             <p className="text-xl text-slate-600">
               Technology trends, economic forces, and market dynamics shaping Las Vegas
               real estate in 2026 and beyond.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Key Drivers */}
@@ -85,6 +108,8 @@ export default function MarketInsightsPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               5 Forces Driving Las Vegas Real Estate in 2026
             </h2>
+            <HeadingPhoto path="/market-insights" level="h2" />
+
             <div className="grid md:grid-cols-5 gap-4">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-2">37%</div>
@@ -297,7 +322,7 @@ export default function MarketInsightsPage() {
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
-                  Red Rock views, Downtown Summerlin, and top schools maintain premium positioning.
+                  Red Rock views, Downtown Summerlin, and Palo Verde High School nearby maintain premium positioning.
                   Limited new inventory keeps values strong.
                 </p>
                 <div className="text-sm text-slate-500">
@@ -327,7 +352,7 @@ export default function MarketInsightsPage() {
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
-                  Family-friendly community with the valley's largest park. New construction
+                  Community with the valley's largest park. New construction
                   competing with resales. Solid appreciation.
                 </p>
                 <div className="text-sm text-slate-500">
@@ -421,6 +446,13 @@ export default function MarketInsightsPage() {
             </div>
           </section>
 
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Market Insights FAQ
+            </h2>
+            <FaqAccordion items={marketInsightsFaqs} />
+          </section>
+
           {/* CTA */}
           <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -430,27 +462,12 @@ export default function MarketInsightsPage() {
               Wondering what these trends mean for your specific situation? Dr. Jan Duffy provides
               free consultations with customized market analysis.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/market-report"
-                className="inline-flex items-center justify-center bg-purple-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-400 transition-colors"
-              >
-                View Market Report →
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

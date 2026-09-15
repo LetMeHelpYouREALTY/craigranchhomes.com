@@ -1,11 +1,16 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { TrendingUp, TrendingDown, Home, Calendar, DollarSign, BarChart, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
-export const metadata: Metadata = {
+import { nap } from "@/lib/contact";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/market-report",
   title: "Las Vegas Real Estate Market Report January 2026 | Berkshire Hathaway HomeServices",
   description:
     "Get the latest Las Vegas real estate market statistics for January 2026. Median prices, days on market, inventory levels, and expert analysis from Berkshire Hathaway HomeServices Nevada Properties.",
@@ -16,7 +21,7 @@ export const metadata: Metadata = {
     "Nevada housing market",
     "Berkshire Hathaway market report",
   ],
-};
+});
 
 // Report Schema
 const reportSchema = {
@@ -42,8 +47,7 @@ export default function MarketReportPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -53,10 +57,15 @@ export default function MarketReportPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Real Estate Market Report
             </h1>
+            <HeadingPhoto path="/market-report" />
+
             <p className="text-xl text-slate-600">
               January 2026 | Expert analysis from{" "}
               <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Key Stats Overview */}
@@ -64,6 +73,8 @@ export default function MarketReportPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Las Vegas Market Snapshot | January 2026
             </h2>
+            <HeadingPhoto path="/market-report" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">$450,000</div>
@@ -266,8 +277,7 @@ export default function MarketReportPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Market Questions We're Hearing
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "Is now a good time to buy in Las Vegas?",
                   a: "Yes. With more inventory, returning negotiating power, and stable interest rates, buyers have more options than they've had in years. Well-priced homes are still moving quickly, but you won't face the bidding wars of 2021-2022.",
@@ -284,13 +294,7 @@ export default function MarketReportPage() {
                   q: "What's happening with interest rates?",
                   a: "Rates have stabilized around 6.5% for conventional loans. Many buyers are using builder incentives or rate buydowns to achieve effective rates in the low 5% range. VA and FHA options remain competitive.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -302,16 +306,7 @@ export default function MarketReportPage() {
               Want to know what these numbers mean for your specific neighborhood or situation? Dr.
               Jan Duffy provides free market consultations.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -319,7 +314,6 @@ export default function MarketReportPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

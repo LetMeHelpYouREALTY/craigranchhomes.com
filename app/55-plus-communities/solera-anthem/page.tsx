@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -15,11 +13,18 @@ import {
   DollarSign,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/solera-anthem",
   title: "Solera at Anthem Homes for Sale | Intimate Guard-Gated 55+ Henderson | Dr. Jan Duffy",
   description:
-    "Solera at Anthem - intimate guard-gated 55+ community in Henderson. Homes from $380K-$650K. Lower HOA fees, close-knit atmosphere. Dr. Jan Duffy, BHHS. Call (702) 500-1942.",
+    "Solera at Anthem - intimate guard-gated 55+ community in Henderson. Homes from $380K-$650K. Lower HOA fees, close-knit atmosphere. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
   keywords: [
     "Solera at Anthem homes for sale",
     "Solera Anthem Henderson",
@@ -31,17 +36,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solera at Anthem - Intimate Guard-Gated 55+ in Henderson",
     description:
-      "Close-knit community with guard-gated security. Lower HOA fees, Henderson safety. From $380K. Dr. Jan Duffy, BHHS.",
+      "Close-knit community with a staffed gate. Lower HOA fees. From $380K. Dr. Jan Duffy, BHHS.",
     type: "website",
   },
-};
+});
 
 const communitySchema = {
   "@context": "https://schema.org",
   "@type": "Place",
   name: "Solera at Anthem",
   description:
-    "Guard-gated 55+ community in Henderson with 1,200+ homes and intimate community feel",
+    "Guard-gated 55+ community in Henderson with 1,200+ homes and a boutique clubhouse campus",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Henderson",
@@ -62,25 +67,9 @@ export default function SoleraAnthemPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
-                Home
-              </Link>
-              {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
-                55+ Communities
-              </Link>
-              {" / "}
-              <span className="text-slate-900">Solera at Anthem</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Heart className="h-4 w-4 mr-2" />
@@ -89,10 +78,18 @@ export default function SoleraAnthemPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Solera at Anthem
             </h1>
+            <HeadingPhoto path="/55-plus-communities/solera-anthem" />
+
             <p className="text-xl text-slate-600">
-              The close-knit alternative to mega-communities. Guard-gated security
-              in Henderson's safest neighborhood.
+              Guard-gated 55+ living in Henderson's Anthem area.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -100,6 +97,8 @@ export default function SoleraAnthemPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Solera at Anthem at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/solera-anthem" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">
@@ -250,7 +249,7 @@ export default function SoleraAnthemPage() {
           {/* Henderson Location */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Henderson: America's Safest Large City
+              Henderson Location: Parks, Golf, and Anthem Amenities
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-slate-200">
@@ -258,12 +257,11 @@ export default function SoleraAnthemPage() {
                   <Shield className="h-6 w-6 text-teal-600 mr-3 flex-shrink-0" />
                   <div>
                     <h3 className="font-bold text-slate-900 mb-2">
-                      Top Safety Rankings
+                      Guard-Gated Access
                     </h3>
                     <p className="text-slate-600 text-sm">
-                      Henderson consistently ranks as one of the safest large
-                      cities in America. Double security: Henderson's safety plus
-                      Solera's guard gate.
+                      Solera at Anthem is a smaller 55+ community with a staffed gate, HOA-maintained
+                      streets, and a short drive to Anthem Center recreation.
                     </p>
                   </div>
                 </div>
@@ -345,11 +343,11 @@ export default function SoleraAnthemPage() {
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-slate-900">
-                    Guard-gated in America's safest city
+                    Guard-gated 55+ living in Henderson
                   </strong>
                   <p className="text-slate-600 text-sm">
-                    Double layer of security: Henderson's safety record plus 24/7
-                    guard gate
+                    Staffed gate 24/7 plus Henderson police and fire stations within typical
+                    suburban response distance
                   </p>
                 </div>
               </div>
@@ -372,10 +370,10 @@ export default function SoleraAnthemPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Solera at Anthem is perfect for buyers who find Sun City
-                overwhelming. It's intimate, genuinely guard-gated, and everyone
-                is actually 55+. The community feels like a neighborhood, not a
-                small city. As a{" "}
+                "Solera at Anthem is a fit for buyers who find Sun City
+                overwhelming. It's 1,200 homes, genuinely guard-gated, and
+                every resident is 55+. The campus is smaller than a 7,700-home
+                Sun City. As a{" "}
                 <strong>Berkshire Hathaway HomeServices</strong> agent, I often
                 recommend Solera to buyers who prioritize community connection
                 over endless amenities."
@@ -384,6 +382,17 @@ export default function SoleraAnthemPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Solera at Anthem FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Solera at Anthem?", a: "Homes typically range from about $380,000 to $650,000 as of January 2026. Monthly HOA is about $170–$210." },
+              { q: "How many homes are in Solera?", a: "About 1,200 homes behind a staffed gate in Henderson, with a boutique clubhouse campus." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -395,21 +404,7 @@ export default function SoleraAnthemPage() {
               Discover why Solera at Anthem offers the close-knit community
               experience larger developments can't match. Tour with Dr. Jan Duffy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-teal-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-teal-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-teal-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-teal-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="text-teal-200">
               Here to make your transition smooth, Dr. Jan{" "}
               <span role="img" aria-label="sunshine">
@@ -423,7 +418,6 @@ export default function SoleraAnthemPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -12,7 +10,6 @@ import {
   DollarSign,
   MapPin,
   Heart,
-  HelpCircle,
   Sun,
   Trophy,
   Palmtree,
@@ -23,12 +20,18 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities",
   title:
     "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
   description:
-    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 500-1942.",
+    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 222-1964.",
   keywords: [
     "55+ communities Las Vegas",
     "active adult communities Las Vegas",
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
       "Sun City, Del Webb, Heritage at Stonebridge & more—Dr. Duffy specializes in active adult living. Berkshire Hathaway HomeServices Nevada Properties.",
     type: "website",
   },
-};
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -110,7 +113,7 @@ const localBusinessSchema = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
     "55+ community specialist helping active adults find their perfect Las Vegas retirement home",
-  telephone: "(702) 500-1942",
+  telephone: "(702) 222-1964",
   url: "https://heyberkshire.com/55-plus-communities",
   areaServed: {
     "@type": "City",
@@ -161,7 +164,7 @@ const communities = [
       "Henderson's premier 55+ community",
       "2 championship golf courses",
       "Stunning mountain views",
-      "America's safest large city location",
+      "Henderson location with parks and recreation campuses",
     ],
     description:
       "Henderson's premier 55+ community with stunning mountain views and championship golf.",
@@ -216,8 +219,8 @@ const communities = [
     amenities: ["Clubhouse", "Pool & spa", "Fitness", "Social clubs"],
     highlights: [
       "Premium Summerlin location",
-      "Guard-gated security",
-      "Intimate community feel",
+      "Guard-gated entry",
+      "1,100+ homes",
       "Near Downtown Summerlin",
     ],
     description:
@@ -274,7 +277,7 @@ const communities = [
     highlights: [
       "Most affordable Summerlin 55+ option",
       "18-hole golf course",
-      "Established community (1990s)",
+      "Opened in the 1990s with an 18-hole golf course",
       "Strong sense of community",
     ],
     description:
@@ -333,25 +336,9 @@ export default function FiftyFiveCommunitiesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
-                Home
-              </Link>
-              {" / "}
-              <Link href="/services" className="hover:text-blue-600">
-                Services
-              </Link>
-              {" / "}
-              <span className="text-slate-900">55+ Communities</span>
-            </nav>
-          </div>
-
-          {/* Hero Section */}
+{/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Sun className="h-4 w-4 mr-2" />
@@ -360,29 +347,14 @@ export default function FiftyFiveCommunitiesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Find Your Perfect 55+ Community in Las Vegas
             </h1>
+            <HeadingPhoto path="/55-plus-communities" />
+
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
               Sun City, Del Webb, Heritage at Stonebridge & more—
               <br className="hidden md:block" />
               <strong>Dr. Duffy specializes in active adult living</strong>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <a
-                href="http://drjanduffy.realscout.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors"
-              >
-                Explore Communities
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </a>
-            </div>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Quick Stats */}
@@ -390,6 +362,8 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Las Vegas 55+ Market Overview | January 2026
             </h2>
+            <HeadingPhoto path="/55-plus-communities" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">
@@ -621,7 +595,7 @@ export default function FiftyFiveCommunitiesPage() {
                       </Link>
                     ) : (
                       <a
-                        href="tel:+17025001942"
+                        href="tel:+17022221964"
                         className="block text-center bg-slate-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-slate-700 transition-colors"
                       >
                         Call for {community.name} Info
@@ -712,70 +686,13 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               55+ Community Buying FAQs
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What are the age requirements for 55+ communities in Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  Per the Housing for Older Persons Act (HOPA), at least 80% of
-                  occupied units must have one resident 55 or older. The remaining
-                  20% can be younger, but some communities require all residents
-                  to be 55+. Spouses can be younger in most communities.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Can I buy in a 55+ community if I'm under 55?
-                </h3>
-                <p className="text-slate-600">
-                  Generally no, but there are exceptions. You may purchase if
-                  you'll be 55 by close of escrow, or as an investor who will rent
-                  to 55+ tenants. Some communities allow residents 45-54 in
-                  limited circumstances. Dr. Jan can explain each community's
-                  specific rules.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What do HOA fees cover in 55+ communities?
-                </h3>
-                <p className="text-slate-600">
-                  HOA fees typically cover access to clubhouses, pools, fitness
-                  centers, golf courses, organized activities, landscaping, and
-                  exterior maintenance. Fees range from $140-$350/month depending
-                  on amenities. Some communities have separate golf memberships.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Why do California residents choose Las Vegas 55+ communities?
-                </h3>
-                <p className="text-slate-600">
-                  California retirees love Las Vegas for no state income tax,
-                  lower property prices (50-60% less), lower cost of living, warm
-                  weather, world-class healthcare, and the ability to get more
-                  home and amenities for their money. Many sell their California
-                  home and buy in Las Vegas with cash to spare.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Can grandchildren visit or stay in 55+ communities?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, most communities allow guests of any age to visit and stay
-                  temporarily (typically 30-90 days per year). However, children
-                  cannot be permanent residents. Each community has specific guest
-                  policies that Dr. Jan Duffy can explain.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What are the age requirements for 55+ communities in Las Vegas?", a: "Per the Housing for Older Persons Act (HOPA), at least 80% of occupied units must have one resident 55 or older. The remaining 20% can be younger, but some communities require all residents to be 55+. Spouses can be younger in most communities." },
+              { q: "Can I buy in a 55+ community if I'm under 55?", a: "Generally no, but there are exceptions. You may purchase if you'll be 55 by close of escrow, or as an investor who will rent to 55+ tenants. Some communities allow residents 45-54 in limited circumstances. Dr. Jan can explain each community's specific rules." },
+              { q: "What do HOA fees cover in 55+ communities?", a: "HOA fees typically cover access to clubhouses, pools, fitness centers, golf courses, organized activities, landscaping, and exterior maintenance. Fees range from $140-$350/month depending on amenities. Some communities have separate golf memberships." },
+              { q: "Why do California residents choose Las Vegas 55+ communities?", a: "California retirees love Las Vegas for no state income tax, lower property prices (50-60% less), lower cost of living, warm weather, world-class healthcare, and the ability to get more home and amenities for their money. Many sell their California home and buy in Las Vegas with cash to spare." },
+              { q: "Can grandchildren visit or stay in 55+ communities?", a: "Yes, most communities allow guests of any age to visit and stay temporarily (typically 30-90 days per year). However, children cannot be permanent residents. Each community has specific guest policies that Dr. Jan Duffy can explain." },
+            ]} />
           </section>
 
           {/* Why BHHS */}
@@ -855,29 +772,10 @@ export default function FiftyFiveCommunitiesPage() {
               Duffy for a free consultation and personalized community
               recommendations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Request Information
-              </Link>
-            </div>
-            <p className="text-blue-200 text-lg">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
-            </p>
+            <CtaActions variant="onDark" />
             <p className="mt-4 text-blue-300 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Berkshire Hathaway HomeServices Nevada Properties · 9406 W Lake Mead Blvd, Suite 100,
+              Las Vegas, NV 89134
             </p>
           </section>
         </div>
@@ -886,7 +784,6 @@ export default function FiftyFiveCommunitiesPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

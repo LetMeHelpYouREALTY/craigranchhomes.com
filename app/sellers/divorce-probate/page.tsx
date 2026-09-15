@@ -1,9 +1,6 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Shield,
   Scale,
   Heart,
@@ -14,11 +11,17 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/sellers/divorce-probate",
   title: "Divorce & Probate Home Sales Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Sensitive real estate situations handled with discretion. Dr. Jan Duffy helps with divorce sales, probate, estate liquidation, and court-ordered sales. Call (702) 500-1942.",
+    "Sensitive real estate situations handled with discretion. Dr. Jan Duffy helps with divorce sales, probate, estate liquidation, and court-ordered sales. Call (702) 222-1964.",
   keywords: [
     "divorce home sale Las Vegas",
     "probate real estate Las Vegas",
@@ -26,26 +29,14 @@ export const metadata: Metadata = {
     "court ordered sale Nevada",
     "Berkshire Hathaway HomeServices divorce",
   ],
-};
+});
 
 export default function DivorceProbatePage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
-              {" / "}
-              <span className="text-slate-900">Divorce & Probate</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-slate-100 text-slate-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Shield className="h-4 w-4 mr-2" />
@@ -54,17 +45,13 @@ export default function DivorceProbatePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Difficult Situations,<br />Expert Guidance
             </h1>
+            <HeadingPhoto path="/sellers/divorce-probate" />
+
             <p className="text-xl text-slate-600 mb-8">
               When life gets complicated, you need an agent who handles sensitive transactions
               with discretion, expertise, and compassion.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Confidential Consultation → (702) 500-1942
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Situations We Help With */}
@@ -72,6 +59,8 @@ export default function DivorceProbatePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Situations We Help Navigate
             </h2>
+            <HeadingPhoto path="/sellers/divorce-probate" level="h2" />
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">
@@ -410,8 +399,7 @@ export default function DivorceProbatePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "Can one spouse sell the house without the other's consent?",
                   a: "In Nevada, generally no. Both spouses must agree to sell community property. If one spouse refuses, the other can petition the court for an order to sell. Dr. Jan has worked with many cases where court intervention was needed and can provide valuations and testimony if required.",
@@ -436,13 +424,7 @@ export default function DivorceProbatePage() {
                   q: "What happens to the mortgage during a divorce sale?",
                   a: "The mortgage is paid off at closing from the sale proceeds. If the home is underwater (worth less than owed), options include short sale negotiation with the lender or other arrangements. Dr. Jan can advise on the best approach for your situation.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* Why BHHS Matters */}
@@ -506,30 +488,12 @@ export default function DivorceProbatePage() {
               Discuss your situation privately with Dr. Jan. No pressure, no judgment—just
               professional guidance to help you move forward.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-100 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-500 transition-colors"
-              >
-                Email Confidentially
-              </Link>
-            </div>
-            <p className="mt-6 text-slate-400 text-sm">
-              All communications are confidential.
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

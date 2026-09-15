@@ -1,11 +1,15 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/why-berkshire-hathaway",
   title: "Why Choose Berkshire Hathaway HomeServices | Las Vegas Real Estate",
   description:
     "Discover why Berkshire Hathaway HomeServices is the most trusted name in real estate. Backed by Warren Buffett, with 50,000+ agents worldwide. Work with BHHS Nevada Properties today.",
@@ -16,7 +20,7 @@ export const metadata: Metadata = {
     "trusted real estate brand",
     "BHHS Nevada Properties",
   ],
-};
+});
 
 // Organization Schema
 const organizationSchema = {
@@ -41,8 +45,7 @@ export default function WhyBerkshireHathawayPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -52,11 +55,16 @@ export default function WhyBerkshireHathawayPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Why Choose Berkshire Hathaway HomeServices?
             </h1>
+            <HeadingPhoto path="/why-berkshire-hathaway" />
+
             <p className="text-xl text-slate-600 leading-relaxed">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> agent, you're
               backed by a name synonymous with trust, ethical standards, and financial strength—the
               same principles that built Warren Buffett's empire.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Warren Buffett Section */}
@@ -66,6 +74,8 @@ export default function WhyBerkshireHathawayPage() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Backed by Warren Buffett's Legacy
                 </h2>
+            <HeadingPhoto path="/why-berkshire-hathaway" level="h2" />
+
                 <p className="text-slate-300 mb-6">
                   <strong>Berkshire Hathaway HomeServices</strong> is the only real estate brand
                   backed by Berkshire Hathaway Inc., Warren Buffett's legendary holding company.
@@ -154,8 +164,8 @@ export default function WhyBerkshireHathawayPage() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Proven Results</h3>
                 <p className="text-slate-600">
-                  BHHS Nevada Properties has helped thousands of families achieve their real estate
-                  goals in Southern Nevada.
+                  BHHS Nevada Properties has helped thousands of clients complete real estate
+                  transactions in Southern Nevada.
                 </p>
               </div>
             </div>
@@ -238,8 +248,7 @@ export default function WhyBerkshireHathawayPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About BHHS
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "Is Berkshire Hathaway HomeServices owned by Warren Buffett?",
                   a: "Berkshire Hathaway HomeServices is part of HSF Affiliates LLC, which is a joint venture of Berkshire Hathaway Inc. (Warren Buffett's company) and HomeServices of America. The brand carries the trusted Berkshire Hathaway name and upholds its values of integrity and excellence.",
@@ -254,15 +263,9 @@ export default function WhyBerkshireHathawayPage() {
                 },
                 {
                   q: "Can BHHS help with relocations to Las Vegas?",
-                  a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, schools, and communities.",
+                  a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, commute times, and named school campuses.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -273,16 +276,7 @@ export default function WhyBerkshireHathawayPage() {
             <p className="text-xl text-slate-300 mb-8">
               Ready to work with the most trusted name in real estate? Contact Dr. Jan Duffy today.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -290,7 +284,6 @@ export default function WhyBerkshireHathawayPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

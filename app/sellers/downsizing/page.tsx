@@ -1,9 +1,6 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Heart,
   Home as HomeIcon,
   DollarSign,
@@ -14,11 +11,17 @@ import {
   Sun,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/sellers/downsizing",
   title: "Downsizing in Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready to simplify? Dr. Jan Duffy helps Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 500-1942.",
+    "Ready to simplify? Dr. Jan Duffy helps Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 222-1964.",
   keywords: [
     "downsizing Las Vegas",
     "sell large home Las Vegas",
@@ -26,26 +29,14 @@ export const metadata: Metadata = {
     "empty nester Las Vegas",
     "Berkshire Hathaway HomeServices downsizing",
   ],
-};
+});
 
 export default function DownsizingPage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
-              {" / "}
-              <span className="text-slate-900">Downsizing</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Heart className="h-4 w-4 mr-2" />
@@ -54,16 +45,12 @@ export default function DownsizingPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Simplify. Downsize. Enjoy.
             </h1>
+            <HeadingPhoto path="/sellers/downsizing" />
+
             <p className="text-xl text-slate-600 mb-8">
               Extract your equity. Embrace low-maintenance living. Start your next chapter.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Let's Talk About Your Options → (702) 500-1942
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Equity Extraction */}
@@ -71,6 +58,8 @@ export default function DownsizingPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Extract Your Equity, Enjoy Your Life
             </h2>
+            <HeadingPhoto path="/sellers/downsizing" level="h2" />
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-white/10 rounded-xl p-6">
                 <h3 className="font-bold text-xl mb-4 flex items-center">
@@ -132,7 +121,7 @@ export default function DownsizingPage() {
                 </div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">Single-Story Homes</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  Right-sized single-story in established neighborhoods. No stairs,
+                  Right-sized single-story in neighborhoods with HOA landscaping. No stairs,
                   smaller yard, lower utility costs. Age-in-place features available.
                 </p>
                 <div className="text-blue-600 font-semibold">$400K - $600K</div>
@@ -179,7 +168,7 @@ export default function DownsizingPage() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Professional staging that showcases family-friendly features</span>
+                    <span>Professional staging that showcases everyday living features</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -316,7 +305,7 @@ export default function DownsizingPage() {
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong>Guest Space:</strong> Kids and grandkids still visit. Consider a home with a guest room or nearby vacation rentals for overflow.
+                      <strong>Guest Space:</strong> Overnight guests still visit. Consider a home with a guest room or nearby vacation rentals for overflow.
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -394,11 +383,10 @@ export default function DownsizingPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Downsizing FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much can I expect to pocket when downsizing?",
-                  a: "Most downsizers moving from large family homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
+                  a: "Most downsizers moving from large 4–5 bedroom homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
                 },
                 {
                   q: "What if my home needs repairs before selling?",
@@ -416,13 +404,7 @@ export default function DownsizingPage() {
                   q: "What about all my stuff?",
                   a: "Decluttering is part of downsizing. Dr. Jan recommends starting early—months before listing. She can refer you to professional organizers and estate sale companies if needed. Many clients find the process liberating once they start.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* Expert Quote */}
@@ -430,9 +412,9 @@ export default function DownsizingPage() {
             <div className="bg-slate-900 text-white rounded-xl p-8">
               <blockquote className="text-lg italic mb-4">
                 "Downsizing clients are some of my favorite to work with. They've worked hard,
-                raised families, and now deserve to enjoy life without maintaining a 4,000 square
+                built equity, and now want a home without maintaining a 4,000 square
                 foot house. I help them extract the equity they've earned, find a home that fits
-                their current lifestyle, and often pocket significant cash for travel, grandkids,
+                their current lifestyle, and often pocket significant cash for travel and hobbies,
                 or just peace of mind. As a <strong>Berkshire Hathaway HomeServices</strong> agent,
                 I have the experience and compassion this transition requires."
               </blockquote>
@@ -451,27 +433,12 @@ export default function DownsizingPage() {
               Get a free home valuation and explore your downsizing options.
               Dr. Jan will show you what's possible without any pressure.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/home-valuation"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Get Free Valuation
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

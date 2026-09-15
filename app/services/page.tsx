@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -20,11 +18,17 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
-export const metadata: Metadata = {
+import { nap } from "@/lib/contact";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/services",
   title: "Real Estate Services Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Comprehensive real estate services from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 500-1942.",
+    "Comprehensive real estate services from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 222-1964.",
   keywords: [
     "Las Vegas real estate services",
     "Berkshire Hathaway services",
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
     "55+ community specialist",
     "California relocation Las Vegas",
   ],
-};
+});
 
 const servicesSchema = {
   "@context": "https://schema.org",
@@ -102,7 +106,7 @@ const specializedServices = [
     slug: "relocation",
     description:
       "Comprehensive relocation assistance for moves to Las Vegas. Berkshire Hathaway HomeServices' global network of 50,000+ agents makes interstate transitions seamless.",
-    highlights: ["Neighborhood matching", "School research", "Remote buying", "Moving coordination"],
+    highlights: ["Neighborhood matching", "Campus commute times", "Remote buying", "Moving coordination"],
   },
   {
     icon: Users,
@@ -170,8 +174,7 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -181,6 +184,8 @@ export default function ServicesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Real Estate Services
             </h1>
+            <HeadingPhoto path="/services" />
+
             <p className="text-xl text-slate-600 mb-8">
               Comprehensive real estate solutions from Dr. Jan Duffy, backed by the most trusted
               name in the business—<strong>Berkshire Hathaway HomeServices</strong>. Whether you're 
@@ -201,6 +206,9 @@ export default function ServicesPage() {
                 <span>500+ Satisfied Clients</span>
               </div>
             </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Core Services Section */}
@@ -208,6 +216,8 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
               Core Real Estate Services
             </h2>
+            <HeadingPhoto path="/services" level="h2" />
+
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               These foundational services cover the majority of real estate transactions in Las Vegas. 
               Each service is delivered with the professionalism, resources, and ethical standards 
@@ -263,7 +273,7 @@ export default function ServicesPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Beyond traditional buying and selling, Dr. Jan Duffy offers specialized services 
               for unique situations. Whether you're an investor building a rental portfolio, 
-              a California family relocating for tax savings, or a retiree seeking the perfect 
+              a California buyer relocating for tax savings, or a retiree seeking the perfect 
               55+ community, these focused services ensure you receive expert guidance tailored 
               to your specific needs.
             </p>
@@ -486,24 +496,7 @@ export default function ServicesPage() {
               Whether you're buying, selling, investing, or relocating, you'll receive expert 
               guidance backed by Berkshire Hathaway HomeServices.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -511,7 +504,6 @@ export default function ServicesPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

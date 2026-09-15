@@ -1,14 +1,20 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, DollarSign, TrendingUp, Home as HomeIcon, Users } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
-export const metadata: Metadata = {
+import { nap } from "@/lib/contact";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/neighborhoods/north-las-vegas",
   title: "Berkshire Hathaway HomeServices North Las Vegas | Affordable Homes",
   description:
-    "Find affordable North Las Vegas homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy helps first-time buyers and investors. Median price $385K. Call (702) 500-1942.",
+    "Find affordable North Las Vegas homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy helps first-time buyers and investors. Median price $385K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices North Las Vegas",
     "North Las Vegas homes for sale",
@@ -16,7 +22,7 @@ export const metadata: Metadata = {
     "first time home buyer Las Vegas",
     "new construction North Las Vegas",
   ],
-};
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -64,21 +70,9 @@ export default function NorthLasVegasPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
-              {" / "}
-              <span className="text-slate-900">North Las Vegas</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -86,10 +80,18 @@ export default function NorthLasVegasPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices North Las Vegas
             </h1>
+            <HeadingPhoto path="/neighborhoods/north-las-vegas" />
+
             <p className="text-xl text-slate-600">
               Affordable homeownership and investment opportunities. Find your North Las Vegas
               home with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -97,6 +99,8 @@ export default function NorthLasVegasPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               North Las Vegas Market | January 2026
             </h2>
+            <HeadingPhoto path="/neighborhoods/north-las-vegas" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$385,000</div>
@@ -158,7 +162,7 @@ export default function NorthLasVegasPage() {
                   </div>
                   <p className="text-slate-600">
                     North Las Vegas offers the lowest median home prices in the Las Vegas Valley, making
-                    homeownership attainable for first-time buyers, young families, and investors. Entry-level
+                    homeownership attainable for first-time buyers and investors. Entry-level
                     homes start in the $320,000s, while new construction from quality builders ranges
                     from $380,000 to $550,000—prices that would buy a condo elsewhere.
                   </p>
@@ -200,11 +204,11 @@ export default function NorthLasVegasPage() {
               </div>
 
               {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">North Las Vegas Schools</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Named campuses near North Las Vegas</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  North Las Vegas is served by Clark County School District, with newer schools in
-                  master-planned communities often performing above area averages:
+                  North Las Vegas is served by Clark County School District campuses. Newer campuses sit
+                  inside several master-planned villages—confirm zoning by address:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -324,48 +328,12 @@ export default function NorthLasVegasPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About North Las Vegas
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in North Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, North Las Vegas' median home price is $385,000—the most affordable
-                  in the Las Vegas Valley. First-time buyers can find homes starting in the $320,000s,
-                  while new construction ranges from $380,000 to $550,000.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Is North Las Vegas a good area to buy a home?
-                </h3>
-                <p className="text-slate-600">
-                  North Las Vegas has transformed dramatically with new master-planned communities,
-                  improved infrastructure, and major employment centers. It offers excellent value for
-                  first-time buyers and investors seeking positive cash flow on rental properties.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What new construction is available in North Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  Major builders including Lennar, KB Home, Richmond American, and Century Communities
-                  offer new construction in North Las Vegas. Communities like Aliante, Tule Springs,
-                  and Valley Vista feature modern designs with energy-efficient features.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Why choose Berkshire Hathaway HomeServices for North Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  BHHS provides expert guidance for first-time buyers navigating the purchase process,
-                  plus free representation on new construction purchases. Dr. Jan Duffy helps clients
-                  find value while avoiding common pitfalls in emerging neighborhoods.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in North Las Vegas?", a: "As of January 2026, North Las Vegas' median home price is $385,000—the most affordable in the Las Vegas Valley. First-time buyers can find homes starting in the $320,000s, while new construction ranges from $380,000 to $550,000." },
+              { q: "Is North Las Vegas a good area to buy a home?", a: "North Las Vegas has transformed dramatically with new master-planned communities, improved infrastructure, and major employment centers. It offers excellent value for first-time buyers and investors seeking positive cash flow on rental properties." },
+              { q: "What new construction is available in North Las Vegas?", a: "Major builders including Lennar, KB Home, Richmond American, and Century Communities offer new construction in North Las Vegas. Communities like Aliante, Tule Springs, and Valley Vista feature modern designs with energy-efficient features." },
+              { q: "Why choose Berkshire Hathaway HomeServices for North Las Vegas?", a: "BHHS provides expert guidance for first-time buyers navigating the purchase process, plus free representation on new construction purchases. Dr. Jan Duffy helps clients find value while avoiding common pitfalls in emerging neighborhoods." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -377,22 +345,12 @@ export default function NorthLasVegasPage() {
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices North Las Vegas expert,
               for guidance on finding affordable homes that fit your budget.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

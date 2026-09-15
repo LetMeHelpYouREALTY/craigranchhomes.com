@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { 
@@ -18,11 +16,17 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/luxury-homes",
   title: "Las Vegas Luxury Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Discover Las Vegas luxury real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. The Ridges, MacDonald Highlands, Summerlin, Southern Highlands. $1M+ homes. Call (702) 500-1942.",
+    "Discover Las Vegas luxury real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. The Ridges, MacDonald Highlands, Summerlin, Southern Highlands. $1M+ homes. Call (702) 222-1964.",
   keywords: [
     "Las Vegas luxury homes",
     "The Ridges Las Vegas",
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
     "MacDonald Highlands Henderson",
     "luxury real estate agent Las Vegas",
   ],
-};
+});
 
 const luxurySchema = {
   "@context": "https://schema.org",
@@ -120,8 +124,7 @@ export default function LuxuryHomesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(luxurySchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -131,6 +134,8 @@ export default function LuxuryHomesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Luxury Real Estate
             </h1>
+            <HeadingPhoto path="/luxury-homes" />
+
             <p className="text-xl text-slate-600 mb-8">
               <strong>Berkshire Hathaway HomeServices</strong> represents the gold standard in
               luxury real estate. When you're buying or selling a $1M+ home, trust matters more than
@@ -142,6 +147,9 @@ export default function LuxuryHomesPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Global Buyer Network</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Discrete Transactions</span>
             </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" bookLabel="Request Private Showing" />
+            </div>
           </div>
 
           {/* Luxury Stats */}
@@ -149,6 +157,8 @@ export default function LuxuryHomesPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Luxury Market Statistics | January 2026
             </h2>
+            <HeadingPhoto path="/luxury-homes" level="h2" />
+
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas luxury market continues to attract affluent buyers from California, 
               the Midwest, and international markets. Understanding current market conditions 
@@ -381,8 +391,7 @@ export default function LuxuryHomesPage() {
               Luxury real estate transactions involve unique considerations. Here are answers 
               to common questions from buyers and sellers in this market segment.
             </p>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "What defines a luxury home in Las Vegas?",
                   a: "Generally, homes priced at $1 million and above are considered luxury in Las Vegas. The ultra-luxury segment starts around $3 million. Features typically include custom architecture, premium locations in guard-gated communities, high-end finishes, and exclusive amenities like private pools, home theaters, and wine cellars.",
@@ -407,13 +416,7 @@ export default function LuxuryHomesPage() {
                   q: "What's the process for buying a luxury home in Las Vegas?",
                   a: "The process is similar to standard purchases but with additional considerations. Proof of funds is typically required before showings. Inspections are more extensive. Dr. Jan coordinates all aspects, including working with attorneys, financial advisors, and other professionals as needed.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -426,24 +429,7 @@ export default function LuxuryHomesPage() {
               Berkshire Hathaway prestige your transaction deserves. Confidential consultations 
               available for discerning clients.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                Schedule Private Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -451,7 +437,6 @@ export default function LuxuryHomesPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

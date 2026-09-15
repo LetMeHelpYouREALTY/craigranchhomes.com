@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -13,6 +11,12 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
+
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
@@ -21,10 +25,11 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/sun-city-anthem",
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 500-1942.",
+    "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Sun City Anthem homes for sale",
     "Sun City Anthem Henderson",
@@ -32,7 +37,7 @@ export const metadata: Metadata = {
     "active adult Henderson",
     "Berkshire Hathaway Sun City Anthem",
   ],
-};
+});
 
 // Breadcrumb items
 const breadcrumbs = [
@@ -103,21 +108,9 @@ export default function SunCityAnthemPage() {
     <>
       {/* Combined JSON-LD Schema: Breadcrumb + ResidentialComplex + FAQ */}
       <SchemaScript schema={pageSchemas} id="sun-city-anthem-schema" />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">55+ Communities</Link>
-              {" / "}
-              <span className="text-slate-900">Sun City Anthem</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Mountain className="h-4 w-4 mr-2" />
@@ -126,9 +119,18 @@ export default function SunCityAnthemPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Anthem
             </h1>
+            <HeadingPhoto path="/55-plus-communities/sun-city-anthem" />
+
             <p className="text-xl text-slate-600">
-              7,100+ homes. Mountain views. Henderson safety. Championship golf.
+              7,100+ homes. Mountain views. Championship golf. Anthem Center recreation.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -136,6 +138,8 @@ export default function SunCityAnthemPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Anthem at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/sun-city-anthem" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">$350K-$1.2M</div>
@@ -164,9 +168,9 @@ export default function SunCityAnthemPage() {
               </h2>
               <p>
                 <strong>Sun City Anthem</strong> brings the legendary Sun City lifestyle to Henderson,
-                Nevada's safest and most desirable city. Built by Del Webb from 1998-2008, this
+                Nevada. Built by Del Webb from 1998-2008, this
                 7,100+ home community offers stunning mountain views, championship golf, and
-                resort-caliber amenities—all within Henderson's renowned safety and quality of life.
+                resort-caliber amenities—all with 15–25 minute Strip drives and Henderson recreation campuses.
               </p>
               <p>
                 The community's centerpiece is the Anthem Center, a 64,000 sq ft clubhouse featuring
@@ -189,12 +193,13 @@ export default function SunCityAnthemPage() {
                 <Shield className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    Why Henderson Matters
+                    Why Henderson location matters
                   </h3>
                   <p className="text-slate-700 mb-4">
-                    Henderson consistently ranks as one of America's safest cities. For 55+ buyers,
-                    this translates to peace of mind, stable property values, and a community that
-                    attracts similar residents who value safety and quality of life.
+                    Henderson is Nevada's second-largest city, with 60+ parks, recreation centers,
+                    and 15–25 minute Strip drives depending on the village. For 55+ buyers that
+                    means published commute minutes, HOA-maintained streets, and golf and trail
+                    access without Strip-corridor traffic.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center bg-white rounded-lg p-4">
@@ -300,8 +305,8 @@ export default function SunCityAnthemPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Sun City Anthem combines everything Henderson is known for—safety, quality, and
-                stunning scenery—with the Del Webb lifestyle. The views from the upper sections
+                "Sun City Anthem combines Henderson parks and recreation campuses with mountain
+                views and the Del Webb clubhouse model. The views from the upper sections
                 are spectacular, and the Anthem Center rivals any resort clubhouse I've seen.
                 As a <strong>Berkshire Hathaway HomeServices</strong> agent, I help buyers find
                 the right balance of views, price, and proximity to amenities."
@@ -310,6 +315,13 @@ export default function SunCityAnthemPage() {
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Sun City Anthem FAQ
+            </h2>
+            <FaqAccordion items={sunCityAnthemFaqs} />
           </section>
 
           {/* CTA */}
@@ -321,27 +333,12 @@ export default function SunCityAnthemPage() {
               Experience Henderson's premier 55+ community. Dr. Jan Duffy provides tours and
               expert guidance for Sun City Anthem home buyers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-green-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-green-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-green-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

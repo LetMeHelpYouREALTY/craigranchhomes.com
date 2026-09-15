@@ -1,14 +1,20 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Star, Mountain, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
-export const metadata: Metadata = {
+import { nap } from "@/lib/contact";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/neighborhoods/the-ridges",
   title: "Berkshire Hathaway HomeServices The Ridges | Las Vegas Luxury Real Estate",
   description:
-    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 500-1942.",
+    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices The Ridges",
     "The Ridges homes for sale",
@@ -16,7 +22,7 @@ export const metadata: Metadata = {
     "luxury homes Las Vegas",
     "guard gated Summerlin",
   ],
-};
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -64,21 +70,9 @@ export default function TheRidgesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
-              {" / "}
-              <span className="text-slate-900">The Ridges</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -86,10 +80,18 @@ export default function TheRidgesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices The Ridges
             </h1>
+            <HeadingPhoto path="/neighborhoods/the-ridges" />
+
             <p className="text-xl text-slate-600">
               Las Vegas's most prestigious address. Experience The Ridges luxury with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -97,6 +99,8 @@ export default function TheRidgesPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               The Ridges Luxury Market | January 2026
             </h2>
+            <HeadingPhoto path="/neighborhoods/the-ridges" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$2.5M</div>
@@ -256,15 +260,15 @@ export default function TheRidgesPage() {
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Schools Serving The Ridges</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  The Ridges is served by top-rated public schools in the Palo Verde cluster, plus Las Vegas's
-                  finest private school options:
+                  The Ridges is served by public schools in the Palo Verde cluster, plus nearby
+                  private campuses including:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Public Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Palo Verde High School (8/10)</li>
-                      <li>• Sig Rogich Middle School (9/10)</li>
+                      <li>• Palo Verde High School</li>
+                      <li>• Sig Rogich Middle School</li>
                       <li>• Marion Earl Elementary</li>
                       <li>• Helen Smith Elementary</li>
                     </ul>
@@ -320,48 +324,12 @@ export default function TheRidgesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About The Ridges
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in The Ridges?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, The Ridges median home price is $2.5 million. Properties range from
-                  $1.5 million for smaller homes to over $15 million for custom estates with Strip and
-                  Red Rock views.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How exclusive is The Ridges community?
-                </h3>
-                <p className="text-slate-600">
-                  The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security,
-                  only 900 home sites across six distinct villages, and strict architectural guidelines
-                  ensuring estate-quality construction throughout.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What celebrities and executives live in The Ridges?
-                </h3>
-                <p className="text-slate-600">
-                  While privacy prevents naming residents, The Ridges is known for attracting professional
-                  athletes, entertainment executives, casino industry leaders, and high-net-worth individuals
-                  seeking privacy and luxury in Las Vegas.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Why use Berkshire Hathaway HomeServices for luxury home purchases?
-                </h3>
-                <p className="text-slate-600">
-                  BHHS represents a brand synonymous with trust and discretion—essential in luxury
-                  transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand
-                  high-end buyer requirements, and provide the confidentiality luxury clients expect.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in The Ridges?", a: "As of January 2026, The Ridges median home price is $2.5 million. Properties range from $1.5 million for smaller homes to over $15 million for custom estates with Strip and Red Rock views." },
+              { q: "How exclusive is The Ridges community?", a: "The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security, only 900 home sites across six distinct villages, and strict architectural guidelines ensuring estate-quality construction throughout." },
+              { q: "What celebrities and executives live in The Ridges?", a: "While privacy prevents naming residents, The Ridges is known for attracting professional athletes, entertainment executives, casino industry leaders, and high-net-worth individuals seeking privacy and luxury in Las Vegas." },
+              { q: "Why use Berkshire Hathaway HomeServices for luxury home purchases?", a: "BHHS represents a brand synonymous with trust and discretion—essential in luxury transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand high-end buyer requirements, and provide the confidentiality luxury clients expect." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -373,22 +341,12 @@ export default function TheRidgesPage() {
               Contact Dr. Jan Duffy for a confidential consultation about buying or selling
               in Las Vegas's most prestigious community.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

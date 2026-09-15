@@ -24,7 +24,7 @@ describe('LeadCaptureForm', () => {
     expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/phone/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/message/i)).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /send message to dr\. jan/i })).toBeInTheDocument()
   })
 
   it('shows property search fields when formType is property-search', () => {
@@ -58,7 +58,7 @@ describe('LeadCaptureForm', () => {
     await user.type(screen.getByLabelText(/message/i), 'I want to buy a house')
     
     // Submit form
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await user.click(screen.getByRole('button', { name: /send message to dr\. jan/i }))
     
     // Verify API was called
     await waitFor(() => {
@@ -99,7 +99,7 @@ describe('LeadCaptureForm', () => {
     await user.type(screen.getByLabelText(/email/i), 'john@example.com')
     
     // Submit form
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await user.click(screen.getByRole('button', { name: /send message to dr\. jan/i }))
     
     // Verify error is displayed
     await waitFor(() => {
@@ -129,7 +129,7 @@ describe('LeadCaptureForm', () => {
     await user.type(screen.getByLabelText(/email/i), 'john@example.com')
     
     // Submit form
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await user.click(screen.getByRole('button', { name: /send message to dr\. jan/i }))
     
     // Verify button is disabled during submission
     expect(screen.getByRole('button', { name: /submitting/i })).toBeDisabled()
@@ -147,7 +147,7 @@ describe('LeadCaptureForm', () => {
     await user.type(screen.getByLabelText(/first name/i), 'John')
     await user.type(screen.getByLabelText(/last name/i), 'Doe')
     
-    const submitButton = screen.getByRole('button', { name: /submit/i })
+    const submitButton = screen.getByRole('button', { name: /send message to dr\. jan/i })
     await user.click(submitButton)
     
     // HTML5 validation should prevent submission
@@ -176,7 +176,7 @@ describe('LeadCaptureForm', () => {
     await user.type(screen.getByLabelText(/bathrooms/i), '2.5')
     
     // Submit
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await user.click(screen.getByRole('button', { name: /send message to dr\. jan/i }))
     
     // Verify property data was sent
     await waitFor(() => {
@@ -210,7 +210,7 @@ describe('LeadCaptureForm', () => {
     await user.type(screen.getByLabelText(/first name/i), 'Test')
     await user.type(screen.getByLabelText(/last name/i), 'User')
     await user.type(screen.getByLabelText(/email/i), 'test@example.com')
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await user.click(screen.getByRole('button', { name: /send message to dr\. jan/i }))
     
     // Verify source tracking data
     await waitFor(() => {
@@ -236,7 +236,7 @@ describe('LeadCaptureForm', () => {
     // Fill and submit
     await user.type(screen.getByLabelText(/first name/i), 'John')
     await user.type(screen.getByLabelText(/email/i), 'john@example.com')
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await user.click(screen.getByRole('button', { name: /send message to dr\. jan/i }))
     
     // Wait for success
     await waitFor(() => {

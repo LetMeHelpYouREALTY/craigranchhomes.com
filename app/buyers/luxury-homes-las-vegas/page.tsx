@@ -1,9 +1,6 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Shield,
   Eye,
   Building,
@@ -16,11 +13,17 @@ import {
   DollarSign,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import { nap } from "@/lib/contact";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/buyers/luxury-homes-las-vegas",
   title: "Luxury Homes Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Las Vegas luxury real estate from $1.2M to $10M+. Guard-gated estates, Strip penthouses, and custom homes. Dr. Jan Duffy provides discrete, expert representation. Call (702) 500-1942.",
+    "Las Vegas luxury real estate from $1.2M to $10M+. Guard-gated estates, Strip penthouses, and custom homes. Dr. Jan Duffy provides discrete, expert representation. Call (702) 222-1964.",
   keywords: [
     "luxury homes Las Vegas",
     "The Ridges Las Vegas",
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     "guard gated communities Las Vegas",
     "Berkshire Hathaway luxury homes",
   ],
-};
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -69,21 +72,9 @@ export default function LuxuryHomesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/buyers" className="hover:text-blue-600">Buyers</Link>
-              {" / "}
-              <span className="text-slate-900">Luxury Homes</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Star className="h-4 w-4 mr-2" />
@@ -92,16 +83,12 @@ export default function LuxuryHomesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Luxury Real Estate
             </h1>
+            <HeadingPhoto path="/buyers/luxury-homes-las-vegas" />
+
             <p className="text-xl text-slate-600 mb-8">
               Guard-gated estates. Strip penthouses. Uncompromising privacy.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-800 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Schedule a Private Preview → (702) 500-1942
-            </a>
+            <CtaActions variant="onLight" bookLabel="Request Private Showing" />
           </div>
 
           {/* Market Performance */}
@@ -109,6 +96,8 @@ export default function LuxuryHomesPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Las Vegas Luxury Market Performance
             </h2>
+            <HeadingPhoto path="/buyers/luxury-homes-las-vegas" level="h2" />
+
             <div className="grid md:grid-cols-4 gap-6 mb-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-amber-400 mb-2">+161%</div>
@@ -198,7 +187,7 @@ export default function LuxuryHomesPage() {
                   </div>
                   <p className="text-slate-600 mb-4">
                     Elevated luxury with dramatic Strip and valley views. DragonRidge Country Club,
-                    modern architecture, and Henderson's low crime rates create an unmatched combination.
+                    modern architecture, and Henderson's community watch programs and HOA standards create an unmatched combination.
                   </p>
                   <ul className="space-y-2 mb-4">
                     <li className="flex items-center text-sm text-slate-700">
@@ -215,7 +204,7 @@ export default function LuxuryHomesPage() {
                     </li>
                     <li className="flex items-center text-sm text-slate-700">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Henderson safety & schools
+                      Guard-gated MacDonald Highlands
                     </li>
                   </ul>
                   <Link
@@ -303,7 +292,7 @@ export default function LuxuryHomesPage() {
                     </li>
                     <li className="flex items-center text-sm text-slate-700">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
+                      Silverado High School commute
                     </li>
                   </ul>
                   <Link
@@ -389,30 +378,12 @@ export default function LuxuryHomesPage() {
               Schedule a private consultation to discuss your requirements. Dr. Jan Duffy provides
               confidential, expert guidance for discerning buyers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-100 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-amber-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-400 transition-colors"
-              >
-                Request Private Showing
-              </Link>
-            </div>
-            <p className="mt-6 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" bookLabel="Request Private Showing" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

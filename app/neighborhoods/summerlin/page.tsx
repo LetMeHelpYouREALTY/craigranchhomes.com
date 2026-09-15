@@ -1,9 +1,14 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, MapPin, TreePine, Mountain, GraduationCap, ShoppingBag } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+
+import { nap } from "@/lib/contact";
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
@@ -12,10 +17,11 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/neighborhoods/summerlin",
   title: "Berkshire Hathaway HomeServices Summerlin | Las Vegas Luxury Real Estate",
   description:
-    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy offers expert guidance in Las Vegas's premier master-planned community. Median price $625K. Call (702) 500-1942.",
+    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy offers expert guidance in Las Vegas's premier master-planned community. Median price $625K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Summerlin",
     "Summerlin homes for sale",
@@ -23,7 +29,7 @@ export const metadata: Metadata = {
     "Summerlin Las Vegas",
     "luxury homes Summerlin",
   ],
-};
+});
 
 // Breadcrumb items for this page
 const breadcrumbs = [
@@ -47,7 +53,7 @@ const summerlinFaqs = [
   {
     question: "What makes Summerlin different from other Las Vegas communities?",
     answer:
-      "Summerlin offers 150+ parks, 150+ miles of trails, top-rated schools, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character.",
+      "Summerlin offers 150+ parks, 150+ miles of trails, named campuses such as Palo Verde High School, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character.",
   },
   {
     question: "Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?",
@@ -63,7 +69,7 @@ const pageSchemas = combineSchemas(
     name: "Summerlin",
     slug: "summerlin",
     description:
-      "Premier master-planned community in Las Vegas featuring Red Rock Canyon views, 150+ parks, top-rated schools, and luxury homes from $400K to $10M+.",
+      "Premier master-planned community in Las Vegas featuring Red Rock Canyon views, 150+ parks, named campuses such as Palo Verde High School, and luxury homes from $400K to $10M+.",
     latitude: 36.1672,
     longitude: -115.331,
     containedIn: "Las Vegas",
@@ -76,21 +82,9 @@ export default function SummerlinPage() {
     <>
       {/* Combined JSON-LD Schema: Breadcrumb + Place + FAQ */}
       <SchemaScript schema={pageSchemas} id="summerlin-schema" />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
-              {" / "}
-              <span className="text-slate-900">Summerlin</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -98,10 +92,18 @@ export default function SummerlinPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices Summerlin
             </h1>
+            <HeadingPhoto path="/neighborhoods/summerlin" />
+
             <p className="text-xl text-slate-600">
               Discover Las Vegas's premier master-planned community with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Summerlin expert.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -109,6 +111,8 @@ export default function SummerlinPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Summerlin Real Estate Market | January 2026
             </h2>
+            <HeadingPhoto path="/neighborhoods/summerlin" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$625,000</div>
@@ -136,9 +140,9 @@ export default function SummerlinPage() {
                 Why Summerlin Is Las Vegas's Most Sought-After Community
               </h2>
               <p>
-                When homebuyers search for the best neighborhoods in Las Vegas, <strong>Summerlin</strong> consistently
+                When homebuyers search Las Vegas master-planned communities, <strong>Summerlin</strong> consistently
                 ranks at the top. As a <strong>Berkshire Hathaway HomeServices</strong> agent specializing in Summerlin
-                real estate, Dr. Jan Duffy has helped hundreds of families find their perfect home in this
+                real estate, Dr. Jan Duffy has helped hundreds of buyers find the right home in this
                 award-winning master-planned community.
               </p>
               <p>
@@ -150,7 +154,7 @@ export default function SummerlinPage() {
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has deep roots in Summerlin,
-                and our agents understand the nuances of each village—from the family-friendly atmosphere of
+                and our agents understand the nuances of each village—from the parks and recreation amenities of
                 The Paseos to the luxury estates of The Ridges. Whether you're a first-time buyer looking at
                 condos in Affinity or a move-up buyer seeking a custom home in Red Rock Country Club, BHHS
                 has the expertise to guide you through the process.
@@ -174,13 +178,13 @@ export default function SummerlinPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <GraduationCap className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Top-Rated Schools</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Named Schools Nearby</h4>
                   </div>
                   <p className="text-slate-600">
-                    Summerlin is home to some of Nevada's highest-performing schools. The community includes
-                    multiple Blue Ribbon schools, advanced STEM programs, and excellent private school options
-                    like The Meadows School and Bishop Gorman High School. Families consistently choose
-                    Summerlin for its exceptional educational opportunities.
+                    Summerlin is served by Clark County School District campuses including Palo Verde
+                    High School, West Career & Technical Academy, Sig Rogich Middle School, and
+                    elementary campuses such as William R. Lummis and Marion Earl. Private options
+                    nearby include The Meadows School and Bishop Gorman High School.
                   </p>
                 </div>
               </div>
@@ -189,14 +193,13 @@ export default function SummerlinPage() {
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Summerlin School Districts</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  Summerlin is served by the Clark County School District with some of Nevada's
-                  highest-rated public schools, plus excellent private options:
+                  Summerlin is served by the Clark County School District. Nearby campuses include:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Sig Rogich Middle School (9/10)</li>
+                      <li>• Sig Rogich Middle School</li>
                       <li>• William R. Lummis Elementary</li>
                       <li>• Marion Earl Elementary</li>
                       <li>• Helen Smith Elementary</li>
@@ -206,7 +209,7 @@ export default function SummerlinPage() {
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Palo Verde High School (8/10)</li>
+                      <li>• Palo Verde High School</li>
                       <li>• West Career & Technical Academy</li>
                       <li>• Del E. Webb Middle School</li>
                       <li>• Sig Rogich Middle School</li>
@@ -299,7 +302,7 @@ export default function SummerlinPage() {
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Summerlin isn't just a neighborhood—it's a lifestyle. I've been serving this area since
-                2008, and I can tell you exactly which villages suit young families, which offer the
+                2008, and I can tell you exactly which villages suit park-and-trail living, which offer the
                 best investment potential, and where you'll find the hidden gems. That local knowledge is
                 what sets Berkshire Hathaway HomeServices apart."
               </blockquote>
@@ -314,49 +317,12 @@ export default function SummerlinPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Summerlin Real Estate
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Summerlin?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8%
-                  increase year-over-year. Luxury homes in The Ridges and other guard-gated communities
-                  can exceed $2 million.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How long do homes stay on the market in Summerlin?
-                </h3>
-                <p className="text-slate-600">
-                  Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley
-                  average of 28 days. Well-priced homes in desirable villages often receive multiple
-                  offers within the first week.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What makes Summerlin different from other Las Vegas communities?
-                </h3>
-                <p className="text-slate-600">
-                  Summerlin offers 150+ parks, 150+ miles of trails, top-rated schools, and stunning
-                  Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with
-                  careful planning since 1990, creating distinct villages each with unique character.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?
-                </h3>
-                <p className="text-slate-600">
-                  Berkshire Hathaway HomeServices agents like Dr. Jan Duffy bring deep Summerlin expertise
-                  combined with the global resources and trusted reputation of the BHHS brand. This
-                  combination helps buyers compete in Summerlin's competitive market and helps sellers
-                  maximize their home's value.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in Summerlin?", a: "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million." },
+              { q: "How long do homes stay on the market in Summerlin?", a: "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week." },
+              { q: "What makes Summerlin different from other Las Vegas communities?", a: "Summerlin offers 150+ parks, 150+ miles of trails, named campuses such as Palo Verde High School, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character." },
+              { q: "Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?", a: "Berkshire Hathaway HomeServices agents like Dr. Jan Duffy bring deep Summerlin expertise combined with the global resources and trusted reputation of the BHHS brand. This combination helps buyers compete in Summerlin's competitive market and helps sellers maximize their home's value." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -368,22 +334,12 @@ export default function SummerlinPage() {
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Summerlin specialist,
               for a personalized home search or free market analysis.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

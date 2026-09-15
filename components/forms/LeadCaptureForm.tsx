@@ -127,7 +127,8 @@ export function LeadCaptureForm({
           Thank You!
         </h3>
         <p className="text-green-700">
-          Your information has been received. Dr. Jan Duffy will contact you shortly.
+          Your information has been received. Dr. Jan Duffy will contact you shortly. For faster
+          help, call or text (702) 222-1964.
         </p>
         <Button
           onClick={() => setSuccess(false)}
@@ -143,8 +144,8 @@ export function LeadCaptureForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       {error && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">
-          {error}
+        <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700" role="alert" aria-live="polite">
+          {error}. Call (702) 222-1964 if the problem continues.
         </div>
       )}
 
@@ -157,6 +158,7 @@ export function LeadCaptureForm({
           <Input
             id="firstName"
             name="firstName"
+            autoComplete="given-name"
             value={formData.firstName}
             onChange={handleChange}
             required
@@ -171,6 +173,7 @@ export function LeadCaptureForm({
           <Input
             id="lastName"
             name="lastName"
+            autoComplete="family-name"
             value={formData.lastName}
             onChange={handleChange}
             required
@@ -183,30 +186,35 @@ export function LeadCaptureForm({
         <label htmlFor="email" className="block text-sm font-medium mb-1">
           Email <span className="text-red-500">*</span>
         </label>
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          disabled={loading}
-        />
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            spellCheck={false}
+            inputMode="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            disabled={loading}
+          />
       </div>
 
       <div>
         <label htmlFor="phone" className="block text-sm font-medium mb-1">
           Phone
         </label>
-        <Input
-          id="phone"
-          name="phone"
-          type="tel"
-          value={formData.phone}
-          onChange={handleChange}
-          disabled={loading}
-          placeholder="(702) 555-1234"
-        />
+          <Input
+            id="phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            inputMode="tel"
+            value={formData.phone}
+            onChange={handleChange}
+            disabled={loading}
+            placeholder="(702) 555-1234…"
+          />
       </div>
 
       {/* Property Search Fields */}
@@ -359,7 +367,7 @@ export function LeadCaptureForm({
         disabled={loading || (!turnstileToken && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)}
         className="w-full"
       >
-        {loading ? 'Submitting...' : 'Submit'}
+        {loading ? "Sending…" : "Send Message to Dr. Jan"}
       </Button>
 
       <p className="text-xs text-gray-500 text-center">

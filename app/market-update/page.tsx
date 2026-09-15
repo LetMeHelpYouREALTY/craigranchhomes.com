@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -14,11 +12,18 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
+import { generateFAQSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/market-update",
   title: "Berkshire Hathaway HomeServices Las Vegas Market Update | January 2026",
   description:
-    "Weekly Las Vegas real estate market update from Berkshire Hathaway HomeServices Nevada Properties. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 500-1942.",
+    "Weekly Las Vegas real estate market update from Berkshire Hathaway HomeServices Nevada Properties. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Las Vegas market update",
     "Las Vegas real estate market",
@@ -26,7 +31,7 @@ export const metadata: Metadata = {
     "Henderson real estate market",
     "Las Vegas home prices",
   ],
-};
+});
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,6 +57,25 @@ const articleSchema = {
   },
 };
 
+const marketUpdateFaqs = [
+  {
+    q: "How current is this weekly Las Vegas market update?",
+    a: "This update covers the week of January 20, 2026. Median sale price was $452,500 with 847 closings. Call (702) 222-1964 for same-week comps in your ZIP.",
+  },
+  {
+    q: "Which areas moved fastest this week?",
+    a: "Summerlin averaged 21 days on market at a $628,000 median. Henderson was 23 days at $487,500. North Las Vegas was 31 days at $387,000.",
+  },
+  {
+    q: "Can I get this update emailed each week?",
+    a: "Yes. Use the signup on this page or message Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+  },
+  {
+    q: "Does a weekly bump mean I should list now?",
+    a: "A one-week move is noise until it stacks. Dr. Jan Duffy will compare your home to the last 90 days of sold comps before you set a list price.",
+  },
+];
+
 export default function MarketUpdatePage() {
   return (
     <>
@@ -59,21 +83,13 @@ export default function MarketUpdatePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(marketUpdateFaqs.map((f) => ({ question: f.q, answer: f.a })))) }}
+      />
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-4xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/market-report" className="hover:text-blue-600">Market Report</Link>
-              {" / "}
-              <span className="text-slate-900">Weekly Update</span>
-            </nav>
-          </div>
-
-          {/* Header */}
+{/* Header */}
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Calendar className="h-4 w-4 mr-2" />
@@ -82,12 +98,17 @@ export default function MarketUpdatePage() {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Berkshire Hathaway HomeServices Las Vegas Market Update
             </h1>
+            <HeadingPhoto path="/market-update" />
+
             <p className="text-xl text-slate-600">
               Your weekly insider report on Las Vegas Valley real estate from{" "}
               <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>
             </p>
             <div className="flex items-center justify-center mt-6 text-slate-500 text-sm">
               <span>By Dr. Jan Duffy, REALTOR® | BHHS Nevada Properties</span>
+            </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
             </div>
           </div>
 
@@ -96,6 +117,8 @@ export default function MarketUpdatePage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">
               5 Key Statistics This Week
             </h2>
+            <HeadingPhoto path="/market-update" level="h2" />
+
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {/* Stat 1 */}
               <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
@@ -375,6 +398,13 @@ export default function MarketUpdatePage() {
             </div>
           </section>
 
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Weekly Update FAQ
+            </h2>
+            <FaqAccordion items={marketUpdateFaqs} />
+          </section>
+
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -384,24 +414,7 @@ export default function MarketUpdatePage() {
               Want to know what these trends mean for your specific situation?
               Contact Dr. Jan Duffy for a free consultation tailored to your goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/home-valuation"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Get Free Home Valuation
-              </Link>
-            </div>
-            <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
 
           {/* Newsletter Signup */}
@@ -433,7 +446,6 @@ export default function MarketUpdatePage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

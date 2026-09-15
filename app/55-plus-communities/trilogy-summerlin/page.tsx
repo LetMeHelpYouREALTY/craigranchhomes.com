@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -15,11 +13,18 @@ import {
   Heart,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/trilogy-summerlin",
   title: "Trilogy at Summerlin Homes for Sale | Luxury Resort 55+ Living | Dr. Jan Duffy",
   description:
-    "Trilogy at Summerlin - luxury resort-style 55+ community. Homes from $500K-$1.1M. On-site farm-to-table restaurant, spa, contemporary designs. Dr. Jan Duffy, BHHS. Call (702) 500-1942.",
+    "Trilogy at Summerlin - luxury resort-style 55+ community. Homes from $500K-$1.1M. On-site farm-to-table restaurant, spa, contemporary designs. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
   keywords: [
     "Trilogy at Summerlin homes for sale",
     "Trilogy Summerlin Las Vegas",
@@ -34,7 +39,7 @@ export const metadata: Metadata = {
       "Where resort living meets 55+ community. Farm-to-table dining, spa, contemporary homes. From $500K. Dr. Jan Duffy, BHHS.",
     type: "website",
   },
-};
+});
 
 const communitySchema = {
   "@context": "https://schema.org",
@@ -62,25 +67,9 @@ export default function TrilogySummerlinPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
-                Home
-              </Link>
-              {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
-                55+ Communities
-              </Link>
-              {" / "}
-              <span className="text-slate-900">Trilogy at Summerlin</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-rose-100 text-rose-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Sparkles className="h-4 w-4 mr-2" />
@@ -89,10 +78,19 @@ export default function TrilogySummerlinPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Trilogy at Summerlin
             </h1>
+            <HeadingPhoto path="/55-plus-communities/trilogy-summerlin" />
+
             <p className="text-xl text-slate-600">
               Where five-star resort living meets 55+ community. Farm-to-table
               dining, world-class spa, and contemporary homes.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -100,6 +98,8 @@ export default function TrilogySummerlinPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Trilogy at Summerlin at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/trilogy-summerlin" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-rose-400 mb-1">
@@ -388,6 +388,17 @@ export default function TrilogySummerlinPage() {
             </div>
           </section>
 
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Trilogy at Summerlin FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Trilogy at Summerlin?", a: "Homes typically range from about $500,000 to $1.1 million as of January 2026. Monthly HOA is about $250–$350 and includes the clubhouse, spa, and dining amenities." },
+              { q: "What amenities are on site?", a: "Farm-to-table dining, spa, fitness, and contemporary floor plans on the Summerlin west side near Red Rock Canyon." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
+          </section>
+
           {/* CTA */}
           <section className="text-center bg-gradient-to-r from-rose-600 to-pink-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -397,21 +408,7 @@ export default function TrilogySummerlinPage() {
               Discover why Trilogy at Summerlin sets the standard for resort-style
               55+ living. Private tours available with Dr. Jan Duffy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-rose-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-rose-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-rose-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-rose-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="text-rose-200">
               Here to make your transition smooth, Dr. Jan{" "}
               <span role="img" aria-label="sunshine">
@@ -425,7 +422,6 @@ export default function TrilogySummerlinPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

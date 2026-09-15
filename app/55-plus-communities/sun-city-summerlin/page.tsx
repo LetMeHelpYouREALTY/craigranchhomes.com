@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -15,11 +13,19 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
+import { generateFAQSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/sun-city-summerlin",
   title: "Sun City Summerlin Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Nevada's largest 55+ community. Sun City Summerlin homes from $320K-$850K. 3 golf courses, 4 rec centers, 100+ clubs. Dr. Jan Duffy, BHHS specialist. Call (702) 500-1942.",
+    "Nevada's largest 55+ community. Sun City Summerlin homes from $320K-$850K. 3 golf courses, 4 rec centers, 100+ clubs. Dr. Jan Duffy, BHHS specialist. Call (702) 222-1964.",
   keywords: [
     "Sun City Summerlin homes for sale",
     "Sun City Summerlin Las Vegas",
@@ -27,7 +33,7 @@ export const metadata: Metadata = {
     "retirement community Las Vegas",
     "Berkshire Hathaway Sun City",
   ],
-};
+});
 
 const communitySchema = {
   "@context": "https://schema.org",
@@ -47,6 +53,21 @@ const communitySchema = {
   },
 };
 
+const sunCitySummerlinFaqs = [
+  {
+    q: "What is the price range in Sun City Summerlin?",
+    a: "Homes typically list from about $320,000 to $850,000 as of January 2026. HOA dues are about $155–$195 per month and include rec centers, golf access rules, and common-area maintenance.",
+  },
+  {
+    q: "How large is Sun City Summerlin?",
+    a: "About 7,700 homes with three golf courses, four recreation centers, and 100+ clubs. Mountain View Hospital sits adjacent to the campus.",
+  },
+  {
+    q: "How do I tour Sun City Summerlin with Dr. Jan Duffy?",
+    a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Register for a private tour before walking model streets.",
+  },
+];
+
 export default function SunCitySummerlinPage() {
   return (
     <>
@@ -54,21 +75,19 @@ export default function SunCitySummerlinPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateFAQSchema(
+              sunCitySummerlinFaqs.map((f) => ({ question: f.q, answer: f.a }))
+            )
+          ),
+        }}
+      />
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">55+ Communities</Link>
-              {" / "}
-              <span className="text-slate-900">Sun City Summerlin</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Trophy className="h-4 w-4 mr-2" />
@@ -77,9 +96,18 @@ export default function SunCitySummerlinPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Summerlin
             </h1>
+            <HeadingPhoto path="/55-plus-communities/sun-city-summerlin" />
+
             <p className="text-xl text-slate-600">
               7,700+ homes. 3 golf courses. 4 recreation centers. The gold standard of active adult living.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -87,6 +115,8 @@ export default function SunCitySummerlinPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Summerlin at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/sun-city-summerlin" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">$320K-$850K</div>
@@ -239,9 +269,9 @@ export default function SunCitySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Established community with mature landscaping</strong>
+                  <strong className="text-slate-900">Mature landscaping and full-grown trees</strong>
                   <p className="text-slate-600 text-sm">
-                    No construction noise, trees and vegetation fully grown, neighborhood character established
+                    No construction noise; trees and vegetation fully grown
                   </p>
                 </div>
               </div>
@@ -282,6 +312,13 @@ export default function SunCitySummerlinPage() {
             </div>
           </section>
 
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Sun City Summerlin FAQ
+            </h2>
+            <FaqAccordion items={sunCitySummerlinFaqs} />
+          </section>
+
           {/* CTA */}
           <section className="text-center bg-amber-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -291,27 +328,12 @@ export default function SunCitySummerlinPage() {
               Ready to experience Nevada's premier 55+ community? Dr. Jan Duffy offers private
               tours and expert guidance on finding your perfect Sun City Summerlin home.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-amber-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-amber-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

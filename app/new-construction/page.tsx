@@ -1,9 +1,6 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Building2,
   Shield,
   DollarSign,
@@ -15,14 +12,21 @@ import {
   Calendar,
   Users,
   FileText,
-  HelpCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import { nap } from "@/lib/contact";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/new-construction",
   title: "Berkshire Hathaway HomeServices New Construction Las Vegas | Buyer's Guide",
   description:
-    "Free buyer representation on new construction homes in Las Vegas. Dr. Jan Duffy helps you navigate builder contracts, negotiate upgrades, and secure incentives. Call (702) 500-1942.",
+    "Free buyer representation on new construction homes in Las Vegas. Dr. Jan Duffy helps you navigate builder contracts, negotiate upgrades, and secure incentives. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices new construction Las Vegas",
     "new homes Las Vegas",
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
     "Lennar Las Vegas",
     "KB Home Las Vegas",
   ],
-};
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -59,7 +63,7 @@ const faqSchema = {
       name: "Do I have to register Dr. Jan Duffy as my agent on the first visit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 500-1942 to register Dr. Jan Duffy as your buyer's agent before visiting any model home.",
+        text: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 222-1964 to register Dr. Jan Duffy as your buyer's agent before visiting any model home.",
       },
     },
     {
@@ -235,21 +239,9 @@ export default function NewConstructionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/services" className="hover:text-blue-600">Services</Link>
-              {" / "}
-              <span className="text-slate-900">New Construction</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Free Buyer Representation
@@ -257,11 +249,13 @@ export default function NewConstructionPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices New Construction Las Vegas
             </h1>
+            <HeadingPhoto path="/new-construction" />
+
             <p className="text-xl text-slate-600 mb-8">
               Your complete buyer's guide to new homes in Las Vegas. Free representation,
               expert contract review, and insider knowledge of builder incentives.
             </p>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-left max-w-2xl mx-auto">
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-left max-w-2xl mx-auto mb-8">
               <div className="flex items-start">
                 <AlertTriangle className="h-6 w-6 text-amber-600 mr-3 flex-shrink-0 mt-1" />
                 <div>
@@ -270,12 +264,17 @@ export default function NewConstructionPage() {
                   </h3>
                   <p className="text-amber-800 text-sm">
                     Most builders require agent registration on your <strong>first visit</strong>.
-                    Call <a href="tel:+17025001942" className="font-bold underline">(702) 500-1942</a> to 
+                    Call <a href="tel:+17022221964" className="font-bold underline">(702) 222-1964</a> to 
                     register Dr. Jan Duffy as your buyer's agent before visiting any model home—or you 
                     may lose your right to free professional representation.
                   </p>
                 </div>
               </div>
+            </div>
+            <CtaActions variant="onLight" bookLabel="Register Before You Tour" />
+            <div className="mt-8 max-w-xl mx-auto">
+              <p className="text-sm font-semibold text-slate-700 mb-3">Search live MLS inventory</p>
+              <RealScoutSearch />
             </div>
           </div>
 
@@ -284,6 +283,8 @@ export default function NewConstructionPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Why Use a BHHS Agent for New Construction?
             </h2>
+            <HeadingPhoto path="/new-construction" level="h2" />
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="flex items-start">
                 <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
@@ -464,8 +465,8 @@ export default function NewConstructionPage() {
                   </h3>
                   <p className="text-slate-600">
                     Call{" "}
-                    <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
-                      (702) 500-1942
+                    <a href="tel:+17022221964" className="text-blue-600 font-semibold hover:underline">
+                      (702) 222-1964
                     </a>{" "}
                     to register Dr. Jan Duffy as your buyer's agent before any builder visits. We'll 
                     discuss your needs, budget, and preferred locations, then accompany you to model homes.
@@ -555,80 +556,14 @@ export default function NewConstructionPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               New Construction FAQs
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Is buyer representation really free for new construction?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically
-                  2-3%) as part of their marketing budget. You pay nothing extra, and you get
-                  professional representation to protect your interests.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Why do I need an agent when buying new construction?
-                </h3>
-                <p className="text-slate-600">
-                  Builder sales reps work for the builder, not you. A BHHS agent reviews contracts
-                  (often 50+ pages), negotiates upgrades and incentives, monitors construction
-                  quality, and ensures deadlines are met. Without representation, you're negotiating
-                  against experienced professionals alone.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Do I have to register Dr. Jan Duffy as my agent on the first visit?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, most builders require your agent to accompany you or be registered on your
-                  FIRST visit. If you visit alone and sign the guest registry, you may forfeit your
-                  right to free representation. Call{" "}
-                  <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
-                    (702) 500-1942
-                  </a>{" "}
-                  to register Dr. Jan Duffy as your buyer's agent before visiting any model home.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What builder incentives are currently available?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns
-                  (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages.
-                  Incentives change monthly. Dr. Jan tracks current offers across all builders.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Can I negotiate on new construction pricing?
-                </h3>
-                <p className="text-slate-600">
-                  Base prices are typically firm, but everything else is negotiable—upgrades, lot
-                  premiums, closing costs, and design center selections. A BHHS agent knows which
-                  builders negotiate and how to maximize your leverage, especially on standing
-                  inventory.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Should I use the builder's preferred lender?
-                </h3>
-                <p className="text-slate-600">
-                  Builder lenders often offer significant incentives ($10K-$30K) to use their
-                  services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly
-                  higher rates, sometimes it doesn't. We ensure you make an informed decision.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "Is buyer representation really free for new construction?", a: "Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically 2-3%) as part of their marketing budget. You pay nothing extra, and you get professional representation to protect your interests." },
+              { q: "Why do I need an agent when buying new construction?", a: "Builder sales reps work for the builder, not you. A BHHS agent reviews contracts (often 50+ pages), negotiates upgrades and incentives, monitors construction quality, and ensures deadlines are met. Without representation, you're negotiating against experienced professionals alone." },
+              { q: "Do I have to register Dr. Jan Duffy as my agent on the first visit?", a: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 222-1964 to register Dr. Jan Duffy as your buyer's agent before visiting any model home." },
+              { q: "What builder incentives are currently available?", a: "As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages. Incentives change monthly. Dr. Jan tracks current offers across all builders." },
+              { q: "Can I negotiate on new construction pricing?", a: "Base prices are typically firm, but everything else is negotiable—upgrades, lot premiums, closing costs, and design center selections. A BHHS agent knows which builders negotiate and how to maximize your leverage, especially on standing inventory." },
+              { q: "Should I use the builder's preferred lender?", a: "Builder lenders often offer significant incentives ($10K-$30K) to use their services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly higher rates, sometimes it doesn't. We ensure you make an informed decision." },
+            ]} />
           </section>
 
           {/* What We Negotiate */}
@@ -665,28 +600,11 @@ export default function NewConstructionPage() {
               Ready to Tour New Construction?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Call <strong>(702) 500-1942</strong> to register Dr. Jan Duffy as your buyer's agent 
+              Call <strong>(702) 222-1964</strong> to register Dr. Jan Duffy as your buyer's agent 
               <strong> before</strong> visiting any model home—or you may lose your right to free 
               professional representation. Current incentive information available.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Request Builder Info
-              </Link>
-            </div>
-            <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">
@@ -694,7 +612,6 @@ export default function NewConstructionPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

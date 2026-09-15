@@ -1,14 +1,20 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
-export const metadata: Metadata = {
+import { nap } from "@/lib/contact";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/neighborhoods/henderson",
   title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
   description:
-    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's family-friendly communities. Median price $485K. Call (702) 500-1942.",
+    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's residential communities with parks and recreation. Median price $485K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Henderson",
     "Henderson homes for sale",
@@ -16,13 +22,13 @@ export const metadata: Metadata = {
     "Henderson Nevada",
     "Green Valley Henderson",
   ],
-};
+});
 
 const neighborhoodSchema = {
   "@context": "https://schema.org",
   "@type": "Place",
   name: "Henderson, Nevada",
-  description: "Nevada's second-largest city known for safety, schools, and family-friendly communities",
+  description: "Nevada's second-largest city known for parks, trails, and residential communities with parks and recreation",
   geo: {
     "@type": "GeoCoordinates",
     latitude: "36.0395",
@@ -44,18 +50,18 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How safe is Henderson compared to Las Vegas?",
+      name: "What amenities and commute times define Henderson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Henderson consistently ranks as one of America's safest cities. It has been named the safest city in Nevada and frequently appears in national 'Best Places to Live' rankings for its low crime rates and family-friendly environment.",
+        text: "Henderson is Nevada's second-largest city, with 60+ parks, recreation centers, and 15–25 minute commutes to the Las Vegas Strip depending on the village. Green Valley, Inspirada, MacDonald Highlands, and Lake Las Vegas each offer distinct HOA amenities and price points.",
       },
     },
     {
       "@type": "Question",
-      name: "What are the best neighborhoods in Henderson?",
+      name: "What neighborhoods define Henderson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Henderson's top neighborhoods include Green Valley (established, mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
+        text: "Henderson neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
       },
     },
     {
@@ -63,7 +69,7 @@ const faqSchema = {
       name: "Why choose Berkshire Hathaway HomeServices for Henderson real estate?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy know every community, school district, and HOA. The Berkshire Hathaway name provides trust and resources that benefit both buyers and sellers.",
+        text: "BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy know HOA documents, commute times, and recent comps in Green Valley, Inspirada, and Anthem. The Berkshire Hathaway name provides trust and resources that benefit both buyers and sellers.",
       },
     },
   ],
@@ -80,21 +86,9 @@ export default function HendersonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
-              {" / "}
-              <span className="text-slate-900">Henderson</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -102,10 +96,18 @@ export default function HendersonPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Berkshire Hathaway HomeServices Henderson
             </h1>
+            <HeadingPhoto path="/neighborhoods/henderson" />
+
             <p className="text-xl text-slate-600">
-              Nevada's safest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
+              Nevada's second-largest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8">
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -113,6 +115,8 @@ export default function HendersonPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Henderson Real Estate Market | January 2026
             </h2>
+            <HeadingPhoto path="/neighborhoods/henderson" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$485,000</div>
@@ -143,15 +147,14 @@ export default function HendersonPage() {
                 <strong>Henderson</strong> has quietly become one of the most desirable cities in the American
                 Southwest. As Nevada's second-largest city with over 320,000 residents, Henderson offers the
                 perfect balance of suburban tranquility and urban convenience. <strong>Berkshire Hathaway
-                HomeServices</strong> has been helping families find their Henderson dream homes for decades,
+                HomeServices</strong> has been helping buyers find Henderson homes for decades,
                 and Dr. Jan Duffy brings unmatched expertise to every transaction.
               </p>
               <p>
-                What sets Henderson apart? Start with safety. Henderson consistently ranks as one of America's
-                safest large cities, making it the top choice for families with children. The city's excellent
-                schools, low crime rates, and community-oriented atmosphere create an environment where
-                families thrive. Add in the fact that Nevada has no state income tax, and you understand why
-                so many Californians are making Henderson their new home.
+                What sets Henderson apart is scale and planning: 60+ parks, recreation centers, and
+                master-planned villages 15–25 minutes from the Strip. Nevada has no state income tax,
+                which is why many California buyers compare Henderson floor plans and HOA amenities
+                before they list a West Coast home.
               </p>
               <p>
                 The Henderson real estate market offers remarkable diversity. From the established tree-lined
@@ -168,25 +171,23 @@ export default function HendersonPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">America's Safest City</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">60+ Parks &amp; Trails</h4>
                   </div>
                   <p className="text-slate-600">
-                    Henderson has been named the safest city in Nevada and consistently ranks among America's
-                    safest large cities. The Henderson Police Department's community policing approach and
-                    active neighborhood watch programs contribute to exceptionally low crime rates that give
-                    families peace of mind.
+                    Henderson operates more than 60 parks, multiple recreation centers, and miles of
+                    trails. Green Valley, Inspirada, and Anthem each add HOA pools, clubhouses, and
+                    programmed events on top of city amenities.
                   </p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Family-First Community</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Master-Planned Villages</h4>
                   </div>
                   <p className="text-slate-600">
-                    Henderson is designed for families. The city operates over 60 parks, multiple recreation
-                    centers, and hundreds of youth programs. The Henderson Libraries system is award-winning,
-                    and community events throughout the year—from the Henderson Farmers Market to the annual
-                    Heritage Parade—bring neighbors together.
+                    From Green Valley&apos;s mature landscaping to Inspirada&apos;s town center and
+                    MacDonald Highlands&apos; custom estates, Henderson villages are planned around
+                    parks, shopping, and commute times—not generic slogans.
                   </p>
                 </div>
               </div>
@@ -202,7 +203,7 @@ export default function HendersonPage() {
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• John C. Vanderburg (9/10)</li>
+                      <li>• John C. Vanderburg</li>
                       <li>• Elise L. Wolff Elementary</li>
                       <li>• C.T. Sewell Elementary</li>
                       <li>• Pinecrest Academy (Charter)</li>
@@ -212,7 +213,7 @@ export default function HendersonPage() {
                   <div>
                     <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School (8/10)</li>
+                      <li>• Coronado High School</li>
                       <li>• Green Valley High School</li>
                       <li>• Foothill High School</li>
                       <li>• Bob Miller Middle School</li>
@@ -308,8 +309,8 @@ export default function HendersonPage() {
               <p>
                 Choosing <strong>Berkshire Hathaway HomeServices</strong> for your Henderson home search means
                 working with agents who understand the subtle differences between Henderson's many communities.
-                Dr. Jan Duffy can explain which neighborhoods have the best schools for your children's ages,
-                which HOAs are well-managed, and which areas offer the strongest investment potential. That
+                Dr. Jan Duffy can map commute times to named campuses such as Coronado High School
+                and Green Valley High School, review HOA documents, and compare recent sales. That
                 local knowledge, backed by the resources and reputation of Berkshire Hathaway, makes all the
                 difference.
               </p>
@@ -320,10 +321,9 @@ export default function HendersonPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Henderson offers something for everyone—young professionals, growing families, active retirees.
-                As a Berkshire Hathaway HomeServices agent, I help clients cut through the options and find
-                the community that fits their lifestyle. There's a reason Henderson keeps winning 'Best Places
-                to Live' awards."
+                "Henderson spans Green Valley, Inspirada, Anthem, MacDonald Highlands, and Lake Las Vegas.
+                As a Berkshire Hathaway HomeServices agent, I match buyers to square footage, HOA fees,
+                park acreage, and commute times to the Strip and airport."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
@@ -336,48 +336,12 @@ export default function HendersonPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Frequently Asked Questions About Henderson Real Estate
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Henderson?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Henderson's median home price is $485,000, up 5.1% from last year.
-                  Prices range from $350,000 for condos to over $2 million in luxury communities like
-                  MacDonald Highlands.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How safe is Henderson compared to Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  Henderson consistently ranks as one of America's safest cities. It has been named the
-                  safest city in Nevada and frequently appears in national "Best Places to Live" rankings
-                  for its low crime rates and family-friendly environment.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What are the best neighborhoods in Henderson?
-                </h3>
-                <p className="text-slate-600">
-                  Henderson's top neighborhoods include Green Valley (established, mature landscaping),
-                  Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented),
-                  and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Why choose Berkshire Hathaway HomeServices for Henderson real estate?
-                </h3>
-                <p className="text-slate-600">
-                  BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy
-                  know every community, school district, and HOA. The Berkshire Hathaway name provides
-                  trust and resources that benefit both buyers and sellers.
-                </p>
-              </div>
-            </div>
+                        <FaqAccordion items={[
+              { q: "What is the current median home price in Henderson?", a: "As of January 2026, Henderson's median home price is $485,000, up 5.1% from last year. Prices range from $350,000 for condos to over $2 million in luxury communities like MacDonald Highlands." },
+              { q: "What amenities and commute times define Henderson?", a: "Henderson is Nevada's second-largest city, with 60+ parks, recreation centers, and 15–25 minute commutes to the Strip depending on the village. Call Dr. Jan Duffy at (702) 222-1964 for current inventory by community." },
+              { q: "What neighborhoods define Henderson?", a: "Henderson neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury estates), Anthem (recreation campuses), and Lake Las Vegas (waterfront living). Each offers distinct amenities and commute times." },
+              { q: "Why choose Berkshire Hathaway HomeServices for Henderson real estate?", a: "BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy know HOA documents, commute times, and recent comps in Green Valley, Inspirada, and Anthem. The Berkshire Hathaway name provides trust and resources that benefit both buyers and sellers." },
+            ]} />
           </section>
 
           {/* CTA */}
@@ -389,22 +353,12 @@ export default function HendersonPage() {
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Henderson expert,
               for personalized guidance and local market insights.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

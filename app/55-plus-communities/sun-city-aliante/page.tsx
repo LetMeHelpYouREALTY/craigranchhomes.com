@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -14,11 +12,18 @@ import {
   TrendingUp,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/sun-city-aliante",
   title: "Sun City Aliante Homes for Sale | Most Affordable Sun City | Dr. Jan Duffy",
   description:
-    "Sun City Aliante - the most affordable Sun City in Las Vegas. Homes from $280K-$550K with full amenities. 18-hole golf course, pools, fitness center. Dr. Jan Duffy, BHHS. Call (702) 500-1942.",
+    "Sun City Aliante - the most affordable Sun City in Las Vegas. Homes from $280K-$550K with full amenities. 18-hole golf course, pools, fitness center. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
   keywords: [
     "Sun City Aliante homes for sale",
     "Sun City Aliante Las Vegas",
@@ -33,7 +38,7 @@ export const metadata: Metadata = {
       "Full amenities at the lowest price point. Golf, pools, fitness, 100+ clubs. From $280K. Dr. Jan Duffy, BHHS Nevada Properties.",
     type: "website",
   },
-};
+});
 
 const communitySchema = {
   "@context": "https://schema.org",
@@ -61,25 +66,9 @@ export default function SunCityAliantePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
-                Home
-              </Link>
-              {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
-                55+ Communities
-              </Link>
-              {" / "}
-              <span className="text-slate-900">Sun City Aliante</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <DollarSign className="h-4 w-4 mr-2" />
@@ -88,10 +77,19 @@ export default function SunCityAliantePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Aliante
             </h1>
+            <HeadingPhoto path="/55-plus-communities/sun-city-aliante" />
+
             <p className="text-xl text-slate-600">
               Full Sun City amenities at the best value. Golf, pools, fitness, and
               100+ clubs—from $280K.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -99,6 +97,8 @@ export default function SunCityAliantePage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Aliante at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/sun-city-aliante" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">
@@ -167,7 +167,7 @@ export default function SunCityAliantePage() {
                   <p className="text-slate-700 mb-4">
                     Compare Sun City Aliante to other Sun City communities and the
                     value becomes clear. You get the same lifestyle, amenities,
-                    and community feel—at significantly lower prices.
+                    and clubhouse programming—at significantly lower prices.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-lg p-4">
@@ -399,6 +399,17 @@ export default function SunCityAliantePage() {
             </div>
           </section>
 
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Sun City Aliante FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Sun City Aliante?", a: "Homes typically range from about $280,000 to $550,000 as of January 2026. Monthly HOA is about $140–$175, among the lowest Sun City dues in the valley." },
+              { q: "Does Sun City Aliante have golf?", a: "Yes. Residents have access to an 18-hole golf course plus pools, fitness, and 100+ clubs." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
+          </section>
+
           {/* CTA */}
           <section className="text-center bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -408,21 +419,7 @@ export default function SunCityAliantePage() {
               See why Sun City Aliante offers the best value in Las Vegas 55+
               living. Tour the community with Dr. Jan Duffy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-green-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-green-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-green-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
             <p className="text-green-200">
               Here to make your transition smooth, Dr. Jan{" "}
               <span role="img" aria-label="sunshine">
@@ -436,7 +433,6 @@ export default function SunCityAliantePage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

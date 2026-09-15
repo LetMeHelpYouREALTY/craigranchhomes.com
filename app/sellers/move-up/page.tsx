@@ -1,9 +1,6 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   TrendingUp,
   Home as HomeIcon,
   ArrowRight,
@@ -13,11 +10,17 @@ import {
   Shield,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/sellers/move-up",
   title: "Move-Up Sellers Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready for your next chapter? Dr. Jan Duffy helps Las Vegas homeowners leverage equity into their dream home. Sell and buy seamlessly. Call (702) 500-1942.",
+    "Ready for your next chapter? Dr. Jan Duffy helps Las Vegas homeowners leverage equity into their dream home. Sell and buy seamlessly. Call (702) 222-1964.",
   keywords: [
     "move up buyer Las Vegas",
     "sell and buy Las Vegas",
@@ -25,26 +28,14 @@ export const metadata: Metadata = {
     "upgrade home Las Vegas",
     "Berkshire Hathaway HomeServices seller",
   ],
-};
+});
 
 export default function MoveUpSellerPage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
-              {" / "}
-              <span className="text-slate-900">Move-Up Sellers</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <TrendingUp className="h-4 w-4 mr-2" />
@@ -53,16 +44,12 @@ export default function MoveUpSellerPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Ready for Your Next Chapter?
             </h1>
+            <HeadingPhoto path="/sellers/move-up" />
+
             <p className="text-xl text-slate-600 mb-8">
               Your home's equity unlocks your dream home. Let's make the upgrade seamless.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Start Your Upgrade → (702) 500-1942
-            </a>
+            <CtaActions variant="onLight" />
           </div>
 
           {/* Equity Section */}
@@ -70,6 +57,8 @@ export default function MoveUpSellerPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Your Equity Position is Stronger Than You Think
             </h2>
+            <HeadingPhoto path="/sellers/move-up" level="h2" />
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">$100K-$250K+</div>
@@ -108,8 +97,8 @@ export default function MoveUpSellerPage() {
                 <div className="flex-grow">
                   <h3 className="font-bold text-slate-900 mb-1">Centennial Hills → Summerlin</h3>
                   <p className="text-slate-600 text-sm">
-                    Upgrade from $450K starter to $650K+ in Downtown Summerlin area. Better schools,
-                    walkable amenities, Red Rock views.
+                    Upgrade from $450K starter to $650K+ in Downtown Summerlin. Palo Verde High
+                    School commute, walkable amenities, Red Rock views.
                   </p>
                 </div>
                 <ArrowRight className="h-6 w-6 text-blue-600 flex-shrink-0 ml-4" />
@@ -343,8 +332,7 @@ export default function MoveUpSellerPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Move-Up Seller FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much equity do I need to move up?",
                   a: "Most move-up buyers have 20-40% equity in their current home. If you purchased between 2015-2021, Las Vegas appreciation means you likely have $100,000-$250,000+ in equity. Dr. Jan provides free equity analysis to show exactly what you have to work with.",
@@ -359,19 +347,13 @@ export default function MoveUpSellerPage() {
                 },
                 {
                   q: "How do schools factor into a move-up decision?",
-                  a: "Schools significantly impact both your quality of life and resale value. Moving to better school zones (like Summerlin's Palo Verde High School district or Henderson's Coronado) often justifies higher prices through appreciation and demand.",
+                  a: "Name the campuses you care about and we will map commute times. Palo Verde High School in Summerlin and Coronado High School in Henderson are common comparisons. Price the home, the drive, and recent comps—not a school rating.",
                 },
                 {
                   q: "What are the tax implications of selling and buying?",
                   a: "If you've lived in your home 2+ years, up to $250,000 ($500,000 for couples) in gains are tax-free. For larger gains, consult a tax advisor. Dr. Jan can refer you to trusted CPAs who specialize in real estate transactions.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -383,27 +365,12 @@ export default function MoveUpSellerPage() {
               Get a free equity analysis and see what your next home could look like.
               Dr. Jan will show you the numbers and create a strategic plan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/home-valuation"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Get Free Home Valuation
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

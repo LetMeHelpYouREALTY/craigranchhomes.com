@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -18,11 +16,17 @@ import {
   Award,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/sellers",
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
-    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 500-1942.",
+    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 222-1964.",
   keywords: [
     "sell home Las Vegas",
     "Las Vegas listing agent",
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
     "Las Vegas real estate agent",
     "Summerlin home selling",
   ],
-};
+});
 
 const sellerSchema = {
   "@context": "https://schema.org",
@@ -129,8 +133,7 @@ export default function SellersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sellerSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -140,6 +143,8 @@ export default function SellersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sell Your Las Vegas Home for Top Dollar
             </h1>
+            <HeadingPhoto path="/sellers" />
+
             <p className="text-xl text-slate-600 mb-8">
               When you list with <strong>Berkshire Hathaway HomeServices</strong>, you get
               world-class marketing, expert pricing, and a name that buyers trust. Dr. Jan Duffy 
@@ -151,6 +156,9 @@ export default function SellersPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> World-Class Marketing</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
             </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -158,6 +166,8 @@ export default function SellersPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Seller Market Statistics | January 2026
             </h2>
+            <HeadingPhoto path="/sellers" level="h2" />
+
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas housing market remains favorable for sellers with low inventory and 
               steady demand. Well-priced homes are selling quickly, and appreciation continues 
@@ -381,8 +391,7 @@ export default function SellersPage() {
               Selling your home raises many questions. Here are answers to the most common 
               concerns from Las Vegas home sellers.
             </p>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How long will it take to sell my Las Vegas home?",
                   a: "Well-priced Las Vegas homes are selling in an average of 28 days. Luxury homes ($1M+) may take 45+ days. The key is pricing correctly from day one—overpriced homes can sit for months, losing both time and money.",
@@ -407,13 +416,7 @@ export default function SellersPage() {
                   q: "Do I need to be moved out before listing?",
                   a: "Not necessarily. Many homes sell while occupied. However, vacant homes are easier to show and stage. Dr. Jan will help you develop a strategy based on your specific situation and timeline.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -424,24 +427,7 @@ export default function SellersPage() {
               could sell for with Berkshire Hathaway HomeServices. No obligation, no pressure—just 
               honest advice and expert analysis.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -449,7 +435,6 @@ export default function SellersPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

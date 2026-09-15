@@ -1,14 +1,18 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calculator } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/investment-properties",
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
   description:
-    "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 500-1942.",
+    "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 222-1964.",
   keywords: [
     "Las Vegas investment property",
     "Las Vegas rental property",
@@ -17,7 +21,7 @@ export const metadata: Metadata = {
     "1031 exchange Las Vegas",
     "cash flow properties Las Vegas",
   ],
-};
+});
 
 const investmentAreas = [
   {
@@ -67,8 +71,7 @@ const investmentAreas = [
 export default function InvestmentPropertiesPage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -78,16 +81,23 @@ export default function InvestmentPropertiesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Investment Properties
             </h1>
+            <HeadingPhoto path="/investment-properties" />
+
             <p className="text-xl text-slate-600">
               No state income tax, strong appreciation, and excellent rental yields. Discover why
               investors choose Las Vegas—with guidance from{" "}
               <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Why Las Vegas */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Invest in Las Vegas?</h2>
+            <HeadingPhoto path="/investment-properties" level="h2" />
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-3" />
@@ -301,33 +311,33 @@ export default function InvestmentPropertiesPage() {
                 <p className="text-slate-600 mb-4">
                   <strong>Best for: Cash flow investors.</strong> Highest cap rates in the valley (5.2%+)
                   with lower entry prices. Growing population as Amazon, Fanatics, and other employers
-                  expand. School quality varies by area—research specific zones.
+                  expand. Compare commute times to named campuses such as Legacy High School.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div><span className="font-medium">Entry:</span> $350K-$450K</div>
                   <div><span className="font-medium">Rent:</span> $1,800-$2,200</div>
-                  <div><span className="font-medium">Tenant Pool:</span> Working families, warehouse workers</div>
+                  <div><span className="font-medium">Tenant Pool:</span> Warehouse, logistics, and service employees</div>
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">Henderson</h3>
                 <p className="text-slate-600 mb-4">
-                  <strong>Best for: Balanced investors.</strong> Premium tenant quality, excellent schools,
-                  and steady appreciation. Lower vacancy rates and longer tenant retention offset
-                  slightly lower cap rates.
+                  <strong>Best for: Balanced investors.</strong> Lower vacancy, longer lease terms,
+                  and commute times to named campuses such as Coronado High School. Steady
+                  appreciation offsets slightly lower cap rates.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div><span className="font-medium">Entry:</span> $450K-$600K</div>
                   <div><span className="font-medium">Rent:</span> $2,100-$2,800</div>
-                  <div><span className="font-medium">Tenant Pool:</span> Professionals, families, retirees</div>
+                  <div><span className="font-medium">Tenant Pool:</span> Office, medical, and hospitality workers</div>
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">Summerlin</h3>
                 <p className="text-slate-600 mb-4">
                   <strong>Best for: Appreciation investors.</strong> Premium neighborhood with strongest
-                  appreciation (6.8% YoY). Lower cap rates but exceptional tenant quality and
-                  very low vacancy. Best-in-class schools and amenities.
+                  appreciation (6.8% YoY). Lower cap rates but longer lease terms and
+                  very low vacancy. Downtown Summerlin amenities and Palo Verde High School commute.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div><span className="font-medium">Entry:</span> $550K-$800K</div>
@@ -399,8 +409,7 @@ export default function InvestmentPropertiesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Investment Property FAQs
             </h2>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "What returns can I expect from Las Vegas rental property?",
                   a: "Typical cap rates range from 4-6%, with appreciation adding another 4-5% annually in recent years. Total returns of 8-10% are achievable in the right neighborhoods. Dr. Jan provides detailed ROI analysis on any property you're considering.",
@@ -417,13 +426,7 @@ export default function InvestmentPropertiesPage() {
                   q: "What's the best area for investment properties?",
                   a: "It depends on your strategy. North Las Vegas offers the best cap rates, while Summerlin provides stronger appreciation. Henderson balances both. Dr. Jan analyzes your goals to recommend the right areas.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -435,16 +438,7 @@ export default function InvestmentPropertiesPage() {
               Get expert guidance on Las Vegas investment properties from Dr. Jan Duffy and
               Berkshire Hathaway HomeServices.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
-            </a>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -452,7 +446,6 @@ export default function InvestmentPropertiesPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

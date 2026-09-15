@@ -1,21 +1,28 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import { nap } from "@/lib/contact";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/security-policy",
   title: 'Security Policy',
   description: 'Security policy and responsible disclosure information for heyberkshire.com',
   robots: {
     index: true,
     follow: true,
   },
-}
+})
 
 export default function SecurityPolicyPage() {
   return (
-    <div className="min-h-screen bg-white py-12">
+    <div id="main-content" className="min-h-screen bg-white py-12">
       <div className="container mx-auto max-w-4xl px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
           Security Policy
         </h1>
+            <HeadingPhoto path="/security-policy" />
+
 
         <div className="prose prose-lg max-w-none">
           {/* Overview */}
@@ -23,6 +30,8 @@ export default function SecurityPolicyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
               Our Commitment to Security
             </h2>
+            <HeadingPhoto path="/security-policy" level="h2" />
+
             <p className="text-gray-700 leading-relaxed">
               At Berkshire Hathaway HomeServices Nevada Properties, we take the security
               of our systems and the privacy of our clients seriously. This page outlines
@@ -53,8 +62,8 @@ export default function SecurityPolicyPage() {
                 </li>
                 <li>
                   <strong>Phone:</strong>{' '}
-                  <a href="tel:+17025001942" className="underline">
-                    (702) 500-1942
+                  <a href="tel:+17022221964" className="underline">
+                    (702) 222-1964
                   </a>
                 </li>
                 <li>
@@ -246,16 +255,24 @@ export default function SecurityPolicyPage() {
               </p>
               <p className="mb-2">
                 Email:{' '}
-                <a href="mailto:info@heyberkshire.com" className="text-blue-600 underline">
-                  info@heyberkshire.com
+                <a href={`mailto:${nap.email}`} className="text-blue-600 underline">
+                  {nap.email}
                 </a>
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+17025001942" className="text-blue-600 underline">
-                  (702) 500-1942
+                <a href="tel:+17022221964" className="text-blue-600 underline">
+                  (702) 222-1964
                 </a>
               </p>
+              <address className="not-italic mt-4 text-gray-700">
+                Dr. Jan Duffy — Berkshire Hathaway HomeServices Nevada Properties
+                <br />
+                9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134
+              </address>
+            </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
             </div>
           </section>
 

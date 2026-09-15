@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -19,11 +17,17 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/buyers",
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 500-1942.",
+    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 222-1964.",
   keywords: [
     "buy home Las Vegas",
     "Las Vegas home buyer",
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
     "California relocation Las Vegas",
     "55+ communities Las Vegas",
   ],
-};
+});
 
 const buyerSchema = {
   "@context": "https://schema.org",
@@ -83,8 +87,8 @@ const buyingSteps = [
 
 const neighborhoods = [
   { name: "Summerlin", price: "$625K", description: "Master-planned community with Red Rock views" },
-  { name: "Henderson", price: "$485K", description: "Family-friendly with low crime rates" },
-  { name: "Green Valley", price: "$520K", description: "Established with mature landscaping" },
+  { name: "Henderson", price: "$485K", description: "Parks, trails, and master-planned villages" },
+  { name: "Green Valley", price: "$520K", description: "Mature landscaping and golf courses" },
   { name: "The Ridges", price: "$2.5M", description: "Ultra-luxury guard-gated estates" },
   { name: "North Las Vegas", price: "$385K", description: "Affordable new construction" },
   { name: "Southern Highlands", price: "$750K", description: "Golf course community" },
@@ -97,8 +101,7 @@ export default function BuyersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buyerSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -108,6 +111,8 @@ export default function BuyersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Buy Your Las Vegas Home with Confidence
             </h1>
+            <HeadingPhoto path="/buyers" />
+
             <p className="text-xl text-slate-600 mb-8">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
               you're backed by the most trusted name in real estate—and it costs you nothing.
@@ -118,6 +123,9 @@ export default function BuyersPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS Access</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
             </div>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
           </div>
 
           {/* Value Prop */}
@@ -125,6 +133,8 @@ export default function BuyersPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
+            <HeadingPhoto path="/buyers" level="h2" />
+
                 <p className="text-slate-300 mb-6">
                   Here's what many buyers don't know: having your own agent costs you nothing. The
                   seller pays the commission, but the representation is yours.{" "}
@@ -208,7 +218,7 @@ export default function BuyersPage() {
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers diverse neighborhoods for every lifestyle and budget. Whether you're 
-              seeking luxury estates in guard-gated communities, family homes near top-rated schools, 
+              seeking luxury estates in guard-gated communities, homes near named local schools, 
               or affordable new construction, Dr. Jan helps you find the perfect neighborhood. Here's 
               a quick guide to median prices and what each area offers.
             </p>
@@ -258,7 +268,7 @@ export default function BuyersPage() {
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
                   0% state income tax, 40-60% lower home prices. See what your CA equity buys in 
-                  Las Vegas. Dr. Jan specializes in helping California families transition to Nevada.
+                  Las Vegas. Dr. Jan specializes in helping California buyers transition to Nevada.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
               </Link>
@@ -351,7 +361,7 @@ export default function BuyersPage() {
                 "My job isn't just to show you houses—it's to make sure you don't overpay, that you
                 understand what you're buying, and that you're protected through every step of the
                 transaction. That's what Berkshire Hathaway HomeServices representation means. I treat 
-                every client like family and won't stop until we find the right home for your needs."
+                every client with the same care and won't stop until we find the right home for your needs."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
@@ -396,10 +406,9 @@ export default function BuyersPage() {
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Get answers to the most common questions from Las Vegas home buyers. If you don't 
-              see your question here, call Dr. Jan Duffy at (702) 500-1942 for a free consultation.
+              see your question here, call Dr. Jan Duffy at (702) 222-1964 for a free consultation.
             </p>
-            <div className="space-y-4">
-              {[
+            <FaqAccordion items={[ 
                 {
                   q: "How much do I need for a down payment in Las Vegas?",
                   a: "Down payments vary by loan type: FHA requires 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans, and USDA loans 0% for rural areas. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in low down payment programs.",
@@ -421,16 +430,10 @@ export default function BuyersPage() {
                   a: "The Las Vegas market is moderately competitive with 2.1 months of inventory—a slight seller's market. Well-priced homes in desirable areas like Summerlin and Henderson often receive multiple offers within the first week. Having a pre-approval and experienced agent gives you a significant advantage.",
                 },
                 {
-                  q: "What are the best neighborhoods for families in Las Vegas?",
-                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are top choices for families, offering excellent schools, parks, and community amenities. Dr. Jan can match you with the right neighborhood based on your priorities—schools, commute, budget, and lifestyle.",
+                  q: "Which neighborhoods have the most parks, trails, and named school campuses?",
+                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills have extensive parks, recreation centers, and named campuses such as Palo Verde High School, Coronado High School, and Arbor View High School. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+               ]} />
           </section>
 
           {/* CTA */}
@@ -441,24 +444,7 @@ export default function BuyersPage() {
               consultation. Get expert guidance backed by Berkshire Hathaway HomeServices—the 
               seller pays the commission, so representation is free for you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
+            <CtaActions variant="onDark" />
           </section>
         </div>
 
@@ -466,7 +452,6 @@ export default function BuyersPage() {
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

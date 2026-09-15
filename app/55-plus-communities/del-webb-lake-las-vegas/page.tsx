@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -12,11 +10,18 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import CtaActions from "@/components/sections/CtaActions";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
-export const metadata: Metadata = {
+
+export const metadata: Metadata = pageMetadata({
+  path: "/55-plus-communities/del-webb-lake-las-vegas",
   title: "Del Webb at Lake Las Vegas Homes | Berkshire Hathaway HomeServices",
   description:
-    "Lakefront 55+ living at Del Webb Lake Las Vegas. Homes from $400K-$900K. Resort amenities, stunning lake and mountain views. Dr. Jan Duffy. Call (702) 500-1942.",
+    "Lakefront 55+ living at Del Webb Lake Las Vegas. Homes from $400K-$900K. Resort amenities, stunning lake and mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Del Webb Lake Las Vegas",
     "Lake Las Vegas 55 plus",
@@ -24,26 +29,14 @@ export const metadata: Metadata = {
     "lakefront retirement community",
     "Berkshire Hathaway Del Webb",
   ],
-};
+});
 
 export default function DelWebbLakeLasVegasPage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">55+ Communities</Link>
-              {" / "}
-              <span className="text-slate-900">Del Webb at Lake Las Vegas</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
+{/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Waves className="h-4 w-4 mr-2" />
@@ -52,9 +45,18 @@ export default function DelWebbLakeLasVegasPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Del Webb at Lake Las Vegas
             </h1>
+            <HeadingPhoto path="/55-plus-communities/del-webb-lake-las-vegas" />
+
             <p className="text-xl text-slate-600">
               Modern homes. Lake views. Resort living. The newest Del Webb in Las Vegas.
             </p>
+            <div className="mt-8">
+              <CtaActions variant="onLight" />
+            </div>
+            <div className="mt-8 max-w-xl mx-auto text-left">
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Search live MLS inventory</p>
+              <RealScoutSearch />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -62,6 +64,8 @@ export default function DelWebbLakeLasVegasPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Del Webb at Lake Las Vegas at a Glance
             </h2>
+            <HeadingPhoto path="/55-plus-communities/del-webb-lake-las-vegas" level="h2" />
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$400K-$900K</div>
@@ -257,6 +261,17 @@ export default function DelWebbLakeLasVegasPage() {
             </div>
           </section>
 
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+              Del Webb Lake Las Vegas FAQ
+            </h2>
+            <FaqAccordion items={[
+              { q: "What is the price range at Del Webb Lake Las Vegas?", a: "Homes typically range from about $400,000 to $900,000 as of January 2026. Monthly HOA is about $200–$280." },
+              { q: "Is this a lakefront 55-plus community?", a: "Yes. Del Webb at Lake Las Vegas is a newer 55+ village with lake and mountain views and resort amenities in Henderson." },
+              { q: "How do I tour with Dr. Jan Duffy?", a: "Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134." },
+            ]} />
+          </section>
+
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -266,27 +281,12 @@ export default function DelWebbLakeLasVegasPage() {
               Tour Del Webb at Lake Las Vegas with Dr. Jan Duffy. See the homes, the lake,
               and the lifestyle that makes this community special.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule a Tour
-              </Link>
-            </div>
+            <CtaActions variant="onDark" />
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }
