@@ -66,6 +66,17 @@ describe("village chassis replacements", () => {
       expect(src).not.toContain(">New Construction Communities<");
     }
   });
+
+  it("avoids premier slogan copy on village pages", () => {
+    for (const slug of villages) {
+      const src = readFileSync(
+        join(process.cwd(), "app/neighborhoods", slug, "page.tsx"),
+        "utf8"
+      );
+      expect(src.toLowerCase()).not.toContain("premier");
+    }
+  });
+
   it("keeps market snapshot H2s unique across village files", () => {
     const headings: string[] = [];
     for (const slug of villages) {

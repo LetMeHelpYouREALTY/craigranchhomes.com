@@ -99,13 +99,12 @@ export default function BuyersPage() {
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
+                <h2 className="text-3xl font-bold mb-4">The seller pays the buyer-broker fee — the file is still yours</h2>
 <p className="text-slate-300 mb-6">
-                  Here's what many buyers don't know: having your own agent costs you nothing. The
-                  seller pays the commission, but the representation is yours.{" "}
-                  <strong>Berkshire Hathaway HomeServices</strong> agents protect your interests,
-                  not the seller's. In a competitive market like Las Vegas, having expert 
-                  representation can mean the difference between winning your dream home and losing out.
+                  Buyer representation is explained at Suite 100. The seller typically pays the
+                  buyer-broker fee, and the agency file is yours.{" "}
+                  <strong>Berkshire Hathaway HomeServices</strong> agents write offers, inspections,
+                  and occupancy dates for the buyer — not the listing agent. Call (702) 222-1964.
                 </p>
                 <ul className="space-y-2">
                   {[

@@ -25,7 +25,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/summerlin",
   title: "Berkshire Hathaway HomeServices Summerlin | Las Vegas Luxury Real Estate",
   description:
-    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy offers expert guidance in Las Vegas's premier master-planned community. Median price $625K. Call (702) 222-1964.",
+    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Downtown Summerlin and Red Rock trailheads are 10–15 minutes from Suite 100. January 2026 median $625K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Summerlin",
     "Summerlin homes for sale",
@@ -49,7 +49,7 @@ const pageSchemas = combineSchemas(
     name: "Summerlin",
     slug: "summerlin",
     description:
-      "Premier master-planned community in Las Vegas featuring Red Rock Canyon views, 150+ parks, named campuses such as Palo Verde High School, and luxury homes from $400K to $10M+.",
+      "Howard Hughes 22,500-acre west-valley plat with Red Rock Canyon trailheads, 150+ parks, named campuses such as Palo Verde High School, and published list bands from $400K to $10M+.",
     latitude: 36.1672,
     longitude: -115.331,
     containedIn: "Las Vegas",
@@ -74,8 +74,8 @@ export default function SummerlinPage() {
             <HeadingPhoto path="/neighborhoods/summerlin" />
 
             <p className="text-xl text-slate-600">
-              Discover Las Vegas's premier master-planned community with Dr. Jan Duffy, your trusted{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> Summerlin expert.
+              Downtown Summerlin and Red Rock trailheads share a 10–15 minute clock from Suite 100
+              with Dr. Jan Duffy at <strong>Berkshire Hathaway HomeServices</strong> Nevada Properties.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -125,10 +125,10 @@ export default function SummerlinPage() {
               </p>
               <p>
                 Developed by The Howard Hughes Corporation since 1990, Summerlin spans 22,500 acres along the
-                western rim of the Las Vegas Valley. The community offers an unparalleled lifestyle with Red Rock
-                Canyon as its backdrop—providing hiking, biking, and outdoor recreation just minutes from your
-                front door. With over 150 parks, 150 miles of trails, and nine golf courses, Summerlin residents
-                use 150 parks, 150 miles of trails, and nine golf courses on the same west-valley loop.
+                western rim of the Las Vegas Valley. Red Rock Canyon trailheads sit on the same west
+                clock as the villages — hiking and bike paths minutes from listing streets. With over
+                150 parks, 150 miles of trails, and nine golf courses, we compare acreage and drive time
+                from Suite 100, not a slogan.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has deep roots in Summerlin,
@@ -150,15 +150,14 @@ export default function SummerlinPage() {
                 The current Summerlin real estate market shows strong demand with <strong>342 active listings</strong> and
                 an average of just <strong>22 days on market</strong>. The median home price of <strong>$625,000</strong> represents
                 solid appreciation while still offering value compared to similar communities in California.
-                Buyers relocating from the West Coast find that Summerlin delivers a comparable lifestyle at
-                a fraction of the cost—with no state income tax.
+                Buyers relocating from the West Coast compare January 2026 medians at Suite 100
+                against California net proceeds — with no Nevada state income tax.
               </p>
               <p>
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent gives you access to listings
-                before they hit the market, expert negotiation skills, and the backing of a globally trusted brand.
-                Dr. Jan Duffy has been serving Summerlin since 2008, which means you'll have insights that online 
-                searches simply can't provide—from which streets have the best mountain views to which builders 
-                offer the best construction quality.
+                before they hit the market and offer math written at 9406 W Lake Mead Blvd.
+                Dr. Jan Duffy has been serving Summerlin since 2008 — which streets have mountain views
+                and which builder rows we register first are desk facts, not a search screenshot.
               </p>
             </div>
           </section>

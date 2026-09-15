@@ -108,10 +108,9 @@ export default function TheRidgesPage() {
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has represented buyers
                 and sellers in The Ridges since the community's inception. Dr. Jan Duffy understands that
-                luxury transactions require more than market knowledge—they demand discretion, sophisticated
-                marketing, and access to qualified buyers worldwide. The BHHS global network connects The
-                Ridges properties with high-net-worth individuals actively seeking premier real estate
-                investments in Las Vegas.
+                luxury transactions require gate lists, photography scoped in writing, and addresses
+                kept off group texts. The BHHS referral desk connects Ridges appointments from
+                9406 W Lake Mead Blvd, Suite 100 — typically 15–20 minutes to the guardhouse.
               </p>
 
               <CommunityHighlights path="/neighborhoods/the-ridges" />

@@ -35,7 +35,7 @@ const neighborhoods = [
     slug: "summerlin",
     medianPrice: "$625,000",
     priceChange: "+6.8%",
-    description: "Premier master-planned community with parks, trails, and Red Rock Canyon access",
+    description: "Howard Hughes 22,500-acre west-valley plat with parks, trails, and Red Rock Canyon trailheads",
     highlights: ["150+ Parks", "150+ Miles of Trails", "Red Rock Views", "Downtown Summerlin"],
     bestFor: "Parks, trails, Red Rock access",
   },
