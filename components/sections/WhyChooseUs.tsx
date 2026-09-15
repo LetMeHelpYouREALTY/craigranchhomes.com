@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-12 max-w-4xl mx-auto">
           <h2
             id="why-choose-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 scroll-mt-32"
           >
             Start at 9406 W Lake Mead Blvd — then we drive Summerlin or Henderson
           </h2>

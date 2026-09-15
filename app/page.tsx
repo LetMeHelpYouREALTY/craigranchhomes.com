@@ -6,9 +6,9 @@ import PageCTA from "@/components/sections/PageCTA";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import Link from "next/link";
 import Image from "next/image";
-import { Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { ctaPhone, nap } from "@/lib/contact";
@@ -88,56 +88,51 @@ export default async function Home() {
           <UniqueInterior path="/" />
       </div>
 
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Work With Dr. Jan Duffy?
-            </h2>
-<p className="text-lg text-slate-600">
-              Berkshire Hathaway HomeServices Nevada Properties — trusted Las Vegas representation
-              with a direct line to your agent.
-            </p>
-</div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                icon: Shield,
-                title: "Trusted Brand",
-                desc: "Backed by Berkshire Hathaway — unmatched integrity",
-              },
-              {
-                icon: Users,
-                title: "50K+ Network",
-                desc: "Global referral network for moves to or from any market",
-              },
-              {
-                icon: TrendingUp,
-                title: "$127M+ Sold",
-                desc: "Proven results across Las Vegas neighborhoods since 2008",
-              },
-              {
-                icon: HomeIcon,
-                title: "Full Service",
-                desc: "Buying, selling, 55+, luxury, investment — one expert",
-              },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="text-center p-6">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Icon className="h-8 w-8 text-blue-600" aria-hidden="true" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">{title}</h3>
-                <p className="text-slate-600 text-sm">{desc}</p>
-              </div>
-            ))}
+      <section className="py-16 md:py-20 bg-white" data-home-compare="/">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+            What we compare first: Summerlin villages vs Henderson parks
+          </h2>
+          <HeadingPhoto path="/" level="h2" photo={photos.summerlin} priority />
+          <p className="text-lg text-slate-600 mb-8 text-center">
+            Same west-valley start at 9406 W Lake Mead Blvd, Suite 100. We pick two contrasting
+            pins so you are not averaging the whole valley.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="rounded-xl border border-slate-200 p-6">
+              <h3 className="font-bold text-lg mb-2">Summerlin (10–15 min)</h3>
+              <p className="text-slate-600 text-sm">
+                Downtown Summerlin retail, The Trails, then Red Rock trailheads on the same clock.
+              </p>
+            </div>
+            <div className="rounded-xl border border-slate-200 p-6">
+              <h3 className="font-bold text-lg mb-2">Henderson (25–35 min)</h3>
+              <p className="text-slate-600 text-sm">
+                Green Valley street trees vs Inspirada rec campus. One east afternoon, not both
+                plus Summerlin.
+              </p>
+            </div>
+            <div className="rounded-xl border border-slate-200 p-6">
+              <h3 className="font-bold text-lg mb-2">Sun City Summerlin (10–15 min)</h3>
+              <p className="text-slate-600 text-sm">
+                Four rec buildings if the brief is 55+. Anthem is a separate Henderson day.
+              </p>
+            </div>
           </div>
+          <p className="text-sm text-slate-600 mt-8 mb-6 text-center">
+            {nap.brokerage} · {nap.fullAddress} · Call or text {ctaPhone.display}.
+          </p>
+          <CtaActions variant="onLight" />
         </div>
       </section>
 
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-3">{config.neighborhood} Real Estate Market</h2>
+            <h2 className="text-3xl font-bold mb-3">
+              January 2026 valley snapshot — then we apply it to your ZIP
+            </h2>
+            <HeadingPhoto path="/" level="h2" photo={photos.sellers} className="max-w-4xl mx-auto" />
             <p className="text-slate-400">Current data — updated {stats.lastUpdated}</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
