@@ -129,6 +129,7 @@ export default function SunCityAliantePage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Sun City Aliante
               </h2>
+              <HeadingPhoto path="/55-plus-communities/sun-city-aliante" level="h3" />
               <p>
                 <strong>Sun City Aliante</strong> proves you don't have to
                 sacrifice quality for value. Built by Del Webb from 2003-2010,

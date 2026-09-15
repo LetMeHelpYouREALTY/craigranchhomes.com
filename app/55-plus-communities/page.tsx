@@ -474,6 +474,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
                     Understanding 55+ Age Requirements
                   </h3>
+                  <HeadingPhoto path="/55-plus-communities" level="h3" />
                   <div className="text-slate-700 space-y-3">
                     <p>
                       <strong>Federal HOPA Guidelines:</strong> At least 80% of

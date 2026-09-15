@@ -97,6 +97,7 @@ export default function InvestmentPropertiesPage() {
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Invest in Las Vegas?</h2>
             <HeadingPhoto path="/investment-properties" level="h2" />
+            <HeadingPhoto path="/investment-properties" level="h3" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">

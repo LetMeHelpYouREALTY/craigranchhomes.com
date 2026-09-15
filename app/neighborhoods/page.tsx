@@ -144,6 +144,9 @@ export default function NeighborhoodsPage() {
 
           {/* Neighborhood Grid */}
           <section className="mb-16 max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Compare Valley Neighborhoods</h2>
+            <HeadingPhoto path="/neighborhoods" level="h2" />
+            <HeadingPhoto path="/neighborhoods" level="h3" />
             <div className="grid md:grid-cols-2 gap-6">
               {neighborhoods.map((neighborhood) => (
                 <Link
@@ -156,8 +159,6 @@ export default function NeighborhoodsPage() {
                       <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                         {neighborhood.name}
                       </h2>
-            <HeadingPhoto path="/neighborhoods" level="h2" />
-
                       <p className="text-sm text-slate-500">{neighborhood.bestFor}</p>
                     </div>
                     <div className="text-right">

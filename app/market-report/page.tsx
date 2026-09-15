@@ -74,6 +74,7 @@ export default function MarketReportPage() {
               Las Vegas Market Snapshot | January 2026
             </h2>
             <HeadingPhoto path="/market-report" level="h2" />
+            <HeadingPhoto path="/market-report" level="h3" />
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="text-center">

@@ -75,6 +75,7 @@ export default function WhyBerkshireHathawayPage() {
                   Backed by Warren Buffett's Legacy
                 </h2>
             <HeadingPhoto path="/why-berkshire-hathaway" level="h2" />
+            <HeadingPhoto path="/why-berkshire-hathaway" level="h3" />
 
                 <p className="text-slate-300 mb-6">
                   <strong>Berkshire Hathaway HomeServices</strong> is the only real estate brand

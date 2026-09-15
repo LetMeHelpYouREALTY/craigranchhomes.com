@@ -146,6 +146,7 @@ export default function RelocationPage() {
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">Why People Are Moving to Las Vegas</h2>
             <HeadingPhoto path="/relocation" level="h2" />
+            <HeadingPhoto path="/relocation" level="h3" />
 
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               Las Vegas has become one of the fastest-growing cities in America, attracting 

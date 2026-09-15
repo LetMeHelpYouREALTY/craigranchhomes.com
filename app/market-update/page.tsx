@@ -118,6 +118,7 @@ export default function MarketUpdatePage() {
               5 Key Statistics This Week
             </h2>
             <HeadingPhoto path="/market-update" level="h2" />
+            <HeadingPhoto path="/market-update" level="h3" />
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {/* Stat 1 */}

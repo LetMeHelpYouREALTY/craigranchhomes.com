@@ -74,6 +74,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h2>
             <HeadingPhoto path="/contact" level="h2" />
+            <HeadingPhoto path="/contact" level="h3" />
 
               <p className="text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury property, or exploring

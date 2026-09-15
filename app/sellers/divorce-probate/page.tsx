@@ -60,6 +60,7 @@ export default function DivorceProbatePage() {
               Situations We Help Navigate
             </h2>
             <HeadingPhoto path="/sellers/divorce-probate" level="h2" />
+            <HeadingPhoto path="/sellers/divorce-probate" level="h3" />
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-slate-200 rounded-xl p-6">

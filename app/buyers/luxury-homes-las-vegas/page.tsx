@@ -97,6 +97,7 @@ export default function LuxuryHomesPage() {
               Las Vegas Luxury Market Performance
             </h2>
             <HeadingPhoto path="/buyers/luxury-homes-las-vegas" level="h2" />
+            <HeadingPhoto path="/buyers/luxury-homes-las-vegas" level="h3" />
 
             <div className="grid md:grid-cols-4 gap-6 mb-8">
               <div className="text-center">

@@ -47,7 +47,7 @@ Originals in this folder are the git backup. Production should serve them from C
 
 Until those env vars exist, Next.js / Vercel serves the git copies from `/public/images/`.
 
-`lib/media.ts` and `HeadingPhoto` map each route’s H1/H2 to a heading-appropriate photo.
+`lib/media.ts` and `HeadingPhoto` map each route’s H1/H2/H3 to a heading-appropriate photo. Cloudflare Images is primary when env is set; git copies in this folder are the backup.
 
 ```tsx
 import Image from 'next/image'

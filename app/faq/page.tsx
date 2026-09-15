@@ -209,14 +209,14 @@ export default function FAQPage() {
           </div>
 
           {/* FAQ Categories */}
+          <HeadingPhoto path="/faq" level="h2" />
+          <HeadingPhoto path="/faq" level="h3" />
           <div className="max-w-4xl mx-auto space-y-12">
             {faqCategories.map((category) => (
               <section key={category.title}>
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">
                   {category.title}
                 </h2>
-            <HeadingPhoto path="/faq" level="h2" />
-
                 <FaqAccordion items={category.faqs} />
               </section>
             ))}

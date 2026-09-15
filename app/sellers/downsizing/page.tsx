@@ -59,6 +59,7 @@ export default function DownsizingPage() {
               Extract Your Equity, Enjoy Your Life
             </h2>
             <HeadingPhoto path="/sellers/downsizing" level="h2" />
+            <HeadingPhoto path="/sellers/downsizing" level="h3" />
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-white/10 rounded-xl p-6">

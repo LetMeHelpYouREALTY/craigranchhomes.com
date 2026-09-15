@@ -131,6 +131,7 @@ export default function SoleraAnthemPage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Solera at Anthem
               </h2>
+              <HeadingPhoto path="/55-plus-communities/solera-anthem" level="h3" />
               <p>
                 <strong>Solera at Anthem</strong> offers something increasingly
                 rare in Las Vegas 55+ living—a genuinely intimate community where

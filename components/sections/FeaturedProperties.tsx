@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Bed, Bath, Square, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { mediaUrl } from "@/lib/media";
 
 interface Property {
   id: number;
@@ -20,7 +21,7 @@ const PropertyCard = ({ property }: { property: Property }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
     <div className="relative h-48 md:h-64">
       <Image
-        src={property.image}
+        src={mediaUrl(property.image)}
         alt={property.name}
         fill
         className="object-cover"

@@ -170,6 +170,7 @@ export default function ListingsPage() {
               Popular Property Searches in Las Vegas
             </h2>
             <HeadingPhoto path="/listings" level="h2" />
+            <HeadingPhoto path="/listings" level="h3" />
 
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers diverse neighborhoods for every lifestyle and budget. Search luxury

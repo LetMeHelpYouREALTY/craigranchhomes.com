@@ -58,6 +58,7 @@ export default function MoveUpSellerPage() {
               Your Equity Position is Stronger Than You Think
             </h2>
             <HeadingPhoto path="/sellers/move-up" level="h2" />
+            <HeadingPhoto path="/sellers/move-up" level="h3" />
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">

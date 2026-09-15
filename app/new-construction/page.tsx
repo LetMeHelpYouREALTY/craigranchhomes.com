@@ -284,6 +284,7 @@ export default function NewConstructionPage() {
               Why Use a BHHS Agent for New Construction?
             </h2>
             <HeadingPhoto path="/new-construction" level="h2" />
+            <HeadingPhoto path="/new-construction" level="h3" />
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="flex items-start">

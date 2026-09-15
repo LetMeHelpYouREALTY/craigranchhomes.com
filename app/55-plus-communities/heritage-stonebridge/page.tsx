@@ -132,6 +132,7 @@ export default function HeritageAtStonebridgePage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Heritage at Stonebridge
               </h2>
+              <HeadingPhoto path="/55-plus-communities/heritage-stonebridge" level="h3" />
               <p>
                 <strong>Heritage at Stonebridge</strong> offers what larger 55+
                 communities can't—a boutique, guard-gated experience in one of

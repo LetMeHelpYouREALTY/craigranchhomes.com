@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { h2PhotoForPath, mediaUrl, photoForPath, type SitePhoto } from "@/lib/media";
+import {
+  h2PhotoForPath,
+  h3PhotoForPath,
+  mediaUrl,
+  photoForPath,
+  type SitePhoto,
+} from "@/lib/media";
 
 type HeadingPhotoProps = {
   path: string;
@@ -16,7 +22,9 @@ export default function HeadingPhoto({
   className = "",
   priority,
 }: HeadingPhotoProps) {
-  const asset = photo ?? (level === "h1" ? photoForPath(path) : h2PhotoForPath(path));
+  const asset =
+    photo ??
+    (level === "h1" ? photoForPath(path) : level === "h3" ? h3PhotoForPath(path) : h2PhotoForPath(path));
   const isH1 = level === "h1";
   const heightClass = isH1
     ? "h-48 md:h-72 lg:h-80"

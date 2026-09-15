@@ -60,6 +60,7 @@ export default function RelocationPage() {
               <Globe className="h-8 w-8 mr-3 text-blue-400" />
               <h2 className="text-3xl font-bold">Berkshire Hathaway HomeServices Network</h2>
             <HeadingPhoto path="/sellers/relocation" level="h2" />
+            <HeadingPhoto path="/sellers/relocation" level="h3" />
 
             </div>
             <p className="text-center text-slate-300 mb-8 max-w-2xl mx-auto">

@@ -107,6 +107,7 @@ export default function FirstTimeBuyersPage() {
               First-Time Buyer Financing Options
             </h2>
             <HeadingPhoto path="/buyers/first-time-buyers" level="h2" />
+            <HeadingPhoto path="/buyers/first-time-buyers" level="h3" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">

@@ -12,6 +12,7 @@ import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { ctaPhone, nap } from "@/lib/contact";
 import { marketStats as stats } from "@/lib/site-config";
 import { mediaUrl, photos } from "@/lib/media";
+import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 export const metadata = pageMetadata({
   path: "/",
@@ -88,10 +89,12 @@ export default async function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Work With Dr. Jan Duffy?
             </h2>
+            <HeadingPhoto path="/" level="h2" />
             <p className="text-lg text-slate-600">
               Berkshire Hathaway HomeServices Nevada Properties — trusted Las Vegas representation
               with a direct line to your agent.
             </p>
+            <HeadingPhoto path="/" level="h3" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[

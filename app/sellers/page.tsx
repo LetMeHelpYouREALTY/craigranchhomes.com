@@ -167,6 +167,7 @@ export default function SellersPage() {
               Las Vegas Seller Market Statistics | January 2026
             </h2>
             <HeadingPhoto path="/sellers" level="h2" />
+            <HeadingPhoto path="/sellers" level="h3" />
 
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas housing market remains favorable for sellers with low inventory and 

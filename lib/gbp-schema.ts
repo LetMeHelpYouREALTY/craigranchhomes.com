@@ -218,12 +218,22 @@ export function generateLocalBusinessSchema() {
     image: [
       "https://heyberkshire.com/images/dr-jan-duffy.jpg",
       "https://heyberkshire.com/images/hero/office-lake-mead-blvd.jpg",
+      "https://heyberkshire.com/images/hero/west-las-vegas-office-exterior.jpg",
     ],
+    logo: "https://heyberkshire.com/images/dr-jan-duffy.jpg",
     url: businessInfo.url,
     telephone: businessInfo.phone.tel,
     email: businessInfo.email,
     priceRange: businessInfo.priceRange,
     hasMap: "https://www.google.com/maps/search/?api=1&query=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134",
+    openingHours: ["Mo-Fr 09:00-18:00", "Sa 10:00-16:00"],
+    knowsAbout: [
+      "Las Vegas real estate",
+      "Summerlin homes",
+      "Henderson homes",
+      "55+ communities",
+      "California relocation",
+    ],
     address: {
       "@type": "PostalAddress",
       ...businessInfo.address,
@@ -264,9 +274,8 @@ export function generateLocalBusinessSchema() {
       bestRating: "5",
     },
     sameAs: [
-      "https://www.facebook.com/drjanduffy",
-      "https://www.instagram.com/drjanduffy",
-      "https://www.linkedin.com/in/drjanduffy",
+      ...businessInfo.socialProfiles,
+      "https://www.google.com/maps/search/?api=1&query=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134",
     ],
   };
 }

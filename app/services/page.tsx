@@ -217,6 +217,7 @@ export default function ServicesPage() {
               Core Real Estate Services
             </h2>
             <HeadingPhoto path="/services" level="h2" />
+            <HeadingPhoto path="/services" level="h3" />
 
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               These foundational services cover the majority of real estate transactions in Las Vegas. 

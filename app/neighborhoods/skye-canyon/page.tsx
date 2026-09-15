@@ -153,6 +153,7 @@ export default function SkyeCanyonPage() {
 
               {/* Community Highlights */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <HeadingPhoto path="/neighborhoods/skye-canyon" level="h3" />
               <div className="grid md:grid-cols-2 gap-8 not-prose">
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">

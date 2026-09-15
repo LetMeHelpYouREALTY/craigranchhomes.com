@@ -134,6 +134,7 @@ export default function BuyersPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
             <HeadingPhoto path="/buyers" level="h2" />
+            <HeadingPhoto path="/buyers" level="h3" />
 
                 <p className="text-slate-300 mb-6">
                   Here's what many buyers don't know: having your own agent costs you nothing. The

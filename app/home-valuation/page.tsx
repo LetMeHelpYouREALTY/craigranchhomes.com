@@ -100,6 +100,7 @@ export default function HomeValuationPage() {
               Instant Home Value Estimate
             </h2>
             <HeadingPhoto path="/home-valuation" level="h2" />
+            <HeadingPhoto path="/home-valuation" level="h3" />
 
             <p className="text-slate-600 text-center mb-6">
               Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with

@@ -109,6 +109,7 @@ export default function MarketInsightsPage() {
               5 Forces Driving Las Vegas Real Estate in 2026
             </h2>
             <HeadingPhoto path="/market-insights" level="h2" />
+            <HeadingPhoto path="/market-insights" level="h3" />
 
             <div className="grid md:grid-cols-5 gap-4">
               <div className="text-center">

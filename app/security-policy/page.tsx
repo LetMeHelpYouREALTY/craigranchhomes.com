@@ -31,6 +31,7 @@ export default function SecurityPolicyPage() {
               Our Commitment to Security
             </h2>
             <HeadingPhoto path="/security-policy" level="h2" />
+            <HeadingPhoto path="/security-policy" level="h3" />
 
             <p className="text-gray-700 leading-relaxed">
               At Berkshire Hathaway HomeServices Nevada Properties, we take the security
