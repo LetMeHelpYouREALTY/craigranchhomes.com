@@ -16,6 +16,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -162,6 +163,8 @@ export default function DelWebbLakeLasVegasPage() {
           <FiftyFiveAmenities path="/55-plus-communities/del-webb-lake-las-vegas" />
 
           {/* Why Del Webb Lake Las Vegas */}
+          <ExpertQuote path="/55-plus-communities/del-webb-lake-las-vegas" />
+
           <FiftyFiveFaqs path="/55-plus-communities/del-webb-lake-las-vegas" />
 
 

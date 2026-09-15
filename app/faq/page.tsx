@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqHub from "@/components/sections/FaqHub";
 import { faqHubAllItems } from "@/lib/faq-hub";
@@ -72,6 +73,7 @@ export default function FAQPage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/faq" />
           <UniqueInterior path="/faq" />
+          <ExpertQuote path="/faq" />
 
             </div>
           </div>

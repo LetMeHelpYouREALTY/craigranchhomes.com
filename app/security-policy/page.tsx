@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import { nap } from "@/lib/contact";
 
@@ -275,6 +276,7 @@ export default function SecurityPolicyPage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/security-policy" />
           <UniqueInterior path="/security-policy" />
+          <ExpertQuote path="/security-policy" />
 
             </div>
           </section>

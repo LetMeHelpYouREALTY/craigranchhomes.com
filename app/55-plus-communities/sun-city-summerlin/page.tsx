@@ -19,6 +19,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import { pageMetadata } from "@/lib/seo";
 
@@ -188,6 +189,8 @@ export default function SunCitySummerlinPage() {
           </section>
 
           {/* Why Choose */}
+          <ExpertQuote path="/55-plus-communities/sun-city-summerlin" />
+
           <FiftyFiveFaqs path="/55-plus-communities/sun-city-summerlin" />
 
 

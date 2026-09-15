@@ -18,6 +18,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -408,22 +409,7 @@ export default function MarketInsightsPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-900 text-white rounded-xl p-8">
-              <blockquote className="text-lg italic mb-4">
-                "Understanding market forces—not just current prices—separates informed decisions
-                from reactive ones. Las Vegas is no longer just a gaming and tourism economy.
-                Tech investment, California migration, and economic diversification are reshaping
-                which neighborhoods will outperform. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I help clients position
-                themselves for where the market is going, not just where it's been."
-              </blockquote>
-              <cite className="text-slate-300 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/market-insights" />
 
           <SupportFaqs path="/market-insights" />
 

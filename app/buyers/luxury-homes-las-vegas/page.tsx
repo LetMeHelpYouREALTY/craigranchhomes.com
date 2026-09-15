@@ -17,6 +17,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
 import { nap } from "@/lib/contact";
@@ -323,21 +324,7 @@ export default function LuxuryHomesPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-900 text-white rounded-xl p-8">
-              <blockquote className="text-lg italic mb-4">
-                "Luxury buyers expect discretion, market expertise, and flawless execution. In this
-                price range, one wrong move can cost hundreds of thousands of dollars. My clients
-                trust me because I've closed $127M+ in transactions and understand that their time
-                and privacy are worth more than any commission. <strong>Berkshire Hathaway HomeServices</strong>
-                provides the global resources and credibility that luxury transactions demand."
-              </blockquote>
-              <cite className="text-slate-300 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/buyers/luxury-homes-las-vegas" />
 
           <BuyerFaqs path="/buyers/luxury-homes-las-vegas" />
 

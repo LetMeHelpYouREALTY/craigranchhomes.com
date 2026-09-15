@@ -19,6 +19,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -319,24 +320,7 @@ export default function SellersPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Expert Selling Advice
-            </h2>
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Pricing your home correctly from day one is the single most important factor in
-                pricing to recent comps. Overpriced homes sit on the market, and every day on market costs 
-                you money—both in carrying costs and buyer perception. That's why I use comprehensive 
-                market analysis and my experience serving Las Vegas since 2008 to price homes right 
-                the first time. The result? My listings typically sell within 2% of asking price."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/sellers" />
 
           {/* What's Included */}
           <section className="mb-16 max-w-5xl mx-auto">

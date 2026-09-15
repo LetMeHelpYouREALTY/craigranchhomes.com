@@ -25,6 +25,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import { pageMetadata } from "@/lib/seo";
 
@@ -555,25 +556,7 @@ export default function FiftyFiveCommunitiesPage() {
 
           <FiftyFiveAmenities path="/55-plus-communities" />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Buying in a 55+ community involves considerations beyond a
-                typical purchase. You need to understand HOA rules, age
-                verification processes, and how the community fits your
-                lifestyle. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent
-                specializing in active adult communities, I guide clients through
-                every step—from touring amenities to reviewing HOA documents. Many
-                clients are relocating from California, and they rely on my local
-                knowledge to make confident decisions."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/55-plus-communities" />
           <FiftyFiveFaqs path="/55-plus-communities" />
 
 

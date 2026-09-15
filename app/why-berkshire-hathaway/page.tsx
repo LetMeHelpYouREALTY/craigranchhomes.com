@@ -8,6 +8,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -68,6 +69,7 @@ export default function WhyBerkshireHathawayPage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/why-berkshire-hathaway" />
           <UniqueInterior path="/why-berkshire-hathaway" />
+          <ExpertQuote path="/why-berkshire-hathaway" />
 
             </div>
           </div>
@@ -234,14 +236,13 @@ export default function WhyBerkshireHathawayPage() {
                 </Link>
               </div>
               <div className="bg-slate-100 rounded-lg p-8">
-                <blockquote className="text-lg text-slate-700 italic mb-4">
-                  "When clients ask why they should choose a Berkshire Hathaway HomeServices agent,
-                  I tell them: you're not just getting me—you're getting a global network of 50,000
-                  agents, world-class marketing, and a brand that's synonymous with trust."
-                </blockquote>
-                <cite className="text-slate-900 font-semibold">
-                  — Dr. Jan Duffy, BHHS Nevada Properties
-                </cite>
+                <p className="text-slate-700 mb-4">
+                  Marketing samples and referral paths are reviewed at 9406 W Lake Mead Blvd,
+                  Suite 100 before you sign a listing agreement. Call (702) 222-1964.
+                </p>
+                <p className="text-sm text-slate-600">
+                  Berkshire Hathaway HomeServices Nevada Properties · License S.0197614.LLC
+                </p>
               </div>
             </div>
           </section>

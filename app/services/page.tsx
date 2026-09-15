@@ -22,6 +22,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 import { nap } from "@/lib/contact";
@@ -212,6 +213,7 @@ export default function ServicesPage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/services" />
           <UniqueInterior path="/services" />
+          <ExpertQuote path="/services" />
 
             </div>
           </div>

@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -314,21 +315,7 @@ export default function MoveUpSellerPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Move-up transactions are like a chess game—every move matters. I coordinate both
-                sides so you don't end up homeless or paying two mortgages. With{" "}
-                <strong>Berkshire Hathaway HomeServices</strong>, I have the resources to make
-                complex transactions smooth. That's why clients trust me with their biggest
-                financial moves."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/sellers/move-up" />
           <SellerFaqs path="/sellers/move-up" />
 
 

@@ -17,6 +17,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -89,6 +90,7 @@ export default function MarketUpdatePage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/market-update" />
           <UniqueInterior path="/market-update" />
+          <ExpertQuote path="/market-update" />
 
             </div>
           </div>

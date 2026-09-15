@@ -17,6 +17,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -281,6 +282,8 @@ export default function SunCityAliantePage() {
           </section>
 
           {/* Why Choose Sun City Aliante */}
+          <ExpertQuote path="/55-plus-communities/sun-city-aliante" />
+
           <FiftyFiveFaqs path="/55-plus-communities/sun-city-aliante" />
 
 

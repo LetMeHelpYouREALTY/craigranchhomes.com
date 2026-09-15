@@ -624,3 +624,88 @@ export function faqHubPhotoForCategory(id: FaqHubCategoryId): SitePhoto {
     }
   }
 }
+
+/** Stills already used as heading photos on this path (H1–H3 plus section extras). */
+export function occupiedHeadingStills(path: string): Set<string> {
+  const srcs: string[] = [
+    photoForPath(path).src,
+    h2PhotoForPath(path).src,
+    h3PhotoForPath(path).src,
+  ];
+  if (path === "/" || path === "") {
+    srcs.push(photos.agent.src, photos.summerlin.src, photos.sellers.src);
+  }
+  if (path.startsWith("/neighborhoods")) {
+    srcs.push(
+      campusPhotoForPath(path).src,
+      commutePhotoForPath(path).src,
+      faqPhotoForPath(path).src,
+      amenityPhotoForPath(path).src,
+      lifestylePhotoForPath(path).src
+    );
+  }
+  if (path.startsWith("/55-plus")) {
+    srcs.push(
+      fiftyFiveFaqPhotoForPath(path).src,
+      fiftyFiveAmenityPhotoForPath(path).src
+    );
+  }
+  if (path.startsWith("/buyers")) {
+    srcs.push(buyerFaqPhotoForPath(path).src);
+  }
+  if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) {
+    srcs.push(sellerFaqPhotoForPath(path).src);
+  }
+  if (
+    path.startsWith("/luxury") ||
+    path.startsWith("/relocation") ||
+    path.startsWith("/new-construction") ||
+    path.startsWith("/investment")
+  ) {
+    srcs.push(intentFaqPhotoForPath(path).src);
+  }
+  if (
+    path === "/" ||
+    path.startsWith("/contact") ||
+    path.startsWith("/why-berkshire") ||
+    path.startsWith("/listings") ||
+    path.startsWith("/google-business") ||
+    path.startsWith("/market-report") ||
+    path.startsWith("/market-insights") ||
+    path.startsWith("/market-update")
+  ) {
+    srcs.push(supportFaqPhotoForPath(path).src);
+  }
+  if (path.startsWith("/faq")) {
+    srcs.push(
+      faqHubPhotoForCategory("bhhs").src,
+      faqHubPhotoForCategory("buying").src,
+      faqHubPhotoForCategory("selling").src,
+      faqHubPhotoForCategory("investment").src,
+      faqHubPhotoForCategory("relocating").src,
+      faqHubPhotoForCategory("working").src
+    );
+  }
+  return new Set(srcs);
+}
+
+const QUOTE_CANDIDATES: SitePhoto[] = [
+  photos.agent,
+  photos.consultation,
+  photos.officeExterior,
+  photos.office,
+  photos.buyers,
+  photos.sellers,
+  photos.market,
+  photos.homeHero,
+  ...Object.values(photos),
+];
+
+/** Sixteenth still for expert-quote H2s — first unused quote-appropriate still. */
+export function quotePhotoForPath(path: string): SitePhoto {
+  const used = occupiedHeadingStills(path);
+  for (const photo of QUOTE_CANDIDATES) {
+    if (!used.has(photo.src)) return photo;
+  }
+  return photos.homeHero;
+}

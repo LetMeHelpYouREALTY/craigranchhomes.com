@@ -17,6 +17,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import {
   ctaPhone,
   officePhone,
@@ -139,6 +140,7 @@ export default function GoogleBusinessPage() {
           </section>
           <OfficeProximity path="/google-business" />
           <UniqueInterior path="/google-business" />
+          <ExpertQuote path="/google-business" />
 
           <section className="max-w-5xl mx-auto mb-16">
             <div className="bg-slate-50 rounded-xl p-6">

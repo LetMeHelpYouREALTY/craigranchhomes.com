@@ -8,6 +8,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 
 import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
 
@@ -71,6 +72,7 @@ export default function ContactPage() {
             <CtaActions variant="onLight" bookLabel="Book a Consultation" />
           <OfficeProximity path="/contact" />
           <UniqueInterior path="/contact" />
+          <ExpertQuote path="/contact" />
 
           </div>
 

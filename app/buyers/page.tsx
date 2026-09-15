@@ -20,6 +20,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -357,20 +358,7 @@ export default function BuyersPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "My job isn't just to show you houses—it's to make sure you don't overpay, that you
-                understand what you're buying, and that you're protected through every step of the
-                transaction. That's what Berkshire Hathaway HomeServices representation means. I treat 
-                every client with the same care and won't stop until we find the right home for your needs."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/buyers" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

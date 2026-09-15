@@ -19,6 +19,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -234,25 +235,7 @@ export default function LuxuryHomesPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Expert Luxury Real Estate Guidance
-            </h2>
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Luxury buyers expect discretion, market expertise, and flawless execution. In this
-                price range, one wrong move can cost hundreds of thousands of dollars. That's why
-                the Berkshire Hathaway HomeServices name matters—it tells buyers and sellers alike
-                that they're working with the best. I've helped clients purchase and sell homes from 
-                $1 million to over $10 million, and every transaction receives my full attention 
-                and the complete resources of BHHS."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/luxury-homes" />
 
           {/* Luxury Neighborhoods */}
           <section className="mb-16 max-w-6xl mx-auto">

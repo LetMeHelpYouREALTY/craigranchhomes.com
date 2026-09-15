@@ -12,6 +12,7 @@ import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 import SchemaScript from "@/components/SchemaScript";
@@ -190,20 +191,7 @@ export default function SummerlinPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Summerlin isn't just a neighborhood—it's a lifestyle. I've been serving this area since
-                2008, and I can tell you exactly which villages suit park-and-trail living, which offer the
-                best investment potential, and where you'll find the hidden gems. That local knowledge is
-                what sets Berkshire Hathaway HomeServices apart."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/neighborhoods/summerlin" />
 
           <NeighborhoodFaqs path="/neighborhoods/summerlin" />
 

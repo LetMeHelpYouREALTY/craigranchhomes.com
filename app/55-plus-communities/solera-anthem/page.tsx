@@ -18,6 +18,7 @@ import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import FiftyFiveFaqs from "@/components/sections/FiftyFiveFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import FiftyFiveAmenities from "@/components/sections/FiftyFiveAmenities";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -267,6 +268,8 @@ export default function SoleraAnthemPage() {
           </section>
 
           {/* Why Choose Solera */}
+          <ExpertQuote path="/55-plus-communities/solera-anthem" />
+
           <FiftyFiveFaqs path="/55-plus-communities/solera-anthem" />
 
 

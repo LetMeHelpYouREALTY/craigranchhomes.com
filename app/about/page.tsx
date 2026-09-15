@@ -20,6 +20,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
@@ -148,6 +149,7 @@ export default function AboutPage() {
               <CtaActions variant="onLight" bookLabel="Book a Consultation" />
           <OfficeProximity path="/about" />
           <UniqueInterior path="/about" />
+          <ExpertQuote path="/about" />
 
             </div>
           </div>
@@ -251,16 +253,6 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                {/* Quote */}
-                <blockquote className="border-l-4 border-blue-600 pl-6 italic text-slate-700">
-                  "My job isn't just to show you houses—it's to make sure you don't overpay, that
-                  you understand what you're buying, and that you're protected through every step of
-                  the transaction. I treat every client with the same care and won't stop until we achieve 
-                  your real estate goals."
-                  <cite className="block mt-2 text-slate-900 font-semibold not-italic">
-                    — Dr. Jan Duffy, BHHS Nevada Properties
-                  </cite>
-                </blockquote>
               </div>
 
               {/* Stats & Credentials */}

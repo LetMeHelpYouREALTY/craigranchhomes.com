@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -383,22 +384,7 @@ export default function DownsizingPage() {
           <SellerFaqs path="/sellers/downsizing" />
 
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-900 text-white rounded-xl p-8">
-              <blockquote className="text-lg italic mb-4">
-                "Downsizing clients are some of my favorite to work with. They've worked hard,
-                built equity, and now want a home without maintaining a 4,000 square
-                foot house. I help them extract the equity they've earned, find a home that fits
-                their current lifestyle, and often pocket significant cash for travel and hobbies,
-                or just peace of mind. As a <strong>Berkshire Hathaway HomeServices</strong> agent,
-                I have the experience and compassion this transition requires."
-              </blockquote>
-              <cite className="text-slate-300 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/sellers/downsizing" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

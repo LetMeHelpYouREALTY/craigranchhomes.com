@@ -21,6 +21,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import { pageMetadata } from "@/lib/seo";
@@ -145,6 +146,7 @@ export default function ListingsPage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/listings" />
           <UniqueInterior path="/listings" />
+          <ExpertQuote path="/listings" />
 
             </div>
             <RealScoutSearch />

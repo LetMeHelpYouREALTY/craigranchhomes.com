@@ -12,6 +12,7 @@ import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -185,21 +186,7 @@ export default function SkyeCanyonPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Skye Canyon is where buyers who want new construction and trail access want to be right now. The amenities are incredible,
-                the homes are modern and energy-efficient, and the community vibe is exactly what people
-                are looking for. As a Berkshire Hathaway HomeServices agent, I make sure my clients get
-                the best value—whether that's negotiating builder upgrades or finding a resale with
-                features already included."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/neighborhoods/skye-canyon" />
           <NeighborhoodFaqs path="/neighborhoods/skye-canyon" />
 
 

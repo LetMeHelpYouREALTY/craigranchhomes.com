@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -134,17 +135,7 @@ export default function HomeValuationPage() {
                 </div>
               </div>
 
-              {/* Expert Quote */}
-              <div className="bg-slate-50 rounded-lg p-6">
-                <blockquote className="text-slate-700 italic mb-3">
-                  "Pricing your home correctly from day one is the single most important factor in
-                  pricing to recent comps. That's why I use comprehensive market analysis—not just
-                  algorithms—to determine your home's true value."
-                </blockquote>
-                <cite className="text-slate-900 font-semibold text-sm">
-                  — Dr. Jan Duffy, BHHS Nevada Properties
-                </cite>
-              </div>
+          <ExpertQuote path="/home-valuation" />
 
               {/* Call Option */}
               <div className="text-center">

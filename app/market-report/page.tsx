@@ -8,6 +8,7 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 
 export const metadata: Metadata = pageMetadata({
   path: "/market-report",
@@ -67,6 +68,7 @@ export default function MarketReportPage() {
               <CtaActions variant="onLight" />
           <OfficeProximity path="/market-report" />
           <UniqueInterior path="/market-report" />
+          <ExpertQuote path="/market-report" />
 
             </div>
           </div>
@@ -188,25 +190,12 @@ export default function MarketReportPage() {
             </div>
           </section>
 
-          {/* Expert Analysis */}
+          {/* Buyer and seller takeaways */}
           <section className="mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Expert Market Analysis
+              What the January 2026 snapshot means at Suite 100
             </h2>
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-6">
-                "The Las Vegas market remains strong heading into 2026. We're seeing continued
-                demand from California relocators and remote workers, but the days of 20 offers on
-                every listing are behind us. Buyers finally have some negotiating power, while
-                sellers are still achieving solid appreciation. It's a balanced market that rewards
-                proper pricing and preparation."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-
-            <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-4 flex items-center">
                   <Home className="h-5 w-5 text-blue-600 mr-2" />

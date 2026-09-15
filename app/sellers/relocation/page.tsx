@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -433,21 +434,7 @@ export default function RelocationPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-900 text-white rounded-xl p-8">
-              <blockquote className="text-lg italic mb-4">
-                "Relocation sales are complex because you're juggling two markets, two timelines,
-                and often a demanding new job. I take the Las Vegas side completely off your plate
-                so you can focus on your career. And because I'm part of{" "}
-                <strong>Berkshire Hathaway HomeServices</strong>, I can connect you with a trusted
-                agent in your new city—someone who'll treat you like a VIP, not just a referral."
-              </blockquote>
-              <cite className="text-slate-300 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/sellers/relocation" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

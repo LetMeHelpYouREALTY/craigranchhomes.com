@@ -17,6 +17,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
 import { nap } from "@/lib/contact";
@@ -310,21 +311,7 @@ export default function FirstTimeBuyersPage() {
           <BuyerFaqs path="/buyers/first-time-buyers" />
 
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Buying your first home is exciting AND overwhelming. My job is to make it less
-                overwhelming. I walk first-time buyers through every step, explain everything in
-                plain English, and make sure you're confident in your decision. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I have resources and
-                connections that independent agents simply don't have."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/buyers/first-time-buyers" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

@@ -12,6 +12,7 @@ import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -197,20 +198,7 @@ export default function TheRidgesPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "The Ridges attracts clients who expect the very best—and they recognize Berkshire Hathaway
-                HomeServices as a brand that matches their standards. In luxury real estate, discretion and
-                trust are everything. My clients know their privacy is protected and their interests come first.
-                That's the BHHS difference in high-end transactions."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/neighborhoods/the-ridges" />
           <NeighborhoodFaqs path="/neighborhoods/the-ridges" />
 
 

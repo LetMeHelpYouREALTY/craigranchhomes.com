@@ -19,6 +19,7 @@ import { nap } from "@/lib/contact";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
 
@@ -326,22 +327,7 @@ export default function CaliforniaRelocatorPage() {
           <BuyerFaqs path="/buyers/california-relocator" />
 
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "I've helped hundreds of California relocators make the move to Las Vegas. The most
-                common reaction? 'Why didn't we do this sooner?' Between the tax savings, the space,
-                and the lifestyle, most clients can't believe what their California equity buys here.
-                As a <strong>Berkshire Hathaway HomeServices</strong> agent, I coordinate with our
-                California offices to make the transition seamless—you don't have to figure this
-                out alone."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/buyers/california-relocator" />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

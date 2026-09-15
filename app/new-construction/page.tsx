@@ -18,6 +18,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
@@ -478,22 +479,7 @@ export default function NewConstructionPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "I've seen buyers leave $30,000 on the table because they didn't know what to ask
-                for. Builders expect negotiation—their sales managers have authority to approve
-                upgrades and credits. As your <strong>Berkshire Hathaway HomeServices</strong>
-                agent, I know exactly which incentives are available, which upgrades add value, and
-                which builder promises are legally binding. This representation costs you nothing
-                and can save you tens of thousands."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/new-construction" />
           <IntentFaqs path="/new-construction" />
 
 

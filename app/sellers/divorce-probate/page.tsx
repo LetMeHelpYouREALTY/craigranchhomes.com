@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -434,22 +435,7 @@ export default function DivorceProbatePage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-900 text-white rounded-xl p-8">
-              <blockquote className="text-lg italic mb-4">
-                "When you're going through a divorce or handling a loved one's estate, the last
-                thing you need is real estate stress. I've handled hundreds of sensitive transactions,
-                and I understand these situations require more than market expertise—they require
-                discretion, patience, and genuine care. <strong>Berkshire Hathaway HomeServices</strong>
-                gives me the resources and credibility these situations demand. Your privacy and
-                peace of mind come first."
-              </blockquote>
-              <cite className="text-slate-300 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/sellers/divorce-probate" />
 
           {/* CTA */}
           <section className="text-center bg-slate-800 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

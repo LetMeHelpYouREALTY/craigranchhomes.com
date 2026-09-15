@@ -20,6 +20,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 import { pageMetadata } from "@/lib/seo";
@@ -179,24 +180,7 @@ export default function RelocationPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Expert Relocation Guidance
-            </h2>
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Moving to a new city is stressful enough. I handle everything from neighborhood
-                tours to campus commute times to contractor referrals so you can focus on your new
-                beginning. And because Berkshire Hathaway HomeServices has agents nationwide, I can
-                coordinate with your agent back home to make the transition seamless. My goal is to 
-                make Las Vegas feel like home before you even arrive."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/relocation" />
 
           {/* Relocation Services */}
           <section className="mb-16 max-w-6xl mx-auto">

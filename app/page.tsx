@@ -2,6 +2,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import SupportFaqs from "@/components/sections/SupportFaqs";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import PageCTA from "@/components/sections/PageCTA";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
@@ -86,6 +87,7 @@ export default async function Home() {
       <div className="container mx-auto px-4">
         <OfficeProximity path="/" />
           <UniqueInterior path="/" />
+          <ExpertQuote path="/" />
       </div>
 
       <section className="py-16 md:py-20 bg-white" data-home-compare="/">

@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
+import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import IntentFaqs from "@/components/sections/IntentFaqs";
 
@@ -172,20 +173,7 @@ export default function InvestmentPropertiesPage() {
             </p>
           </section>
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Las Vegas rental yields are among the best in the country right now. But you need
-                to know which neighborhoods are appreciating and which have peaked. Not all zip
-                codes perform equally—I help investors identify the properties with the best
-                combination of cash flow and appreciation potential."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties
-              </cite>
-            </div>
-          </section>
+          <ExpertQuote path="/investment-properties" />
 
           {/* Investment Services */}
           <section className="mb-16 max-w-5xl mx-auto">
