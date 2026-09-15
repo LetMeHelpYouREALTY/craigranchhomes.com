@@ -15,7 +15,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -380,35 +380,8 @@ export default function DownsizingPage() {
               </div>
             </div>
           </section>
+          <SellerFaqs path="/sellers/downsizing" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Downsizing FAQs
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "How much can I expect to pocket when downsizing?",
-                  a: "Most downsizers moving from large 4–5 bedroom homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
-                },
-                {
-                  q: "What if my home needs repairs before selling?",
-                  a: "Dr. Jan helps you prioritize repairs that matter—and skip those that don't. Often, minor cosmetic updates (paint, landscaping) provide the best ROI. For larger issues, she can connect you with contractors or explore as-is selling options.",
-                },
-                {
-                  q: "How do I choose between 55+ communities?",
-                  a: "Key factors include HOA fees and what they cover, community size and culture, amenities that match your interests, location relative to family/healthcare, and financial stability of the HOA. Dr. Jan tours communities with you and provides unbiased comparisons.",
-                },
-                {
-                  q: "Can I buy before selling my current home?",
-                  a: "Yes, several options exist: bridge loans, HELOCs, or making offers contingent on selling. Dr. Jan works with lenders who specialize in these scenarios and can advise on the best approach for your financial situation.",
-                },
-                {
-                  q: "What about all my stuff?",
-                  a: "Decluttering is part of downsizing. Dr. Jan recommends starting early—months before listing. She can refer you to professional organizers and estate sale companies if needed. Many clients find the process liberating once they start.",
-                },
-               ]} />
-          </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

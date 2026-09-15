@@ -498,3 +498,25 @@ export function buyerFaqPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/buyers")) return photos.office;
   return photos.consultation;
 }
+
+/** Ninth still for seller-intent FAQ H2s — distinct from that path's H1/H2/H3. */
+export function sellerFaqPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/sellers/move-up")) return photos.homeHero;
+  if (path.startsWith("/sellers/downsizing")) return photos.fiftyFive;
+  if (path.startsWith("/sellers/relocation")) return photos.market;
+  if (path.startsWith("/sellers/divorce-probate")) return photos.agent;
+  if (path.startsWith("/sellers")) return photos.office;
+  return photos.buyers;
+}
+
+/** Tenth still for remaining conversion-hub FAQ H2s. */
+export function intentFaqPhotoForPath(path: string): SitePhoto {
+  if (path.startsWith("/luxury-homes") || path.startsWith("/luxury")) {
+    return photos.southernHighlands;
+  }
+  if (path.startsWith("/relocation")) return photos.summerlin;
+  if (path.startsWith("/home-valuation")) return photos.buyers;
+  if (path.startsWith("/new-construction")) return photos.mountainsEdge;
+  if (path.startsWith("/investment")) return photos.aliante;
+  return photos.office;
+}

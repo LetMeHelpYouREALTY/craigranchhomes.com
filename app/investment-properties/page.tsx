@@ -7,7 +7,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import IntentFaqs from "@/components/sections/IntentFaqs";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -406,31 +406,8 @@ export default function InvestmentPropertiesPage() {
               </p>
             </div>
           </section>
+          <IntentFaqs path="/investment-properties" />
 
-          {/* FAQ */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Investment Property FAQs
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "What returns can I expect from Las Vegas rental property?",
-                  a: "Typical cap rates range from 4-6%, with appreciation adding another 4-5% annually in recent years. Total returns of 8-10% are achievable in the right neighborhoods. Dr. Jan provides detailed ROI analysis on any property you're considering.",
-                },
-                {
-                  q: "Do you help out-of-state investors?",
-                  a: "Yes! Many of Dr. Jan's investment clients are out-of-state buyers. She provides video tours, detailed market analysis, and coordinates with property managers so you can invest remotely with confidence.",
-                },
-                {
-                  q: "Can you help with 1031 exchanges?",
-                  a: "Absolutely. Dr. Jan works with qualified intermediaries and can help identify replacement properties within the 45-day identification window. Berkshire Hathaway's nationwide network is particularly valuable for exchanging into or out of Las Vegas.",
-                },
-                {
-                  q: "What's the best area for investment properties?",
-                  a: "It depends on your strategy. North Las Vegas offers the best cap rates, while Summerlin provides stronger appreciation. Henderson balances both. Dr. Jan analyzes your goals to recommend the right areas.",
-                },
-               ]} />
-          </section>
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

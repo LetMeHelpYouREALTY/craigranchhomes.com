@@ -15,7 +15,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import SellerFaqs from "@/components/sections/SellerFaqs";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -384,35 +384,8 @@ export default function RelocationPage() {
               </div>
             </div>
           </section>
+          <SellerFaqs path="/sellers/relocation" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Relocation FAQs
-            </h2>
-            <FaqAccordion items={[ 
-                {
-                  q: "My job starts in 3 weeks. Is that enough time to sell?",
-                  a: "Yes—urgently, but it's possible. We can list immediately, price aggressively for quick sale, and leverage our investor/cash buyer network. You may leave before closing, but we manage everything remotely. Dr. Jan has helped many clients sell within 2-4 weeks when necessary.",
-                },
-                {
-                  q: "Should I sell before or after I move?",
-                  a: "It depends on your finances and timeline. Selling first means you know exactly how much equity you have for your new purchase. Selling after gives you time to settle in but requires carrying costs or a bridge loan. Dr. Jan advises based on your specific situation.",
-                },
-                {
-                  q: "What if I have a corporate buyout offer?",
-                  a: "Corporate buyouts typically offer 90-95% of appraised value. Sometimes you can do better selling on the open market. Dr. Jan provides a market analysis so you can compare the buyout to likely market sale proceeds (minus costs).",
-                },
-                {
-                  q: "How do I handle showings if I've already left?",
-                  a: "Dr. Jan manages everything: lockbox access, feedback collection, and offer presentation via video call. Many relocating sellers are long gone before their home sells—it's routine and we have systems for it.",
-                },
-                {
-                  q: "What about my stuff? Should I move it before listing?",
-                  a: "Partially furnished homes often show better than empty ones. Dr. Jan advises on what to take, what to leave, and whether professional staging makes sense. For urgent sales, we can list with minimal preparation.",
-                },
-               ]} />
-          </section>
 
           {/* Coming TO Las Vegas */}
           <section className="mb-16 max-w-5xl mx-auto">

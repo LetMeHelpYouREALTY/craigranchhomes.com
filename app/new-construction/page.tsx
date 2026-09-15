@@ -19,9 +19,8 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import IntentFaqs from "@/components/sections/IntentFaqs";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
-import { nap } from "@/lib/contact";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -40,60 +39,6 @@ export const metadata: Metadata = pageMetadata({
   ],
 });
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is buyer representation really free for new construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically 2-3%) as part of their marketing budget. You pay nothing extra, and you get professional representation to protect your interests.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why do I need an agent when buying new construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Builder sales reps work for the builder, not you. A BHHS agent reviews contracts (often 50+ pages), negotiates upgrades and incentives, monitors construction quality, and ensures deadlines are met. Without representation, you're negotiating against experienced professionals alone.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I have to register Dr. Jan Duffy as my agent on the first visit?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 222-1964 to register Dr. Jan Duffy as your buyer's agent before visiting any model home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What builder incentives are currently available?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages. Incentives change monthly. Dr. Jan tracks current offers across all builders.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I negotiate on new construction pricing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Base prices are typically firm, but everything else is negotiable—upgrades, lot premiums, closing costs, and design center selections. A BHHS agent knows which builders negotiate and how to maximize your leverage, especially on standing inventory.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I use the builder's preferred lender?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Builder lenders often offer significant incentives ($10K-$30K) to use their services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly higher rates, sometimes it doesn't. We ensure you make an informed decision.",
-      },
-    },
-  ],
-};
 
 const builders = [
   {
@@ -237,10 +182,6 @@ const builders = [
 export default function NewConstructionPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main id="main-content" className="pb-16">
         <div className="container mx-auto px-4">
 {/* Hero */}
@@ -553,21 +494,8 @@ export default function NewConstructionPage() {
               </cite>
             </div>
           </section>
+          <IntentFaqs path="/new-construction" />
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              New Construction FAQs
-            </h2>
-                        <FaqAccordion items={[
-              { q: "Is buyer representation really free for new construction?", a: "Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically 2-3%) as part of their marketing budget. You pay nothing extra, and you get professional representation to protect your interests." },
-              { q: "Why do I need an agent when buying new construction?", a: "Builder sales reps work for the builder, not you. A BHHS agent reviews contracts (often 50+ pages), negotiates upgrades and incentives, monitors construction quality, and ensures deadlines are met. Without representation, you're negotiating against experienced professionals alone." },
-              { q: "Do I have to register Dr. Jan Duffy as my agent on the first visit?", a: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 222-1964 to register Dr. Jan Duffy as your buyer's agent before visiting any model home." },
-              { q: "What builder incentives are currently available?", a: "As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages. Incentives change monthly. Dr. Jan tracks current offers across all builders." },
-              { q: "Can I negotiate on new construction pricing?", a: "Base prices are typically firm, but everything else is negotiable—upgrades, lot premiums, closing costs, and design center selections. A BHHS agent knows which builders negotiate and how to maximize your leverage, especially on standing inventory." },
-              { q: "Should I use the builder's preferred lender?", a: "Builder lenders often offer significant incentives ($10K-$30K) to use their services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly higher rates, sometimes it doesn't. We ensure you make an informed decision." },
-            ]} />
-          </section>
 
           {/* What We Negotiate */}
           <section className="mb-16 max-w-5xl mx-auto">

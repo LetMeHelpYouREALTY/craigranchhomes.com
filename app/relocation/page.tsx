@@ -21,7 +21,7 @@ import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
-import FaqAccordion from "@/components/sections/FaqAccordion";
+import IntentFaqs from "@/components/sections/IntentFaqs";
 import { pageMetadata } from "@/lib/seo";
 
 
@@ -386,42 +386,7 @@ export default function RelocationPage() {
             </div>
           </section>
 
-          {/* FAQ */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Relocation Frequently Asked Questions
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Moving to a new city raises many questions. Here are answers to the most common 
-              concerns from people relocating to Las Vegas.
-            </p>
-            <FaqAccordion items={[ 
-                {
-                  q: "Can you help me find a home before I move?",
-                  a: "Absolutely. Dr. Jan provides virtual tours, video walkthroughs, and detailed neighborhood analysis so you can purchase confidently before relocating. Many clients buy their Las Vegas home without ever visiting in person until closing day.",
-                },
-                {
-                  q: "Which areas have the most parks, trails, and named school campuses?",
-                  a: "Summerlin, Henderson (especially Green Valley and Inspirada), and Skye Canyon have extensive parks, pools, recreation centers, and named campuses such as Palo Verde High School and Coronado High School. Dr. Jan matches buyers to commute times, square footage, and HOA amenities.",
-                },
-                {
-                  q: "How does the cost of living compare to California?",
-                  a: "Las Vegas costs about 30-40% less than LA/Orange County and 50%+ less than San Francisco. The biggest savings come from no state income tax (California charges up to 13.3%) and significantly lower housing costs. A household earning $200K in California could save $20,000+ annually just in state taxes.",
-                },
-                {
-                  q: "Do you help coordinate the sale of my current home too?",
-                  a: "Yes! Through the BHHS referral network, Dr. Jan can connect you with a trusted agent in your current city. This coordination ensures both transactions stay on track with synchronized timelines for a seamless transition.",
-                },
-                {
-                  q: "What's the job market like in Las Vegas?",
-                  a: "Las Vegas has diversified beyond gaming and hospitality. Major growth sectors include healthcare (Intermountain Health, UMC), technology (Switch, various startups), sports (Raiders, Golden Knights, Aces), logistics (Amazon), and professional services. The economy is growing faster than the national average.",
-                },
-                {
-                  q: "How do I compare neighborhoods beyond listing photos?",
-                  a: "Ask for commute times to the Strip and airport, HOA fees, park acreage, and named school campuses. Dr. Jan Duffy walks relocators through those facts for Summerlin, Green Valley, Inspirada, and Skye Canyon so you can decide from data, not slogans.",
-                },
-               ]} />
-          </section>
+          <IntentFaqs path="/relocation" />
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
