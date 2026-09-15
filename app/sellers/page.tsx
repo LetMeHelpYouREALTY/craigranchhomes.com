@@ -110,7 +110,7 @@ export default function SellersPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Seller Market Statistics | January 2026
+              January 2026: $450K median, 28 DOM, 2.1 months inventory — not your APN
             </h2>
 <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas housing market remains favorable for sellers with low inventory and 

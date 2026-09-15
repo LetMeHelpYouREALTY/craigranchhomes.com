@@ -420,12 +420,11 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Specialized Expertise
+                    Age-qualification packets and HOA reserves — read at Suite 100
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Dr. Jan understands the unique needs of 55+ buyers—from age
-                    verification processes to evaluating HOA reserves and
-                    understanding community rules.
+                    Occupancy rules, guest ages, and HOA reserve lines are reviewed at 9406 W Lake
+                    Mead Blvd before any clubhouse. Call (702) 222-1964.
                   </p>
                 </div>
               </div>
@@ -435,12 +434,11 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Relocation Support
+                    Out-of-state occupancy packet, then one rec campus from Suite 100
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Many 55+ buyers relocate from out of state. Our national BHHS
-                    network provides referrals, and Dr. Jan offers virtual tours
-                    and detailed community information.
+                    Virtual tours and BHHS destination intros start at 9406 W Lake Mead Blvd. We
+                    do not stack a Summerlin 55+ morning with a Henderson 55+ drive.
                   </p>
                 </div>
               </div>

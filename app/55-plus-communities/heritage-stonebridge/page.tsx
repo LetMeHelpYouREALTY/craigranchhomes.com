@@ -139,7 +139,7 @@ export default function HeritageAtStonebridgePage() {
           {/* Location Benefits */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Premium Summerlin Location
+              Downtown Summerlin retail, 12–18 minutes from 9406 W Lake Mead Blvd
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-slate-200">

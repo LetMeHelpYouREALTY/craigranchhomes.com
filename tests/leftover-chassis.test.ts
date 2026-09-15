@@ -33,6 +33,8 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       ">Las Vegas 55+ Market Overview | January 2026<",
       ">Las Vegas 55+ Communities<",
       "No-Pressure Approach",
+      "Specialized Expertise",
+      "Relocation Support",
     ],
   },
   {
@@ -160,6 +162,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       '<LeftoverBand path="/sellers" slot={2} />',
       '<LeftoverBand path="/sellers" slot={3} />',
       '<LeftoverBand path="/sellers" slot={4} />',
+      "January 2026: $450K median, 28 DOM, 2.1 months inventory",
     ],
     banned: [
       ">The Berkshire Hathaway HomeServices Selling Advantage<",
@@ -167,6 +170,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       ">Specialized Services for Every Seller<",
       ">What's Included When You List with BHHS<",
       ">What's Your Home Worth?<",
+      ">Las Vegas Seller Market Statistics | January 2026<",
     ],
   },
   {
@@ -198,11 +202,17 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: [
       "one ZIP per inbound afternoon",
       '<LeftoverBand path="/relocation" />',
+      "California paycheck, Nevada PITI",
+      "Book Suite 100 before the first inbound ZIP",
     ],
     banned: [
       "unique lifestyle",
       "Popular Relocation Destinations",
       ">Why People Are Moving to Las Vegas<",
+      ">Moving from California?<",
+      ">Planning Your Move to Las Vegas?<",
+      "Private school recommendations",
+      "quality of life",
     ],
   },
   {
@@ -317,24 +327,27 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: [
       '<LeftoverBand path="/55-plus-communities/sun-city-summerlin" />',
       "7,700+ Homes, $155–$195 HOA, $320K–$850K Band",
+      "Highlands, Sun Terrace, Eagle Crest, and Palm Valley",
     ],
-    banned: [">About Sun City Summerlin<", "at a Glance"],
+    banned: [">About Sun City Summerlin<", "at a Glance", ">Sun City Summerlin Neighborhoods<"],
   },
   {
     file: "app/55-plus-communities/trilogy-summerlin/page.tsx",
     needles: [
       '<LeftoverBand path="/55-plus-communities/trilogy-summerlin" />',
       "800+ Shea Homes, $250–$350 HOA, $500K–$1.1M Band",
+      "Open plans and first-floor primaries",
     ],
-    banned: [">About Trilogy at Summerlin<", "at a Glance"],
+    banned: [">About Trilogy at Summerlin<", "at a Glance", ">Contemporary Home Designs<"],
   },
   {
     file: "app/55-plus-communities/heritage-stonebridge/page.tsx",
     needles: [
       '<LeftoverBand path="/55-plus-communities/heritage-stonebridge" />',
       "1,100+ Homes, $175–$220 HOA, $400K–$750K Band",
+      "Downtown Summerlin retail, 12–18 minutes",
     ],
-    banned: [">About Heritage at Stonebridge<", "at a Glance"],
+    banned: [">About Heritage at Stonebridge<", "at a Glance", ">Premium Summerlin Location<"],
   },
   {
     file: "app/55-plus-communities/solera-anthem/page.tsx",

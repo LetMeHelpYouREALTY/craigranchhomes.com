@@ -258,7 +258,7 @@ export default function RelocationPage() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                    <span>Private school recommendations</span>
+                    <span>Named campus minutes at ccsd.net/zoning</span>
                   </li>
                 </ul>
               </div>
@@ -267,11 +267,11 @@ export default function RelocationPage() {
 
           {/* Coming From California */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center">Moving from California?</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">California paycheck, Nevada PITI — run the net at Suite 100</h2>
             <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
-              California to Nevada is one of the most popular relocation routes in the country. 
-              Thousands of California buyers move to Las Vegas each year seeking lower costs, 
-              no state income tax, and a better quality of life. Here's what the numbers look like.
+              California to Nevada inbound files start at 9406 W Lake Mead Blvd, Suite 100. Housing
+              prices 40–60% below many California coastal cities is a comparison, not a guarantee.
+              Call (702) 222-1964. No Nevada state income tax is a line item on the net sheet.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -344,7 +344,7 @@ export default function RelocationPage() {
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Planning Your Move to Las Vegas?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Book Suite 100 before the first inbound ZIP — (702) 222-1964</h2>
             <p className="text-xl text-slate-300 mb-8">
               Let Dr. Jan Duffy and Berkshire Hathaway HomeServices make your relocation stress-free.
               Whether you're moving next month or exploring options, a free consultation can help 

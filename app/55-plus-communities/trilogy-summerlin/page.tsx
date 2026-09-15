@@ -139,7 +139,7 @@ export default function TrilogySummerlinPage() {
           {/* Home Features */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Contemporary Home Designs
+              Open plans and first-floor primaries — walk one Shea row from Suite 100
             </h2>
             <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
               Trilogy homes break the mold of traditional 55+ construction with
