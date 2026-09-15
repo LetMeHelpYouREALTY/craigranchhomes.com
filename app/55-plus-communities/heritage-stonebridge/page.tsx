@@ -137,8 +137,8 @@ export default function HeritageAtStonebridgePage() {
               </h2>
 <p>
                 <strong>Heritage at Stonebridge</strong> offers what larger 55+
-                communities can't—a boutique, guard-gated experience in one of
-                Las Vegas's most desirable locations. With just over 1,100 homes,
+                communities can't—a boutique, guard-gated campus in southwest Las Vegas.
+                With just over 1,100 homes,
                 this 1,100-home campus provides a staffed gate and
                 a private enclave while still offering resort-style amenities.
               </p>

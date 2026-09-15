@@ -216,7 +216,8 @@ export default function MarketUpdatePage() {
                   What I'm watching closely: <strong>new listing activity</strong>. If inventory
                   continues declining while sales remain strong, we could see more competitive
                   conditions by spring. <strong>Berkshire Hathaway HomeServices</strong> buyers
-                  should be prepared to move quickly on desirable properties, while sellers should
+                  should be prepared to move quickly on well-priced listings that match a saved
+                  search, while sellers should
                   consider listing before the traditional spring rush creates more competition."
                 </p>
               </div>

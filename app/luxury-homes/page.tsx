@@ -260,9 +260,9 @@ export default function LuxuryHomesPage() {
               Premier Las Vegas Luxury Communities
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers some of the most desirable luxury communities in the Southwest. From 
-              ultra-exclusive guard-gated enclaves to lakefront estates, these premier neighborhoods 
-              attract discerning buyers seeking the finest in design, amenities, and lifestyle.
+              Guard-gated, golf-course, and lakefront luxury product is compared by square footage,
+              HOA packet, and drive time from Suite 100—not by slogan. From The Ridges to Southern
+              Highlands to Lake Las Vegas, we sequence one campus per afternoon.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {luxuryNeighborhoods.map((neighborhood) => (

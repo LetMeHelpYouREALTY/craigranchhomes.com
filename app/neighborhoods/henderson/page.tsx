@@ -102,12 +102,12 @@ export default function HendersonPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Why Henderson Is Nevada's Best-Kept Secret
+                Green Valley trees vs Inspirada rec campus — two Henderson days
               </h2>
               <p>
-                <strong>Henderson</strong> has quietly become one of the most desirable cities in the American
-                Southwest. As Nevada's second-largest city with over 320,000 residents, Henderson offers the
-                perfect balance of suburban tranquility and urban convenience. <strong>Berkshire Hathaway
+                <strong>Henderson</strong> is Nevada's second-largest city with over 320,000 residents.
+                Compare streets by square footage, HOA dues, parks, and commute minutes from
+                9406 W Lake Mead Blvd—not by slogan. <strong>Berkshire Hathaway
                 HomeServices</strong> has been helping buyers find Henderson homes for decades,
                 and Dr. Jan Duffy brings unmatched expertise to every transaction.
               </p>
