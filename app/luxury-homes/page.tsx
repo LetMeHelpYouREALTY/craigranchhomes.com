@@ -18,6 +18,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -151,6 +152,7 @@ export default function LuxuryHomesPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" bookLabel="Request Private Showing" />
           <OfficeProximity path="/luxury-homes" />
+          <UniqueInterior path="/luxury-homes" />
 
             </div>
           </div>
@@ -160,10 +162,7 @@ export default function LuxuryHomesPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Luxury Market Statistics | January 2026
             </h2>
-            <HeadingPhoto path="/luxury-homes" level="h2" />
-            <HeadingPhoto path="/luxury-homes" level="h3" />
-
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
+<p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas luxury market continues to attract affluent buyers from California, 
               the Midwest, and international markets. Understanding current market conditions 
               is essential for both buyers and sellers in this segment.

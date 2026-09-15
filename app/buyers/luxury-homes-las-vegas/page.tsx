@@ -16,6 +16,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import { nap } from "@/lib/contact";
 
@@ -91,6 +92,7 @@ export default function LuxuryHomesPage() {
             </p>
             <CtaActions variant="onLight" bookLabel="Request Private Showing" />
           <OfficeProximity path="/buyers/luxury-homes-las-vegas" />
+          <UniqueInterior path="/buyers/luxury-homes-las-vegas" />
 
           </div>
 
@@ -99,10 +101,7 @@ export default function LuxuryHomesPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Las Vegas Luxury Market Performance
             </h2>
-            <HeadingPhoto path="/buyers/luxury-homes-las-vegas" level="h2" />
-            <HeadingPhoto path="/buyers/luxury-homes-las-vegas" level="h3" />
-
-            <div className="grid md:grid-cols-4 gap-6 mb-8">
+<div className="grid md:grid-cols-4 gap-6 mb-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-amber-400 mb-2">+161%</div>
                 <div className="text-slate-300 text-sm">Appreciation Since 2015</div>

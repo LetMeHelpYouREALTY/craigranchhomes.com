@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import {
@@ -144,6 +145,7 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
           <OfficeProximity path="/google-business" />
+          <UniqueInterior path="/google-business" />
 
           <section className="max-w-5xl mx-auto mb-16">
             <div className="bg-slate-50 rounded-xl p-6">
@@ -151,8 +153,7 @@ export default function GoogleBusinessPage() {
                 <Clock className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 <h2 className="text-xl font-bold text-slate-900">Business Hours</h2>
               </div>
-              <HeadingPhoto path="/google-business" level="h2" />
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                 {businessHours.map((row) => (
                   <div key={row.day}>
                     <span className="font-medium">{row.day}:</span> {row.label}
@@ -164,8 +165,7 @@ export default function GoogleBusinessPage() {
 
           <section className="max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Visit the Office</h2>
-            <HeadingPhoto path="/google-business" level="h3" />
-            <div className="rounded-xl overflow-hidden border border-slate-200 mb-6">
+<div className="rounded-xl overflow-hidden border border-slate-200 mb-6">
               <iframe
                 title="Map to Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd"
                 src={maps.embedSrc}

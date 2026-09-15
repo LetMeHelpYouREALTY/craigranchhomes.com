@@ -12,6 +12,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -52,6 +53,7 @@ export default function MoveUpSellerPage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/sellers/move-up" />
+          <UniqueInterior path="/sellers/move-up" />
 
           </div>
 
@@ -60,10 +62,7 @@ export default function MoveUpSellerPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Your Equity Position is Stronger Than You Think
             </h2>
-            <HeadingPhoto path="/sellers/move-up" level="h2" />
-            <HeadingPhoto path="/sellers/move-up" level="h3" />
-
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+<div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">$100K-$250K+</div>
                 <div className="text-green-100">Typical Equity Gain</div>

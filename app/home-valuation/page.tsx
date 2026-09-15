@@ -6,6 +6,7 @@ import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, Dollar
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -94,6 +95,7 @@ export default function HomeValuationPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" bookLabel="Book a Valuation" />
           <OfficeProximity path="/home-valuation" />
+          <UniqueInterior path="/home-valuation" />
 
             </div>
           </div>
@@ -102,10 +104,7 @@ export default function HomeValuationPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-3 text-center">
               Instant Home Value Estimate
             </h2>
-            <HeadingPhoto path="/home-valuation" level="h2" />
-            <HeadingPhoto path="/home-valuation" level="h3" />
-
-            <p className="text-slate-600 text-center mb-6">
+<p className="text-slate-600 text-center mb-6">
               Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with
               Dr. Jan Duffy for a price backed by recent comps.
             </p>
@@ -182,7 +181,7 @@ export default function HomeValuationPage() {
               <div className="bg-slate-50 rounded-lg p-6">
                 <blockquote className="text-slate-700 italic mb-3">
                   "Pricing your home correctly from day one is the single most important factor in
-                  getting top dollar. That's why I use comprehensive market analysis—not just
+                  pricing to recent comps. That's why I use comprehensive market analysis—not just
                   algorithms—to determine your home's true value."
                 </blockquote>
                 <cite className="text-slate-900 font-semibold text-sm">

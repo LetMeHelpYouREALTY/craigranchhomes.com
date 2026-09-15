@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FaqAccordion from "@/components/sections/FaqAccordion";
@@ -49,7 +50,7 @@ const neighborhoods = [
     priceChange: "+4.8%",
     description: "Henderson community with mature landscaping and golf amenities",
     highlights: ["Golf Courses", "Walking Trails", "The District", "Mature Trees"],
-    bestFor: "Golf, shopping, established landscaping",
+    bestFor: "Golf, shopping, 35-year-old street trees",
   },
   {
     name: "The Ridges",
@@ -138,6 +139,7 @@ export default function NeighborhoodsPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/neighborhoods" />
+          <UniqueInterior path="/neighborhoods" />
 
             </div>
             <div className="mt-8">
@@ -148,9 +150,7 @@ export default function NeighborhoodsPage() {
           {/* Neighborhood Grid */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Compare Valley Neighborhoods</h2>
-            <HeadingPhoto path="/neighborhoods" level="h2" />
-            <HeadingPhoto path="/neighborhoods" level="h3" />
-            <div className="grid md:grid-cols-2 gap-6">
+<div className="grid md:grid-cols-2 gap-6">
               {neighborhoods.map((neighborhood) => (
                 <Link
                   key={neighborhood.slug}

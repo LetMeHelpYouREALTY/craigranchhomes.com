@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
@@ -274,6 +275,7 @@ export default function NewConstructionPage() {
             </div>
             <CtaActions variant="onLight" bookLabel="Register Before You Tour" />
           <OfficeProximity path="/new-construction" />
+          <UniqueInterior path="/new-construction" />
 
             <div className="mt-8 max-w-xl mx-auto">
               <p className="text-sm font-semibold text-slate-700 mb-3">Search live MLS inventory</p>
@@ -286,10 +288,7 @@ export default function NewConstructionPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Why Use a BHHS Agent for New Construction?
             </h2>
-            <HeadingPhoto path="/new-construction" level="h2" />
-            <HeadingPhoto path="/new-construction" level="h3" />
-
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+<div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="flex items-start">
                 <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
                   <DollarSign className="h-6 w-6 text-white" />

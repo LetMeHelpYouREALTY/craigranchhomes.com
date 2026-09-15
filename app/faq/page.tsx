@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -207,14 +208,13 @@ export default function FAQPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/faq" />
+          <UniqueInterior path="/faq" />
 
             </div>
           </div>
 
           {/* FAQ Categories */}
-          <HeadingPhoto path="/faq" level="h2" />
-          <HeadingPhoto path="/faq" level="h3" />
-          <div className="max-w-4xl mx-auto space-y-12">
+<div className="max-w-4xl mx-auto space-y-12">
             {faqCategories.map((category) => (
               <section key={category.title}>
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">

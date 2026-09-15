@@ -18,6 +18,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -27,7 +28,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/sellers",
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
-    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 222-1964.",
+    "Sell your Las Vegas or Henderson home with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing priced to recent comps. Call (702) 222-1964.",
   keywords: [
     "sell home Las Vegas",
     "Las Vegas listing agent",
@@ -160,6 +161,7 @@ export default function SellersPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/sellers" />
+          <UniqueInterior path="/sellers" />
 
             </div>
           </div>
@@ -169,10 +171,7 @@ export default function SellersPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Seller Market Statistics | January 2026
             </h2>
-            <HeadingPhoto path="/sellers" level="h2" />
-            <HeadingPhoto path="/sellers" level="h3" />
-
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
+<p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas housing market remains favorable for sellers with low inventory and 
               steady demand. Well-priced homes are selling quickly, and appreciation continues 
               to outpace national averages. Here's what sellers need to know about current conditions.
@@ -328,7 +327,7 @@ export default function SellersPage() {
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Pricing your home correctly from day one is the single most important factor in
-                getting top dollar. Overpriced homes sit on the market, and every day on market costs 
+                pricing to recent comps. Overpriced homes sit on the market, and every day on market costs 
                 you money—both in carrying costs and buyer perception. That's why I use comprehensive 
                 market analysis and my experience serving Las Vegas since 2008 to price homes right 
                 the first time. The result? My listings typically sell within 2% of asking price."

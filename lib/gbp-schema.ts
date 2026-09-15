@@ -64,7 +64,7 @@ export const businessInfo = {
   services: [
     // Core Services
     { name: "Buyer Representation", description: "Full-service home buying assistance" },
-    { name: "Seller Representation", description: "List and sell your home for top dollar" },
+    { name: "Seller Representation", description: "List and sell your home priced to recent comps" },
     { name: "Luxury Home Sales", description: "High-end properties $1M+" },
     // Niche Services (trigger intent phrases)
     { name: "California Relocation Services", description: "Helping CA buyers transition to Las Vegas" },

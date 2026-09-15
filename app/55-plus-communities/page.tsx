@@ -22,6 +22,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -239,12 +240,12 @@ const communities = [
     amenities: ["Guard-gated", "Clubhouse", "Fitness", "Tennis"],
     highlights: [
       "Guard-gated security",
-      "More intimate community size",
+      "About 1,200 homes with a staffed gate",
       "Lower HOA than larger communities",
       "Henderson location",
     ],
     description:
-      "A more intimate alternative to larger 55+ communities with guard-gated security.",
+      "A smaller 1,200-home 55+ campus in Henderson with a staffed gate.",
     color: "teal",
   },
   {
@@ -357,6 +358,7 @@ export default function FiftyFiveCommunitiesPage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/55-plus-communities" />
+          <UniqueInterior path="/55-plus-communities" />
 
           </div>
 
@@ -365,9 +367,7 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Las Vegas 55+ Market Overview | January 2026
             </h2>
-            <HeadingPhoto path="/55-plus-communities" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">
                   25,000+
@@ -477,8 +477,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
                     Understanding 55+ Age Requirements
                   </h3>
-                  <HeadingPhoto path="/55-plus-communities" level="h3" />
-                  <div className="text-slate-700 space-y-3">
+<div className="text-slate-700 space-y-3">
                     <p>
                       <strong>Federal HOPA Guidelines:</strong> At least 80% of
                       occupied units must have one resident 55 or older. The

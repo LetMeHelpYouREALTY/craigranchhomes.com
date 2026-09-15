@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import { nap } from "@/lib/contact";
 
@@ -31,10 +32,7 @@ export default function SecurityPolicyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
               Our Commitment to Security
             </h2>
-            <HeadingPhoto path="/security-policy" level="h2" />
-            <HeadingPhoto path="/security-policy" level="h3" />
-
-            <p className="text-gray-700 leading-relaxed">
+<p className="text-gray-700 leading-relaxed">
               At Berkshire Hathaway HomeServices Nevada Properties, we take the security
               of our systems and the privacy of our clients seriously. This page outlines
               our security practices and provides information for security researchers.
@@ -276,6 +274,7 @@ export default function SecurityPolicyPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/security-policy" />
+          <UniqueInterior path="/security-policy" />
 
             </div>
           </section>

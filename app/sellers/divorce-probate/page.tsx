@@ -13,6 +13,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -54,6 +55,7 @@ export default function DivorceProbatePage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/sellers/divorce-probate" />
+          <UniqueInterior path="/sellers/divorce-probate" />
 
           </div>
 
@@ -62,10 +64,7 @@ export default function DivorceProbatePage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Situations We Help Navigate
             </h2>
-            <HeadingPhoto path="/sellers/divorce-probate" level="h2" />
-            <HeadingPhoto path="/sellers/divorce-probate" level="h3" />
-
-            <div className="grid md:grid-cols-2 gap-8">
+<div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-blue-100 rounded-full p-3 mr-4">

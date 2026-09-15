@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -92,6 +93,7 @@ export default function InvestmentPropertiesPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/investment-properties" />
+          <UniqueInterior path="/investment-properties" />
 
             </div>
           </div>
@@ -99,10 +101,7 @@ export default function InvestmentPropertiesPage() {
           {/* Why Las Vegas */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Invest in Las Vegas?</h2>
-            <HeadingPhoto path="/investment-properties" level="h2" />
-            <HeadingPhoto path="/investment-properties" level="h3" />
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-1">No State Income Tax</h3>

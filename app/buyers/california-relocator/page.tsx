@@ -18,6 +18,7 @@ import { pageMetadata } from "@/lib/seo";
 import { nap } from "@/lib/contact";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -131,6 +132,7 @@ export default function CaliforniaRelocatorPage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/buyers/california-relocator" />
+          <UniqueInterior path="/buyers/california-relocator" />
 
           </div>
 
@@ -139,10 +141,7 @@ export default function CaliforniaRelocatorPage() {
             <div className="flex items-center justify-center mb-6">
               <Calculator className="h-10 w-10 mr-3" />
               <h2 className="text-3xl font-bold">California vs. Nevada: The Numbers</h2>
-            <HeadingPhoto path="/buyers/california-relocator" level="h2" />
-            <HeadingPhoto path="/buyers/california-relocator" level="h3" />
-
-            </div>
+</div>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">0%</div>

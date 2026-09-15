@@ -13,6 +13,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -53,6 +54,7 @@ export default function DownsizingPage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/sellers/downsizing" />
+          <UniqueInterior path="/sellers/downsizing" />
 
           </div>
 
@@ -61,10 +63,7 @@ export default function DownsizingPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Extract Your Equity, Enjoy Your Life
             </h2>
-            <HeadingPhoto path="/sellers/downsizing" level="h2" />
-            <HeadingPhoto path="/sellers/downsizing" level="h3" />
-
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+<div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-white/10 rounded-xl p-6">
                 <h3 className="font-bold text-xl mb-4 flex items-center">
                   <HomeIcon className="h-6 w-6 mr-2 text-blue-400" />

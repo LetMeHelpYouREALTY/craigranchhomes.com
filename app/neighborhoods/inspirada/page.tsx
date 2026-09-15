@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -34,7 +35,7 @@ const faqSchema = {
       name: "What is the current median home price in Inspirada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with established landscaping.",
+        text: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with mature yards.",
       },
     },
     {
@@ -96,15 +97,14 @@ export default function InspiradaPage() {
           </div>
 
           <OfficeProximity path="/neighborhoods/inspirada" />
+          <UniqueInterior path="/neighborhoods/inspirada" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Inspirada Real Estate Market | January 2026
             </h2>
-            <HeadingPhoto path="/neighborhoods/inspirada" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$525,000</div>
                 <div className="text-slate-300 text-sm">Median Home Price</div>
@@ -156,8 +156,7 @@ export default function InspiradaPage() {
 
               {/* Community Highlights */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-              <HeadingPhoto path="/neighborhoods/inspirada" level="h3" />
-              <div className="grid md:grid-cols-2 gap-8 not-prose">
+<div className="grid md:grid-cols-2 gap-8 not-prose">
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Waves className="h-8 w-8 text-blue-600 mr-3" />
@@ -328,7 +327,7 @@ export default function InspiradaPage() {
               Frequently Asked Questions About Inspirada
             </h2>
                         <FaqAccordion items={[
-              { q: "What is the current median home price in Inspirada?", a: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with established landscaping." },
+              { q: "What is the current median home price in Inspirada?", a: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with mature yards." },
               { q: "What amenities does Inspirada offer residents?", a: "Inspirada features resort-style pools with water features, miles of walking trails, multiple parks, sports courts, and community gathering spaces. The HOA maintains these amenities to resort standards, creating a vacation-like atmosphere." },
               { q: "Which campuses serve Inspirada?", a: "Inspirada is served by Henderson-area campuses, including facilities built with the master plan. Compare drive times, HOA amenities, trails, and pools rather than ratings." },
               { q: "Is Inspirada a good investment?", a: "Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned communities. The combination of resort amenities, Henderson location, and continued development suggests ongoing demand and value growth." },

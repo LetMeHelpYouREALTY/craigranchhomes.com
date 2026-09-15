@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -96,15 +97,14 @@ export default function GreenValleyPage() {
           </div>
 
           <OfficeProximity path="/neighborhoods/green-valley" />
+          <UniqueInterior path="/neighborhoods/green-valley" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Green Valley Real Estate Market | January 2026
             </h2>
-            <HeadingPhoto path="/neighborhoods/green-valley" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$520,000</div>
                 <div className="text-slate-300 text-sm">Median Home Price</div>
@@ -155,8 +155,7 @@ export default function GreenValleyPage() {
 
               {/* Community Highlights */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-              <HeadingPhoto path="/neighborhoods/green-valley" level="h3" />
-              <div className="grid md:grid-cols-2 gap-8 not-prose">
+<div className="grid md:grid-cols-2 gap-8 not-prose">
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <TreePine className="h-8 w-8 text-blue-600 mr-3" />
@@ -164,7 +163,7 @@ export default function GreenValleyPage() {
                   </div>
                   <p className="text-slate-600">
                     Green Valley's 35+ years of growth have created tree-lined streets and lush landscaping
-                    that newer communities simply can't match. The established vegetation provides shade,
+                    that newer communities simply can't match. The 35-year-old street trees provide shade,
                     privacy, and a sense of permanence. Many homes feature larger lots than you'll find in
                     newer developments, with mature fruit trees and professional landscaping.
                   </p>

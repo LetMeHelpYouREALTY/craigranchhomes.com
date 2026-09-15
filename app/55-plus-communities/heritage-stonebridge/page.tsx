@@ -16,6 +16,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -94,6 +95,7 @@ export default function HeritageAtStonebridgePage() {
             </div>
           </div>
           <OfficeProximity path="/55-plus-communities/heritage-stonebridge" />
+          <UniqueInterior path="/55-plus-communities/heritage-stonebridge" />
 
 
           {/* Quick Stats */}
@@ -101,9 +103,7 @@ export default function HeritageAtStonebridgePage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Heritage at Stonebridge at a Glance
             </h2>
-            <HeadingPhoto path="/55-plus-communities/heritage-stonebridge" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-1">
                   $400K-$750K
@@ -135,12 +135,11 @@ export default function HeritageAtStonebridgePage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Heritage at Stonebridge
               </h2>
-              <HeadingPhoto path="/55-plus-communities/heritage-stonebridge" level="h3" />
-              <p>
+<p>
                 <strong>Heritage at Stonebridge</strong> offers what larger 55+
                 communities can't—a boutique, guard-gated experience in one of
                 Las Vegas's most desirable locations. With just over 1,100 homes,
-                this intimate community provides the security and exclusivity of
+                this 1,100-home campus provides a staffed gate and
                 a private enclave while still offering resort-style amenities.
               </p>
               <p>

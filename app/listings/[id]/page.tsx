@@ -7,6 +7,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import { ctaPhone, nap } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
 import { mediaUrl, photos } from "@/lib/media";
@@ -73,6 +74,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/listings" />
+          <UniqueInterior path="/listings" listingId={params.id} />
 
             </div>
           </div>

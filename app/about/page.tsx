@@ -19,6 +19,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
@@ -146,6 +147,7 @@ export default function AboutPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" bookLabel="Book a Consultation" />
           <OfficeProximity path="/about" />
+          <UniqueInterior path="/about" />
 
             </div>
           </div>
@@ -155,8 +157,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Dr. Jan Duffy</h2>
-                <HeadingPhoto path="/about" level="h2" />
-                <p className="text-lg text-blue-600 mb-6">
+<p className="text-lg text-blue-600 mb-6">
                   REALTOR® | License S.0197614.LLC
                 </p>
 
@@ -194,8 +195,7 @@ export default function AboutPage() {
                 {/* Contact Info */}
                 <div className="bg-slate-50 rounded-lg p-6 mb-8">
                   <h3 className="font-bold text-slate-900 mb-4">Contact Dr. Jan Duffy</h3>
-                  <HeadingPhoto path="/about" level="h3" />
-                  <div className="space-y-3">
+<div className="space-y-3">
                     <a
                       href="tel:+17022221964"
                       className="flex items-center text-slate-700 hover:text-blue-600"

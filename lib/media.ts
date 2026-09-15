@@ -159,6 +159,36 @@ export const photos = {
     width: 1920,
     height: 1080,
   },
+  sunCityAnthemGolf: {
+    src: "/images/neighborhoods/sun-city-anthem-golf.jpg",
+    alt: "Sun City Anthem golf fairway and tile-roof homes with McCullough Range views in Henderson",
+    width: 1920,
+    height: 1080,
+  },
+  soleraClubhouse: {
+    src: "/images/properties/solera-anthem-clubhouse.jpg",
+    alt: "Solera at Anthem boutique 55-plus clubhouse and resort pool in Henderson, Nevada",
+    width: 1920,
+    height: 1080,
+  },
+  heritageGate: {
+    src: "/images/neighborhoods/heritage-stonebridge-gate.jpg",
+    alt: "Staffed gate and landscaped entry at Heritage at Stonebridge, a Summerlin 55-plus community",
+    width: 1920,
+    height: 1080,
+  },
+  alianteRec: {
+    src: "/images/neighborhoods/sun-city-aliante-rec.jpg",
+    alt: "Sun City Aliante recreation campus and golf with desert hills in North Las Vegas",
+    width: 1920,
+    height: 1080,
+  },
+  sunCitySummerlinRec: {
+    src: "/images/properties/sun-city-summerlin-rec.jpg",
+    alt: "Sun City Summerlin recreation center and pool terrace with Spring Mountains backdrop",
+    width: 1920,
+    height: 1080,
+  },
   newConstruction: {
     src: "/images/properties/new-construction-street.jpg",
     alt: "New construction street of two-story Las Vegas homes under a clear sky",
@@ -203,6 +233,10 @@ export function photoForPath(path: string): SitePhoto {
   if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.lakeLasVegas;
   if (path.startsWith("/55-plus-communities/sun-city-aliante")) return photos.aliante;
   if (path.startsWith("/55-plus-communities/trilogy-summerlin")) return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/55-plus-communities/sun-city-anthem")) return photos.sunCityAnthemGolf;
+  if (path.startsWith("/55-plus-communities/solera-anthem")) return photos.soleraClubhouse;
+  if (path.startsWith("/55-plus-communities/heritage-stonebridge")) return photos.heritageGate;
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) return photos.fiftyFive;
   if (path.startsWith("/55-plus")) return photos.fiftyFive;
   if (path.startsWith("/new-construction")) return photos.newConstruction;
   if (
@@ -243,6 +277,8 @@ export function h2PhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/sellers") || path.startsWith("/home-valuation")) return photos.consultation;
   if (path.startsWith("/buyers")) return photos.homeHero;
   if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/55-plus-communities/sun-city-summerlin")) return photos.sunCitySummerlinRec;
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) return photos.alianteRec;
   if (path.startsWith("/55-plus")) return photos.fiftyFiveFitness;
   if (path.startsWith("/new-construction")) return photos.skyeCanyon;
   if (path.startsWith("/market") || path.startsWith("/neighborhoods")) return photos.market;
@@ -267,12 +303,11 @@ export function h3PhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/southern-highlands")) return photos.southernHighlands;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.mountainsEdge;
   if (path.startsWith("/neighborhoods/centennial-hills")) return photos.centennial;
-  if (path.startsWith("/neighborhoods/north-las-vegas") || path.startsWith("/55-plus-communities/sun-city-aliante")) {
-    return photos.aliante;
-  }
+  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.aliante;
+  if (path.startsWith("/55-plus-communities/sun-city-aliante")) return photos.fiftyFiveFitness;
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.skyeCanyon;
-  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.lakeLasVegas;
-  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/55-plus-communities/del-webb-lake-las-vegas")) return photos.fiftyFiveFitness;
+  if (path.startsWith("/55-plus-communities/trilogy-summerlin")) return photos.summerlinTrail;
   if (path.startsWith("/55-plus-communities/heritage-stonebridge")) return photos.summerlin;
   if (path.startsWith("/55-plus-communities/solera-anthem")) return photos.henderson;
   if (path.startsWith("/55-plus-communities/sun-city-anthem")) return photos.henderson;

@@ -19,6 +19,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -141,6 +142,7 @@ export default function RelocationPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/relocation" />
+          <UniqueInterior path="/relocation" />
 
             </div>
           </div>
@@ -148,10 +150,7 @@ export default function RelocationPage() {
           {/* Why Las Vegas */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">Why People Are Moving to Las Vegas</h2>
-            <HeadingPhoto path="/relocation" level="h2" />
-            <HeadingPhoto path="/relocation" level="h3" />
-
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
+<p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               Las Vegas has become one of the fastest-growing cities in America, attracting 
               buyers from across the country. Here's why so 
               many people are making the move to Southern Nevada.

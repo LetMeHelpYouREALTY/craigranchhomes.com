@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -67,6 +68,7 @@ export default function MarketReportPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/market-report" />
+          <UniqueInterior path="/market-report" />
 
             </div>
           </div>
@@ -76,10 +78,7 @@ export default function MarketReportPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Las Vegas Market Snapshot | January 2026
             </h2>
-            <HeadingPhoto path="/market-report" level="h2" />
-            <HeadingPhoto path="/market-report" level="h3" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">$450,000</div>
                 <div className="text-slate-300 text-sm">Median Home Price</div>

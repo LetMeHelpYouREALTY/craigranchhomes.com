@@ -21,6 +21,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 
 import { nap } from "@/lib/contact";
@@ -210,6 +211,7 @@ export default function ServicesPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/services" />
+          <UniqueInterior path="/services" />
 
             </div>
           </div>
@@ -219,10 +221,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
               Core Real Estate Services
             </h2>
-            <HeadingPhoto path="/services" level="h2" />
-            <HeadingPhoto path="/services" level="h3" />
-
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+<p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               These foundational services cover the majority of real estate transactions in Las Vegas. 
               Each service is delivered with the professionalism, resources, and ethical standards 
               that define Berkshire Hathaway HomeServices—the only real estate brand backed by 

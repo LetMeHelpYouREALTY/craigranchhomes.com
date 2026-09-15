@@ -18,6 +18,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -145,6 +146,7 @@ export default function ListingsPage() {
             <div className="mb-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/listings" />
+          <UniqueInterior path="/listings" />
 
             </div>
             <RealScoutSearch />
@@ -172,10 +174,7 @@ export default function ListingsPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Popular Property Searches in Las Vegas
             </h2>
-            <HeadingPhoto path="/listings" level="h2" />
-            <HeadingPhoto path="/listings" level="h3" />
-
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+<p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers diverse neighborhoods for every lifestyle and budget. Search luxury
               estates in guard-gated communities, homes near Palo Verde High School or Coronado High
               School, or new construction. Browse popular searches below or use the filters to

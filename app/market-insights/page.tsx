@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -102,6 +103,7 @@ export default function MarketInsightsPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/market-insights" />
+          <UniqueInterior path="/market-insights" />
 
             </div>
           </div>
@@ -111,10 +113,7 @@ export default function MarketInsightsPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               5 Forces Driving Las Vegas Real Estate in 2026
             </h2>
-            <HeadingPhoto path="/market-insights" level="h2" />
-            <HeadingPhoto path="/market-insights" level="h3" />
-
-            <div className="grid md:grid-cols-5 gap-4">
+<div className="grid md:grid-cols-5 gap-4">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-2">37%</div>
                 <div className="text-slate-300 text-sm">California Migration</div>

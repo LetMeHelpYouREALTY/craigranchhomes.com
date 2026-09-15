@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -134,6 +135,7 @@ export default function SunCityAnthemPage() {
             </div>
           </div>
           <OfficeProximity path="/55-plus-communities/sun-city-anthem" />
+          <UniqueInterior path="/55-plus-communities/sun-city-anthem" />
 
 
           {/* Quick Stats */}
@@ -141,9 +143,7 @@ export default function SunCityAnthemPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Anthem at a Glance
             </h2>
-            <HeadingPhoto path="/55-plus-communities/sun-city-anthem" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">$350K-$1.2M</div>
                 <div className="text-slate-300 text-sm">Price Range</div>
@@ -169,8 +169,7 @@ export default function SunCityAnthemPage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Sun City Anthem
               </h2>
-              <HeadingPhoto path="/55-plus-communities/sun-city-anthem" level="h3" />
-              <p>
+<p>
                 <strong>Sun City Anthem</strong> brings the legendary Sun City lifestyle to Henderson,
                 Nevada. Built by Del Webb from 1998-2008, this
                 7,100+ home community offers stunning mountain views, championship golf, and
@@ -278,7 +277,7 @@ export default function SunCityAnthemPage() {
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <h3 className="font-bold text-slate-900 mb-2">Liberty</h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Original phase with established landscaping. Close to Anthem Center. Most
+                  Original phase with mature street trees. Close to Anthem Center. Most
                   affordable options starting around $350K.
                 </p>
               </div>

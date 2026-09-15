@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -96,15 +97,14 @@ export default function TheRidgesPage() {
           </div>
 
           <OfficeProximity path="/neighborhoods/the-ridges" />
+          <UniqueInterior path="/neighborhoods/the-ridges" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               The Ridges Luxury Market | January 2026
             </h2>
-            <HeadingPhoto path="/neighborhoods/the-ridges" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$2.5M</div>
                 <div className="text-slate-300 text-sm">Median Home Price</div>
@@ -157,8 +157,7 @@ export default function TheRidgesPage() {
 
               {/* Community Highlights */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
-              <HeadingPhoto path="/neighborhoods/the-ridges" level="h3" />
-              <div className="grid md:grid-cols-2 gap-8 not-prose">
+<div className="grid md:grid-cols-2 gap-8 not-prose">
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Shield className="h-8 w-8 text-blue-600 mr-3" />

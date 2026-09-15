@@ -19,6 +19,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -127,6 +128,7 @@ export default function BuyersPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/buyers" />
+          <UniqueInterior path="/buyers" />
 
             </div>
           </div>
@@ -136,10 +138,7 @@ export default function BuyersPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
-            <HeadingPhoto path="/buyers" level="h2" />
-            <HeadingPhoto path="/buyers" level="h3" />
-
-                <p className="text-slate-300 mb-6">
+<p className="text-slate-300 mb-6">
                   Here's what many buyers don't know: having your own agent costs you nothing. The
                   seller pays the commission, but the representation is yours.{" "}
                   <strong>Berkshire Hathaway HomeServices</strong> agents protect your interests,

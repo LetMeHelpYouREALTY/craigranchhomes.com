@@ -16,6 +16,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { nap } from "@/lib/contact";
@@ -101,6 +102,7 @@ export default function FirstTimeBuyersPage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/buyers/first-time-buyers" />
+          <UniqueInterior path="/buyers/first-time-buyers" />
 
           </div>
 
@@ -109,10 +111,7 @@ export default function FirstTimeBuyersPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               First-Time Buyer Financing Options
             </h2>
-            <HeadingPhoto path="/buyers/first-time-buyers" level="h2" />
-            <HeadingPhoto path="/buyers/first-time-buyers" level="h3" />
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-blue-600">3.5%</span>
@@ -437,7 +436,7 @@ export default function FirstTimeBuyersPage() {
                 },
                 {
                   q: "Should I buy new construction or resale?",
-                  a: "Both have advantages. New construction offers modern features, warranties, and current builder incentives. Resales may have established landscaping and lower HOA dues. Dr. Jan helps you weigh options based on your specific situation.",
+                  a: "Both have advantages. New construction offers modern features, warranties, and current builder incentives. Resales may have mature yards and lower HOA dues. Dr. Jan helps you weigh options based on your specific situation.",
                 },
                ]} />
           </section>

@@ -16,6 +16,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -94,6 +95,7 @@ export default function TrilogySummerlinPage() {
             </div>
           </div>
           <OfficeProximity path="/55-plus-communities/trilogy-summerlin" />
+          <UniqueInterior path="/55-plus-communities/trilogy-summerlin" />
 
 
           {/* Quick Stats */}
@@ -101,9 +103,7 @@ export default function TrilogySummerlinPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Trilogy at Summerlin at a Glance
             </h2>
-            <HeadingPhoto path="/55-plus-communities/trilogy-summerlin" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-rose-400 mb-1">
                   $500K-$1.1M
@@ -135,8 +135,7 @@ export default function TrilogySummerlinPage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Trilogy at Summerlin
               </h2>
-              <HeadingPhoto path="/55-plus-communities/trilogy-summerlin" level="h3" />
-              <p>
+<p>
                 <strong>Trilogy at Summerlin</strong> redefines what a 55+
                 community can be. Developed by Shea Homes, Trilogy brings a
                 resort hospitality approach to active adult living—think

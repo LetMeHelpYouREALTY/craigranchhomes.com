@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -66,6 +67,7 @@ export default function WhyBerkshireHathawayPage() {
             <div className="mt-8">
               <CtaActions variant="onLight" />
           <OfficeProximity path="/why-berkshire-hathaway" />
+          <UniqueInterior path="/why-berkshire-hathaway" />
 
             </div>
           </div>
@@ -77,10 +79,7 @@ export default function WhyBerkshireHathawayPage() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Backed by Warren Buffett's Legacy
                 </h2>
-            <HeadingPhoto path="/why-berkshire-hathaway" level="h2" />
-            <HeadingPhoto path="/why-berkshire-hathaway" level="h3" />
-
-                <p className="text-slate-300 mb-6">
+<p className="text-slate-300 mb-6">
                   <strong>Berkshire Hathaway HomeServices</strong> is the only real estate brand
                   backed by Berkshire Hathaway Inc., Warren Buffett's legendary holding company.
                   This means unmatched financial stability and a commitment to ethical business

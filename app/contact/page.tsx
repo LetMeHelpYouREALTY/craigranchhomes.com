@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
@@ -69,6 +70,7 @@ export default function ContactPage() {
             </p>
             <CtaActions variant="onLight" bookLabel="Book a Consultation" />
           <OfficeProximity path="/contact" />
+          <UniqueInterior path="/contact" />
 
           </div>
 
@@ -76,10 +78,7 @@ export default function ContactPage() {
             {/* Contact Info & Map */}
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h2>
-            <HeadingPhoto path="/contact" level="h2" />
-            <HeadingPhoto path="/contact" level="h3" />
-
-              <p className="text-slate-700 mb-8">
+<p className="text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury property, or exploring
                 investment opportunities, I'm here to provide expert guidance backed by the trusted{" "}
                 <strong>Berkshire Hathaway HomeServices</strong> brand. Serving Las Vegas since 2008 

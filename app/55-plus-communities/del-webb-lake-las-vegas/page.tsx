@@ -14,6 +14,7 @@ import { pageMetadata } from "@/lib/seo";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
@@ -60,6 +61,7 @@ export default function DelWebbLakeLasVegasPage() {
             </div>
           </div>
           <OfficeProximity path="/55-plus-communities/del-webb-lake-las-vegas" />
+          <UniqueInterior path="/55-plus-communities/del-webb-lake-las-vegas" />
 
 
           {/* Quick Stats */}
@@ -67,9 +69,7 @@ export default function DelWebbLakeLasVegasPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Del Webb at Lake Las Vegas at a Glance
             </h2>
-            <HeadingPhoto path="/55-plus-communities/del-webb-lake-las-vegas" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$400K-$900K</div>
                 <div className="text-slate-300 text-sm">Price Range</div>
@@ -95,8 +95,7 @@ export default function DelWebbLakeLasVegasPage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Del Webb at Lake Las Vegas
               </h2>
-              <HeadingPhoto path="/55-plus-communities/del-webb-lake-las-vegas" level="h3" />
-              <p>
+<p>
                 <strong>Del Webb at Lake Las Vegas</strong> represents the newest generation of
                 Del Webb communities—modern construction, contemporary floor plans, and a stunning
                 setting on the shores of Lake Las Vegas. This 1,800+ home community combines

@@ -13,6 +13,7 @@ import {
 import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import { pageMetadata } from "@/lib/seo";
@@ -54,6 +55,7 @@ export default function RelocationPage() {
             </p>
             <CtaActions variant="onLight" />
           <OfficeProximity path="/sellers/relocation" />
+          <UniqueInterior path="/sellers/relocation" />
 
           </div>
 
@@ -62,10 +64,7 @@ export default function RelocationPage() {
             <div className="flex items-center justify-center mb-6">
               <Globe className="h-8 w-8 mr-3 text-blue-400" />
               <h2 className="text-3xl font-bold">Berkshire Hathaway HomeServices Network</h2>
-            <HeadingPhoto path="/sellers/relocation" level="h2" />
-            <HeadingPhoto path="/sellers/relocation" level="h3" />
-
-            </div>
+</div>
             <p className="text-center text-slate-300 mb-8 max-w-2xl mx-auto">
               When you work with Dr. Jan, you're not just getting a Las Vegas agent—you're
               tapping into the most trusted real estate network in America.

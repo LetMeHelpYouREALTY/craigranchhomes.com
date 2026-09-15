@@ -16,6 +16,7 @@ import type { Metadata } from "next";
 import CtaActions from "@/components/sections/CtaActions";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import OfficeProximity from "@/components/sections/OfficeProximity";
+import UniqueInterior from "@/components/sections/UniqueInterior";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 import { pageMetadata } from "@/lib/seo";
@@ -25,13 +26,13 @@ export const metadata: Metadata = pageMetadata({
   path: "/55-plus-communities/solera-anthem",
   title: "Solera at Anthem Homes for Sale | Intimate Guard-Gated 55+ Henderson | Dr. Jan Duffy",
   description:
-    "Solera at Anthem - intimate guard-gated 55+ community in Henderson. Homes from $380K-$650K. Lower HOA fees, close-knit atmosphere. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
+    "Solera at Anthem - guard-gated 55+ community in Henderson with about 1,200 homes. Homes from $380K-$650K. Lower HOA fees, staffed gate. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
   keywords: [
     "Solera at Anthem homes for sale",
     "Solera Anthem Henderson",
     "guard-gated 55+ community Henderson",
     "Henderson 55+ communities",
-    "intimate 55+ community Las Vegas",
+    "Henderson 55+ communities",
     "Berkshire Hathaway Solera Anthem",
   ],
   openGraph: {
@@ -93,6 +94,7 @@ export default function SoleraAnthemPage() {
             </div>
           </div>
           <OfficeProximity path="/55-plus-communities/solera-anthem" />
+          <UniqueInterior path="/55-plus-communities/solera-anthem" />
 
 
           {/* Quick Stats */}
@@ -100,9 +102,7 @@ export default function SoleraAnthemPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Solera at Anthem at a Glance
             </h2>
-            <HeadingPhoto path="/55-plus-communities/solera-anthem" level="h2" />
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">
                   $380K-$650K
@@ -134,13 +134,12 @@ export default function SoleraAnthemPage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
                 About Solera at Anthem
               </h2>
-              <HeadingPhoto path="/55-plus-communities/solera-anthem" level="h3" />
-              <p>
+<p>
                 <strong>Solera at Anthem</strong> offers something increasingly
-                rare in Las Vegas 55+ living—a genuinely intimate community where
-                neighbors become friends. With approximately 1,200 homes, Solera
+                rare in Las Vegas 55+ living—a 1,200-home campus with a staffed gate.
+                With approximately 1,200 homes, Solera
                 is significantly smaller than Sun City's 7,000+ home developments,
-                creating a close-knit atmosphere that larger communities simply
+                creating a smaller scale that 7,000-home campuses simply
                 can't replicate.
               </p>
               <p>
@@ -154,7 +153,7 @@ export default function SoleraAnthemPage() {
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>{" "}
                 helps buyers who value community over amenity overload. Dr. Jan
-                Duffy understands why some buyers prefer Solera's intimate scale
+                Duffy understands why some buyers prefer Solera's 1,200-home scale
                 and all-55+ requirement to larger developments.
               </p>
             </div>
@@ -402,11 +401,11 @@ export default function SoleraAnthemPage() {
           {/* CTA */}
           <section className="text-center bg-teal-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience Intimate 55+ Living
+              Experience a 1,200-Home 55+ Campus
             </h2>
             <p className="text-xl text-teal-100 mb-8">
-              Discover why Solera at Anthem offers the close-knit community
-              experience larger developments can't match. Tour with Dr. Jan Duffy.
+              Discover why Solera at Anthem offers a staffed gate and boutique clubhouse
+              that 7,000-home campuses do not. Tour with Dr. Jan Duffy.
             </p>
             <CtaActions variant="onDark" />
             <p className="text-teal-200">
