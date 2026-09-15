@@ -32,7 +32,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/55-plus-communities/sun-city-anthem",
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
+    "Henderson 55+ campus with a 64,000 sq ft clubhouse. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, McCullough Range views. Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Sun City Anthem homes for sale",
     "Sun City Anthem Henderson",

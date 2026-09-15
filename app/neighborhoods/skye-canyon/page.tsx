@@ -9,6 +9,7 @@ import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import CommunityHighlights from "@/components/sections/CommunityHighlights";
+import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -117,26 +118,7 @@ export default function SkyeCanyonPage() {
 
               <NeighborhoodCommute path="/neighborhoods/skye-canyon" />
 
-              {/* Builders */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Active Builders in Skye Canyon</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Premium Builders</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Toll Brothers:</strong> Luxury homes from $600K-$800K. Known for quality and customization.</li>
-                    <li><strong>Woodside Homes:</strong> Mid-range to premium, $500K-$700K. Strong value.</li>
-                    <li><strong>Shea Homes:</strong> Energy-efficient designs, $550K-$750K.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Value Builders</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Lennar:</strong> Entry to mid-range, $450K-$600K. "Everything's Included" packages.</li>
-                    <li><strong>KB Home:</strong> Energy Star certified, $420K-$550K. Customization options.</li>
-                    <li><strong>Century Communities:</strong> Affordable entry points, $400K-$520K.</li>
-                  </ul>
-                </div>
-              </div>
+              <VillageDetails path="/neighborhoods/skye-canyon" />
 
               <NeighborhoodAmenities path="/neighborhoods/skye-canyon" />
 

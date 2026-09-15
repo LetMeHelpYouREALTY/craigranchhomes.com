@@ -9,6 +9,7 @@ import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import CommunityHighlights from "@/components/sections/CommunityHighlights";
+import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -115,27 +116,7 @@ export default function NorthLasVegasPage() {
 
               <CommunityHighlights path="/neighborhoods/north-las-vegas" />
 
-              {/* Major Employers */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Major North Las Vegas Employers</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  North Las Vegas has attracted major employers, creating local jobs and driving housing demand:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 space-y-2">
-                    <li><strong>Amazon:</strong> Multiple fulfillment centers employing 5,000+</li>
-                    <li><strong>Fanatics:</strong> Sports merchandise distribution (~3,000 jobs)</li>
-                    <li><strong>Sephora:</strong> Major distribution center</li>
-                    <li><strong>Chewy:</strong> Pet supply distribution center</li>
-                  </ul>
-                  <ul className="text-slate-600 space-y-2">
-                    <li><strong>City of North Las Vegas:</strong> Growing municipal workforce</li>
-                    <li><strong>North Las Vegas Airport:</strong> Aviation and logistics</li>
-                    <li><strong>Nellis Air Force Base:</strong> Major employer just east</li>
-                    <li><strong>Las Vegas Motor Speedway:</strong> Events and hospitality</li>
-                  </ul>
-                </div>
-              </div>
+              <VillageDetails path="/neighborhoods/north-las-vegas" />
 
               <NamedCampuses path="/neighborhoods/north-las-vegas" />
 
@@ -143,28 +124,7 @@ export default function NorthLasVegasPage() {
 
               <NeighborhoodAmenities path="/neighborhoods/north-las-vegas" />
 
-              {/* New Construction Communities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">New Construction Communities</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Active Builder Communities</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Aliante:</strong> Master-planned with golf, casino, town center. Homes $400K-$550K.</li>
-                    <li><strong>Tule Springs:</strong> Newer community near I-215. KB Home, Lennar. $380K-$500K.</li>
-                    <li><strong>Valley Vista:</strong> Parks and community pools. Century Communities. $350K-$450K.</li>
-                    <li><strong>Camino Al Norte:</strong> Growing area near 215. Multiple builders. $380K-$480K.</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>North Vista Hospital:</strong> Full-service hospital with ER, surgical center.</li>
-                    <li><strong>VA Southern Nevada Healthcare:</strong> Veterans medical facility on Craig Road.</li>
-                    <li><strong>Southwest Medical:</strong> Multiple urgent care and primary care locations.</li>
-                    <li><strong>Aliante Station Casino:</strong> Entertainment, dining, and gaming nearby.</li>
-                  </ul>
-                </div>
-              </div>
+              <VillageDetails path="/neighborhoods/north-las-vegas" slot={1} />
 
               <p className="mt-8">
                 The current market shows <strong>892 active listings</strong> with homes averaging

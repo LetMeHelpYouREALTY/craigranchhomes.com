@@ -9,6 +9,7 @@ import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import CommunityHighlights from "@/components/sections/CommunityHighlights";
+import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -120,22 +121,7 @@ export default function InspiradaPage() {
 
               <NeighborhoodAmenities path="/neighborhoods/inspirada" />
 
-              {/* Builders */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Builders in Inspirada</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Toll Brothers:</strong> Premium homes $600K-$750K. Known for quality and upgrades.</li>
-                    <li><strong>Beazer Homes:</strong> Mid-range to premium $500K-$650K. Energy-efficient designs.</li>
-                    <li><strong>Lennar:</strong> Entry to mid-range $450K-$580K. "Everything's Included" packages.</li>
-                  </ul>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Woodside Homes:</strong> Mid-range $480K-$620K. Strong value proposition.</li>
-                    <li><strong>Richmond American:</strong> Entry to mid-range $450K-$550K. Personalization options.</li>
-                    <li><strong>Century Communities:</strong> Affordable entry $420K-$500K. Modern designs.</li>
-                  </ul>
-                </div>
-              </div>
+              <VillageDetails path="/neighborhoods/inspirada" />
 
               <p className="mt-8">
                 The current Inspirada market shows <strong>98 active listings</strong> with homes

@@ -9,6 +9,7 @@ import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import CommunityHighlights from "@/components/sections/CommunityHighlights";
+import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -115,34 +116,7 @@ export default function TheRidgesPage() {
 
               <CommunityHighlights path="/neighborhoods/the-ridges" />
 
-              {/* The Six Villages */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">The Six Villages of The Ridges</h3>
-              <div className="not-prose grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Bear's Best</h5>
-                  <p className="text-slate-600 text-sm">Surrounds Bear's Best Golf Club. Premium golf course lots with Strip and mountain views. $2M-$8M.</p>
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Falcon Ridge</h5>
-                  <p className="text-slate-600 text-sm">Elevated position with panoramic views. Custom estates on large lots. $2.5M-$10M.</p>
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Azure</h5>
-                  <p className="text-slate-600 text-sm">Contemporary architecture with dramatic Strip views. Modern luxury homes. $1.8M-$5M.</p>
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Talon Ridge</h5>
-                  <p className="text-slate-600 text-sm">Semi-custom homes with Red Rock backdrop. Entry to The Ridges lifestyle. $1.5M-$3M.</p>
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Silver Ridge</h5>
-                  <p className="text-slate-600 text-sm">Exclusive custom lot community. Architectural masterpieces. $3M-$15M.</p>
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Eagle Hills</h5>
-                  <p className="text-slate-600 text-sm">Newest village with modern designs. Desert contemporary style. $2M-$6M.</p>
-                </div>
-              </div>
+              <VillageDetails path="/neighborhoods/the-ridges" />
 
               <NeighborhoodCommute path="/neighborhoods/the-ridges" />
 
@@ -160,11 +134,10 @@ export default function TheRidgesPage() {
               </p>
               <p>
                 Working with <strong>Berkshire Hathaway HomeServices</strong> in The Ridges means working
-                with agents who understand that luxury isn't just about price—it's about lifestyle,
-                privacy, and attention to detail. Dr. Jan Duffy provides the white-glove service that
-                Ridges buyers and sellers expect, from confidential off-market transactions to coordination
-                with architects, designers, and property managers. When the stakes are measured in millions,
-                the Berkshire Hathaway name provides the trust and expertise that matters.
+                with agents who schedule gate lists, photography, and off-market windows from Suite 100.
+                Dr. Jan Duffy coordinates access with architects, designers, and property managers when
+                the brief includes those vendors. When the list price is measured in millions,
+                the Berkshire Hathaway name is on the paperwork at 9406 W Lake Mead Blvd.
               </p>
             </div>
           </section>

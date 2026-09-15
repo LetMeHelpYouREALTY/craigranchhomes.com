@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -40,6 +40,32 @@ describe("village chassis replacements", () => {
     }
   });
 
+  it("replaces leftover builders/employers/villages H3 chassis", () => {
+    const leftovers = {
+      "the-ridges": '<VillageDetails path="/neighborhoods/the-ridges" />',
+      "southern-highlands":
+        '<VillageDetails path="/neighborhoods/southern-highlands" />',
+      "skye-canyon": '<VillageDetails path="/neighborhoods/skye-canyon" />',
+      inspirada: '<VillageDetails path="/neighborhoods/inspirada" />',
+      henderson: '<VillageDetails path="/neighborhoods/henderson" />',
+      "north-las-vegas":
+        '<VillageDetails path="/neighborhoods/north-las-vegas" />',
+    };
+    for (const [slug, needle] of Object.entries(leftovers)) {
+      const src = readFileSync(
+        join(process.cwd(), "app/neighborhoods", slug, "page.tsx"),
+        "utf8"
+      );
+      expect(src).toContain(needle);
+      expect(src).not.toContain(">The Six Villages of The Ridges<");
+      expect(src).not.toContain(">Southern Highlands Golf Club<");
+      expect(src).not.toContain(">Active Builders in Skye Canyon<");
+      expect(src).not.toContain(">Builders in Inspirada<");
+      expect(src).not.toContain(">Major Henderson Employers<");
+      expect(src).not.toContain(">Major North Las Vegas Employers<");
+      expect(src).not.toContain(">New Construction Communities<");
+    }
+  });
   it("keeps market snapshot H2s unique across village files", () => {
     const headings: string[] = [];
     for (const slug of villages) {

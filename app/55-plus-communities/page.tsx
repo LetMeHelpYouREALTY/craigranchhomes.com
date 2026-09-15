@@ -111,13 +111,13 @@ const communities = [
     homes: "7,100+ homes",
     amenities: ["2 golf courses", "64K sf clubhouse", "80+ clubs", "Pools"],
     highlights: [
-      "Henderson's premier 55+ community",
+      "Henderson 55+ campus with a 64,000 sq ft clubhouse",
       "2 championship golf courses",
-      "Stunning mountain views",
+      "McCullough Range views on many upper streets",
       "Henderson location with parks and recreation campuses",
     ],
     description:
-      "Henderson's premier 55+ community with stunning mountain views and championship golf.",
+      "Henderson 55+ campus with a 64,000 sq ft clubhouse, two golf courses, and McCullough Range views.",
     color: "green",
   },
   {
@@ -152,7 +152,7 @@ const communities = [
       "Lakefront and mountain views",
       "Resort-style amenities",
       "Newest construction (2016+)",
-      "Del Webb lifestyle programming",
+      "Del Webb clubs and rec programming",
     ],
     description:
       "The newest Del Webb community combines modern construction with stunning Lake Las Vegas setting.",
@@ -601,11 +601,12 @@ export default function FiftyFiveCommunitiesPage() {
                   <Shield className="h-5 w-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Trusted Brand</h3>
+                  <h3 className="font-bold text-slate-900 mb-1">
+                    Occupancy rules in writing before any clubhouse
+                  </h3>
                   <p className="text-slate-600 text-sm">
-                    The Berkshire Hathaway name represents trust and
-                    integrity—values that matter when making one of life's biggest
-                    decisions.
+                    The Berkshire Hathaway name is on the paperwork at 9406 W Lake Mead Blvd,
+                    Suite 100. We review age-qualification and guest rules before the drive.
                   </p>
                 </div>
               </div>

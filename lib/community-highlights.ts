@@ -33,7 +33,7 @@ export const communityHighlights: Record<string, CommunityHighlightCopy> = {
   },
   "/neighborhoods/the-ridges": {
     h3: "Six Ridges villages and about 900 home sites — names before the gate",
-    body: "The Ridges is nearly 800 acres above Red Rock Country Club. Gate lists are confirmed at Suite 100. Village names on the showing sheet are Bear's Best, Promontory, Solstice, Cloudchaser, Azure, and Falcon Ridge.",
+    body: "The Ridges is nearly 800 acres above Red Rock Country Club. Gate lists are confirmed at Suite 100. Village names on the showing sheet are Bear's Best, Falcon Ridge, Azure, Talon Ridge, Silver Ridge, and Eagle Hills.",
     pins: [
       {
         name: "About 900 custom home sites",

@@ -9,6 +9,7 @@ import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import CommunityHighlights from "@/components/sections/CommunityHighlights";
+import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -120,26 +121,7 @@ export default function SouthernHighlandsPage() {
 
               <NeighborhoodAmenities path="/neighborhoods/southern-highlands" />
 
-              {/* Golf Club Details */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands Golf Club</h3>
-              <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
-                  The Robert Trent Jones Jr. designed course is the community's centerpiece, offering
-                  private membership to residents and non-residents:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Course Rating:</strong> 74.1 / Slope 140 (Championship)</li>
-                    <li><strong>Membership:</strong> Equity and non-equity options</li>
-                    <li><strong>Facilities:</strong> 35,000 sq ft clubhouse, fine dining</li>
-                  </ul>
-                  <ul className="text-slate-600 text-sm space-y-2">
-                    <li><strong>Practice:</strong> Full range, short game area, putting greens</li>
-                    <li><strong>Events:</strong> Private tournaments, member socials</li>
-                    <li><strong>Dining:</strong> Multiple restaurants, bars, banquet facilities</li>
-                  </ul>
-                </div>
-              </div>
+              <VillageDetails path="/neighborhoods/southern-highlands" />
 
               <p className="mt-8">
                 The Southern Highlands market currently shows <strong>156 active listings</strong> with

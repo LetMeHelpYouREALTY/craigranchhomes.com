@@ -5,6 +5,7 @@ import { fiftyFiveAmenities } from "@/lib/fifty-five-amenities";
 import { neighborhoodAmenities } from "@/lib/neighborhood-amenities";
 import { neighborhoodLifestyles } from "@/lib/neighborhood-lifestyle";
 import { neighborhoodParks } from "@/lib/neighborhood-parks";
+import { villageDetails } from "@/lib/village-details";
 import { occupiedHeadingStills, quotePhotoForPath } from "@/lib/media";
 import { uniqueInteriors } from "@/lib/unique-interiors";
 
@@ -57,6 +58,11 @@ describe("expertQuotes", () => {
       }
       if (neighborhoodParks[path]) {
         expect(h2).not.toBe(neighborhoodParks[path].h3);
+      }
+      if (villageDetails[path]) {
+        for (const detail of villageDetails[path]) {
+          expect(h2).not.toBe(detail.h3);
+        }
       }
     }
   });

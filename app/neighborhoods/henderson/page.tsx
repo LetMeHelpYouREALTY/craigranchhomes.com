@@ -9,6 +9,7 @@ import NamedCampuses from "@/components/sections/NamedCampuses";
 import NeighborhoodCommute from "@/components/sections/NeighborhoodCommute";
 import NeighborhoodAmenities from "@/components/sections/NeighborhoodAmenities";
 import CommunityHighlights from "@/components/sections/CommunityHighlights";
+import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
@@ -136,22 +137,7 @@ export default function HendersonPage() {
                 making commutes to all parts of the valley convenient.
               </p>
 
-              {/* Major Employers */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Major Henderson Employers</h3>
-              <div className="not-prose grid md:grid-cols-2 gap-6">
-                <ul className="text-slate-600 space-y-2">
-                  <li><strong>Barclays:</strong> Credit card operations center (~3,000 employees)</li>
-                  <li><strong>Credit One Bank:</strong> Corporate headquarters</li>
-                  <li><strong>City of Henderson:</strong> Municipal services</li>
-                  <li><strong>Henderson Hospital:</strong> Healthcare services</li>
-                </ul>
-                <ul className="text-slate-600 space-y-2">
-                  <li><strong>Station Casinos:</strong> Green Valley Ranch, Sunset Station</li>
-                  <li><strong>Levi Strauss:</strong> Distribution center</li>
-                  <li><strong>Amazon:</strong> Fulfillment center nearby</li>
-                  <li><strong>St. Rose Dominican:</strong> Hospital system</li>
-                </ul>
-              </div>
+              <VillageDetails path="/neighborhoods/henderson" />
 
               <NeighborhoodAmenities path="/neighborhoods/henderson" />
 

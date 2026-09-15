@@ -619,6 +619,32 @@ export function parkPhotoForPath(path: string): SitePhoto {
   return photos.consultation;
 }
 
+/** Nineteenth stills for leftover village-detail H3s (builders, employers, named villages). */
+export function villageDetailPhotoForPath(path: string, slot = 0): SitePhoto {
+  if (path.startsWith("/neighborhoods/the-ridges") && slot === 0) {
+    return photos.buyers;
+  }
+  if (path.startsWith("/neighborhoods/southern-highlands") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/neighborhoods/skye-canyon") && slot === 0) {
+    return photos.homeHero;
+  }
+  if (path.startsWith("/neighborhoods/inspirada") && slot === 0) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/neighborhoods/henderson") && slot === 0) {
+    return photos.ridges;
+  }
+  if (path.startsWith("/neighborhoods/north-las-vegas") && slot === 0) {
+    return photos.summerlinTrail;
+  }
+  if (path.startsWith("/neighborhoods/north-las-vegas") && slot === 1) {
+    return photos.newConstruction;
+  }
+  return photos.consultation;
+}
+
 export type FaqHubCategoryId =
   | "bhhs"
   | "buying"
@@ -676,6 +702,19 @@ export function occupiedHeadingStills(path: string): Set<string> {
     path.startsWith("/neighborhoods/mountains-edge")
   ) {
     srcs.push(parkPhotoForPath(path).src);
+  }
+  if (
+    path.startsWith("/neighborhoods/the-ridges") ||
+    path.startsWith("/neighborhoods/southern-highlands") ||
+    path.startsWith("/neighborhoods/skye-canyon") ||
+    path.startsWith("/neighborhoods/inspirada") ||
+    path.startsWith("/neighborhoods/henderson") ||
+    path.startsWith("/neighborhoods/north-las-vegas")
+  ) {
+    srcs.push(villageDetailPhotoForPath(path, 0).src);
+  }
+  if (path.startsWith("/neighborhoods/north-las-vegas")) {
+    srcs.push(villageDetailPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/55-plus")) {
     srcs.push(

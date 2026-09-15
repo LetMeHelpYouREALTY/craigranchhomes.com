@@ -116,7 +116,7 @@ const specializedServices = [
     title: "55+ Community Specialist",
     slug: "55-plus-communities",
     description:
-      "Expert guidance for active adult communities including Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas, and other premier 55+ communities in Las Vegas.",
+      "Expert guidance for 55+ campuses including Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas, and other age-qualified communities in Las Vegas.",
     highlights: ["Community tours", "HOA analysis", "Amenity comparisons", "Resale insights"],
   },
   {
