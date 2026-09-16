@@ -47,6 +47,8 @@ Originals in this folder are the git backup. Production should serve them from C
 
 Until those env vars exist, Next.js / Vercel serves the git copies from `/public/images/`.
 
+Favicons and the navbar avatar use **one** source (`images/agent/dr-jan-duffy-headshot.jpg`) plus Cloudflare Images flexible variants (`width`, `height`, `fit=cover`, `gravity=face`). Enable Flexible variants under Images → Delivery. Local fallbacks are Next.js file conventions only: `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`.
+
 `lib/media.ts` and `HeadingPhoto` map each route’s H1/H2/H3 to a heading-appropriate photo. Cloudflare Images is primary when env is set; git copies in this folder are the backup.
 
 ```tsx

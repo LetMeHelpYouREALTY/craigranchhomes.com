@@ -7,7 +7,11 @@
  * Per Cloudflare Images docs (hosted images, 2026): delivery URL is
  * https://imagedelivery.net/{account_hash}/{image_id}/{variant}.
  * Custom IDs preserve the git path so the same file is the backup.
+ * Favicons and avatars use flexible variants (fit=cover, gravity=face)
+ * instead of storing extra cropped copies.
  */
+
+import { AGENT_HEADSHOT_SRC, deliveryUrl } from "./cloudflare-images";
 
 export type SitePhoto = {
   /** Path under public/, used as the git backup and Cloudflare Images ID */
@@ -17,19 +21,8 @@ export type SitePhoto = {
   height: number;
 };
 
-const CF_ENABLED = process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "true";
-const CF_HASH = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ?? "";
-const MEDIA_CDN = (process.env.NEXT_PUBLIC_MEDIA_CDN ?? "").replace(/\/$/, "");
-
 export function mediaUrl(src: string): string {
-  const path = src.startsWith("/") ? src.slice(1) : src;
-  if (MEDIA_CDN) {
-    return `${MEDIA_CDN}/${path}`;
-  }
-  if (CF_ENABLED && CF_HASH) {
-    return `https://imagedelivery.net/${CF_HASH}/${path}/public`;
-  }
-  return src.startsWith("/") ? src : `/${src}`;
+  return deliveryUrl(src);
 }
 
 export const photos = {
@@ -58,7 +51,7 @@ export const photos = {
     height: 1080,
   },
   agent: {
-    src: "/images/agent/dr-jan-duffy-headshot.jpg",
+    src: AGENT_HEADSHOT_SRC,
     alt: "Dr. Jan Duffy, REALTOR®, Berkshire Hathaway HomeServices Nevada Properties",
     width: 1024,
     height: 1365,

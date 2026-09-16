@@ -16,6 +16,7 @@ import {
   geo,
 } from "@/lib/contact";
 import { generateLocalBusinessSchema, businessInfo } from "@/lib/gbp-schema";
+import { agentLogoUrl } from "@/lib/cloudflare-images";
 
 const BANNED = [
   "9406",
@@ -77,6 +78,10 @@ describe("Craig Ranch Homes GBP NAP", () => {
     expect(schema.address.addressLocality).toBe("North Las Vegas");
     expect(schema.address.postalCode).toBe("89032");
     expect(schema.foundingDate).toBe("2007-09");
+    expect(schema.logo).toBe(agentLogoUrl(SITE_URL));
+    expect(schema.image).toEqual([
+      "https://www.craigranchhomes.com/images/agent/dr-jan-duffy-headshot.jpg",
+    ]);
     expect(schema.openingHours).toEqual(["Mo-Fr 09:00-18:00", "Sa 10:00-16:00"]);
     expect(schema.openingHoursSpecification).toHaveLength(6);
     expect(businessInfo.hours.sunday).toBe("Closed");

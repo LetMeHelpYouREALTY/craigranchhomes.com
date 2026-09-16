@@ -9,6 +9,8 @@ import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import LeftoverBand from "@/components/sections/LeftoverBand";
+import { SITE_URL } from "@/lib/contact";
+import { agentLogoUrl } from "@/lib/cloudflare-images";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -31,7 +33,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Berkshire Hathaway HomeServices",
   url: "https://www.bhhs.com",
-  logo: "https://www.craigranchhomes.com/favicon-32x32.png",
+  logo: agentLogoUrl(SITE_URL),
   description:
     "Berkshire Hathaway HomeServices is a real estate brokerage network, part of Berkshire Hathaway Inc., one of the world's most respected and trusted companies.",
   parentOrganization: {

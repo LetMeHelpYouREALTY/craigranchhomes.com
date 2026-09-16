@@ -1,43 +1,37 @@
 /**
- * Cloudflare Image Loader for Next.js
- * 
- * Custom image loader that optimizes images using Cloudflare Images
- * or falls back to standard optimization.
+ * Cloudflare Images loader for Next.js (Cloudflare Pages builds).
+ *
+ * Hosted Images flexible-variant path, per Cloudflare Images docs (2026):
+ *   https://imagedelivery.net/{account_hash}/{image_id}/width=W,quality=Q,format=auto
+ *
+ * This file is referenced by next.config.cloudflare.js. The Vercel
+ * next.config.js uses the default optimizer plus imagedelivery.net URLs
+ * from lib/cloudflare-images.ts.
  */
+
+import type { ImageLoaderProps } from "next/image";
+import { cloudflareImagesConfig, transformImageUrl } from "./cloudflare-images";
 
 export default function cloudflareImageLoader({
   src,
   width,
   quality,
-}: {
-  src: string;
-  width: number;
-  quality?: number;
-}): string {
-  // If using Cloudflare Images (requires configuration)
-  const useCloudflareImages = process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === 'true';
-  
-  if (useCloudflareImages && process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH) {
-    const accountHash = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH;
-    // Remove leading slash if present
-    const imagePath = src.startsWith('/') ? src.slice(1) : src;
-    
-    // Build Cloudflare Images URL
-    const params = new URLSearchParams({
-      width: width.toString(),
-      quality: (quality || 85).toString(),
-      format: 'auto', // Automatically serves WebP/AVIF when supported
+}: ImageLoaderProps): string {
+  const { enabled, hash } = cloudflareImagesConfig();
+
+  if (enabled && hash) {
+    return transformImageUrl(src, {
+      width,
+      quality: quality || 85,
+      format: "auto",
     });
-    
-    return `https://imagedelivery.net/${accountHash}/${imagePath}?${params.toString()}`;
   }
-  
-  // Fallback: Use query parameters for Worker-based optimization
+
   const params = new URLSearchParams({
     w: width.toString(),
     q: (quality || 85).toString(),
-    f: 'auto',
+    f: "auto",
   });
-  
+
   return `${src}?${params.toString()}`;
 }

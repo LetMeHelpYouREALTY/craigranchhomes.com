@@ -13,6 +13,7 @@ import {
   foundingDate,
   serviceArea,
 } from "./contact";
+import { AGENT_HEADSHOT_SRC, agentLogoUrl } from "./cloudflare-images";
 
 export const businessInfo = {
   name: nap.name,
@@ -134,10 +135,8 @@ export function generateLocalBusinessSchema() {
     "@id": `${SITE_URL}/#organization`,
     name: nap.name,
     alternateName: ["Dr. Jan Duffy", "Dr. Jan Duffy REALTOR®", nap.brokerage],
-    image: [
-      `${SITE_URL}/images/dr-jan-duffy.jpg`,
-    ],
-    logo: `${SITE_URL}/images/dr-jan-duffy.jpg`,
+    image: [`${SITE_URL}${AGENT_HEADSHOT_SRC}`],
+    logo: agentLogoUrl(SITE_URL),
     url: SITE_URL,
     telephone: ctaPhone.tel,
     email: nap.email,
