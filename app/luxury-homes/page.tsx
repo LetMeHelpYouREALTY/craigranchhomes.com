@@ -134,15 +134,8 @@ export default function LuxuryHomesPage() {
           </div>
 
           {/* Luxury Stats */}
+          <LeftoverBand path="/luxury-homes" slot={1} />
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Luxury Market Statistics | January 2026
-            </h2>
-<p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas luxury market continues to attract affluent buyers from California, 
-              the Midwest, and international markets. Understanding current market conditions 
-              is essential for both buyers and sellers in this segment.
-            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">$1.2M</div>

@@ -132,6 +132,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "+161% since 2015, $1.45M Dec 2025 luxury median, 60% cash — dated at this desk",
+      body: "Numbers on this URL are a snapshot, not a CMA for one lot. Gate lists stay off group texts. Call (702) 222-1964 from 9406 W Lake Mead Blvd, Suite 100.",
+      pins: [
+        {
+          name: "+161% since 2015",
+          note: "Cited on this page. Your street can differ. We will not invent a lot price.",
+        },
+        {
+          name: "#4 national luxury growth",
+          note: "Headline on this URL. Offer language is written at Suite 100, not from a rank.",
+        },
+        {
+          name: "$1.45M Dec 2025 median",
+          note: "Luxury median cited here. Ridges published bands on this site start near $1.5M.",
+        },
+        {
+          name: "60% cash",
+          note: "Cash share cited on this page. Proof of funds is reviewed at the desk before the gate block.",
+        },
+      ],
+    },
   ],
   "/luxury-homes": [
     {
@@ -153,6 +175,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Paid placement punch list",
           note: "BHHS syndication is scoped before go-live. We do not promise a portal we cannot name. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "$1.2M luxury median, 890 $1M+ listings, 45 DOM, +8.5% YoY — January 2026 on this hub",
+      body: "Snapshot on this listing-or-search URL. A Ridges CMA is not a MacDonald Highlands CMA. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100.",
+      pins: [
+        {
+          name: "$1.2M luxury median",
+          note: "January 2026 figure cited here. Confirm the week you list or search.",
+        },
+        {
+          name: "+8.5% year over year",
+          note: "Cited on this page. Your gate file can differ. We will not invent a lot price.",
+        },
+        {
+          name: "890 active $1M+ listings",
+          note: "Inventory count on this hub. Filter square footage before you screenshot 40 cards.",
+        },
+        {
+          name: "45 days on market",
+          note: "Luxury average cited here. Well-priced files move faster. Office/GBP (702) 500-1942.",
         },
       ],
     },
@@ -226,6 +270,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "$450K median, 28 DOM, 4,850 listings, +4.2% YoY — valley snapshot at Suite 100, not your street CMA",
+      body: "January 2026 figures on this search hub. Offer math lives on /buyers. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100.",
+      pins: [
+        {
+          name: "$450K median",
+          note: "Valley snapshot cited here. Summerlin $625K and Henderson $485K live on their village cards.",
+        },
+        {
+          name: "28 days on market",
+          note: "Average. Priced-right files move faster. Filter beds, baths, and square footage first.",
+        },
+        {
+          name: "4,850 active listings",
+          note: "Live MLS is on this URL. Do not screenshot 40 cards. Save two addresses, then book.",
+        },
+        {
+          name: "+4.2% year over year",
+          note: "Cited on this page. Your ZIP can differ. We will not invent a list price. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
   ],
   "/why-berkshire-hathaway": [
     {
@@ -250,6 +316,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "Berkshire Hathaway Inc. on the parent line — then who photographs YOUR listing at Suite 100",
+      body: "The parent is Berkshire Hathaway Inc. The file is this desk. Ask for listing-marketing samples at 9406 W Lake Mead Blvd before you sign. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Parent on the letterhead",
+          note: "Berkshire Hathaway Inc. is named on BHHS materials. That is not a CMA for your street.",
+        },
+        {
+          name: "This file at Suite 100",
+          note: "Who photographs, who writes remarks, who negotiates — named before photographer day.",
+        },
+        {
+          name: "$127M+ closed since 2008",
+          note: "Volume cited on this site. Ask for recent closes on YOUR street. We will not invent a price.",
+        },
+        {
+          name: "License S.0197614.LLC",
+          note: "Dr. Jan Duffy, BHHS Nevada Properties. Client CTA (702) 222-1964. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
   ],
   "/new-construction": [
     {
@@ -271,6 +359,72 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Shea / Pulte / Taylor Morrison",
           note: "Trilogy, Inspirada, Cadence, Mountains Edge. One corridor per afternoon from this pin.",
+        },
+      ],
+    },
+    {
+      h2: "Toll, Lennar, KB, Shea — one builder row per afternoon after Suite 100 registration",
+      body: "The card grid is a menu. Registration happens before any model. Call (702) 222-1964. Incentives on this page are January 2026 — confirm the week you tour.",
+      pins: [
+        {
+          name: "Northwest rows",
+          note: "Skye Canyon and Skye Hills after this desk. Do not walk a model unescorted.",
+        },
+        {
+          name: "South Henderson rows",
+          note: "Inspirada and Cadence on an east clock. 25–35 minutes from 9406 W Lake Mead Blvd.",
+        },
+        {
+          name: "Southwest rows",
+          note: "Mountains Edge and similar corridors. One afternoon, not four I-15 crossings.",
+        },
+        {
+          name: "Incentive flyers",
+          note: "Rate buydowns and design-studio credits expire. Last month's sheet is not this week's. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Five builder clocks: register, models, design studio, framing walk, punch list — from W Lake Mead Blvd",
+      body: "The sequence is written at Suite 100. Most builders require Dr. Jan on visit one. Call (702) 222-1964 before Skye Canyon, Inspirada, or Cadence.",
+      pins: [
+        {
+          name: "Register first",
+          note: "Call (702) 222-1964. Agent on the first visit or you may lose cooperating representation.",
+        },
+        {
+          name: "One model row",
+          note: "Compare included vs upgrades at one corridor. Do not stack northwest and Henderson the same morning.",
+        },
+        {
+          name: "Design studio",
+          note: "Credits and lot premiums are negotiated after registration, not at the model desk.",
+        },
+        {
+          name: "Walkthroughs",
+          note: "Framing, pre-drywall, and punch list are scheduled from this file. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Rate buydown, design-studio credit, lot premium — negotiated after registration, not at the model desk",
+      body: "Builder credits belong on the contract, not a lobby flyer. Register Dr. Jan at 9406 W Lake Mead Blvd first. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Closing-cost and rate credits",
+          note: "January 2026 examples on this page include sub-5% buydowns and 6% closing credits. Confirm the week you register.",
+        },
+        {
+          name: "Design-studio dollars",
+          note: "$50K+ upgrade credits cited here expire. Prioritize flooring and appliances before extras.",
+        },
+        {
+          name: "Lot premium",
+          note: "Corner and view lots are a line item. We do not invent a premium. Ask for the current sheet.",
+        },
+        {
+          name: "Warranty and solar",
+          note: "Extended warranty, solar, and garage packages are named on the addendum. Office/GBP (702) 500-1942.",
         },
       ],
     },
@@ -1667,6 +1821,96 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Call",
           note: "Client CTA (702) 222-1964. Do not swap with the office line.",
+        },
+      ],
+    },
+  ],
+  "/buyers/california-relocator": [
+    {
+      h2: "0% NV income tax vs CA 9.3%–13.3% — $25,000+ on a $250K W-2 at Suite 100",
+      body: "Run the net sheet at 9406 W Lake Mead Blvd before you fly. Nevada has no state income tax. HOA, property tax, and insurance still apply. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "0% NV state income tax",
+          note: "Line item vs CA 9.3%–13.3%. Confirm with your CPA. We will not invent a refund.",
+        },
+        {
+          name: "40–60% lower published prices",
+          note: "January 2026 valley median cited on this site is $450K. Summerlin $625K. Henderson $485K.",
+        },
+        {
+          name: "$150K+ five-year example",
+          note: "On a $200K income cited on this URL. Your W-2 can differ. Sheet at this desk.",
+        },
+        {
+          name: "$25,000+ on a $250K W-2",
+          note: "Annual state-tax example on this page. Property tax and HOA still apply. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "$1.2M CA 1,800 sq ft vs $700K Summerlin 3,000 sq ft — net sheet at this desk",
+      body: "California proceeds vs Las Vegas ZIP targets are compared at Suite 100 or by video. Call (702) 222-1964. We will not invent a sale price on either side.",
+      pins: [
+        {
+          name: "$1.2M / 1,800 sq ft CA",
+          note: "Example on this URL: 3BR/2BA. Confirm YOUR net with the California listing agent.",
+        },
+        {
+          name: "$700K / 3,000 sq ft Summerlin",
+          note: "4BR/3BA example plus cash left. 10–15 minutes from 9406 W Lake Mead Blvd.",
+        },
+        {
+          name: "$550K Henderson 4BR",
+          note: "25–35 minutes via I-215 east. Square footage vs Inspirada new rows after registration.",
+        },
+        {
+          name: "$450K new construction",
+          note: "Register Dr. Jan at Suite 100 before any model. Open /new-construction. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Summerlin 10–15 min, Henderson 25–35, Ridges 15–20 — three inbound clocks from W Lake Mead Blvd",
+      body: "Pick one west afternoon or one east afternoon. Palo Verde High School and Coronado High School commutes are mapped by address at ccsd.net/zoning. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Summerlin",
+          note: "10–15 minutes. Downtown Summerlin retail, 150+ parks, Red Rock Canyon. Median cited here $726K.",
+        },
+        {
+          name: "Henderson / Inspirada",
+          note: "25–35 minutes. 2,000-acre Inspirada campus and named rec. Median cited here $530K.",
+        },
+        {
+          name: "The Ridges",
+          note: "15–20 minutes to the guardhouse. Published bands $1.5M–$10M+. Gate list from Suite 100.",
+        },
+        {
+          name: "Three-day inbound week",
+          note: "Day 1 Summerlin, Day 2 Henderson, Day 3 55+ or builder after registration. Harry Reid International (LAS).",
+        },
+      ],
+    },
+    {
+      h2: "Video net sheet at Suite 100, then a three-day inbound week — not a tax slogan",
+      body: "Bring California proceeds and a target ZIP. Nevada has no state income tax; HOA still applies. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100.",
+      pins: [
+        {
+          name: "Video intake",
+          note: "Net sheet before you buy a ticket. We do not tour twelve ZIPs on day one.",
+        },
+        {
+          name: "Harry Reid International (LAS)",
+          note: "Airport name on this file. Direct flights to SFO, LAX, SJC are a calendar item, not a caption.",
+        },
+        {
+          name: "Two-ZIP tour",
+          note: "Summerlin then Henderson, or Ridges gate first if the brief is $1.5M+.",
+        },
+        {
+          name: "Client CTA",
+          note: "(702) 222-1964. Office/GBP (702) 500-1942. Do not swap the lines.",
         },
       ],
     },

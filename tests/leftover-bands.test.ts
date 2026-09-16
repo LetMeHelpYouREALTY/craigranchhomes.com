@@ -50,6 +50,7 @@ describe("leftoverBands", () => {
       "/55-plus-communities/trilogy-summerlin",
       "/about",
       "/buyers",
+      "/buyers/california-relocator",
       "/buyers/first-time-buyers",
       "/buyers/luxury-homes-las-vegas",
       "/contact",
@@ -91,6 +92,12 @@ describe("leftoverBands", () => {
     expect(leftoverBands["/sellers/relocation"]).toHaveLength(6);
     expect(leftoverBands["/sellers/move-up"]).toHaveLength(5);
     expect(leftoverBands["/sellers/divorce-probate"]).toHaveLength(5);
+    expect(leftoverBands["/buyers/california-relocator"]).toHaveLength(4);
+    expect(leftoverBands["/listings"]).toHaveLength(2);
+    expect(leftoverBands["/luxury-homes"]).toHaveLength(2);
+    expect(leftoverBands["/buyers/luxury-homes-las-vegas"]).toHaveLength(2);
+    expect(leftoverBands["/new-construction"]).toHaveLength(4);
+    expect(leftoverBands["/why-berkshire-hathaway"]).toHaveLength(2);
   });
 
   it("keeps every leftover H2 unique", () => {

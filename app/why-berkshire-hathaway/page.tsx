@@ -53,7 +53,7 @@ export default function WhyBerkshireHathawayPage() {
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              The Most Trusted Name in Real Estate
+              License S.0197614.LLC · BHHS Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Why Choose Berkshire Hathaway HomeServices?
@@ -74,33 +74,7 @@ export default function WhyBerkshireHathawayPage() {
             </div>
           </div>
 
-          {/* Warren Buffett Section */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Backed by Warren Buffett's Legacy
-                </h2>
-<p className="text-slate-300 mb-6">
-                  <strong>Berkshire Hathaway HomeServices</strong> is the only real estate brand
-                  backed by Berkshire Hathaway Inc., Warren Buffett's legendary holding company.
-                  This means unmatched financial stability and a commitment to ethical business
-                  practices that spans decades.
-                </p>
-                <p className="text-slate-300">
-                  When you see the Berkshire Hathaway name, you know you're working with
-                  professionals who uphold the highest standards in the industry.
-                </p>
-              </div>
-              <div className="bg-slate-800 rounded-lg p-8 text-center">
-                <div className="text-6xl mb-4">🏛️</div>
-                <p className="text-2xl font-bold mb-2">Fortune #1</p>
-                <p className="text-slate-400">
-                  Berkshire Hathaway Inc. consistently ranks among the top companies in the world
-                </p>
-              </div>
-            </div>
-          </section>
+          <LeftoverBand path="/why-berkshire-hathaway" slot={1} />
 
           <ProcessSteps path="/why-berkshire-hathaway" />
 

@@ -39,29 +39,50 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/buyers/luxury-homes-las-vegas/page.tsx",
-    needles: ['<LeftoverBand path="/buyers/luxury-homes-las-vegas" />'],
-    banned: [">Premier Luxury Communities<", "Celebrity neighborhood"],
+    needles: [
+      '<LeftoverBand path="/buyers/luxury-homes-las-vegas" />',
+      '<LeftoverBand path="/buyers/luxury-homes-las-vegas" slot={1} />',
+    ],
+    banned: [
+      ">Premier Luxury Communities<",
+      "Celebrity neighborhood",
+      ">Las Vegas Luxury Market Performance<",
+    ],
   },
   {
     file: "app/luxury-homes/page.tsx",
-    needles: ['<LeftoverBand path="/luxury-homes" />'],
+    needles: [
+      '<LeftoverBand path="/luxury-homes" />',
+      '<LeftoverBand path="/luxury-homes" slot={1} />',
+    ],
     banned: [
       ">Luxury Home Marketing Services<",
       ">Luxury Buyer & Seller Services<",
+      ">Las Vegas Luxury Market Statistics | January 2026<",
     ],
   },
   {
     file: "app/listings/page.tsx",
-    needles: ['<LeftoverBand path="/listings" />'],
+    needles: [
+      '<LeftoverBand path="/listings" />',
+      '<LeftoverBand path="/listings" slot={1} />',
+    ],
     banned: [
       ">Las Vegas Neighborhoods & Communities<",
       "unique lifestyle",
+      ">Las Vegas Real Estate Market Statistics<",
     ],
   },
   {
     file: "app/why-berkshire-hathaway/page.tsx",
-    needles: ['<LeftoverBand path="/why-berkshire-hathaway" />'],
-    banned: [">Your Local BHHS Expert in Las Vegas<"],
+    needles: [
+      '<LeftoverBand path="/why-berkshire-hathaway" />',
+      '<LeftoverBand path="/why-berkshire-hathaway" slot={1} />',
+    ],
+    banned: [
+      ">Your Local BHHS Expert in Las Vegas<",
+      ">Backed by Warren Buffett's Legacy<",
+    ],
   },
   {
     file: "app/services/page.tsx",
@@ -76,8 +97,20 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/new-construction/page.tsx",
-    needles: ['<LeftoverBand path="/new-construction" />'],
-    banned: ["Premier locations"],
+    needles: [
+      '<LeftoverBand path="/new-construction" />',
+      '<LeftoverBand path="/new-construction" slot={1} />',
+      '<LeftoverBand path="/new-construction" slot={2} />',
+      '<LeftoverBand path="/new-construction" slot={3} />',
+      "Register Dr. Jan at Suite 100 before any Skye Canyon or Inspirada model",
+    ],
+    banned: [
+      "Premier locations",
+      ">Las Vegas New Home Builders<",
+      ">New Construction Buying Process with BHHS<",
+      ">What Dr. Jan Negotiates for New Construction Buyers<",
+      ">Ready to Tour New Construction?<",
+    ],
   },
   {
     file: "app/google-business/page.tsx",
@@ -133,8 +166,23 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   },
   {
     file: "app/buyers/california-relocator/page.tsx",
-    needles: ["Keep the California paycheck"],
-    banned: ["Remote Work, Vegas Lifestyle"],
+    needles: [
+      "Keep the California paycheck",
+      '<LeftoverBand path="/buyers/california-relocator" />',
+      '<LeftoverBand path="/buyers/california-relocator" slot={1} />',
+      '<LeftoverBand path="/buyers/california-relocator" slot={2} />',
+      '<LeftoverBand path="/buyers/california-relocator" slot={3} />',
+    ],
+    banned: [
+      "Remote Work, Vegas Lifestyle",
+      ">California vs. Nevada: The Numbers<",
+      ">What Your California Equity Buys in Las Vegas<",
+      ">Top 3 Neighborhoods for California Relocators<",
+      ">Ready to Start Your Tax-Free Life?<",
+      "Lowest crime rates",
+      "The Irvine of Las Vegas",
+      "celebrity neighbors",
+    ],
   },
   {
     file: "app/neighborhoods/henderson/page.tsx",

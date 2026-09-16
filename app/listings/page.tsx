@@ -234,16 +234,8 @@ export default function ListingsPage() {
           </section>
 
           {/* Market Stats */}
+          <LeftoverBand path="/listings" slot={1} />
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Real Estate Market Statistics
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas housing market remains strong heading into 2026, with steady appreciation 
-              and healthy inventory levels. Understanding current market conditions helps buyers 
-              make informed decisions about timing, pricing, and negotiation strategies. Here's a 
-              snapshot of the current market as of January 2026.
-            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-blue-50 rounded-lg p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-1">$450K</div>

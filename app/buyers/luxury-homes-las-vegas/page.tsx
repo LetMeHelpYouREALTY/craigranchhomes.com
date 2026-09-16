@@ -54,11 +54,9 @@ export default function LuxuryHomesPage() {
           </div>
 
           {/* Market Performance */}
+          <LeftoverBand path="/buyers/luxury-homes-las-vegas" slot={1} />
           <section className="mb-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Las Vegas Luxury Market Performance
-            </h2>
-<div className="grid md:grid-cols-4 gap-6 mb-8">
+            <div className="grid md:grid-cols-4 gap-6 mb-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-amber-400 mb-2">+161%</div>
                 <div className="text-slate-300 text-sm">Appreciation Since 2015</div>

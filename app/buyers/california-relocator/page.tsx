@@ -1,14 +1,9 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  DollarSign,
   Sun,
-  Home as HomeIcon,
   Briefcase,
   Plane,
-  GraduationCap,
-  Heart,
-  Calculator,
   MapPin,
   CheckCircle,
   TrendingUp,
@@ -22,13 +17,14 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import BuyerFaqs from "@/components/sections/BuyerFaqs";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 
 
 export const metadata: Metadata = pageMetadata({
   path: "/buyers/california-relocator",
   title: "Relocating from California to Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices, same sunshine. Dr. Jan Duffy helps CA relocators find their perfect Las Vegas home. Call (702) 222-1964.",
+    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices. Dr. Jan Duffy compares California proceeds to Summerlin and Henderson ZIPs. Call (702) 222-1964.",
   keywords: [
     "California to Las Vegas relocation",
     "moving from California to Nevada",
@@ -87,12 +83,10 @@ export default function CaliforniaRelocatorPage() {
 
           </div>
 
+          <LeftoverBand path="/buyers/california-relocator" />
+
           {/* Tax Savings Comparison */}
           <section className="mb-16 bg-gradient-to-br from-green-600 to-green-700 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <Calculator className="h-10 w-10 mr-3" />
-              <h2 className="text-3xl font-bold">California vs. Nevada: The Numbers</h2>
-</div>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">0%</div>
@@ -101,8 +95,8 @@ export default function CaliforniaRelocatorPage() {
               </div>
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">40-60%</div>
-                <div className="text-green-100">Lower Home Prices</div>
-                <div className="text-sm text-green-200 mt-2">Similar quality homes</div>
+                <div className="text-green-100">Lower published home prices</div>
+                <div className="text-sm text-green-200 mt-2">January 2026 valley median $450K</div>
               </div>
               <div className="text-center bg-white/10 rounded-xl p-6">
                 <div className="text-4xl font-bold mb-2">$150K+</div>
@@ -117,11 +111,10 @@ export default function CaliforniaRelocatorPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/buyers/california-relocator" slot={1} />
+
           {/* What Your CA Equity Buys */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              What Your California Equity Buys in Las Vegas
-            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-red-50 border border-red-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">
@@ -131,7 +124,7 @@ export default function CaliforniaRelocatorPage() {
                 <ul className="space-y-3 text-red-800">
                   <li className="flex items-start">
                     <span className="font-bold mr-2">$1.2M:</span>
-                    <span>3BR/2BA 1,800 sq ft in decent suburb</span>
+                    <span>3BR/2BA 1,800 sq ft on a typical suburban lot</span>
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">$800K:</span>
@@ -155,7 +148,7 @@ export default function CaliforniaRelocatorPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">$550K:</span>
-                    <span>Beautiful 4BR in Henderson + cash left over</span>
+                    <span>4BR in Henderson + cash left over</span>
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">$450K:</span>
@@ -166,11 +159,10 @@ export default function CaliforniaRelocatorPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/buyers/california-relocator" slot={2} />
+
           {/* Top Neighborhoods for CA Relocators */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Top 3 Neighborhoods for California Relocators
-            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                 <div className="bg-blue-600 text-white p-4">
@@ -179,8 +171,8 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
-                    "The Irvine of Las Vegas" - Master-planned living with Palo Verde High School nearby,
-                    Downtown Summerlin shopping, and Red Rock Canyon views.
+                    Master-planned streets with Palo Verde High School commute mapped by address,
+                    Downtown Summerlin shopping, and Red Rock Canyon trailheads.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
                     <strong>Best for:</strong> Buyers from Orange County, coastal CA
@@ -196,7 +188,7 @@ export default function CaliforniaRelocatorPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Upscale dining & shopping
+                      Downtown Summerlin retail
                     </li>
                   </ul>
                   <Link
@@ -215,8 +207,8 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
-                    Henderson = San Diego-suburb energy with a tech corridor nearby. Google's data center,
-                    parks, recreation campuses, and Inspirada's town center.
+                    Henderson sits on a tech corridor. Google's data center,
+                    parks, recreation campuses, and Inspirada's 2,000-acre town center.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
                     <strong>Best for:</strong> Tech workers, Inspirada new construction, San Diego relocators
@@ -228,7 +220,7 @@ export default function CaliforniaRelocatorPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Lowest crime rates
+                      Named rec campuses and parks
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -251,8 +243,8 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
-                    Newport Coast quality, Vegas prices. Guard-gated luxury with Strip views,
-                    celebrity neighbors, and custom estates.
+                    Guard-gated lots with Strip or Red Rock views,
+                    custom home sites, and a gate list from Suite 100.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
                     <strong>Best for:</strong> Beverly Hills/Newport Beach luxury buyers
@@ -306,7 +298,7 @@ export default function CaliforniaRelocatorPage() {
                   </li>
                   <li className="flex items-start">
                     <Sun className="h-5 w-5 text-amber-500 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Work-life balance:</strong> Golf at 2pm, hike Red Rock after work, world-class dining</span>
+                    <span><strong>Named amenities:</strong> Golf at 2pm, hike Red Rock after work, Downtown Summerlin dining</span>
                   </li>
                 </ul>
               </div>
@@ -314,8 +306,8 @@ export default function CaliforniaRelocatorPage() {
                 <h3 className="font-bold text-slate-900 mb-4">Henderson Tech Corridor</h3>
                 <p className="text-slate-600 mb-4">
                   Google's $600M data center. Amazon Web Services. Switch Supernap. Henderson is
-                  becoming a legitimate tech hub, with companies attracted by zero corporate
-                  income tax and quality of life.
+                  becoming a tech hub, with companies citing zero corporate
+                  income tax and commute minutes to Harry Reid International (LAS).
                 </p>
                 <p className="text-sm text-slate-500">
                   Many California tech workers find themselves with <em>more</em> local job options
@@ -329,17 +321,7 @@ export default function CaliforniaRelocatorPage() {
 
           <ExpertQuote path="/buyers/california-relocator" />
 
-          {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Start Your Tax-Free Life?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Get a personalized relocation consultation with Dr. Jan Duffy. She'll show you exactly
-              what your California equity buys in Las Vegas and help you find the perfect neighborhood.
-            </p>
-            <CtaActions variant="onDark" />
-          </section>
+          <LeftoverBand path="/buyers/california-relocator" slot={3} />
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>

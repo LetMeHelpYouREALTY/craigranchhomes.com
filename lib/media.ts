@@ -689,12 +689,33 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/buyers/luxury-homes-las-vegas" && slot === 0) {
     return photos.homeHero;
   }
+  if (path === "/buyers/luxury-homes-las-vegas" && slot === 1) {
+    return photos.summerlin;
+  }
+  if (path.startsWith("/buyers/california-relocator") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/buyers/california-relocator") && slot === 1) {
+    return photos.summerlin;
+  }
+  if (path.startsWith("/buyers/california-relocator") && slot === 2) {
+    return photos.henderson;
+  }
+  if (path.startsWith("/buyers/california-relocator") && slot === 3) {
+    return photos.officeExterior;
+  }
   if (path.startsWith("/luxury-homes") && slot === 0) return photos.office;
+  if (path.startsWith("/luxury-homes") && slot === 1) return photos.homeHero;
   if (path === "/services" && slot === 0) return photos.summerlin;
   if (path === "/services" && slot === 1) return photos.henderson;
   if (path === "/listings" && slot === 0) return photos.officeExterior;
+  if (path === "/listings" && slot === 1) return photos.buyers;
   if (path.startsWith("/why-berkshire") && slot === 0) return photos.market;
+  if (path.startsWith("/why-berkshire") && slot === 1) return photos.summerlin;
   if (path.startsWith("/new-construction") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/new-construction") && slot === 1) return photos.office;
+  if (path.startsWith("/new-construction") && slot === 2) return photos.summerlin;
+  if (path.startsWith("/new-construction") && slot === 3) return photos.henderson;
   if (path.startsWith("/google-business") && slot === 0) return photos.homeHero;
   if (path.startsWith("/google-business") && slot === 1) return photos.summerlin;
   if (path === "/sellers" && slot === 0) return photos.homeHero;
@@ -923,24 +944,37 @@ export function occupiedHeadingStills(path: string): Set<string> {
     srcs.push(leftoverPhotoForPath(path, 1).src);
     srcs.push(leftoverPhotoForPath(path, 2).src);
   }
+  if (path.startsWith("/buyers/california-relocator")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+  }
   if (path === "/buyers/luxury-homes-las-vegas") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/luxury-homes")) {
-    srcs.push(leftoverPhotoForPath(path, 0).src);
-  }
-  if (path === "/services") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path === "/listings") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/why-berkshire")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/new-construction")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+  }
+  if (path === "/services") {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/google-business")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
