@@ -1,48 +1,47 @@
-// Site Configuration - HeyBerkshire.com
-// Berkshire Hathaway HomeServices Nevada Properties
+// Site Configuration - Craig Ranch Homes (craigranchhomes.com)
+// Matches Google Business Profile NAP.
 
 export const siteConfig = {
-  name: "HeyBerkshire",
-  fullName: "Berkshire Hathaway HomeServices Nevada Properties",
-  tagline: "Private Client Real Estate Advisory",
-  /** Full brand line for titles and OG: Berkshire Hathaway HomeServices Nevada Properties | Private Client Real Estate Advisory */
+  name: "Craig Ranch Homes",
+  fullName: "Craig Ranch Homes",
+  tagline: "Craig Ranch, North Las Vegas (ZIP 89031)",
   brandLine:
-    "Berkshire Hathaway HomeServices Nevada Properties | Private Client Real Estate Advisory",
-  brandName: "Berkshire Hathaway HomeServices",
-  shortName: "BHHS",
-  url: "https://heyberkshire.com",
+    "Craig Ranch Homes | Dr. Jan Duffy, REALTOR® | Berkshire Hathaway HomeServices Nevada Properties",
+  brandName: "Craig Ranch Homes",
+  shortName: "Craig Ranch",
+  url: "https://www.craigranchhomes.com",
   description:
-    "Expert real estate services in Las Vegas and Henderson, NV. Buy, sell, or invest with Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent.",
+    "Craig Ranch Homes is the hyperlocal real estate practice of Dr. Jan Duffy, REALTOR®, focused on buying and selling in Craig Ranch, North Las Vegas (ZIP 89031).",
 };
 
 export const agentInfo = {
   name: "Dr. Jan Duffy",
   title: "REALTOR®",
   license: "S.0197614.LLC",
-  phone: "(702) 222-1964",
-  phoneFormatted: "(702) 222-1964",
-  phoneTel: "tel:+17022221964",
-  officePhone: "(702) 500-1942",
-  officePhoneTel: "tel:+17025001942",
-  email: "homes@heyberkshire.com",
+  phone: "(702) 820-5408",
+  phoneFormatted: "(702) 820-5408",
+  phoneTel: "tel:+17028205408",
+  officePhone: "(702) 820-5408",
+  officePhoneTel: "tel:+17028205408",
+  email: "DrDuffy@CraigRanchHomes.com",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
 };
 
 export const officeInfo = {
-  name: "Berkshire Hathaway HomeServices Nevada Properties",
+  name: "Craig Ranch Homes",
   address: {
-    street: "9406 W Lake Mead Blvd, Suite 100",
-    city: "Las Vegas",
+    street: "851 W Lone Mountain Rd, Suite 103",
+    city: "North Las Vegas",
     state: "NV",
-    zip: "89134",
-    full: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134",
+    zip: "89032",
+    full: "851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032",
   },
   coordinates: {
-    lat: 36.1941,
-    lng: -115.2678,
+    lat: 36.2469871,
+    lng: -115.1554618,
   },
-  phone: "(702) 500-1942",
-  phoneTel: "tel:+17025001942",
+  phone: "(702) 820-5408",
+  phoneTel: "tel:+17028205408",
 };
 
 // Market Statistics (Updated January 2026)
@@ -83,7 +82,7 @@ export const marketStats = {
 
 // Agent Stats
 export const agentStats = {
-  servingSince: 2008,
+  servingSince: 2007,
   transactionsClosed: 500,
   volumeClosed: "$127M+",
   averageRating: 4.9,
@@ -96,7 +95,7 @@ export const valuePropositions = {
   trust:
     "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents.",
   expertise:
-    "Serving Las Vegas since 2008 with $127M+ in closed transactions, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
+    "Serving Craig Ranch since 2007 with $127M+ in closed transactions, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
 };
 
 // Neighborhoods served

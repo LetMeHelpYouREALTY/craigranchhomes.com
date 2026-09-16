@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/henderson",
   title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
   description:
-    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's residential communities with parks and recreation. Median price $485K. Call (702) 222-1964.",
+    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's residential communities with parks and recreation. Median price $485K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Henderson",
     "Henderson homes for sale",
@@ -108,7 +108,7 @@ export default function HendersonPage() {
               <p>
                 <strong>Henderson</strong> is Nevada's second-largest city with over 320,000 residents.
                 Compare streets by square footage, HOA dues, parks, and commute minutes from
-                9406 W Lake Mead Blvd—not by slogan. <strong>Berkshire Hathaway
+                851 W Lone Mountain Rd—not by slogan. <strong>Berkshire Hathaway
                 HomeServices</strong> has been helping buyers find Henderson homes for decades,
                 and Dr. Jan Duffy brings unmatched expertise to every transaction.
               </p>
@@ -123,7 +123,7 @@ export default function HendersonPage() {
                 streets of <strong>Green Valley</strong> to the town-center amenities of <strong>Inspirada</strong>,
                 from the luxury estates of <strong>MacDonald Highlands</strong> to the waterfront properties at
                 <strong> Lake Las Vegas</strong>—Green Valley, Inspirada, MacDonald Highlands, and
-                the 320-acre lake are compared by square footage, HOA packet, and drive time from Suite 100.
+                the 320-acre lake are compared by square footage, HOA packet, and drive time from Suite 103.
                 <strong> Berkshire Hathaway HomeServices Nevada Properties</strong> agents know each of these
                 communities intimately.
               </p>
@@ -167,7 +167,7 @@ export default function HendersonPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Pick two Henderson villages from Suite 100 — trees or rec campus
+              Pick two Henderson villages from Suite 103 — trees or rec campus
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Compare Green Valley, Anthem, Inspirada, and Water Street from one Henderson day.

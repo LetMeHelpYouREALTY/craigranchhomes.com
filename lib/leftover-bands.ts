@@ -20,7 +20,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/55-plus-communities/sun-city-anthem": [
     {
       h2: "Anthem Center 64,000 sq ft, then Liberty, Independence, and Heritage by elevation",
-      body: "Sun City Anthem is 30–35 minutes from 9406 W Lake Mead Blvd, Suite 100. Occupancy rules are reviewed at the desk before the Henderson drive. Call (702) 222-1964. Do not mix this with a Summerlin 55+ morning.",
+      body: "Sun City Anthem is 30–35 minutes from 851 W Lone Mountain Rd, Suite 103. Occupancy rules are reviewed at the desk before the Henderson drive. Call (702) 820-5408. Do not mix this with a Summerlin 55+ morning.",
       pins: [
         {
           name: "Anthem Center",
@@ -36,15 +36,15 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Heritage",
-          note: "Larger lots and custom product. Published band $700K–$1.2M. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+          note: "Larger lots and custom product. Published band $700K–$1.2M. Call (702) 820-5408. Office/GBP (702) 820-5408.",
         },
       ],
     },
   ],
   "/55-plus-communities": [
     {
-      h2: "Occupancy packets at Suite 100, then one rec campus — not a slogan grid",
-      body: "HOPA occupancy is reviewed at 9406 W Lake Mead Blvd before we drive. Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Call (702) 222-1964. Nevada has no state income tax; HOA dues still apply.",
+      h2: "Occupancy packets at Suite 103, then one rec campus — not a slogan grid",
+      body: "HOPA occupancy is reviewed at 851 W Lone Mountain Rd before we drive. Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Call (702) 820-5408. Nevada has no state income tax; HOA dues still apply.",
       pins: [
         {
           name: "HOA-maintained exteriors",
@@ -65,12 +65,12 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "25,000+ 55+ homes, $280K–$1.2M published bands, HOA $140–$350 — packet at Suite 100",
-      body: "January 2026 snapshot on this hub. Occupancy rules are reviewed at 9406 W Lake Mead Blvd before any clubhouse. Call (702) 222-1964. Pick one west campus or one Henderson campus.",
+      h2: "25,000+ 55+ homes, $280K–$1.2M published bands, HOA $140–$350 — packet at Suite 103",
+      body: "January 2026 snapshot on this hub. Occupancy rules are reviewed at 851 W Lone Mountain Rd before any clubhouse. Call (702) 820-5408. Pick one west campus or one Henderson campus.",
       pins: [
         {
           name: "West first",
-          note: "Sun City Summerlin 10–15 minutes. Trilogy and Heritage 12–18. Same west clock as Suite 100.",
+          note: "Sun City Summerlin 10–15 minutes. Trilogy and Heritage 12–18. Same west clock as Suite 103.",
         },
         {
           name: "Henderson second",
@@ -82,17 +82,17 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "HOA packet",
-          note: "Dues bands on this page are $140–$350. Confirm the week you tour. Office/GBP (702) 500-1942.",
+          note: "Dues bands on this page are $140–$350. Confirm the week you tour. Office/GBP (702) 820-5408.",
         },
       ],
     },
     {
-      h2: "Open one 55+ campus page, then book the rec building from W Lake Mead Blvd",
-      body: "The card grid is a menu. The decision is a drive. Call (702) 222-1964. Named rec square footage and commute minutes beat a slogan row.",
+      h2: "Open one 55+ campus page, then book the rec building from W Lone Mountain Rd",
+      body: "The card grid is a menu. The decision is a drive. Call (702) 820-5408. Named rec square footage and commute minutes beat a slogan row.",
       pins: [
         {
           name: "Sun City Summerlin",
-          note: "Four rec campuses. 7,700+ homes. 10–15 minutes from Suite 100.",
+          note: "Four rec campuses. 7,700+ homes. 10–15 minutes from Suite 103.",
         },
         {
           name: "Trilogy / Heritage",
@@ -112,7 +112,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/buyers/luxury-homes-las-vegas": [
     {
       h2: "Ridges gate, MacDonald Strip view, or Lake Las Vegas shoreline — pick the first clock",
-      body: "This URL is buyer luxury search. Gate codes stay off group texts. The /luxury-homes hub is listing-or-search intake. Call (702) 222-1964 from 9406 W Lake Mead Blvd, Suite 100.",
+      body: "This URL is buyer luxury search. Gate codes stay off group texts. The /luxury-homes hub is listing-or-search intake. Call (702) 820-5408 from 851 W Lone Mountain Rd, Suite 103.",
       pins: [
         {
           name: "The Ridges",
@@ -136,7 +136,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/luxury-homes": [
     {
       h2: "Drone, floor plans, and paid placement — initialed before listing day",
-      body: "Marketing is a punch list at Suite 100, not a slogan. HOA drone rules and gate vendor lists are confirmed before photographer day. Call (702) 222-1964.",
+      body: "Marketing is a punch list at Suite 103, not a slogan. HOA drone rules and gate vendor lists are confirmed before photographer day. Call (702) 820-5408.",
       pins: [
         {
           name: "Photography scoped in writing",
@@ -144,7 +144,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Off-market window",
-          note: "Private showing blocks are booked from 9406 W Lake Mead Blvd. Addresses stay off unsecured threads.",
+          note: "Private showing blocks are booked from 851 W Lone Mountain Rd. Addresses stay off unsecured threads.",
         },
         {
           name: "Buyer search vs listing hub",
@@ -152,7 +152,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Paid placement punch list",
-          note: "BHHS syndication is scoped before go-live. We do not promise a portal we cannot name. Office/GBP (702) 500-1942.",
+          note: "BHHS syndication is scoped before go-live. We do not promise a portal we cannot name. Office/GBP (702) 820-5408.",
         },
       ],
     },
@@ -160,7 +160,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/services": [
     {
       h2: "Buyer, listing, 55+, and relocation desks — pick the file type first",
-      body: "Each service meeting starts at 9406 W Lake Mead Blvd, Suite 100 so MLS, showing routes, and BHHS paperwork share one start. Call (702) 222-1964.",
+      body: "Each service meeting starts at 851 W Lone Mountain Rd, Suite 103 so MLS, showing routes, and BHHS paperwork share one start. Call (702) 820-5408.",
       pins: [
         {
           name: "Buyer representation",
@@ -182,7 +182,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
     },
     {
       h2: "Investor math, new-construction registration, and 55+ packets — not a second slogan grid",
-      body: "Specialized files still start at Suite 100. Builder registration happens before any model row. HOA rental caps are checked before you fly in. Call (702) 222-1964.",
+      body: "Specialized files still start at Suite 103. Builder registration happens before any model row. HOA rental caps are checked before you fly in. Call (702) 820-5408.",
       pins: [
         {
           name: "Investment",
@@ -190,7 +190,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "New construction",
-          note: "Open /new-construction. Register Dr. Jan at Suite 100 before Skye Canyon, Inspirada, or Cadence models.",
+          note: "Open /new-construction. Register Dr. Jan at Suite 103 before Skye Canyon, Inspirada, or Cadence models.",
         },
         {
           name: "Relocation calendar",
@@ -205,8 +205,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/listings": [
     {
-      h2: "Village cards with January 2026 medians — commute minutes from Suite 100",
-      body: "This hub is inventory. Neighborhood pages hold named campuses and parks. Filter here, then call (702) 222-1964. We will not tour twelve ZIPs in one afternoon.",
+      h2: "Village cards with January 2026 medians — commute minutes from Suite 103",
+      body: "This hub is inventory. Neighborhood pages hold named campuses and parks. Filter here, then call (702) 820-5408. We will not tour twelve ZIPs in one afternoon.",
       pins: [
         {
           name: "Summerlin $625K",
@@ -218,7 +218,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "The Ridges $2.5M",
-          note: "15–20 minutes to the guardhouse. Gate list from Suite 100.",
+          note: "15–20 minutes to the guardhouse. Gate list from Suite 103.",
         },
         {
           name: "North Las Vegas $385K",
@@ -229,8 +229,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/why-berkshire-hathaway": [
     {
-      h2: "License S.0197614.LLC at Suite 100 — the parent company is on the letterhead",
-      body: "Ask who photographs, who writes remarks, who negotiates. Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Closed volume cited on this site: $127M+ since 2008.",
+      h2: "License S.0197614.LLC at Suite 103 — the parent company is on the letterhead",
+      body: "Ask who photographs, who writes remarks, who negotiates. Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties, 851 W Lone Mountain Rd, Suite 103. Call (702) 820-5408. Closed volume cited on this site: $127M+ since 2008.",
       pins: [
         {
           name: "Brokerage on the contract",
@@ -238,11 +238,11 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Referral desk",
-          note: "Inbound California and outbound states are briefed from Suite 100. Local showings still start here.",
+          note: "Inbound California and outbound states are briefed from Suite 103. Local showings still start here.",
         },
         {
           name: "Closed-file street comps",
-          note: "Ask for recent closes on your street. We will not invent a price. Office/GBP (702) 500-1942.",
+          note: "Ask for recent closes on your street. We will not invent a price. Office/GBP (702) 820-5408.",
         },
         {
           name: "Meet the agent page",
@@ -253,8 +253,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/new-construction": [
     {
-      h2: "Register at Suite 100, then one builder corridor — Toll, Lennar, KB, or Shea",
-      body: "Most Las Vegas and Henderson builders require your agent on the first visit. Register Dr. Jan Duffy at 9406 W Lake Mead Blvd before Skye Canyon, Inspirada, or Cadence. Call (702) 222-1964.",
+      h2: "Register at Suite 103, then one builder corridor — Toll, Lennar, KB, or Shea",
+      body: "Most Las Vegas and Henderson builders require your agent on the first visit. Register Dr. Jan Duffy at 851 W Lone Mountain Rd before Skye Canyon, Inspirada, or Cadence. Call (702) 820-5408.",
       pins: [
         {
           name: "Toll Brothers",
@@ -278,7 +278,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/google-business": [
     {
       h2: "Maps, hours, and reviews on this URL must match the Business Profile",
-      body: "Name, address, and office line (702) 500-1942 match GBP. Client CTA (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Inconsistent NAP is a Maps ranking leak.",
+      body: "Name, address, and office line (702) 820-5408 match GBP. Client CTA (702) 820-5408. 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Inconsistent NAP is a Maps ranking leak.",
       pins: [
         {
           name: "Call",
@@ -286,7 +286,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Directions",
-          note: "The map pin is this Suite 100 address. Visitor parking faces W Lake Mead Blvd.",
+          note: "The map pin is this Suite 103 address. Visitor parking faces W Lone Mountain Rd.",
         },
         {
           name: "View Google Reviews",
@@ -294,13 +294,13 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Hours",
-          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. If GBP hours change, this page updates the same day.",
+          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday closed. If GBP hours change, this page updates the same day.",
         },
       ],
     },
     {
-      h2: "License S.0197614.LLC, Suite 100 hours, and the Maps pin on one URL",
-      body: "This About band is for Google Business Profile alignment. Who, what, and where live here so GBP and heyberkshire.com do not drift. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+      h2: "License S.0197614.LLC, Suite 103 hours, and the Maps pin on one URL",
+      body: "This About band is for Google Business Profile alignment. Who, what, and where live here so GBP and craigranchhomes.com do not drift. Call (702) 820-5408. Office/GBP (702) 820-5408.",
       pins: [
         {
           name: "Who",
@@ -312,21 +312,21 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Where",
-          note: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Summerlin 10–15 minutes. Henderson 25–35 via I-215 east.",
+          note: "851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Summerlin 10–15 minutes. Henderson 25–35 via I-215 east.",
         },
         {
           name: "Hours",
-          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. Match GBP the same day hours change.",
+          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday closed. Match GBP the same day hours change.",
         },
       ],
     },
     {
-      h2: "Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 100 — Sunday by appointment",
-      body: "Hours on this URL must match Google Business. Walk-ins welcome during posted hours. Call (702) 222-1964. Office/GBP (702) 500-1942. 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+      h2: "Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 103 — Sunday closed",
+      body: "Hours on this URL must match Google Business. Walk-ins welcome during posted hours. Call (702) 820-5408. Office/GBP (702) 820-5408. 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032.",
       pins: [
         {
           name: "Monday–Friday",
-          note: "9am–6pm. Visitor parking faces W Lake Mead Blvd.",
+          note: "9am–6pm. Visitor parking faces W Lone Mountain Rd.",
         },
         {
           name: "Saturday",
@@ -334,7 +334,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Sunday",
-          note: "By appointment. Call (702) 222-1964 for a window.",
+          note: "Closed. Call (702) 820-5408 Monday–Saturday to schedule.",
         },
         {
           name: "GBP match",
@@ -343,12 +343,12 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "Maps pin at 9406 W Lake Mead Blvd — Directions and Google Reviews on this URL",
-      body: "The embed, Get Directions, and View Google Reviews buttons are the GBP actions. Call or text (702) 222-1964. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada Properties.",
+      h2: "Maps pin at 851 W Lone Mountain Rd — Directions and Google Reviews on this URL",
+      body: "The embed, Get Directions, and View Google Reviews buttons are the GBP actions. Call or text (702) 820-5408. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada Properties.",
       pins: [
         {
           name: "Get Directions",
-          note: "Opens the Suite 100 pin. Do not use a different street for GBP.",
+          note: "Opens the Suite 103 pin. Do not use a different street for GBP.",
         },
         {
           name: "View Google Reviews",
@@ -356,19 +356,19 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Call",
-          note: "Client CTA (702) 222-1964. Office line on Google is (702) 500-1942.",
+          note: "Client CTA (702) 820-5408. Office line on Google is (702) 820-5408.",
         },
         {
           name: "Address line",
-          note: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Same as the footer NAP.",
+          note: "851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Same as the footer NAP.",
         },
       ],
     },
   ],
   "/sellers": [
     {
-      h2: "Photographer, remarks, and comps scoped at Suite 100 before go-live",
-      body: "Listing files start at 9406 W Lake Mead Blvd, Suite 100. Photos and MLS remarks wait until the walkthrough. Call (702) 222-1964. We do not promise a portal we cannot name.",
+      h2: "Photographer, remarks, and comps scoped at Suite 103 before go-live",
+      body: "Listing files start at 851 W Lone Mountain Rd, Suite 103. Photos and MLS remarks wait until the walkthrough. Call (702) 820-5408. We do not promise a portal we cannot name.",
       pins: [
         {
           name: "BHHS syndication punch list",
@@ -380,21 +380,21 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Offer terms at the desk",
-          note: "Inspection, appraisal, and occupancy dates are drafted before you leave Suite 100.",
+          note: "Inspection, appraisal, and occupancy dates are drafted before you leave Suite 103.",
         },
         {
           name: "Net sheet",
-          note: "HOA, title, and payoff lines are written here. Office/GBP (702) 500-1942.",
+          note: "HOA, title, and payoff lines are written here. Office/GBP (702) 820-5408.",
         },
       ],
     },
     {
       h2: "CMA at the desk, photos at the house, then MLS — that is the listing clock",
-      body: "The selling sequence is dated at Suite 100. We do not skip the walkthrough. Call (702) 222-1964.",
+      body: "The selling sequence is dated at Suite 103. We do not skip the walkthrough. Call (702) 820-5408.",
       pins: [
         {
           name: "Valuation",
-          note: "Open /home-valuation. Comps at 9406 W Lake Mead Blvd before photographer day.",
+          note: "Open /home-valuation. Comps at 851 W Lone Mountain Rd before photographer day.",
         },
         {
           name: "Prep punch list",
@@ -406,13 +406,13 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Contract to close",
-          note: "Inspections and appraisal language live on the file. Call (702) 222-1964.",
+          note: "Inspections and appraisal language live on the file. Call (702) 820-5408.",
         },
       ],
     },
     {
       h2: "Move-up, downsize, probate, or outbound sale — open the matching seller URL",
-      body: "/sellers/move-up, /sellers/downsizing, /sellers/divorce-probate, and /sellers/relocation are separate clocks from Suite 100. Call (702) 222-1964.",
+      body: "/sellers/move-up, /sellers/downsizing, /sellers/divorce-probate, and /sellers/relocation are separate clocks from Suite 103. Call (702) 820-5408.",
       pins: [
         {
           name: "Move-up",
@@ -424,7 +424,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Divorce or probate",
-          note: "Court orders and lockbox rules at Suite 100, not the lobby. Private slot required.",
+          note: "Court orders and lockbox rules at Suite 103, not the lobby. Private slot required.",
         },
         {
           name: "Outbound relocation",
@@ -433,8 +433,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "Photo set, MLS remarks, HOA vendor list, and showing calendar — initialed at Suite 100",
-      body: "What you get when you list is a punch list, not a slogan. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100. We do not promise a portal we cannot name.",
+      h2: "Photo set, MLS remarks, HOA vendor list, and showing calendar — initialed at Suite 103",
+      body: "What you get when you list is a punch list, not a slogan. Call (702) 820-5408. 851 W Lone Mountain Rd, Suite 103. We do not promise a portal we cannot name.",
       pins: [
         {
           name: "Photography",
@@ -450,13 +450,13 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Showing calendar",
-          note: "Lockbox and occupancy windows written at the desk. Office/GBP (702) 500-1942.",
+          note: "Lockbox and occupancy windows written at the desk. Office/GBP (702) 820-5408.",
         },
       ],
     },
     {
-      h2: "January 2026 valley median $450K is not your CMA — bring the APN to Suite 100",
-      body: "Open /home-valuation with the address. We will not invent your number from a metro headline. Call (702) 222-1964. Typical close cited on this site: $450,000 valley snapshot.",
+      h2: "January 2026 valley median $450K is not your CMA — bring the APN to Suite 103",
+      body: "Open /home-valuation with the address. We will not invent your number from a metro headline. Call (702) 820-5408. Typical close cited on this site: $450,000 valley snapshot.",
       pins: [
         {
           name: "MLS comps",
@@ -479,8 +479,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/sellers/downsizing": [
     {
-      h2: "List the larger house, then one 55+ rec campus — same afternoon from Suite 100",
-      body: "Sun City Summerlin is 10–15 minutes from 9406 W Lake Mead Blvd. Occupancy rules are reviewed before the clubhouse. Call (702) 222-1964. Do not guess at square footage you have not walked.",
+      h2: "List the larger house, then one 55+ rec campus — same afternoon from Suite 103",
+      body: "Sun City Summerlin is 10–15 minutes from 851 W Lone Mountain Rd. Occupancy rules are reviewed before the clubhouse. Call (702) 820-5408. Do not guess at square footage you have not walked.",
       pins: [
         {
           name: "Sun City Summerlin",
@@ -503,8 +503,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/sellers/move-up": [
     {
-      h2: "2015–2021 purchase equity is a CMA at Suite 100, not a slogan",
-      body: "If you bought in that window, bring the APN. We will not invent a gain. January 2026 DOM cited on this site is 28 days for priced-right listings. Call (702) 222-1964.",
+      h2: "2015–2021 purchase equity is a CMA at Suite 103, not a slogan",
+      body: "If you bought in that window, bring the APN. We will not invent a gain. January 2026 DOM cited on this site is 28 days for priced-right listings. Call (702) 820-5408.",
       pins: [
         {
           name: "Centennial Hills to Summerlin",
@@ -516,11 +516,11 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Two stops from this pin",
-          note: "Current house and next ZIP share 9406 W Lake Mead Blvd as the start.",
+          note: "Current house and next ZIP share 851 W Lone Mountain Rd as the start.",
         },
         {
           name: "Contingent vs non-contingent",
-          note: "Written at the desk before you list. Call (702) 222-1964.",
+          note: "Written at the desk before you list. Call (702) 820-5408.",
         },
       ],
     },
@@ -528,7 +528,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/sellers/relocation": [
     {
       h2: "Las Vegas sale calendar plus a named BHHS agent in the next city",
-      body: "Outbound files start at Suite 100. Destination agents are briefed from 9406 W Lake Mead Blvd so two closings do not collide. Call (702) 222-1964.",
+      body: "Outbound files start at Suite 103. Destination agents are briefed from 851 W Lone Mountain Rd so two closings do not collide. Call (702) 820-5408.",
       pins: [
         {
           name: "Remote listing",
@@ -536,7 +536,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "50,000-agent desk, local file",
-          note: "BHHS destination intro is a Suite 100 call. Local showings still start here until you leave.",
+          note: "BHHS destination intro is a Suite 103 call. Local showings still start here until you leave.",
         },
         {
           name: "Two-contract calendar",
@@ -544,15 +544,15 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Office/GBP",
-          note: "(702) 500-1942. Client CTA (702) 222-1964. Do not swap the lines.",
+          note: "(702) 820-5408. Client CTA (702) 820-5408. Do not swap the lines.",
         },
       ],
     },
   ],
   "/sellers/divorce-probate": [
     {
-      h2: "Court orders, lockbox rules, and showing logs at Suite 100 — not the lobby",
-      body: "Confidential review is by appointment at 9406 W Lake Mead Blvd, Suite 100. Letters testamentary or court orders come with you. Call (702) 222-1964.",
+      h2: "Court orders, lockbox rules, and showing logs at Suite 103 — not the lobby",
+      body: "Confidential review is by appointment at 851 W Lone Mountain Rd, Suite 103. Letters testamentary or court orders come with you. Call (702) 820-5408.",
       pins: [
         {
           name: "Divorce file",
@@ -568,7 +568,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Offers",
-          note: "Documented, dated, and routed to counsel. Office/GBP (702) 500-1942.",
+          note: "Documented, dated, and routed to counsel. Office/GBP (702) 820-5408.",
         },
       ],
     },
@@ -576,7 +576,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/relocation": [
     {
       h2: "No state income tax is a line item — then one Summerlin or Henderson clock",
-      body: "Inbound math starts at 9406 W Lake Mead Blvd, Suite 100. Housing prices 40–60% below many California coastal cities is a comparison, not a guarantee. Call (702) 222-1964.",
+      body: "Inbound math starts at 851 W Lone Mountain Rd, Suite 103. Housing prices 40–60% below many California coastal cities is a comparison, not a guarantee. Call (702) 820-5408.",
       pins: [
         {
           name: "Nevada tax line",
@@ -588,7 +588,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Trailheads and rec acres",
-          note: "Golf and hiking are compared by acreage and minutes from Suite 100, not a slogan.",
+          note: "Golf and hiking are compared by acreage and minutes from Suite 103, not a slogan.",
         },
         {
           name: "Employers",
@@ -599,12 +599,12 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/market-report": [
     {
-      h2: "January 2026 medians by ZIP — then a CMA on YOUR APN at Suite 100",
-      body: "Valley snapshot: $450K median, 28 DOM, 4,850 active listings, 2.1 months inventory. Area cards are not a substitute for one address. Call (702) 222-1964.",
+      h2: "January 2026 medians by ZIP — then a CMA on YOUR APN at Suite 103",
+      body: "Valley snapshot: $450K median, 28 DOM, 4,850 active listings, 2.1 months inventory. Area cards are not a substitute for one address. Call (702) 820-5408.",
       pins: [
         {
           name: "Summerlin $625K",
-          note: "22 DOM on the January 2026 snapshot. 10–15 minutes from Suite 100.",
+          note: "22 DOM on the January 2026 snapshot. 10–15 minutes from Suite 103.",
         },
         {
           name: "Henderson $485K",
@@ -616,15 +616,15 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "$1M+ $1.2M median",
-          note: "45 DOM. Gate lists from 9406 W Lake Mead Blvd. Confirm the week you tour.",
+          note: "45 DOM. Gate lists from 851 W Lone Mountain Rd. Confirm the week you tour.",
         },
       ],
     },
   ],
   "/investment-properties": [
     {
-      h2: "HOA rental caps and rent comps at Suite 100 before any area drive",
-      body: "Cap-rate review happens at 9406 W Lake Mead Blvd. Then one ZIP cluster: North Las Vegas, Henderson, or southwest. Call (702) 222-1964. We check rental rules before you fly in.",
+      h2: "HOA rental caps and rent comps at Suite 103 before any area drive",
+      body: "Cap-rate review happens at 851 W Lone Mountain Rd. Then one ZIP cluster: North Las Vegas, Henderson, or southwest. Call (702) 820-5408. We check rental rules before you fly in.",
       pins: [
         {
           name: "No state income tax",
@@ -640,15 +640,15 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "1031 calendar",
-          note: "Identification windows are dated. Bring the relinquished APN. Office/GBP (702) 500-1942.",
+          note: "Identification windows are dated. Bring the relinquished APN. Office/GBP (702) 820-5408.",
         },
       ],
     },
   ],
   "/home-valuation": [
     {
-      h2: "Zestimate screenshots stay in the parking lot — comps are pulled at Suite 100",
-      body: "Bring the APN to 9406 W Lake Mead Blvd. AVMs miss interiors and HOA packets. Call (702) 222-1964. A 10% miss on $450K is $45K — we will not invent your number.",
+      h2: "Zestimate screenshots stay in the parking lot — comps are pulled at Suite 103",
+      body: "Bring the APN to 851 W Lone Mountain Rd. AVMs miss interiors and HOA packets. Call (702) 820-5408. A 10% miss on $450K is $45K — we will not invent your number.",
       pins: [
         {
           name: "MLS comps",
@@ -669,12 +669,12 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "Square footage, named campuses, HOA dues, 2.1 months inventory — comps at Suite 100",
-      body: "School-zone slogans are not a CMA. Palo Verde, Coronado, Arbor View, and Legacy High School minutes are mapped by address at ccsd.net/zoning. Call (702) 222-1964. January 2026 inventory cited on this page: 2.1 months.",
+      h2: "Square footage, named campuses, HOA dues, 2.1 months inventory — comps at Suite 103",
+      body: "School-zone slogans are not a CMA. Palo Verde, Coronado, Arbor View, and Legacy High School minutes are mapped by address at ccsd.net/zoning. Call (702) 820-5408. January 2026 inventory cited on this page: 2.1 months.",
       pins: [
         {
           name: "ZIP and commute",
-          note: "Summerlin 10–15 minutes from Suite 100. Henderson 25–35. Not a caption premium.",
+          note: "Summerlin 10–15 minutes from Suite 103. Henderson 25–35. Not a caption premium.",
         },
         {
           name: "Beds, baths, square footage",
@@ -694,7 +694,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/buyers/first-time-buyers": [
     {
       h2: "FHA 3.5% at $498,257, VA 0% down, or a builder credit — pick the file type",
-      body: "Lender letter is reviewed at 9406 W Lake Mead Blvd, Suite 100 before the first two-ZIP tour. 2026 FHA limit cited on this page: $498,257. Call (702) 222-1964. Confirm with your lender the week you write.",
+      body: "Lender letter is reviewed at 851 W Lone Mountain Rd, Suite 103 before the first two-ZIP tour. 2026 FHA limit cited on this page: $498,257. Call (702) 820-5408. Confirm with your lender the week you write.",
       pins: [
         {
           name: "FHA",
@@ -710,13 +710,13 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Builder registration",
-          note: "Open /new-construction. Register Dr. Jan at Suite 100 before any model row.",
+          note: "Open /new-construction. Register Dr. Jan at Suite 103 before any model row.",
         },
       ],
     },
     {
       h2: "NLV from $350K, Centennial, or Green Valley — one ZIP, named campuses, commute minutes",
-      body: "First-purchase tours start at Suite 100. Legacy High School, Arbor View, and Coronado High School commutes are mapped at ccsd.net/zoning by address. Call (702) 222-1964.",
+      body: "First-purchase tours start at Suite 103. Legacy High School, Arbor View, and Coronado High School commutes are mapped at ccsd.net/zoning by address. Call (702) 820-5408.",
       pins: [
         {
           name: "North Las Vegas",
@@ -724,7 +724,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Centennial Hills",
-          note: "Northwest clock from W Lake Mead Blvd. Arbor View High School commute by street.",
+          note: "Northwest clock from W Lone Mountain Rd. Arbor View High School commute by street.",
         },
         {
           name: "Green Valley",
@@ -737,8 +737,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "$1,800 rent vs $1,900 PITI on a $400K / 3.5% FHA file — run the sheet at Suite 100",
-      body: "Figures on this page are a worked example, not your payment. Rate cited here: 6.5%. 2026 FHA limit: $498,257. Call (702) 222-1964. Lender letter before the first showing.",
+      h2: "$1,800 rent vs $1,900 PITI on a $400K / 3.5% FHA file — run the sheet at Suite 103",
+      body: "Figures on this page are a worked example, not your payment. Rate cited here: 6.5%. 2026 FHA limit: $498,257. Call (702) 820-5408. Lender letter before the first showing.",
       pins: [
         {
           name: "Rent column",
@@ -754,61 +754,61 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Then two ZIPs",
-          note: "North Las Vegas, Centennial Hills, or Green Valley. Named campuses by address. Call (702) 222-1964.",
+          note: "North Las Vegas, Centennial Hills, or Green Valley. Named campuses by address. Call (702) 820-5408.",
         },
       ],
     },
   ],
   "/contact": [
     {
-      h2: "Walk-in hours and (702) 222-1964 at Suite 100 — the Maps pin is this desk",
-      body: "Berkshire Hathaway HomeServices Nevada Properties. 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client CTA (702) 222-1964. Office/GBP (702) 500-1942. Closed volume cited on this site: $127M+ since 2008. Map, Directions, and Google Reviews stay on this URL.",
+      h2: "Walk-in hours and (702) 820-5408 at Suite 103 — the Maps pin is this desk",
+      body: "Berkshire Hathaway HomeServices Nevada Properties. 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Client CTA (702) 820-5408. Office/GBP (702) 820-5408. Closed volume cited on this site: $127M+ since 2008. Map, Directions, and Google Reviews stay on this URL.",
       pins: [
         {
-          name: "Call or text (702) 222-1964",
+          name: "Call or text (702) 820-5408",
           note: "Dr. Jan answers this line. Do not swap it with the office number on Google.",
         },
         {
-          name: "homes@heyberkshire.com",
+          name: "DrDuffy@CraigRanchHomes.com",
           note: "Documents only. Do not send listing keys by unsecured email.",
         },
         {
-          name: "9406 W Lake Mead Blvd, Suite 100",
-          note: "Las Vegas, NV 89134. Visitor parking faces W Lake Mead Blvd.",
+          name: "851 W Lone Mountain Rd, Suite 103",
+          note: "North Las Vegas, NV 89032. Visitor parking faces W Lone Mountain Rd.",
         },
         {
           name: "Hours on the GBP listing",
-          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. Walk-ins welcome during posted hours.",
+          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday closed. Walk-ins welcome during posted hours.",
         },
       ],
     },
     {
-      h2: "Call the client line or email Homes@HeyBerkshire.com from this URL",
-      body: "Skip a second form if you already have the number. Call or text (702) 222-1964. Email homes@heyberkshire.com. Calendly is the appointment column on this page. Office/GBP (702) 500-1942.",
+      h2: "Call the client line or email DrDuffy@CraigRanchHomes.com from this URL",
+      body: "Skip a second form if you already have the number. Call or text (702) 820-5408. Email DrDuffy@CraigRanchHomes.com. Calendly is the appointment column on this page. Office/GBP (702) 820-5408.",
       pins: [
         {
           name: "Client CTA",
-          note: "(702) 222-1964. Same-day reply on the number you left.",
+          note: "(702) 820-5408. Same-day reply on the number you left.",
         },
         {
           name: "Email",
-          note: "homes@heyberkshire.com. Typical reply within two hours during posted hours.",
+          note: "DrDuffy@CraigRanchHomes.com. Typical reply within two hours during posted hours.",
         },
         {
           name: "Calendly column",
-          note: "Phone consult, showing, or Suite 100 meeting. Bring photo ID and target ZIPs.",
+          note: "Phone consult, showing, or Suite 103 meeting. Bring photo ID and target ZIPs.",
         },
         {
           name: "Maps pin",
-          note: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. License S.0197614.LLC.",
+          note: "851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. License S.0197614.LLC.",
         },
       ],
     },
   ],
   "/market-insights": [
     {
-      h2: "37% California in-migration, 0% NV state income tax, $1B+ data-center spend — apply at Suite 100",
-      body: "Figures on this page are January 2026 snapshots. They are not a CMA for your APN. Call (702) 222-1964. We apply them at 9406 W Lake Mead Blvd, then drive one ZIP.",
+      h2: "37% California in-migration, 0% NV state income tax, $1B+ data-center spend — apply at Suite 103",
+      body: "Figures on this page are January 2026 snapshots. They are not a CMA for your APN. Call (702) 820-5408. We apply them at 851 W Lone Mountain Rd, then drive one ZIP.",
       pins: [
         {
           name: "37% California buyers",
@@ -824,13 +824,13 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "45M annual visitors",
-          note: "Hospitality demand is a metro input. Your listing still needs comps. Call (702) 222-1964.",
+          note: "Hospitality demand is a metro input. Your listing still needs comps. Call (702) 820-5408.",
         },
       ],
     },
     {
-      h2: "Switch, AWS, and Google power campuses in Henderson — 25–35 minutes from W Lake Mead Blvd",
-      body: "Data-center jobs are an east-valley clock from Suite 100. Summerlin is a separate west loop. Call (702) 222-1964. Do not stack both in one afternoon.",
+      h2: "Switch, AWS, and Google power campuses in Henderson — 25–35 minutes from W Lone Mountain Rd",
+      body: "Data-center jobs are an east-valley clock from Suite 103. Summerlin is a separate west loop. Call (702) 820-5408. Do not stack both in one afternoon.",
       pins: [
         {
           name: "Henderson corridor",
@@ -838,7 +838,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "25–35 minute drive",
-          note: "From 9406 W Lake Mead Blvd to Henderson listings. Confirm traffic the morning you tour.",
+          note: "From 851 W Lone Mountain Rd to Henderson listings. Confirm traffic the morning you tour.",
         },
         {
           name: "Fiber and power",
@@ -851,8 +851,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "Bay Area and LA net sheets vs Summerlin or Henderson ZIP — video intake from Suite 100",
-      body: "California remains the top inbound source cited on this page. $250K+ average equity is a snapshot, not your proceeds. Call (702) 222-1964. Four-hour drive or about a one-hour flight to most of California.",
+      h2: "Bay Area and LA net sheets vs Summerlin or Henderson ZIP — video intake from Suite 103",
+      body: "California remains the top inbound source cited on this page. $250K+ average equity is a snapshot, not your proceeds. Call (702) 820-5408. Four-hour drive or about a one-hour flight to most of California.",
       pins: [
         {
           name: "37% inbound share",
@@ -874,7 +874,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
     },
     {
       h2: "Allegiant Stadium, Summerlin medical corridor, Nevada film credits — one employer clock at the desk",
-      body: "Diversification is three separate drives. Pick one employer cluster before we leave Suite 100. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+      body: "Diversification is three separate drives. Pick one employer cluster before we leave Suite 103. Call (702) 820-5408. Office/GBP (702) 820-5408.",
       pins: [
         {
           name: "Allegiant Stadium district",
@@ -890,17 +890,17 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "One cluster per afternoon",
-          note: "Do not tour stadium, hospital, and studio ZIPs in one loop. Call (702) 222-1964.",
+          note: "Do not tour stadium, hospital, and studio ZIPs in one loop. Call (702) 820-5408.",
         },
       ],
     },
     {
       h2: "Henderson Inspirada, Summerlin Ridges, Aliante rec, Mountains Edge trails — January 2026 ZIP notes",
-      body: "Outlook copy on this page is a snapshot. Appreciation ranges are not a CMA. Call (702) 222-1964. Named villages and commute minutes beat a caption.",
+      body: "Outlook copy on this page is a snapshot. Appreciation ranges are not a CMA. Call (702) 820-5408. Named villages and commute minutes beat a caption.",
       pins: [
         {
           name: "Henderson",
-          note: "Inspirada, MacDonald Highlands, Green Valley Ranch. 25–35 minutes from Suite 100.",
+          note: "Inspirada, MacDonald Highlands, Green Valley Ranch. 25–35 minutes from Suite 103.",
         },
         {
           name: "Summerlin",
@@ -917,8 +917,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "Apply 2026 forces to one APN: buyer letter or listing CMA at 9406 W Lake Mead Blvd",
-      body: "Inventory is wider than 2021–2023 on this page, but well-priced homes still move. Call (702) 222-1964. Builder credits belong on /new-construction after you register Dr. Jan.",
+      h2: "Apply 2026 forces to one APN: buyer letter or listing CMA at 851 W Lone Mountain Rd",
+      body: "Inventory is wider than 2021–2023 on this page, but well-priced homes still move. Call (702) 820-5408. Builder credits belong on /new-construction after you register Dr. Jan.",
       pins: [
         {
           name: "Buyer letter first",
@@ -930,7 +930,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Builder credits",
-          note: "Rate buydowns expire. Register at Suite 100 before any model row.",
+          note: "Rate buydowns expire. Register at Suite 103 before any model row.",
         },
         {
           name: "Listing CMA",
@@ -942,7 +942,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/market-update": [
     {
       h2: "$452,500 median, 847 sales, 4,892 listings, 26 DOM, 98.2% list-to-sale — not your street CMA",
-      body: "This week's snapshot on this URL. Week deltas cited here: median +1.2%, sales +8.3%, listings -2.1%, DOM -2 days, list-to-sale +0.4%. Call (702) 222-1964. We will not price your house from a metro headline.",
+      body: "This week's snapshot on this URL. Week deltas cited here: median +1.2%, sales +8.3%, listings -2.1%, DOM -2 days, list-to-sale +0.4%. Call (702) 820-5408. We will not price your house from a metro headline.",
       pins: [
         {
           name: "$452,500 median",
@@ -958,17 +958,17 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "26 DOM / 98.2% list-to-sale",
-          note: "Urgency and close-to-ask are dated. Bring the APN to 9406 W Lake Mead Blvd.",
+          note: "Urgency and close-to-ask are dated. Bring the APN to 851 W Lone Mountain Rd.",
         },
       ],
     },
     {
       h2: "Ridges 8,400 sq ft custom closed at $4.2M in 12 days — one Summerlin gate file",
-      body: "6 bed, 7 bath, 8,400 sq ft. Cited at 97% of ask vs a luxury-segment 67-day average on this page. Gate lists stay off group texts. Call (702) 222-1964 from Suite 100.",
+      body: "6 bed, 7 bath, 8,400 sq ft. Cited at 97% of ask vs a luxury-segment 67-day average on this page. Gate lists stay off group texts. Call (702) 820-5408 from Suite 103.",
       pins: [
         {
           name: "The Ridges",
-          note: "15–20 minutes to the guardhouse from 9406 W Lake Mead Blvd. Confirm the list that morning.",
+          note: "15–20 minutes to the guardhouse from 851 W Lone Mountain Rd. Confirm the list that morning.",
         },
         {
           name: "8,400 sq ft",
@@ -980,13 +980,13 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "California inbound demand",
-          note: "Named on this page as a luxury driver. Your buyer still needs a letter. Office/GBP (702) 500-1942.",
+          note: "Named on this page as a luxury driver. Your buyer still needs a letter. Office/GBP (702) 820-5408.",
         },
       ],
     },
     {
-      h2: "26 DOM and 98.2% close-to-ask — write the offer or list price at Suite 100",
-      body: "This week's story on this URL: modest +1.2% prices, +8.3% volume, -2.1% inventory. Call (702) 222-1964. A metro balance is not a CMA. Bring the address.",
+      h2: "26 DOM and 98.2% close-to-ask — write the offer or list price at Suite 103",
+      body: "This week's story on this URL: modest +1.2% prices, +8.3% volume, -2.1% inventory. Call (702) 820-5408. A metro balance is not a CMA. Bring the address.",
       pins: [
         {
           name: "Buyer clock",
@@ -1008,11 +1008,11 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
     },
     {
       h2: "Pre-approval on a 26-day clock, or list before spring inventory — pick the file type",
-      body: "Buyers: letter, then two ZIPs. Sellers: comps at the desk, then photos. Call (702) 222-1964. 98.2% list-to-sale on this page means deep discounts are uncommon this week.",
+      body: "Buyers: letter, then two ZIPs. Sellers: comps at the desk, then photos. Call (702) 820-5408. 98.2% list-to-sale on this page means deep discounts are uncommon this week.",
       pins: [
         {
           name: "Get the letter",
-          note: "FHA, VA, or conventional compared at Suite 100 so the first appointment has a number.",
+          note: "FHA, VA, or conventional compared at Suite 103 so the first appointment has a number.",
         },
         {
           name: "Price to comps",
@@ -1030,11 +1030,11 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
     },
     {
       h2: "Summerlin $628K / 21 DOM vs Henderson $487,500 / 23 DOM vs Mountains Edge $478K / 26 DOM",
-      body: "Area rows on this page are this week's snapshot. Central Las Vegas is cited at $425,000. Call (702) 222-1964. Two clocks from Suite 100 — not twelve ZIPs.",
+      body: "Area rows on this page are this week's snapshot. Central Las Vegas is cited at $425,000. Call (702) 820-5408. Two clocks from Suite 103 — not twelve ZIPs.",
       pins: [
         {
           name: "Summerlin $628,000",
-          note: "142 sold, 21 DOM this week on this page. 10–15 minutes from W Lake Mead Blvd.",
+          note: "142 sold, 21 DOM this week on this page. 10–15 minutes from W Lone Mountain Rd.",
         },
         {
           name: "Henderson $487,500",
@@ -1053,8 +1053,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/neighborhoods": [
     {
-      h2: "Open Summerlin or Green Valley first — 10–15 vs 25–35 minutes from Suite 100",
-      body: "The card grid is a menu. The decision is a drive. Call (702) 222-1964. Named campuses and commute minutes are on each community page — not a slogan row.",
+      h2: "Open Summerlin or Green Valley first — 10–15 vs 25–35 minutes from Suite 103",
+      body: "The card grid is a menu. The decision is a drive. Call (702) 820-5408. Named campuses and commute minutes are on each community page — not a slogan row.",
       pins: [
         {
           name: "Summerlin",
@@ -1075,8 +1075,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
     {
-      h2: "Two-ZIP tour, named-campus commute minutes, RealScout match — book from W Lake Mead Blvd",
-      body: "Area tours start at 9406 W Lake Mead Blvd, Suite 100. We map Palo Verde, Coronado, Arbor View, and Legacy High School minutes at ccsd.net/zoning by address. Call (702) 222-1964.",
+      h2: "Two-ZIP tour, named-campus commute minutes, RealScout match — book from W Lone Mountain Rd",
+      body: "Area tours start at 851 W Lone Mountain Rd, Suite 103. We map Palo Verde, Coronado, Arbor View, and Legacy High School minutes at ccsd.net/zoning by address. Call (702) 820-5408.",
       pins: [
         {
           name: "Area tours",
@@ -1092,7 +1092,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Then drive",
-          note: "Open /neighborhoods/[slug], then Calendly. Office/GBP (702) 500-1942.",
+          note: "Open /neighborhoods/[slug], then Calendly. Office/GBP (702) 820-5408.",
         },
       ],
     },
@@ -1100,7 +1100,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/about": [
     {
       h2: "Ridges $1M+ files, Toll Brothers registration, Sun City packets, CA net sheets — one desk",
-      body: "Pick a file type at 9406 W Lake Mead Blvd, Suite 100. License S.0197614.LLC. Call (702) 222-1964. We do not route you through a call center.",
+      body: "Pick a file type at 851 W Lone Mountain Rd, Suite 103. License S.0197614.LLC. Call (702) 820-5408. We do not route you through a call center.",
       pins: [
         {
           name: "Residential resale",
@@ -1124,7 +1124,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   "/buyers": [
     {
       h2: "January 2026 buyer snapshot: $450K median, 4,850 listings, 28 DOM — then two ZIPs",
-      body: "Valley figures on this page. Summerlin and Henderson medians live on their community pages. Call (702) 222-1964. Lender letter at Suite 100 before the first showing.",
+      body: "Valley figures on this page. Summerlin and Henderson medians live on their community pages. Call (702) 820-5408. Lender letter at Suite 103 before the first showing.",
       pins: [
         {
           name: "$450K median",
@@ -1140,27 +1140,27 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "+4.2% year over year",
-          note: "Cited on this page. Your ZIP can differ. Two-ZIP tour from 9406 W Lake Mead Blvd.",
+          note: "Cited on this page. Your ZIP can differ. Two-ZIP tour from 851 W Lone Mountain Rd.",
         },
       ],
     },
   ],
   "/faq": [
     {
-      h2: "Accordion closed? Call (702) 222-1964 or book Calendly at Suite 100",
-      body: "FAQ copy is the desk version of the same questions. Bring a ZIP and a pre-approval. 9406 W Lake Mead Blvd, Suite 100 is about 10 minutes from most Summerlin villages. Office/GBP (702) 500-1942.",
+      h2: "Accordion closed? Call (702) 820-5408 or book Calendly at Suite 103",
+      body: "FAQ copy is the desk version of the same questions. Bring a ZIP and a pre-approval. 851 W Lone Mountain Rd, Suite 103 is about 10 minutes from most Summerlin villages. Office/GBP (702) 820-5408.",
       pins: [
         {
           name: "Live Q&A",
-          note: "Named campuses and commute minutes replace slogans. Call or text (702) 222-1964.",
+          note: "Named campuses and commute minutes replace slogans. Call or text (702) 820-5408.",
         },
         {
           name: "Calendly",
-          note: "Phone, showing, or Suite 100 meeting. Photo ID and target ZIPs.",
+          note: "Phone, showing, or Suite 103 meeting. Photo ID and target ZIPs.",
         },
         {
           name: "Email",
-          note: "homes@heyberkshire.com for documents. Do not send listing keys by unsecured email.",
+          note: "DrDuffy@CraigRanchHomes.com for documents. Do not send listing keys by unsecured email.",
         },
         {
           name: "Maps pin",
@@ -1171,12 +1171,12 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/55-plus-communities/sun-city-summerlin": [
     {
-      h2: "7,700 homes, four rec campuses, 10–15 minutes from 9406 W Lake Mead Blvd",
-      body: "Highland Falls, Palm Valley, and Eagle Crest are three courses. Mountain Shadows, Sun Shadows, Pinnacle, and Desert Vista are four rec buildings. Call (702) 222-1964. HOA cited on this page: $155–$195. Age-restriction rules at Suite 100 first.",
+      h2: "7,700 homes, four rec campuses, 10–15 minutes from 851 W Lone Mountain Rd",
+      body: "Highland Falls, Palm Valley, and Eagle Crest are three courses. Mountain Shadows, Sun Shadows, Pinnacle, and Desert Vista are four rec buildings. Call (702) 820-5408. HOA cited on this page: $155–$195. Age-restriction rules at Suite 103 first.",
       pins: [
         {
           name: "Mountain Shadows",
-          note: "Rec campus walk before you pick a street. Same west clock as Suite 100.",
+          note: "Rec campus walk before you pick a street. Same west clock as Suite 103.",
         },
         {
           name: "Highland Falls",
@@ -1195,8 +1195,8 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
   ],
   "/55-plus-communities/trilogy-summerlin": [
     {
-      h2: "Shea clubhouse, spa, and plan rows — 12–18 minutes from Suite 100",
-      body: "Trilogy sits on the office side of the valley. Downtown Summerlin retail is a short hop after the clubhouse. Call (702) 222-1964. HOA cited on this page: $250–$350. Register before walking models.",
+      h2: "Shea clubhouse, spa, and plan rows — 12–18 minutes from Suite 103",
+      body: "Trilogy sits on the office side of the valley. Downtown Summerlin retail is a short hop after the clubhouse. Call (702) 820-5408. HOA cited on this page: $250–$350. Register before walking models.",
       pins: [
         {
           name: "Clubhouse restaurant",
@@ -1212,15 +1212,15 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Do not add Anthem",
-          note: "Henderson 55+ is a separate east clock. Call (702) 222-1964 from 9406 W Lake Mead Blvd.",
+          note: "Henderson 55+ is a separate east clock. Call (702) 820-5408 from 851 W Lone Mountain Rd.",
         },
       ],
     },
   ],
   "/55-plus-communities/heritage-stonebridge": [
     {
-      h2: "Staffed gate, 1,100+ homes, Downtown Summerlin retail — 12–18 minutes from Suite 100",
-      body: "Guest lists are booked from 9406 W Lake Mead Blvd so arrival is not improvised. Call (702) 222-1964. Published band on this page: $400K–$750K. HOA $175–$220. This is not a 7,700-home campus.",
+      h2: "Staffed gate, 1,100+ homes, Downtown Summerlin retail — 12–18 minutes from Suite 103",
+      body: "Guest lists are booked from 851 W Lone Mountain Rd so arrival is not improvised. Call (702) 820-5408. Published band on this page: $400K–$750K. HOA $175–$220. This is not a 7,700-home campus.",
       pins: [
         {
           name: "Staffed gate",
@@ -1232,23 +1232,23 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Downtown Summerlin",
-          note: "Retail on the same west hop as Suite 100. Not a Henderson add-on.",
+          note: "Retail on the same west hop as Suite 103. Not a Henderson add-on.",
         },
         {
           name: "Occupancy packet",
-          note: "Age-restriction and guest rules at the desk. Office/GBP (702) 500-1942.",
+          note: "Age-restriction and guest rules at the desk. Office/GBP (702) 820-5408.",
         },
       ],
     },
   ],
   "/55-plus-communities/solera-anthem": [
     {
-      h2: "1,200-home Henderson campus, staffed gate — 30–35 minutes from Suite 100",
-      body: "All residents must be 55+ here — confirm the HOA occupancy rule in writing. Call (702) 222-1964. Published band on this page: $380K–$650K. HOA $170–$210. Compare Sun City Anthem on the same east clock only if that is the brief.",
+      h2: "1,200-home Henderson campus, staffed gate — 30–35 minutes from Suite 103",
+      body: "All residents must be 55+ here — confirm the HOA occupancy rule in writing. Call (702) 820-5408. Published band on this page: $380K–$650K. HOA $170–$210. Compare Sun City Anthem on the same east clock only if that is the brief.",
       pins: [
         {
           name: "Occupancy in writing",
-          note: "This campus is all-55+. Packet at 9406 W Lake Mead Blvd before the drive.",
+          note: "This campus is all-55+. Packet at 851 W Lone Mountain Rd before the drive.",
         },
         {
           name: "Clubhouse and pool",
@@ -1256,19 +1256,19 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "Staffed gate",
-          note: "Guest list from Suite 100. Do not mix with a Summerlin 55+ morning.",
+          note: "Guest list from Suite 103. Do not mix with a Summerlin 55+ morning.",
         },
         {
           name: "Anthem parks",
-          note: "Nearby parks are on this Henderson clock. Call (702) 222-1964.",
+          note: "Nearby parks are on this Henderson clock. Call (702) 820-5408.",
         },
       ],
     },
   ],
   "/55-plus-communities/sun-city-aliante": [
     {
-      h2: "42,000 sq ft rec, 18-hole course, 2,800+ homes — 20–25 minutes north from Suite 100",
-      body: "Golf and rec sit next to the Aliante retail strip. Call (702) 222-1964. Occupancy rules at 9406 W Lake Mead Blvd before the north loop. Do not add Henderson the same day.",
+      h2: "42,000 sq ft rec, 18-hole course, 2,800+ homes — 20–25 minutes north from Suite 103",
+      body: "Golf and rec sit next to the Aliante retail strip. Call (702) 820-5408. Occupancy rules at 851 W Lone Mountain Rd before the north loop. Do not add Henderson the same day.",
       pins: [
         {
           name: "42,000 sq ft rec",
@@ -1284,15 +1284,15 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "North Vista Hospital",
-          note: "Hospital pin on this north clock. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+          note: "Hospital pin on this north clock. Call (702) 820-5408. Office/GBP (702) 820-5408.",
         },
       ],
     },
   ],
   "/55-plus-communities/del-webb-lake-las-vegas": [
     {
-      h2: "$400K–$900K, pickleball, 320-acre lake — 35–45 minutes from Suite 100",
-      body: "Del Webb at Lake Las Vegas is a 2016-to-present 55+ campus. Occupancy at 9406 W Lake Mead Blvd before the Henderson drive. Call (702) 222-1964. HOA cited on this page: $200–$280. Do not stack with a Summerlin 55+ morning.",
+      h2: "$400K–$900K, pickleball, 320-acre lake — 35–45 minutes from Suite 103",
+      body: "Del Webb at Lake Las Vegas is a 2016-to-present 55+ campus. Occupancy at 851 W Lone Mountain Rd before the Henderson drive. Call (702) 820-5408. HOA cited on this page: $200–$280. Do not stack with a Summerlin 55+ morning.",
       pins: [
         {
           name: "320-acre lake",
@@ -1308,7 +1308,7 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
         {
           name: "East clock only",
-          note: "35–45 minutes from Suite 100. Office/GBP (702) 500-1942.",
+          note: "35–45 minutes from Suite 103. Office/GBP (702) 820-5408.",
         },
       ],
     },

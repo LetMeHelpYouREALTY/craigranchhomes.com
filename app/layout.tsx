@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const domain = headers().get("x-domain") || "";
   const pathname = headers().get("x-pathname") || "/";
   const config = getDomainConfig(domain);
-  const title = `${config.neighborhood} Real Estate | Dr. Jan Duffy, REALTOR® | BHHS Nevada`;
+  const title = `${config.neighborhood} Homes | Craig Ranch Homes | Dr. Jan Duffy, REALTOR®`;
   const canonical = absoluteUrl(pathname);
   return {
     metadataBase: new URL(SITE_URL),
@@ -41,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       url: canonical,
       locale: "en_US",
-      siteName: nap.brokerage,
+      siteName: nap.name,
       images: [{ url: absoluteUrl(photos.homeHero.src), alt: photos.homeHero.alt }],
     },
     twitter: {

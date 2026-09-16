@@ -41,6 +41,6 @@ export const neighborhoodLifestyles: Record<string, NeighborhoodLifestyleCopy> =
       h2: "Exploration Peak vs I-15/Blue Diamond — two southwest days",
     },
     "/neighborhoods": {
-      h2: "West retail loop vs Henderson loop — pick the first afternoon from Suite 100",
+      h2: "West retail loop vs Henderson loop — pick the first afternoon from Suite 103",
     },
   };

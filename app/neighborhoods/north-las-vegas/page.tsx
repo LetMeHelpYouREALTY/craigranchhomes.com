@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/north-las-vegas",
   title: "Berkshire Hathaway HomeServices North Las Vegas | Affordable Homes",
   description:
-    "Find North Las Vegas homes with Berkshire Hathaway HomeServices Nevada Properties. January 2026 median $385K. Named campuses and commute minutes from Suite 100. Call (702) 222-1964.",
+    "Find North Las Vegas homes with Berkshire Hathaway HomeServices Nevada Properties. January 2026 median $385K. Named campuses and commute minutes from Suite 103. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices North Las Vegas",
     "North Las Vegas homes for sale",
@@ -93,7 +93,7 @@ export default function NorthLasVegasPage() {
                 <strong>North Las Vegas</strong> has undergone a remarkable transformation over the past
                 decade. What was once considered a distant suburb is now a thriving city with new
                 master-planned communities, major employers, and infrastructure improvements that make
-                it an inventory band to compare at Suite 100. <strong>Berkshire
+                it an inventory band to compare at Suite 103. <strong>Berkshire
                 Hathaway HomeServices</strong> compares $385K median listings, named campuses, and
                 commute minutes on this north clock.
               </p>

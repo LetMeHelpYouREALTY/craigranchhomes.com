@@ -33,7 +33,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/55-plus-communities/sun-city-anthem",
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Henderson 55+ campus with a 64,000 sq ft clubhouse. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, McCullough Range views. Dr. Jan Duffy. Call (702) 222-1964.",
+    "Henderson 55+ campus with a 64,000 sq ft clubhouse. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, McCullough Range views. Dr. Jan Duffy. Call (702) 820-5408.",
   keywords: [
     "Sun City Anthem homes for sale",
     "Sun City Anthem Henderson",
@@ -94,7 +94,7 @@ export default function SunCityAnthemPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Mountain className="h-4 w-4 mr-2" />
-              64,000 sq ft Anthem Center · 30–35 minutes from Suite 100
+              64,000 sq ft Anthem Center · 30–35 minutes from Suite 103
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Anthem
@@ -155,7 +155,7 @@ export default function SunCityAnthemPage() {
               Anthem Center first — 30–35 minutes east, packet at the desk
             </h2>
             <p className="text-xl text-green-100 mb-8">
-              Anthem Center is about 64,000 sq ft. We review occupancy rules at Suite 100, then drive. Call (702) 222-1964.
+              Anthem Center is about 64,000 sq ft. We review occupancy rules at Suite 103, then drive. Call (702) 820-5408.
             </p>
             <CtaActions variant="onDark" />
           </section>

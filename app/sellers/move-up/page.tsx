@@ -24,7 +24,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/sellers/move-up",
   title: "Move-Up Sellers Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready for your next chapter? Dr. Jan Duffy helps Las Vegas homeowners leverage equity into their dream home. Sell and buy seamlessly. Call (702) 222-1964.",
+    "Ready for your next chapter? Dr. Jan Duffy helps Las Vegas homeowners leverage equity into their dream home. Sell and buy seamlessly. Call (702) 820-5408.",
   keywords: [
     "move up buyer Las Vegas",
     "sell and buy Las Vegas",

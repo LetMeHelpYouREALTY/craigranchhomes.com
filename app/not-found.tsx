@@ -8,7 +8,7 @@ export default function NotFound() {
         <p className="text-blue-600 font-semibold mb-3">404</p>
         <h1 className="text-4xl font-bold text-slate-900 mb-4">Page Not Found</h1>
         <p className="text-slate-600 mb-8">
-          That URL is not on heyberkshire.com. Search live listings or call Dr. Jan Duffy.
+          That URL is not on craigranchhomes.com. Search live listings or call Dr. Jan Duffy.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

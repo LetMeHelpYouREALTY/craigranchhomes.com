@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/southern-highlands",
   title: "Berkshire Hathaway HomeServices Southern Highlands | Las Vegas Golf Community",
   description:
-    "Find Southern Highlands homes with Berkshire Hathaway HomeServices Nevada Properties. I-15 south, 25–35 minutes from Suite 100. January 2026 median $750K. Call (702) 222-1964.",
+    "Find Southern Highlands homes with Berkshire Hathaway HomeServices Nevada Properties. I-15 south, 25–35 minutes from Suite 103. January 2026 median $750K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Southern Highlands",
     "Southern Highlands homes for sale",
@@ -47,7 +47,7 @@ export default function SouthernHighlandsPage() {
 
             <p className="text-xl text-slate-600">
               Robert Trent Jones Jr. scorecard 74.1 / 140, then 25–35 minutes via I-15 south from
-              Suite 100. <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Suite 103. <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />

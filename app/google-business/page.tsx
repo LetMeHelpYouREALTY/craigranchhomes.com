@@ -6,6 +6,7 @@ import {
   Clock,
   Star,
   Award,
+  MessageSquare,
 } from "lucide-react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -19,11 +20,10 @@ import LeftoverBand from "@/components/sections/LeftoverBand";
 import { leftoverPhotoForPath } from "@/lib/media";
 import {
   ctaPhone,
-  officePhone,
+  smsPhone,
   nap,
   maps,
   googleReviewsUrl,
-  hoursSummary,
   businessHours,
 } from "@/lib/contact";
 
@@ -34,23 +34,21 @@ import {
 
 export const metadata: Metadata = pageMetadata({
   path: "/google-business",
-  title: "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Craig Ranch Homes | Google Business Profile | Dr. Jan Duffy, REALTOR®",
   description:
-    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 222-1964.",
+    "Craig Ranch Homes, 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Call or text (702) 820-5408. Service area North Las Vegas, NV 89031. Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday closed.",
   keywords: [
+    "Craig Ranch Homes",
+    "Google Business Profile North Las Vegas",
     "Dr. Jan Duffy realtor",
-    "Las Vegas real estate agent",
-    "Berkshire Hathaway HomeServices Las Vegas",
-    "Summerlin realtor",
-    "Henderson real estate agent",
-    "55+ communities Las Vegas",
-    "California relocation Las Vegas",
+    "851 W Lone Mountain Rd",
+    "Craig Ranch ZIP 89031",
   ],
   openGraph: {
-    title: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    title: "Craig Ranch Homes — Dr. Jan Duffy, REALTOR®",
     description:
-      "Trusted Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury homes, 55+ communities.",
-    url: "https://heyberkshire.com/google-business",
+      "Hyperlocal Craig Ranch real estate. Opening date September 2007. Call or text (702) 820-5408.",
+    url: "https://www.craigranchhomes.com/google-business",
     type: "profile",
   },
 });
@@ -73,16 +71,16 @@ export default function GoogleBusinessPage() {
                   <div className="flex items-center gap-2 mb-4">
                     <Award className="h-6 w-6 text-yellow-400" aria-hidden="true" />
                     <span className="text-yellow-400 font-semibold">
-                      Berkshire Hathaway HomeServices
+                      Craig Ranch Homes
                     </span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">Dr. Jan Duffy</h1>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">Craig Ranch Homes</h1>
             <HeadingPhoto path="/google-business" />
 
                   <p className="text-xl text-blue-200 mb-2">
-                    REALTOR® | License {businessInfo.license}
+                    Dr. Jan Duffy, REALTOR® | License {businessInfo.license}
                   </p>
-                  <p className="text-slate-300 mb-6">Nevada Properties</p>
+                  <p className="text-slate-300 mb-6">{nap.brokerage}</p>
 
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
@@ -104,13 +102,11 @@ export default function GoogleBusinessPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Phone className="h-5 w-5 text-blue-400 flex-shrink-0 mt-1" aria-hidden="true" />
+                      <MessageSquare className="h-5 w-5 text-blue-400 flex-shrink-0 mt-1" aria-hidden="true" />
                       <div>
-                        <p className="text-xs uppercase tracking-wide text-blue-300">
-                          Office (matches Google Business)
-                        </p>
-                        <a href={officePhone.href} className="font-medium hover:text-blue-300">
-                          {officePhone.display}
+                        <p className="text-xs uppercase tracking-wide text-blue-300">Text (GBP primary)</p>
+                        <a href={smsPhone.href} className="font-medium hover:text-blue-300">
+                          {smsPhone.display}
                         </a>
                       </div>
                     </div>
@@ -145,7 +141,7 @@ export default function GoogleBusinessPage() {
             data-leftover-band="/google-business#2"
           >
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 100 — Sunday by appointment
+              Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 103 — Sunday closed
             </h2>
             <HeadingPhoto
               path="/google-business"
@@ -154,9 +150,8 @@ export default function GoogleBusinessPage() {
               priority
             />
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-6">
-              Hours on this URL must match Google Business. Walk-ins welcome during posted hours.
-              Call (702) 222-1964. Office/GBP (702) 500-1942. 9406 W Lake Mead Blvd, Suite 100,
-              Las Vegas, NV 89134.
+              Hours on this URL must match Google Business. Walk-ins welcome Monday–Saturday during
+              posted hours. Call or text {ctaPhone.display}. {nap.fullAddress}. Sunday closed.
             </p>
             <div className="bg-slate-50 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
@@ -178,7 +173,7 @@ export default function GoogleBusinessPage() {
             data-leftover-band="/google-business#3"
           >
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Maps pin at 9406 W Lake Mead Blvd — Directions and Google Reviews on this URL
+              Maps pin at 851 W Lone Mountain Rd — Directions and Google Reviews on this URL
             </h2>
             <HeadingPhoto
               path="/google-business"
@@ -188,12 +183,12 @@ export default function GoogleBusinessPage() {
             />
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-6">
               The embed, Get Directions, and View Google Reviews buttons are the GBP actions. Call
-              or text (702) 222-1964. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada
+              or text (702) 820-5408. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada
               Properties.
             </p>
 <div className="rounded-xl overflow-hidden border border-slate-200 mb-6">
               <iframe
-                title="Map to Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd"
+                title="Map to Berkshire Hathaway HomeServices Nevada Properties, 851 W Lone Mountain Rd"
                 src={maps.embedSrc}
                 className="w-full h-72"
                 loading="lazy"
@@ -237,7 +232,7 @@ export default function GoogleBusinessPage() {
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-xl p-8 text-center">
               <Star className="h-12 w-12 text-yellow-500 mx-auto mb-4" aria-hidden="true" />
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                Write the GBP review on this URL — Maps ranking uses the Suite 100 pin
+                Write the GBP review on this URL — Maps ranking uses the Suite 103 pin
               </h2>
               <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                 If Dr. Jan helped you buy or sell a home, please consider sharing your experience.
@@ -256,9 +251,9 @@ export default function GoogleBusinessPage() {
 
           <section className="max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">The Maps pin is 9406 W Lake Mead Blvd, Suite 100 — start there</h2>
+              <h2 className="text-3xl font-bold mb-4">The Maps pin is 851 W Lone Mountain Rd, Suite 103 — start there</h2>
               <p className="text-xl text-slate-300 mb-8">
-                Contact Dr. Jan Duffy for a free consultation about buying or selling in Las Vegas.
+                Contact Craig Ranch Homes for a consultation about buying or selling in ZIP 89031.
               </p>
               <CtaActions variant="onDark" />
             </div>

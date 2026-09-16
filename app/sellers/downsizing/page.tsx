@@ -25,7 +25,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/sellers/downsizing",
   title: "Downsizing in Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready to simplify? Dr. Jan Duffy helps Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 222-1964.",
+    "Ready to simplify? Dr. Jan Duffy helps Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 820-5408.",
   keywords: [
     "downsizing Las Vegas",
     "sell large home Las Vegas",
@@ -203,8 +203,8 @@ export default function DownsizingPage() {
               Sun City, Heritage, Del Webb, Solera — HOA dues and rec campuses, January 2026 bands
             </h2>
             <p className="text-slate-600 text-center mb-8 max-w-3xl mx-auto">
-              Occupancy packets are reviewed at Suite 100. Compare HOA-maintained exteriors and rec
-              square footage, then drive one campus. Call (702) 222-1964.
+              Occupancy packets are reviewed at Suite 103. Compare HOA-maintained exteriors and rec
+              square footage, then drive one campus. Call (702) 820-5408.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-slate-200 rounded-lg">

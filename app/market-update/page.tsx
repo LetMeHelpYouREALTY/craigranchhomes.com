@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/market-update",
   title: "Berkshire Hathaway HomeServices Las Vegas Market Update | January 2026",
   description:
-    "Weekly Las Vegas real estate market update from Berkshire Hathaway HomeServices Nevada Properties. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 222-1964.",
+    "Weekly Las Vegas real estate market update from Berkshire Hathaway HomeServices Nevada Properties. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Las Vegas market update",
     "Las Vegas real estate market",
@@ -45,7 +45,7 @@ const articleSchema = {
   publisher: {
     "@type": "Organization",
     name: "Berkshire Hathaway HomeServices Nevada Properties",
-    url: "https://heyberkshire.com",
+    url: "https://www.craigranchhomes.com",
   },
 };
 
@@ -96,10 +96,10 @@ export default function MarketUpdatePage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Price this week against your APN at Suite 100
+              Price this week against your APN at Suite 103
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              $452,500 median is a snapshot. Call (702) 222-1964. Bring the address to 9406 W Lake Mead Blvd.
+              $452,500 median is a snapshot. Call (702) 820-5408. Bring the address to 851 W Lone Mountain Rd.
             </p>
             <CtaActions variant="onDark" />
           </section>
@@ -107,7 +107,7 @@ export default function MarketUpdatePage() {
           {/* Newsletter Signup */}
           <section className="mt-16 max-w-2xl mx-auto text-center">
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Monday briefing from 9406 W Lake Mead Blvd — not a valley blast
+              Monday briefing from 851 W Lone Mountain Rd — not a valley blast
             </h3>
             <p className="text-slate-600 mb-6">
               Join 2,500+ Las Vegas homeowners and investors who receive Dr. Jan's weekly market

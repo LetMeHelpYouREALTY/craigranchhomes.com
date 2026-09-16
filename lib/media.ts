@@ -41,13 +41,13 @@ export const photos = {
   },
   office: {
     src: "/images/hero/office-lake-mead-blvd.jpg",
-    alt: "Berkshire Hathaway HomeServices Nevada Properties office area near 9406 W Lake Mead Blvd, Las Vegas",
+    alt: "Craig Ranch Homes office interior at 851 W Lone Mountain Rd, Suite 103, North Las Vegas",
     width: 1920,
     height: 1080,
   },
   officeExterior: {
     src: "/images/hero/west-las-vegas-office-exterior.jpg",
-    alt: "West Las Vegas office building near W Lake Mead Blvd with visitor parking and mountain backdrop",
+    alt: "Craig Ranch Homes office at 851 W Lone Mountain Rd, Suite 103, North Las Vegas",
     width: 1920,
     height: 1080,
   },
