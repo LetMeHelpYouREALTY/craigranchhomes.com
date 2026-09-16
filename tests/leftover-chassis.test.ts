@@ -90,6 +90,10 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       ">Luxury Home Marketing Services<",
       ">Luxury Buyer & Seller Services<",
       ">Las Vegas Luxury Market Statistics | January 2026<",
+      "Ultra-exclusive",
+      "most prestigious",
+      "most exclusive address",
+      "Celebrity homes",
     ],
   },
   {
@@ -216,24 +220,75 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     ],
   },
   {
+    file: "app/neighborhoods/the-ridges/page.tsx",
+    needles: [
+      '<LeftoverBand path="/neighborhoods/the-ridges" />',
+      "900 homesites across 793 acres",
+    ],
+    banned: [
+      "most prestigious",
+      "ultra-exclusive",
+      "exclusivity is built",
+      "pinnacle of Las Vegas luxury",
+      "most exclusive",
+    ],
+  },
+  {
+    file: "app/neighborhoods/summerlin/page.tsx",
+    needles: ['<LeftoverBand path="/neighborhoods/summerlin" />'],
+    banned: [],
+  },
+  {
+    file: "app/neighborhoods/southern-highlands/page.tsx",
+    needles: ['<LeftoverBand path="/neighborhoods/southern-highlands" />'],
+    banned: [],
+  },
+  {
+    file: "app/neighborhoods/skye-canyon/page.tsx",
+    needles: ['<LeftoverBand path="/neighborhoods/skye-canyon" />'],
+    banned: ["fastest-growing community"],
+  },
+  {
+    file: "app/neighborhoods/centennial-hills/page.tsx",
+    needles: ['<LeftoverBand path="/neighborhoods/centennial-hills" />'],
+    banned: [],
+  },
+  {
+    file: "app/neighborhoods/north-las-vegas/page.tsx",
+    needles: ['<LeftoverBand path="/neighborhoods/north-las-vegas" />'],
+    banned: ["Affordable homeownership"],
+  },
+  {
     file: "app/neighborhoods/henderson/page.tsx",
-    needles: ["drive time from Suite 100"],
-    banned: ["every lifestyle and budget"],
+    needles: [
+      "drive time from Suite 100",
+      '<LeftoverBand path="/neighborhoods/henderson" />',
+    ],
+    banned: ["every lifestyle and budget", "trusted specialist"],
   },
   {
     file: "app/neighborhoods/inspirada/page.tsx",
-    needles: ["2,000-acre Henderson campus"],
-    banned: ["feel like a vacation", "engaged lifestyle"],
+    needles: [
+      "2,000-acre Henderson campus",
+      '<LeftoverBand path="/neighborhoods/inspirada" />',
+    ],
+    banned: ["feel like a vacation", "engaged lifestyle", "Resort-style living"],
   },
   {
     file: "app/neighborhoods/mountains-edge/page.tsx",
-    needles: ["compared by square footage"],
-    banned: ["comparable lifestyle"],
+    needles: [
+      "compared by square footage",
+      '<LeftoverBand path="/neighborhoods/mountains-edge" />',
+    ],
+    banned: ["comparable lifestyle", "Affordable luxury"],
   },
   {
     file: "app/neighborhoods/green-valley/page.tsx",
-    needles: ["tree canopy age"],
-    banned: ["lifestyle offerings"],
+    needles: [
+      "tree canopy age",
+      '<LeftoverBand path="/neighborhoods/green-valley" />',
+    ],
+    banned: ["lifestyle offerings", "original master-planned"],
   },
   {
     file: "app/sellers/page.tsx",
@@ -521,7 +576,12 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       "1,200+ Homes, $170–$210 HOA, $380K–$650K Band",
       "Anthem parks, staffed gate, 30–35 minutes from Suite 100",
     ],
-    banned: [">About Solera at Anthem<", "at a Glance", ">Location Advantages<"],
+    banned: [
+      ">About Solera at Anthem<",
+      "at a Glance",
+      ">Location Advantages<",
+      "prestigious Anthem",
+    ],
   },
 ];
 

@@ -50,15 +50,15 @@ const luxuryNeighborhoods = [
     location: "Summerlin",
     priceRange: "$2M - $15M+",
     description:
-      "Ultra-exclusive guard-gated community with custom estates, celebrity residents, and Bear's Best Golf Club. One of the most prestigious addresses in Las Vegas with stunning Red Rock views.",
-    features: ["Guard-gated", "Custom estates", "Celebrity homes", "Golf course"],
+      "Guard-gated Summerlin ridge lots, Bear's Best Golf Club, and custom estates. January 2026 median $2.5M. Gate lists from Suite 100.",
+    features: ["Guard-gated", "Custom estates", "Red Rock views", "Golf course"],
   },
   {
     name: "MacDonald Highlands",
     location: "Henderson",
     priceRange: "$1.5M - $10M+",
     description:
-      "Prestigious hillside community with Dragon Ridge Country Club and panoramic Strip views. Features modern contemporary architecture and exclusive amenities.",
+      "Hillside Henderson lots, Dragon Ridge Country Club, and Strip-view streets. $1.5M–$10M+ published band. 25–35 minutes from Suite 100.",
     features: ["Hillside location", "Strip views", "Country club", "Private lots"],
   },
   {
@@ -74,7 +74,7 @@ const luxuryNeighborhoods = [
     location: "Summerlin",
     priceRange: "$3M - $20M+",
     description:
-      "Ultra-private Tom Fazio golf community with only 250 homesites. Las Vegas's most exclusive address with membership by invitation only.",
+      "Tom Fazio golf, 250 homesites, membership by invitation. $3M–$20M+ published band. Gate lists confirmed at Suite 100.",
     features: ["Private golf", "250 homesites", "Invitation only", "Tom Fazio design"],
   },
   {

@@ -13,13 +13,14 @@ import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/the-ridges",
   title: "Berkshire Hathaway HomeServices The Ridges | Las Vegas Luxury Real Estate",
   description:
-    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 222-1964.",
+    "Find The Ridges homes with Berkshire Hathaway HomeServices Nevada Properties. Guard-gated Summerlin ridge lots, 15–20 minutes from Suite 100. Median $2.5M, 42 listings, 67 DOM (January 2026). Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices The Ridges",
     "The Ridges homes for sale",
@@ -46,8 +47,8 @@ export default function TheRidgesPage() {
             <HeadingPhoto path="/neighborhoods/the-ridges" />
 
             <p className="text-xl text-slate-600">
-              Las Vegas's most prestigious address. Experience The Ridges luxury with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Guard-gated ridge lots, 15–20 minutes from Suite 100. $2.5M median, 67 DOM, 42 listings
+              (January 2026) with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -59,6 +60,7 @@ export default function TheRidgesPage() {
 
           <OfficeProximity path="/neighborhoods/the-ridges" />
           <UniqueInterior path="/neighborhoods/the-ridges" />
+          <LeftoverBand path="/neighborhoods/the-ridges" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/the-ridges">
@@ -90,20 +92,17 @@ export default function TheRidgesPage() {
             <div className="prose prose-lg max-w-none text-slate-700">
               <NeighborhoodLifestyle path="/neighborhoods/the-ridges" />
               <p>
-                <strong>The Ridges</strong> represents the pinnacle of Las Vegas luxury living. Nestled
-                within Summerlin along the foothills of Red Rock Canyon, this ultra-exclusive guard-gated
-                community offers estate-quality homes with panoramic views of the Las Vegas Strip, the
-                surrounding mountains, and the desert landscape. When buyers compare ridge-top lots
-                to Downtown Summerlin retail, they start with <strong>Berkshire Hathaway HomeServices</strong>
-                so gate lists and showing windows are confirmed from Suite 100.
+                <strong>The Ridges</strong> sits in Summerlin along the foothills of Red Rock Canyon:
+                900 homesites across 793 acres, a staffed gate, and ridge-top lots with Strip, mountain,
+                and desert views. When buyers compare ridge-top lots to Downtown Summerlin retail, they
+                start with <strong>Berkshire Hathaway HomeServices</strong> so gate lists and showing
+                windows are confirmed from Suite 100.
               </p>
               <p>
-                The Ridges comprises six distinctive villages—Bear's Best, Falcon Ridge, Azure, Talon Ridge,
-                Silver Ridge, and Eagle Hills—each offering its own character while maintaining the
-                community's legendary standards. With only 900 home sites across 793 acres, exclusivity is
-                built into The Ridges' DNA. Strict architectural guidelines ensure that every home meets
-                the community's exacting standards, protecting property values and ensuring a cohesive
-                aesthetic throughout.
+                Six villages—Bear&apos;s Best, Falcon Ridge, Azure, Talon Ridge, Silver Ridge, and Eagle
+                Hills—share architectural guidelines. Square footage, lot elevation, and golf-club access
+                vary by village. Compare those numbers at 9406 W Lake Mead Blvd, Suite 100 instead of a
+                slogan. Photography and access are scheduled, not improvised.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has represented buyers

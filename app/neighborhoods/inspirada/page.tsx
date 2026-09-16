@@ -13,6 +13,7 @@ import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -46,8 +47,9 @@ export default function InspiradaPage() {
             <HeadingPhoto path="/neighborhoods/inspirada" />
 
             <p className="text-xl text-slate-600">
-              Resort-style living in Henderson. Discover Inspirada with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              2,000-acre Henderson campus, 30–40 minutes from Suite 100. $525K median, 23 DOM, 98
+              listings (January 2026) with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan
+              Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -59,6 +61,7 @@ export default function InspiradaPage() {
 
           <OfficeProximity path="/neighborhoods/inspirada" />
           <UniqueInterior path="/neighborhoods/inspirada" />
+          <LeftoverBand path="/neighborhoods/inspirada" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/inspirada">

@@ -77,6 +77,18 @@ describe("village chassis replacements", () => {
     }
   });
 
+  it("avoids exclusive/prestigious slogan copy on village pages", () => {
+    for (const slug of villages) {
+      const src = readFileSync(
+        join(process.cwd(), "app/neighborhoods", slug, "page.tsx"),
+        "utf8"
+      ).toLowerCase();
+      expect(src).not.toContain("prestigious");
+      expect(src).not.toContain("ultra-exclusive");
+      expect(src).not.toContain("exclusivity");
+    }
+  });
+
   it("keeps market snapshot H2s unique across village files", () => {
     const headings: string[] = [];
     for (const slug of villages) {

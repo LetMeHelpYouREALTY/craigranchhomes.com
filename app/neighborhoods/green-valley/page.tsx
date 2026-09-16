@@ -12,6 +12,7 @@ import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -45,8 +46,8 @@ export default function GreenValleyPage() {
             <HeadingPhoto path="/neighborhoods/green-valley" />
 
             <p className="text-xl text-slate-600">
-              Henderson's original master-planned community. Find your Green Valley home with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              1988 tree canopy, The District midpoint, 25–35 minutes from Suite 100. $520K median,
+              26 DOM with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -58,6 +59,7 @@ export default function GreenValleyPage() {
 
           <OfficeProximity path="/neighborhoods/green-valley" />
           <UniqueInterior path="/neighborhoods/green-valley" />
+          <LeftoverBand path="/neighborhoods/green-valley" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/green-valley">
@@ -89,12 +91,12 @@ export default function GreenValleyPage() {
             <div className="prose prose-lg max-w-none text-slate-700">
               <NeighborhoodLifestyle path="/neighborhoods/green-valley" />
               <p>
-                <strong>Green Valley</strong> holds a special place in Henderson's history as the city's
-                original master-planned community. Established in 1988, Green Valley pioneered the concept
-                of thoughtfully designed neighborhoods in Southern Nevada—long before master-planned
-                communities became the norm. Today, <strong>Berkshire Hathaway HomeServices</strong>
-                continues to serve Green Valley buyers, helping new residents discover what long-time
-                residents already know: mature trees, golf, and a Henderson location with 15–25 minute Strip drives.
+                <strong>Green Valley</strong> was established in 1988 as Henderson&apos;s first
+                large-scale plat with HOA streets, parks, and golf. Three decades later the comparison
+                is canopy age and lot size vs newer Henderson rec campuses. Today,{" "}
+                <strong>Berkshire Hathaway HomeServices</strong> sequences Green Valley tours from
+                Suite 100: The District first, then golf-course HOAs and interior streets on a 25–35
+                minute I-215 east clock.
               </p>
               <p>
                 What makes Green Valley unique is something that can't be replicated: time. Over three

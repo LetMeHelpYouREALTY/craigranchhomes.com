@@ -796,6 +796,36 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path.startsWith("/market-update") && slot === 4) return photos.sellers;
   if (path === "/neighborhoods" && slot === 0) return photos.homeHero;
   if (path === "/neighborhoods" && slot === 1) return photos.henderson;
+  if (path.startsWith("/neighborhoods/the-ridges") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/neighborhoods/summerlin") && slot === 0) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/neighborhoods/southern-highlands") && slot === 0) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/neighborhoods/skye-canyon") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/neighborhoods/centennial-hills") && slot === 0) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/neighborhoods/green-valley") && slot === 0) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/neighborhoods/henderson") && slot === 0) {
+    return photos.consultation;
+  }
+  if (path.startsWith("/neighborhoods/inspirada") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/neighborhoods/north-las-vegas") && slot === 0) {
+    return photos.office;
+  }
+  if (path.startsWith("/neighborhoods/mountains-edge") && slot === 0) {
+    return photos.consultation;
+  }
   if (path.startsWith("/about") && slot === 0) return photos.homeHero;
   if (path.startsWith("/about") && slot === 1) return photos.summerlin;
   if (path === "/buyers" && slot === 0) return photos.summerlin;
@@ -1079,6 +1109,20 @@ export function occupiedHeadingStills(path: string): Set<string> {
   if (path === "/neighborhoods") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
+  }
+  if (
+    path.startsWith("/neighborhoods/summerlin") ||
+    path.startsWith("/neighborhoods/the-ridges") ||
+    path.startsWith("/neighborhoods/southern-highlands") ||
+    path.startsWith("/neighborhoods/skye-canyon") ||
+    path.startsWith("/neighborhoods/centennial-hills") ||
+    path.startsWith("/neighborhoods/green-valley") ||
+    path.startsWith("/neighborhoods/henderson") ||
+    path.startsWith("/neighborhoods/inspirada") ||
+    path.startsWith("/neighborhoods/north-las-vegas") ||
+    path.startsWith("/neighborhoods/mountains-edge")
+  ) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
   }
   if (path.startsWith("/about")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);

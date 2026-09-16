@@ -13,6 +13,7 @@ import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -46,8 +47,9 @@ export default function CentennialHillsPage() {
             <HeadingPhoto path="/neighborhoods/centennial-hills" />
 
             <p className="text-xl text-slate-600">
-              Northwest Las Vegas living with parks and mountain access. Find your Centennial Hills home with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Arbor View High School commute and Centennial Hills Park, 15–20 minutes from Suite 100.
+              $495K median, 25 DOM, 203 listings with <strong>Berkshire Hathaway HomeServices</strong>{" "}
+              and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -59,6 +61,7 @@ export default function CentennialHillsPage() {
 
           <OfficeProximity path="/neighborhoods/centennial-hills" />
           <UniqueInterior path="/neighborhoods/centennial-hills" />
+          <LeftoverBand path="/neighborhoods/centennial-hills" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/centennial-hills">

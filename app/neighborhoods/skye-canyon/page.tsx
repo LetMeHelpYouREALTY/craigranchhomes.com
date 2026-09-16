@@ -13,6 +13,7 @@ import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -46,8 +47,8 @@ export default function SkyeCanyonPage() {
             <HeadingPhoto path="/neighborhoods/skye-canyon" />
 
             <p className="text-xl text-slate-600">
-              Northwest Las Vegas's fastest-growing community. Discover Skye Canyon with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Register at Suite 100, then Skye Center and Floyd Lamb on a 20–25 minute northwest
+              clock with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -59,6 +60,7 @@ export default function SkyeCanyonPage() {
 
           <OfficeProximity path="/neighborhoods/skye-canyon" />
           <UniqueInterior path="/neighborhoods/skye-canyon" />
+          <LeftoverBand path="/neighborhoods/skye-canyon" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/skye-canyon">

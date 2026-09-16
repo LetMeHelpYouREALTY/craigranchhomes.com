@@ -13,6 +13,7 @@ import CommunityHighlights from "@/components/sections/CommunityHighlights";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -46,8 +47,8 @@ export default function MountainsEdgePage() {
             <HeadingPhoto path="/neighborhoods/mountains-edge" />
 
             <p className="text-xl text-slate-600">
-              Affordable luxury in southwest Las Vegas. Find your Mountains Edge home with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Exploration Peak then I-15/Blue Diamond, 20–30 minutes from Suite 100. $475K median, 27
+              DOM, 234 listings with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -59,6 +60,7 @@ export default function MountainsEdgePage() {
 
           <OfficeProximity path="/neighborhoods/mountains-edge" />
           <UniqueInterior path="/neighborhoods/mountains-edge" />
+          <LeftoverBand path="/neighborhoods/mountains-edge" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/mountains-edge">

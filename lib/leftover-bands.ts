@@ -1915,6 +1915,246 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
       ],
     },
   ],
+  "/neighborhoods/the-ridges": [
+    {
+      h2: "900 homesites on 793 acres — Bear's Best, Falcon Ridge, Azure, Talon Ridge from Suite 100",
+      body: "Gate lists are confirmed at 9406 W Lake Mead Blvd, Suite 100 before the 15–20 minute drive. Call (702) 222-1964. January 2026 on this page: $2.5M median, 67 DOM, 42 listings. Architectural guidelines vary by village — compare lot elevation and golf access at the desk.",
+      pins: [
+        {
+          name: "Bear's Best",
+          note: "Golf-club streets on this ridge plat. Membership rules are in the packet the week you tour.",
+        },
+        {
+          name: "Falcon Ridge / Azure",
+          note: "Two villages, two elevations. Do not stack both with a Henderson loop the same morning.",
+        },
+        {
+          name: "Talon Ridge / Silver Ridge",
+          note: "Ridge-top lots vs interior streets. Photography and access are scheduled, not improvised.",
+        },
+        {
+          name: "Eagle Hills",
+          note: "Sixth village on this 793-acre plat. Office/GBP (702) 500-1942. License S.0197614.LLC.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/summerlin": [
+    {
+      h2: "$625K median, 22 DOM, 342 listings, +6.8% YoY — Downtown Summerlin vs Red Rock from Suite 100",
+      body: "The snapshot on this URL is not a CMA for your street. Call (702) 222-1964. Palo Verde High School commute minutes by address at 9406 W Lake Mead Blvd, Suite 100. 10–15 minute west-valley clock.",
+      pins: [
+        {
+          name: "Downtown Summerlin",
+          note: "Retail and dining on the same west clock. Park once, then fan to village streets.",
+        },
+        {
+          name: "Red Rock trailheads",
+          note: "Scenic Drive sits west of the villages. Measure from the listing, not a valley average.",
+        },
+        {
+          name: "Palo Verde High School",
+          note: "Named campus commute by street at ccsd.net/zoning. Enrollment contacts stay on the campus page.",
+        },
+        {
+          name: "The Trails / Pueblo",
+          note: "Typical first two villages from Suite 100. Red Rock Country Club is a separate golf-street block.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/southern-highlands": [
+    {
+      h2: "$750K median, 35 DOM, 156 listings, +7.2% YoY — I-15 south golf-and-ridge from Suite 100",
+      body: "Southern Highlands is 25–35 minutes via I-15 south from 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Robert Trent Jones Jr. scorecard 74.1 / 140 is on this page — HOA and golf membership rules are confirmed the week you tour.",
+      pins: [
+        {
+          name: "Clubhouse / fairways",
+          note: "Championship golf and ridge-top custom homes. Group them in one south-valley block.",
+        },
+        {
+          name: "Cactus / I-15",
+          note: "Typical Strip drive about 15 minutes once you are on I-15. Do not add a Ridges gate the same morning.",
+        },
+        {
+          name: "Janet Lundahl Elementary",
+          note: "Named CCSD campus by address. Commute minutes at the desk, not a rating slogan.",
+        },
+        {
+          name: "Harry Reid International (LAS)",
+          note: "Airport clock from this south plat. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/skye-canyon": [
+    {
+      h2: "$550K median, 21 DOM, 124 listings — Skye Center then Floyd Lamb after Suite 100 registration",
+      body: "Builder registration happens at 9406 W Lake Mead Blvd, Suite 100 before any northwest model row. Call (702) 222-1964. Then Skye Center, splash pad, and Floyd Lamb Park sit on a 20–25 minute 215 clock.",
+      pins: [
+        {
+          name: "Skye Center",
+          note: "Resort pool, splash pad, and sports courts. Walk the rec campus before plan rows.",
+        },
+        {
+          name: "Floyd Lamb Park",
+          note: "Immediately west of the villages. Trailheads are a separate stop from the model desk.",
+        },
+        {
+          name: "Builder registration",
+          note: "Toll, Lennar, or KB — register Dr. Jan before the first model. Credits are negotiated after registration.",
+        },
+        {
+          name: "215 Beltway",
+          note: "Northwest clock from Suite 100. Do not add an Inspirada south-Henderson loop the same afternoon.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/centennial-hills": [
+    {
+      h2: "$495K median, 25 DOM, 203 listings — Arbor View High School commute from Suite 100",
+      body: "Centennial Hills is 15–20 minutes via US-95 from 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Mountain-view lots near Centennial Hills Park vs closer-in streets toward the hospital campus — compare square footage, not a slogan.",
+      pins: [
+        {
+          name: "Centennial Hills Park",
+          note: "About 120 acres on this northwest loop. Start here when the brief includes trails.",
+        },
+        {
+          name: "Arbor View High School",
+          note: "Named campus commute by street at ccsd.net/zoning. Enrollment contacts stay on the campus page.",
+        },
+        {
+          name: "Centennial Center",
+          note: "Retail on the same US-95 clock. Park once, then fan to listing streets.",
+        },
+        {
+          name: "Mountain View Hospital",
+          note: "Hospital pin on this northwest run. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/green-valley": [
+    {
+      h2: "$520K median, 26 DOM, 187 listings — 1988 canopy and The District from Suite 100",
+      body: "Green Valley is 25–35 minutes via I-215 east from 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Founded in 1988: 35-year street trees and larger lots than most newer Henderson villages. The District is the tour midpoint.",
+      pins: [
+        {
+          name: "The District",
+          note: "Green Valley Ranch retail midpoint. Park once, then fan to golf-course HOAs and interior streets.",
+        },
+        {
+          name: "Green Valley High School",
+          note: "Named campus commute by address. Do not swap this with a Summerlin Palo Verde clock.",
+        },
+        {
+          name: "Coronado High School",
+          note: "Second named Henderson campus on this page. Minutes at ccsd.net/zoning by street.",
+        },
+        {
+          name: "35-year trees",
+          note: "Canopy age is the comparison vs Inspirada rec campuses. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/henderson": [
+    {
+      h2: "$485K median, 24 DOM, 1,280 listings — two Henderson villages per afternoon from Suite 100",
+      body: "Green Valley, Anthem, Inspirada, Water Street, and Lake Las Vegas are not interchangeable. Call (702) 222-1964. From 9406 W Lake Mead Blvd, Suite 100 we pick two contrasting villages on a 25–35 minute east run.",
+      pins: [
+        {
+          name: "Green Valley",
+          note: "1988 canopy and The District. Open /neighborhoods/green-valley before stacking Inspirada.",
+        },
+        {
+          name: "Inspirada",
+          note: "2,000-acre Town Center rec. Builder registration still starts at Suite 100.",
+        },
+        {
+          name: "Water Street",
+          note: "Henderson downtown grid. Different HOA and parking than a golf-course village.",
+        },
+        {
+          name: "Lake Las Vegas",
+          note: "320-acre lake and shoreline golf. 35–45 minutes — do not add a Summerlin gate the same morning.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/inspirada": [
+    {
+      h2: "$525K median, 23 DOM, 98 listings — Town Center rec on a 2,000-acre Henderson plat from Suite 100",
+      body: "Inspirada is 30–40 minutes from 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Tours hit the central park, amenity center, and zero-entry pool in one south Henderson run. Builder registration still starts at this desk.",
+      pins: [
+        {
+          name: "Town Center",
+          note: "Pools and rec campus. Walk the building before any plan row.",
+        },
+        {
+          name: "St. Rose / Eastern",
+          note: "South Henderson commute pins. Measure from the listing, not a valley average.",
+        },
+        {
+          name: "Zero-entry pool",
+          note: "Amenity acreage on this plat. Square footage and HOA dues are the comparison points.",
+        },
+        {
+          name: "Builder registration",
+          note: "Register Dr. Jan before the first Inspirada model. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/north-las-vegas": [
+    {
+      h2: "$385K median, 32 DOM, 892 listings — Aliante rec vs Craig Road from Suite 100",
+      body: "North Las Vegas is 20–25 minutes via US-95 / I-15 from 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Aliante recreation, Craig Road employment corridors, and new-construction villages are sequenced together — not mixed with a Henderson afternoon.",
+      pins: [
+        {
+          name: "Aliante rec",
+          note: "Golf and rec campus next to the retail strip. First stop when the ZIP is North Las Vegas.",
+        },
+        {
+          name: "Legacy High School",
+          note: "Named campus commute by street at ccsd.net/zoning. Enrollment contacts stay on the campus page.",
+        },
+        {
+          name: "Craig Road",
+          note: "Employment corridor timed to the actual facility — not a valley average.",
+        },
+        {
+          name: "I-15 / US-95",
+          note: "North clock from Suite 100. Entry bands on this page often $350K–$450K for newer product.",
+        },
+      ],
+    },
+  ],
+  "/neighborhoods/mountains-edge": [
+    {
+      h2: "$475K median, 27 DOM, 234 listings — Exploration Peak then I-15/Blue Diamond from Suite 100",
+      body: "Mountains Edge is 20–30 minutes via the southwest Beltway from 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Trailheads at Exploration Peak and tile-roof resale streets fit a single southwest loop. Strip about 15–20 minutes; Harry Reid International (LAS) about 20 minutes.",
+      pins: [
+        {
+          name: "Exploration Peak",
+          note: "Trailhead first so you see the recreation campus, then listing streets.",
+        },
+        {
+          name: "I-15",
+          note: "Strip clock about 15–20 minutes from many streets. Confirm the listing, not a caption.",
+        },
+        {
+          name: "Blue Diamond",
+          note: "Southwest arterial on this loop. Do not stack with a Centennial Hills northwest morning.",
+        },
+        {
+          name: "Harry Reid International (LAS)",
+          note: "Airport about 20 minutes from this southwest plat. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
   "/about": [
     {
       h2: "Ridges $1M+ files, Toll Brothers registration, Sun City packets, CA net sheets — one desk",

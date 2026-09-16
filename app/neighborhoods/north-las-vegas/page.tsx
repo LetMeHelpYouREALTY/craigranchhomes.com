@@ -13,6 +13,7 @@ import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -46,8 +47,8 @@ export default function NorthLasVegasPage() {
             <HeadingPhoto path="/neighborhoods/north-las-vegas" />
 
             <p className="text-xl text-slate-600">
-              Affordable homeownership and investment opportunities. Find your North Las Vegas
-              home with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              $385K median, 32 DOM, 892 listings — Aliante rec vs Craig Road, 20–25 minutes from Suite
+              100 with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -59,6 +60,7 @@ export default function NorthLasVegasPage() {
 
           <OfficeProximity path="/neighborhoods/north-las-vegas" />
           <UniqueInterior path="/neighborhoods/north-las-vegas" />
+          <LeftoverBand path="/neighborhoods/north-las-vegas" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/north-las-vegas">

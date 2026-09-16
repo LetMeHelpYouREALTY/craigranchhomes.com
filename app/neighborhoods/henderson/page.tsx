@@ -13,6 +13,7 @@ import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -62,8 +63,9 @@ export default function HendersonPage() {
             <HeadingPhoto path="/neighborhoods/henderson" />
 
             <p className="text-xl text-slate-600">
-              Nevada's second-largest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
+              Green Valley trees vs Inspirada rec — two villages, 25–35 minutes from Suite 100.
+              $485K median, 1,280 listings with <strong>Berkshire Hathaway HomeServices</strong> and
+              Dr. Jan Duffy.
             </p>
             <div className="mt-8">
               <CtaActions variant="onLight" />
@@ -75,6 +77,7 @@ export default function HendersonPage() {
 
           <OfficeProximity path="/neighborhoods/henderson" />
           <UniqueInterior path="/neighborhoods/henderson" />
+          <LeftoverBand path="/neighborhoods/henderson" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/henderson">

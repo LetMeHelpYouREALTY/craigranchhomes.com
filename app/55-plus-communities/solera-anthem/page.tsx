@@ -163,8 +163,8 @@ export default function SoleraAnthemPage() {
                       Anthem Master-Planned Community
                     </h3>
                     <p className="text-slate-600 text-sm">
-                      Located within the prestigious Anthem master-planned
-                      community. Beautiful mountain views and desert landscapes.
+                      Located inside the Anthem master-planned streets in Henderson.
+                      Mountain and desert views. 30–35 minutes from Suite 100.
                     </p>
                   </div>
                 </div>

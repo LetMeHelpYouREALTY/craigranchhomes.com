@@ -65,6 +65,16 @@ describe("leftoverBands", () => {
       "/market-report",
       "/market-update",
       "/neighborhoods",
+      "/neighborhoods/centennial-hills",
+      "/neighborhoods/green-valley",
+      "/neighborhoods/henderson",
+      "/neighborhoods/inspirada",
+      "/neighborhoods/mountains-edge",
+      "/neighborhoods/north-las-vegas",
+      "/neighborhoods/skye-canyon",
+      "/neighborhoods/southern-highlands",
+      "/neighborhoods/summerlin",
+      "/neighborhoods/the-ridges",
       "/new-construction",
       "/relocation",
       "/security-policy",
@@ -86,6 +96,16 @@ describe("leftoverBands", () => {
     expect(leftoverBands["/market-insights"]).toHaveLength(6);
     expect(leftoverBands["/market-update"]).toHaveLength(5);
     expect(leftoverBands["/neighborhoods"]).toHaveLength(2);
+    expect(leftoverBands["/neighborhoods/the-ridges"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/summerlin"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/southern-highlands"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/skye-canyon"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/centennial-hills"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/green-valley"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/henderson"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/inspirada"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/north-las-vegas"]).toHaveLength(1);
+    expect(leftoverBands["/neighborhoods/mountains-edge"]).toHaveLength(1);
     expect(leftoverBands["/relocation"]).toHaveLength(3);
     expect(leftoverBands["/investment-properties"]).toHaveLength(6);
     expect(leftoverBands["/sellers/downsizing"]).toHaveLength(4);

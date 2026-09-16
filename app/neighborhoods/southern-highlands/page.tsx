@@ -13,6 +13,7 @@ import VillageDetails from "@/components/sections/VillageDetails";
 import NeighborhoodLifestyle from "@/components/sections/NeighborhoodLifestyle";
 import NeighborhoodFaqs from "@/components/sections/NeighborhoodFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import RealScoutSearch from "@/components/realscout/RealScoutSearch";
 
 export const metadata: Metadata = pageMetadata({
@@ -59,6 +60,7 @@ export default function SouthernHighlandsPage() {
 
           <OfficeProximity path="/neighborhoods/southern-highlands" />
           <UniqueInterior path="/neighborhoods/southern-highlands" />
+          <LeftoverBand path="/neighborhoods/southern-highlands" />
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/southern-highlands">
