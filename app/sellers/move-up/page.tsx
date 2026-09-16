@@ -61,11 +61,10 @@ export default function MoveUpSellerPage() {
 
           <LeftoverBand path="/sellers/move-up" />
 
+          <LeftoverBand path="/sellers/move-up" slot={1} />
+
           {/* Upgrade Path */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Common Upgrade Paths We Help With
-            </h2>
             <div className="space-y-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6 flex items-center">
                 <div className="flex-shrink-0 mr-6">
@@ -117,11 +116,10 @@ export default function MoveUpSellerPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/move-up" slot={2} />
+
           {/* How We Handle Both */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              We Handle Both Transactions Seamlessly
-            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-lg text-slate-900 mb-4 flex items-center">
@@ -174,11 +172,10 @@ export default function MoveUpSellerPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/move-up" slot={3} />
+
           {/* Timing Strategies */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Timing Your Move-Up: Three Proven Strategies
-            </h2>
             <div className="prose prose-lg max-w-none text-slate-700 mb-8">
               <p>
                 The biggest concern move-up buyers have is timing. What happens if you sell before
@@ -240,11 +237,10 @@ export default function MoveUpSellerPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/move-up" slot={4} />
+
           {/* Financing Options */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Financing Your Move-Up Purchase
-            </h2>
             <p className="text-slate-300 text-center mb-8 max-w-3xl mx-auto">
               Understanding your financing options is crucial for a successful move-up transaction.
               Dr. Jan works with trusted local lenders who specialize in helping Las Vegas homeowners
@@ -297,7 +293,7 @@ export default function MoveUpSellerPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What's Your Home Worth Today?
+              January 2026 CMA on this APN at Suite 100, not a slogan
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get a free equity analysis and see what your next home could look like.

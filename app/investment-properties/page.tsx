@@ -102,11 +102,9 @@ export default function InvestmentPropertiesPage() {
 
           <LeftoverBand path="/investment-properties" />
 
-          {/* Market Stats */}
+          <LeftoverBand path="/investment-properties" slot={1} />
+
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Investment Property Markets | January 2026
-            </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-slate-200 rounded-lg">
                 <thead className="bg-slate-50">
@@ -151,11 +149,9 @@ export default function InvestmentPropertiesPage() {
 
           <ExpertQuote path="/investment-properties" />
 
-          {/* Investment Services */}
+          <LeftoverBand path="/investment-properties" slot={2} />
+
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Investment Property Services
-            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 "Property identification based on your criteria",
@@ -177,11 +173,9 @@ export default function InvestmentPropertiesPage() {
             </div>
           </section>
 
-          {/* Investment Types */}
+          <LeftoverBand path="/investment-properties" slot={3} />
+
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">
-              Investment Strategies We Support
-            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-blue-700 rounded-lg p-6">
                 <h3 className="font-bold text-lg mb-2">Buy & Hold Rentals</h3>
@@ -207,25 +201,16 @@ export default function InvestmentPropertiesPage() {
             </div>
           </section>
 
-          {/* Detailed Investment Analysis */}
+          <LeftoverBand path="/investment-properties" slot={4} />
+
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Understanding Las Vegas Investment Metrics
-            </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 mb-8">
-              <p>
-                Successful real estate investing requires understanding key metrics and how they apply
-                to the Las Vegas market specifically. Dr. Jan Duffy provides detailed analysis on every
-                property, helping you make data-driven decisions rather than emotional ones.
-              </p>
-            </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <Calculator className="h-8 w-8 text-blue-600 mb-4" />
                 <h3 className="font-bold text-lg text-slate-900 mb-2">Cap Rate (Capitalization Rate)</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   Net Operating Income ÷ Property Value. Las Vegas cap rates range from 4-6%,
-                  competitive with major metros. Higher cap rates typically mean higher risk neighborhoods.
+                  Higher cap rates typically mean more HOA or vacancy variables — we date them at Suite 100.
                 </p>
                 <div className="bg-slate-50 rounded p-3 text-sm">
                   <strong>Example:</strong> $485K Henderson home renting at $2,300/mo = ~4.5% cap rate
@@ -267,17 +252,14 @@ export default function InvestmentPropertiesPage() {
             </div>
           </section>
 
-          {/* Neighborhood Deep Dives */}
+          <LeftoverBand path="/investment-properties" slot={5} />
+
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Las Vegas Investment Neighborhoods: Deep Dive
-            </h2>
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">North Las Vegas</h3>
                 <p className="text-slate-600 mb-4">
-                  <strong>Best for: Cash flow investors.</strong> Highest cap rates in the valley (5.2%+)
-                  with lower entry prices. Growing population as Amazon, Fanatics, and other employers
+                  <strong>Highest published cap rates on this page (5.2%+)</strong> with lower entry prices. Growing population as Amazon, Fanatics, and other employers
                   expand. Compare commute times to named campuses such as Legacy High School.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
@@ -289,8 +271,7 @@ export default function InvestmentPropertiesPage() {
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">Henderson</h3>
                 <p className="text-slate-600 mb-4">
-                  <strong>Best for: Balanced investors.</strong> Lower vacancy, longer lease terms,
-                  and commute times to named campuses such as Coronado High School. Steady
+                  <strong>Lower vacancy and longer leases on this page.</strong> Commute times to named campuses such as Coronado High School. Steady
                   appreciation offsets slightly lower cap rates.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
@@ -302,8 +283,7 @@ export default function InvestmentPropertiesPage() {
               <div className="bg-white rounded-xl p-6">
                 <h3 className="font-bold text-xl text-slate-900 mb-2">Summerlin</h3>
                 <p className="text-slate-600 mb-4">
-                  <strong>Best for: Appreciation investors.</strong> Premium neighborhood with strongest
-                  appreciation (6.8% YoY). Lower cap rates but longer lease terms and
+                  <strong>6.8% YoY appreciation cited on this page.</strong> Lower cap rates but longer lease terms and
                   very low vacancy. Downtown Summerlin amenities and Palo Verde High School commute.
                 </p>
                 <div className="grid grid-cols-3 gap-4 text-sm">
@@ -318,7 +298,7 @@ export default function InvestmentPropertiesPage() {
           {/* 1031 Exchange Section */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              1031 Exchanges in Las Vegas
+              1031 identification window dated at Suite 100 — bring the APN
             </h2>
             <div className="bg-white border border-slate-200 rounded-xl p-8">
               <p className="text-slate-700 mb-6">
@@ -346,19 +326,19 @@ export default function InvestmentPropertiesPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Why Las Vegas for 1031s?</h3>
+                  <h3 className="font-bold text-slate-900 mb-3">180-day clock, identified APNs, Nevada tax line</h3>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <div>No state income tax on rental income</div>
+                      <div>No state income tax on rental income — HOA and property tax still apply</div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <div>Strong appreciation outpaces many markets</div>
+                      <div>Appreciation is dated against comps, not a caption</div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <div>Excellent cash flow in most neighborhoods</div>
+                      <div>Cash flow is dated against the rent roll at Suite 100</div>
                     </li>
                   </ul>
                 </div>
@@ -376,7 +356,7 @@ export default function InvestmentPropertiesPage() {
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Invest in Las Vegas?
+              Bring the APN and rent roll to Suite 100 — (702) 222-1964
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Get expert guidance on Las Vegas investment properties from Dr. Jan Duffy and

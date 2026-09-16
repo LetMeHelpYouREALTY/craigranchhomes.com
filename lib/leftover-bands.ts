@@ -500,6 +500,72 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "55+ rec campus, single-story, or condo sq ft — next file at Suite 100",
+      body: "Sun City Summerlin is 10–15 minutes from 9406 W Lake Mead Blvd. Occupancy rules before the clubhouse. Call (702) 222-1964. Published 55+ band on this page: $375K–$650K.",
+      pins: [
+        {
+          name: "55+ rec",
+          note: "Named rec square footage in the packet. Open /55-plus-communities.",
+        },
+        {
+          name: "Single-story resale",
+          note: "No stairs. Yard size measured from the listing, not a caption.",
+        },
+        {
+          name: "Condo",
+          note: "HOA dues and rental rules in writing. Confirm the week you tour.",
+        },
+        {
+          name: "Same afternoon",
+          note: "List the larger house, then one campus. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "HOA $140–$250, $500K exclusion, guest-room counts — sheet at Suite 100",
+      body: "Numbers on this page are examples, not your tax file. Call (702) 222-1964. CPA for gains above the exclusion. We will not invent your net.",
+      pins: [
+        {
+          name: "HOA dues",
+          note: "55+ cited here $140–$250/month. Packet lists what is painted.",
+        },
+        {
+          name: "Capital gains",
+          note: "$500,000 married exclusion if you qualify. Confirm with a CPA.",
+        },
+        {
+          name: "Guest room",
+          note: "Count bedrooms on the next plan. Measure furniture at the model.",
+        },
+        {
+          name: "Rec vs open streets",
+          note: "Club lists vs a smaller resale yard. Pick one clock.",
+        },
+      ],
+    },
+    {
+      h2: "CMA, occupancy packet, then one rec walk — four steps from W Lake Mead Blvd",
+      body: "The sequence is dated at Suite 100. We do not skip the walkthrough. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "CMA",
+          note: "APN at 9406 W Lake Mead Blvd. January 2026 valley median $450K is not your number.",
+        },
+        {
+          name: "Occupancy packet",
+          note: "HOPA and guest ages in writing before any clubhouse.",
+        },
+        {
+          name: "One rec building",
+          note: "Sun City Summerlin 10–15 minutes. Anthem is a separate east clock.",
+        },
+        {
+          name: "List or wait",
+          note: "Written at the desk. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
   ],
   "/sellers/move-up": [
     {
@@ -521,6 +587,94 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Contingent vs non-contingent",
           note: "Written at the desk before you list. Call (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Sq ft, lot, and the next APN — upgrade paths dated at Suite 100",
+      body: "Centennial Hills to Summerlin is a Palo Verde High School commute mapped by next address. Call (702) 222-1964. We do not invent the gain on a 2015–2021 purchase.",
+      pins: [
+        {
+          name: "Centennial to Summerlin",
+          note: "Published next band on this page often $650K+. Confirm the week you tour.",
+        },
+        {
+          name: "Green Valley to MacDonald Ranch",
+          note: "Henderson clock. Coronado High School minutes at ccsd.net/zoning.",
+        },
+        {
+          name: "Inspirada to Southern Highlands",
+          note: "Robert Trent Jones Jr. card 74.1 / 140. Gate lists from this desk.",
+        },
+        {
+          name: "Two files",
+          note: "Current APN and next ZIP share 9406 W Lake Mead Blvd. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "List this APN and date the next one on one Suite 100 calendar",
+      body: "Sale and purchase share one clock at 9406 W Lake Mead Blvd. Call (702) 222-1964. Contingency language is written before you list.",
+      pins: [
+        {
+          name: "Current listing",
+          note: "Photos, lockbox, and showing logs from this desk.",
+        },
+        {
+          name: "Next purchase",
+          note: "Buyer-agency paperwork before any model row.",
+        },
+        {
+          name: "Occupancy dates",
+          note: "Written so two closings do not collide.",
+        },
+        {
+          name: "Office/GBP",
+          note: "(702) 500-1942. Client CTA (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Contingent, bridge, or cash-gap — pick one file type at Suite 100",
+      body: "Three timing packets, not a slogan. January 2026 DOM cited on this site is 28 days for priced-right listings. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Sale contingent",
+          note: "Written at the desk. Not every seller will wait.",
+        },
+        {
+          name: "Bridge or HELOC",
+          note: "Lender letter first. We will not invent a rate.",
+        },
+        {
+          name: "Same-day close",
+          note: "Requires both files dated. Do not stack a Henderson luxury afternoon.",
+        },
+        {
+          name: "Rent-back",
+          note: "30–60 days if negotiated. Occupancy in writing.",
+        },
+      ],
+    },
+    {
+      h2: "Equity from this sale, then the next loan — lenders named at Suite 100",
+      body: "Bridge, HELOC, or sale-contingent offers are different packets. Call (702) 222-1964. Bring the APN. We will not invent a payment.",
+      pins: [
+        {
+          name: "Bridge loan",
+          note: "Short window. Lender letter before you write.",
+        },
+        {
+          name: "HELOC",
+          note: "Often 30–45 days to open. Date it before listing photos.",
+        },
+        {
+          name: "Sale contingency",
+          note: "Offer language at this desk, not a group text.",
+        },
+        {
+          name: "Rent-back",
+          note: "Occupancy after close. Office/GBP (702) 500-1942.",
         },
       ],
     },
@@ -548,6 +702,116 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "Listing photos, lockbox, and showing logs run from Suite 100",
+      body: "You can leave. The Las Vegas file stays at 9406 W Lake Mead Blvd. Call (702) 222-1964. Addresses stay off group texts.",
+      pins: [
+        {
+          name: "Remote listing",
+          note: "Photos and lockbox from this desk while you start the next city.",
+        },
+        {
+          name: "Showing logs",
+          note: "Dated. We do not post occupancy gossip.",
+        },
+        {
+          name: "Destination agent",
+          note: "BHHS intro is a Suite 100 call, not a cold transfer.",
+        },
+        {
+          name: "Two closings",
+          note: "Occupancy dates written before you fly. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Job-start date first — 30/60/90 listing windows at this desk",
+      body: "The listing window is dated from Suite 100, not a caption. Call (702) 222-1964. January 2026 DOM cited on this site is 28 days for priced-right listings.",
+      pins: [
+        {
+          name: "30 days",
+          note: "Priced to the January 2026 snapshot. Confirm the week you list.",
+        },
+        {
+          name: "60 days",
+          note: "Buffer for a job-start that slipped. Occupancy in writing.",
+        },
+        {
+          name: "90 days",
+          note: "Two-contract calendar. Destination closing does not collide.",
+        },
+        {
+          name: "Remote close",
+          note: "E-sign and remote notary routed from this file.",
+        },
+      ],
+    },
+    {
+      h2: "California, Texas, Arizona destination desks — BHHS intro from Suite 100",
+      body: "Outbound is a named agent in the next city, briefed from 9406 W Lake Mead Blvd. Call (702) 222-1964. We do not invent a destination inventory count.",
+      pins: [
+        {
+          name: "California",
+          note: "Net sheet vs Nevada PITI. Open /buyers/california-relocator if inbound instead.",
+        },
+        {
+          name: "Texas or Arizona",
+          note: "BHHS destination intro from this desk. Local showings still start here until you leave.",
+        },
+        {
+          name: "Two-contract calendar",
+          note: "Bring both drafts. Occupancy dates before you fly.",
+        },
+        {
+          name: "Office/GBP",
+          note: "(702) 500-1942. Client CTA (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "CMA, listing window, remote closing — six steps dated at Suite 100",
+      body: "The sequence is written at 9406 W Lake Mead Blvd. Call (702) 222-1964. We do not skip the CMA because the job-start is next month.",
+      pins: [
+        {
+          name: "CMA",
+          note: "APN at this desk. Valley median $450K is not your number.",
+        },
+        {
+          name: "Photos and lockbox",
+          note: "Can run after you leave. Logs stay here.",
+        },
+        {
+          name: "Offers",
+          note: "Dated and routed. Occupancy in writing.",
+        },
+        {
+          name: "Remote close",
+          note: "Title and e-sign from this file. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Inbound to 89134: named ZIP, then a dated CMA at Suite 100",
+      body: "If the file is inbound, start at 9406 W Lake Mead Blvd. Call (702) 222-1964. One ZIP per afternoon. Named campuses at ccsd.net/zoning by address.",
+      pins: [
+        {
+          name: "Summerlin",
+          note: "10–15 minutes. Palo Verde High School commute mapped by listing.",
+        },
+        {
+          name: "Henderson",
+          note: "25–35 minutes. Coronado High School minutes by address.",
+        },
+        {
+          name: "New construction",
+          note: "Register Dr. Jan before any model row. Open /new-construction.",
+        },
+        {
+          name: "Video intake",
+          note: "Virtual street walk before you fly. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
   ],
   "/sellers/divorce-probate": [
     {
@@ -569,6 +833,94 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Offers",
           note: "Documented, dated, and routed to counsel. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Court dates, two signatures, and one listing file at Suite 100",
+      body: "Confidential review is by appointment at 9406 W Lake Mead Blvd. Call (702) 222-1964. We do not brief the lobby.",
+      pins: [
+        {
+          name: "Divorce file",
+          note: "Both attorneys on the written showing rules.",
+        },
+        {
+          name: "Probate / estate",
+          note: "Letters testamentary before the first lockbox.",
+        },
+        {
+          name: "Access",
+          note: "Preferred showing window in writing.",
+        },
+        {
+          name: "Marketing",
+          note: "Remarks omit occupancy gossip. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Nevada community property and probate windows — APN at Suite 100",
+      body: "State rules are a packet, not a caption. Call (702) 222-1964. Bring the court order or letters testamentary. We will not invent a timeline.",
+      pins: [
+        {
+          name: "Community property",
+          note: "Two signatures when required. Counsel on the file.",
+        },
+        {
+          name: "Probate window",
+          note: "Executor documents before MLS. HOA contacts listed.",
+        },
+        {
+          name: "Court-ordered sale",
+          note: "Order in the folder. Occupancy and lockbox rules written.",
+        },
+        {
+          name: "Office/GBP",
+          note: "(702) 500-1942. Client CTA (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Separate showings, one MLS file, dated notes — not a group text",
+      body: "The process is documented at Suite 100. Call (702) 222-1964. Offers route to counsel. We do not post occupancy details.",
+      pins: [
+        {
+          name: "Showing window",
+          note: "Written. Separate if the order requires it.",
+        },
+        {
+          name: "One MLS file",
+          note: "Remarks omit private facts. Photos from this desk.",
+        },
+        {
+          name: "Offers",
+          note: "Dated, documented, routed. No lobby briefings.",
+        },
+        {
+          name: "Close",
+          note: "Title and disbursement per the order. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "50,000-agent letterhead, then this file stays confidential at Suite 100",
+      body: "BHHS documentation standards are on the letterhead. The file still sits at 9406 W Lake Mead Blvd. Call (702) 222-1964. License S.0197614.LLC.",
+      pins: [
+        {
+          name: "Paper trail",
+          note: "Dated notes for counsel. We do not invent a valuation.",
+        },
+        {
+          name: "Attorney referrals",
+          note: "Named after the file type is chosen. Not a slogan.",
+        },
+        {
+          name: "Lockbox rules",
+          note: "Written showing window. Occupancy stays off marketing.",
+        },
+        {
+          name: "Office/GBP",
+          note: "(702) 500-1942. Client CTA (702) 222-1964.",
         },
       ],
     },
@@ -596,6 +948,50 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "Utility setup, HOA packets, and one inbound ZIP — punch list at Suite 100",
+      body: "Relocation is a dated list, not a caption. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100. We do not tour twelve ZIPs the day you land.",
+      pins: [
+        {
+          name: "HOA packet",
+          note: "Dues, rental caps, and occupancy rules before the first drive.",
+        },
+        {
+          name: "One ZIP",
+          note: "Summerlin 10–15 minutes. Henderson 25–35. Pick one afternoon.",
+        },
+        {
+          name: "Utility start dates",
+          note: "Written after the occupancy date, not before the APN is known.",
+        },
+        {
+          name: "Office/GBP",
+          note: "(702) 500-1942. Client CTA (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Palo Verde, Coronado, Arbor View — campus minutes at ccsd.net/zoning by address",
+      body: "Named campuses and drive times, not ratings. Call (702) 222-1964. Zoning is mapped by street the week you tour.",
+      pins: [
+        {
+          name: "Summerlin",
+          note: "Palo Verde High School and West Career & Tech Academy minutes from the listing.",
+        },
+        {
+          name: "Henderson",
+          note: "Coronado High School and Green Valley High School commute by address.",
+        },
+        {
+          name: "Northwest",
+          note: "Arbor View High School on the Centennial clock from Suite 100.",
+        },
+        {
+          name: "ccsd.net/zoning",
+          note: "Confirm the week you write. We will not invent a zone.",
+        },
+      ],
+    },
   ],
   "/market-report": [
     {
@@ -620,6 +1016,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         },
       ],
     },
+    {
+      h2: "Rates, 4,850 listings, and 28 DOM — dated at Suite 100, not a caption",
+      body: "January 2026 snapshot on this page. Apply it to one APN at 9406 W Lake Mead Blvd. Call (702) 222-1964. California inbound is a net-sheet talk, not a slogan.",
+      pins: [
+        {
+          name: "California inbound",
+          note: "No Nevada state income tax is a line item. Open /buyers/california-relocator.",
+        },
+        {
+          name: "New construction",
+          note: "Register Dr. Jan at Suite 100 before any model row. Open /new-construction.",
+        },
+        {
+          name: "$1M+ streets",
+          note: "The Ridges and Southern Highlands. Gate lists from this desk.",
+        },
+        {
+          name: "Your APN",
+          note: "Valley median $450K is not a CMA. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
   ],
   "/investment-properties": [
     {
@@ -641,6 +1059,116 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "1031 calendar",
           note: "Identification windows are dated. Bring the relinquished APN. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "January 2026 published bands: NLV $385K, Henderson $485K — cap rates at Suite 100",
+      body: "Table figures on this page are averages, not your deal. Call (702) 222-1964. Confirm rent comps the week you tour.",
+      pins: [
+        {
+          name: "North Las Vegas",
+          note: "Published ~$385K on this page. Aliante rec first if that is the brief.",
+        },
+        {
+          name: "Henderson",
+          note: "Published ~$485K. HOA rental caps in the packet before the east clock.",
+        },
+        {
+          name: "Southwest cluster",
+          note: "Mountains Edge and Southern Highlands product are different files.",
+        },
+        {
+          name: "No invented yield",
+          note: "Cap rate is dated the day we pull rents. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Rental-cap packets and property-manager referrals — initialed at 9406 W Lake Mead Blvd",
+      body: "What you get is a punch list: rent comps, HOA rules, 1031 window. Call (702) 222-1964. We do not promise a portal we cannot name.",
+      pins: [
+        {
+          name: "Rent comps",
+          note: "Street-level, not a valley average.",
+        },
+        {
+          name: "HOA rental cap",
+          note: "Packet before you fly. Caps kill deals.",
+        },
+        {
+          name: "1031 window",
+          note: "45-day identification. Bring the relinquished APN.",
+        },
+        {
+          name: "Manager referral",
+          note: "Named after the file type is chosen. Call (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Cash-flow, 1031 identification, or multi-unit — pick the file type at Suite 100",
+      body: "Buy-and-hold, value-add, or short-term rules are different packets. Call (702) 222-1964. Short-term occupancy is a HOA and city rule, not a caption.",
+      pins: [
+        {
+          name: "Buy and hold",
+          note: "Lease math and HOA rental rules first.",
+        },
+        {
+          name: "Value-add",
+          note: "Permits and condition walked. We will not invent a after-repair number.",
+        },
+        {
+          name: "Short-term",
+          note: "HOA and municipal rules in writing before any listing photo.",
+        },
+        {
+          name: "One ZIP",
+          note: "Do not stack NLV and Henderson the same inbound morning.",
+        },
+      ],
+    },
+    {
+      h2: "DOM, rent comps, and HOA rental rules — dated the day we pull them",
+      body: "Metrics without an APN are a snapshot. Bring target cap rate and cash-to-close to 9406 W Lake Mead Blvd. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Cap rate",
+          note: "Rent minus expenses over price. Dated that week.",
+        },
+        {
+          name: "Cash-on-cash",
+          note: "Depends on down payment. Run the sheet at the desk.",
+        },
+        {
+          name: "DOM",
+          note: "January 2026 valley snapshot: 28 days. Your ZIP differs.",
+        },
+        {
+          name: "HOA rules",
+          note: "Rental caps and lease minimums. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "North Las Vegas, Henderson, or southwest — one ZIP cluster per inbound afternoon",
+      body: "Do not tour twelve ZIPs the day you land. Call (702) 222-1964. Occupancy and rental packets at Suite 100 first.",
+      pins: [
+        {
+          name: "NLV ~$385K",
+          note: "Published January 2026 average on this page. Confirm rents that week.",
+        },
+        {
+          name: "Henderson ~$485K",
+          note: "25–35 minutes via I-215 east. Separate clock.",
+        },
+        {
+          name: "Southwest",
+          note: "Mountains Edge vs Southern Highlands square footage. Measure from the listing.",
+        },
+        {
+          name: "1031 overlay",
+          note: "Identification window dated. Bring the relinquished APN.",
         },
       ],
     },
@@ -1117,6 +1645,28 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "Investment and California inbound",
           note: "Rental caps and CA net sheets. Nevada has no state income tax — HOA still applies. Open /buyers/california-relocator.",
+        },
+      ],
+    },
+    {
+      h2: "4.9-star GBP reviews on this URL — Maps ranking uses the Suite 100 pin",
+      body: "Review schema and the Google Reviews link stay aligned with 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Office/GBP (702) 500-1942. License S.0197614.LLC.",
+      pins: [
+        {
+          name: "View Google Reviews",
+          note: "Same pin as the footer NAP. Do not use a different street.",
+        },
+        {
+          name: "Dated files",
+          note: "Closed volume cited on this site: $127M+ since 2008.",
+        },
+        {
+          name: "Hours",
+          note: "Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+        },
+        {
+          name: "Call",
+          note: "Client CTA (702) 222-1964. Do not swap with the office line.",
         },
       ],
     },

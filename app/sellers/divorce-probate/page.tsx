@@ -63,11 +63,10 @@ export default function DivorceProbatePage() {
 
           <LeftoverBand path="/sellers/divorce-probate" />
 
+          <LeftoverBand path="/sellers/divorce-probate" slot={1} />
+
           {/* Our Approach */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Our Approach to Sensitive Transactions
-            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
@@ -150,11 +149,10 @@ export default function DivorceProbatePage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/divorce-probate" slot={2} />
+
           {/* Nevada-Specific Information */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Nevada-Specific Considerations
-            </h2>
             <div className="prose prose-lg max-w-none text-slate-700 mb-8">
               <p>
                 Nevada has unique laws that affect divorce and probate real estate sales. Understanding
@@ -221,11 +219,10 @@ export default function DivorceProbatePage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/divorce-probate" slot={3} />
+
           {/* The Process */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              How We Handle Sensitive Transactions
-            </h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
@@ -287,11 +284,10 @@ export default function DivorceProbatePage() {
           <SellerFaqs path="/sellers/divorce-probate" />
 
 
+          <LeftoverBand path="/sellers/divorce-probate" slot={4} />
+
           {/* Why BHHS Matters */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Why Berkshire Hathaway HomeServices for Sensitive Sales
-            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
                 <Shield className="h-10 w-10 text-blue-600 mx-auto mb-4" />
@@ -327,7 +323,7 @@ export default function DivorceProbatePage() {
           {/* CTA */}
           <section className="text-center bg-slate-800 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Confidential Consultation
+              Call (702) 222-1964 — this file is not a group showing
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Discuss your situation privately with Dr. Jan. No pressure, no judgment—just

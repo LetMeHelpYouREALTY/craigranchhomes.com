@@ -62,11 +62,9 @@ export default function DownsizingPage() {
 
           <LeftoverBand path="/sellers/downsizing" />
 
-          {/* Transition Options */}
+          <LeftoverBand path="/sellers/downsizing" slot={1} />
+
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Popular Downsizing Destinations
-            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
@@ -127,7 +125,7 @@ export default function DownsizingPage() {
           {/* Dual Transaction Expertise */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              We Handle Both Sides of Your Transition
+              Sale file and next-home file share one Suite 100 clock
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -241,11 +239,9 @@ export default function DownsizingPage() {
             </p>
           </section>
 
-          {/* What to Consider */}
+          <LeftoverBand path="/sellers/downsizing" slot={2} />
+
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Key Considerations When Downsizing
-            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-lg text-slate-900 mb-4">Financial Factors</h3>
@@ -288,7 +284,7 @@ export default function DownsizingPage() {
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong>Social Activities:</strong> 55+ communities offer built-in social networks. If that's not appealing, consider active neighborhoods like Green Valley or Summerlin.
+                      <strong>Rec square footage:</strong> Walk one clubhouse before you pick a street. Green Valley and Summerlin are separate clocks from 55+ occupancy packets.
                     </div>
                   </li>
                 </ul>
@@ -296,11 +292,9 @@ export default function DownsizingPage() {
             </div>
           </section>
 
-          {/* The Downsizing Process */}
+          <LeftoverBand path="/sellers/downsizing" slot={3} />
+
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              The Downsizing Process with Dr. Jan Duffy
-            </h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
@@ -308,8 +302,8 @@ export default function DownsizingPage() {
                   <h3 className="font-bold text-slate-900 mb-2">Discovery Conversation</h3>
                   <p className="text-slate-600">
                     We start with a no-pressure conversation about your goals. What's driving your decision?
-                    What features are must-haves in your next home? What lifestyle do you want? This helps
-                    Dr. Jan understand your needs beyond just the numbers.
+                    Which rec campus and HOA dollar band? Single-story vs condo square footage? This helps
+                    Dr. Jan date the next file before any clubhouse walk.
                   </p>
                 </div>
               </div>
@@ -320,7 +314,7 @@ export default function DownsizingPage() {
                   <p className="text-slate-600">
                     Dr. Jan provides a comprehensive market analysis of your current home, showing exactly
                     how much equity you have. Then she presents downsizing options that fit your budget,
-                    comparing 55+ communities, single-story homes, and condos.
+                    comparing 55+ rec campuses, single-story homes, and condos by square footage.
                   </p>
                 </div>
               </div>
@@ -356,7 +350,7 @@ export default function DownsizingPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Simplify Your Life?
+              Bring the APN to Suite 100 — then one 55+ rec campus
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get a free home valuation and explore your downsizing options.

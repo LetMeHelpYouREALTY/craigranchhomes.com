@@ -63,11 +63,10 @@ export default function RelocationPage() {
 
           <LeftoverBand path="/sellers/relocation" />
 
+          <LeftoverBand path="/sellers/relocation" slot={1} />
+
           {/* How We Help */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              How We Handle Your Relocation Sale
-            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-xl text-slate-900 mb-4 flex items-center">
@@ -169,11 +168,10 @@ export default function RelocationPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/relocation" slot={2} />
+
           {/* Timeline Options */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Relocation Timeline Options
-            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <div className="flex items-center mb-4">
@@ -273,15 +271,10 @@ export default function RelocationPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/relocation" slot={3} />
+
           {/* Common Relocation Destinations */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Popular Relocation Destinations from Las Vegas
-            </h2>
-            <p className="text-slate-600 text-center mb-8 max-w-3xl mx-auto">
-              Whether you're relocating for tech jobs in the Bay Area, corporate opportunities in Texas,
-              or sunshine in Florida, Dr. Jan connects you with top BHHS agents in your new city.
-            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { city: "Phoenix, AZ", insight: "Lower housing costs than coastal California. Healthcare and tech employers listed on the inbound brief.", time: "4-5 hour drive" },
@@ -300,11 +293,10 @@ export default function RelocationPage() {
             </div>
           </section>
 
+          <LeftoverBand path="/sellers/relocation" slot={4} />
+
           {/* The Relocation Process */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              The Relocation Process Step by Step
-            </h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
@@ -361,11 +353,10 @@ export default function RelocationPage() {
           <SellerFaqs path="/sellers/relocation" />
 
 
+          <LeftoverBand path="/sellers/relocation" slot={5} />
+
           {/* Coming TO Las Vegas */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Relocating TO Las Vegas?
-            </h2>
             <div className="bg-green-50 border border-green-200 rounded-xl p-8">
               <p className="text-slate-700 mb-4">
                 If you're moving TO Las Vegas from another city, Dr. Jan welcomes referrals from BHHS
@@ -379,7 +370,7 @@ export default function RelocationPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    School district guidance and commute analysis
+                    Named campus minutes at ccsd.net/zoning by address
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -412,7 +403,7 @@ export default function RelocationPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Make Your Move?
+              Call (702) 222-1964 — listing window on this file, not a slogan
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Let's create a relocation plan that works with your timeline.

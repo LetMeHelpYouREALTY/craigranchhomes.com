@@ -287,6 +287,8 @@ export default function AboutPage() {
 
           <LeftoverBand path="/about" />
 
+          <LeftoverBand path="/about" slot={1} />
+
           {/* Why BHHS Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="scroll-mt-32 text-3xl md:text-4xl font-bold mb-4 text-center">
@@ -367,7 +369,7 @@ export default function AboutPage() {
           {/* Client Testimonials */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-              What Clients Say About Dr. Jan Duffy
+              Dated files and Google Reviews — 4.9 on the Suite 100 pin
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               With a 4.9-star rating and hundreds of satisfied clients, Dr. Jan has built a 

@@ -1,12 +1,14 @@
 /**
- * Cloudflare-first media URLs with git-backed public/ files as fallback.
- * Production: set NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=true and
- * NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH (Images) or NEXT_PUBLIC_MEDIA_CDN
- * (R2 custom domain). Git copies live in /public/images/.
+ * Cloudflare Images (hosted) is the primary CDN. Git copies in /public/images/
+ * are the backup. Per Cloudflare Images docs (hosted images / custom path,
+ * Apr 2026): delivery is
+ * https://imagedelivery.net/{account_hash}/{image_id}/{variant}
+ * Custom IDs are the git path without a leading slash so the same file is the
+ * backup (e.g. images/hero/las-vegas-valley-homes.jpg + variant public).
  *
- * Per Cloudflare Images docs (hosted images, 2026): delivery URL is
- * https://imagedelivery.net/{account_hash}/{image_id}/{variant}.
- * Custom IDs preserve the git path so the same file is the backup.
+ * Do not orange-cloud the Vercel hostname. imagedelivery.net does not need it.
+ * NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=false forces git-only stills.
+ * NEXT_PUBLIC_MEDIA_CDN still wins when an R2 custom domain is set.
  */
 
 export type SitePhoto = {
@@ -17,19 +19,40 @@ export type SitePhoto = {
   height: number;
 };
 
-const CF_ENABLED = process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "true";
-const CF_HASH = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ?? "";
-const MEDIA_CDN = (process.env.NEXT_PUBLIC_MEDIA_CDN ?? "").replace(/\/$/, "");
+/** Public Images account hash from the Cloudflare dashboard Developer Resources. */
+export const CLOUDFLARE_IMAGES_ACCOUNT_HASH = "byE6BTe9lNqo21V57n4aPQ";
+
+export function cloudflareImageId(src: string): string {
+  return src.startsWith("/") ? src.slice(1) : src;
+}
+
+export function gitBackupUrl(src: string): string {
+  return src.startsWith("/") ? src : `/${src}`;
+}
+
+export function isCloudflareImagesEnabled(): boolean {
+  if (process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "false") {
+    return false;
+  }
+  const hash =
+    process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ||
+    CLOUDFLARE_IMAGES_ACCOUNT_HASH;
+  return hash.length > 0;
+}
 
 export function mediaUrl(src: string): string {
-  const path = src.startsWith("/") ? src.slice(1) : src;
-  if (MEDIA_CDN) {
-    return `${MEDIA_CDN}/${path}`;
+  const path = cloudflareImageId(src);
+  const mediaCdn = (process.env.NEXT_PUBLIC_MEDIA_CDN ?? "").replace(/\/$/, "");
+  if (mediaCdn) {
+    return `${mediaCdn}/${path}`;
   }
-  if (CF_ENABLED && CF_HASH) {
-    return `https://imagedelivery.net/${CF_HASH}/${path}/public`;
+  if (isCloudflareImagesEnabled()) {
+    const hash =
+      process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ||
+      CLOUDFLARE_IMAGES_ACCOUNT_HASH;
+    return `https://imagedelivery.net/${hash}/${path}/public`;
   }
-  return src.startsWith("/") ? src : `/${src}`;
+  return gitBackupUrl(src);
 }
 
 export const photos = {
@@ -678,15 +701,53 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/sellers" && slot === 1) return photos.summerlin;
   if (path === "/sellers" && slot === 2) return photos.henderson;
   if (path.startsWith("/sellers/downsizing") && slot === 0) return photos.office;
+  if (path.startsWith("/sellers/downsizing") && slot === 1) return photos.homeHero;
+  if (path.startsWith("/sellers/downsizing") && slot === 2) return photos.summerlin;
+  if (path.startsWith("/sellers/downsizing") && slot === 3) return photos.henderson;
   if (path.startsWith("/sellers/move-up") && slot === 0) return photos.summerlin;
+  if (path.startsWith("/sellers/move-up") && slot === 1) return photos.office;
+  if (path.startsWith("/sellers/move-up") && slot === 2) return photos.henderson;
+  if (path.startsWith("/sellers/move-up") && slot === 3) return photos.homeHero;
+  if (path.startsWith("/sellers/move-up") && slot === 4) return photos.buyers;
   if (path.startsWith("/sellers/relocation") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/sellers/relocation") && slot === 1) return photos.office;
+  if (path.startsWith("/sellers/relocation") && slot === 2) return photos.summerlin;
+  if (path.startsWith("/sellers/relocation") && slot === 3) return photos.henderson;
+  if (path.startsWith("/sellers/relocation") && slot === 4) return photos.buyers;
+  if (path.startsWith("/sellers/relocation") && slot === 5) return photos.ridges;
   if (path.startsWith("/sellers/divorce-probate") && slot === 0) {
     return photos.homeHero;
   }
+  if (path.startsWith("/sellers/divorce-probate") && slot === 1) return photos.office;
+  if (path.startsWith("/sellers/divorce-probate") && slot === 2) {
+    return photos.summerlin;
+  }
+  if (path.startsWith("/sellers/divorce-probate") && slot === 3) {
+    return photos.henderson;
+  }
+  if (path.startsWith("/sellers/divorce-probate") && slot === 4) return photos.buyers;
   if (path === "/relocation" && slot === 0) return photos.officeExterior;
+  if (path === "/relocation" && slot === 1) return photos.office;
+  if (path === "/relocation" && slot === 2) return photos.henderson;
   if (path.startsWith("/market-report") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/market-report") && slot === 1) return photos.summerlin;
   if (path.startsWith("/investment-properties") && slot === 0) {
     return photos.homeHero;
+  }
+  if (path.startsWith("/investment-properties") && slot === 1) {
+    return photos.officeExterior;
+  }
+  if (path.startsWith("/investment-properties") && slot === 2) {
+    return photos.summerlin;
+  }
+  if (path.startsWith("/investment-properties") && slot === 3) {
+    return photos.henderson;
+  }
+  if (path.startsWith("/investment-properties") && slot === 4) {
+    return photos.office;
+  }
+  if (path.startsWith("/investment-properties") && slot === 5) {
+    return photos.buyers;
   }
   if (path.startsWith("/home-valuation") && slot === 0) return photos.homeHero;
   if (path.startsWith("/buyers/first-time-buyers") && slot === 0) {
@@ -715,6 +776,7 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/neighborhoods" && slot === 0) return photos.homeHero;
   if (path === "/neighborhoods" && slot === 1) return photos.henderson;
   if (path.startsWith("/about") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/about") && slot === 1) return photos.summerlin;
   if (path === "/buyers" && slot === 0) return photos.summerlin;
   if (path.startsWith("/faq") && slot === 0) return photos.henderson;
   if (path === "/55-plus-communities" && slot === 1) return photos.homeHero;
@@ -895,24 +957,48 @@ export function occupiedHeadingStills(path: string): Set<string> {
   }
   if (path.startsWith("/sellers/downsizing")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
   }
   if (path.startsWith("/sellers/move-up")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
   }
   if (path.startsWith("/sellers/relocation")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
+    srcs.push(leftoverPhotoForPath(path, 5).src);
   }
   if (path.startsWith("/sellers/divorce-probate")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
   }
   if (path === "/relocation") {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
   }
   if (path.startsWith("/market-report")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/investment-properties")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
+    srcs.push(leftoverPhotoForPath(path, 4).src);
+    srcs.push(leftoverPhotoForPath(path, 5).src);
   }
   if (path.startsWith("/home-valuation")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
@@ -948,6 +1034,7 @@ export function occupiedHeadingStills(path: string): Set<string> {
   }
   if (path.startsWith("/about")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path === "/buyers") {
     srcs.push(leftoverPhotoForPath(path, 0).src);

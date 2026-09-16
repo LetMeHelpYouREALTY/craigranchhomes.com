@@ -153,16 +153,9 @@ export default function RelocationPage() {
 
           <ExpertQuote path="/relocation" />
 
-          {/* Relocation Services */}
+          <LeftoverBand path="/relocation" slot={1} />
+
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Comprehensive Relocation Services
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Relocating involves much more than just finding a home. Dr. Jan Duffy provides 
-              end-to-end relocation services that address every aspect of your move, from 
-              neighborhood selection to utility setup and local provider recommendations.
-            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {relocationServices.map((service) => (
                 <div key={service} className="flex items-center bg-white p-4 rounded-lg border border-slate-200">
@@ -207,16 +200,9 @@ export default function RelocationPage() {
             </div>
           </section>
 
-          {/* School Information */}
+          <LeftoverBand path="/relocation" slot={2} />
+
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Schools & Education
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Named school campuses and typical commute times often matter when relocating.
-              Las Vegas offers public, charter, and private options. Dr. Jan provides campus
-              names and drive times so you can compare.
-            </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-lg text-slate-900 mb-4 flex items-center">
@@ -308,7 +294,7 @@ export default function RelocationPage() {
           {/* BHHS Network */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Berkshire Hathaway HomeServices Advantage
+              50,000-agent referral, then a dated calendar at Suite 100
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               With 50,000+ agents in 1,500+ offices worldwide, Berkshire Hathaway HomeServices 

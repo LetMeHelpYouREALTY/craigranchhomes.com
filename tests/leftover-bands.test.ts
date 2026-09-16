@@ -83,6 +83,14 @@ describe("leftoverBands", () => {
     expect(leftoverBands["/market-insights"]).toHaveLength(6);
     expect(leftoverBands["/market-update"]).toHaveLength(5);
     expect(leftoverBands["/neighborhoods"]).toHaveLength(2);
+    expect(leftoverBands["/relocation"]).toHaveLength(3);
+    expect(leftoverBands["/investment-properties"]).toHaveLength(6);
+    expect(leftoverBands["/sellers/downsizing"]).toHaveLength(4);
+    expect(leftoverBands["/market-report"]).toHaveLength(2);
+    expect(leftoverBands["/about"]).toHaveLength(2);
+    expect(leftoverBands["/sellers/relocation"]).toHaveLength(6);
+    expect(leftoverBands["/sellers/move-up"]).toHaveLength(5);
+    expect(leftoverBands["/sellers/divorce-probate"]).toHaveLength(5);
   });
 
   it("keeps every leftover H2 unique", () => {

@@ -77,7 +77,7 @@ export default function MarketReportPage() {
           {/* Key Stats Overview */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Las Vegas Market Snapshot | January 2026
+              January 2026: $450K median, 28 DOM, 4,850 listings, 2.1 months inventory
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="text-center">
@@ -115,6 +115,8 @@ export default function MarketReportPage() {
 
           <LeftoverBand path="/market-report" />
 
+          <LeftoverBand path="/market-report" slot={1} />
+
           {/* Buyer and seller takeaways */}
           <section className="mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
@@ -151,7 +153,7 @@ export default function MarketReportPage() {
           {/* Market Trends */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Key Market Trends to Watch
+              California inbound, builder credits, $1M+ streets — apply at Suite 100
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -192,7 +194,7 @@ export default function MarketReportPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Get Personalized Market Insights
+              Bring your APN to Suite 100 for a ZIP-level CMA
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Want to know what these numbers mean for your specific neighborhood or situation? Dr.

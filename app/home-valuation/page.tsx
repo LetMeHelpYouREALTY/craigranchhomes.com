@@ -61,7 +61,7 @@ export default function HomeValuationPage() {
 
           <section className="max-w-4xl mx-auto mb-16">
             <h2 className="text-2xl font-bold text-slate-900 mb-3 text-center">
-              Instant Home Value Estimate
+              RealScout estimate first, then a dated CMA at Suite 100
             </h2>
 <p className="text-slate-600 text-center mb-6">
               Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with

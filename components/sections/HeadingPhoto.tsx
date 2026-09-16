@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import {
+  gitBackupUrl,
   h2PhotoForPath,
   h3PhotoForPath,
   mediaUrl,
@@ -53,18 +57,41 @@ export default function HeadingPhoto({
     <figure
       className={`relative w-full overflow-hidden rounded-xl mb-8 ${heightClass} ${className}`.trim()}
     >
-      <Image
-        src={mediaUrl(asset.src)}
-        alt={asset.alt}
-        fill
-        className="object-cover"
-        sizes={
-          isH1
-            ? "(max-width: 768px) 100vw, 896px"
-            : "(max-width: 768px) 100vw, 768px"
-        }
-        priority={priority ?? isH1}
-      />
+      <HeadingStill asset={asset} isH1={isH1} priority={priority} />
     </figure>
+  );
+}
+
+function HeadingStill({
+  asset,
+  isH1,
+  priority,
+}: {
+  asset: SitePhoto;
+  isH1: boolean;
+  priority?: boolean;
+}) {
+  const primary = mediaUrl(asset.src);
+  const backup = gitBackupUrl(asset.src);
+  const [src, setSrc] = useState(primary);
+  const usingCloudflare = src !== backup;
+
+  return (
+    <Image
+      src={src}
+      alt={asset.alt}
+      fill
+      unoptimized={usingCloudflare}
+      className="object-cover"
+      sizes={
+        isH1
+          ? "(max-width: 768px) 100vw, 896px"
+          : "(max-width: 768px) 100vw, 768px"
+      }
+      priority={priority ?? isH1}
+      onError={() => {
+        if (src !== backup) setSrc(backup);
+      }}
+    />
   );
 }
