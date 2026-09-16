@@ -101,7 +101,7 @@ export default function TheRidgesPage() {
               <p>
                 Six villages—Bear&apos;s Best, Falcon Ridge, Azure, Talon Ridge, Silver Ridge, and Eagle
                 Hills—share architectural guidelines. Square footage, lot elevation, and golf-club access
-                vary by village. Compare those numbers at 9406 W Lake Mead Blvd, Suite 100 instead of a
+                vary by village. Compare those numbers at 851 W Lone Mountain Rd, Suite 103 instead of a
                 slogan. Photography and access are scheduled, not improvised.
               </p>
               <p>

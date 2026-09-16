@@ -2,9 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ctaPhone, nap } from "@/lib/contact";
+import { ctaPhone, nap, serviceArea } from "@/lib/contact";
+import { agentAvatarUrl } from "@/lib/cloudflare-images";
 import LocalTrustBar from "@/components/layouts/LocalTrustBar";
 
 export default function Navbar() {
@@ -67,6 +69,7 @@ export default function Navbar() {
     { href: "/home-valuation", label: "Home Valuation" },
     { href: "/market-report", label: "Market Report" },
   ];
+  const avatarSrc = agentAvatarUrl(80);
 
   return (
     <header
@@ -78,15 +81,26 @@ export default function Navbar() {
         <div className="flex justify-between items-center gap-4">
           <Link
             href="/"
-            className="flex flex-col min-w-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-md"
+            className="flex items-center gap-2.5 min-w-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-md"
             aria-label={`${nap.name} home`}
           >
-            <span className="text-lg md:text-xl lg:text-2xl font-bold text-slate-900 hover:text-blue-600 transition-colors leading-tight truncate">
-              Craig Ranch
-              <span className="text-blue-600"> Homes</span>
-            </span>
-            <span className="text-xs text-slate-500 hidden sm:block">
-              Dr. Jan Duffy, REALTOR® · North Las Vegas 89031
+            <Image
+              src={avatarSrc}
+              alt=""
+              width={40}
+              height={40}
+              unoptimized={avatarSrc.startsWith("https://")}
+              className="h-10 w-10 rounded-full object-cover object-[center_18%] ring-1 ring-slate-200 shrink-0"
+              priority
+            />
+            <span className="flex flex-col min-w-0">
+              <span className="text-lg md:text-xl lg:text-2xl font-bold text-slate-900 hover:text-blue-600 transition-colors leading-tight truncate">
+                Craig Ranch
+                <span className="text-blue-600"> Homes</span>
+              </span>
+              <span className="text-xs text-slate-500 hidden sm:block">
+                {serviceArea.label}
+              </span>
             </span>
           </Link>
 
@@ -155,7 +169,7 @@ export default function Navbar() {
 
           <div className="lg:hidden flex items-center gap-3">
             <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700">
-              <a href={ctaPhone.href} aria-label={`Call Dr. Jan Duffy at ${ctaPhone.display}`}>
+              <a href={ctaPhone.href} aria-label={`Call ${nap.name} at ${ctaPhone.display}`}>
                 <Phone className="h-4 w-4" aria-hidden="true" />
               </a>
             </Button>
@@ -214,7 +228,7 @@ export default function Navbar() {
                 <Button asChild className="bg-blue-600 hover:bg-blue-700 w-full">
                   <a href={ctaPhone.href} className="flex items-center justify-center gap-2">
                     <Phone className="h-4 w-4" aria-hidden="true" />
-                    Call Dr. Jan: {ctaPhone.display}
+                    Call {nap.name}: {ctaPhone.display}
                   </a>
                 </Button>
               </div>

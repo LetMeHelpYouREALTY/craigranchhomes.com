@@ -8,6 +8,7 @@
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { nap, ctaPhone, businessHours, socialProfiles as contactSocial, gbpDescription, serviceArea } from "./contact";
+import { AGENT_HEADSHOT_SRC, agentLogoUrl } from "./cloudflare-images";
 
 // ============================================================================
 // Types
@@ -92,8 +93,8 @@ export function generateRealEstateAgentSchema() {
       nap.brokerage,
     ],
     url: BASE_URL,
-    logo: `${BASE_URL}/images/dr-jan-duffy.jpg`,
-    image: `${BASE_URL}/images/dr-jan-duffy.jpg`,
+    logo: agentLogoUrl(BASE_URL),
+    image: `${BASE_URL}${AGENT_HEADSHOT_SRC}`,
     description: gbpDescription,
     telephone: ctaPhone.tel,
     email: agentInfo.email,
@@ -190,7 +191,7 @@ export function generateOrganizationSchema() {
     "@id": `${BASE_URL}#parent-organization`,
     name: "Berkshire Hathaway HomeServices Nevada Properties",
     url: "https://www.bfrre.com",
-    logo: `${BASE_URL}/favicon-32x32.png`,
+    logo: agentLogoUrl(BASE_URL),
     parentOrganization: {
       "@type": "Organization",
       name: "Berkshire Hathaway HomeServices",

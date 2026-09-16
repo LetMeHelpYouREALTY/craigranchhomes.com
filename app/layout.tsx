@@ -14,6 +14,7 @@ import MobileStickyCTA from "@/components/layouts/MobileStickyCTA";
 import InnerPageChrome from "@/components/layouts/InnerPageChrome";
 import { absoluteUrl } from "@/lib/seo";
 import { photos } from "@/lib/media";
+import { agentIconMetadata } from "@/lib/cloudflare-images";
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
@@ -37,6 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: nap.shortName,
     robots: { index: true, follow: true },
     alternates: { canonical },
+    icons: agentIconMetadata(),
     openGraph: {
       type: "website",
       url: canonical,

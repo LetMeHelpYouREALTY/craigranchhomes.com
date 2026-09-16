@@ -22,6 +22,8 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import LeftoverBand from "@/components/sections/LeftoverBand";
+import { SITE_URL } from "@/lib/contact";
+import { AGENT_HEADSHOT_SRC } from "@/lib/cloudflare-images";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
 import { mediaUrl, photos } from "@/lib/media";
@@ -46,7 +48,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy",
-  image: "https://www.craigranchhomes.com/images/dr-jan-duffy.jpg",
+  image: `${SITE_URL}${AGENT_HEADSHOT_SRC}`,
   jobTitle: "REALTOR®",
   description:
     "Licensed real estate agent with Craig Ranch Homes, serving Craig Ranch, North Las Vegas (ZIP 89031) since 2007.",
