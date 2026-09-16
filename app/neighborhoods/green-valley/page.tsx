@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/green-valley",
   title: "Berkshire Hathaway HomeServices Green Valley | Henderson Real Estate",
   description:
-    "Find Green Valley homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this Henderson community with parks, shopping, and Green Valley High School nearby. Median price $520K. Call (702) 222-1964.",
+    "Find Green Valley homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this Henderson community with parks, shopping, and Green Valley High School nearby. Median price $520K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Green Valley",
     "Green Valley homes for sale",
@@ -131,7 +131,7 @@ export default function GreenValleyPage() {
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent in Green Valley
                 means understanding the subtle differences between Green Valley proper, Green Valley Ranch,
                 and Green Valley South. Each area is compared by tree canopy age, golf-course adjacency,
-                The District retail, and commute minutes from Suite 100. Call (702) 222-1964.
+                The District retail, and commute minutes from Suite 103. Call (702) 820-5408.
               </p>
             </div>
           </section>
@@ -147,7 +147,7 @@ export default function GreenValleyPage() {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Meet at The District, then tour Green Valley's mature-tree streets. Henderson is
-              25–35 minutes east of the Lake Mead Blvd office via I-215.
+              25–35 minutes east of the Lone Mountain Rd office via I-215.
             </p>
             <CtaActions variant="onDark" />
           </section>

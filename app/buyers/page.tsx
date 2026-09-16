@@ -25,7 +25,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/buyers",
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 222-1964.",
+    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 820-5408.",
   keywords: [
     "buy home Las Vegas",
     "Las Vegas home buyer",
@@ -44,17 +44,17 @@ const buyerSchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    telephone: "+17028205408",
   },
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
   serviceType: "Buyer Representation",
 };
 
 const neighborhoods = [
-  { name: "Summerlin", price: "$625K", description: "10–15 minutes from Suite 100. Red Rock trailheads and Downtown Summerlin on the same west clock." },
+  { name: "Summerlin", price: "$625K", description: "10–15 minutes from Suite 103. Red Rock trailheads and Downtown Summerlin on the same west clock." },
   { name: "Henderson", price: "$485K", description: "25–35 minutes via I-215 east. Parks, trails, and named villages compared by square footage." },
   { name: "Green Valley", price: "$520K", description: "35-year street trees and The District. Green Valley High School commute mapped by address." },
-  { name: "The Ridges", price: "$2.5M", description: "15–20 minutes to the guardhouse. Gate lists confirmed from Suite 100." },
+  { name: "The Ridges", price: "$2.5M", description: "15–20 minutes to the guardhouse. Gate lists confirmed from Suite 103." },
   { name: "North Las Vegas", price: "$385K", description: "Aliante rec and Craig Road employers first — not a Summerlin swap." },
   { name: "Southern Highlands", price: "$750K", description: "25–35 minutes via I-15 south. Robert Trent Jones Jr. course on that clock." },
 ];
@@ -80,7 +80,7 @@ export default function BuyersPage() {
 
             <p className="text-xl text-slate-600 mb-8">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
-              the seller-paid buyer-broker fee is explained at Suite 100 — and it costs you nothing
+              the seller-paid buyer-broker fee is explained at Suite 103 — and it costs you nothing
               at the closing table. The representation is yours.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
@@ -102,10 +102,10 @@ export default function BuyersPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-4">The seller pays the buyer-broker fee — the file is still yours</h2>
 <p className="text-slate-300 mb-6">
-                  Buyer representation is explained at Suite 100. The seller typically pays the
+                  Buyer representation is explained at Suite 103. The seller typically pays the
                   buyer-broker fee, and the agency file is yours.{" "}
                   <strong>Berkshire Hathaway HomeServices</strong> agents write offers, inspections,
-                  and occupancy dates for the buyer — not the listing agent. Call (702) 222-1964.
+                  and occupancy dates for the buyer — not the listing agent. Call (702) 820-5408.
                 </p>
                 <ul className="space-y-2">
                   {[
@@ -142,11 +142,11 @@ export default function BuyersPage() {
           {/* Neighborhood Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              January 2026 medians by village — then we time the drive from Suite 100
+              January 2026 medians by village — then we time the drive from Suite 103
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Published January 2026 bands, not a live quote. Square footage, HOA dues, and commute
-              minutes from 9406 W Lake Mead Blvd beat a slogan. Named campuses are mapped by address
+              minutes from 851 W Lone Mountain Rd beat a slogan. Named campuses are mapped by address
               at ccsd.net/zoning.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -179,9 +179,9 @@ export default function BuyersPage() {
               California, first-time, or $1M+ — three different first desks
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              First-time paperwork is FHA/VA at Suite 100. California relocators compare net proceeds
+              First-time paperwork is FHA/VA at Suite 103. California relocators compare net proceeds
               to ZIP targets, then a three-day itinerary. Luxury buyers confirm gate lists here.
-              Call (702) 222-1964.
+              Call (702) 820-5408.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Link
@@ -232,11 +232,11 @@ export default function BuyersPage() {
           {/* Why BHHS */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="scroll-mt-32 text-3xl font-bold text-slate-900 mb-4 text-center">
-              Buyer-agency paperwork at Suite 100 before any model row
+              Buyer-agency paperwork at Suite 103 before any model row
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Representation is signed at 9406 W Lake Mead Blvd, Suite 100. License S.0197614.LLC
-              is on the card. Call (702) 222-1964 before the first builder visit.
+              Representation is signed at 851 W Lone Mountain Rd, Suite 103. License S.0197614.LLC
+              is on the card. Call (702) 820-5408 before the first builder visit.
             </p>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -263,14 +263,14 @@ export default function BuyersPage() {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">West-valley start, then the listing street</h3>
                 <p className="text-slate-600 text-sm">
-                  Dr. Jan has served Las Vegas since 2008 with $127M+ in transactions from Suite 100
+                  Dr. Jan has served Las Vegas since 2008 with $127M+ in transactions from Suite 103
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Offer math at 9406 W Lake Mead Blvd</h3>
+                <h3 className="font-bold text-slate-900 mb-2">Offer math at 851 W Lone Mountain Rd</h3>
                 <p className="text-slate-600 text-sm">
                   500+ closed files. Escalation and inspection terms are written at the desk.
                 </p>
@@ -286,7 +286,7 @@ export default function BuyersPage() {
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Register as buyer agent at 9406 W Lake Mead Blvd before any model</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Register as buyer agent at 851 W Lone Mountain Rd before any model</h2>
             <p className="text-xl text-slate-300 mb-8">
               Questions about buying in Las Vegas? Call or text Dr. Jan Duffy for a free buyer
               consultation. Get expert guidance backed by Berkshire Hathaway HomeServices—the 

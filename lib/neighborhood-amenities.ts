@@ -18,12 +18,12 @@ export type NeighborhoodAmenityCopy = {
 
 export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
   "/neighborhoods": {
-    h3: "Two retail pins from Suite 100: Downtown Summerlin vs The District",
+    h3: "Two retail pins from Suite 103: Downtown Summerlin vs The District",
     body: "Do not pick a ZIP from a card grid. We time one west retail loop and one Henderson loop so you compare parking, store mix, and drive minutes — not a slogan.",
     pins: [
       {
         name: "Downtown Summerlin",
-        note: "10–15 minutes from 9406 W Lake Mead Blvd. Apple, Nordstrom, and the movie house on the same west loop as The Trails.",
+        note: "10–15 minutes from 851 W Lone Mountain Rd. Apple, Nordstrom, and the movie house on the same west loop as The Trails.",
       },
       {
         name: "The District at Green Valley Ranch",
@@ -31,7 +31,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Aliante retail",
-        note: "North Las Vegas stop when the brief is northwest. Pair with Craig Road jobs, not a Strip hopscotch. Call (702) 222-1964.",
+        note: "North Las Vegas stop when the brief is northwest. Pair with Craig Road jobs, not a Strip hopscotch. Call (702) 820-5408.",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
     pins: [
       {
         name: "Downtown Summerlin",
-        note: "125+ stores on the Howard Hughes town center. 10–15 minutes from Suite 100. We park once and walk Apple to the cinema.",
+        note: "125+ stores on the Howard Hughes town center. 10–15 minutes from Suite 103. We park once and walk Apple to the cinema.",
       },
       {
         name: "Boca Park",
@@ -49,7 +49,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Tivoli Village",
-        note: "Outdoor shops on the same west-valley clock. Red Rock Casino is optional if the brief includes dining, not a third ZIP. Call (702) 222-1964.",
+        note: "Outdoor shops on the same west-valley clock. Red Rock Casino is optional if the brief includes dining, not a third ZIP. Call (702) 820-5408.",
       },
     ],
   },
@@ -63,11 +63,11 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Downtown Summerlin",
-        note: "High-end retail after the gate. Same west-valley clock as Suite 100 — 15–20 minutes from The Ridges streets.",
+        note: "High-end retail after the gate. Same west-valley clock as Suite 103 — 15–20 minutes from The Ridges streets.",
       },
       {
         name: "Henderson Executive Airport",
-        note: "Private-aviation pin only if the brief includes it. Not a default tour stop. Call (702) 222-1964.",
+        note: "Private-aviation pin only if the brief includes it. Not a default tour stop. Call (702) 820-5408.",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Harry Reid International (LAS)",
-        note: "Typically 15–25 minutes depending on I-15. Confirm the week you tour. Call (702) 222-1964.",
+        note: "Typically 15–25 minutes depending on I-15. Confirm the week you tour. Call (702) 820-5408.",
       },
     ],
   },
@@ -95,7 +95,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
     pins: [
       {
         name: "Skye Center",
-        note: "15-acre amenity campus: resort pool, lap pool, fitness, tennis and pickleball. Registration and HOA packet at Suite 100 first if you are walking builder models.",
+        note: "15-acre amenity campus: resort pool, lap pool, fitness, tennis and pickleball. Registration and HOA packet at Suite 103 first if you are walking builder models.",
       },
       {
         name: "Floyd Lamb Park",
@@ -103,7 +103,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Centennial Hills Hospital",
-        note: "Northwest ER pin on the same US-95 corridor. Call (702) 222-1964 to sequence the drive.",
+        note: "Northwest ER pin on the same US-95 corridor. Call (702) 820-5408 to sequence the drive.",
       },
     ],
   },
@@ -117,11 +117,11 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Centennial Hills Hospital",
-        note: "Full-service hospital and ER on the US-95 corridor. Suite 100 is a separate west-valley start — we do not pretend it is next door.",
+        note: "Full-service hospital and ER on the US-95 corridor. Suite 103 is a separate west-valley start — we do not pretend it is next door.",
       },
       {
         name: "Centennial Center retail",
-        note: "Target, Costco, theatres on the Durango/215 cluster. Call (702) 222-1964.",
+        note: "Target, Costco, theatres on the Durango/215 cluster. Call (702) 820-5408.",
       },
     ],
   },
@@ -131,7 +131,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
     pins: [
       {
         name: "The District at Green Valley Ranch",
-        note: "Outdoor shops, GVR, cinema. 25–35 minutes from Suite 100 via I-215 east.",
+        note: "Outdoor shops, GVR, cinema. 25–35 minutes from Suite 103 via I-215 east.",
       },
       {
         name: "Whitney Mesa Recreation Area",
@@ -139,13 +139,13 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Galleria at Sunset",
-        note: "Enclosed mall on the same Henderson clock. Call (702) 222-1964.",
+        note: "Enclosed mall on the same Henderson clock. Call (702) 820-5408.",
       },
     ],
   },
   "/neighborhoods/henderson": {
     h3: "Water Street, St. Rose Siena, then Galleria — city pins, not a village clone",
-    body: "Henderson is 25–35 minutes from Suite 100. We pick two villages plus one civic pin so you are not listing every mall.",
+    body: "Henderson is 25–35 minutes from Suite 103. We pick two villages plus one civic pin so you are not listing every mall.",
     pins: [
       {
         name: "Water Street District",
@@ -157,7 +157,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Galleria at Sunset",
-        note: "Macy's/Dillard's mall. The District is a separate Green Valley stop. Call (702) 222-1964.",
+        note: "Macy's/Dillard's mall. The District is a separate Green Valley stop. Call (702) 820-5408.",
       },
     ],
   },
@@ -175,7 +175,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "St. Rose Dominican — Siena",
-        note: "Hospital on the Henderson clock. Call (702) 222-1964.",
+        note: "Hospital on the Henderson clock. Call (702) 820-5408.",
       },
     ],
   },
@@ -185,7 +185,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
     pins: [
       {
         name: "Aliante",
-        note: "Golf and rec campus plus casino retail. Common first pin from Suite 100 when the ZIP is North Las Vegas.",
+        note: "Golf and rec campus plus casino retail. Common first pin from Suite 103 when the ZIP is North Las Vegas.",
       },
       {
         name: "Craig Ranch / Craig Road employers",
@@ -193,7 +193,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "North Vista Hospital",
-        note: "North Las Vegas hospital pin. Confirm drive minutes the week you tour. Call (702) 222-1964.",
+        note: "North Las Vegas hospital pin. Confirm drive minutes the week you tour. Call (702) 820-5408.",
       },
     ],
   },
@@ -203,7 +203,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
     pins: [
       {
         name: "Exploration Peak Park",
-        note: "About 120 acres. Summit trail with Strip and mountain views. First stop from Suite 100 on a Mountains Edge day.",
+        note: "About 120 acres. Summit trail with Strip and mountain views. First stop from Suite 103 on a Mountains Edge day.",
       },
       {
         name: "Mountains Edge Marketplace",
@@ -211,7 +211,7 @@ export const neighborhoodAmenities: Record<string, NeighborhoodAmenityCopy> = {
       },
       {
         name: "Southern Hills Hospital",
-        note: "About 10 minutes. St. Rose Siena is the Henderson alternative. Call (702) 222-1964.",
+        note: "About 10 minutes. St. Rose Siena is the Henderson alternative. Call (702) 820-5408.",
       },
     ],
   },

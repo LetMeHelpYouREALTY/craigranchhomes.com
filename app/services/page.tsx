@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/services",
   title: "Real Estate Services Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Comprehensive real estate services from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 222-1964.",
+    "Comprehensive real estate services from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 820-5408.",
   keywords: [
     "Las Vegas real estate services",
     "Berkshire Hathaway services",
@@ -33,7 +33,7 @@ const servicesSchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    telephone: "+17028205408",
   },
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
   serviceType: "Real Estate Services",
@@ -61,7 +61,7 @@ const sellerTypes = [
   {
     title: "Move-Up Sellers",
     href: "/sellers/move-up",
-    description: "Coordinate the sale and the next purchase from Suite 100 so dates do not collide.",
+    description: "Coordinate the sale and the next purchase from Suite 103 so dates do not collide.",
   },
   {
     title: "Downsizing Sellers",
@@ -139,8 +139,8 @@ export default function ServicesPage() {
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               /buyers/california-relocator, /buyers/first-time-buyers, and
-              /buyers/luxury-homes-las-vegas are separate clocks from Suite 100. We do not stack
-              a Henderson luxury afternoon with a first-purchase FHA briefing. Call (702) 222-1964.
+              /buyers/luxury-homes-las-vegas are separate clocks from Suite 103. We do not stack
+              a Henderson luxury afternoon with a first-purchase FHA briefing. Call (702) 820-5408.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {buyerTypes.map((type) => (
@@ -168,8 +168,8 @@ export default function ServicesPage() {
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               /sellers/move-up, /sellers/downsizing, /sellers/divorce-probate, and
-              /sellers/relocation start with dates at 9406 W Lake Mead Blvd, Suite 100. The MLS
-              remarks wait until the occupancy and next-address clock is written. Call (702) 222-1964.
+              /sellers/relocation start with dates at 851 W Lone Mountain Rd, Suite 103. The MLS
+              remarks wait until the occupancy and next-address clock is written. Call (702) 820-5408.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {sellerTypes.map((type) => (

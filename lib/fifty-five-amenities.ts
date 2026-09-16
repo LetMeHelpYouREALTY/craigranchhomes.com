@@ -18,8 +18,8 @@ export type FiftyFiveAmenityCopy = {
 
 export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
   "/55-plus-communities": {
-    h2: "Which rec campus we walk first from Suite 100",
-    body: "Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. We review HOA packets at 9406 W Lake Mead Blvd before we drive to clubhouses.",
+    h2: "Which rec campus we walk first from Suite 103",
+    body: "Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. We review HOA packets at 851 W Lone Mountain Rd before we drive to clubhouses.",
     pins: [
       {
         name: "Sun City Summerlin rec",
@@ -31,13 +31,13 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "Lake Las Vegas Del Webb",
-        note: "35–45 minutes. Lakefront rec, not a Summerlin clone. Call (702) 222-1964.",
+        note: "35–45 minutes. Lakefront rec, not a Summerlin clone. Call (702) 820-5408.",
       },
     ],
   },
   "/55-plus-communities/sun-city-summerlin": {
     h2: "Highland Falls, Palm Valley, Eagle Crest — three courses, four rec buildings",
-    body: "We pick one rec building and one course per visit so you are not touring 7,700 homes in a blur. Suite 100 is 10–15 minutes.",
+    body: "We pick one rec building and one course per visit so you are not touring 7,700 homes in a blur. Suite 103 is 10–15 minutes.",
     pins: [
       {
         name: "Mountain Shadows Recreation Center",
@@ -49,13 +49,13 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "Pinnacle and Desert Vista rec",
-        note: "The other two rec buildings. We do not walk all four the first afternoon. Call (702) 222-1964.",
+        note: "The other two rec buildings. We do not walk all four the first afternoon. Call (702) 820-5408.",
       },
     ],
   },
   "/55-plus-communities/sun-city-anthem": {
     h2: "Anthem Center first — 64,000 sq ft before any Henderson golf add-on",
-    body: "30–35 minutes from Suite 100. Anthem Center is the indoor/outdoor rec campus. Golf is a second pin, not the H2.",
+    body: "30–35 minutes from Suite 103. Anthem Center is the indoor/outdoor rec campus. Golf is a second pin, not the H2.",
     pins: [
       {
         name: "Anthem Center",
@@ -67,13 +67,13 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "McCullough Range views",
-        note: "Fairway and street views vary by block. Measure from the listing, not the clubhouse lawn. Call (702) 222-1964.",
+        note: "Fairway and street views vary by block. Measure from the listing, not the clubhouse lawn. Call (702) 820-5408.",
       },
     ],
   },
   "/55-plus-communities/trilogy-summerlin": {
     h2: "Club restaurant, spa, then the pool terrace — Trilogy rec in one west stop",
-    body: "Trilogy sits in Summerlin, 10–20 minutes from Suite 100. Rec is clubhouse-scale, not a four-building Sun City campus.",
+    body: "Trilogy sits in Summerlin, 10–20 minutes from Suite 103. Rec is clubhouse-scale, not a four-building Sun City campus.",
     pins: [
       {
         name: "On-site restaurant",
@@ -85,7 +85,7 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "Pool terrace",
-        note: "Resort pool at the clubhouse. Pair with Downtown Summerlin only if time remains. Call (702) 222-1964.",
+        note: "Resort pool at the clubhouse. Pair with Downtown Summerlin only if time remains. Call (702) 820-5408.",
       },
     ],
   },
@@ -103,7 +103,7 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "Downtown Summerlin",
-        note: "West-valley retail after the gate. Call (702) 222-1964.",
+        note: "West-valley retail after the gate. Call (702) 820-5408.",
       },
     ],
   },
@@ -113,7 +113,7 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
     pins: [
       {
         name: "Solera clubhouse and pool",
-        note: "Boutique rec. Walk it after we review occupancy at Suite 100.",
+        note: "Boutique rec. Walk it after we review occupancy at Suite 103.",
       },
       {
         name: "Tennis / pickleball",
@@ -121,13 +121,13 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "St. Rose / Henderson Hospital",
-        note: "Henderson hospital pins on the same east clock. Call (702) 222-1964.",
+        note: "Henderson hospital pins on the same east clock. Call (702) 820-5408.",
       },
     ],
   },
   "/55-plus-communities/sun-city-aliante": {
     h2: "Aliante rec and golf, then Craig Road — North Las Vegas 55+ pins",
-    body: "Not a Summerlin rec day. Aliante rec sits with desert-hills golf. Suite 100 is a west-valley start; we drive northwest as its own loop.",
+    body: "Not a Summerlin rec day. Aliante rec sits with desert-hills golf. Suite 103 is a west-valley start; we drive northwest as its own loop.",
     pins: [
       {
         name: "Sun City Aliante recreation",
@@ -139,7 +139,7 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "Craig Road employers",
-        note: "Commute check for anyone still working. Call (702) 222-1964.",
+        note: "Commute check for anyone still working. Call (702) 820-5408.",
       },
     ],
   },
@@ -149,7 +149,7 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
     pins: [
       {
         name: "Del Webb clubhouse and pools",
-        note: "Resort rec on the lake plat. Walk it after the HOA packet at Suite 100.",
+        note: "Resort rec on the lake plat. Walk it after the HOA packet at Suite 103.",
       },
       {
         name: "MonteLago Village",
@@ -157,7 +157,7 @@ export const fiftyFiveAmenities: Record<string, FiftyFiveAmenityCopy> = {
       },
       {
         name: "Lake path / shoreline",
-        note: "Measure the walk from the listing, not the marketing aerial. Call (702) 222-1964.",
+        note: "Measure the walk from the listing, not the marketing aerial. Call (702) 820-5408.",
       },
     ],
   },

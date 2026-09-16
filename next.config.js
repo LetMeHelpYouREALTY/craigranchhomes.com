@@ -15,6 +15,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'imagedelivery.net' },
       { protocol: 'https', hostname: 'images.heyberkshire.com' },
+      { protocol: 'https', hostname: 'images.craigranchhomes.com' },
     ],
   },
 
@@ -32,10 +33,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'heyberkshire.com',
+            value: 'craigranchhomes.com',
           },
         ],
-        destination: 'https://www.heyberkshire.com/:path*',
+        destination: 'https://www.craigranchhomes.com/:path*',
         permanent: true,
       },
     ]

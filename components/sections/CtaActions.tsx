@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Phone, Mail, Calendar } from "lucide-react";
-import { ctaPhone, nap } from "@/lib/contact";
+import { Phone, Mail, Calendar, MessageSquare } from "lucide-react";
+import { ctaPhone, smsPhone, nap } from "@/lib/contact";
 
 type CtaActionsProps = {
   variant?: "onDark" | "onLight";
@@ -34,9 +34,16 @@ export default function CtaActions({
           <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
           Call {ctaPhone.display}
         </a>
+        <a
+          href={smsPhone.href}
+          className={`inline-flex items-center justify-center px-8 py-4 rounded-md font-bold text-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${messageClass}`}
+        >
+          <MessageSquare className="h-5 w-5 mr-2" aria-hidden="true" />
+          Text {smsPhone.display}
+        </a>
         <Link
           href="/contact"
-          className={`inline-flex items-center justify-center px-8 py-4 rounded-md font-bold text-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${messageClass}`}
+          className={`inline-flex items-center justify-center px-8 py-4 rounded-md font-bold text-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${bookClass}`}
         >
           <Mail className="h-5 w-5 mr-2" aria-hidden="true" />
           Send a Message
@@ -50,7 +57,7 @@ export default function CtaActions({
         </Link>
       </div>
       <p className={`mt-6 text-center text-sm ${napClass}`}>
-        {nap.brokerage} · {nap.fullAddress} · Call {ctaPhone.display}
+        {nap.name} · {nap.fullAddress} · Call or text {ctaPhone.display}
       </p>
     </div>
   );

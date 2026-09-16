@@ -1,5 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import { Phone, Mail, MapPin, Clock, Calendar, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Star, MessageSquare } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -12,19 +12,19 @@ import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import LeftoverBand from "@/components/sections/LeftoverBand";
 
-import { ctaPhone, officePhone, nap, maps, googleReviewsUrl, hoursSummary } from "@/lib/contact";
+import { ctaPhone, smsPhone, nap, maps, googleReviewsUrl, hoursSummary, businessHours } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   path: "/contact",
-  title: "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+  title: "Contact Craig Ranch Homes | Dr. Jan Duffy | (702) 820-5408",
   description:
-    "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 222-1964. Las Vegas, Henderson, Summerlin real estate expert.",
+    "Call or text (702) 820-5408. Craig Ranch Homes, 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Service area: North Las Vegas, NV 89031. Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday closed.",
   keywords: [
-    "contact real estate agent Las Vegas",
-    "Berkshire Hathaway contact",
+    "contact Craig Ranch Homes",
     "Dr. Jan Duffy phone",
-    "Las Vegas realtor contact",
-    "schedule real estate appointment",
+    "North Las Vegas realtor contact",
+    "Craig Ranch real estate office",
+    "851 W Lone Mountain Rd",
   ],
 });
 
@@ -33,15 +33,15 @@ const contactSchema = {
   "@type": "ContactPage",
   mainEntity: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
-    email: "homes@heyberkshire.com",
+    name: nap.name,
+    telephone: ctaPhone.tel,
+    email: nap.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89134",
+      streetAddress: nap.street,
+      addressLocality: nap.city,
+      addressRegion: nap.state,
+      postalCode: nap.zip,
       addressCountry: "US",
     },
   },
@@ -59,17 +59,16 @@ export default function ContactPage() {
           {/* Hero */}
           <div className="text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Craig Ranch Homes · North Las Vegas 89031
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Contact Dr. Jan Duffy
+              Contact Craig Ranch Homes
             </h1>
             <HeadingPhoto path="/contact" />
 
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-              Questions about Las Vegas real estate? Your{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> expert is here to help. 
-              Schedule an appointment or reach out directly.
+              Questions about buying or selling in Craig Ranch? Call or text{" "}
+              <strong>{ctaPhone.display}</strong>. Office at {nap.fullAddress}. Hours: {hoursSummary}.
             </p>
             <CtaActions variant="onLight" bookLabel="Book a Consultation" />
           <OfficeProximity path="/contact" />
@@ -88,7 +87,7 @@ export default function ContactPage() {
                 <div className="flex items-start bg-slate-50 rounded-lg p-4">
                   <Phone className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">Phone (Call or Text)</h3>
+                    <h3 className="font-semibold text-slate-900 mb-1">Call</h3>
                     <a
                       href={ctaPhone.href}
                       className="text-2xl font-bold text-blue-600 hover:text-blue-700"
@@ -96,14 +95,15 @@ export default function ContactPage() {
                       {ctaPhone.display}
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
-                      Client line — Dr. Jan answers this number
+                      Google Business phone — Dr. Jan answers this number
                     </p>
-                    <p className="text-sm text-slate-600 mt-2">
-                      Office / Google Business:{" "}
-                      <a href={officePhone.href} className="font-semibold text-blue-600 hover:text-blue-700">
-                        {officePhone.display}
-                      </a>
-                    </p>
+                    <a
+                      href={smsPhone.href}
+                      className="mt-3 inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    >
+                      <MessageSquare className="h-4 w-4 mr-2" aria-hidden="true" />
+                      Text {smsPhone.display}
+                    </a>
                   </div>
                 </div>
 
@@ -112,10 +112,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href={nap.emailHref}
                       className="text-blue-600 hover:text-blue-700 font-medium"
                     >
-                      Homes@HeyBerkshire.com
+                      {nap.email}
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
                       Typically respond within 2 hours
@@ -128,10 +128,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Office Address</h3>
                     <address className="not-italic text-slate-700">
-                      Berkshire Hathaway HomeServices<br />
-                      Nevada Properties<br />
-                      9406 W Lake Mead Blvd, Suite 100<br />
-                      Las Vegas, NV 89134
+                      {nap.name}<br />
+                      {nap.street}<br />
+                      {nap.city}, {nap.state} {nap.zip}
                     </address>
                   </div>
                 </div>
@@ -141,9 +140,14 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Office Hours</h3>
                     <p className="text-slate-700">{hoursSummary}</p>
-                    <p className="text-sm text-slate-500 mt-1">
-                      Available by appointment outside posted hours
-                    </p>
+                    <ul className="text-sm text-slate-600 mt-2 space-y-0.5">
+                      {businessHours.map((row) => (
+                        <li key={row.day} className="flex justify-between gap-4 max-w-xs">
+                          <span>{row.day}</span>
+                          <span>{row.label}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -158,7 +162,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Berkshire Hathaway HomeServices Nevada Properties - Office Location"
+                  title={`Map to ${nap.name} at ${nap.fullAddress}`}
                   className="w-full"
                 />
               </div>
@@ -201,7 +205,7 @@ export default function ContactPage() {
               <div id="schedule" className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-blue-600 text-white p-6 text-center">
                   <Calendar className="h-10 w-10 mx-auto mb-3" />
-                  <h2 className="text-2xl font-bold mb-2">Book Calendly for Suite 100, a phone consult, or a showing</h2>
+                  <h2 className="text-2xl font-bold mb-2">Book Calendly for Suite 103, a phone consult, or a showing</h2>
                   <p className="text-blue-100">
                     Book a time that works for you—phone consultation, property showing, 
                     or in-person meeting at our office.
@@ -217,26 +221,22 @@ export default function ContactPage() {
           {/* Service Areas Section */}
           <section className="max-w-5xl mx-auto mt-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              ZIPs we time from 9406 W Lake Mead Blvd
+              Service area: North Las Vegas, NV 89031
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Summerlin is 10–15 minutes. Henderson and Green Valley are 25–35. Southern Highlands
-              is 25–35 via I-15. Call (702) 222-1964. We will not tour twelve ZIPs in one afternoon.
+              Craig Ranch Homes focuses on Craig Ranch, ZIP 89031. Tours start at {nap.fullAddress}.
+              Call or text {ctaPhone.display}. Hours: {hoursSummary}.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                "Las Vegas",
-                "Henderson",
-                "Summerlin",
-                "Green Valley",
-                "North Las Vegas",
-                "Southern Highlands",
-                "Skye Canyon",
+                "Craig Ranch",
+                "North Las Vegas 89031",
                 "Centennial Hills",
-                "The Ridges",
-                "Inspirada",
-                "Mountains Edge",
-                "Spring Valley",
+                "Aliante",
+                "Skye Canyon",
+                "Nellis AFB commute",
+                "Lone Mountain",
+                "North Las Vegas",
               ].map((area) => (
                 <div key={area} className="bg-slate-50 rounded-lg p-3 text-center hover:bg-blue-50 transition-colors">
                   <span className="text-slate-700 font-medium text-sm">{area}</span>

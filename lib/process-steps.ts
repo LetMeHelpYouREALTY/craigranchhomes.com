@@ -19,8 +19,8 @@ export type ProcessCopy = {
 export const processSteps: Record<string, ProcessCopy[]> = {
   "/buyers": [
     {
-      h2: "Five buyer clocks from Suite 100, not a copied MLS-search loop",
-      body: "This page is representation: lender letter, two-ZIP tours, inspections, and occupancy. Live inventory search lives on /listings. Call (702) 222-1964. 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+      h2: "Five buyer clocks from Suite 103, not a copied MLS-search loop",
+      body: "This page is representation: lender letter, two-ZIP tours, inspections, and occupancy. Live inventory search lives on /listings. Call (702) 820-5408. 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032.",
       steps: [
         {
           title: "Lender letter before the first showing",
@@ -28,7 +28,7 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "Beds, baths, and square footage on the saved search",
-          body: "RealScout holds the live MLS. We set filters at Suite 100 so alerts match the budget on the letter, not a wish list.",
+          body: "RealScout holds the live MLS. We set filters at Suite 103 so alerts match the budget on the letter, not a wish list.",
         },
         {
           title: "Two-ZIP tour, not twelve",
@@ -36,11 +36,11 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "Inspection, appraisal, and HOA docs in writing",
-          body: "Repair credits and occupancy dates are written at 9406 W Lake Mead Blvd. Named campuses (Palo Verde, Coronado, Arbor View) are commute minutes by address at ccsd.net/zoning.",
+          body: "Repair credits and occupancy dates are written at 851 W Lone Mountain Rd. Named campuses (Palo Verde, Coronado, Arbor View) are commute minutes by address at ccsd.net/zoning.",
         },
         {
           title: "Keys after the occupancy date is on the calendar",
-          body: "Typical close is 30–45 days from acceptance. Call (702) 222-1964 when the letter is in hand. Office/GBP (702) 500-1942.",
+          body: "Typical close is 30–45 days from acceptance. Call (702) 820-5408 when the letter is in hand. Office/GBP (702) 820-5408.",
         },
       ],
     },
@@ -48,7 +48,7 @@ export const processSteps: Record<string, ProcessCopy[]> = {
   "/listings": [
     {
       h2: "Filter this MLS, save addresses, then book — offer math lives on /buyers",
-      body: "This hub is inventory. Pre-approval, inspections, and closing are the buyers page. Agent ID QWdlbnQtMjI1MDUw. Call (702) 222-1964 when two addresses are tour-ready.",
+      body: "This hub is inventory. Pre-approval, inspections, and closing are the buyers page. Agent ID QWdlbnQtMjI1MDUw. Call (702) 820-5408 when two addresses are tour-ready.",
       steps: [
         {
           title: "Set price and bed filters before you scroll",
@@ -60,15 +60,15 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "Save a shortlist of addresses, not a camera roll",
-          body: "RealScout saves the search. We sequence Summerlin, Henderson, or 55+ from 9406 W Lake Mead Blvd, Suite 100.",
+          body: "RealScout saves the search. We sequence Summerlin, Henderson, or 55+ from 851 W Lone Mountain Rd, Suite 103.",
         },
         {
           title: "Book the showing clock, not a random open-house hopscotch",
-          body: "Call (702) 222-1964 with the saved-search link. Same-day tours start at this pin. Do not add twelve ZIPs to one afternoon.",
+          body: "Call (702) 820-5408 with the saved-search link. Same-day tours start at this pin. Do not add twelve ZIPs to one afternoon.",
         },
         {
           title: "Leave the offer, inspection, and keys on the buyers page",
-          body: "This URL is search chassis. Representation, lender letters, and occupancy dates are /buyers. Office/GBP (702) 500-1942.",
+          body: "This URL is search chassis. Representation, lender letters, and occupancy dates are /buyers. Office/GBP (702) 820-5408.",
         },
       ],
     },
@@ -76,7 +76,7 @@ export const processSteps: Record<string, ProcessCopy[]> = {
   "/services": [
     {
       h2: "Intake, MLS filters, and closing paperwork — four clocks, one west-valley desk",
-      body: "Buyer, listing, 55+, and relocation files start at 9406 W Lake Mead Blvd, Suite 100 so showing routes and BHHS paperwork share one start. Call (702) 222-1964.",
+      body: "Buyer, listing, 55+, and relocation files start at 851 W Lone Mountain Rd, Suite 103 so showing routes and BHHS paperwork share one start. Call (702) 820-5408.",
       steps: [
         {
           title: "Intake on address, timeline, and occupancy",
@@ -92,17 +92,17 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "Closing with keys, utilities, and HOA transfer",
-          body: "Keys after occupancy is on the calendar. Call (702) 222-1964. Berkshire Hathaway HomeServices Nevada Properties · License S.0197614.LLC.",
+          body: "Keys after occupancy is on the calendar. Call (702) 820-5408. Berkshire Hathaway HomeServices Nevada Properties · License S.0197614.LLC.",
         },
       ],
     },
     {
       h2: "What BHHS Nevada Properties actually stamps on the contract",
-      body: "The brokerage name on the file is Berkshire Hathaway HomeServices Nevada Properties, not a swapped slogan card. Volume cited on this site: $127M+ since 2008. Call (702) 222-1964.",
+      body: "The brokerage name on the file is Berkshire Hathaway HomeServices Nevada Properties, not a swapped slogan card. Volume cited on this site: $127M+ since 2008. Call (702) 820-5408.",
       steps: [
         {
           title: "Brokerage line on every listing and buyer agreement",
-          body: "Dr. Jan Duffy, license S.0197614.LLC. 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Office/GBP (702) 500-1942.",
+          body: "Dr. Jan Duffy, license S.0197614.LLC. 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Office/GBP (702) 820-5408.",
         },
         {
           title: "Written disclosure standards on every file",
@@ -110,7 +110,7 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "Referral desks for inbound California and outbound states",
-          body: "BHHS destination agents are briefed from this office. Local showings still start at Suite 100 — 10–15 minutes to most Summerlin villages.",
+          body: "BHHS destination agents are briefed from this office. Local showings still start at Suite 103 — 10–15 minutes to most Summerlin villages.",
         },
       ],
     },
@@ -118,11 +118,11 @@ export const processSteps: Record<string, ProcessCopy[]> = {
   "/why-berkshire-hathaway": [
     {
       h2: "Brokerage, syndication, and photography — named on the listing file",
-      body: "Brand questions are answered on-site: who photographs, who writes remarks, who negotiates. Call (702) 222-1964. License S.0197614.LLC.",
+      body: "Brand questions are answered on-site: who photographs, who writes remarks, who negotiates. Call (702) 820-5408. License S.0197614.LLC.",
       steps: [
         {
           title: "BHHS Nevada Properties on the listing agreement",
-          body: "The brokerage on the contract is Berkshire Hathaway HomeServices Nevada Properties. Samples are reviewed at 9406 W Lake Mead Blvd, Suite 100.",
+          body: "The brokerage on the contract is Berkshire Hathaway HomeServices Nevada Properties. Samples are reviewed at 851 W Lone Mountain Rd, Suite 103.",
         },
         {
           title: "Listing syndication beyond the local MLS",
@@ -138,11 +138,11 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "Berkshire Hathaway Inc. named as the parent, not a slogan",
-          body: "Financial backing is the parent company name. Local showing still starts at Suite 100.",
+          body: "Financial backing is the parent company name. Local showing still starts at Suite 103.",
         },
         {
           title: "Closed-file street comps you can ask for at the desk",
-          body: "Ask for recent closes on your street. Call (702) 222-1964. We will not invent a price. Office/GBP (702) 500-1942.",
+          body: "Ask for recent closes on your street. Call (702) 820-5408. We will not invent a price. Office/GBP (702) 820-5408.",
         },
       ],
     },
@@ -150,15 +150,15 @@ export const processSteps: Record<string, ProcessCopy[]> = {
   "/contact": [
     {
       h2: "What happens after you call the Lake Mead Blvd desk",
-      body: "Walk-ins during posted hours are welcome at Suite 100. Calendly showings can start here and continue to the property. Call or text (702) 222-1964. Email homes@heyberkshire.com for documents — not listing keys.",
+      body: "Walk-ins during posted hours are welcome at Suite 103. Calendly showings can start here and continue to the property. Call or text (702) 820-5408. Email DrDuffy@CraigRanchHomes.com for documents — not listing keys.",
       steps: [
         {
           title: "A named agent, not a round-robin call center",
-          body: "Dr. Jan Duffy, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. The Maps pin is 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+          body: "Dr. Jan Duffy, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. The Maps pin is 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032.",
         },
         {
           title: "Same-day reply on the number you left",
-          body: "Client CTA (702) 222-1964. Office/GBP (702) 500-1942. Do not swap the lines. Hours: Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+          body: "Client CTA (702) 820-5408. Office/GBP (702) 820-5408. Do not swap the lines. Hours: Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday closed.",
         },
         {
           title: "Showing or listing appointment on the calendar",
@@ -169,8 +169,8 @@ export const processSteps: Record<string, ProcessCopy[]> = {
   ],
   "/luxury-homes": [
     {
-      h2: "How a $1M+ listing is marketed from Suite 100",
-      body: "Photography, gate access, and off-market windows are scoped at 9406 W Lake Mead Blvd before any public caption. Drive times: Ridges 15–20 minutes, Southern Highlands 25–35, Lake Las Vegas 35–45. Call (702) 222-1964.",
+      h2: "How a $1M+ listing is marketed from Suite 103",
+      body: "Photography, gate access, and off-market windows are scoped at 851 W Lone Mountain Rd before any public caption. Drive times: Ridges 15–20 minutes, Southern Highlands 25–35, Lake Las Vegas 35–45. Call (702) 820-5408.",
       steps: [
         {
           title: "Named brokerage on the listing agreement",
@@ -186,7 +186,7 @@ export const processSteps: Record<string, ProcessCopy[]> = {
         },
         {
           title: "A dedicated listing coordinator, not a concierge caption",
-          body: "Who photographs, who writes remarks, who negotiates — named at the desk. Call (702) 222-1964. Office/GBP (702) 500-1942.",
+          body: "Who photographs, who writes remarks, who negotiates — named at the desk. Call (702) 820-5408. Office/GBP (702) 820-5408.",
         },
       ],
     },

@@ -152,8 +152,8 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: [
       '<LeftoverBand path="/google-business" />',
       '<LeftoverBand path="/google-business" slot={1} />',
-      "Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 100",
-      "Maps pin at 9406 W Lake Mead Blvd",
+      "Mon–Fri 9am–6pm, Sat 10am–4pm at Suite 103",
+      "Maps pin at 851 W Lone Mountain Rd",
     ],
     banned: [
       ">Real Estate Services<",
@@ -188,7 +188,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   {
     file: "app/about/page.tsx",
     needles: [
-      "commute minutes from Suite 100",
+      "commute minutes from Suite 103",
       '<LeftoverBand path="/about" />',
       '<LeftoverBand path="/about" slot={1} />',
     ],
@@ -261,7 +261,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
   {
     file: "app/neighborhoods/henderson/page.tsx",
     needles: [
-      "drive time from Suite 100",
+      "drive time from Suite 103",
       '<LeftoverBand path="/neighborhoods/henderson" />',
     ],
     banned: ["every lifestyle and budget", "trusted specialist"],
@@ -393,7 +393,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       '<LeftoverBand path="/relocation" slot={1} />',
       '<LeftoverBand path="/relocation" slot={2} />',
       "California paycheck, Nevada PITI",
-      "Book Suite 100 before the first inbound ZIP",
+      "Book Suite 103 before the first inbound ZIP",
     ],
     banned: [
       "unique lifestyle",

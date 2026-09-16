@@ -27,7 +27,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/buyers/first-time-buyers",
   title: "First-Time Home Buyers Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "First-time buyer in Las Vegas? Down payment assistance, builder incentives, and expert guidance from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Call (702) 222-1964.",
+    "First-time buyer in Las Vegas? Down payment assistance, builder incentives, and expert guidance from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Call (702) 820-5408.",
   keywords: [
     "first time home buyer Las Vegas",
     "first time buyer Nevada",
@@ -80,7 +80,7 @@ export default function FirstTimeBuyersPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Lender letter at Suite 100, then two ZIPs — Calendly or (702) 222-1964
+              Lender letter at Suite 103, then two ZIPs — Calendly or (702) 820-5408
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Let's talk about your options. Dr. Jan Duffy will help you understand what you can

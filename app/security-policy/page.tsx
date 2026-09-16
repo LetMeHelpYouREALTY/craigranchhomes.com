@@ -11,7 +11,7 @@ import { nap } from "@/lib/contact";
 export const metadata: Metadata = pageMetadata({
   path: "/security-policy",
   title: 'Security Policy',
-  description: 'Security policy and responsible disclosure information for heyberkshire.com',
+  description: 'Security policy and responsible disclosure information for craigranchhomes.com',
   robots: {
     index: true,
     follow: true,
@@ -39,14 +39,14 @@ export default function SecurityPolicyPage() {
               <ul className="space-y-2 text-blue-800">
                 <li>
                   <strong>Email:</strong>{' '}
-                  <a href="mailto:security@heyberkshire.com" className="underline">
-                    security@heyberkshire.com
+                  <a href="mailto:security@craigranchhomes.com" className="underline">
+                    security@craigranchhomes.com
                   </a>
                 </li>
                 <li>
                   <strong>Phone:</strong>{' '}
-                  <a href="tel:+17022221964" className="underline">
-                    (702) 222-1964
+                  <a href="tel:+17028205408" className="underline">
+                    (702) 820-5408
                   </a>
                 </li>
                 <li>
@@ -187,7 +187,7 @@ export default function SecurityPolicyPage() {
               To protect your information when using our site:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Ensure you're on the correct domain: <strong>heyberkshire.com</strong></li>
+              <li>Ensure you're on the correct domain: <strong>craigranchhomes.com</strong></li>
               <li>Look for the padlock icon (HTTPS)</li>
               <li>Don't share sensitive information via email</li>
               <li>Use strong, unique passwords if creating an account</li>
@@ -216,14 +216,14 @@ export default function SecurityPolicyPage() {
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+17022221964" className="text-blue-600 underline">
-                  (702) 222-1964
+                <a href="tel:+17028205408" className="text-blue-600 underline">
+                  (702) 820-5408
                 </a>
               </p>
               <address className="not-italic mt-4 text-gray-700">
                 Dr. Jan Duffy — Berkshire Hathaway HomeServices Nevada Properties
                 <br />
-                9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134
+                851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
               </address>
             </div>
             <div className="mt-8">

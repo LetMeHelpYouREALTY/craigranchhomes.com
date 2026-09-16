@@ -120,7 +120,7 @@ export default function MarketReportPage() {
           {/* Buyer and seller takeaways */}
           <section className="mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              What the January 2026 snapshot means at Suite 100
+              What the January 2026 snapshot means at Suite 103
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-slate-200 rounded-lg p-6">
