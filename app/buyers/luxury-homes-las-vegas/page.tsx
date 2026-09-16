@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/buyers/luxury-homes-las-vegas",
   title: "Luxury Homes Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Las Vegas luxury real estate from $1.2M to $10M+. Guard-gated estates, Strip penthouses, and custom homes. Dr. Jan Duffy provides discrete, expert representation. Call (702) 222-1964.",
+    "Las Vegas luxury real estate from $1.2M to $10M+. Guard-gated estates, Strip penthouses, and custom homes. Dr. Jan Duffy provides discrete, expert representation. Call (702) 820-5408.",
   keywords: [
     "luxury homes Las Vegas",
     "The Ridges Las Vegas",
@@ -140,11 +140,11 @@ export default function LuxuryHomesPage() {
           {/* CTA */}
           <section className="text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ridges or MacDonald Highlands first — book the gate block from Suite 100
+              Ridges or MacDonald Highlands first — book the gate block from Suite 103
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Call (702) 222-1964. Addresses stay off unsecured threads. 9406 W Lake Mead Blvd,
-              Suite 100 is where the showing clock is written.
+              Call (702) 820-5408. Addresses stay off unsecured threads. 851 W Lone Mountain Rd,
+              Suite 103 is where the showing clock is written.
             </p>
             <CtaActions variant="onDark" bookLabel="Request Private Showing" />
           </section>

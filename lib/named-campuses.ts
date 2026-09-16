@@ -19,7 +19,7 @@ export type NamedCampusCopy = {
 export const namedCampuses: Record<string, NamedCampusCopy> = {
   "/neighborhoods": {
     h3: "Named campuses by village, never a valley-wide slogan",
-    body: "Each neighborhood page lists campuses we can place on a map from 9406 W Lake Mead Blvd, Suite 100. Summerlin pages lead with Palo Verde High School. Henderson pages lead with Coronado High School or Green Valley High School. Northwest pages lead with Arbor View High School or Shadow Ridge High School. We publish names and drive times, not star ratings.",
+    body: "Each neighborhood page lists campuses we can place on a map from 851 W Lone Mountain Rd, Suite 103. Summerlin pages lead with Palo Verde High School. Henderson pages lead with Coronado High School or Green Valley High School. Northwest pages lead with Arbor View High School or Shadow Ridge High School. We publish names and drive times, not star ratings.",
     campuses: [
       {
         name: "Palo Verde High School",
@@ -31,7 +31,7 @@ export const namedCampuses: Record<string, NamedCampusCopy> = {
       },
       {
         name: "Arbor View High School",
-        note: "Centennial Hills / northwest loop via US-95 from Suite 100",
+        note: "Centennial Hills / northwest loop via US-95 from Suite 103",
       },
       {
         name: "CCSD Zoning Search",
@@ -41,11 +41,11 @@ export const namedCampuses: Record<string, NamedCampusCopy> = {
   },
   "/neighborhoods/summerlin": {
     h3: "Palo Verde, Rogich, and West CTA — named, then verified by street",
-    body: "Summerlin villages do not share one feeder. Palo Verde High School sits on Pavilion Center Drive. Sig Rogich Middle School is the west-valley campus we map most often from Suite 100. West Career & Technical Academy is a magnet with an application, not a default zone. John C. Vanderburg Elementary is a Henderson campus and is not a Summerlin-wide assignment.",
+    body: "Summerlin villages do not share one feeder. Palo Verde High School sits on Pavilion Center Drive. Sig Rogich Middle School is the west-valley campus we map most often from Suite 103. West Career & Technical Academy is a magnet with an application, not a default zone. John C. Vanderburg Elementary is a Henderson campus and is not a Summerlin-wide assignment.",
     campuses: [
       {
         name: "Palo Verde High School",
-        note: "333 S Pavilion Center Dr; timed from 9406 W Lake Mead Blvd before we leave",
+        note: "333 S Pavilion Center Dr; timed from 851 W Lone Mountain Rd before we leave",
       },
       {
         name: "Sig Rogich Middle School",
@@ -129,11 +129,11 @@ export const namedCampuses: Record<string, NamedCampusCopy> = {
   },
   "/neighborhoods/centennial-hills": {
     h3: "Arbor View, Centennial High, and park-loop minutes",
-    body: "Centennial Hills tours from Suite 100 map Arbor View High School and Centennial High School by the listing street, then add Centennial Hills Park and Centennial Center so the day stays one northwest loop. John R. Hummel Elementary sits in the southwest valley, not this master plan — it is not copied onto this page.",
+    body: "Centennial Hills tours from Suite 103 map Arbor View High School and Centennial High School by the listing street, then add Centennial Hills Park and Centennial Center so the day stays one northwest loop. John R. Hummel Elementary sits in the southwest valley, not this master plan — it is not copied onto this page.",
     campuses: [
       {
         name: "Arbor View High School",
-        note: "Named northwest high school timed from 9406 W Lake Mead Blvd via US-95",
+        note: "Named northwest high school timed from 851 W Lone Mountain Rd via US-95",
       },
       {
         name: "Centennial High School",
@@ -167,7 +167,7 @@ export const namedCampuses: Record<string, NamedCampusCopy> = {
       },
       {
         name: "The District at Green Valley Ranch",
-        note: "Retail midpoint for Henderson tours; 25–35 minutes from Suite 100 via I-215",
+        note: "Retail midpoint for Henderson tours; 25–35 minutes from Suite 103 via I-215",
       },
     ],
   },

@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/the-ridges",
   title: "Berkshire Hathaway HomeServices The Ridges | Las Vegas Luxury Real Estate",
   description:
-    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 222-1964.",
+    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices The Ridges",
     "The Ridges homes for sale",
@@ -95,7 +95,7 @@ export default function TheRidgesPage() {
                 community offers estate-quality homes with panoramic views of the Las Vegas Strip, the
                 surrounding mountains, and the desert landscape. When buyers compare ridge-top lots
                 to Downtown Summerlin retail, they start with <strong>Berkshire Hathaway HomeServices</strong>
-                so gate lists and showing windows are confirmed from Suite 100.
+                so gate lists and showing windows are confirmed from Suite 103.
               </p>
               <p>
                 The Ridges comprises six distinctive villages—Bear's Best, Falcon Ridge, Azure, Talon Ridge,
@@ -110,7 +110,7 @@ export default function TheRidgesPage() {
                 and sellers in The Ridges since the community's inception. Dr. Jan Duffy understands that
                 luxury transactions require gate lists, photography scoped in writing, and addresses
                 kept off group texts. The BHHS referral desk connects Ridges appointments from
-                9406 W Lake Mead Blvd, Suite 100 — typically 15–20 minutes to the guardhouse.
+                851 W Lone Mountain Rd, Suite 103 — typically 15–20 minutes to the guardhouse.
               </p>
 
               <CommunityHighlights path="/neighborhoods/the-ridges" />
@@ -133,10 +133,10 @@ export default function TheRidgesPage() {
               </p>
               <p>
                 Working with <strong>Berkshire Hathaway HomeServices</strong> in The Ridges means working
-                with agents who schedule gate lists, photography, and off-market windows from Suite 100.
+                with agents who schedule gate lists, photography, and off-market windows from Suite 103.
                 Dr. Jan Duffy coordinates access with architects, designers, and property managers when
                 the brief includes those vendors. When the list price is measured in millions,
-                the Berkshire Hathaway name is on the paperwork at 9406 W Lake Mead Blvd.
+                the Berkshire Hathaway name is on the paperwork at 851 W Lone Mountain Rd.
               </p>
             </div>
           </section>
@@ -148,11 +148,11 @@ export default function TheRidgesPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Put your name on a Ridges gate list from Suite 100
+              Put your name on a Ridges gate list from Suite 103
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Book a confidential Ridges gate tour. Estate showings are sequenced from the
-              9406 W Lake Mead Blvd office so you are not sitting in valley traffic between villages.
+              851 W Lone Mountain Rd office so you are not sitting in valley traffic between villages.
             </p>
             <CtaActions variant="onDark" />
           </section>

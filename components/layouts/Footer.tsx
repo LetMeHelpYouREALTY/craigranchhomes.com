@@ -10,16 +10,18 @@ import {
   Youtube,
   Navigation,
   Star,
+  MessageSquare,
 } from "lucide-react";
 import {
   ctaPhone,
-  officePhone,
+  smsPhone,
   nap,
   businessHours,
   maps,
   googleReviewsUrl,
   socialProfiles,
   SITE_URL,
+  hoursSummary,
 } from "@/lib/contact";
 import MlsDisclaimer from "@/components/shared/MlsDisclaimer";
 
@@ -31,10 +33,10 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div>
-            <h2 className="font-bold text-xl mb-4">Berkshire Hathaway HomeServices</h2>
+            <h2 className="font-bold text-xl mb-4">{nap.name}</h2>
             <p className="text-slate-300 mb-4 text-sm">
-              Nevada Properties — Dr. Jan Duffy, REALTOR®. Buying, selling, and relocating in Las
-              Vegas, Henderson, and Summerlin.
+              Hyperlocal real estate in Craig Ranch, North Las Vegas (ZIP 89031). Dr. Jan Duffy,
+              REALTOR®, {nap.brokerage}.
             </p>
             <address className="not-italic text-slate-300 text-sm mb-4">
               {nap.street}
@@ -153,11 +155,17 @@ export default function Footer() {
                   href={ctaPhone.href}
                   className="text-slate-300 hover:text-white transition-colors text-sm font-semibold"
                 >
-                  Call or text {ctaPhone.display}
+                  Call {ctaPhone.display}
                 </a>
               </li>
-              <li className="flex items-center text-slate-400 text-xs pl-8">
-                Office (GBP): {officePhone.display}
+              <li className="flex items-center">
+                <MessageSquare className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
+                <a
+                  href={smsPhone.href}
+                  className="text-slate-300 hover:text-white transition-colors text-sm font-semibold"
+                >
+                  Text {smsPhone.display}
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
@@ -222,7 +230,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} {nap.brokerage}. All rights reserved.
+              © {currentYear} {nap.name}. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
@@ -246,7 +254,7 @@ export default function Footer() {
             {nap.shortName}, REALTOR® | License {nap.license} | {nap.brokerage}
           </p>
           <p className="text-slate-500 text-xs mt-2 text-center">
-            {nap.fullAddress} · Office {officePhone.display} · Call or text {ctaPhone.display}
+            {nap.fullAddress} · Call or text {ctaPhone.display} · {hoursSummary}
           </p>
           <MlsDisclaimer className="mt-4 text-center max-w-4xl mx-auto text-slate-600" />
           <p className="text-slate-600 text-xs mt-3 text-center">

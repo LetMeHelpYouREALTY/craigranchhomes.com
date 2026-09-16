@@ -30,7 +30,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/about",
   title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
   description:
-    "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist. Call (702) 222-1964.",
+    "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist. Call (702) 820-5408.",
   keywords: [
     "Dr. Jan Duffy",
     "Berkshire Hathaway HomeServices agent",
@@ -46,22 +46,22 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy",
-  image: "https://heyberkshire.com/images/dr-jan-duffy.jpg",
+  image: "https://www.craigranchhomes.com/images/dr-jan-duffy.jpg",
   jobTitle: "REALTOR®",
   description:
-    "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
-  telephone: "+17025001942",
-  email: "homes@heyberkshire.com",
-  url: "https://heyberkshire.com/about",
-  worksFor: {
+    "Licensed real estate agent with Craig Ranch Homes, serving Craig Ranch, North Las Vegas (ZIP 89031) since 2007.",
+  telephone: "+17028205408",
+  email: "DrDuffy@CraigRanchHomes.com",
+  url: "https://www.craigranchhomes.com/about",
+    worksFor: {
     "@type": "RealEstateAgent",
-    name: "Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Craig Ranch Homes",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-      addressLocality: "Las Vegas",
+      streetAddress: "851 W Lone Mountain Rd, Suite 103",
+      addressLocality: "North Las Vegas",
       addressRegion: "NV",
-      postalCode: "89134",
+      postalCode: "89032",
     },
   },
   hasCredential: {
@@ -159,7 +159,7 @@ export default function AboutPage() {
                     deliver exceptional results.
                   </p>
                   <p>
-                    Files start at Suite 100. Square-footage tours, listing APNs, 55+ occupancy
+                    Files start at Suite 103. Square-footage tours, listing APNs, 55+ occupancy
                     packets, and California inbound nets get the same dated CMA. Real estate is a
                     walkthrough and a number, not a caption.
                   </p>
@@ -170,24 +170,24 @@ export default function AboutPage() {
                   <h3 className="font-bold text-slate-900 mb-4">Contact Dr. Jan Duffy</h3>
 <div className="space-y-3">
                     <a
-                      href="tel:+17022221964"
+                      href="tel:+17028205408"
                       className="flex items-center text-slate-700 hover:text-blue-600"
                     >
                       <Phone className="h-5 w-5 mr-3 text-blue-600" />
-                      <span className="font-semibold">(702) 222-1964</span>
+                      <span className="font-semibold">(702) 820-5408</span>
                     </a>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href="mailto:DrDuffy@CraigRanchHomes.com"
                       className="flex items-center text-slate-700 hover:text-blue-600"
                     >
                       <Mail className="h-5 w-5 mr-3 text-blue-600" />
-                      Homes@HeyBerkshire.com
+                      DrDuffy@CraigRanchHomes.com
                     </a>
                     <div className="flex items-start text-slate-700">
                       <MapPin className="h-5 w-5 mr-3 text-blue-600 mt-0.5" />
                       <address className="not-italic">
-                        9406 W Lake Mead Blvd, Suite 100<br />
-                        Las Vegas, NV 89134
+                        851 W Lone Mountain Rd, Suite 103<br />
+                        North Las Vegas, NV 89032
                       </address>
                     </div>
                     <div className="flex items-center text-slate-700">
@@ -197,7 +197,7 @@ export default function AboutPage() {
                   </div>
                   <div className="rounded-lg overflow-hidden mt-6 border border-slate-200">
                     <iframe
-                      title="Map to Berkshire Hathaway HomeServices Nevada Properties, 9406 W Lake Mead Blvd"
+                      title="Map to Berkshire Hathaway HomeServices Nevada Properties, 851 W Lone Mountain Rd"
                       src={maps.embedSrc}
                       className="w-full h-56"
                       loading="lazy"
@@ -290,11 +290,11 @@ export default function AboutPage() {
           {/* Why BHHS Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="scroll-mt-32 text-3xl md:text-4xl font-bold mb-4 text-center">
-              License S.0197614.LLC on the card at 9406 W Lake Mead Blvd
+              License S.0197614.LLC on the card at 851 W Lone Mountain Rd
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
               Berkshire Hathaway HomeServices Nevada Properties holds the desk. Appointments start
-              at Suite 100. Call or text (702) 222-1964. The office line on Google is (702) 500-1942.
+              at Suite 103. Call or text (702) 820-5408. The office line on Google is (702) 820-5408.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
@@ -304,7 +304,7 @@ export default function AboutPage() {
                 <h3 className="font-bold text-xl mb-2">BHHS Nevada Properties on the paperwork</h3>
                 <p className="text-slate-300 text-sm">
                   The brokerage on the contract is Berkshire Hathaway HomeServices Nevada Properties,
-                  not a slogan. Suite 100 is the Maps pin.
+                  not a slogan. Suite 103 is the Maps pin.
                 </p>
               </div>
               <div className="text-center">
@@ -313,7 +313,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-bold text-xl mb-2">West Coast sale timed against a Las Vegas purchase</h3>
                 <p className="text-slate-300 text-sm">
-                  50,000+ BHHS agents for a California listing referral paired with a Suite 100 buyer file.
+                  50,000+ BHHS agents for a California listing referral paired with a Suite 103 buyer file.
                 </p>
               </div>
               <div className="text-center">
@@ -322,7 +322,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-bold text-xl mb-2">No-pressure consult, then a dated tour block</h3>
                 <p className="text-slate-300 text-sm">
-                  We review HOA packets and commute minutes at the desk before we drive. Call (702) 222-1964.
+                  We review HOA packets and commute minutes at the desk before we drive. Call (702) 820-5408.
                 </p>
               </div>
             </div>
@@ -339,12 +339,12 @@ export default function AboutPage() {
           {/* Areas Served */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-              The Ridges, Summerlin, Henderson, NLV — commute minutes from Suite 100
+              The Ridges, Summerlin, Henderson, NLV — commute minutes from Suite 103
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Files start at 9406 W Lake Mead Blvd, Suite 100. Summerlin is 10–15 minutes.
+              Files start at 851 W Lone Mountain Rd, Suite 103. Summerlin is 10–15 minutes.
               The Ridges gate is 15–20. Henderson is 25–35 via I-215 east. North Las Vegas
-              new construction is a separate afternoon. Call (702) 222-1964.
+              new construction is a separate afternoon. Call (702) 820-5408.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areasServed.map((area) => (
@@ -409,7 +409,7 @@ export default function AboutPage() {
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Book Suite 100 — license S.0197614.LLC is on the card</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Book Suite 103 — license S.0197614.LLC is on the card</h2>
             <p className="text-xl text-blue-100 mb-8">
               Questions about buying or selling in Las Vegas? Call or text Dr. Jan Duffy today 
               for a free consultation. Whether you're ready to start your search or just exploring 

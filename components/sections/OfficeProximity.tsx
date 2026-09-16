@@ -1,4 +1,4 @@
-import { ctaPhone, googleReviewsUrl, maps, nap, officePhone } from "@/lib/contact";
+import { ctaPhone, googleReviewsUrl, maps, nap, hoursSummary } from "@/lib/contact";
 
 type PlaceDrive = {
   place: string;
@@ -75,7 +75,7 @@ const byPath: Record<string, PlaceDrive> = {
   "/55-plus-communities/heritage-stonebridge": {
     place: "Heritage at Stonebridge",
     driveMinutes: "12–18 minutes",
-    note: "The 24/7 gate and Downtown Summerlin retail are a short west-valley hop from Lake Mead Blvd.",
+    note: "The 24/7 gate and Downtown Summerlin retail are a short west-valley hop from Lone Mountain Rd.",
   },
   "/55-plus-communities/solera-anthem": {
     place: "Solera at Anthem",
@@ -100,7 +100,7 @@ const byPath: Record<string, PlaceDrive> = {
   "/about": {
     place: "an in-person consult with Dr. Jan Duffy",
     driveMinutes: "you are already at the pin",
-    note: "License S.0197614.LLC appointments are held at Suite 100 unless we meet at a listing.",
+    note: "License S.0197614.LLC appointments are held at Suite 103 unless we meet at a listing.",
   },
   "/contact": {
     place: "the contact desk",
@@ -110,27 +110,27 @@ const byPath: Record<string, PlaceDrive> = {
   "/google-business": {
     place: "the Google Business Profile address",
     driveMinutes: "this is the Maps pin",
-    note: "Name, address, and office line (702) 500-1942 match the Google listing; call or text (702) 222-1964 for a same-day reply.",
+    note: "Craig Ranch Homes NAP matches Google Business: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Call or text (702) 820-5408. Sunday closed.",
   },
   "/faq": {
     place: "a live Q&A",
-    driveMinutes: "10 minutes from most Summerlin villages",
+    driveMinutes: "5–10 minutes to most Craig Ranch streets",
     note: "Bring loan pre-approval and a target ZIP; we map commute minutes to listings from this desk.",
   },
   "/services": {
     place: "a service consult (buy, sell, 55+, relocation)",
     driveMinutes: "on-site",
-    note: "Each service meeting starts here so paperwork, MLS, and showing routes use the same west-valley start.",
+    note: "Each service meeting starts here so paperwork, MLS, and showing routes use the same North Las Vegas start.",
   },
   "/security-policy": {
     place: "privacy questions",
     driveMinutes: "email or office visit",
-    note: "Data and showing-access questions are handled at Suite 100; we do not collect listing keys by unsecured email.",
+    note: "Data and showing-access questions are handled at Suite 103; we do not collect listing keys by unsecured email.",
   },
   "/listings": {
     place: "live MLS search follow-up",
     driveMinutes: "same-day tours from this pin",
-    note: "Save the RealScout results, then we sequence Summerlin, Henderson, or 55+ stops from Lake Mead Blvd.",
+    note: "Save the RealScout results, then we sequence Summerlin, Henderson, or 55+ stops from Lone Mountain Rd.",
   },
   "/home-valuation": {
     place: "a CMA review",
@@ -165,7 +165,7 @@ const byPath: Record<string, PlaceDrive> = {
   "/sellers": {
     place: "listing appointment prep",
     driveMinutes: "we come to your house after this brief",
-    note: "Pricing, photos, and BHHS marketing are scoped at Suite 100, then we go on-site for the CMA walkthrough.",
+    note: "Pricing, photos, and BHHS marketing are scoped at Suite 103, then we go on-site for the CMA walkthrough.",
   },
   "/sellers/move-up": {
     place: "sale-and-purchase timing",
@@ -175,7 +175,7 @@ const byPath: Record<string, PlaceDrive> = {
   "/sellers/downsizing": {
     place: "downsize and 55+ options",
     driveMinutes: "10–15 minutes to Sun City Summerlin",
-    note: "List the larger home first or tour 55+ campuses the same day—both start from Lake Mead Blvd.",
+    note: "List the larger home first or tour 55+ campuses the same day—both start from Lone Mountain Rd.",
   },
   "/sellers/relocation": {
     place: "outbound sale coordination",
@@ -184,7 +184,7 @@ const byPath: Record<string, PlaceDrive> = {
   },
   "/sellers/divorce-probate": {
     place: "confidential file review",
-    driveMinutes: "by appointment at Suite 100",
+    driveMinutes: "by appointment at Suite 103",
     note: "Court dates, attorney contacts, and showing access are handled here—not in a public lobby conversation.",
   },
   "/relocation": {
@@ -205,7 +205,7 @@ const byPath: Record<string, PlaceDrive> = {
   "/why-berkshire-hathaway": {
     place: "brand and representation questions",
     driveMinutes: "on-site",
-    note: "BHHS network referrals and listing marketing samples are shown at Suite 100 before you commit to a listing agreement.",
+    note: "BHHS network referrals and listing marketing samples are shown at Suite 103 before you commit to a listing agreement.",
   },
   "/market-insights": {
     place: "market briefing",
@@ -248,12 +248,12 @@ export default function OfficeProximity({ path }: OfficeProximityProps) {
         Drive time from {nap.street} to {row.place}
       </h2>
       <p className="text-slate-700 mb-4">
-        Showings start from Berkshire Hathaway HomeServices Nevada Properties at {nap.fullAddress}.
+        Showings start from Craig Ranch Homes at {nap.fullAddress}.
         Typical drive to {row.place} is {row.driveMinutes}. {row.note}
       </p>
       <p className="text-sm text-slate-600 mb-4">
-        Office (matches Google Business): {officePhone.display}. Call or text {ctaPhone.display}. Hours:
-        Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.
+        Office (matches Google Business): {ctaPhone.display}. Call or text {ctaPhone.display}. Hours:{" "}
+        {hoursSummary}.
       </p>
       <div className="flex flex-col sm:flex-row gap-3">
         <a

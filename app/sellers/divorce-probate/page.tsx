@@ -25,7 +25,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/sellers/divorce-probate",
   title: "Divorce & Probate Home Sales Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Sensitive real estate situations handled with discretion. Dr. Jan Duffy helps with divorce sales, probate, estate liquidation, and court-ordered sales. Call (702) 222-1964.",
+    "Sensitive real estate situations handled with discretion. Dr. Jan Duffy helps with divorce sales, probate, estate liquidation, and court-ordered sales. Call (702) 820-5408.",
   keywords: [
     "divorce home sale Las Vegas",
     "probate real estate Las Vegas",

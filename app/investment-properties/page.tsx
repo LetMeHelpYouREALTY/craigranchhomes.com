@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/investment-properties",
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
   description:
-    "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 222-1964.",
+    "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 820-5408.",
   keywords: [
     "Las Vegas investment property",
     "Las Vegas rental property",

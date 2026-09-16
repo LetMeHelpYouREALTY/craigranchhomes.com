@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/market-insights",
   title: "Las Vegas Real Estate Market Insights 2026 | Berkshire Hathaway HomeServices",
   description:
-    "Technology trends, economic forecasts, and market analysis shaping Las Vegas real estate in 2026. AI, data centers, California migration, and what it means for buyers and sellers. Call (702) 222-1964.",
+    "Technology trends, economic forecasts, and market analysis shaping Las Vegas real estate in 2026. AI, data centers, California migration, and what it means for buyers and sellers. Call (702) 820-5408.",
   keywords: [
     "Las Vegas real estate trends 2026",
     "Las Vegas market forecast",
@@ -88,10 +88,10 @@ export default function MarketInsightsPage() {
           {/* CTA */}
           <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Apply this page to your ZIP at 9406 W Lake Mead Blvd
+              Apply this page to your ZIP at 851 W Lone Mountain Rd
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Bring the APN or a lender letter. Call (702) 222-1964. Dr. Jan Duffy will not invent a rate or a street price.
+              Bring the APN or a lender letter. Call (702) 820-5408. Dr. Jan Duffy will not invent a rate or a street price.
             </p>
             <CtaActions variant="onDark" />
           </section>

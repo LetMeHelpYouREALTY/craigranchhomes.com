@@ -12,8 +12,8 @@ export default function LocalTrustBar() {
     <div className="hidden md:block bg-slate-900 text-slate-100 text-xs border-t border-slate-800">
       <div className="container mx-auto px-4 py-1.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
         <p className="min-w-0 truncate">
-          <span className="font-semibold">{nap.shortName}</span>
-          <span className="text-slate-400"> · {nap.brokerage} · </span>
+          <span className="font-semibold">{nap.name}</span>
+          <span className="text-slate-400"> · {nap.shortName}, REALTOR® · </span>
           <span>{nap.fullAddress}</span>
         </p>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 shrink-0">

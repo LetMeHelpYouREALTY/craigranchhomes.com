@@ -36,7 +36,7 @@ export const metadata: Metadata = pageMetadata({
   title:
     "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
   description:
-    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 222-1964.",
+    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 820-5408.",
   keywords: [
     "55+ communities Las Vegas",
     "active adult communities Las Vegas",
@@ -64,8 +64,8 @@ const localBusinessSchema = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
     "55+ community specialist helping active adults find their perfect Las Vegas retirement home",
-  telephone: "(702) 222-1964",
-  url: "https://heyberkshire.com/55-plus-communities",
+  telephone: "(702) 820-5408",
+  url: "https://www.craigranchhomes.com/55-plus-communities",
   areaServed: {
     "@type": "City",
     name: "Las Vegas",
@@ -232,7 +232,7 @@ const communities = [
       "Strong sense of community",
     ],
     description:
-      "Siena is a smaller Summerlin 55+ campus with an 18-hole course. Confirm occupancy rules at Suite 100.",
+      "Siena is a smaller Summerlin 55+ campus with an 18-hole course. Confirm occupancy rules at Suite 103.",
     color: "slate",
   },
 ];
@@ -278,17 +278,17 @@ export default function FiftyFiveCommunitiesPage() {
                 <Users className="h-8 w-8 text-blue-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    HOPA 80/20 occupancy — packet at Suite 100 before any clubhouse
+                    HOPA 80/20 occupancy — packet at Suite 103 before any clubhouse
                   </h3>
                   <div className="text-slate-700 space-y-3">
                     <p>
                       <strong>Federal HOPA:</strong> At least 80% of occupied units must have one
                       resident 55 or older. Individual HOAs can be stricter. We read the packet at
-                      9406 W Lake Mead Blvd before we drive.
+                      851 W Lone Mountain Rd before we drive.
                     </p>
                     <p>
                       <strong>Co-occupant rules:</strong> Minimum ages for a co-occupant vary by
-                      campus (often 40–45). Confirm in writing. Call (702) 222-1964.
+                      campus (often 40–45). Confirm in writing. Call (702) 820-5408.
                     </p>
                     <p className="text-blue-800 font-medium">
                       Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Pick one clock.
@@ -390,7 +390,7 @@ export default function FiftyFiveCommunitiesPage() {
                       </Link>
                     ) : (
                       <a
-                        href="tel:+17022221964"
+                        href="tel:+17028205408"
                         className="block text-center bg-slate-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-slate-700 transition-colors"
                       >
                         Call for {community.name} Info
@@ -411,7 +411,7 @@ export default function FiftyFiveCommunitiesPage() {
           {/* Why BHHS */}
           <section className="mb-16 max-w-4xl mx-auto" data-fifty-five-why="/55-plus-communities">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              HOA packets at Suite 100 before any 55+ clubhouse drive
+              HOA packets at Suite 103 before any 55+ clubhouse drive
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">
@@ -420,11 +420,11 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Age-qualification packets and HOA reserves — read at Suite 100
+                    Age-qualification packets and HOA reserves — read at Suite 103
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Occupancy rules, guest ages, and HOA reserve lines are reviewed at 9406 W Lake
-                    Mead Blvd before any clubhouse. Call (702) 222-1964.
+                    Occupancy rules, guest ages, and HOA reserve lines are reviewed at 851 W Lone
+                    Mountain Rd before any clubhouse. Call (702) 820-5408.
                   </p>
                 </div>
               </div>
@@ -434,10 +434,10 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Out-of-state occupancy packet, then one rec campus from Suite 100
+                    Out-of-state occupancy packet, then one rec campus from Suite 103
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Virtual tours and BHHS destination intros start at 9406 W Lake Mead Blvd. We
+                    Virtual tours and BHHS destination intros start at 851 W Lone Mountain Rd. We
                     do not stack a Summerlin 55+ morning with a Henderson 55+ drive.
                   </p>
                 </div>
@@ -451,8 +451,8 @@ export default function FiftyFiveCommunitiesPage() {
                     Occupancy rules in writing before any clubhouse
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    The Berkshire Hathaway name is on the paperwork at 9406 W Lake Mead Blvd,
-                    Suite 100. We review age-qualification and guest rules before the drive.
+                    The Berkshire Hathaway name is on the paperwork at 851 W Lone Mountain Rd,
+                    Suite 103. We review age-qualification and guest rules before the drive.
                   </p>
                 </div>
               </div>
@@ -465,8 +465,8 @@ export default function FiftyFiveCommunitiesPage() {
                     One campus per afternoon — occupancy packet before the drive
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    We review HOA occupancy and guest rules at 9406 W Lake Mead Blvd, Suite 100,
-                    then tour one rec building. Call (702) 222-1964. We do not stack Summerlin and
+                    We review HOA occupancy and guest rules at 851 W Lone Mountain Rd, Suite 103,
+                    then tour one rec building. Call (702) 820-5408. We do not stack Summerlin and
                     Henderson 55+ on the same morning.
                   </p>
                 </div>
@@ -477,15 +477,15 @@ export default function FiftyFiveCommunitiesPage() {
           {/* Final CTA */}
           <section className="text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Compare two 55+ campuses from Suite 100 — west first, Henderson second
+              Compare two 55+ campuses from Suite 103 — west first, Henderson second
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Call (702) 222-1964 with occupancy questions before we drive.
+              Sun City Summerlin is 10–15 minutes. Anthem campuses are 30–35. Call (702) 820-5408 with occupancy questions before we drive.
             </p>
             <CtaActions variant="onDark" />
             <p className="mt-4 text-blue-300 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties · 9406 W Lake Mead Blvd, Suite 100,
-              Las Vegas, NV 89134
+              Berkshire Hathaway HomeServices Nevada Properties · 851 W Lone Mountain Rd, Suite 103,
+              North Las Vegas, NV 89032
             </p>
           </section>
         </div>

@@ -26,7 +26,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/55-plus-communities/del-webb-lake-las-vegas",
   title: "Del Webb at Lake Las Vegas Homes | Berkshire Hathaway HomeServices",
   description:
-    "Lakefront 55+ living at Del Webb Lake Las Vegas. Homes from $400K-$900K. Resort amenities, stunning lake and mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
+    "Lakefront 55+ living at Del Webb Lake Las Vegas. Homes from $400K-$900K. Resort amenities, stunning lake and mountain views. Dr. Jan Duffy. Call (702) 820-5408.",
   keywords: [
     "Del Webb Lake Las Vegas",
     "Lake Las Vegas 55 plus",
@@ -73,12 +73,12 @@ export default function DelWebbLakeLasVegasPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                1,800+ homes, pickleball, and a 320-acre lake — 35–45 minutes from Suite 100
+                1,800+ homes, pickleball, and a 320-acre lake — 35–45 minutes from Suite 103
               </h2>
 <p>
                 <strong>Del Webb at Lake Las Vegas</strong> is a 2016-to-present 55+ campus on
-                Lake Las Vegas. Occupancy rules are reviewed at 9406 W Lake Mead Blvd, Suite 100
-                before the Henderson drive. Call (702) 222-1964. Do not stack this with a
+                Lake Las Vegas. Occupancy rules are reviewed at 851 W Lone Mountain Rd, Suite 103
+                before the Henderson drive. Call (702) 820-5408. Do not stack this with a
                 Summerlin 55+ morning.
               </p>
               <p>

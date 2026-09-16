@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
-import { ctaPhone } from "@/lib/contact";
+import { Phone, MessageSquare } from "lucide-react";
+import { ctaPhone, smsPhone } from "@/lib/contact";
 
 export default function MobileStickyCTA() {
   return (
@@ -15,13 +14,13 @@ export default function MobileStickyCTA() {
           <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
           Call {ctaPhone.display}
         </a>
-        <Link
-          href="/contact"
+        <a
+          href={smsPhone.href}
           className="flex-1 inline-flex items-center justify-center min-h-[44px] rounded-md border border-slate-300 text-slate-900 font-semibold text-sm hover:bg-slate-50"
         >
-          <Mail className="h-4 w-4 mr-2" aria-hidden="true" />
-          Message
-        </Link>
+          <MessageSquare className="h-4 w-4 mr-2" aria-hidden="true" />
+          Text {smsPhone.display}
+        </a>
       </div>
     </div>
   );
