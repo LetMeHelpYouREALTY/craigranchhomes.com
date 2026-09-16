@@ -37,17 +37,19 @@ Before uploading, optimize images:
 2. **CLI**: `npx @squoosh/cli --webp '{"quality":80}' image.jpg`
 3. **Target**: <200KB for hero, <100KB for thumbnails
 
-## Cloudflare (primary) + Git (backup)
+## Cloudflare hosted Images (primary) + Git (backup)
 
-Originals in this folder are the git backup. Production should serve them from Cloudflare Images or an R2 custom domain:
+Production serves these files from Cloudflare Images using the git path as the custom ID:
 
-1. `pnpm cloudflare:sync-images` (needs `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`)
-2. Set Vercel env: `NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=true` and `NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH`
-   or `NEXT_PUBLIC_MEDIA_CDN=https://images.heyberkshire.com`
+`https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/images/hero/las-vegas-valley-homes.jpg/public`
 
-Until those env vars exist, Next.js / Vercel serves the git copies from `/public/images/`.
+1. `pnpm cloudflare:sync-images` (needs `CLOUDFLARE_API_TOKEN`; account ID defaults to this Images account)
+2. Optional Vercel env: `NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH=byE6BTe9lNqo21V57n4aPQ`
+   Production enables hosted Images automatically. Set `NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=false` to force git copies.
 
-`lib/media.ts` and `HeadingPhoto` map each route’s H1/H2/H3 to a heading-appropriate photo. Cloudflare Images is primary when env is set; git copies in this folder are the backup.
+Until images are uploaded, set `NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=false` so Next.js / Vercel serves the git copies from `/public/images/`.
+
+`lib/media.ts` and `HeadingPhoto` map each route’s H1/H2/H3 to a heading-appropriate photo. Cloudflare Images is primary in production; git copies in this folder are the backup.
 
 ```tsx
 import Image from 'next/image'

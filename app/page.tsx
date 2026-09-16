@@ -9,12 +9,12 @@ import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import Link from "next/link";
-import Image from "next/image";
 import { pageMetadata } from "@/lib/seo";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { ctaPhone, nap } from "@/lib/contact";
 import { marketStats as stats } from "@/lib/site-config";
-import { mediaUrl, photos } from "@/lib/media";
+import { photos } from "@/lib/media";
+import SiteImage from "@/components/shared/SiteImage";
 
 export const metadata = pageMetadata({
   path: "/",
@@ -36,8 +36,8 @@ export default async function Home() {
   return (
     <main id="main-content">
       <section className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden">
-        <Image
-          src={mediaUrl(photos.homeHero.src)}
+        <SiteImage
+          src={photos.homeHero.src}
           alt={photos.homeHero.alt}
           fill
           priority

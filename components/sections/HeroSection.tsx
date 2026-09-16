@@ -1,22 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { realscout } from "@/lib/contact";
-import { mediaUrl, photos } from "@/lib/media";
+import { photos } from "@/lib/media";
+import SiteImage from "@/components/shared/SiteImage";
 
 const images = [
   {
-    src: mediaUrl(photos.homeHero.src),
+    src: photos.homeHero.src,
     alt: photos.homeHero.alt,
   },
   {
-    src: mediaUrl(photos.henderson.src),
+    src: photos.henderson.src,
     alt: photos.henderson.alt,
   },
   {
-    src: mediaUrl(photos.summerlin.src),
+    src: photos.summerlin.src,
     alt: photos.summerlin.alt,
   },
 ];
@@ -44,7 +44,7 @@ export default function HeroSection() {
               prefersReducedMotion ? "" : "transition-opacity duration-1000"
             } ${index === currentImage ? "opacity-100" : "opacity-0"}`}
           >
-            <Image
+            <SiteImage
               src={image.src}
               alt={image.alt}
               fill

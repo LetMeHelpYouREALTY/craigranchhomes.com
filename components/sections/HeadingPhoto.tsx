@@ -1,8 +1,7 @@
-import Image from "next/image";
+import SiteImage from "@/components/shared/SiteImage";
 import {
   h2PhotoForPath,
   h3PhotoForPath,
-  mediaUrl,
   photoForPath,
   type SitePhoto,
 } from "@/lib/media";
@@ -53,8 +52,8 @@ export default function HeadingPhoto({
     <figure
       className={`relative w-full overflow-hidden rounded-xl mb-8 ${heightClass} ${className}`.trim()}
     >
-      <Image
-        src={mediaUrl(asset.src)}
+      <SiteImage
+        src={asset.src}
         alt={asset.alt}
         fill
         className="object-cover"

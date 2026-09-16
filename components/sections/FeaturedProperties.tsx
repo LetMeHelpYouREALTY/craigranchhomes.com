@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Bed, Bath, Square, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { mediaUrl } from "@/lib/media";
+import SiteImage from "@/components/shared/SiteImage";
 
 interface Property {
   id: number;
@@ -20,11 +19,12 @@ interface Property {
 const PropertyCard = ({ property }: { property: Property }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
     <div className="relative h-48 md:h-64">
-      <Image
-        src={mediaUrl(property.image)}
+      <SiteImage
+        src={property.image}
         alt={property.name}
         fill
         className="object-cover"
+        sizes="(max-width: 768px) 100vw, 33vw"
       />
       <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-semibold">
         {property.price}

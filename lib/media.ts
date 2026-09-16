@@ -1,13 +1,20 @@
 /**
  * Cloudflare-first media URLs with git-backed public/ files as fallback.
- * Production: set NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=true and
- * NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH (Images) or NEXT_PUBLIC_MEDIA_CDN
+ * Production uses hosted Images:
+ *   https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/{git-path}/public
+ * Override with NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH or NEXT_PUBLIC_MEDIA_CDN
  * (R2 custom domain). Git copies live in /public/images/.
  *
  * Per Cloudflare Images docs (hosted images, 2026): delivery URL is
  * https://imagedelivery.net/{account_hash}/{image_id}/{variant}.
  * Custom IDs preserve the git path so the same file is the backup.
  */
+
+import {
+  cloudflareDeliveryUrl,
+  isCloudflareDeliveryUrl,
+  isCloudflareImagesEnabled,
+} from "@/lib/cloudflare-images";
 
 export type SitePhoto = {
   /** Path under public/, used as the git backup and Cloudflare Images ID */
@@ -17,17 +24,16 @@ export type SitePhoto = {
   height: number;
 };
 
-const CF_ENABLED = process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "true";
-const CF_HASH = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ?? "";
-const MEDIA_CDN = (process.env.NEXT_PUBLIC_MEDIA_CDN ?? "").replace(/\/$/, "");
+export { isCloudflareDeliveryUrl };
 
 export function mediaUrl(src: string): string {
   const path = src.startsWith("/") ? src.slice(1) : src;
-  if (MEDIA_CDN) {
-    return `${MEDIA_CDN}/${path}`;
+  const mediaCdn = (process.env.NEXT_PUBLIC_MEDIA_CDN ?? "").replace(/\/$/, "");
+  if (mediaCdn) {
+    return `${mediaCdn}/${path}`;
   }
-  if (CF_ENABLED && CF_HASH) {
-    return `https://imagedelivery.net/${CF_HASH}/${path}/public`;
+  if (isCloudflareImagesEnabled()) {
+    return cloudflareDeliveryUrl(src);
   }
   return src.startsWith("/") ? src : `/${src}`;
 }

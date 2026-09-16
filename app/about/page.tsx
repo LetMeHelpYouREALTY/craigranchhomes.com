@@ -1,6 +1,5 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Phone,
   Mail, 
@@ -22,9 +21,10 @@ import UniqueInterior from "@/components/sections/UniqueInterior";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
 import LeftoverBand from "@/components/sections/LeftoverBand";
+import SiteImage from "@/components/shared/SiteImage";
 
 import { maps, googleReviewsUrl } from "@/lib/contact";
-import { mediaUrl, photos } from "@/lib/media";
+import { photos } from "@/lib/media";
 
 export const metadata: Metadata = pageMetadata({
   path: "/about",
@@ -229,8 +229,8 @@ export default function AboutPage() {
               {/* Stats & Credentials */}
               <div className="space-y-6">
                 <div className="relative rounded-lg overflow-hidden aspect-square">
-                  <Image
-                    src={mediaUrl(photos.agent.src)}
+                  <SiteImage
+                    src={photos.agent.src}
                     alt={photos.agent.alt}
                     fill
                     className="object-cover"
