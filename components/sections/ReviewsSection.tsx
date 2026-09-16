@@ -57,6 +57,7 @@ interface ReviewsSectionProps {
   subtitle?: string;
   googleReviewsUrl?: string;
   className?: string;
+  showHeading?: boolean;
 }
 
 export default function ReviewsSection({
@@ -65,10 +66,16 @@ export default function ReviewsSection({
   subtitle = "Verified client feedback from Las Vegas, Henderson, and Summerlin transactions",
   googleReviewsUrl = defaultGoogleReviewsUrl,
   className = "",
+  showHeading = true,
 }: ReviewsSectionProps) {
   return (
-    <section className={`py-16 md:py-24 bg-slate-50 ${className}`} aria-labelledby="reviews-heading">
+    <section
+      className={`py-16 md:py-24 bg-slate-50 ${className}`}
+      aria-labelledby={showHeading ? "reviews-heading" : undefined}
+      aria-label={showHeading ? undefined : "Google reviews"}
+    >
       <div className="container mx-auto px-4">
+        {showHeading ? (
         <div className="text-center mb-12">
           <h2 id="reviews-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             {title}
@@ -93,6 +100,7 @@ export default function ReviewsSection({
             <span className="text-slate-600">({aggregateRating.reviewCount}+ reviews)</span>
           </div>
         </div>
+        ) : null}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {reviews.map((review) => (

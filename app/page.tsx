@@ -3,11 +3,11 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
-import PageCTA from "@/components/sections/PageCTA";
 import CtaActions from "@/components/sections/CtaActions";
 import OfficeProximity from "@/components/sections/OfficeProximity";
 import UniqueInterior from "@/components/sections/UniqueInterior";
 import HeadingPhoto from "@/components/sections/HeadingPhoto";
+import LeftoverBand from "@/components/sections/LeftoverBand";
 import Link from "next/link";
 import Image from "next/image";
 import { pageMetadata } from "@/lib/seo";
@@ -176,9 +176,10 @@ export default async function Home() {
 
       <RealScoutListings />
       <WhyChooseUs />
-      <ReviewsSection />
+      <LeftoverBand path="/" />
+      <ReviewsSection showHeading={false} />
       <SupportFaqs path="/" />
-      <PageCTA headline={config.ctaHeadline} subheadline={config.ctaSubheadline} />
+      <LeftoverBand path="/" slot={1} />
       <p className="sr-only">
         {nap.name}. {nap.fullAddress}. Call {ctaPhone.display}.
       </p>

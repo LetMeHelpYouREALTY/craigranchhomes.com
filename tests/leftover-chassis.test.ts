@@ -4,6 +4,37 @@ import { describe, expect, it } from "vitest";
 
 const pages: { file: string; needles: string[]; banned: string[] }[] = [
   {
+    file: "app/page.tsx",
+    needles: [
+      '<LeftoverBand path="/" />',
+      '<LeftoverBand path="/" slot={1} />',
+    ],
+    banned: [
+      ">What Clients Say About Dr. Jan Duffy<",
+      ">Find Your Las Vegas Home<",
+      ">Ready to Buy or Sell in Las Vegas?<",
+    ],
+  },
+  {
+    file: "app/security-policy/page.tsx",
+    needles: [
+      '<LeftoverBand path="/security-policy" />',
+      '<LeftoverBand path="/security-policy" slot={1} />',
+      '<LeftoverBand path="/security-policy" slot={2} />',
+      '<LeftoverBand path="/security-policy" slot={3} />',
+    ],
+    banned: [
+      ">Our Commitment to Security<",
+      ">Reporting Security Vulnerabilities<",
+      ">Security Measures in Place<",
+      ">Third-Party Services<",
+      ">Responsible Disclosure Policy<",
+      ">Out of Scope<",
+      ">Your Security<",
+      ">Questions?<",
+    ],
+  },
+  {
     file: "app/55-plus-communities/sun-city-anthem/page.tsx",
     needles: [
       '<LeftoverBand path="/55-plus-communities/sun-city-anthem" />',

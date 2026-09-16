@@ -40,6 +40,7 @@ describe("leftoverBands", () => {
 
   it("covers leftover slogan H2 chassis paths", () => {
     expect(Object.keys(leftoverBands).sort()).toEqual([
+      "/",
       "/55-plus-communities",
       "/55-plus-communities/del-webb-lake-las-vegas",
       "/55-plus-communities/heritage-stonebridge",
@@ -66,6 +67,7 @@ describe("leftoverBands", () => {
       "/neighborhoods",
       "/new-construction",
       "/relocation",
+      "/security-policy",
       "/sellers",
       "/sellers/divorce-probate",
       "/sellers/downsizing",
@@ -98,6 +100,8 @@ describe("leftoverBands", () => {
     expect(leftoverBands["/buyers/luxury-homes-las-vegas"]).toHaveLength(2);
     expect(leftoverBands["/new-construction"]).toHaveLength(4);
     expect(leftoverBands["/why-berkshire-hathaway"]).toHaveLength(2);
+    expect(leftoverBands["/"]).toHaveLength(2);
+    expect(leftoverBands["/security-policy"]).toHaveLength(4);
   });
 
   it("keeps every leftover H2 unique", () => {

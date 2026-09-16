@@ -17,6 +17,52 @@ export type LeftoverCopy = {
 };
 
 export const leftoverBands: Record<string, LeftoverCopy[]> = {
+  "/": [
+    {
+      h2: "GBP 4.9 on this homepage — open Google Reviews from the Maps pin, then book Suite 100",
+      body: "Reviews on this URL support Maps ranking for 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964. Office/GBP (702) 500-1942. Named campuses and commute minutes beat a slogan row.",
+      pins: [
+        {
+          name: "4.9 on the pin",
+          note: "Star rating cited on this page. Write the review on the Google listing that matches this NAP.",
+        },
+        {
+          name: "Directions",
+          note: "Visitor parking faces W Lake Mead Blvd. Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+        },
+        {
+          name: "Two-ZIP clock",
+          note: "Summerlin 10–15 minutes. Henderson 25–35. We do not tour twelve ZIPs from a review caption.",
+        },
+        {
+          name: "License on the card",
+          note: "S.0197614.LLC. Berkshire Hathaway HomeServices Nevada Properties. Client CTA (702) 222-1964.",
+        },
+      ],
+    },
+    {
+      h2: "Call (702) 222-1964 from this homepage — Summerlin 10–15 or Henderson 25–35 from W Lake Mead Blvd",
+      body: "The Maps pin is this desk. Live MLS is RealScout. We sequence the first loop from 9406 W Lake Mead Blvd, Suite 100. Office/GBP (702) 500-1942.",
+      pins: [
+        {
+          name: "Buyer file",
+          note: "Open /buyers. Lender letter, then two ZIPs. Palo Verde and Coronado commutes mapped by address.",
+        },
+        {
+          name: "Listing file",
+          note: "Open /sellers or /home-valuation. APN at the desk, then photos at the house.",
+        },
+        {
+          name: "55+ packet",
+          note: "Open /55-plus-communities. Occupancy rules before any clubhouse. Sun City Summerlin is 10–15 minutes.",
+        },
+        {
+          name: "California inbound",
+          note: "Open /buyers/california-relocator. Net sheet vs ZIP targets, then a three-day itinerary.",
+        },
+      ],
+    },
+  ],
   "/55-plus-communities/sun-city-anthem": [
     {
       h2: "Anthem Center 64,000 sq ft, then Liberty, Independence, and Heritage by elevation",
@@ -197,6 +243,96 @@ export const leftoverBands: Record<string, LeftoverCopy[]> = {
         {
           name: "45 days on market",
           note: "Luxury average cited here. Well-priced files move faster. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+  ],
+  "/security-policy": [
+    {
+      h2: "Lockbox, showing logs, and wire instructions stay at Suite 100 — not unsecured email",
+      body: "Report security@heyberkshire.com or call (702) 222-1964. Desk reply within 48 hours. 9406 W Lake Mead Blvd, Suite 100. We do not collect listing keys by open email.",
+      pins: [
+        {
+          name: "security@heyberkshire.com",
+          note: "Written reports. Include steps to reproduce. Do not send listing keys or wire changes on this thread.",
+        },
+        {
+          name: "Client CTA",
+          note: "(702) 222-1964. Do not swap with office/GBP (702) 500-1942.",
+        },
+        {
+          name: "48-hour desk reply",
+          note: "Hours: Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+        },
+        {
+          name: "License S.0197614.LLC",
+          note: "Dr. Jan Duffy, BHHS Nevada Properties. Showing access questions stay at this pin.",
+        },
+      ],
+    },
+    {
+      h2: "Turnstile, CSP, TLS 1.3, and Fair Housing — measures named on this URL",
+      body: "This is the desk list, not a slogan. Cloudflare Turnstile, rate limits, CSP, HTTPS, and TLS 1.3 are named here. Call (702) 222-1964 if a message claiming to be Dr. Jan changes wiring details.",
+      pins: [
+        {
+          name: "Protection",
+          note: "Turnstile, Upstash rate limits, CSP headers, HTTPS, input sanitization.",
+        },
+        {
+          name: "Monitoring",
+          note: "Sentry, Vercel Analytics, automated scans. Alerts are reviewed at Suite 100.",
+        },
+        {
+          name: "Data",
+          note: "TLS 1.3, access controls, audit logs. Listing keys are not stored on this form.",
+        },
+        {
+          name: "Compliance named",
+          note: "Fair Housing Act, Nevada brokerage rules, WCAG 2.1. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Vercel, Cloudflare Images, RealScout, Calendly — vendors named, keys stay off email",
+      body: "Hosting is Vercel. Still delivery is imagedelivery.net (hosted Images) with git copies in /public/images. MLS is RealScout. Scheduling is Calendly. CRM is Follow Up Boss. Call (702) 222-1964.",
+      pins: [
+        {
+          name: "Vercel",
+          note: "Gray-cloud DNS. Do not orange-cloud this hostname.",
+        },
+        {
+          name: "Cloudflare Images",
+          note: "Hosted delivery, not /cdn-cgi/image/ on the Vercel origin.",
+        },
+        {
+          name: "RealScout + Calendly",
+          note: "Live MLS and appointments. Native FUB sync — we do not duplicate it.",
+        },
+        {
+          name: "Responsible disclosure",
+          note: "Good-faith reports get a 48-hour reply. Credit if you ask. Office/GBP (702) 500-1942.",
+        },
+      ],
+    },
+    {
+      h2: "Padlock on heyberkshire.com, then the Suite 100 pin — phishing stays off this file",
+      body: "Confirm the domain and HTTPS before you send documents. Email homes@heyberkshire.com. Call (702) 222-1964. Do not change wiring from a text that is not this number.",
+      pins: [
+        {
+          name: "Correct domain",
+          note: "heyberkshire.com with the padlock. Maps pin is 9406 W Lake Mead Blvd, Suite 100.",
+        },
+        {
+          name: "Out of scope",
+          note: "Public MLS cards, DoS, and third-party vendor bugs are not this desk's vuln list.",
+        },
+        {
+          name: "Documents",
+          note: "homes@heyberkshire.com. Never listing keys or off-platform wire instructions.",
+        },
+        {
+          name: "Walk-in",
+          note: "Bring the question to Suite 100. Client CTA (702) 222-1964. Office/GBP (702) 500-1942.",
         },
       ],
     },

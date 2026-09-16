@@ -823,6 +823,12 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   ) {
     return photos.homeHero;
   }
+  if (path === "/" && slot === 0) return photos.officeExterior;
+  if (path === "/" && slot === 1) return photos.buyers;
+  if (path.startsWith("/security-policy") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/security-policy") && slot === 1) return photos.summerlin;
+  if (path.startsWith("/security-policy") && slot === 2) return photos.henderson;
+  if (path.startsWith("/security-policy") && slot === 3) return photos.buyers;
   if (path.startsWith("/google-business") && slot === 2) return photos.henderson;
   if (path.startsWith("/google-business") && slot === 3) return photos.market;
   if (path === "/sellers" && slot === 3) return photos.agent;
@@ -873,6 +879,8 @@ export function occupiedHeadingStills(path: string): Set<string> {
   ];
   if (path === "/" || path === "") {
     srcs.push(photos.agent.src, photos.summerlin.src, photos.sellers.src);
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
   }
   if (path.startsWith("/neighborhoods")) {
     srcs.push(
@@ -943,6 +951,12 @@ export function occupiedHeadingStills(path: string): Set<string> {
     srcs.push(leftoverPhotoForPath(path, 0).src);
     srcs.push(leftoverPhotoForPath(path, 1).src);
     srcs.push(leftoverPhotoForPath(path, 2).src);
+  }
+  if (path.startsWith("/security-policy")) {
+    srcs.push(leftoverPhotoForPath(path, 0).src);
+    srcs.push(leftoverPhotoForPath(path, 1).src);
+    srcs.push(leftoverPhotoForPath(path, 2).src);
+    srcs.push(leftoverPhotoForPath(path, 3).src);
   }
   if (path.startsWith("/buyers/california-relocator")) {
     srcs.push(leftoverPhotoForPath(path, 0).src);

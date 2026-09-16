@@ -60,14 +60,14 @@ export const DEFAULT_CONFIG: DomainConfig = {
   neighborhood: "Las Vegas",
   tagline: "Las Vegas Homes for Sale",
   description: "Search Las Vegas homes for sale. Expert real estate guidance from Dr. Jan Duffy, BHHS Nevada Properties.",
-  heroHeadline: "Las Vegas Homes for Sale",
-  heroSubheadline: "Expert real estate guidance from Dr. Jan Duffy — 30+ years, 500+ families helped.",
+  heroHeadline: "Buy or sell from 9406 W Lake Mead Blvd, Suite 100",
+  heroSubheadline: "Dr. Jan Duffy sequences Summerlin 10–15 minutes, then Henderson 25–35. Call (702) 222-1964.",
   keywords: ["Las Vegas homes for sale", "Las Vegas real estate", "Dr Jan Duffy"],
   pageType: "search",
   realscoutAgentId: REALSCOUT_AGENT_ID,
-  ctaBadge: "Las Vegas Expert",
-  ctaHeadline: "Find Your Las Vegas Home",
-  ctaSubheadline: "Call or text Dr. Jan at 702-222-1964 — I answer my own phone.",
+  ctaBadge: "License S.0197614.LLC",
+  ctaHeadline: "Book Suite 100, then the first two ZIP loops",
+  ctaSubheadline: "Call or text (702) 222-1964. The Maps pin is this desk.",
 };
 
 export function getDomainConfig(hostname: string): DomainConfig {
