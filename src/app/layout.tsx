@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Source_Sans_3, Open_Sans } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import DeferredAnalytics from '@/components/analytics/deferred-analytics';
 import {
   generateOrganizationSchema,
@@ -415,6 +416,7 @@ export default function RootLayout({
         />
         {/* RealScout loads on-demand when a widget scrolls into view */}
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
