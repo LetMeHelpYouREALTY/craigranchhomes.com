@@ -4,6 +4,7 @@
 
 ```
 images/
+├── headings/       # UniqueInterior H2/H3 stills (one jpg per path + level)
 ├── hero/           # Homepage hero backgrounds
 ├── agent/          # Dr. Jan Duffy photos
 ├── properties/     # Listing photos

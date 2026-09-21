@@ -17,6 +17,7 @@ import {
   AGENT_HEADSHOT_SRC,
   deliveryUrl,
 } from "./cloudflare-images";
+import { uniqueInteriorHeadingStill } from "./heading-stills";
 
 export {
   CLOUDFLARE_IMAGES_ACCOUNT_HASH,
@@ -294,6 +295,8 @@ export function photoForPath(path: string): SitePhoto {
 
 /** H2 photos stay distinct from H1 so unique-interior bands are not a duplicate hero. */
 export function h2PhotoForPath(path: string): SitePhoto {
+  const still = uniqueInteriorHeadingStill(path, "h2");
+  if (still) return still;
   if (path.startsWith("/about")) return photos.office;
   if (
     path.startsWith("/contact") ||
@@ -342,6 +345,8 @@ export function h2PhotoForPath(path: string): SitePhoto {
 
 /** H3 photos match amenities, trails, golf, or office details under the heading. */
 export function h3PhotoForPath(path: string): SitePhoto {
+  const still = uniqueInteriorHeadingStill(path, "h3");
+  if (still) return still;
   if (path.startsWith("/neighborhoods/summerlin")) return photos.summerlinTrail;
   if (path.startsWith("/neighborhoods/green-valley")) return photos.henderson;
   if (path.startsWith("/neighborhoods/inspirada"))
