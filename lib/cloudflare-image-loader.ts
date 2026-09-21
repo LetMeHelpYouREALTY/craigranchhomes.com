@@ -2,12 +2,14 @@
  * Next.js custom loader for Cloudflare Images.
  *
  * Hosted images (this site): https://imagedelivery.net/{hash}/{id}/{variant}
+ * Custom hostname (same Cloudflare account, proxied images host only):
+ *   https://images.craigranchhomes.com/cdn-cgi/imagedelivery/{hash}/{id}/{variant}
  * Do not append ?width=&format= query strings — that is not the hosted API.
  * Flexible variants use a comma-separated path segment: /w=400,quality=85
  *
- * Zone transformations (/cdn-cgi/image/...) need Cloudflare proxying the
- * origin. This site ships on Vercel with DNS-only Cloudflare, so hosted
- * Images is the delivery path.
+ * Zone transformations (/cdn-cgi/image/...) and /cdn-cgi/imagedelivery/
+ * need Cloudflare proxying that hostname. www.craigranchhomes.com stays
+ * DNS-only on Vercel; orange-cloud only images.craigranchhomes.com.
  *
  * @see https://developers.cloudflare.com/images/optimization/hosted-images/serve-uploaded-images/
  * @see https://developers.cloudflare.com/images/optimization/hosted-images/enable-flexible-variants/

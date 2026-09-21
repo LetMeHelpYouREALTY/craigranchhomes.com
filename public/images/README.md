@@ -43,9 +43,14 @@ Production serves these files from Cloudflare Images using the git path as the c
 
 `https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/images/hero/las-vegas-valley-homes.jpg/public`
 
+Optional custom host on the **same** Cloudflare Images account (do not orange-cloud `www.craigranchhomes.com` — that hostname stays DNS-only on Vercel):
+
+`https://images.craigranchhomes.com/cdn-cgi/imagedelivery/byE6BTe9lNqo21V57n4aPQ/images/hero/las-vegas-valley-homes.jpg/public`
+
 1. `pnpm cloudflare:sync-images` (needs `CLOUDFLARE_API_TOKEN`; account ID defaults to this Images account)
 2. Optional Vercel env: `NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH=byE6BTe9lNqo21V57n4aPQ`
    Production enables hosted Images automatically. Set `NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=false` to force git copies.
+3. After `images.craigranchhomes.com` is a proxied hostname on this Cloudflare account (SSL Full or Full Strict), set `NEXT_PUBLIC_CLOUDFLARE_IMAGES_CUSTOM_HOST=images.craigranchhomes.com`. An optional Transform Rule can later rewrite `https://images.craigranchhomes.com/images/*` → `/cdn-cgi/imagedelivery/byE6BTe9lNqo21V57n4aPQ/*`.
 
 Until images are uploaded, set `NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=false` so Next.js / Vercel serves the git copies from `/public/images/`.
 

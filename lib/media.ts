@@ -2,6 +2,8 @@
  * Cloudflare-first media URLs with git-backed public/ files as fallback.
  * Production uses hosted Images:
  *   https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/{git-path}/public
+ * Custom host (optional): NEXT_PUBLIC_CLOUDFLARE_IMAGES_CUSTOM_HOST=images.craigranchhomes.com
+ *   https://images.craigranchhomes.com/cdn-cgi/imagedelivery/{hash}/{git-path}/public
  * Override with NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH or NEXT_PUBLIC_MEDIA_CDN
  * (R2 custom domain). Git copies live in /public/images/.
  *

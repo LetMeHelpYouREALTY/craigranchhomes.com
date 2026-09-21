@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   CLOUDFLARE_IMAGES_ACCOUNT_HASH,
+  CLOUDFLARE_IMAGES_CUSTOM_HOST_DEFAULT,
   CLOUDFLARE_IMAGES_DELIVERY_ORIGIN,
+  cloudflareCustomDomainPath,
   cloudflareDeliveryUrl,
   cloudflareFlexibleVariant,
   cloudflareImageId,
@@ -54,6 +56,11 @@ describe("Cloudflare hosted Images", () => {
         "https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/images/hero/foo.jpg/public"
       )
     ).toBe(true);
+    expect(
+      isCloudflareDeliveryUrl(
+        "https://images.craigranchhomes.com/cdn-cgi/imagedelivery/byE6BTe9lNqo21V57n4aPQ/images/hero/foo.jpg/public"
+      )
+    ).toBe(true);
     expect(isCloudflareDeliveryUrl("/images/hero/foo.jpg")).toBe(false);
   });
 
@@ -73,5 +80,23 @@ describe("Cloudflare hosted Images", () => {
     expect(
       cloudflareImageLoader({ src: "/images/hero/foo.jpg", width: 800, quality: 85 })
     ).toBe("/images/hero/foo.jpg");
+  });
+
+  it("serves hosted Images from a custom proxied hostname", () => {
+    expect(CLOUDFLARE_IMAGES_CUSTOM_HOST_DEFAULT).toBe("images.craigranchhomes.com");
+    expect(
+      cloudflareCustomDomainPath("/images/hero/las-vegas-valley-homes.jpg")
+    ).toBe(
+      "/cdn-cgi/imagedelivery/byE6BTe9lNqo21V57n4aPQ/images/hero/las-vegas-valley-homes.jpg/public"
+    );
+    expect(
+      cloudflareDeliveryUrl(
+        "/images/hero/las-vegas-valley-homes.jpg",
+        "public",
+        "images.craigranchhomes.com"
+      )
+    ).toBe(
+      "https://images.craigranchhomes.com/cdn-cgi/imagedelivery/byE6BTe9lNqo21V57n4aPQ/images/hero/las-vegas-valley-homes.jpg/public"
+    );
   });
 });

@@ -8,7 +8,7 @@ type SiteImageProps = Omit<ImageProps, "src"> & {
 /**
  * next/image wrapper that points production src at Cloudflare hosted Images.
  * Hosted delivery already transcodes AVIF/WebP, so skip Vercel’s optimizer
- * for imagedelivery.net URLs to avoid a double hop.
+ * for imagedelivery.net and /cdn-cgi/imagedelivery/ URLs to avoid a double hop.
  */
 export default function SiteImage({ src, alt, unoptimized, ...props }: SiteImageProps) {
   const url = mediaUrl(src);

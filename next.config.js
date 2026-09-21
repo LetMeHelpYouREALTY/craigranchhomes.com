@@ -14,6 +14,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       { protocol: 'https', hostname: 'imagedelivery.net' },
+      { protocol: 'https', hostname: 'images.craigranchhomes.com' },
       { protocol: 'https', hostname: 'images.heyberkshire.com' },
     ],
   },

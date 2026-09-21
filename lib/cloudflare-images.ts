@@ -1,14 +1,20 @@
 /**
  * Cloudflare Images (hosted) delivery for this site.
  *
- * Per Cloudflare Images docs (hosted images, updated Apr 2026):
+ * Default (works after upload, no extra DNS):
  *   https://imagedelivery.net/<ACCOUNT_HASH>/<IMAGE_ID>/<VARIANT_NAME>
+ *
+ * Custom hostname on the same Cloudflare account (Images docs, Apr 2026):
+ *   https://<CUSTOM_HOST>/cdn-cgi/imagedelivery/<ACCOUNT_HASH>/<IMAGE_ID>/<VARIANT>
+ * Orange-cloud only the images host. Keep www.craigranchhomes.com DNS-only
+ * (gray cloud) so Vercel SSL is not proxied.
  *
  * Account hash is public (it is the delivery hostname). Account ID is
  * server-only, used by scripts/sync-images-to-cloudflare.sh to upload.
  * Custom IDs keep the git path under public/ so the same file is the backup.
  *
  * @see https://developers.cloudflare.com/images/optimization/hosted-images/serve-uploaded-images/
+ * @see https://developers.cloudflare.com/images/optimization/hosted-images/serve-from-custom-domains/
  * @see https://developers.cloudflare.com/images/storage/upload-images/upload-custom-path/
  */
 
@@ -18,6 +24,9 @@ export const CLOUDFLARE_IMAGES_ACCOUNT_HASH =
 
 /** Default named variant created for every hosted image. */
 export const CLOUDFLARE_IMAGES_VARIANT = "public";
+
+/** Intended branded host. Enable with NEXT_PUBLIC_CLOUDFLARE_IMAGES_CUSTOM_HOST. */
+export const CLOUDFLARE_IMAGES_CUSTOM_HOST_DEFAULT = "images.craigranchhomes.com";
 
 export const CLOUDFLARE_IMAGES_DELIVERY_ORIGIN = `https://imagedelivery.net/${CLOUDFLARE_IMAGES_ACCOUNT_HASH}`;
 
@@ -31,8 +40,17 @@ export function cloudflareImageId(src: string): string {
   return path.replace(/%/g, "%25");
 }
 
+/** Hostname only, no scheme. Empty string keeps imagedelivery.net. */
+export function cloudflareImagesCustomHost(): string {
+  const raw = process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_CUSTOM_HOST ?? "";
+  return raw.replace(/^https?:\/\//, "").replace(/\/$/, "");
+}
+
 export function isCloudflareDeliveryUrl(src: string): boolean {
-  return src.startsWith("https://imagedelivery.net/");
+  return (
+    src.startsWith("https://imagedelivery.net/") ||
+    src.includes("/cdn-cgi/imagedelivery/")
+  );
 }
 
 /**
@@ -48,14 +66,30 @@ export function isCloudflareImagesEnabled(): boolean {
 }
 
 /**
- * Hosted delivery URL. Use named variant `public` unless flexible variants
- * are enabled (`w=400,quality=85` path segment, not query params).
+ * Path under a custom (proxied) hostname.
+ * `/cdn-cgi/imagedelivery/<ACCOUNT_HASH>/<IMAGE_ID>/<VARIANT>`
  */
-export function cloudflareDeliveryUrl(
+export function cloudflareCustomDomainPath(
   src: string,
   variant: string = CLOUDFLARE_IMAGES_VARIANT
 ): string {
+  return `/cdn-cgi/imagedelivery/${CLOUDFLARE_IMAGES_ACCOUNT_HASH}/${cloudflareImageId(src)}/${variant}`;
+}
+
+/**
+ * Hosted delivery URL. Custom host uses /cdn-cgi/imagedelivery/ on that
+ * zone; otherwise imagedelivery.net. Named variant `public` unless flexible
+ * variants are enabled (`w=400,quality=85` path segment, not query params).
+ */
+export function cloudflareDeliveryUrl(
+  src: string,
+  variant: string = CLOUDFLARE_IMAGES_VARIANT,
+  customHost: string = cloudflareImagesCustomHost()
+): string {
   if (isCloudflareDeliveryUrl(src)) return src;
+  if (customHost) {
+    return `https://${customHost}${cloudflareCustomDomainPath(src, variant)}`;
+  }
   return `${CLOUDFLARE_IMAGES_DELIVERY_ORIGIN}/${cloudflareImageId(src)}/${variant}`;
 }
 
