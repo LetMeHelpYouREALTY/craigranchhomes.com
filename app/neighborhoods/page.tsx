@@ -204,10 +204,10 @@ export default function NeighborhoodsPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto" data-neighborhood-cta="/neighborhoods">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Time one west loop and one Henderson loop from Suite 100
+              Time one west loop and one Henderson loop from Suite 103
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Summerlin is 10–15 minutes. Green Valley is 25–35. Call (702) 222-1964 with two ZIPs — we will not city-swap a recommendation.
+              Summerlin is 10–15 minutes. Green Valley is 25–35. Call (702) 820-5408 with two ZIPs — we will not city-swap a recommendation.
             </p>
             <CtaActions variant="onDark" />
           </section>

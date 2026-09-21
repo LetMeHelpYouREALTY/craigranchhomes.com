@@ -29,7 +29,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/55-plus-communities/trilogy-summerlin",
   title: "Trilogy at Summerlin Homes for Sale | Luxury Resort 55+ Living | Dr. Jan Duffy",
   description:
-    "Trilogy at Summerlin - luxury resort-style 55+ community. Homes from $500K-$1.1M. On-site farm-to-table restaurant, spa, contemporary designs. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
+    "Trilogy at Summerlin - luxury resort-style 55+ community. Homes from $500K-$1.1M. On-site farm-to-table restaurant, spa, contemporary designs. Dr. Jan Duffy, BHHS. Call (702) 820-5408.",
   keywords: [
     "Trilogy at Summerlin homes for sale",
     "Trilogy Summerlin Las Vegas",
@@ -139,7 +139,7 @@ export default function TrilogySummerlinPage() {
           {/* Home Features */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Open plans and first-floor primaries — walk one Shea row from Suite 100
+              Open plans and first-floor primaries — walk one Shea row from Suite 103
             </h2>
             <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
               Trilogy homes break the mold of traditional 55+ construction with
@@ -204,14 +204,14 @@ export default function TrilogySummerlinPage() {
           {/* CTA */}
           <section className="text-center bg-gradient-to-r from-rose-600 to-pink-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Walk the Trilogy clubhouse pool 12–18 minutes from Suite 100
+              Walk the Trilogy clubhouse pool 12–18 minutes from Suite 103
             </h2>
             <p className="text-xl text-rose-100 mb-8">
-              Clubhouse, spa, and Shea plan rows sit 12–18 minutes from 9406 W Lake Mead Blvd. Register before walking models. Call (702) 222-1964.
+              Clubhouse, spa, and Shea plan rows sit 12–18 minutes from 851 W Lone Mountain Rd. Register before walking models. Call (702) 820-5408.
             </p>
             <CtaActions variant="onDark" />
             <p className="text-rose-200">
-              Clubhouse, spa, and Shea plans are 12–18 minutes from the Lake Mead Blvd office.
+              Clubhouse, spa, and Shea plans are 12–18 minutes from the Lone Mountain Rd office.
             </p>
           </section>
         </div>

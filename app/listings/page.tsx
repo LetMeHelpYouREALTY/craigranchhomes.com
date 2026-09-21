@@ -23,7 +23,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
   description:
-    "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964.",
+    "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 820-5408.",
   path: "/listings",
   keywords: [
     "Las Vegas homes for sale",
@@ -43,7 +43,7 @@ const listingsSchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    telephone: "+17028205408",
   },
   areaServed: [
     { "@type": "City", name: "Las Vegas, NV" },
@@ -132,7 +132,7 @@ export default function ListingsPage() {
 <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Each card is a live GLVAR MLS slice: Summerlin, Henderson, Green Valley, The Ridges,
               55+ campuses, and new construction. Palo Verde High School and Coronado High School
-              commutes are mapped by address at ccsd.net/zoning, not as a slogan. Call (702) 222-1964.
+              commutes are mapped by address at ccsd.net/zoning, not as a slogan. Call (702) 820-5408.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {popularSearches.map((search) => (
@@ -161,7 +161,7 @@ export default function ListingsPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Nevada has no state income tax. Confirm the week you tour: under $400K condos and
               townhomes, $400K–$600K at 1,800–2,400 sq ft typical, $1M+ guard-gated product. Call
-              (702) 222-1964 from 9406 W Lake Mead Blvd, Suite 100.
+              (702) 820-5408 from 851 W Lone Mountain Rd, Suite 103.
             </p>
             <div className="space-y-4">
               {priceRanges.map((price, index) => (
@@ -187,11 +187,11 @@ export default function ListingsPage() {
           {/* Why Use an Agent Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="scroll-mt-32 text-3xl font-bold mb-6 text-center">
-              Live MLS from Suite 100, then the first two ZIP loops
+              Live MLS from Suite 103, then the first two ZIP loops
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Search is opened at 9406 W Lake Mead Blvd. Dr. Jan Duffy sequences Summerlin
-              10–15 minutes west, then a Henderson loop if that is the brief. Call (702) 222-1964.
+              Search is opened at 851 W Lone Mountain Rd. Dr. Jan Duffy sequences Summerlin
+              10–15 minutes west, then a Henderson loop if that is the brief. Call (702) 820-5408.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
@@ -207,7 +207,7 @@ export default function ListingsPage() {
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Escalation language written at Suite 100</h3>
+                <h3 className="font-bold mb-2">Escalation language written at Suite 103</h3>
                 <p className="text-slate-400 text-sm">
                   $127M+ in closed files. Inspection and appraisal terms are drafted before you leave the office.
                 </p>
@@ -263,7 +263,7 @@ export default function ListingsPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Search live MLS from Suite 100, then drive the first two ZIPs
+              Search live MLS from Suite 103, then drive the first two ZIPs
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Contact Dr. Jan Duffy for personalized guidance, off-market listings, and expert 

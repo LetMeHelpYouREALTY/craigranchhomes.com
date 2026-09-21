@@ -26,7 +26,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/summerlin",
   title: "Berkshire Hathaway HomeServices Summerlin | Las Vegas Luxury Real Estate",
   description:
-    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Downtown Summerlin and Red Rock trailheads are 10–15 minutes from Suite 100. January 2026 median $625K. Call (702) 222-1964.",
+    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Downtown Summerlin and Red Rock trailheads are 10–15 minutes from Suite 103. January 2026 median $625K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Summerlin",
     "Summerlin homes for sale",
@@ -75,7 +75,7 @@ export default function SummerlinPage() {
             <HeadingPhoto path="/neighborhoods/summerlin" />
 
             <p className="text-xl text-slate-600">
-              Downtown Summerlin and Red Rock trailheads share a 10–15 minute clock from Suite 100
+              Downtown Summerlin and Red Rock trailheads share a 10–15 minute clock from Suite 103
               with Dr. Jan Duffy at <strong>Berkshire Hathaway HomeServices</strong> Nevada Properties.
             </p>
             <div className="mt-8">
@@ -93,7 +93,7 @@ export default function SummerlinPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto" data-market-snapshot="/neighborhoods/summerlin">
             <h2 className="scroll-mt-32 text-2xl font-bold mb-8 text-center">
-              342 listings, 22 days — January 2026 Summerlin snapshot from Suite 100
+              342 listings, 22 days — January 2026 Summerlin snapshot from Suite 103
             </h2>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -122,7 +122,7 @@ export default function SummerlinPage() {
               <p>
                 When homebuyers compare Las Vegas master-planned communities, <strong>Summerlin</strong> is
                 the Howard Hughes 22,500-acre west-valley plat. As a <strong>Berkshire Hathaway HomeServices</strong>
-                agent specializing in Summerlin real estate, Dr. Jan Duffy times village tours from Suite 100
+                agent specializing in Summerlin real estate, Dr. Jan Duffy times village tours from Suite 103
                 so you compare The Trails, Downtown Summerlin, and Red Rock trailheads on the same clock.
               </p>
               <p>
@@ -130,14 +130,14 @@ export default function SummerlinPage() {
                 western rim of the Las Vegas Valley. Red Rock Canyon trailheads sit on the same west
                 clock as the villages — hiking and bike paths minutes from listing streets. With over
                 150 parks, 150 miles of trails, and nine golf courses, we compare acreage and drive time
-                from Suite 100, not a slogan.
+                from Suite 103, not a slogan.
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has deep roots in Summerlin,
                 and our agents understand the nuances of each village—from the parks and recreation amenities of
                 The Paseos parks to The Ridges estate streets. Affinity condo square footage and
                 Red Rock Country Club custom lots are separate files. BHHS
-                maps both from Suite 100.
+                maps both from Suite 103.
               </p>
 
               <CommunityHighlights path="/neighborhoods/summerlin" />
@@ -152,12 +152,12 @@ export default function SummerlinPage() {
                 The current Summerlin real estate market shows strong demand with <strong>342 active listings</strong> and
                 an average of just <strong>22 days on market</strong>. The median home price of <strong>$625,000</strong> represents
                 solid appreciation while still offering value compared to similar communities in California.
-                Buyers relocating from the West Coast compare January 2026 medians at Suite 100
+                Buyers relocating from the West Coast compare January 2026 medians at Suite 103
                 against California net proceeds — with no Nevada state income tax.
               </p>
               <p>
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent gives you access to listings
-                before they hit the market and offer math written at 9406 W Lake Mead Blvd.
+                before they hit the market and offer math written at 851 W Lone Mountain Rd.
                 Dr. Jan Duffy has been serving Summerlin since 2008 — which streets have mountain views
                 and which builder rows we register first are desk facts, not a search screenshot.
               </p>
@@ -171,11 +171,11 @@ export default function SummerlinPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Book a Red Rock and Trails loop from Lake Mead Blvd
+              Book a Red Rock and Trails loop from Lone Mountain Rd
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Tour Red Rock trailheads and Summerlin villages with Dr. Jan Duffy. Same-day showings
-              start 10–15 minutes from the Lake Mead Blvd office.
+              start 10–15 minutes from the Lone Mountain Rd office.
             </p>
             <CtaActions variant="onDark" />
           </section>

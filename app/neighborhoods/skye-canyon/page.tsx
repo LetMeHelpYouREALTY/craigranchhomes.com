@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/skye-canyon",
   title: "Berkshire Hathaway HomeServices Skye Canyon | Northwest Las Vegas",
   description:
-    "Find Skye Canyon homes with Berkshire Hathaway HomeServices Nevada Properties. Register at Suite 100 before any northwest builder row. January 2026 median $550K. Call (702) 222-1964.",
+    "Find Skye Canyon homes with Berkshire Hathaway HomeServices Nevada Properties. Register at Suite 103 before any northwest builder row. January 2026 median $550K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Skye Canyon",
     "Skye Canyon homes for sale",
@@ -47,7 +47,7 @@ export default function SkyeCanyonPage() {
             <HeadingPhoto path="/neighborhoods/skye-canyon" />
 
             <p className="text-xl text-slate-600">
-              Register at Suite 100, then Skye Center and Floyd Lamb on a 20–25 minute northwest
+              Register at Suite 103, then Skye Center and Floyd Lamb on a 20–25 minute northwest
               clock with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
@@ -95,7 +95,7 @@ export default function SkyeCanyonPage() {
                 <strong>Skye Canyon</strong> represents the future of Las Vegas master-planned living.
                 This 1,700-acre community in northwest Las Vegas sits next to Floyd Lamb Park
                 with Skye Center as the rec campus. <strong>Berkshire Hathaway HomeServices</strong>
-                registers you at Suite 100 before the first model row so builder tours stay on one northwest clock.
+                registers you at Suite 103 before the first model row so builder tours stay on one northwest clock.
               </p>
               <p>
                 What sets Skye Canyon apart is Skye Center—a stunning 15-acre amenity complex that
@@ -149,7 +149,7 @@ export default function SkyeCanyonPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Register at Suite 100, then walk Skye Center the same day
+              Register at Suite 103, then walk Skye Center the same day
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Walk Skye Canyon model rows and resale streets in one northwest loop. The 215

@@ -9,7 +9,21 @@
  * Do not orange-cloud the Vercel hostname. imagedelivery.net does not need it.
  * NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=false forces git-only stills.
  * NEXT_PUBLIC_MEDIA_CDN still wins when an R2 custom domain is set.
+ * Favicons and avatars use flexible variants (fit=cover, gravity=face)
+ * instead of storing extra cropped copies.
  */
+
+import {
+  AGENT_HEADSHOT_SRC,
+  deliveryUrl,
+} from "./cloudflare-images";
+
+export {
+  CLOUDFLARE_IMAGES_ACCOUNT_HASH,
+  cloudflareImageId,
+  gitBackupUrl,
+  isCloudflareImagesEnabled,
+} from "./cloudflare-images";
 
 export type SitePhoto = {
   /** Path under public/, used as the git backup and Cloudflare Images ID */
@@ -19,40 +33,8 @@ export type SitePhoto = {
   height: number;
 };
 
-/** Public Images account hash from the Cloudflare dashboard Developer Resources. */
-export const CLOUDFLARE_IMAGES_ACCOUNT_HASH = "byE6BTe9lNqo21V57n4aPQ";
-
-export function cloudflareImageId(src: string): string {
-  return src.startsWith("/") ? src.slice(1) : src;
-}
-
-export function gitBackupUrl(src: string): string {
-  return src.startsWith("/") ? src : `/${src}`;
-}
-
-export function isCloudflareImagesEnabled(): boolean {
-  if (process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "false") {
-    return false;
-  }
-  const hash =
-    process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ||
-    CLOUDFLARE_IMAGES_ACCOUNT_HASH;
-  return hash.length > 0;
-}
-
 export function mediaUrl(src: string): string {
-  const path = cloudflareImageId(src);
-  const mediaCdn = (process.env.NEXT_PUBLIC_MEDIA_CDN ?? "").replace(/\/$/, "");
-  if (mediaCdn) {
-    return `${mediaCdn}/${path}`;
-  }
-  if (isCloudflareImagesEnabled()) {
-    const hash =
-      process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH ||
-      CLOUDFLARE_IMAGES_ACCOUNT_HASH;
-    return `https://imagedelivery.net/${hash}/${path}/public`;
-  }
-  return gitBackupUrl(src);
+  return deliveryUrl(src);
 }
 
 export const photos = {
@@ -64,13 +46,13 @@ export const photos = {
   },
   office: {
     src: "/images/hero/office-lake-mead-blvd.jpg",
-    alt: "Berkshire Hathaway HomeServices Nevada Properties office area near 9406 W Lake Mead Blvd, Las Vegas",
+    alt: "Craig Ranch Homes office interior at 851 W Lone Mountain Rd, Suite 103, North Las Vegas",
     width: 1920,
     height: 1080,
   },
   officeExterior: {
     src: "/images/hero/west-las-vegas-office-exterior.jpg",
-    alt: "West Las Vegas office building near W Lake Mead Blvd with visitor parking and mountain backdrop",
+    alt: "Craig Ranch Homes office at 851 W Lone Mountain Rd, Suite 103, North Las Vegas",
     width: 1920,
     height: 1080,
   },
@@ -81,7 +63,7 @@ export const photos = {
     height: 1080,
   },
   agent: {
-    src: "/images/agent/dr-jan-duffy-headshot.jpg",
+    src: AGENT_HEADSHOT_SRC,
     alt: "Dr. Jan Duffy, REALTOR®, Berkshire Hathaway HomeServices Nevada Properties",
     width: 1024,
     height: 1365,

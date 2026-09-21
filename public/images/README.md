@@ -50,6 +50,8 @@ Delivery (hosted Images, Apr 2026 docs):
 
 Custom ID = path under `public/` (example: `images/hero/las-vegas-valley-homes.jpg`).
 
+Favicons and the navbar avatar use **one** source (`images/agent/dr-jan-duffy-headshot.jpg`) plus Cloudflare Images flexible variants (`width`, `height`, `fit=cover`, `gravity=face`). Enable Flexible variants under Images → Delivery. Local fallbacks are Next.js file conventions only: `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`.
+
 1. Set GitHub secret `CLOUDFLARE_API_TOKEN` (Images edit). Account ID
    `2cc579c1ec9e426ed585e933ebf4753b` is already the sync-script default.
 2. Run `pnpm cloudflare:sync-images` or the **Cloudflare Images Sync** workflow.

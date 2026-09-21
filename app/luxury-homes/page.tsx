@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/luxury-homes",
   title: "Las Vegas Luxury Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Discover Las Vegas luxury real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. The Ridges, MacDonald Highlands, Summerlin, Southern Highlands. $1M+ homes. Call (702) 222-1964.",
+    "Discover Las Vegas luxury real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. The Ridges, MacDonald Highlands, Summerlin, Southern Highlands. $1M+ homes. Call (702) 820-5408.",
   keywords: [
     "Las Vegas luxury homes",
     "The Ridges Las Vegas",
@@ -37,7 +37,7 @@ const luxurySchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    telephone: "+17028205408",
   },
   areaServed: "Las Vegas, Henderson, Summerlin luxury communities",
   serviceType: "Luxury Real Estate",
@@ -50,7 +50,7 @@ const luxuryNeighborhoods = [
     location: "Summerlin",
     priceRange: "$2M - $15M+",
     description:
-      "Guard-gated Summerlin ridge lots, Bear's Best Golf Club, and custom estates. January 2026 median $2.5M. Gate lists from Suite 100.",
+      "Guard-gated Summerlin ridge lots, Bear's Best Golf Club, and custom estates. January 2026 median $2.5M. Gate lists from Suite 103.",
     features: ["Guard-gated", "Custom estates", "Red Rock views", "Golf course"],
   },
   {
@@ -58,7 +58,7 @@ const luxuryNeighborhoods = [
     location: "Henderson",
     priceRange: "$1.5M - $10M+",
     description:
-      "Hillside Henderson lots, Dragon Ridge Country Club, and Strip-view streets. $1.5M–$10M+ published band. 25–35 minutes from Suite 100.",
+      "Hillside Henderson lots, Dragon Ridge Country Club, and Strip-view streets. $1.5M–$10M+ published band. 25–35 minutes from Suite 103.",
     features: ["Hillside location", "Strip views", "Country club", "Private lots"],
   },
   {
@@ -74,7 +74,7 @@ const luxuryNeighborhoods = [
     location: "Summerlin",
     priceRange: "$3M - $20M+",
     description:
-      "Tom Fazio golf, 250 homesites, membership by invitation. $3M–$20M+ published band. Gate lists confirmed at Suite 100.",
+      "Tom Fazio golf, 250 homesites, membership by invitation. $3M–$20M+ published band. Gate lists confirmed at Suite 103.",
     features: ["Private golf", "250 homesites", "Invitation only", "Tom Fazio design"],
   },
   {
@@ -121,7 +121,7 @@ export default function LuxuryHomesPage() {
               receives the exceptional service it deserves.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Gate lists confirmed at Suite 100</span>
+              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Gate lists confirmed at Suite 103</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Off-market windows in writing</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Addresses stay off group texts</span>
             </div>
@@ -167,7 +167,7 @@ export default function LuxuryHomesPage() {
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Guard-gated, golf-course, and lakefront luxury product is compared by square footage,
-              HOA packet, and drive time from Suite 100—not by slogan. From The Ridges to Southern
+              HOA packet, and drive time from Suite 103—not by slogan. From The Ridges to Southern
               Highlands to Lake Las Vegas, we sequence one campus per afternoon.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

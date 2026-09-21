@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/mountains-edge",
   title: "Berkshire Hathaway HomeServices Mountains Edge | Southwest Las Vegas",
   description:
-    "Find Mountains Edge homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this southwest Las Vegas community. Median price $475K. Call (702) 222-1964.",
+    "Find Mountains Edge homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this southwest Las Vegas community. Median price $475K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Mountains Edge",
     "Mountains Edge homes for sale",
@@ -47,7 +47,7 @@ export default function MountainsEdgePage() {
             <HeadingPhoto path="/neighborhoods/mountains-edge" />
 
             <p className="text-xl text-slate-600">
-              Exploration Peak then I-15/Blue Diamond, 20–30 minutes from Suite 100. $475K median, 27
+              Exploration Peak then I-15/Blue Diamond, 20–30 minutes from Suite 103. $475K median, 27
               DOM, 234 listings with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
@@ -113,7 +113,7 @@ export default function MountainsEdgePage() {
                 markets. Dr. Jan Duffy understands that value doesn't mean compromise—it means
                 finding the right home at the right price. For buyers priced out of Summerlin
                 or Henderson, Mountains Edge is compared by square footage, HOA dues, and minutes
-                from Suite 100 — not as a swapped Summerlin caption.
+                from Suite 103 — not as a swapped Summerlin caption.
               </p>
 
               <CommunityHighlights path="/neighborhoods/mountains-edge" />

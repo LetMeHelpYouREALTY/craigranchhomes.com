@@ -9,13 +9,15 @@ import SupportFaqs from "@/components/sections/SupportFaqs";
 import ExpertQuote from "@/components/sections/ExpertQuote";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import LeftoverBand from "@/components/sections/LeftoverBand";
+import { SITE_URL } from "@/lib/contact";
+import { agentLogoUrl } from "@/lib/cloudflare-images";
 
 
 export const metadata: Metadata = pageMetadata({
   path: "/why-berkshire-hathaway",
   title: "Why Choose Berkshire Hathaway HomeServices | Las Vegas Real Estate",
   description:
-    "See what Berkshire Hathaway HomeServices Nevada Properties puts on a listing file. Marketing samples at Suite 100. Call (702) 222-1964.",
+    "See what Berkshire Hathaway HomeServices Nevada Properties puts on a listing file. Marketing samples at Suite 103. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices",
     "why choose BHHS",
@@ -31,7 +33,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Berkshire Hathaway HomeServices",
   url: "https://www.bhhs.com",
-  logo: "https://heyberkshire.com/favicon-32x32.png",
+  logo: agentLogoUrl(SITE_URL),
   description:
     "Berkshire Hathaway HomeServices is a real estate brokerage network, part of Berkshire Hathaway Inc., one of the world's most respected and trusted companies.",
   parentOrganization: {
@@ -81,7 +83,7 @@ export default function WhyBerkshireHathawayPage() {
           {/* Stats Section */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              50,000 agents, $138B 2024 volume — then ask what Suite 100 puts on YOUR file
+              50,000 agents, $138B 2024 volume — then ask what Suite 103 puts on YOUR file
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -113,7 +115,7 @@ export default function WhyBerkshireHathawayPage() {
               Ask who photographs, who writes remarks, who negotiates — then sign
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Call (702) 222-1964. License S.0197614.LLC. Suite 100 on W Lake Mead Blvd.
+              Call (702) 820-5408. License S.0197614.LLC. Suite 103 on W Lone Mountain Rd.
             </p>
             <CtaActions variant="onDark" />
           </section>

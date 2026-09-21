@@ -18,14 +18,14 @@ import { mediaUrl, photos } from "@/lib/media";
 
 export const metadata = pageMetadata({
   path: "/",
-  title: "Las Vegas Real Estate | Dr. Jan Duffy, REALTOR® | BHHS Nevada",
+  title: "Craig Ranch Homes for Sale | Dr. Jan Duffy, REALTOR® | ZIP 89031",
   description:
-    "Buy or sell Las Vegas, Henderson, and Summerlin homes with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Live MLS search. Call (702) 222-1964.",
+    "Craig Ranch Homes is the hyperlocal real estate practice of Dr. Jan Duffy, REALTOR®, focused on buying and selling in Craig Ranch, North Las Vegas (ZIP 89031). Call or text (702) 820-5408.",
   keywords: [
-    "Las Vegas real estate",
-    "Henderson homes for sale",
-    "Summerlin realtor",
-    "Berkshire Hathaway HomeServices Nevada",
+    "Craig Ranch homes",
+    "Craig Ranch North Las Vegas",
+    "homes for sale 89031",
+    "North Las Vegas realtor",
     "Dr. Jan Duffy",
   ],
 });
@@ -71,8 +71,8 @@ export default async function Home() {
               <span>Transactions Closed</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">Since 2008</span>
-              <span>Las Vegas Experience</span>
+              <span className="font-semibold text-white">Since 2007</span>
+              <span>Craig Ranch Experience</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="font-semibold text-white tabular-nums">4.9★</span>
@@ -97,7 +97,7 @@ export default async function Home() {
           </h2>
           <HeadingPhoto path="/" level="h2" photo={photos.summerlin} priority />
           <p className="text-lg text-slate-600 mb-8 text-center">
-            Same west-valley start at 9406 W Lake Mead Blvd, Suite 100. We pick two contrasting
+            Same west-valley start at 851 W Lone Mountain Rd, Suite 103. We pick two contrasting
             pins so you are not averaging the whole valley.
           </p>
           <div className="grid md:grid-cols-3 gap-6">

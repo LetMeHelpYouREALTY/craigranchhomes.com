@@ -20,7 +20,7 @@ const features = [
   {
     icon: Users,
     title: "Direct Access to Dr. Jan",
-    description: "Call or text (702) 222-1964. No call center, no assistant queue.",
+    description: "Call or text (702) 820-5408. No call center, no assistant queue.",
   },
   {
     icon: Award,
@@ -52,12 +52,12 @@ export default function WhyChooseUs() {
             id="why-choose-heading"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 scroll-mt-32"
           >
-            Start at 9406 W Lake Mead Blvd — then we drive Summerlin or Henderson
+            Start at 851 W Lone Mountain Rd — then we drive Summerlin or Henderson
           </h2>
           <HeadingPhoto path="/" level="h2" photo={photos.agent} priority />
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Appointments start at Berkshire Hathaway HomeServices Nevada Properties,
-            Suite 100. We sequence the tour from this desk — not a call center.
+            Suite 103. We sequence the tour from this desk — not a call center.
           </p>
         </div>
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/centennial-hills",
   title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
   description:
-    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy covers this northwest Las Vegas area near Arbor View High School and Centennial Hills Park. Median price $495K. Call (702) 222-1964.",
+    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy covers this northwest Las Vegas area near Arbor View High School and Centennial Hills Park. Median price $495K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Centennial Hills",
     "Centennial Hills homes for sale",
@@ -47,7 +47,7 @@ export default function CentennialHillsPage() {
             <HeadingPhoto path="/neighborhoods/centennial-hills" />
 
             <p className="text-xl text-slate-600">
-              Arbor View High School commute and Centennial Hills Park, 15–20 minutes from Suite 100.
+              Arbor View High School commute and Centennial Hills Park, 15–20 minutes from Suite 103.
               $495K median, 25 DOM, 203 listings with <strong>Berkshire Hathaway HomeServices</strong>{" "}
               and Dr. Jan Duffy.
             </p>

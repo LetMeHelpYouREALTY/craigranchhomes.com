@@ -24,7 +24,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/buyers/california-relocator",
   title: "Relocating from California to Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices. Dr. Jan Duffy compares California proceeds to Summerlin and Henderson ZIPs. Call (702) 222-1964.",
+    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices. Dr. Jan Duffy compares California proceeds to Summerlin and Henderson ZIPs. Call (702) 820-5408.",
   keywords: [
     "California to Las Vegas relocation",
     "moving from California to Nevada",
@@ -39,15 +39,15 @@ export const metadata: Metadata = pageMetadata({
 const realEstateAgentSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  telephone: "+17025001942",
-  url: "https://heyberkshire.com/buyers/california-relocator",
+    name: "Craig Ranch Homes",
+  telephone: "+17028205408",
+  url: "https://www.craigranchhomes.com/buyers/california-relocator",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-    addressLocality: "Las Vegas",
+    streetAddress: "851 W Lone Mountain Rd, Suite 103",
+    addressLocality: "North Las Vegas",
     addressRegion: "NV",
-    postalCode: "89134",
+    postalCode: "89032",
   },
   areaServed: ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"],
   priceRange: "$350,000 - $10,000,000+",
@@ -244,7 +244,7 @@ export default function CaliforniaRelocatorPage() {
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
                     Guard-gated lots with Strip or Red Rock views,
-                    custom home sites, and a gate list from Suite 100.
+                    custom home sites, and a gate list from Suite 103.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
                     <strong>Best for:</strong> Beverly Hills/Newport Beach luxury buyers
@@ -278,7 +278,7 @@ export default function CaliforniaRelocatorPage() {
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
               <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-slate-900">Keep the California paycheck — run Nevada tax math at Suite 100</h2>
+              <h2 className="text-3xl font-bold text-slate-900">Keep the California paycheck — run Nevada tax math at Suite 103</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>

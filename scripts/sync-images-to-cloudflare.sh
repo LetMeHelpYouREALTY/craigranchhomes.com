@@ -2,6 +2,7 @@
 # Upload git-backed images in public/images to Cloudflare Images (hosted).
 # Custom IDs match the git path under public/ so mediaUrl() can request
 # https://imagedelivery.net/{hash}/{id}/public
+# Favicon face-crops use the same ID with flexible-variant options.
 # Docs: https://developers.cloudflare.com/images/storage/upload-images/upload-custom-path/
 # Requires: CLOUDFLARE_API_TOKEN
 # Optional: CLOUDFLARE_ACCOUNT_ID (defaults to the Images account on this project)
@@ -45,6 +46,7 @@ done < <(find "$IMG_DIR" -type f \( -name '*.jpg' -o -name '*.jpeg' -o -name '*.
 
 echo "Uploaded $count, skipped $skipped, failed $failed."
 echo "Delivery: https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/<git-path>/public"
+echo "Enable Flexible variants (Images → Delivery) so favicon face-crops can use width/height/fit/gravity options."
 if [[ "$failed" -gt 0 ]]; then
   exit 1
 fi

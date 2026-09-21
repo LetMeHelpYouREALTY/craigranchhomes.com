@@ -14,6 +14,7 @@ import MobileStickyCTA from "@/components/layouts/MobileStickyCTA";
 import InnerPageChrome from "@/components/layouts/InnerPageChrome";
 import { absoluteUrl } from "@/lib/seo";
 import { photos } from "@/lib/media";
+import { agentIconMetadata } from "@/lib/cloudflare-images";
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
@@ -26,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const domain = headers().get("x-domain") || "";
   const pathname = headers().get("x-pathname") || "/";
   const config = getDomainConfig(domain);
-  const title = `${config.neighborhood} Real Estate | Dr. Jan Duffy, REALTOR® | BHHS Nevada`;
+  const title = `${config.neighborhood} Homes | Craig Ranch Homes | Dr. Jan Duffy, REALTOR®`;
   const canonical = absoluteUrl(pathname);
   return {
     metadataBase: new URL(SITE_URL),
@@ -37,11 +38,12 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: nap.shortName,
     robots: { index: true, follow: true },
     alternates: { canonical },
+    icons: agentIconMetadata(),
     openGraph: {
       type: "website",
       url: canonical,
       locale: "en_US",
-      siteName: nap.brokerage,
+      siteName: nap.name,
       images: [{ url: absoluteUrl(photos.homeHero.src), alt: photos.homeHero.alt }],
     },
     twitter: {

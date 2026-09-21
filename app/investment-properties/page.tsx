@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/investment-properties",
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
   description:
-    "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 222-1964.",
+    "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 820-5408.",
   keywords: [
     "Las Vegas investment property",
     "Las Vegas rental property",
@@ -210,7 +210,7 @@ export default function InvestmentPropertiesPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2">Cap Rate (Capitalization Rate)</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   Net Operating Income ÷ Property Value. Las Vegas cap rates range from 4-6%,
-                  Higher cap rates typically mean more HOA or vacancy variables — we date them at Suite 100.
+                  Higher cap rates typically mean more HOA or vacancy variables — we date them at Suite 103.
                 </p>
                 <div className="bg-slate-50 rounded p-3 text-sm">
                   <strong>Example:</strong> $485K Henderson home renting at $2,300/mo = ~4.5% cap rate
@@ -298,7 +298,7 @@ export default function InvestmentPropertiesPage() {
           {/* 1031 Exchange Section */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              1031 identification window dated at Suite 100 — bring the APN
+              1031 identification window dated at Suite 103 — bring the APN
             </h2>
             <div className="bg-white border border-slate-200 rounded-xl p-8">
               <p className="text-slate-700 mb-6">
@@ -338,7 +338,7 @@ export default function InvestmentPropertiesPage() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <div>Cash flow is dated against the rent roll at Suite 100</div>
+                      <div>Cash flow is dated against the rent roll at Suite 103</div>
                     </li>
                   </ul>
                 </div>
@@ -356,7 +356,7 @@ export default function InvestmentPropertiesPage() {
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Bring the APN and rent roll to Suite 100 — (702) 222-1964
+              Bring the APN and rent roll to Suite 103 — (702) 820-5408
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Get expert guidance on Las Vegas investment properties from Dr. Jan Duffy and

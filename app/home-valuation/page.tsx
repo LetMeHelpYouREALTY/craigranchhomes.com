@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/home-valuation",
   title: "Free Home Valuation Las Vegas | What's Your Home Worth? | Berkshire Hathaway HomeServices",
   description:
-    "Get a free, accurate home valuation in Las Vegas from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for Summerlin, Henderson, Green Valley & all Las Vegas neighborhoods. Call (702) 222-1964.",
+    "Get a free, accurate home valuation in Las Vegas from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for Summerlin, Henderson, Green Valley & all Las Vegas neighborhoods. Call (702) 820-5408.",
   keywords: [
     "home valuation Las Vegas",
     "what is my home worth Las Vegas",
@@ -61,7 +61,7 @@ export default function HomeValuationPage() {
 
           <section className="max-w-4xl mx-auto mb-16">
             <h2 className="text-2xl font-bold text-slate-900 mb-3 text-center">
-              RealScout estimate first, then a dated CMA at Suite 100
+              RealScout estimate first, then a dated CMA at Suite 103
             </h2>
 <p className="text-slate-600 text-center mb-6">
               Enter your Las Vegas or Henderson address for a live estimate, then book a CMA with
@@ -74,7 +74,7 @@ export default function HomeValuationPage() {
             {/* Calendly Widget */}
             <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
               <div className="bg-blue-600 text-white p-4 text-center">
-                <h2 className="text-2xl font-bold">Book the CMA at Suite 100 — Calendly on this column</h2>
+                <h2 className="text-2xl font-bold">Book the CMA at Suite 103 — Calendly on this column</h2>
                 <p className="text-blue-100 text-sm mt-1">
                   Book a consultation with Dr. Jan Duffy
                 </p>
@@ -89,7 +89,7 @@ export default function HomeValuationPage() {
             {/* Value Prop */}
             <div className="space-y-8">
               <div className="bg-slate-900 text-white rounded-lg p-8">
-                <h2 className="text-2xl font-bold mb-4">APN at Suite 100 — comps, not a portal screenshot</h2>
+                <h2 className="text-2xl font-bold mb-4">APN at Suite 103 — comps, not a portal screenshot</h2>
                 <p className="text-slate-300 mb-6">
                   Online estimators like Zillow's "Zestimate" can be off by 10% or more—that's
                   $45,000+ on a typical Las Vegas home. Dr. Jan Duffy provides a comprehensive
@@ -142,11 +142,11 @@ export default function HomeValuationPage() {
               <div className="text-center">
                 <p className="text-slate-600 mb-4">Prefer to talk? Call Dr. Jan directly:</p>
                 <a
-                  href="tel:+17022221964"
+                  href="tel:+17028205408"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  (702) 222-1964
+                  (702) 820-5408
                 </a>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function HomeValuationPage() {
           {/* The Valuation Process */}
           <section className="max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              APN, street comps, then a dated CMA at Suite 100 — four steps
+              APN, street comps, then a dated CMA at Suite 103 — four steps
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
@@ -253,7 +253,7 @@ export default function HomeValuationPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Bring the APN to Suite 100 — (702) 222-1964 or Calendly
+              Bring the APN to Suite 103 — (702) 820-5408 or Calendly
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get a free, no-obligation home valuation from Dr. Jan Duffy and Berkshire Hathaway

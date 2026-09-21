@@ -1,5 +1,5 @@
 /**
- * Schema.org Structured Data Generators for heyberkshire.com
+ * Schema.org Structured Data Generators for craigranchhomes.com
  * Following Google's 2025 Structured Data Guidelines
  *
  * @see https://schema.org
@@ -7,6 +7,8 @@
  */
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { nap, ctaPhone, businessHours, socialProfiles as contactSocial, gbpDescription, serviceArea } from "./contact";
+import { AGENT_HEADSHOT_SRC, agentLogoUrl } from "./cloudflare-images";
 
 // ============================================================================
 // Types
@@ -65,11 +67,10 @@ const BASE_URL = siteConfig.url;
 
 // Social media profiles (to be updated with actual URLs)
 export const socialProfiles = {
-  facebook: "https://www.facebook.com/heyberkshire",
-  instagram: "https://www.instagram.com/heyberkshire",
-  linkedin: "https://www.linkedin.com/in/drjanduffy",
-  tiktok: "https://www.tiktok.com/@heyberkshire",
-  youtube: "https://www.youtube.com/@heyberkshire",
+  facebook: contactSocial.facebook,
+  instagram: contactSocial.instagram,
+  linkedin: contactSocial.linkedin,
+  youtube: contactSocial.youtube,
 };
 
 // ============================================================================
@@ -85,17 +86,17 @@ export function generateRealEstateAgentSchema() {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "@id": `${BASE_URL}#organization`,
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: nap.name,
     alternateName: [
-      "HeyBerkshire",
-      "BHHS Nevada Properties",
-      "Berkshire Hathaway HomeServices",
+      nap.shortName,
+      "Dr. Jan Duffy REALTOR®",
+      nap.brokerage,
     ],
     url: BASE_URL,
-    logo: `${BASE_URL}/images/dr-jan-duffy.jpg`,
-    image: `${BASE_URL}/images/dr-jan-duffy.jpg`,
-    description: siteConfig.description,
-    telephone: "+1-702-500-1942",
+    logo: agentLogoUrl(BASE_URL),
+    image: `${BASE_URL}${AGENT_HEADSHOT_SRC}`,
+    description: gbpDescription,
+    telephone: ctaPhone.tel,
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {
@@ -113,36 +114,29 @@ export function generateRealEstateAgentSchema() {
     },
     areaServed: [
       {
-        "@type": "City",
-        name: "Las Vegas",
-        sameAs: "https://en.wikipedia.org/wiki/Las_Vegas",
-      },
-      {
-        "@type": "City",
-        name: "Henderson",
-        sameAs: "https://en.wikipedia.org/wiki/Henderson,_Nevada",
-      },
-      {
         "@type": "Place",
-        name: "Summerlin",
+        name: "Craig Ranch",
       },
       {
         "@type": "City",
-        name: "North Las Vegas",
+        name: serviceArea.city,
       },
       {
-        "@type": "Place",
-        name: "Green Valley",
+        "@type": "PostalAddress",
+        addressLocality: serviceArea.city,
+        addressRegion: serviceArea.state,
+        postalCode: serviceArea.zip,
+        addressCountry: "US",
       },
     ],
-    openingHoursSpecification: [
-      {
+    openingHoursSpecification: businessHours
+      .filter((row) => row.opens && row.closes)
+      .map((row) => ({
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "08:00",
-        closes: "20:00",
-      },
-    ],
+        dayOfWeek: row.day,
+        opens: row.opens,
+        closes: row.closes,
+      })),
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Real Estate License",
@@ -177,17 +171,13 @@ export function generateRealEstateAgentSchema() {
       worstRating: "1",
     },
     knowsAbout: [
-      "Las Vegas real estate",
-      "Henderson homes",
-      "Summerlin properties",
-      "Luxury homes",
-      "New construction",
-      "Investment properties",
-      "Relocation services",
-      "55+ communities",
-      "First-time homebuyers",
+      "Craig Ranch real estate",
+      "North Las Vegas 89031 homes",
+      "Craig Ranch Regional Park",
+      "Nellis AFB PCS moves",
+      "New construction North Las Vegas",
     ],
-    slogan: "Your Berkshire Hathaway HomeServices expert in Las Vegas",
+    slogan: "Craig Ranch Homes — hyperlocal buying and selling in ZIP 89031",
   };
 }
 
@@ -201,7 +191,7 @@ export function generateOrganizationSchema() {
     "@id": `${BASE_URL}#parent-organization`,
     name: "Berkshire Hathaway HomeServices Nevada Properties",
     url: "https://www.bfrre.com",
-    logo: `${BASE_URL}/favicon-32x32.png`,
+    logo: agentLogoUrl(BASE_URL),
     parentOrganization: {
       "@type": "Organization",
       name: "Berkshire Hathaway HomeServices",

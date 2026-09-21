@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/neighborhoods/inspirada",
   title: "Berkshire Hathaway HomeServices Inspirada | Henderson Resort Living",
   description:
-    "Find Inspirada homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's resort-style community. Median price $525K. Call (702) 222-1964.",
+    "Find Inspirada homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's resort-style community. Median price $525K. Call (702) 820-5408.",
   keywords: [
     "Berkshire Hathaway HomeServices Inspirada",
     "Inspirada homes for sale",
@@ -47,7 +47,7 @@ export default function InspiradaPage() {
             <HeadingPhoto path="/neighborhoods/inspirada" />
 
             <p className="text-xl text-slate-600">
-              2,000-acre Henderson campus, 30–40 minutes from Suite 100. $525K median, 23 DOM, 98
+              2,000-acre Henderson campus, 30–40 minutes from Suite 103. $525K median, 23 DOM, 98
               listings (January 2026) with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan
               Duffy.
             </p>
@@ -94,8 +94,8 @@ export default function InspiradaPage() {
               <NeighborhoodLifestyle path="/neighborhoods/inspirada" />
               <p>
                 <strong>Inspirada</strong> is a 2,000-acre Henderson campus. Pools, slides, cabanas,
-                and trail mileage are in the HOA packet. Call (702) 222-1964 from 9406 W Lake Mead
-                Blvd, Suite 100. Do not stack this with a Summerlin gate afternoon.
+                and trail mileage are in the HOA packet. Call (702) 820-5408 from 851 W Lone Mountain
+                Rd, Suite 103. Do not stack this with a Summerlin gate afternoon.
               </p>
               <p>
                 The community's amenity package rivals many resorts. Multiple pools feature water
