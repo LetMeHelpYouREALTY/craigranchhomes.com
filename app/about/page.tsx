@@ -371,7 +371,7 @@ export default function AboutPage() {
           {/* Client Testimonials */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-              Dated files and Google Reviews — 4.9 on the Suite 100 pin
+              Dated files and Google Reviews — 4.9 on the Suite 103 pin
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               With a 4.9-star rating and hundreds of satisfied clients, Dr. Jan has built a 

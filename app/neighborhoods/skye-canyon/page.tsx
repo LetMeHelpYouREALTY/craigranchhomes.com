@@ -47,7 +47,7 @@ export default function SkyeCanyonPage() {
             <HeadingPhoto path="/neighborhoods/skye-canyon" />
 
             <p className="text-xl text-slate-600">
-              Register at Suite 100, then Skye Center and Floyd Lamb on a 20–25 minute northwest
+              Register at Suite 103, then Skye Center and Floyd Lamb on a 20–25 minute northwest
               clock with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">

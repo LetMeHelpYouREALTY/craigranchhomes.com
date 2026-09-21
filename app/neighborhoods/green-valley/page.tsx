@@ -46,7 +46,7 @@ export default function GreenValleyPage() {
             <HeadingPhoto path="/neighborhoods/green-valley" />
 
             <p className="text-xl text-slate-600">
-              1988 tree canopy, The District midpoint, 25–35 minutes from Suite 100. $520K median,
+              1988 tree canopy, The District midpoint, 25–35 minutes from Suite 103. $520K median,
               26 DOM with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">
@@ -95,7 +95,7 @@ export default function GreenValleyPage() {
                 large-scale plat with HOA streets, parks, and golf. Three decades later the comparison
                 is canopy age and lot size vs newer Henderson rec campuses. Today,{" "}
                 <strong>Berkshire Hathaway HomeServices</strong> sequences Green Valley tours from
-                Suite 100: The District first, then golf-course HOAs and interior streets on a 25–35
+                Suite 103: The District first, then golf-course HOAs and interior streets on a 25–35
                 minute I-215 east clock.
               </p>
               <p>

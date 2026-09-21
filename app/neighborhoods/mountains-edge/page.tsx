@@ -47,7 +47,7 @@ export default function MountainsEdgePage() {
             <HeadingPhoto path="/neighborhoods/mountains-edge" />
 
             <p className="text-xl text-slate-600">
-              Exploration Peak then I-15/Blue Diamond, 20–30 minutes from Suite 100. $475K median, 27
+              Exploration Peak then I-15/Blue Diamond, 20–30 minutes from Suite 103. $475K median, 27
               DOM, 234 listings with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
             <div className="mt-8">

@@ -294,7 +294,7 @@ export default function RelocationPage() {
           {/* BHHS Network */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              50,000-agent referral, then a dated calendar at Suite 100
+              50,000-agent referral, then a dated calendar at Suite 103
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               With 50,000+ agents in 1,500+ offices worldwide, Berkshire Hathaway HomeServices 

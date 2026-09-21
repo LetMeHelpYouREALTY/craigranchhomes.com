@@ -137,7 +137,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
       '<LeftoverBand path="/new-construction" slot={1} />',
       '<LeftoverBand path="/new-construction" slot={2} />',
       '<LeftoverBand path="/new-construction" slot={3} />',
-      "Register Dr. Jan at Suite 100 before any Skye Canyon or Inspirada model",
+      "Register Dr. Jan at Suite 103 before any Skye Canyon or Inspirada model",
     ],
     banned: [
       "Premier locations",
@@ -574,7 +574,7 @@ const pages: { file: string; needles: string[]; banned: string[] }[] = [
     needles: [
       '<LeftoverBand path="/55-plus-communities/solera-anthem" />',
       "1,200+ Homes, $170–$210 HOA, $380K–$650K Band",
-      "Anthem parks, staffed gate, 30–35 minutes from Suite 100",
+      "Anthem parks, staffed gate, 30–35 minutes from Suite 103",
     ],
     banned: [
       ">About Solera at Anthem<",

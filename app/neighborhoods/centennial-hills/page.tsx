@@ -47,7 +47,7 @@ export default function CentennialHillsPage() {
             <HeadingPhoto path="/neighborhoods/centennial-hills" />
 
             <p className="text-xl text-slate-600">
-              Arbor View High School commute and Centennial Hills Park, 15–20 minutes from Suite 100.
+              Arbor View High School commute and Centennial Hills Park, 15–20 minutes from Suite 103.
               $495K median, 25 DOM, 203 listings with <strong>Berkshire Hathaway HomeServices</strong>{" "}
               and Dr. Jan Duffy.
             </p>

@@ -244,7 +244,7 @@ export default function CaliforniaRelocatorPage() {
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
                     Guard-gated lots with Strip or Red Rock views,
-                    custom home sites, and a gate list from Suite 100.
+                    custom home sites, and a gate list from Suite 103.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
                     <strong>Best for:</strong> Beverly Hills/Newport Beach luxury buyers

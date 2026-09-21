@@ -131,7 +131,7 @@ export default function SecurityPolicyPage() {
           {/* Third-Party Services */}
           <section className="mb-12">
             <p className="text-gray-700 mb-4">
-              Vendors named on this URL. Keys and wire instructions stay at Suite 100:
+              Vendors named on this URL. Keys and wire instructions stay at Suite 103:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>

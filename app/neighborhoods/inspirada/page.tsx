@@ -47,7 +47,7 @@ export default function InspiradaPage() {
             <HeadingPhoto path="/neighborhoods/inspirada" />
 
             <p className="text-xl text-slate-600">
-              2,000-acre Henderson campus, 30–40 minutes from Suite 100. $525K median, 23 DOM, 98
+              2,000-acre Henderson campus, 30–40 minutes from Suite 103. $525K median, 23 DOM, 98
               listings (January 2026) with <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan
               Duffy.
             </p>

@@ -293,7 +293,7 @@ export default function MoveUpSellerPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              January 2026 CMA on this APN at Suite 100, not a slogan
+              January 2026 CMA on this APN at Suite 103, not a slogan
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get a free equity analysis and see what your next home could look like.

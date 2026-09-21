@@ -125,7 +125,7 @@ export default function DownsizingPage() {
           {/* Dual Transaction Expertise */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-              Sale file and next-home file share one Suite 100 clock
+              Sale file and next-home file share one Suite 103 clock
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -350,7 +350,7 @@ export default function DownsizingPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Bring the APN to Suite 100 — then one 55+ rec campus
+              Bring the APN to Suite 103 — then one 55+ rec campus
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get a free home valuation and explore your downsizing options.

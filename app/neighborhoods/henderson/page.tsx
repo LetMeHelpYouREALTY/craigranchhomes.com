@@ -63,7 +63,7 @@ export default function HendersonPage() {
             <HeadingPhoto path="/neighborhoods/henderson" />
 
             <p className="text-xl text-slate-600">
-              Green Valley trees vs Inspirada rec — two villages, 25–35 minutes from Suite 100.
+              Green Valley trees vs Inspirada rec — two villages, 25–35 minutes from Suite 103.
               $485K median, 1,280 listings with <strong>Berkshire Hathaway HomeServices</strong> and
               Dr. Jan Duffy.
             </p>
