@@ -1,4 +1,11 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import {
+  headingStillSrc,
+  pageH1s,
+  uniqueInteriorHeadingStill,
+} from "@/lib/heading-stills";
 import { h2PhotoForPath, h3PhotoForPath, photoForPath } from "@/lib/media";
 import { uniqueInteriors } from "@/lib/unique-interiors";
 
@@ -16,5 +23,39 @@ describe("heading photos", () => {
       }
     }
     expect(collisions).toEqual([]);
+  });
+
+  it("maps UniqueInterior H1/H2/H3 to dedicated heading stills from that page's copy", () => {
+    for (const path of paths) {
+      expect(photoForPath(path).src).toBe(headingStillSrc(path, "h1"));
+      expect(h2PhotoForPath(path).src).toBe(headingStillSrc(path, "h2"));
+      expect(h3PhotoForPath(path).src).toBe(headingStillSrc(path, "h3"));
+      expect(photoForPath(path).alt).toContain(pageH1s[path]);
+      expect(h2PhotoForPath(path).alt).toContain(uniqueInteriors[path].h2);
+      expect(h3PhotoForPath(path).alt).toContain(uniqueInteriors[path].h3);
+      expect(uniqueInteriorHeadingStill(path, "h1")?.src).toBe(
+        headingStillSrc(path, "h1"),
+      );
+      expect(uniqueInteriorHeadingStill(path, "h2")?.src).toBe(
+        headingStillSrc(path, "h2"),
+      );
+    }
+  });
+
+  it("covers every UniqueInterior path with an H1 string", () => {
+    const missing = paths.filter((path) => !pageH1s[path]);
+    expect(missing).toEqual([]);
+  });
+
+  it("ships a git-backup jpg for every UniqueInterior H1, H2, and H3 still", () => {
+    const missing: string[] = [];
+    for (const path of paths) {
+      for (const level of ["h1", "h2", "h3"] as const) {
+        const src = headingStillSrc(path, level);
+        const file = join(process.cwd(), "public", src.replace(/^\//, ""));
+        if (!existsSync(file)) missing.push(src);
+      }
+    }
+    expect(missing).toEqual([]);
   });
 });

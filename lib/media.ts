@@ -13,10 +13,8 @@
  * instead of storing extra cropped copies.
  */
 
-import {
-  AGENT_HEADSHOT_SRC,
-  deliveryUrl,
-} from "./cloudflare-images";
+import { AGENT_HEADSHOT_SRC, deliveryUrl } from "./cloudflare-images";
+import { uniqueInteriorHeadingStill } from "./heading-stills";
 
 export {
   CLOUDFLARE_IMAGES_ACCOUNT_HASH,
@@ -229,6 +227,8 @@ export const photos = {
 export type PhotoKey = keyof typeof photos;
 
 export function photoForPath(path: string): SitePhoto {
+  const still = uniqueInteriorHeadingStill(path, "h1");
+  if (still) return still;
   if (path === "/" || path === "") return photos.homeHero;
   if (path.startsWith("/about")) return photos.agent;
   if (
@@ -294,6 +294,8 @@ export function photoForPath(path: string): SitePhoto {
 
 /** H2 photos stay distinct from H1 so unique-interior bands are not a duplicate hero. */
 export function h2PhotoForPath(path: string): SitePhoto {
+  const still = uniqueInteriorHeadingStill(path, "h2");
+  if (still) return still;
   if (path.startsWith("/about")) return photos.office;
   if (
     path.startsWith("/contact") ||
@@ -342,6 +344,8 @@ export function h2PhotoForPath(path: string): SitePhoto {
 
 /** H3 photos match amenities, trails, golf, or office details under the heading. */
 export function h3PhotoForPath(path: string): SitePhoto {
+  const still = uniqueInteriorHeadingStill(path, "h3");
+  if (still) return still;
   if (path.startsWith("/neighborhoods/summerlin")) return photos.summerlinTrail;
   if (path.startsWith("/neighborhoods/green-valley")) return photos.henderson;
   if (path.startsWith("/neighborhoods/inspirada"))
@@ -417,12 +421,14 @@ export function h3PhotoForPath(path: string): SitePhoto {
 export function campusPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/summerlin")) return photos.buyers;
   if (path.startsWith("/neighborhoods/the-ridges")) return photos.consultation;
-  if (path.startsWith("/neighborhoods/southern-highlands")) return photos.sellers;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.sellers;
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.centennial;
   if (path.startsWith("/neighborhoods/centennial-hills")) return photos.office;
   if (path.startsWith("/neighborhoods/green-valley")) return photos.inspirada;
   if (path.startsWith("/neighborhoods/henderson")) return photos.lakeLasVegas;
-  if (path.startsWith("/neighborhoods/inspirada")) return photos.sunCityAnthemGolf;
+  if (path.startsWith("/neighborhoods/inspirada"))
+    return photos.sunCityAnthemGolf;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.market;
   if (path.startsWith("/neighborhoods/mountains-edge"))
     return photos.southernHighlands;
@@ -443,19 +449,23 @@ export function commutePhotoForPath(path: string): SitePhoto {
     return photos.soleraClubhouse;
   if (path.startsWith("/neighborhoods/henderson")) return photos.fiftyFive;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.heritageGate;
-  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.investment;
-  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.luxuryPool;
+  if (path.startsWith("/neighborhoods/north-las-vegas"))
+    return photos.investment;
+  if (path.startsWith("/neighborhoods/mountains-edge"))
+    return photos.luxuryPool;
   if (path.startsWith("/neighborhoods")) return photos.consultation;
   return photos.market;
 }
 
 /** Sixth still for neighborhood FAQ H2s — distinct from H1/H2/H3/campus/commute. */
 export function faqPhotoForPath(path: string): SitePhoto {
-  if (path.startsWith("/neighborhoods/summerlin")) return photos.fiftyFiveClubhouse;
+  if (path.startsWith("/neighborhoods/summerlin"))
+    return photos.fiftyFiveClubhouse;
   if (path.startsWith("/neighborhoods/the-ridges")) return photos.greenValley;
   if (path.startsWith("/neighborhoods/southern-highlands"))
     return photos.newConstruction;
-  if (path.startsWith("/neighborhoods/skye-canyon")) return photos.summerlinTrail;
+  if (path.startsWith("/neighborhoods/skye-canyon"))
+    return photos.summerlinTrail;
   if (path.startsWith("/neighborhoods/centennial-hills")) return photos.buyers;
   if (path.startsWith("/neighborhoods/green-valley"))
     return photos.fiftyFiveFitness;
@@ -463,7 +473,8 @@ export function faqPhotoForPath(path: string): SitePhoto {
     return photos.sunCitySummerlinRec;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.ridges;
   if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.sellers;
-  if (path.startsWith("/neighborhoods/mountains-edge")) return photos.skyeCanyon;
+  if (path.startsWith("/neighborhoods/mountains-edge"))
+    return photos.skyeCanyon;
   if (path.startsWith("/neighborhoods")) return photos.lakeLasVegas;
   return photos.officeExterior;
 }
@@ -497,8 +508,10 @@ export function fiftyFiveFaqPhotoForPath(path: string): SitePhoto {
 
 /** Eighth still for buyer-intent FAQ H2s — distinct from that path's H1/H2/H3. */
 export function buyerFaqPhotoForPath(path: string): SitePhoto {
-  if (path.startsWith("/buyers/first-time-buyers")) return photos.officeExterior;
-  if (path.startsWith("/buyers/california-relocator")) return photos.greenValley;
+  if (path.startsWith("/buyers/first-time-buyers"))
+    return photos.officeExterior;
+  if (path.startsWith("/buyers/california-relocator"))
+    return photos.greenValley;
   if (path.startsWith("/buyers/luxury-homes-las-vegas")) return photos.market;
   if (path.startsWith("/buyers")) return photos.office;
   return photos.consultation;
@@ -547,10 +560,12 @@ export function amenityPhotoForPath(path: string): SitePhoto {
     return photos.luxuryPool;
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.alianteRec;
   if (path.startsWith("/neighborhoods/centennial-hills")) return photos.market;
-  if (path.startsWith("/neighborhoods/green-valley")) return photos.lakeLasVegas;
+  if (path.startsWith("/neighborhoods/green-valley"))
+    return photos.lakeLasVegas;
   if (path.startsWith("/neighborhoods/henderson")) return photos.inspirada;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.greenValley;
-  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.centennial;
+  if (path.startsWith("/neighborhoods/north-las-vegas"))
+    return photos.centennial;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.fiftyFive;
   if (path.startsWith("/neighborhoods")) return photos.newConstruction;
   return photos.consultation;
@@ -590,7 +605,8 @@ export function lifestylePhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/southern-highlands"))
     return photos.greenValley;
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.lakeLasVegas;
-  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.inspirada;
+  if (path.startsWith("/neighborhoods/centennial-hills"))
+    return photos.inspirada;
   if (path.startsWith("/neighborhoods/green-valley")) return photos.homeHero;
   if (path.startsWith("/neighborhoods/henderson")) return photos.agent;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.market;
@@ -603,14 +619,18 @@ export function lifestylePhotoForPath(path: string): SitePhoto {
 /** Seventeenth still for village Community Highlights H3s. */
 export function highlightPhotoForPath(path: string): SitePhoto {
   if (path.startsWith("/neighborhoods/summerlin")) return photos.henderson;
-  if (path.startsWith("/neighborhoods/the-ridges")) return photos.summerlinTrail;
-  if (path.startsWith("/neighborhoods/southern-highlands")) return photos.homeHero;
+  if (path.startsWith("/neighborhoods/the-ridges"))
+    return photos.summerlinTrail;
+  if (path.startsWith("/neighborhoods/southern-highlands"))
+    return photos.homeHero;
   if (path.startsWith("/neighborhoods/skye-canyon")) return photos.consultation;
-  if (path.startsWith("/neighborhoods/centennial-hills")) return photos.summerlin;
+  if (path.startsWith("/neighborhoods/centennial-hills"))
+    return photos.summerlin;
   if (path.startsWith("/neighborhoods/green-valley")) return photos.office;
   if (path.startsWith("/neighborhoods/henderson")) return photos.market;
   if (path.startsWith("/neighborhoods/inspirada")) return photos.luxuryPool;
-  if (path.startsWith("/neighborhoods/north-las-vegas")) return photos.greenValley;
+  if (path.startsWith("/neighborhoods/north-las-vegas"))
+    return photos.greenValley;
   if (path.startsWith("/neighborhoods/mountains-edge")) return photos.aliante;
   if (path.startsWith("/neighborhoods")) return photos.fiftyFiveFitness;
   return photos.consultation;
@@ -658,7 +678,8 @@ export function processPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/services" && slot === 1) return photos.market;
   if (path.startsWith("/why-berkshire") && slot === 0) return photos.homeHero;
   if (path === "/contact" && slot === 0) return photos.summerlin;
-  if (path.startsWith("/luxury-homes") && slot === 0) return photos.consultation;
+  if (path.startsWith("/luxury-homes") && slot === 0)
+    return photos.consultation;
   return photos.consultation;
 }
 
@@ -667,7 +688,8 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/55-plus-communities/sun-city-anthem" && slot === 0) {
     return photos.homeHero;
   }
-  if (path === "/55-plus-communities" && slot === 0) return photos.officeExterior;
+  if (path === "/55-plus-communities" && slot === 0)
+    return photos.officeExterior;
   if (path === "/buyers/luxury-homes-las-vegas" && slot === 0) {
     return photos.homeHero;
   }
@@ -694,41 +716,59 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/listings" && slot === 1) return photos.buyers;
   if (path.startsWith("/why-berkshire") && slot === 0) return photos.market;
   if (path.startsWith("/why-berkshire") && slot === 1) return photos.summerlin;
-  if (path.startsWith("/new-construction") && slot === 0) return photos.homeHero;
+  if (path.startsWith("/new-construction") && slot === 0)
+    return photos.homeHero;
   if (path.startsWith("/new-construction") && slot === 1) return photos.office;
-  if (path.startsWith("/new-construction") && slot === 2) return photos.summerlin;
-  if (path.startsWith("/new-construction") && slot === 3) return photos.henderson;
+  if (path.startsWith("/new-construction") && slot === 2)
+    return photos.summerlin;
+  if (path.startsWith("/new-construction") && slot === 3)
+    return photos.henderson;
   if (path.startsWith("/google-business") && slot === 0) return photos.homeHero;
-  if (path.startsWith("/google-business") && slot === 1) return photos.summerlin;
+  if (path.startsWith("/google-business") && slot === 1)
+    return photos.summerlin;
   if (path === "/sellers" && slot === 0) return photos.homeHero;
   if (path === "/sellers" && slot === 1) return photos.summerlin;
   if (path === "/sellers" && slot === 2) return photos.henderson;
-  if (path.startsWith("/sellers/downsizing") && slot === 0) return photos.office;
-  if (path.startsWith("/sellers/downsizing") && slot === 1) return photos.homeHero;
-  if (path.startsWith("/sellers/downsizing") && slot === 2) return photos.summerlin;
-  if (path.startsWith("/sellers/downsizing") && slot === 3) return photos.henderson;
-  if (path.startsWith("/sellers/move-up") && slot === 0) return photos.summerlin;
+  if (path.startsWith("/sellers/downsizing") && slot === 0)
+    return photos.office;
+  if (path.startsWith("/sellers/downsizing") && slot === 1)
+    return photos.homeHero;
+  if (path.startsWith("/sellers/downsizing") && slot === 2)
+    return photos.summerlin;
+  if (path.startsWith("/sellers/downsizing") && slot === 3)
+    return photos.henderson;
+  if (path.startsWith("/sellers/move-up") && slot === 0)
+    return photos.summerlin;
   if (path.startsWith("/sellers/move-up") && slot === 1) return photos.office;
-  if (path.startsWith("/sellers/move-up") && slot === 2) return photos.henderson;
+  if (path.startsWith("/sellers/move-up") && slot === 2)
+    return photos.henderson;
   if (path.startsWith("/sellers/move-up") && slot === 3) return photos.homeHero;
   if (path.startsWith("/sellers/move-up") && slot === 4) return photos.buyers;
-  if (path.startsWith("/sellers/relocation") && slot === 0) return photos.homeHero;
-  if (path.startsWith("/sellers/relocation") && slot === 1) return photos.office;
-  if (path.startsWith("/sellers/relocation") && slot === 2) return photos.summerlin;
-  if (path.startsWith("/sellers/relocation") && slot === 3) return photos.henderson;
-  if (path.startsWith("/sellers/relocation") && slot === 4) return photos.buyers;
-  if (path.startsWith("/sellers/relocation") && slot === 5) return photos.ridges;
+  if (path.startsWith("/sellers/relocation") && slot === 0)
+    return photos.homeHero;
+  if (path.startsWith("/sellers/relocation") && slot === 1)
+    return photos.office;
+  if (path.startsWith("/sellers/relocation") && slot === 2)
+    return photos.summerlin;
+  if (path.startsWith("/sellers/relocation") && slot === 3)
+    return photos.henderson;
+  if (path.startsWith("/sellers/relocation") && slot === 4)
+    return photos.buyers;
+  if (path.startsWith("/sellers/relocation") && slot === 5)
+    return photos.ridges;
   if (path.startsWith("/sellers/divorce-probate") && slot === 0) {
     return photos.homeHero;
   }
-  if (path.startsWith("/sellers/divorce-probate") && slot === 1) return photos.office;
+  if (path.startsWith("/sellers/divorce-probate") && slot === 1)
+    return photos.office;
   if (path.startsWith("/sellers/divorce-probate") && slot === 2) {
     return photos.summerlin;
   }
   if (path.startsWith("/sellers/divorce-probate") && slot === 3) {
     return photos.henderson;
   }
-  if (path.startsWith("/sellers/divorce-probate") && slot === 4) return photos.buyers;
+  if (path.startsWith("/sellers/divorce-probate") && slot === 4)
+    return photos.buyers;
   if (path === "/relocation" && slot === 0) return photos.officeExterior;
   if (path === "/relocation" && slot === 1) return photos.office;
   if (path === "/relocation" && slot === 2) return photos.henderson;
@@ -765,7 +805,8 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path.startsWith("/market-insights") && slot === 1) {
     return photos.officeExterior;
   }
-  if (path.startsWith("/market-insights") && slot === 2) return photos.summerlin;
+  if (path.startsWith("/market-insights") && slot === 2)
+    return photos.summerlin;
   if (path.startsWith("/market-insights") && slot === 3) return photos.buyers;
   if (path.startsWith("/market-insights") && slot === 4) return photos.sellers;
   if (path.startsWith("/market-insights") && slot === 5) return photos.ridges;
@@ -814,13 +855,19 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path.startsWith("/faq") && slot === 0) return photos.henderson;
   if (path === "/55-plus-communities" && slot === 1) return photos.homeHero;
   if (path === "/55-plus-communities" && slot === 2) return photos.summerlin;
-  if (path.startsWith("/55-plus-communities/sun-city-summerlin") && slot === 0) {
+  if (
+    path.startsWith("/55-plus-communities/sun-city-summerlin") &&
+    slot === 0
+  ) {
     return photos.office;
   }
   if (path.startsWith("/55-plus-communities/trilogy-summerlin") && slot === 0) {
     return photos.homeHero;
   }
-  if (path.startsWith("/55-plus-communities/heritage-stonebridge") && slot === 0) {
+  if (
+    path.startsWith("/55-plus-communities/heritage-stonebridge") &&
+    slot === 0
+  ) {
     return photos.homeHero;
   }
   if (path.startsWith("/55-plus-communities/solera-anthem") && slot === 0) {
@@ -838,10 +885,13 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
   if (path === "/" && slot === 0) return photos.officeExterior;
   if (path === "/" && slot === 1) return photos.buyers;
   if (path.startsWith("/security-policy") && slot === 0) return photos.homeHero;
-  if (path.startsWith("/security-policy") && slot === 1) return photos.summerlin;
-  if (path.startsWith("/security-policy") && slot === 2) return photos.henderson;
+  if (path.startsWith("/security-policy") && slot === 1)
+    return photos.summerlin;
+  if (path.startsWith("/security-policy") && slot === 2)
+    return photos.henderson;
   if (path.startsWith("/security-policy") && slot === 3) return photos.buyers;
-  if (path.startsWith("/google-business") && slot === 2) return photos.henderson;
+  if (path.startsWith("/google-business") && slot === 2)
+    return photos.henderson;
   if (path.startsWith("/google-business") && slot === 3) return photos.market;
   if (path === "/sellers" && slot === 3) return photos.agent;
   if (path === "/sellers" && slot === 4) return photos.buyers;
@@ -853,12 +903,7 @@ export function leftoverPhotoForPath(path: string, slot = 0): SitePhoto {
 }
 
 export type FaqHubCategoryId =
-  | "bhhs"
-  | "buying"
-  | "selling"
-  | "investment"
-  | "relocating"
-  | "working";
+  "bhhs" | "buying" | "selling" | "investment" | "relocating" | "working";
 
 /** Twelfth stills for /faq category H2s — distinct from /faq H1/H2/H3. */
 export function faqHubPhotoForCategory(id: FaqHubCategoryId): SitePhoto {
@@ -900,7 +945,7 @@ export function occupiedHeadingStills(path: string): Set<string> {
       commutePhotoForPath(path).src,
       faqPhotoForPath(path).src,
       amenityPhotoForPath(path).src,
-      lifestylePhotoForPath(path).src
+      lifestylePhotoForPath(path).src,
     );
   }
   if (path.startsWith("/neighborhoods/")) {
@@ -1119,7 +1164,7 @@ export function occupiedHeadingStills(path: string): Set<string> {
   if (path.startsWith("/55-plus")) {
     srcs.push(
       fiftyFiveFaqPhotoForPath(path).src,
-      fiftyFiveAmenityPhotoForPath(path).src
+      fiftyFiveAmenityPhotoForPath(path).src,
     );
   }
   if (path.startsWith("/buyers")) {
@@ -1155,7 +1200,7 @@ export function occupiedHeadingStills(path: string): Set<string> {
       faqHubPhotoForCategory("selling").src,
       faqHubPhotoForCategory("investment").src,
       faqHubPhotoForCategory("relocating").src,
-      faqHubPhotoForCategory("working").src
+      faqHubPhotoForCategory("working").src,
     );
   }
   return new Set(srcs);
