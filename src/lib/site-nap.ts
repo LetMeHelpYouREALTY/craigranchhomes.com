@@ -141,4 +141,10 @@ export const HYPERLOCAL_SERVICE_LINKS: ReadonlyArray<HyperlocalLink> = [
     description:
       'Builder inventory and lot options in and near Craig Ranch.',
   },
+  {
+    href: '/amenities',
+    label: 'Nearby Amenities',
+    description:
+      'Interactive map of dining, groceries, parks, schools, and healthcare near Craig Ranch.',
+  },
 ] as const;

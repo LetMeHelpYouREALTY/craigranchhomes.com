@@ -63,6 +63,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href='/amenities'
+                  className='text-white hover:underline transition-colors duration-200'
+                >
+                  Nearby Amenities
+                </Link>
+              </li>
+              <li>
+                <Link
                   href='/market-data'
                   className='text-white hover:underline transition-colors duration-200'
                 >

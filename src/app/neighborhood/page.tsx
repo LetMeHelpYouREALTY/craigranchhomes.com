@@ -6,6 +6,7 @@ import NorthLasVegasNeighborhoods from '@/components/sections/north-las-vegas-ne
 import CraigRanchListings from '@/components/sections/craig-ranch-listings';
 import CraigRanchPropertySearch from '@/components/sections/craig-ranch-property-search';
 import GoogleMap from '@/components/sections/google-map';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
@@ -465,6 +466,8 @@ export default function NeighborhoodPage() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection />
 
       {/* Location Map Section */}
       <section className='py-16 bg-white'>

@@ -19,6 +19,7 @@ import BlogPostsSkeleton from '@/components/skeletons/blog-posts-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Home as HomeIcon, MapPin, TrendingUp } from 'lucide-react';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 import {
   generateMetadata as genMetadata,
   CRAIG_RANCH_FAQS,
@@ -258,6 +259,9 @@ export default function Home() {
         <Suspense fallback={<CommunitiesSkeleton />}>
           <DynamicFeaturedCommunities />
         </Suspense>
+
+        <NearbyAmenitiesSection title={`Life Near ${SITE_NAP.communityName}`} />
+
         <DynamicHomeEvaluation />
         <Suspense fallback={<BlogPostsSkeleton />}>
           <DynamicBlogPosts />
@@ -347,6 +351,14 @@ export default function Home() {
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Schools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href='/amenities'
+                    className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
+                  >
+                    Nearby Amenities
                   </Link>
                 </li>
                 <li>
