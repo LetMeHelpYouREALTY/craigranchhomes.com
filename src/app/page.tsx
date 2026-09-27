@@ -80,7 +80,7 @@ export const revalidate = 3600; // 1 hour
 export const metadata = genMetadata({
   title: 'Craig Ranch Homes | Dr. Jan Duffy REALTOR®',
   description:
-    'Craig Ranch homes in North Las Vegas from about $370K–$1.8M. Park, trails, and floor plans with Dr. Jan Duffy. Call (702) 820-5408.',
+    'Find homes in Craig Ranch, North Las Vegas. Browse listings, explore the neighborhood, and review park, trail, and floor-plan details with Dr. Jan Duffy.',
   keywords:
     'Craig Ranch, Las Vegas real estate, luxury homes, Las Vegas homes for sale, North Las Vegas, Nevada real estate, Craig Ranch community, luxury properties, real estate agent Las Vegas, Dr. Jan Duffy, Berkshire Hathaway',
   path: '/',

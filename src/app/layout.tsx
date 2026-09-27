@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     template: '%s | Craig Ranch Homes',
   },
   description:
-    'Craig Ranch Homes in North Las Vegas with Dr. Jan Duffy. Master-planned community with 170-acre regional park, 5 miles of trails, and Century Communities floor plans from 1,519–2,638 sq ft. Call (702) 820-5408.',
+    'Craig Ranch homes in North Las Vegas: master-planned community with regional park, trails, and floor plans. Work with Dr. Jan Duffy, REALTOR®.',
   keywords:
     'Craig Ranch, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Craig Ranch community, luxury homes Las Vegas, Craig Ranch properties, Las Vegas luxury real estate, Craig Ranch homes for sale, Las Vegas real estate agent, Craig Ranch neighborhood, luxury properties Las Vegas, Craig Ranch real estate market, Las Vegas home values',
   authors: [
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Craig Ranch Homes | Dr. Jan Duffy',
     description:
-      'Craig Ranch Homes in North Las Vegas: 170-acre regional park, 5 miles of trails, shopping on West Craig Road, and homes from about $370K to $1.8M. Call (702) 820-5408.',
+      'Craig Ranch homes in North Las Vegas: master-planned community with regional park, trails, and floor plans. Work with Dr. Jan Duffy, REALTOR®.',
     url: siteUrl,
     siteName: 'Craig Ranch Homes',
     locale: 'en_US',
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Craig Ranch Homes | Dr. Jan Duffy',
     description:
-      'Browse Craig Ranch Homes in North Las Vegas with Dr. Jan Duffy — park, trails, and floor plans from 1,519–2,638 sq ft. Call (702) 820-5408.',
+      'Craig Ranch homes in North Las Vegas: master-planned community with regional park, trails, and floor plans. Work with Dr. Jan Duffy, REALTOR®.',
     images: ['/54-DJI_20250707171528_0828_D.jpg'],
   },
   robots: {
