@@ -18,7 +18,7 @@ export const CRAIG_RANCH_MAP_CENTER = {
   anchorAddress: '628 W Craig Rd, North Las Vegas, NV 89032',
 } as const;
 
-export const AMENITY_SEARCH_RADIUS_METERS = 8000;
+export const AMENITY_SEARCH_RADIUS_METERS = 5000;
 
 export type AmenityCategoryId =
   | 'restaurants'
@@ -102,6 +102,7 @@ export const AMENITY_CATEGORIES: readonly AmenityCategory[] = [
 export type CuratedAmenity = {
   id: string;
   name: string;
+  /** Full mailing address when verified against sourceUrl */
   address: string;
   latitude?: number;
   longitude?: number;
@@ -119,6 +120,8 @@ export type CuratedAmenity = {
     | 'ExerciseGym'
     | 'Place';
   note?: string;
+  /** Official page used to verify name and address */
+  sourceUrl: string;
 };
 
 /** Verified names + street addresses for fallback list and ItemList schema */
@@ -132,6 +135,8 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     category: 'parks',
     schemaType: 'Park',
     note: '170-acre regional park with trails, sports fields, and community events.',
+    sourceUrl:
+      'https://www.cityofnorthlasvegas.com/things-to-do/parks-and-recreation/parks/craig-ranch-regional-park',
   },
   {
     id: 'north-mesa-plaza',
@@ -140,6 +145,7 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     category: 'shopping',
     schemaType: 'ShoppingCenter',
     note: 'Retail center with Walmart and other everyday shopping.',
+    sourceUrl: 'https://www.walmart.com/store/5762-north-las-vegas-nv',
   },
   {
     id: 'simmons-shopping',
@@ -147,23 +153,26 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     address: '4430 Simmons St, North Las Vegas, NV 89031',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
-    note: 'Albertsons, Walmart Neighborhood Market, and local dining.',
+    note: 'Albertsons and Walmart Neighborhood Market among everyday retail.',
+    sourceUrl: 'https://www.albertsons.com/stores/details/1779',
   },
   {
     id: 'eva-g-simmons',
     name: 'Eva G. Simmons Elementary School',
-    address: '5600 Simmons St, North Las Vegas, NV 89031',
+    address: '2328 Silver Clouds Dr, North Las Vegas, NV 89031',
     latitude: 36.2579,
     longitude: -115.1215,
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://www.simmonsstingrays.org/apps/contact/',
   },
   {
     id: 'findlay-middle',
     name: 'Clifford O. Pete Findlay Middle School',
-    address: '333 W Brooks Ave, North Las Vegas, NV 89030',
+    address: '333 W Tropical Pkwy, North Las Vegas, NV 89031',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://www.fmsflyers.org/apps/contact/',
   },
   {
     id: 'mojave-high',
@@ -171,6 +180,7 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     address: '5302 Goldfield St, North Las Vegas, NV 89031',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=320006000445',
   },
   {
     id: 'cannery-casino',
@@ -179,6 +189,7 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     category: 'restaurants',
     schemaType: 'Restaurant',
     note: 'Dining and entertainment north of the Strip.',
+    sourceUrl: 'https://www.cannerycasino.com/',
   },
   {
     id: 'centennial-hills-hospital',
@@ -186,6 +197,7 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     address: '6900 N Durango Dr, Las Vegas, NV 89149',
     category: 'healthcare',
     schemaType: 'Hospital',
+    sourceUrl: 'https://www.centennialhillshospital.com/',
   },
   {
     id: 'north-vista-hospital',
@@ -193,6 +205,7 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     address: '1409 E Lake Mead Blvd, North Las Vegas, NV 89030',
     category: 'healthcare',
     schemaType: 'Hospital',
+    sourceUrl: 'https://northvistahospital.com/about-us/',
   },
   {
     id: 'va-southern-nevada',
@@ -200,7 +213,8 @@ export const CURATED_CRAIG_RANCH_AMENITIES: readonly CuratedAmenity[] = [
     address: '6900 N Pecos Rd, North Las Vegas, NV 89086',
     category: 'healthcare',
     schemaType: 'Hospital',
-    note: 'Referenced in local Craig Ranch area guides for nearby medical access.',
+    note: 'North Las Vegas VA clinic campus serving veterans in the region.',
+    sourceUrl: 'https://www.va.gov/southern-nevada-health-care/locations/north-las-vegas-va-clinic/',
   },
 ] as const;
 
@@ -226,12 +240,12 @@ export const AMENITIES_PAGE_FAQS: ReadonlyArray<{
   {
     question: 'What parks are in Craig Ranch?',
     answer:
-      'Craig Ranch Regional Park is the headline amenity—a 170-acre Clark County park on West Craig Road with trails, sports fields, and year-round events, plus smaller community parks woven through the master plan.',
+      'Craig Ranch Regional Park is the headline amenity—a 170-acre City of North Las Vegas park on West Craig Road with trails, sports fields, and year-round events, plus smaller community parks woven through the master plan.',
   },
   {
     question: 'Which schools serve Craig Ranch?',
     answer:
-      'Many Craig Ranch addresses are associated with Eva G. Simmons Elementary, Clifford O. Pete Findlay Middle School, and Mojave High School in the Clark County School District—always confirm assignment for a specific MLS listing.',
+      'Many Craig Ranch addresses are associated with Eva G. Simmons Elementary (2328 Silver Clouds Dr), Clifford O. Pete Findlay Middle School (333 W Tropical Pkwy), and Mojave High School (5302 Goldfield St) in the Clark County School District—always confirm assignment for a specific MLS listing.',
   },
   {
     question: 'How far is Craig Ranch from Harry Reid International Airport?',
@@ -269,6 +283,16 @@ export function embedMapFallbackUrl(): string {
   return `https://www.google.com/maps?q=${latitude},${longitude}&z=14&output=embed`;
 }
 
+function parseVerifiedPostalAddress(fullAddress: string): {
+  streetAddress: string;
+  postalCode?: string;
+} {
+  const parts = fullAddress.split(',').map(p => p.trim());
+  const streetAddress = parts[0] ?? fullAddress;
+  const zipMatch = fullAddress.match(/\b(\d{5})(?:-\d{4})?\b/);
+  return { streetAddress, postalCode: zipMatch?.[1] };
+}
+
 export function generateCraigRanchCommunityPlaceSchema() {
   const { latitude, longitude, label, addressLine } = CRAIG_RANCH_MAP_CENTER;
   return {
@@ -299,20 +323,28 @@ export function generateFeaturedAmenitiesItemListSchema() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `Featured places near ${SITE_NAP.communityName}`,
-    itemListElement: CURATED_CRAIG_RANCH_AMENITIES.map((place, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': place.schemaType,
-        name: place.name,
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: place.address.split(',')[0]?.trim() ?? place.address,
-          addressLocality: SITE_NAP.city,
-          addressRegion: SITE_NAP.region,
-          addressCountry: 'US',
+    itemListElement: CURATED_CRAIG_RANCH_AMENITIES.map((place, index) => {
+      const { streetAddress, postalCode } = parseVerifiedPostalAddress(
+        place.address
+      );
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': place.schemaType,
+          name: place.name,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress,
+            addressLocality: place.address.includes('Las Vegas')
+              ? 'Las Vegas'
+              : SITE_NAP.city,
+            addressRegion: SITE_NAP.region,
+            postalCode: postalCode ?? SITE_NAP.communityZip,
+            addressCountry: 'US',
+          },
         },
-      },
-    })),
+      };
+    }),
   };
 }

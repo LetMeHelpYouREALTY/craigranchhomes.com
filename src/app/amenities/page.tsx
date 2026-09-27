@@ -1,5 +1,4 @@
 import PageLayout from '@/components/layout/page-layout';
-import Script from 'next/script';
 import Link from 'next/link';
 import AmenityMapLazy from '@/components/sections/amenity-map-lazy';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
@@ -34,8 +33,26 @@ export const metadata = genMetadata({
 
 const baseUrl = SITE_URL;
 
-export default function AmenitiesPage() {
-  const agentAreaExtension = {
+const amenitiesWebPageSchema = generateWebPageSchema({
+  name: 'Nearby Amenities in Craig Ranch, North Las Vegas',
+  description:
+    'Interactive amenity map and hyperlocal guide to dining, parks, healthcare, shopping, and schools near Craig Ranch, North Las Vegas 89031.',
+  url: `${baseUrl}/amenities`,
+  breadcrumb: [
+    { name: 'Home', url: baseUrl },
+    { name: 'Nearby Amenities', url: `${baseUrl}/amenities` },
+  ],
+});
+
+const amenitiesFaqSchema = generateFAQPageSchema(AMENITIES_PAGE_FAQS);
+const amenitiesItemListSchema = generateFeaturedAmenitiesItemListSchema();
+const amenitiesPlaceSchema = generateCraigRanchCommunityPlaceSchema();
+const amenitiesBreadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: baseUrl },
+  { name: 'Nearby Amenities', url: `${baseUrl}/amenities` },
+]);
+
+const agentAreaExtension = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     '@id': `${baseUrl}#realestateagent`,
@@ -55,8 +72,9 @@ export default function AmenitiesPage() {
         addressCountry: 'US',
       },
     },
-  };
+};
 
+export default function AmenitiesPage() {
   return (
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
@@ -168,9 +186,10 @@ export default function AmenitiesPage() {
           </h2>
           <p className='text-gray-700'>
             Clark County School District campuses commonly tied to Craig Ranch
-            addresses include <strong>Eva G. Simmons Elementary</strong> (5600
-            Simmons St), <strong>Clifford O. Pete Findlay Middle School</strong>{' '}
-            (333 W Brooks Ave), and <strong>Mojave High School</strong> (5302
+            addresses include <strong>Eva G. Simmons Elementary</strong> (2328
+            Silver Clouds Dr),{' '}
+            <strong>Clifford O. Pete Findlay Middle School</strong> (333 W
+            Tropical Pkwy), and <strong>Mojave High School</strong> (5302
             Goldfield St). Verify assignment on any listing before you write an
             offer—see our{' '}
             <Link href='/craig-ranch-schools' className='text-[#3A8DDE] hover:underline'>
@@ -228,33 +247,44 @@ export default function AmenitiesPage() {
         supporting={`Call ${SITE_NAP.phoneDisplay} for hyperlocal buyer and seller guidance—parks, schools, and commute included.`}
       />
 
-      <Script
-        id='amenities-page-schema'
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(amenitiesFaqSchema),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(amenitiesItemListSchema),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(amenitiesBreadcrumbSchema),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(amenitiesPlaceSchema),
+        }}
+      />
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateWebPageSchema({
-              name: 'Nearby Amenities in Craig Ranch, North Las Vegas',
-              description:
-                'Interactive amenity map and hyperlocal guide to dining, parks, healthcare, shopping, and schools near Craig Ranch, North Las Vegas 89031.',
-              url: `${baseUrl}/amenities`,
-              breadcrumb: [
-                { name: 'Home', url: baseUrl },
-                { name: 'Nearby Amenities', url: `${baseUrl}/amenities` },
-              ],
-            }),
-            generateFAQPageSchema(AMENITIES_PAGE_FAQS),
-            generateFeaturedAmenitiesItemListSchema(),
-            generateCraigRanchCommunityPlaceSchema(),
-            generateBreadcrumbSchema([
-              { name: 'Home', url: baseUrl },
-              { name: 'Nearby Amenities', url: `${baseUrl}/amenities` },
-            ]),
+            amenitiesWebPageSchema,
             agentAreaExtension,
             generateSpeakableSchema({
               url: `${baseUrl}/amenities`,
               name: 'Nearby Amenities in Craig Ranch, North Las Vegas',
-              cssSelector: ['h1', '#aeo-direct-answer', '#craig-ranch-amenities-faqs'],
+              cssSelector: [
+                'h1',
+                '#aeo-direct-answer',
+                '#craig-ranch-amenities-faqs',
+              ],
             }),
           ]),
         }}
