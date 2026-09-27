@@ -1,44 +1,39 @@
 'use server';
 
-import { z } from 'zod';
+import { headers } from 'next/headers';
 
-// Contact form validation schema
-const contactSchema = z.object({
-  firstName: z.string().min(2, 'First name must be at least 2 characters'),
-  lastName: z.string().min(2, 'Last name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().optional(),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
-
-export type ContactFormData = z.infer<typeof contactSchema>;
+import {
+  buildContactFubPayload,
+  defaultContactSourceUrl,
+  FUB_CONTACT_ERROR_MESSAGE,
+  parseContactLead,
+} from '@/lib/fub/contact-lead';
+import { sendFollowUpBossEvent } from '@/lib/fub/send-event';
 
 export type ContactFormResult =
   | { success: true; message: string }
   | { success: false; error: string; fieldErrors?: Record<string, string> };
 
 /**
- * Server action to handle contact form submissions
- * In production, this would integrate with:
- * - Email service (SendGrid, Resend, etc.)
- * - CRM system (Follow Up Boss, etc.)
- * - Database for lead storage
+ * Server action to handle contact form submissions via Follow Up Boss.
  */
 export async function submitContactForm(
   formData: FormData
 ): Promise<ContactFormResult> {
   try {
-    // Extract form data
+    const headerList = await headers();
+    const referer = headerList.get('referer');
+
     const rawData = {
-      firstName: formData.get('firstName') as string,
-      lastName: formData.get('lastName') as string,
-      email: formData.get('email') as string,
-      phone: (formData.get('phone') as string) || undefined,
-      message: formData.get('message') as string,
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+      sourceUrl: formData.get('sourceUrl'),
     };
 
-    // Validate form data
-    const validationResult = contactSchema.safeParse(rawData);
+    const validationResult = parseContactLead(rawData);
 
     if (!validationResult.success) {
       const fieldErrors: Record<string, string> = {};
@@ -56,24 +51,21 @@ export async function submitContactForm(
     }
 
     const validatedData = validationResult.data;
+    const sourceUrl =
+      validatedData.sourceUrl?.trim() ||
+      referer?.trim() ||
+      defaultContactSourceUrl();
 
-    // TODO: Integrate with email service or CRM
-    // Example integration points:
-    // 1. Send email notification to Dr. Jan Duffy
-    // 2. Create lead in Follow Up Boss or RealScout
-    // 3. Store in database for tracking
+    const fubResult = await sendFollowUpBossEvent(
+      buildContactFubPayload(validatedData, sourceUrl)
+    );
 
-    // For now, log the submission (in production, remove this)
-    console.log('Contact form submission:', {
-      name: `${validatedData.firstName} ${validatedData.lastName}`,
-      email: validatedData.email,
-      phone: validatedData.phone,
-      message: validatedData.message,
-      timestamp: new Date().toISOString(),
-    });
-
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    if (!fubResult.ok) {
+      return {
+        success: false,
+        error: FUB_CONTACT_ERROR_MESSAGE,
+      };
+    }
 
     return {
       success: true,
@@ -84,11 +76,7 @@ export async function submitContactForm(
     console.error('Contact form submission error:', error);
     return {
       success: false,
-      error: 'An error occurred while submitting your message. Please try again later.',
+      error: FUB_CONTACT_ERROR_MESSAGE,
     };
   }
 }
-
-
-
-

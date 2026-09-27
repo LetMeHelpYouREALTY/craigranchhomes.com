@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useEffect, useRef } from 'react';
+import { useActionState, useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,6 +14,14 @@ const initialState: ContactFormResult = {
 };
 
 export default function ContactForm() {
+  const [sourceUrl, setSourceUrl] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setSourceUrl(window.location.href);
+    }
+  }, []);
+
   const [state, formAction, isPending] = useActionState(
     async (prevState: ContactFormResult, formData: FormData) => {
       return await submitContactForm(formData);
@@ -48,6 +56,7 @@ export default function ContactForm() {
 
   return (
     <form id='contact-form' action={formAction} className='space-y-6'>
+      <input type='hidden' name='sourceUrl' value={sourceUrl} readOnly />
       {/* Success Message */}
       {state.success && (
         <div className='p-4 bg-green-50 border border-green-200 rounded-lg text-green-800'>
