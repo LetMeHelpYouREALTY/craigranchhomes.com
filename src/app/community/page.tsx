@@ -25,6 +25,7 @@ import AeoFaqSection from '@/components/sections/aeo-faq-section';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 import { COMMUNITY_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
@@ -298,6 +299,8 @@ export default function CommunityPage() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection title="What's Nearby in Craig Ranch" />
 
       {/* Lifestyle Section */}
       <section className='py-16 bg-[#F7F9FC]'>

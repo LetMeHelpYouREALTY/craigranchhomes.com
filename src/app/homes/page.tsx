@@ -32,6 +32,7 @@ import AeoFaqSection from '@/components/sections/aeo-faq-section';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 import { HOMES_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
@@ -79,6 +80,8 @@ export default function HomesPage() {
       <Suspense fallback={<ListingsSkeleton />}>
         <RealEstateListings />
       </Suspense>
+
+      <NearbyAmenitiesSection compactMap />
 
       {/* Working with Dr. Jan Duffy Section - Moved up for trust building */}
       <section className='py-16 bg-white'>

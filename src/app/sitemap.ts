@@ -38,6 +38,7 @@ const SITEMAP_ENTRIES: readonly SitemapEntry[] = [
     priority: 0.9,
   },
   { path: '/community', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/amenities', changeFrequency: 'weekly', priority: 0.85 },
 
   // Market
   { path: '/market-data', changeFrequency: 'daily', priority: 0.8 },
