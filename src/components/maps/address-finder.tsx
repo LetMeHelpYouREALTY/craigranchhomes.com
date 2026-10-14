@@ -23,9 +23,8 @@ export default function AddressFinder() {
         onPlace={setPlace}
       />
       <p className='text-sm text-gray-600'>
-        Suggestions are biased toward North Las Vegas and limited to U.S.
-        addresses. Confirm the result before you use it for a showing or a
-        mailing.
+        Suggestions cover U.S. addresses and favor North Las Vegas. Confirm the
+        result before you use it for a showing or a mailing.
       </p>
       {address ? (
         <div className='space-y-4'>

@@ -1,3 +1,8 @@
+/**
+ * Maps JavaScript loader. The production key rejects this site's referrer
+ * (RefererNotAllowedMapError), so pages use keyless Google Maps embeds and
+ * server-side OpenStreetMap suggestions instead of calling this loader.
+ */
 export function googleMapsApiKey(): string {
   return process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY?.trim() ?? '';
 }

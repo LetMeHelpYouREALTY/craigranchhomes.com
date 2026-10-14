@@ -59,23 +59,3 @@ export function addressEmbedUrl(address: string): string {
   });
   return `https://www.google.com/maps?${params.toString()}`;
 }
-
-export function travelModeFromId(
-  mode: TravelModeId,
-  travelMode: typeof google.maps.TravelMode
-): google.maps.TravelMode {
-  switch (mode) {
-    case 'DRIVING':
-      return travelMode.DRIVING;
-    case 'TRANSIT':
-      return travelMode.TRANSIT;
-    case 'WALKING':
-      return travelMode.WALKING;
-    case 'BICYCLING':
-      return travelMode.BICYCLING;
-    default: {
-      const unknown: never = mode;
-      return unknown;
-    }
-  }
-}

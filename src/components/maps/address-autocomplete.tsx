@@ -3,8 +3,6 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { googleMapsApiKey, loadGoogleMaps } from '@/lib/google-maps-loader';
-import { SITE_NAP } from '@/lib/site-nap';
 
 export type SelectedAddress = {
   address: string;
@@ -18,21 +16,30 @@ type AddressAutocompleteProps = {
   label: string;
   placeholder?: string;
   initialValue?: string;
+  /** When set, suggestions are limited to street addresses. */
   includedPrimaryTypes?: readonly string[];
   onPlace?: (place: SelectedAddress) => void;
 };
 
 type Suggestion = {
   label: string;
-  prediction: google.maps.places.PlacePrediction;
+  lat: number;
+  lng: number;
 };
 
 export const ADDRESS_TYPES = ['street_address', 'premise', 'subpremise', 'route'] as const;
 
-function predictionLabel(prediction: google.maps.places.PlacePrediction): string {
-  const formatted = prediction.text as { text?: string } | null;
-  if (formatted?.text) return formatted.text;
-  return prediction.placeId;
+function isSuggestionList(value: unknown): value is Suggestion[] {
+  if (!Array.isArray(value)) return false;
+  return value.every((item) => {
+    if (!item || typeof item !== 'object') return false;
+    const suggestion = item as Suggestion;
+    return (
+      typeof suggestion.label === 'string' &&
+      typeof suggestion.lat === 'number' &&
+      typeof suggestion.lng === 'number'
+    );
+  });
 }
 
 export default function AddressAutocomplete({
@@ -50,9 +57,6 @@ export default function AddressAutocomplete({
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [status, setStatus] = useState('');
-  const sessionRef = useRef<google.maps.places.AutocompleteSessionToken | null>(
-    null
-  );
   const requestRef = useRef(0);
 
   useEffect(() => {
@@ -60,98 +64,74 @@ export default function AddressAutocomplete({
   }, [initialValue]);
 
   useEffect(() => {
-    const apiKey = googleMapsApiKey();
     const query = value.trim();
-    if (!apiKey || query.length < 3) {
+    if (query.length < 3 || query === initialValue.trim()) {
       setSuggestions([]);
+      setOpen(false);
       return;
     }
 
     const requestId = requestRef.current + 1;
     requestRef.current = requestId;
+    const scope = includedPrimaryTypes && includedPrimaryTypes.length > 0 ? 'address' : 'place';
+    const controller = new AbortController();
     const timer = window.setTimeout(() => {
       void (async () => {
         try {
-          await loadGoogleMaps(apiKey);
-          const { AutocompleteSuggestion, AutocompleteSessionToken } =
-            (await google.maps.importLibrary(
-              'places'
-            )) as google.maps.PlacesLibrary;
-          if (!sessionRef.current) {
-            sessionRef.current = new AutocompleteSessionToken();
-          }
-          const { suggestions: results } =
-            await AutocompleteSuggestion.fetchAutocompleteSuggestions({
-              input: query,
-              includedRegionCodes: ['us'],
-              ...(includedPrimaryTypes && includedPrimaryTypes.length > 0
-                ? { includedPrimaryTypes: [...includedPrimaryTypes] }
-                : {}),
-              sessionToken: sessionRef.current,
-              locationBias: {
-                center: {
-                  lat: SITE_NAP.latitude,
-                  lng: SITE_NAP.longitude,
-                },
-                radius: 40000,
-              },
-            });
-          if (requestRef.current !== requestId) return;
-          const next = results.flatMap((item) => {
-            if (!item.placePrediction) return [];
-            return [
-              {
-                label: predictionLabel(item.placePrediction),
-                prediction: item.placePrediction,
-              },
-            ];
+          const params = new URLSearchParams({ q: query, scope });
+          const response = await fetch(`/api/address-suggestions?${params.toString()}`, {
+            signal: controller.signal,
           });
-          setSuggestions(next);
-          setOpen(next.length > 0);
-          setActiveIndex(next.length > 0 ? 0 : -1);
+          const body: unknown = await response.json();
+          if (requestRef.current !== requestId) return;
+          const results =
+            body && typeof body === 'object' && isSuggestionList((body as { suggestions?: unknown }).suggestions)
+              ? (body as { suggestions: Suggestion[] }).suggestions
+              : [];
+          if (!response.ok) {
+            setSuggestions([]);
+            setOpen(false);
+            setStatus(
+              'Address suggestions are unavailable. You can still type the full address.'
+            );
+            return;
+          }
+          setSuggestions(results);
+          setOpen(results.length > 0);
+          setActiveIndex(results.length > 0 ? 0 : -1);
           setStatus(
-            next.length > 0
-              ? `${next.length} address suggestions`
+            results.length > 0
+              ? `${results.length} address suggestions`
               : 'No matching addresses'
           );
-        } catch {
+        } catch (error) {
+          if (error instanceof DOMException && error.name === 'AbortError') return;
           if (requestRef.current !== requestId) return;
           setSuggestions([]);
+          setOpen(false);
           setStatus(
             'Address suggestions are unavailable. You can still type the full address.'
           );
         }
       })();
-    }, 250);
+    }, 400);
 
-    return () => window.clearTimeout(timer);
-  }, [includedPrimaryTypes, value]);
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [includedPrimaryTypes, initialValue, value]);
 
-  async function choose(suggestion: Suggestion) {
+  function choose(suggestion: Suggestion) {
     setValue(suggestion.label);
     setOpen(false);
     setSuggestions([]);
-    const selected: SelectedAddress = { address: suggestion.label };
-    try {
-      const place = suggestion.prediction.toPlace();
-      await place.fetchFields({
-        fields: ['formattedAddress', 'location', 'displayName'],
-      });
-      const loc = place.location;
-      const json = loc?.toJSON?.() ?? (loc
-        ? { lat: loc.lat(), lng: loc.lng() }
-        : undefined);
-      selected.address = place.formattedAddress || suggestion.label;
-      if (json) {
-        selected.lat = json.lat;
-        selected.lng = json.lng;
-      }
-      setValue(selected.address);
-    } catch {
-      // The typed suggestion is still a usable address string.
-    }
-    sessionRef.current = null;
-    onPlace?.(selected);
+    setStatus(suggestion.label);
+    onPlace?.({
+      address: suggestion.label,
+      lat: suggestion.lat,
+      lng: suggestion.lng,
+    });
   }
 
   return (
@@ -184,13 +164,16 @@ export default function AddressAutocomplete({
           } else if (event.key === 'Enter' && activeIndex >= 0) {
             event.preventDefault();
             const suggestion = suggestions[activeIndex];
-            if (suggestion) void choose(suggestion);
+            if (suggestion) choose(suggestion);
           } else if (event.key === 'Escape') {
             setOpen(false);
           }
         }}
       />
       <input type='hidden' name={name} value={value} readOnly />
+      <p className='text-xs text-gray-500'>
+        Suggestions by OpenStreetMap contributors.
+      </p>
       <p className='sr-only' aria-live='polite'>
         {status}
       </p>
@@ -198,10 +181,10 @@ export default function AddressAutocomplete({
         <ul
           id={listId}
           role='listbox'
-          className='absolute z-20 mt-1 max-h-64 w-full overflow-auto rounded-md border border-gray-200 bg-white shadow-lg'
+          className='absolute z-20 top-full left-0 mt-1 max-h-64 w-full overflow-auto rounded-md border border-gray-200 bg-white shadow-lg'
         >
           {suggestions.map((suggestion, index) => (
-            <li key={suggestion.prediction.placeId} role='presentation'>
+            <li key={`${suggestion.label}-${suggestion.lat}`} role='presentation'>
               <button
                 type='button'
                 role='option'
@@ -211,7 +194,7 @@ export default function AddressAutocomplete({
                 }`}
                 onMouseDown={(event) => {
                   event.preventDefault();
-                  void choose(suggestion);
+                  choose(suggestion);
                 }}
               >
                 {suggestion.label}

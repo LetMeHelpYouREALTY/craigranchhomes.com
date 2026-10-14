@@ -9,7 +9,7 @@ export const revalidate = 604800;
 export const metadata: Metadata = genMetadata({
   title: 'Directions to the Craig Ranch Homes Office | Dr. Jan Duffy',
   description:
-    'Plan a visit to Dr. Jan Duffy at 851 W Lone Mountain Rd, Suite 103, North Las Vegas. Compare driving, transit, walking, and bicycling times. Open daily 8:00 AM–8:00 PM. Call (702) 820-5408.',
+    'Plan a visit to Dr. Jan Duffy at 851 W Lone Mountain Rd, Suite 103, North Las Vegas. The map shows driving, transit, walking, and bicycling routes. Open daily 8:00 AM–8:00 PM. Call (702) 820-5408.',
   keywords:
     'directions Craig Ranch Homes, 851 W Lone Mountain Rd Suite 103, North Las Vegas realtor office, Dr. Jan Duffy directions',
   path: '/directions',
@@ -34,8 +34,8 @@ export default async function DirectionsPage({
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             {SITE_NAP.addressLine}. {SITE_NAP.hoursLine}. Enter a starting
-            address to compare driving, transit, walking, and bicycling times
-            to Suite 103.
+            address, then choose driving, transit, walking, or bicycling. The
+            map shows the current estimated time to Suite 103.
           </p>
         </div>
       </div>

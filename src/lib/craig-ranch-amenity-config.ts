@@ -36,6 +36,10 @@ export type AmenityCategoryId =
 export type AmenityCategory = {
   id: AmenityCategoryId;
   label: string;
+  /** Short Google Maps query. The embed also pins the Craig Ranch center. */
+  mapQuery: string;
+  /** Full search used by the “open in Google Maps” link */
+  searchQuery: string;
   /** Google Places (New) includedPrimaryTypes for searchNearby */
   primaryTypes: readonly string[];
 };
@@ -45,56 +49,78 @@ export const AMENITY_CATEGORIES: readonly AmenityCategory[] = [
   {
     id: 'restaurants',
     label: 'Restaurants',
+    mapQuery: 'restaurants',
+    searchQuery: 'restaurants near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['restaurant'],
   },
   {
     id: 'cafes',
     label: 'Cafes',
+    mapQuery: 'coffee shops',
+    searchQuery: 'coffee shops near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['cafe', 'coffee_shop'],
   },
   {
     id: 'grocery',
     label: 'Grocery',
+    mapQuery: 'grocery stores',
+    searchQuery: 'grocery stores near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['grocery_store', 'supermarket'],
   },
   {
     id: 'parks',
     label: 'Parks',
+    mapQuery: 'parks',
+    searchQuery: 'parks near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['park'],
   },
   {
     id: 'fitness',
     label: 'Fitness',
+    mapQuery: 'gyms',
+    searchQuery: 'gyms near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['gym', 'fitness_center'],
   },
   {
     id: 'shopping',
     label: 'Shopping',
+    mapQuery: 'shopping centers',
+    searchQuery: 'shopping centers near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['shopping_mall', 'department_store'],
   },
   {
     id: 'healthcare',
     label: 'Healthcare',
+    mapQuery: 'hospitals',
+    searchQuery: 'hospitals near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['hospital', 'doctor'],
   },
   {
     id: 'pharmacies',
     label: 'Pharmacies',
+    mapQuery: 'pharmacies',
+    searchQuery: 'pharmacies near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['pharmacy', 'drugstore'],
   },
   {
     id: 'schools',
     label: 'Schools',
+    mapQuery: 'schools',
+    searchQuery: 'schools near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['school', 'primary_school', 'secondary_school'],
   },
   {
     id: 'golf',
     label: 'Golf',
+    mapQuery: 'golf courses',
+    searchQuery: 'golf courses near Craig Ranch, North Las Vegas, NV',
     primaryTypes: ['golf_course'],
   },
   {
     id: 'parking',
     label: 'Parking',
+    mapQuery: 'parking',
+    searchQuery: 'parking near Craig Ranch Regional Park, North Las Vegas, NV',
     primaryTypes: ['parking'],
   },
 ] as const;
@@ -281,6 +307,18 @@ export function googleMapsPlaceUrl(query: string): string {
 export function embedMapFallbackUrl(): string {
   const { latitude, longitude } = CRAIG_RANCH_MAP_CENTER;
   return `https://www.google.com/maps?q=${latitude},${longitude}&z=14&output=embed`;
+}
+
+export function embedCategorySearchUrl(categoryId: AmenityCategoryId): string {
+  const category = AMENITY_CATEGORIES.find((item) => item.id === categoryId);
+  const { latitude, longitude } = CRAIG_RANCH_MAP_CENTER;
+  const params = new URLSearchParams({
+    q: category?.mapQuery ?? 'Craig Ranch',
+    ll: `${latitude},${longitude}`,
+    z: '12',
+    output: 'embed',
+  });
+  return `https://www.google.com/maps?${params.toString()}`;
 }
 
 function parseVerifiedPostalAddress(fullAddress: string): {

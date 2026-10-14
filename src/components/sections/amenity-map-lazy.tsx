@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
 
 const AmenityMap = dynamic(() => import('@/components/sections/amenity-map'), {
-  ssr: false,
   loading: () => <MapSkeleton />,
 });
 
