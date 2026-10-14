@@ -22,9 +22,10 @@ export function searchCategory(
   let p = cache.get(categoryId);
   if (!p) {
     p = (async () => {
-      const { Place } = (await google.maps.importLibrary(
-        'places'
-      )) as google.maps.PlacesLibrary;
+      const { Place, SearchNearbyRankPreference } =
+        (await google.maps.importLibrary(
+          'places'
+        )) as google.maps.PlacesLibrary;
       const { places } = await Place.searchNearby({
         fields: [
           'displayName',
@@ -42,7 +43,7 @@ export function searchCategory(
         },
         includedPrimaryTypes: [...types],
         maxResultCount: 10,
-        rankPreference: 'POPULARITY',
+        rankPreference: SearchNearbyRankPreference.POPULARITY,
       });
 
       const mapped: NearbyPlaceResult[] = [];
