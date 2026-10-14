@@ -120,7 +120,7 @@ export default async function MarketInsightsPage() {
     <PageLayout>
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
+          <div className='text-center'>
             <h1 className='text-4xl md:text-5xl font-bold text-[#0A2540] mb-4'>
               Craig Ranch Las Vegas Homes Market Insights
             </h1>
@@ -140,7 +140,11 @@ export default async function MarketInsightsPage() {
               ). Call (702) 820-5408 for address-level strategy.
             </p>
           </div>
+        </div>
+      </section>
 
+      <section className='pb-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
             {posts.map((post, index) => (
               <Card

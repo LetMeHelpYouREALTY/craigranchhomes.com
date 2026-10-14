@@ -1,9 +1,6 @@
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import PageLayout from '@/components/layout/page-layout';
-import RealEstateListings from '@/components/sections/real-estate-listings';
-import PropertyCategories from '@/components/sections/property-categories';
-import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
 import AgentPhoto from '@/components/ui/agent-photo';
 
@@ -76,10 +73,6 @@ export default function HomesPage() {
           </p>
         </div>
       </div>
-
-      <Suspense fallback={<ListingsSkeleton />}>
-        <RealEstateListings />
-      </Suspense>
 
       <NearbyAmenitiesSection compactMap />
 

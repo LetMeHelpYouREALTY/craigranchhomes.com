@@ -149,42 +149,6 @@ export default function NeighborhoodPage() {
         </div>
       </div>
 
-      {/* Featured Listings Section */}
-      <section className='py-16 bg-[#F7F9FC]'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              View All Homes for Sale in Craig Ranch
-            </h2>
-            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Explore all available properties in Craig Ranch, North Las Vegas
-            </p>
-          </div>
-
-          <div className='bg-white rounded-xl p-8 shadow-lg'>
-            <Suspense fallback={<ListingsSkeleton />}>
-              <CraigRanchListings
-                priceMin='400000'
-                priceMax='500000'
-                showMap={false}
-                listingsPerPage='6'
-              />
-            </Suspense>
-            <div className='mt-6 text-center'>
-              <Button
-                asChild
-                size='lg'
-                className='bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'
-              >
-                <Link href='#search-listings'>
-                  Search All Craig Ranch Homes
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-2 gap-12 items-center mb-16'>

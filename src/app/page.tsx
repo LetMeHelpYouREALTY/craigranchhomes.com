@@ -8,11 +8,8 @@ import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import BlogPosts from '@/components/sections/blog-posts';
 import GoogleMap from '@/components/sections/google-map';
-import RealScoutOfficeWidget from '@/components/sections/realscout-office-widget';
-import ClientErrorBoundary from '@/components/shared/client-error-boundary';
 import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
-import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
 import BlogPostsSkeleton from '@/components/skeletons/blog-posts-skeleton';
@@ -92,9 +89,8 @@ export const metadata = genMetadata({
 export default function Home() {
   return (
     <PageLayout>
+      <Hero />
       <article>
-        <Hero />
-
         <AeoAnswerBlock
           question='What is Craig Ranch real estate in North Las Vegas?'
           answer='Craig Ranch is a master-planned community in North Las Vegas ZIP 89031 with a 170-acre regional park, about 5 miles of trails, and homes commonly ranging from 1,519–2,638 sq ft. Dr. Jan Duffy, REALTOR® (Nevada license S.0197614.LLC), helps buyers and sellers compare listings, price with local comps, and close with clear timelines.'
@@ -155,20 +151,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* RealScout Office Widget Section - Moved up for better conversion */}
-        <section className='py-16 bg-white'>
+        <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-                Office listings from Dr. Jan Duffy
+                Craig Ranch and the office
               </h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                These cards are the office inventory across Las Vegas and
-                Henderson. They are not a Craig Ranch-only search. Call (702)
-                820-5408 for homes in Craig Ranch, ZIP 89031.
+                The neighborhood in North Las Vegas, and the office at Suite
+                103 on Lone Mountain Road.
               </p>
             </div>
-            <div className='grid lg:grid-cols-2 gap-6 mb-10'>
+            <div className='grid lg:grid-cols-2 gap-6'>
               <div>
                 <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
                   Craig Ranch, North Las Vegas
@@ -191,17 +185,6 @@ export default function Home() {
                   title='Craig Ranch Homes office on Lone Mountain Road'
                 />
               </div>
-            </div>
-            <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg border border-gray-200'>
-              <ClientErrorBoundary>
-                <Suspense fallback={<ListingsSkeleton />}>
-                  <RealScoutOfficeWidget
-                    agentEncodedId='QWdlbnQtMjI1MDUw'
-                    showMap={false}
-                    listingsPerPage='12'
-                  />
-                </Suspense>
-              </ClientErrorBoundary>
             </div>
           </div>
         </section>

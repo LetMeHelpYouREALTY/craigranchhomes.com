@@ -1,6 +1,7 @@
-import { Suspense } from 'react';
+import { Children, Suspense } from 'react';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import OfficeListingsBand from '@/components/sections/office-listings-band';
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -25,12 +26,22 @@ function NavigationFallback() {
 }
 
 export default function PageLayout({ children }: PageLayoutProps) {
+  // The first child of every page is its hero. The office RealScout band
+  // always follows that hero, then the rest of the page.
+  const nodes = Children.toArray(children);
+  const hero = nodes[0];
+  const rest = nodes.slice(1);
+
   return (
     <div className='flex min-h-screen flex-col'>
       <Suspense fallback={<NavigationFallback />}>
       <Navigation />
       </Suspense>
-      <main className='flex-grow'>{children}</main>
+      <main className='flex-grow'>
+        {hero}
+        <OfficeListingsBand />
+        {rest}
+      </main>
       <Footer />
     </div>
   );
