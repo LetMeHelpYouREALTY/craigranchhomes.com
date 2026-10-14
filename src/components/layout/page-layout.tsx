@@ -1,6 +1,7 @@
 import { Children, Suspense } from 'react';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import HashScroll from '@/components/layout/hash-scroll';
 import OfficeListingsBand from '@/components/sections/office-listings-band';
 
 interface PageLayoutProps {
@@ -37,6 +38,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
       <Suspense fallback={<NavigationFallback />}>
       <Navigation />
       </Suspense>
+      <HashScroll />
       <main className='flex-grow'>
         {hero}
         <OfficeListingsBand />

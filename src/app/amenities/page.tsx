@@ -1,4 +1,5 @@
 import PageLayout from '@/components/layout/page-layout';
+import SkipLink from '@/components/layout/skip-link';
 import Link from 'next/link';
 import AmenityMapLazy from '@/components/sections/amenity-map-lazy';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
@@ -91,10 +92,15 @@ export default function AmenitiesPage() {
             Simmons Shopping Center and North Mesa Plaza—all within a short drive
             of most addresses in the master plan.
           </p>
+          <SkipLink href='#amenity-map'>Skip to the amenity map</SkipLink>
         </div>
       </div>
 
-      <section className='py-16 bg-white' aria-labelledby='amenity-map-heading'>
+      <section
+        id='amenity-map'
+        className='scroll-mt-24 min-h-[calc(100svh-6rem)] py-16 bg-white'
+        aria-labelledby='amenity-map-heading'
+      >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2
             id='amenity-map-heading'

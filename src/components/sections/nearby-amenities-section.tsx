@@ -46,7 +46,7 @@ export default function NearbyAmenitiesSection({
             asChild
             className='bg-[#0B7A5A] hover:bg-[#096B4E] text-white'
           >
-            <Link href='/amenities'>
+            <Link href='/amenities#amenity-map'>
               Nearby Amenities Guide
               <ArrowRight className='ml-2 h-4 w-4' aria-hidden />
             </Link>

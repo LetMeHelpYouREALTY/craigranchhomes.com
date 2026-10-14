@@ -297,7 +297,7 @@ export default function CraigRanchHomeValuationPage() {
               <Link href='/sell-craig-ranch'>Selling in Craig Ranch</Link>
             </Button>
             <Button asChild size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>
-              <Link href='/contact'>Contact Dr. Jan Duffy</Link>
+              <Link href='/contact#contact-form'>Contact Dr. Jan Duffy</Link>
             </Button>
           </div>
         </div>

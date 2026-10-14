@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PageLayout from '@/components/layout/page-layout';
+import SkipLink from '@/components/layout/skip-link';
 import VisitPlanner from '@/components/maps/visit-planner';
 import { generateMetadata as genMetadata } from '@/lib/metadata';
 import { SITE_NAP } from '@/lib/site-nap';
@@ -37,10 +38,11 @@ export default async function DirectionsPage({
             address, then choose driving, transit, walking, or bicycling. The
             map shows the current estimated time to Suite 103.
           </p>
+          <SkipLink href='#visit-planner'>Skip to the route planner</SkipLink>
         </div>
       </div>
 
-      <section className='py-16 bg-white'>
+      <section id='visit-planner' className='scroll-mt-24 min-h-[calc(100svh-6rem)] py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <VisitPlanner initialOrigin={from} />
         </div>

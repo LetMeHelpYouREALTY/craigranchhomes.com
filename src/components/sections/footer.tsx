@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SITE_NAP } from '@/lib/site-nap';
+import { directionsHref, SITE_NAP } from '@/lib/site-nap';
 
 export default function Footer() {
   return (
@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/amenities'
+                  href='/amenities#amenity-map'
                   className='text-white hover:underline transition-colors duration-200'
                 >
                   Nearby Amenities
@@ -71,7 +71,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={SITE_NAP.directionsPath}
+                  href={directionsHref()}
                   className='text-white hover:underline transition-colors duration-200'
                 >
                   Directions
@@ -111,7 +111,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/contact'
+                  href='/contact#contact-form'
                   className='text-white hover:underline transition-colors duration-200'
                 >
                   Contact
@@ -157,7 +157,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={SITE_NAP.directionsPath}
+                  href={directionsHref()}
                   className='text-white hover:underline'
                 >
                   Directions

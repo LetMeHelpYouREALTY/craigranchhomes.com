@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { scrollElementIntoView } from '@/lib/scroll-into-view';
 import AddressAutocomplete from '@/components/maps/address-autocomplete';
 import { Button } from '@/components/ui/button';
 import {
@@ -22,6 +23,7 @@ export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) 
   const draftOrigin = useRef(initialOrigin);
   const [activeOrigin, setActiveOrigin] = useState(initialOrigin.trim());
   const [mode, setMode] = useState<TravelModeId>('DRIVING');
+  const mapRef = useRef<HTMLDivElement>(null);
   const [message, setMessage] = useState(
     initialOrigin.trim()
       ? 'Google Maps shows the estimated time and distance on the map. Choose a travel mode to update the route.'
@@ -39,6 +41,25 @@ export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) 
       );
     }
   }, [initialOrigin]);
+
+  useEffect(() => {
+    if (!activeOrigin) return;
+    const scrollMap = () => scrollElementIntoView(mapRef.current);
+    scrollMap();
+    const timers = [700, 2400].map((delay) => window.setTimeout(scrollMap, delay));
+    const band = document.getElementById('office-listings');
+    const observer =
+      band && typeof ResizeObserver !== 'undefined'
+        ? new ResizeObserver(scrollMap)
+        : null;
+    if (observer && band) observer.observe(band);
+    const stop = window.setTimeout(() => observer?.disconnect(), 5000);
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+      window.clearTimeout(stop);
+      observer?.disconnect();
+    };
+  }, [activeOrigin, mode]);
 
   function showRoute(nextOrigin = draftOrigin.current) {
     const start = nextOrigin.trim();
@@ -126,13 +147,15 @@ export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) 
       ) : null}
 
       {activeOrigin ? (
-        <iframe
-          title={`Directions to ${SITE_NAP.name}`}
-          src={directionsEmbedUrl(activeOrigin, mode)}
-          className='h-[420px] w-full rounded-lg border border-gray-200'
-          loading='eager'
-          referrerPolicy='no-referrer-when-downgrade'
-        />
+        <div ref={mapRef}>
+          <iframe
+            title={`Directions to ${SITE_NAP.name}`}
+            src={directionsEmbedUrl(activeOrigin, mode)}
+            className='h-[420px] w-full rounded-lg border border-gray-200'
+            loading='eager'
+            referrerPolicy='no-referrer-when-downgrade'
+          />
+        </div>
       ) : (
         <p className='text-sm text-gray-600'>
           Destination: {OFFICE_DESTINATION}. {SITE_NAP.hoursLine}.

@@ -325,7 +325,7 @@ export default function HomesPage() {
               </Link>
             </Button>
             <Button asChild size='lg' variant='outline'>
-              <Link href='/contact'>Contact Dr. Jan Duffy</Link>
+              <Link href='/contact#contact-form'>Contact Dr. Jan Duffy</Link>
             </Button>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SITE_NAP } from '@/lib/site-nap';
+import { directionsHref, SITE_NAP } from '@/lib/site-nap';
 
 const AGENT_HEADSHOT = '/images/dr-jan-duffy-headshot.jpg';
 
@@ -78,7 +78,7 @@ export default function Hero() {
         </p>
         <p className='text-sm md:text-base text-white/90 mb-8 mt-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
           <a
-            href={SITE_NAP.directionsPath}
+            href={directionsHref()}
             className='underline underline-offset-2'
           >
             Directions
@@ -102,7 +102,7 @@ export default function Hero() {
             View Available Homes
           </Link>
           <Link
-            href='/contact'
+            href='/contact#contact-form'
             className='bg-white text-[#0A2540] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 border border-white'
           >
             Schedule a Tour

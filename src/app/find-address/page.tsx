@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PageLayout from '@/components/layout/page-layout';
+import SkipLink from '@/components/layout/skip-link';
 import AddressFinder from '@/components/maps/address-finder';
 import { generateMetadata as genMetadata } from '@/lib/metadata';
 
@@ -26,10 +27,11 @@ export default function FindAddressPage() {
             Start typing a street address. Choose the matching suggestion so
             the visit planner and your message use the same place.
           </p>
+          <SkipLink href='#address-lookup'>Skip to the address form</SkipLink>
         </div>
       </div>
 
-      <section className='py-16 bg-white'>
+      <section id='address-lookup' className='scroll-mt-24 min-h-[calc(100svh-6rem)] py-16 bg-white'>
         <div className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
           <AddressFinder />
         </div>

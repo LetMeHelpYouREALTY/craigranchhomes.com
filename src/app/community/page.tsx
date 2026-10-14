@@ -361,7 +361,7 @@ export default function CommunityPage() {
               variant='outline'
               className='border-white text-white hover:bg-white/10'
             >
-              <Link href='/contact'>Schedule Community Tour</Link>
+              <Link href='/contact#contact-form'>Schedule Community Tour</Link>
             </Button>
           </div>
         </div>

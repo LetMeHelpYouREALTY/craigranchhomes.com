@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { SITE_NAP } from '@/lib/site-nap';
+import { directionsHref, SITE_NAP } from '@/lib/site-nap';
 
 type HyperlocalNapCtaProps = {
   heading?: string;
@@ -30,14 +30,14 @@ export default function HyperlocalNapCta({
                 variant='outline'
                 className='border-white text-white hover:bg-white/10'
               >
-                <Link href='/contact'>Contact Dr. Jan Duffy</Link>
+                <Link href='/contact#contact-form'>Contact Dr. Jan Duffy</Link>
               </Button>
               <Button
                 asChild
                 variant='outline'
                 className='border-white text-white hover:bg-white/10'
               >
-                <Link href={SITE_NAP.directionsPath}>Directions</Link>
+                <Link href={directionsHref()}>Directions</Link>
               </Button>
             </div>
           </div>

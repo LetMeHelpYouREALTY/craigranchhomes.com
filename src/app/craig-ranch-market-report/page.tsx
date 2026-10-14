@@ -271,7 +271,7 @@ export default function CraigRanchMarketReportPage() {
               <Link href='/home-valuation-craig-ranch'>Craig Ranch Valuation</Link>
             </Button>
             <Button asChild size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>
-              <Link href='/contact'>Contact Dr. Jan Duffy</Link>
+              <Link href='/contact#contact-form'>Contact Dr. Jan Duffy</Link>
             </Button>
           </div>
         </div>

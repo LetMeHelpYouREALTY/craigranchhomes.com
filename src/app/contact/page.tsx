@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import PageLayout from '@/components/layout/page-layout';
+import SkipLink from '@/components/layout/skip-link';
 import ContactForm from '@/components/sections/contact-form';
 import GoogleMap from '@/components/sections/google-map';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
@@ -59,10 +60,11 @@ export default function ContactPage() {
             HomeServices® Nevada. Get expert, data-driven advice and personalized
             consultations for homes in Craig Ranch and throughout Las Vegas.
           </p>
+          <SkipLink href='#contact-form'>Skip to the contact form</SkipLink>
         </div>
       </div>
 
-      <section className='py-16 bg-white'>
+      <section id='contact-form' className='scroll-mt-24 min-h-[calc(100svh-6rem)] py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-2 gap-12'>
             {/* Contact Form */}

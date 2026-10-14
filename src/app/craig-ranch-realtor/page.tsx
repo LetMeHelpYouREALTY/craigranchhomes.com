@@ -340,7 +340,7 @@ export default function CraigRanchRealtorPage() {
               <a href={nap.phoneHref}>Call Now</a>
             </Button>
             <Button asChild size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>
-              <Link href='/contact'>Contact Dr. Jan Duffy</Link>
+              <Link href='/contact#contact-form'>Contact Dr. Jan Duffy</Link>
             </Button>
             <Button asChild size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>
               <Link href='/home-valuation-craig-ranch'>Get a Craig Ranch Valuation</Link>

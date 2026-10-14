@@ -18,9 +18,9 @@ export default function Navigation() {
     { href: '/sell-craig-ranch', label: 'Sell' },
     { href: '/craig-ranch-realtor', label: 'REALTOR®' },
     { href: '/neighborhood', label: 'Neighborhood' },
-    { href: '/amenities', label: 'Amenities' },
+    { href: '/amenities#amenity-map', label: 'Amenities' },
     { href: '/market-data', label: 'Market' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/contact#contact-form', label: 'Contact' },
   ];
 
   return (

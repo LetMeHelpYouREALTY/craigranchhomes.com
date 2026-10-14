@@ -122,7 +122,7 @@ export default function AboutContent() {
                 View All Listings
               </Link>
               <Link
-                href='/contact'
+                href='/contact#contact-form'
                 className='bg-white border-2 border-[#3A8DDE] text-[#3A8DDE] px-8 py-4 rounded-lg font-semibold hover:bg-[#3A8DDE]/10 transition-colors duration-200 inline-block text-center'
               >
                 Contact Dr. Jan Duffy

@@ -338,7 +338,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/amenities'
+                    href='/amenities#amenity-map'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Nearby Amenities
@@ -362,7 +362,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/contact'
+                    href='/contact#contact-form'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Contact

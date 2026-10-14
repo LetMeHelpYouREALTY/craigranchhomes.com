@@ -27,7 +27,7 @@ export const SITE_NAP = {
   mapsHref:
     'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
   directionsPath: '/directions',
-  findAddressPath: '/find-address',
+  findAddressPath: '/find-address#address-lookup',
   reviewsHref: 'https://share.google/b7iar6aMhBb9ayPkF',
   agentName: 'Dr. Jan Duffy',
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
@@ -39,6 +39,13 @@ export const SITE_LOGO_PATH = '/logo.png' as const;
 export const SITE_LOGO_URL = `${SITE_URL}${SITE_LOGO_PATH}`;
 export const SITE_AGENT_PHOTO_PATH = '/images/dr-jan-duffy-headshot.jpg' as const;
 export const SITE_AGENT_PHOTO_URL = `${SITE_URL}${SITE_AGENT_PHOTO_PATH}`;
+
+/** Directions links land on the planner, below the office listings band. */
+export function directionsHref(from?: string): string {
+  const origin = from?.trim();
+  const query = origin ? `?from=${encodeURIComponent(origin)}` : '';
+  return `${SITE_NAP.directionsPath}${query}#visit-planner`;
+}
 
 export type HyperlocalLink = {
   href: string;
@@ -144,19 +151,19 @@ export const HYPERLOCAL_SERVICE_LINKS: ReadonlyArray<HyperlocalLink> = [
       'Builder inventory and lot options in and near Craig Ranch.',
   },
   {
-    href: '/amenities',
+    href: '/amenities#amenity-map',
     label: 'Nearby Amenities',
     description:
       'Interactive map of dining, groceries, parks, schools, and healthcare near Craig Ranch.',
   },
   {
-    href: '/directions',
+    href: '/directions#visit-planner',
     label: 'Directions to the Office',
     description:
       'Travel times to Suite 103 by car, transit, walking, and bicycle.',
   },
   {
-    href: '/find-address',
+    href: '/find-address#address-lookup',
     label: 'Enter an Address',
     description:
       'Confirm a Las Vegas address before you request directions or send a note.',

@@ -121,7 +121,7 @@ export default function SellCraigRanchPage() {
                   <Link href='/home-valuation-craig-ranch'>Get a Craig Ranch Valuation</Link>
                 </Button>
                 <Button asChild variant='outline'>
-                  <Link href='/contact'>Send a Message</Link>
+                  <Link href='/contact#contact-form'>Send a Message</Link>
                 </Button>
               </div>
             </div>
@@ -300,7 +300,7 @@ export default function SellCraigRanchPage() {
               <Link href='/home-valuation-craig-ranch'>Get a Craig Ranch Valuation</Link>
             </Button>
             <Button asChild size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>
-              <Link href='/contact'>Contact Dr. Jan Duffy</Link>
+              <Link href='/contact#contact-form'>Contact Dr. Jan Duffy</Link>
             </Button>
           </div>
         </div>
