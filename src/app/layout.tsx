@@ -323,22 +323,17 @@ export default function RootLayout({
                 {
                   '@type': 'OpeningHoursSpecification',
                   dayOfWeek: [
+                    'Sunday',
                     'Monday',
                     'Tuesday',
                     'Wednesday',
                     'Thursday',
                     'Friday',
+                    'Saturday',
                   ],
-                  opens: '09:00',
-                  closes: '18:00',
+                  opens: '08:00',
+                  closes: '20:00',
                 },
-                {
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: ['Saturday'],
-                  opens: '10:00',
-                  closes: '16:00',
-                },
-                // Sunday: By appointment (omit hours rather than guessing)
               ],
               priceRange: '$$$',
               currenciesAccepted: 'USD',
@@ -352,14 +347,16 @@ export default function RootLayout({
                   hoursAvailable: {
                     '@type': 'OpeningHoursSpecification',
                     dayOfWeek: [
+                      'Sunday',
                       'Monday',
                       'Tuesday',
                       'Wednesday',
                       'Thursday',
                       'Friday',
+                      'Saturday',
                     ],
-                    opens: '09:00',
-                    closes: '18:00',
+                    opens: '08:00',
+                    closes: '20:00',
                   },
                 },
                 {

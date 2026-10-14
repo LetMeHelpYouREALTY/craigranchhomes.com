@@ -96,8 +96,7 @@ export default function ContactPage() {
                     </a>
                   </div>
                   <p className='text-gray-600 text-sm mt-2'>
-                    Mon–Fri 9:00 AM–6:00 PM · Sat 10:00 AM–4:00 PM · Sun by
-                    appointment
+                    Open daily 8:00 AM–8:00 PM
                   </p>
                 </CardContent>
               </Card>
@@ -186,17 +185,9 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <div className='space-y-2 text-sm'>
-                    <div className='flex justify-between'>
-                      <span className='text-gray-600'>Monday - Friday:</span>
-                      <span className='font-semibold'>9:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className='flex justify-between'>
-                      <span className='text-gray-600'>Saturday:</span>
-                      <span className='font-semibold'>10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className='flex justify-between'>
-                      <span className='text-gray-600'>Sunday:</span>
-                      <span className='font-semibold'>By Appointment</span>
+                    <div className='flex justify-between gap-4'>
+                      <span className='text-gray-600'>Sunday – Saturday:</span>
+                      <span className='font-semibold'>8:00 AM – 8:00 PM</span>
                     </div>
                   </div>
                 </CardContent>
@@ -247,7 +238,7 @@ export default function ContactPage() {
             </Button>
             <Button asChild variant='outline'>
               <Link
-                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032'
+                href='https://share.google/b7iar6aMhBb9ayPkF'
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}

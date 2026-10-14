@@ -13,7 +13,7 @@ Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with
 - **License:** Nevada S.0197614.LLC
 - **Phone:** 702-820-5408
 - **Office:** 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
-- **Hours:** Mon–Fri 9:00 AM–6:00 PM · Sat 10:00 AM–4:00 PM · Sun by appointment
+- **Hours:** Open daily 8:00 AM–8:00 PM
 - **Community ZIP:** 89031 (Craig Ranch)
 - **Website:** ${baseUrl}
 

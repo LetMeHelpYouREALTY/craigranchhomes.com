@@ -231,7 +231,7 @@ export const CONTACT_PAGE_FAQS: ReadonlyArray<FaqItem> = [
   {
     question: 'What is the best way to reach Dr. Jan Duffy about Craig Ranch homes?',
     answer:
-      'Call (702) 820-5408, email DrDuffy@CraigRanchHomes.com, or use the contact form. Office hours are Mon–Fri 9:00 AM–6:00 PM, Sat 10:00 AM–4:00 PM, and Sunday by appointment.',
+      'Call (702) 820-5408, email DrDuffy@CraigRanchHomes.com, or use the contact form. Office hours are daily 8:00 AM–8:00 PM.',
   },
   {
     question: 'Where is the Craig Ranch Homes office located?',

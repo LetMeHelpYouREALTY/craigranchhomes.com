@@ -20,12 +20,10 @@ export const SITE_NAP = {
   postalCode: '89032',
   communityZip: '89031',
   communityName: 'Craig Ranch',
-  hoursLine:
-    'Mon–Fri 9:00 AM–6:00 PM • Sat 10:00 AM–4:00 PM • Sun by appointment',
+  hoursLine: 'Open daily 8:00 AM–8:00 PM',
   mapsHref:
     'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
-  reviewsHref:
-    'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
+  reviewsHref: 'https://share.google/b7iar6aMhBb9ayPkF',
   agentName: 'Dr. Jan Duffy',
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
   license: 'S.0197614.LLC',

@@ -47,7 +47,7 @@ export default function BuyCraigRanchHomesPage() {
         },
         {
           heading: 'Start your Craig Ranch search today',
-          body: 'Browse current homes, request a buyer consult, or call (702) 820-5408. Office hours: Mon–Fri 9:00 AM–6:00 PM, Sat 10:00 AM–4:00 PM, Sunday by appointment.',
+          body: 'Browse current homes, request a buyer consult, or call (702) 820-5408. Office hours: open daily 8:00 AM–8:00 PM.',
         },
       ]}
       faqs={BUY_CRAIG_RANCH_FAQS}
