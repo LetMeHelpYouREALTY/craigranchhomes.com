@@ -214,8 +214,8 @@ export default function ContactPage() {
             <Suspense fallback={<MapSkeleton />}>
               <GoogleMap
                 address='851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032'
-                latitude={36.2465}
-                longitude={-115.1475}
+                latitude={36.2469871}
+                longitude={-115.1554618}
                 zoom={14}
                 height='500px'
                 title='Craig Ranch Homes Office Location'

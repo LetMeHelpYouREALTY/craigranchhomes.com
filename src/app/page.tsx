@@ -26,6 +26,7 @@ import {
   generateSpeakableSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
+import { MARKET_SNAPSHOT } from '@/lib/market-snapshot';
 import { SITE_NAP, SITE_URL } from '@/lib/site-nap';
 
 const baseUrl = SITE_URL;
@@ -158,11 +159,12 @@ export default function Home() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-                Featured Craig Ranch Listings from Dr. Jan Duffy
+                Office listings from Dr. Jan Duffy
               </h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                Browse our current office listings. Dr. Jan Duffy specializes in
-                luxury homes and estates across Las Vegas and Henderson.
+                These cards are the office inventory across Las Vegas and
+                Henderson. They are not a Craig Ranch-only search. Call (702)
+                820-5408 for homes in Craig Ranch, ZIP 89031.
               </p>
             </div>
             <div className='grid lg:grid-cols-2 gap-6 mb-10'>
@@ -210,24 +212,32 @@ export default function Home() {
               Craig Ranch Market Overview
             </h2>
             <p className='text-xl text-gray-200 mb-8 max-w-3xl mx-auto'>
-              Stay informed with the latest pricing, days-on-market, and
-              inventory trends in Craig Ranch
+              {MARKET_SNAPSHOT.asOfLabel}. These figures are not a live Craig
+              Ranch CMA. Call (702) 820-5408 for current comps.
             </p>
             <div className='grid md:grid-cols-4 gap-6 mb-8'>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-                <div className='text-3xl font-bold text-white mb-1'>$428K</div>
+                <div className='text-3xl font-bold text-white mb-1'>
+                  {MARKET_SNAPSHOT.averageValueShort}
+                </div>
                 <div className='text-gray-300 text-sm'>Average Value</div>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-                <div className='text-3xl font-bold text-white mb-1'>46</div>
+                <div className='text-3xl font-bold text-white mb-1'>
+                  {MARKET_SNAPSHOT.daysOnMarket}
+                </div>
                 <div className='text-gray-300 text-sm'>Days on Market</div>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-                <div className='text-3xl font-bold text-white mb-1'>206</div>
+                <div className='text-3xl font-bold text-white mb-1'>
+                  {MARKET_SNAPSHOT.homesForSale}
+                </div>
                 <div className='text-gray-300 text-sm'>Homes For Sale</div>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-                <div className='text-3xl font-bold text-white mb-1'>+1%</div>
+                <div className='text-3xl font-bold text-white mb-1'>
+                  {MARKET_SNAPSHOT.priceChange}
+                </div>
                 <div className='text-gray-300 text-sm'>Price Growth</div>
               </div>
             </div>

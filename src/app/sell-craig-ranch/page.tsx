@@ -24,7 +24,7 @@ export const revalidate = 604800; // weekly
 export const metadata = genMetadata({
   title: 'Sell a Home in Craig Ranch | Listing Agent: Dr. Jan Duffy, REALTOR®',
   description:
-    'Sell your Craig Ranch home with expert guidance. Dr. Jan Duffy, REALTOR®, helps you price competitively, prepare for market, and negotiate to maximize proceeds. Average days on market: 46 days. Free consultation. Call (702) 820-5408.',
+    'Sell your Craig Ranch home with Dr. Jan Duffy, REALTOR®. Pricing, preparation, and negotiation from the Suite 103 office. August 2026 snapshot: 46 average days on market. Call (702) 820-5408.',
   keywords:
     'sell my home Craig Ranch, Craig Ranch listing agent, Craig Ranch home value, Craig Ranch real estate agent, Dr. Jan Duffy REALTOR',
   path: '/sell-craig-ranch',
@@ -253,8 +253,8 @@ export default function SellCraigRanchPage() {
               <Suspense fallback={<MapSkeleton />}>
                 <GoogleMap
                   address={nap.addressLine}
-                  latitude={36.2465}
-                  longitude={-115.1475}
+                  latitude={36.2469871}
+                  longitude={-115.1554618}
                   zoom={14}
                   height='460px'
                   title='Craig Ranch Homes Office Location'

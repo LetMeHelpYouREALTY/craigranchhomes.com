@@ -66,7 +66,7 @@ export const revalidate = 604800; // 1 week
 export const metadata = genMetadata({
   title: 'Craig Ranch Homes & Real Estate | North Las Vegas Community Guide',
   description:
-    'Craig Ranch in North Las Vegas features 13 floor plans by Century Communities (1,519-2,638 sq ft, up to 5 bedrooms). Award-winning community with 170-acre regional park, 5 miles of trails, and nearby schools including Eva G. Simmons Elementary. Average home value: $428K. Call (702) 820-5408.',
+    'Craig Ranch in North Las Vegas features 13 floor plans by Century Communities (1,519-2,638 sq ft, up to 5 bedrooms), a 170-acre regional park, and about 5 miles of trails. August 2026 snapshot average value: $428K. Call (702) 820-5408.',
   keywords:
     'Craig Ranch, North Las Vegas homes, Century Communities, Craig Ranch Regional Park, 89031 zip code, North Las Vegas real estate, gated community, Craig Ranch schools, Craig Ranch amenities',
   path: '/neighborhood',
@@ -258,9 +258,12 @@ export default function NeighborhoodPage() {
 
           {/* Real Estate Stats */}
           <div className='mb-16 bg-gradient-to-r from-[#F7F9FC] to-white rounded-xl p-8 border border-gray-200'>
-            <h3 className='text-2xl font-bold text-[#0A2540] mb-6 text-center'>
+            <h3 className='text-2xl font-bold text-[#0A2540] mb-2 text-center'>
               Craig Ranch Real Estate Stats
             </h3>
+            <p className='text-center text-sm text-gray-600 mb-6'>
+              August 2026 snapshot. Not a live Craig Ranch CMA.
+            </p>
             <div className='grid md:grid-cols-4 gap-6'>
               {realEstateStats.map((stat, index) => {
                 const Icon = stat.icon;
@@ -599,6 +602,9 @@ export default function NeighborhoodPage() {
 
           {/* Real Estate Stats Summary */}
           <div className='mb-8 bg-gradient-to-r from-[#F7F9FC] to-white rounded-xl p-6 border border-gray-200'>
+            <p className='text-center text-sm text-gray-600 mb-4'>
+              August 2026 snapshot. Not a live Craig Ranch CMA.
+            </p>
             <div className='flex flex-wrap items-center justify-center gap-6'>
               <div className='text-center'>
                 <div className='text-2xl font-bold text-[#0A2540]'>206</div>
@@ -631,11 +637,12 @@ export default function NeighborhoodPage() {
           <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg mb-8'>
             <div className='mb-6'>
               <h3 className='text-2xl font-semibold text-[#0A2540] mb-2'>
-                Current Craig Ranch Listings
+                Office listings in the Craig Ranch price band
               </h3>
               <p className='text-gray-600'>
-                Properties in Craig Ranch, North Las Vegas (89031) - Price range:
-                $370,000 - $1,800,000
+                These cards are office inventory from $370,000 to $1,800,000
+                across Las Vegas and Henderson. Call (702) 820-5408 for a Craig
+                Ranch, ZIP 89031 search.
               </p>
             </div>
 

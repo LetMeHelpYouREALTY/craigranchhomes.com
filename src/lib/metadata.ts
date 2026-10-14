@@ -16,11 +16,9 @@ const businessAddress = {
   addressCountry: 'US',
 } as const;
 
-// Approximate coordinates for the office location.
-// If you need exact GPS from GBP, replace these values.
 const businessGeo = {
-  latitude: 36.2465,
-  longitude: -115.1475,
+  latitude: SITE_NAP.latitude,
+  longitude: SITE_NAP.longitude,
 } as const;
 
 const businessName = 'Craig Ranch Homes';
@@ -36,12 +34,12 @@ export const CRAIG_RANCH_FAQS = [
   {
     question: 'What is the average price range for homes in Craig Ranch?',
     answer:
-      'Home prices in Craig Ranch range from $370,000 to $1.8 million, depending on the property type, size, and location. The average home value is $427,967, with an average price per square foot of $242. The median sale price is $415,000.',
+      'In the August 2026 snapshot, Craig Ranch prices ranged from $370,000 to $1.8 million. Average value was $427,967, about $242 per square foot, and the median sale price was $415,000. Ask for a current comp before you price an offer.',
   },
   {
     question: 'How long do properties typically stay on the market?',
     answer:
-      'Properties in Craig Ranch sell after an average of 46 days on market, which is faster than the national average of 53 days. Inventory levels, recent comparable sales, and proximity to Craig Ranch Regional Park and major highways influence buyer interest.',
+      'In the August 2026 snapshot, Craig Ranch homes averaged 46 days on market, compared with a national average of 53 days in that same snapshot. Live comps, inventory, and park proximity still decide the pace for a specific address.',
   },
   {
     question: 'What types of properties are available?',
@@ -269,7 +267,7 @@ export function generateOrganizationSchema() {
       },
     ],
     sameAs: [
-      'https://www.facebook.com/DrJanDuffyRealtorCentennialHills',
+      SITE_NAP.facebookUrl,
       'https://www.instagram.com/drjanduffy',
       'https://www.youtube.com/@DrDuffy',
       'https://twitter.com/drjanduffy',
@@ -387,7 +385,7 @@ export function generateRealEstateAgentSchema() {
       name: 'Berkshire Hathaway HomeServices Nevada',
     },
     sameAs: [
-      'https://www.facebook.com/DrJanDuffyRealtorCentennialHills',
+      SITE_NAP.facebookUrl,
       'https://www.instagram.com/drjanduffy',
       'https://www.youtube.com/@DrDuffy',
       'https://twitter.com/drjanduffy',

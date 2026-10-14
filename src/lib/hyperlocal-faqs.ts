@@ -12,7 +12,7 @@ export const BUY_CRAIG_RANCH_FAQS: ReadonlyArray<FaqItem> = [
   {
     question: 'What price range should I expect for Craig Ranch homes?',
     answer:
-      'Craig Ranch homes commonly trade from about $370,000 to $1.8 million depending on size, upgrades, and lot. The median sale price has recently been near $415,000 with average days on market around 46. We refine your target using live comps.',
+      'Craig Ranch homes commonly trade from about $370,000 to $1.8 million depending on size, upgrades, and lot. In the August 2026 snapshot, the median sale price was near $415,000 and average days on market were about 46. We refine your target using live comps.',
   },
   {
     question: 'Which schools serve Craig Ranch addresses?',

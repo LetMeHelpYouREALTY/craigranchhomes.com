@@ -42,7 +42,7 @@ export const revalidate = 900; // 15 minutes
 export const metadata = genMetadata({
   title: 'Craig Ranch Real Estate Market Data & Trends | Las Vegas',
   description:
-    'Latest Craig Ranch real estate market data: Average home value $428K, median sale price $415K, 46 days on market (faster than national average). Track pricing trends, sales volume, and market conditions. Updated regularly. Call (702) 820-5408 for market insights.',
+    'August 2026 Craig Ranch snapshot: average home value $428K, median sale $415K, 46 days on market. Not a live CMA. Call (702) 820-5408 for current comps.',
   keywords:
     'Craig Ranch market data, Las Vegas real estate trends, market statistics, home prices, days on market, real estate market analysis, Las Vegas housing market',
   path: '/market-data',
@@ -59,7 +59,7 @@ export default function MarketDataPage() {
       trend: 'up' as const,
     },
     {
-      period: 'Current Market',
+      period: 'August 2026 snapshot',
       priceChange: 'Median: $415K',
       salesVolume: 'List Price: $425K',
       inventory: '2.90 Months Supply',
@@ -105,8 +105,8 @@ export default function MarketDataPage() {
             Craig Ranch Market Data
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            Stay informed with the latest real estate market trends, statistics,
-            and insights for Craig Ranch, Las Vegas.
+            August 2026 snapshot for Craig Ranch, North Las Vegas. These
+            figures are not a live CMA.
           </p>
         </div>
       </div>
@@ -221,17 +221,15 @@ export default function MarketDataPage() {
             </CardHeader>
             <CardContent className='space-y-4 text-gray-600 leading-relaxed'>
               <p>
-                On average, homes in Craig Ranch, North Las Vegas sell after 46
-                days on the market compared to the national average of 53 days.
-                The median sale price for homes in Craig Ranch over the last 12
-                months is $415,000, up 1% from the previous 12 months. The
-                average price per square foot is $242, making it an attractive
-                market for both buyers and sellers.
+                In the August 2026 snapshot, homes in Craig Ranch, North Las
+                Vegas averaged 46 days on market, compared with a national
+                average of 53 days in that snapshot. The median sale price over
+                the prior 12 months was $415,000, up 1% from the previous 12
+                months. The average price per square foot was $242.
               </p>
               <p>
-                The neighborhood has 206 homes currently for sale, with a median
-                list price of $425,000. The market shows 2.90 months of supply,
-                indicating a balanced market. Homes range from $370,000 to
+                That snapshot counted 206 homes for sale, with a median
+                list price of $425,000 and 2.90 months of supply. Homes ranged from $370,000 to
                 $1.8 million, offering options for various budgets. The area has
                 21,469 total homes, with most built in the early 2000s.
               </p>

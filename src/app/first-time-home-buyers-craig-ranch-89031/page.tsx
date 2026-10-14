@@ -34,7 +34,7 @@ export default function FirstTimeBuyersCraigRanchPage() {
       sections={[
         {
           heading: 'A simple Craig Ranch buying path',
-          body: 'First-time buyers succeed when the process is sequenced: lender letter, search criteria, tour plan, offer, inspection, appraisal, and closing. We keep each step tied to Craig Ranch market pace—recently about 46 average days on market.',
+          body: 'First-time buyers succeed when the process is sequenced: lender letter, search criteria, tour plan, offer, inspection, appraisal, and closing. The August 2026 snapshot showed about 46 average days on market in Craig Ranch. Live comps set the pace for your offer.',
         },
         {
           heading: 'Floor plans that often fit first purchases',

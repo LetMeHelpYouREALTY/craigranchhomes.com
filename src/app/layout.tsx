@@ -9,6 +9,7 @@ import {
 import {
   SITE_AGENT_PHOTO_URL,
   SITE_LOGO_URL,
+  SITE_NAP,
 } from '@/lib/site-nap';
 import './globals.css';
 
@@ -136,8 +137,8 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'US-NV',
     'geo.placename': 'North Las Vegas, Las Vegas',
-    'geo.position': '36.2465;-115.1475',
-    ICBM: '36.2465, -115.1475',
+    'geo.position': `${SITE_NAP.latitude};${SITE_NAP.longitude}`,
+    ICBM: `${SITE_NAP.latitude}, ${SITE_NAP.longitude}`,
     'DC.title': 'Craig Ranch Homes',
     'DC.creator': 'Craig Ranch Homes',
     'DC.subject': 'Luxury Real Estate, Las Vegas, Craig Ranch',
@@ -271,7 +272,7 @@ export default function RootLayout({
                 name: 'Berkshire Hathaway HomeServices Nevada',
               },
               sameAs: [
-                'https://www.facebook.com/DrJanDuffyRealtorCentennialHills',
+                SITE_NAP.facebookUrl,
                 'https://www.instagram.com/drjanduffy',
                 'https://www.youtube.com/@DrDuffy',
                 'https://twitter.com/drjanduffy',
@@ -314,8 +315,8 @@ export default function RootLayout({
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: 36.2465,
-                longitude: -115.1475,
+                latitude: SITE_NAP.latitude,
+                longitude: SITE_NAP.longitude,
               },
               hasMap:
                 'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',

@@ -56,21 +56,23 @@ export default function RealEstateListings() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Available Craig Ranch Properties
+            Office listings, $600K–$1.2M
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Discover the latest luxury homes available in Craig Ranch
+            This grid is Dr. Jan Duffy&apos;s office inventory in that price
+            band across Las Vegas and Henderson. It is not a Craig Ranch ZIP
+            filter. Call (702) 820-5408 for 89031 homes.
           </p>
         </div>
 
         <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg'>
           <div className='mb-6'>
             <h3 className='text-2xl font-semibold text-[#0A2540] mb-2'>
-              Current Craig Ranch Listings
+              Las Vegas and Henderson listings
             </h3>
             <p className='text-gray-600'>
-              Browse our curated selection of premium properties in the $600K -
-              $1.2M range
+              Office inventory priced from $600,000 to $1,200,000. Craig Ranch
+              addresses are mixed in with the rest of the valley.
             </p>
           </div>
 

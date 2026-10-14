@@ -28,7 +28,7 @@ export default function BuyCraigRanchHomesPage() {
         bullets: [
           'Target price bands from about $370K to $1.8M depending on size and upgrades',
           'Confirm school assignment (e.g., Eva G. Simmons, Findlay Middle, Mojave High) per address',
-          'Average Craig Ranch days on market recently near 46—move fast on well-priced homes',
+          'August 2026 snapshot: average Craig Ranch days on market were about 46. Confirm the pace with live comps.',
         ],
       }}
       sections={[

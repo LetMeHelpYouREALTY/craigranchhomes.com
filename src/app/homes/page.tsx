@@ -51,7 +51,7 @@ export const revalidate = 1800; // 30 minutes
 export const metadata = genMetadata({
   title: 'Homes for Sale in Craig Ranch, Las Vegas | Craig Ranch Homes',
   description:
-    "Browse luxury homes for sale in Craig Ranch, Las Vegas. View current listings from $370K to $1.8M with detailed photos, virtual tours, and market data. Average home value: $428K. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.",
+    "Browse homes for sale in Craig Ranch, Las Vegas, with Dr. Jan Duffy. The August 2026 snapshot showed values from $370K to $1.8M and an average value of $428K. The listing grid is office inventory across the valley. Call (702) 820-5408.",
   keywords:
     'homes for sale Craig Ranch, Las Vegas homes, luxury homes for sale, Craig Ranch real estate, North Las Vegas homes, property listings, real estate agent Las Vegas',
   path: '/homes',
@@ -69,8 +69,9 @@ export default function HomesPage() {
             Discover homes for sale in the Craig Ranch community in North Las
             Vegas. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada, to find your perfect property. Prices range
-            from $370,000 to $1.8 million, with 206 homes currently available.
-            Average home value: $427,967.
+            from $370,000 to $1.8 million. The August 2026 snapshot counted
+            206 homes and an average value of $427,967. The grid below is
+            office inventory, not a Craig Ranch-only feed.
           </p>
         </div>
       </div>
@@ -246,9 +247,9 @@ export default function HomesPage() {
                 </p>
                 <p>
                   <strong>Price Range:</strong> Home prices range from $370,000
-                  to $1.8 million, with new construction and resale options
-                  available. The average home value is $427,967, with an average
-                  price per square foot of $242. The median sale price is
+                  to $1.8 million, with new construction and resale options.
+                  In the August 2026 snapshot, the average value was $427,967,
+                  about $242 per square foot, and the median sale price was
                   $415,000.
                 </p>
                 <p>
@@ -359,7 +360,8 @@ export default function HomesPage() {
               '@context': 'https://schema.org',
               '@type': 'ItemList',
               name: 'Craig Ranch Homes for Sale',
-              description: 'Luxury homes for sale in Craig Ranch, Las Vegas',
+              description:
+                'August 2026 snapshot of Craig Ranch homes for sale in Las Vegas. Not a live inventory count.',
               url: `${baseUrl}/homes`,
               numberOfItems: 206,
               itemListElement: {

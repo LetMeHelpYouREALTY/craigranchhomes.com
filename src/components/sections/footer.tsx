@@ -161,7 +161,7 @@ export default function Footer() {
             </p>
             <div className='flex flex-wrap gap-4'>
               <Link
-                href='https://www.facebook.com/DrJanDuffyRealtorCentennialHills'
+                href={SITE_NAP.facebookUrl}
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}

@@ -22,7 +22,7 @@ export const revalidate = 604800; // weekly
 export const metadata = genMetadata({
   title: 'Craig Ranch Home Valuation | What Is My Craig Ranch Home Worth?',
   description:
-    'Get a free Craig Ranch home valuation with local pricing context. Dr. Jan Duffy, REALTOR®, provides accurate value estimates based on recent sales, active listings, and market trends. Average home value: $428K. Call (702) 820-5408 for your free estimate.',
+    'Get a Craig Ranch home valuation from Dr. Jan Duffy, REALTOR®, using recent sales and active listings. August 2026 snapshot average value: $428K. Call (702) 820-5408.',
   keywords:
     'Craig Ranch home valuation, Craig Ranch home value, what is my home worth Craig Ranch, Craig Ranch CMA, Dr. Jan Duffy REALTOR',
   path: '/home-valuation-craig-ranch',
@@ -250,8 +250,8 @@ export default function CraigRanchHomeValuationPage() {
               <Suspense fallback={<MapSkeleton />}>
                 <GoogleMap
                   address={nap.addressLine}
-                  latitude={36.2465}
-                  longitude={-115.1475}
+                  latitude={36.2469871}
+                  longitude={-115.1554618}
                   zoom={14}
                   height='460px'
                   title='Craig Ranch Homes Office Location'
