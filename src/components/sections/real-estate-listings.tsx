@@ -1,5 +1,6 @@
 'use client';
 
+import GoogleMap from '@/components/sections/google-map';
 import { useIsMobile } from '@/hooks';
 import { waitForRealScoutElement } from '@/lib/realscout-script';
 import Link from 'next/link';
@@ -72,6 +73,14 @@ export default function RealEstateListings() {
               $1.2M range
             </p>
           </div>
+
+          <GoogleMap
+            address='Craig Ranch, North Las Vegas, NV 89031'
+            zoom={13}
+            height='420px'
+            title='Map of Craig Ranch homes in North Las Vegas'
+            className='mb-8'
+          />
 
           <div className='real-estate-listings-container min-h-[400px]'>
             {!ready ? (

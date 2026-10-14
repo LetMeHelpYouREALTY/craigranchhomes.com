@@ -1,5 +1,6 @@
 'use client';
 
+import { SITE_NAP } from '@/lib/site-nap';
 import { useState } from 'react';
 
 type GoogleMapProps = {
@@ -13,34 +14,26 @@ type GoogleMapProps = {
 };
 
 export default function GoogleMap({
-  address = 'Craig Ranch, North Las Vegas, NV 89031',
-  latitude = 36.2831,
-  longitude = -115.1331,
+  address = SITE_NAP.addressLine,
+  latitude = 36.2469871,
+  longitude = -115.1554618,
   zoom = 14,
   height = '400px',
   className = '',
-  title = 'Craig Ranch Location',
+  title = 'Craig Ranch Homes office',
 }: GoogleMapProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
-
-  // Use iframe embed without API key (free and simple)
-  const getMapUrl = () => {
-    if (address) {
-      const encodedAddress = encodeURIComponent(address);
-      return `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
-    } else {
-      return `https://www.google.com/maps?q=${latitude},${longitude}&output=embed`;
-    }
-  };
+  const query = address.trim() ? address : `${latitude},${longitude}`;
+  const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(query)}&z=${zoom}&output=embed`;
 
   return (
     <div className={`w-full relative ${className}`}>
       <div
-        className='w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 relative'
+        className='w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 relative bg-gray-100'
         style={{ height }}
       >
         {!mapLoaded && (
-          <div className='absolute inset-0 flex items-center justify-center bg-gray-100 z-10'>
+          <div className='absolute inset-0 flex items-center justify-center bg-gray-100'>
             <div className='text-center'>
               <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4'></div>
               <p className='text-gray-500 text-sm'>Loading map...</p>
@@ -48,7 +41,7 @@ export default function GoogleMap({
           </div>
         )}
         <iframe
-          src={getMapUrl()}
+          src={mapUrl}
           width='100%'
           height='100%'
           style={{ border: 0 }}
@@ -57,7 +50,7 @@ export default function GoogleMap({
           referrerPolicy='no-referrer-when-downgrade'
           title={title}
           onLoad={() => setMapLoaded(true)}
-          className='w-full h-full'
+          className='relative z-10 w-full h-full'
         />
       </div>
     </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import GoogleMap from '@/components/sections/google-map';
 import { useIsMobile, useInView } from '@/hooks';
 import { waitForRealScoutElement } from '@/lib/realscout-script';
 import { useEffect, useRef, useState } from 'react';
@@ -107,6 +108,15 @@ function RealScoutOfficeWidgetContent({
       ref={setInViewRef}
       className={`real-estate-office-widget-container min-h-[400px] ${className}`}
     >
+      {showMap ? (
+        <GoogleMap
+          address='Craig Ranch, North Las Vegas, NV 89031'
+          zoom={13}
+          height='400px'
+          title='Map of Craig Ranch, North Las Vegas'
+          className='mb-6'
+        />
+      ) : null}
       {status !== 'ready' ? (
         <div className='text-center py-8'>
           {status === 'error' ? (

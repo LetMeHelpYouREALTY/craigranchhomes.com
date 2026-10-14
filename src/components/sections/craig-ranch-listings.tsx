@@ -1,5 +1,6 @@
 'use client';
 
+import GoogleMap from '@/components/sections/google-map';
 import { useIsMobile } from '@/hooks';
 import { waitForRealScoutElement } from '@/lib/realscout-script';
 import { useEffect, useRef, useState } from 'react';
@@ -63,6 +64,15 @@ export default function CraigRanchListings({
 
   return (
     <div className='real-estate-listings-container min-h-[400px]'>
+      {showMap ? (
+        <GoogleMap
+          address='Craig Ranch, North Las Vegas, NV 89031'
+          zoom={13}
+          height='400px'
+          title='Map of Craig Ranch, North Las Vegas'
+          className='mb-6'
+        />
+      ) : null}
       {!ready ? (
         <div className='text-center py-8'>
           {error ? (

@@ -7,6 +7,7 @@ import HomeEvaluationSection from '@/components/sections/home-evaluation';
 import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import BlogPosts from '@/components/sections/blog-posts';
+import GoogleMap from '@/components/sections/google-map';
 import RealScoutOfficeWidget from '@/components/sections/realscout-office-widget';
 import ClientErrorBoundary from '@/components/shared/client-error-boundary';
 import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
@@ -164,12 +165,36 @@ export default function Home() {
                 luxury homes and estates across Las Vegas and Henderson.
               </p>
             </div>
+            <div className='grid lg:grid-cols-2 gap-6 mb-10'>
+              <div>
+                <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
+                  Craig Ranch, North Las Vegas
+                </h3>
+                <GoogleMap
+                  address='Craig Ranch, North Las Vegas, NV 89031'
+                  zoom={13}
+                  height='380px'
+                  title='Map of Craig Ranch, North Las Vegas'
+                />
+              </div>
+              <div>
+                <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
+                  Office at Suite 103
+                </h3>
+                <GoogleMap
+                  address={SITE_NAP.addressLine}
+                  zoom={15}
+                  height='380px'
+                  title='Craig Ranch Homes office on Lone Mountain Road'
+                />
+              </div>
+            </div>
             <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg border border-gray-200'>
               <ClientErrorBoundary>
                 <Suspense fallback={<ListingsSkeleton />}>
                   <RealScoutOfficeWidget
                     agentEncodedId='QWdlbnQtMjI1MDUw'
-                    showMap={true}
+                    showMap={false}
                     listingsPerPage='12'
                   />
                 </Suspense>
