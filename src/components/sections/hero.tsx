@@ -67,12 +67,33 @@ export default function Hero() {
           Century Communities floor plans from 1,519–2,638 sq ft
         </p>
 
-        <p className='text-sm md:text-base text-white/90 mb-8 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
+        <p className='text-sm md:text-base text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
           <a href={SITE_NAP.phoneHref} className='underline underline-offset-2'>
             {SITE_NAP.phoneDisplay}
           </a>
           {' · '}
           {SITE_NAP.addressLine}
+          {' · '}
+          {SITE_NAP.hoursLine}
+        </p>
+        <p className='text-sm md:text-base text-white/90 mb-8 mt-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
+          <a
+            href={SITE_NAP.mapsHref}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='underline underline-offset-2'
+          >
+            Directions
+          </a>
+          {' · '}
+          <a
+            href={SITE_NAP.reviewsHref}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='underline underline-offset-2'
+          >
+            View Google Reviews
+          </a>
         </p>
 
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>

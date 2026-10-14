@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SITE_NAP } from '@/lib/site-nap';
 
 export default function Footer() {
   return (
@@ -122,7 +123,32 @@ export default function Footer() {
                 <span className='mr-2' aria-hidden='true'>
                   📍
                 </span>
-                851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
+                {SITE_NAP.addressLine}
+              </li>
+              <li className='flex items-start'>
+                <span className='mr-2' aria-hidden='true'>
+                  🕐
+                </span>
+                {SITE_NAP.hoursLine}
+              </li>
+              <li>
+                <a
+                  href={SITE_NAP.mapsHref}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-white hover:underline'
+                >
+                  Directions
+                </a>
+                {' · '}
+                <a
+                  href={SITE_NAP.reviewsHref}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-white hover:underline'
+                >
+                  View Google Reviews
+                </a>
               </li>
             </ul>
           </div>
