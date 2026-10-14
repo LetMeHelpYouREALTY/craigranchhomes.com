@@ -12,11 +12,11 @@ const nextConfig = {
       "frame-ancestors 'none'",
       "form-action 'self'",
       // Next.js + next/script inline blocks require unsafe-inline unless using nonces.
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://em.realscout.com https://cdn.realscout.com https://www.realscout.com https://embed.homebotapp.com https://maps.googleapis.com",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://em.realscout.com https://cdn.realscout.com https://www.realscout.com https://embed.homebotapp.com https://maps.googleapis.com https://maps.gstatic.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data: https: https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://www.realscout.com https://*.realscout.com https://cdn.realscout.com https://embed.homebotapp.com https://*.homebotapp.com https://maps.googleapis.com https://places.googleapis.com",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://www.realscout.com https://*.realscout.com https://cdn.realscout.com https://embed.homebotapp.com https://*.homebotapp.com https://maps.googleapis.com https://places.googleapis.com https://maps.gstatic.com",
       "frame-src 'self' https://www.google.com https://www.google.com/maps https://embed.homebotapp.com",
       'upgrade-insecure-requests',
     ].join('; ');

@@ -42,7 +42,7 @@ export function searchCategory(
         },
         includedPrimaryTypes: [...types],
         maxResultCount: 10,
-        rankPreference: 'POPULARITY' as any,
+        rankPreference: 'POPULARITY',
       });
 
       const mapped: NearbyPlaceResult[] = [];
