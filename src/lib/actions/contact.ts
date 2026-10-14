@@ -30,6 +30,7 @@ export async function submitContactForm(
       email: formData.get('email'),
       phone: formData.get('phone'),
       message: formData.get('message'),
+      propertyAddress: formData.get('propertyAddress'),
       sourceUrl: formData.get('sourceUrl'),
     };
 

@@ -78,9 +78,7 @@ export default function Hero() {
         </p>
         <p className='text-sm md:text-base text-white/90 mb-8 mt-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
           <a
-            href={SITE_NAP.mapsHref}
-            target='_blank'
-            rel='noopener noreferrer'
+            href={SITE_NAP.directionsPath}
             className='underline underline-offset-2'
           >
             Directions

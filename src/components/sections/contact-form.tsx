@@ -5,6 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import AddressAutocomplete, {
+  ADDRESS_TYPES,
+} from '@/components/maps/address-autocomplete';
 import { submitContactForm } from '@/lib/actions/contact';
 import type { ContactFormResult } from '@/lib/actions/contact';
 
@@ -15,6 +18,7 @@ const initialState: ContactFormResult = {
 
 export default function ContactForm() {
   const [sourceUrl, setSourceUrl] = useState('');
+  const [formVersion, setFormVersion] = useState(0);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -48,6 +52,7 @@ export default function ContactForm() {
         if (form) {
           form.reset();
         }
+        setFormVersion((version) => version + 1);
         // Update ref to track this submission's message
         prevMessageRef.current = currentMessage;
       }
@@ -146,6 +151,13 @@ export default function ContactForm() {
           </p>
         )}
       </div>
+      <AddressAutocomplete
+        key={formVersion}
+        id='propertyAddress'
+        name='propertyAddress'
+        label='Property address (optional)'
+        includedPrimaryTypes={ADDRESS_TYPES}
+      />
       <div className='space-y-2'>
         <Label htmlFor='message'>Message</Label>
         <Textarea

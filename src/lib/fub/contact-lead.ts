@@ -13,6 +13,7 @@ const contactLeadSchema = z
     email: z.string().trim().optional(),
     phone: z.string().trim().optional(),
     message: z.string().trim().min(1, 'Message is required'),
+    propertyAddress: z.string().trim().optional(),
     sourceUrl: z.string().trim().optional(),
   })
   .superRefine((data, ctx) => {
@@ -39,6 +40,8 @@ export function parseContactLead(
     email: typeof raw.email === 'string' ? raw.email : undefined,
     phone: typeof raw.phone === 'string' ? raw.phone : undefined,
     message: typeof raw.message === 'string' ? raw.message : '',
+    propertyAddress:
+      typeof raw.propertyAddress === 'string' ? raw.propertyAddress : undefined,
     sourceUrl: typeof raw.sourceUrl === 'string' ? raw.sourceUrl : undefined,
   });
 }
@@ -46,6 +49,7 @@ export function parseContactLead(
 export function buildContactFubPayload(data: ContactLeadInput, sourceUrl: string) {
   const summaryParts = [
     data.message,
+    data.propertyAddress ? `Property address: ${data.propertyAddress}` : null,
     data.phone ? `Phone: ${data.phone}` : null,
   ].filter(Boolean);
 

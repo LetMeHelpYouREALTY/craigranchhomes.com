@@ -117,7 +117,7 @@ export default function CraigRanchRealtorPage() {
                   <a href={nap.phoneHref}>Call Now</a>
                 </Button>
                 <Button asChild variant='outline'>
-                  <Link href={nap.mapsHref} target='_blank' rel='noopener noreferrer' prefetch={false}>
+                  <Link href='/directions'>
                     Get Directions
                   </Link>
                 </Button>
@@ -281,7 +281,7 @@ export default function CraigRanchRealtorPage() {
                     <a href={nap.phoneHref}>Call</a>
                   </Button>
                   <Button asChild variant='outline'>
-                    <Link href={nap.mapsHref} target='_blank' rel='noopener noreferrer' prefetch={false}>
+                    <Link href='/directions'>
                       Directions
                     </Link>
                   </Button>

@@ -26,6 +26,8 @@ export const SITE_NAP = {
   hoursLine: 'Open daily 8:00 AM–8:00 PM',
   mapsHref:
     'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
+  directionsPath: '/directions',
+  findAddressPath: '/find-address',
   reviewsHref: 'https://share.google/b7iar6aMhBb9ayPkF',
   agentName: 'Dr. Jan Duffy',
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
@@ -146,5 +148,17 @@ export const HYPERLOCAL_SERVICE_LINKS: ReadonlyArray<HyperlocalLink> = [
     label: 'Nearby Amenities',
     description:
       'Interactive map of dining, groceries, parks, schools, and healthcare near Craig Ranch.',
+  },
+  {
+    href: '/directions',
+    label: 'Directions to the Office',
+    description:
+      'Travel times to Suite 103 by car, transit, walking, and bicycle.',
+  },
+  {
+    href: '/find-address',
+    label: 'Enter an Address',
+    description:
+      'Confirm a Las Vegas address before you request directions or send a note.',
   },
 ] as const;

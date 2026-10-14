@@ -1,3 +1,7 @@
+export function googleMapsApiKey(): string {
+  return process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY?.trim() ?? '';
+}
+
 let mapsReady: Promise<void> | null = null;
 export function loadGoogleMaps(apiKey: string): Promise<void> {
   if (typeof window === 'undefined') return Promise.reject(new Error('ssr'));

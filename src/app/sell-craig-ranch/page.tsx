@@ -236,7 +236,7 @@ export default function SellCraigRanchPage() {
                     <a href={nap.phoneHref}>Call</a>
                   </Button>
                   <Button asChild variant='outline'>
-                    <Link href={nap.mapsHref} target='_blank' rel='noopener noreferrer' prefetch={false}>
+                    <Link href='/directions'>
                       Directions
                     </Link>
                   </Button>

@@ -63,6 +63,8 @@ Craig Ranch and North Las Vegas 89031, plus nearby Las Vegas / Henderson as need
 - [Homes Near Mojave High](${baseUrl}/homes-near-mojave-high-school)
 - [Relocate to Craig Ranch](${baseUrl}/relocate-to-craig-ranch-north-las-vegas)
 - [Contact](${baseUrl}/contact)
+- [Directions to the office](${baseUrl}/directions)
+- [Enter an address](${baseUrl}/find-address)
 - [Sitemap](${baseUrl}/sitemap.xml)
 - [AI policy](${baseUrl}/ai.txt)
 - [Humans](${baseUrl}/humans.txt)

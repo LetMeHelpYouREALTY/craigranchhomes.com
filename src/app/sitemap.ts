@@ -39,6 +39,8 @@ const SITEMAP_ENTRIES: readonly SitemapEntry[] = [
   },
   { path: '/community', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/amenities', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/directions', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/find-address', changeFrequency: 'monthly', priority: 0.7 },
 
   // Market
   { path: '/market-data', changeFrequency: 'daily', priority: 0.8 },
@@ -108,7 +110,7 @@ const SITEMAP_ENTRIES: readonly SitemapEntry[] = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Bump when NAP or major page set changes so crawlers re-fetch.
-  const lastModified = new Date('2026-08-02T00:00:00.000Z');
+  const lastModified = new Date('2026-10-14T00:00:00.000Z');
 
   return SITEMAP_ENTRIES.map(({ path, changeFrequency, priority }) => ({
     url: path ? `${SITE_URL}${path}` : SITE_URL,

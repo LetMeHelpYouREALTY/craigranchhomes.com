@@ -37,9 +37,7 @@ export default function HyperlocalNapCta({
                 variant='outline'
                 className='border-white text-white hover:bg-white/10'
               >
-                <a href={SITE_NAP.mapsHref} target='_blank' rel='noopener noreferrer'>
-                  Directions
-                </a>
+                <Link href={SITE_NAP.directionsPath}>Directions</Link>
               </Button>
             </div>
           </div>

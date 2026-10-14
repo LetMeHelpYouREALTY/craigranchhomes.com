@@ -71,6 +71,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href={SITE_NAP.directionsPath}
+                  className='text-white hover:underline transition-colors duration-200'
+                >
+                  Directions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={SITE_NAP.findAddressPath}
+                  className='text-white hover:underline transition-colors duration-200'
+                >
+                  Enter an Address
+                </Link>
+              </li>
+              <li>
+                <Link
                   href='/market-data'
                   className='text-white hover:underline transition-colors duration-200'
                 >
@@ -140,14 +156,12 @@ export default function Footer() {
                 {SITE_NAP.hoursLine}
               </li>
               <li>
-                <a
-                  href={SITE_NAP.mapsHref}
-                  target='_blank'
-                  rel='noopener noreferrer'
+                <Link
+                  href={SITE_NAP.directionsPath}
                   className='text-white hover:underline'
                 >
                   Directions
-                </a>
+                </Link>
                 {' · '}
                 <a
                   href={SITE_NAP.reviewsHref}

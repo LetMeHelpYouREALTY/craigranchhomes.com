@@ -227,14 +227,7 @@ export default function ContactPage() {
               <a href='tel:7028205408'>Call Now</a>
             </Button>
             <Button asChild variant='outline'>
-              <Link
-                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032'
-                target='_blank'
-                rel='noopener noreferrer'
-                prefetch={false}
-              >
-                Get Directions
-              </Link>
+              <Link href='/directions'>Get Directions</Link>
             </Button>
             <Button asChild variant='outline'>
               <Link
