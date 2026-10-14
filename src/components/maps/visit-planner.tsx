@@ -38,6 +38,29 @@ function legText(
   return value.text ?? '';
 }
 
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timer = window.setTimeout(() => reject(new Error('timeout')), ms);
+    promise.then(
+      (value) => {
+        window.clearTimeout(timer);
+        resolve(value);
+      },
+      (error: unknown) => {
+        window.clearTimeout(timer);
+        reject(error instanceof Error ? error : new Error('route failed'));
+      }
+    );
+  });
+}
+
+async function ensureMaps(apiKey: string): Promise<void> {
+  await loadGoogleMaps(apiKey);
+  if (mapsAuthFailed) throw new Error('auth');
+  await new Promise((resolve) => window.setTimeout(resolve, 400));
+  if (mapsAuthFailed) throw new Error('auth');
+}
+
 export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) {
   const [origin, setOrigin] = useState(initialOrigin);
   const [originPoint, setOriginPoint] = useState<
@@ -90,7 +113,7 @@ export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) 
     setStatus('loading');
     setMessage('');
     try {
-      await loadGoogleMaps(apiKey);
+      await ensureMaps(apiKey);
       const { DirectionsService, DirectionsRenderer, TravelMode } =
         (await google.maps.importLibrary('routes')) as google.maps.RoutesLibrary;
       const { Map } = (await google.maps.importLibrary(
@@ -116,40 +139,32 @@ export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) 
         lng: SITE_NAP.longitude,
       };
       const originRequest = point ?? start;
-      const nextSummaries: RouteSummary[] = [];
       routesRef.current.clear();
-
-      for (const item of TRAVEL_MODES) {
-        try {
-          const result = await service.route({
-            origin: originRequest,
-            destination,
-            travelMode: travelModeFromId(item.id, TravelMode),
-            region: 'us',
-          });
-          const leg = result.routes[0]?.legs[0];
-          const duration = legText(leg?.duration);
-          const distance = legText(leg?.distance);
-          if (!duration) {
-            nextSummaries.push({ mode: item.id, duration: '', distance: '', state: 'none' });
-            continue;
+      const nextSummaries = await Promise.all(
+        TRAVEL_MODES.map(async (item): Promise<RouteSummary> => {
+          try {
+            const result = await withTimeout(
+              service.route({
+                origin: originRequest,
+                destination,
+                travelMode: travelModeFromId(item.id, TravelMode),
+                region: 'us',
+              }),
+              8000
+            );
+            const leg = result.routes[0]?.legs[0];
+            const duration = legText(leg?.duration);
+            const distance = legText(leg?.distance);
+            if (!duration) {
+              return { mode: item.id, duration: '', distance: '', state: 'none' };
+            }
+            routesRef.current.set(item.id, result);
+            return { mode: item.id, duration, distance, state: 'ok' };
+          } catch {
+            return { mode: item.id, duration: '', distance: '', state: 'none' };
           }
-          routesRef.current.set(item.id, result);
-          nextSummaries.push({
-            mode: item.id,
-            duration,
-            distance,
-            state: 'ok',
-          });
-        } catch {
-          nextSummaries.push({
-            mode: item.id,
-            duration: '',
-            distance: '',
-            state: 'none',
-          });
-        }
-      }
+        })
+      );
 
       setSummaries(nextSummaries);
       const preferred =
