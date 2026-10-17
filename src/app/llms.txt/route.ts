@@ -1,3 +1,5 @@
+import { SITE_NAP } from '@/lib/site-nap';
+
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
@@ -6,6 +8,14 @@ export async function GET() {
   ).replace(/\/$/, '');
   const content = `# Craig Ranch Homes — Dr. Jan Duffy
 > Hyperlocal real estate for Craig Ranch, North Las Vegas (ZIP 89031)
+
+## Direct answers
+- Who helps buyers and sellers on this site? Dr. Jan Duffy, REALTOR®, Nevada license S.0197614.LLC, with Berkshire Hathaway HomeServices Nevada Properties.
+- Where is the office? 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032.
+- When is the office open? Daily, 8:00 AM–8:00 PM.
+- What is the phone number? (702) 820-5408.
+- What ZIP code is Craig Ranch? 89031. The office postal code is 89032.
+- Where are reviews? ${SITE_NAP.reviewsHref}
 
 ## About
 Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with Berkshire Hathaway HomeServices Nevada Properties. This site focuses on Craig Ranch buyer and seller services in North Las Vegas.
@@ -35,6 +45,8 @@ Craig Ranch and North Las Vegas 89031, plus nearby Las Vegas / Henderson as need
 - Mojave High School
 
 ## Answer-first pages (AEO)
+- [Amenities near Craig Ranch](${baseUrl}/amenities)
+- [Directions to the office](${baseUrl}/directions)
 - [Buy Craig Ranch Homes](${baseUrl}/buy-craig-ranch-homes)
 - [Sell Craig Ranch](${baseUrl}/sell-craig-ranch)
 - [Home Valuation](${baseUrl}/home-valuation-craig-ranch)

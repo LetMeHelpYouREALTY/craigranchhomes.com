@@ -89,8 +89,8 @@ export const metadata = genMetadata({
 export default function Home() {
   return (
     <PageLayout>
-      <Hero />
-      <article>
+      <div>
+        <Hero />
         <AeoAnswerBlock
           question='What is Craig Ranch real estate in North Las Vegas?'
           answer='Craig Ranch is a master-planned community in North Las Vegas ZIP 89031 with a 170-acre regional park, about 5 miles of trails, and homes commonly ranging from 1,519–2,638 sq ft. Dr. Jan Duffy, REALTOR® (Nevada license S.0197614.LLC), helps buyers and sellers compare listings, price with local comps, and close with clear timelines.'
@@ -100,7 +100,8 @@ export default function Home() {
             'Confirm school assignment (e.g., Eva G. Simmons, Findlay Middle, Mojave High) per address',
           ]}
         />
-
+      </div>
+      <article>
         {/* Quick Links Section */}
         <section className='py-12 bg-white border-b'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

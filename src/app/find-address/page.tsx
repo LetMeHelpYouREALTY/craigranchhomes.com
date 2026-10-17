@@ -23,7 +23,7 @@ export default function FindAddressPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Enter an address
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Start typing a street address. Choose the matching suggestion so
             the visit planner and your message use the same place.
           </p>

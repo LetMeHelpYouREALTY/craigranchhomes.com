@@ -48,6 +48,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   return (
     <PageLayout>
+      <div>
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h1 className='text-4xl md:text-5xl font-bold text-[#0A2540] mb-4'>
@@ -82,6 +83,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           'ZIP guide: /craig-ranch-89031-real-estate',
         ]}
       />
+      </div>
 
       <RealtorServicesGrid />
       <AeoFaqSection faqs={SEARCH_PAGE_FAQS} />

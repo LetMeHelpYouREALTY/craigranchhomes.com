@@ -3,7 +3,41 @@ import type { MetadataRoute } from 'next';
 /**
  * Always point crawlers at the canonical production host.
  * Do not derive sitemap from request Host (preview/deploy URLs).
+ *
+ * Citation and assistant bots are allowed explicitly. A matching
+ * user-agent group replaces the `*` group, so each bot repeats the
+ * same /api and /search exclusions.
+ *
+ * Tokens checked against Cloudflare's AI crawler reference (Apr 23, 2026)
+ * and Anthropic's Claude-SearchBot / Claude-User / ClaudeBot split.
  */
+const PRIVATE_PATHS = ['/api/', '/search'];
+
+const AI_CRAWLERS = [
+  'GPTBot',
+  'ChatGPT-User',
+  'OAI-SearchBot',
+  'ClaudeBot',
+  'Claude-SearchBot',
+  'Claude-User',
+  'Claude-Web',
+  'anthropic-ai',
+  'PerplexityBot',
+  'Perplexity-User',
+  'Google-Extended',
+  'Google-CloudVertexBot',
+  'Applebot-Extended',
+  'Amazonbot',
+  'DuckAssistBot',
+  'meta-externalagent',
+  'meta-externalfetcher',
+  'cohere-ai',
+  'CCBot',
+  'Bytespider',
+  'Diffbot',
+  'YouBot',
+] as const;
+
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = (
     process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
@@ -14,58 +48,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/search'],
+        disallow: PRIVATE_PATHS,
       },
-      // ── AI Retrieval Bots (power AI search results) ──
-      {
-        userAgent: 'GPTBot',
+      ...AI_CRAWLERS.map((userAgent) => ({
+        userAgent,
         allow: '/',
-      },
-      {
-        userAgent: 'ChatGPT-User',
-        allow: '/',
-      },
-      {
-        userAgent: 'OAI-SearchBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Claude-Web',
-        allow: '/',
-      },
-      {
-        userAgent: 'PerplexityBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Applebot-Extended',
-        allow: '/',
-      },
-      {
-        userAgent: 'Bytespider',
-        allow: '/',
-      },
-      // ── AI Training Bots ──
-      {
-        userAgent: 'Google-Extended',
-        allow: '/',
-      },
-      {
-        userAgent: 'CCBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'cohere-ai',
-        allow: '/',
-      },
-      {
-        userAgent: 'Meta-ExternalAgent',
-        allow: '/',
-      },
+        disallow: PRIVATE_PATHS,
+      })),
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl.replace(/^https?:\/\//, ''),

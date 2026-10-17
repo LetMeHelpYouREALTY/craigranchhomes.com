@@ -55,7 +55,7 @@ export default function ContactPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Contact Dr. Jan Duffy for Craig Ranch Homes
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada. Get expert, data-driven advice and personalized
             consultations for homes in Craig Ranch and throughout Las Vegas.

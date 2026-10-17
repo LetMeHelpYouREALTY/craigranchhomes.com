@@ -10,10 +10,11 @@ export async function GET() {
   ).replace(/\/$/, '');
 
   const content = `# ai.txt — Craig Ranch Homes
-# Updated: 2026-08-02
+# Updated: 2026-10-17
 
 User-Agent: *
 Allow-Citation: yes
+Allow-Retrieval: yes
 Prefer-Source: ${baseUrl}/llms.txt
 Contact: DrDuffy@CraigRanchHomes.com
 Brand: Craig Ranch Homes
@@ -23,6 +24,7 @@ Phone: +1-702-820-5408
 Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032
 Sitemap: ${baseUrl}/sitemap.xml
 Canonical-Host: www.craigranchhomes.com
+Citation-Bots: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Amazonbot, DuckAssistBot, Google-Extended
 `;
 
   return new Response(content, {

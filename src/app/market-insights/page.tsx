@@ -47,6 +47,7 @@ type BlogPost = {
   postLink: string;
   author: string;
   date: string;
+  isoDate?: string;
   description?: string;
 };
 
@@ -88,6 +89,7 @@ async function getBlogPosts(limit: number): Promise<BlogPost[]> {
         categoryLink,
         author: item.creator,
         date: formatDate(item.pubDate),
+        isoDate: isoDate(item.pubDate),
         imageUrl: item.imageUrl || '/placeholder-blog.jpg',
       };
     });
@@ -113,11 +115,18 @@ function formatDate(pubDate: string): string {
   }
 }
 
+function isoDate(pubDate: string): string | undefined {
+  const date = new Date(pubDate);
+  if (Number.isNaN(date.getTime())) return undefined;
+  return date.toISOString();
+}
+
 export default async function MarketInsightsPage() {
   const posts = await getBlogPosts(12);
 
   return (
     <PageLayout>
+      <div>
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
@@ -142,6 +151,11 @@ export default async function MarketInsightsPage() {
           </div>
         </div>
       </section>
+      <AeoAnswerBlock
+        question='How should Craig Ranch buyers use these market insights?'
+        answer='Use national rate and inventory articles for context, then confirm list price and offer strategy with Craig Ranch comps in North Las Vegas 89031. Dr. Jan Duffy translates headlines into local numbers—call (702) 820-5408 or open the Craig Ranch market report.'
+      />
+      </div>
 
       <section className='pb-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -215,10 +229,6 @@ export default async function MarketInsightsPage() {
         </div>
       </section>
 
-      <AeoAnswerBlock
-        question='How should Craig Ranch buyers use these market insights?'
-        answer='Use national rate and inventory articles for context, then confirm list price and offer strategy with Craig Ranch comps in North Las Vegas 89031. Dr. Jan Duffy translates headlines into local numbers—call (702) 820-5408 or open the Craig Ranch market report.'
-      />
       <RealtorServicesGrid
         title='Turn insights into Craig Ranch action'
         subtitle='Buyer representation, listings, and valuations focused on Craig Ranch streets—not generic Las Vegas averages.'
@@ -252,6 +262,7 @@ export default async function MarketInsightsPage() {
               url: `${baseUrl}/market-insights`,
               author: 'Simplifying the Market',
               publisher: 'Craig Ranch Homes',
+              dateModified: posts.find((post) => post.isoDate)?.isoDate,
             }),
             generateFAQPageSchema(MARKET_INSIGHTS_FAQS),
             generateBreadcrumbSchema([

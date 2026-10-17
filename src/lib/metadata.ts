@@ -201,6 +201,67 @@ export function generateLocalBusinessSchema() {
     ],
     priceRange: '$$$',
     currenciesAccepted: 'USD',
+    employee: {
+      '@id': `${siteUrl}#person`,
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: businessPhone,
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: ['English'],
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+          ],
+          opens: '08:00',
+          closes: '20:00',
+        },
+      },
+      {
+        '@type': 'ContactPoint',
+        email: businessEmail,
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: ['English'],
+      },
+    ],
+  };
+}
+
+/** Dr. Jan Duffy as a person entity, distinct from the office and the website. */
+export function generatePersonSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${siteUrl}#person`,
+    name: SITE_NAP.agentName,
+    jobTitle: 'REALTOR®',
+    url: `${siteUrl}/craig-ranch-realtor`,
+    telephone: businessPhone,
+    email: businessEmail,
+    image: SITE_AGENT_PHOTO_URL,
+    identifier: SITE_NAP.license,
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    },
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      ...businessAddress,
+    },
   };
 }
 
@@ -275,6 +336,9 @@ export function generateOrganizationSchema() {
       'https://www.tiktok.com/@dr.janduffy',
       'https://www.pinterest.com/bhhsluxury',
     ],
+    employee: {
+      '@id': `${siteUrl}#person`,
+    },
   };
 }
 
@@ -292,7 +356,7 @@ export function generateRealEstateAgentSchema() {
     jobTitle: 'REALTOR®',
     worksFor: {
       '@type': 'Organization',
-      name: 'Berkshire Hathaway HomeServices Nevada',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
     },
     url: siteUrl,
     logo: {
@@ -382,7 +446,7 @@ export function generateRealEstateAgentSchema() {
     ],
     memberOf: {
       '@type': 'Organization',
-      name: 'Berkshire Hathaway HomeServices Nevada',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
     },
     sameAs: [
       SITE_NAP.facebookUrl,
@@ -498,6 +562,7 @@ export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${siteUrl}#website`,
     name: 'Craig Ranch Homes',
     alternateName: [
       'CraigRanchHomes.com',
@@ -508,17 +573,10 @@ export function generateWebSiteSchema() {
     description:
       'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® specializing in Craig Ranch properties.',
     publisher: {
-      '@type': 'Organization',
       '@id': `${siteUrl}#organization`,
     },
-    // Point SearchAction at an indexable listings page — /search is noindex/disallowed.
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl}/homes`,
-      },
-      'query-input': 'required name=search_term_string',
+    about: {
+      '@id': `${siteUrl}#realestateagent`,
     },
   };
 }
@@ -583,12 +641,14 @@ export function generateBlogSchema({
   url,
   author,
   publisher,
+  dateModified,
 }: {
   name: string;
   description: string;
   url: string;
   author?: string;
   publisher?: string;
+  dateModified?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -596,6 +656,7 @@ export function generateBlogSchema({
     name,
     description,
     url,
+    ...(dateModified ? { dateModified } : {}),
     ...(author && {
       author: {
         '@type': 'Person',

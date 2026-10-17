@@ -63,7 +63,7 @@ export default function HomesPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Homes for Sale in Craig Ranch
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Discover homes for sale in the Craig Ranch community in North Las
             Vegas. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada, to find your perfect property. Prices range

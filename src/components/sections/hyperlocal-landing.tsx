@@ -98,6 +98,7 @@ export default function HyperlocalLanding({
 
   return (
     <PageLayout>
+      <div>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <p className='text-sm uppercase tracking-wide text-blue-100 mb-3'>
@@ -135,6 +136,7 @@ export default function HyperlocalLanding({
         answer={directAnswer.answer}
         bullets={directAnswer.bullets}
       />
+      </div>
 
       {sections.map((section) => (
         <section

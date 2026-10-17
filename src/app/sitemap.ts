@@ -108,13 +108,56 @@ const SITEMAP_ENTRIES: readonly SitemapEntry[] = [
   { path: '/craig-ranch-hoa', changeFrequency: 'monthly', priority: 0.7 },
 ] as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  // Bump when NAP or major page set changes so crawlers re-fetch.
-  const lastModified = new Date('2026-10-14T00:00:00.000Z');
+/**
+ * Last content change for each indexable URL. Do not stamp every URL with
+ * one date. Update a path when its visible copy or answer block changes.
+ * Dates come from the page's git history, plus 2026-10-17 where this pass
+ * moved the direct answer above the office listings.
+ */
+const LAST_MODIFIED: Record<string, string> = {
+  '': '2026-10-17',
+  '/homes': '2026-10-17',
+  '/buy-craig-ranch-homes': '2026-10-17',
+  '/sell-craig-ranch': '2026-10-14',
+  '/craig-ranch-realtor': '2026-10-14',
+  '/home-valuation-craig-ranch': '2026-10-14',
+  '/contact': '2026-10-17',
+  '/neighborhood': '2026-10-14',
+  '/neighborhoods': '2026-10-14',
+  '/craig-ranch-89031-real-estate': '2026-10-17',
+  '/community': '2026-10-14',
+  '/amenities': '2026-10-14',
+  '/directions': '2026-10-17',
+  '/find-address': '2026-10-17',
+  '/market-data': '2026-10-14',
+  '/market-insights': '2026-10-17',
+  '/craig-ranch-market-report': '2026-10-14',
+  '/first-time-home-buyers-craig-ranch-89031': '2026-10-17',
+  '/luxury-homes-craig-ranch-north-las-vegas': '2026-10-17',
+  '/craig-ranch-investment-properties': '2026-10-17',
+  '/relocate-to-craig-ranch-north-las-vegas': '2026-10-17',
+  '/nellis-afb-relocation-craig-ranch': '2026-10-17',
+  '/new-construction-craig-ranch': '2026-10-14',
+  '/homes-near-eva-g-simmons-elementary': '2026-10-17',
+  '/homes-near-findlay-middle-school': '2026-10-17',
+  '/homes-near-mojave-high-school': '2026-10-17',
+  '/craig-ranch-schools': '2026-10-14',
+  '/craig-ranch-regional-park': '2026-10-14',
+  '/craig-ranch-hoa': '2026-10-14',
+};
 
+function lastModifiedFor(path: string): Date {
+  const value = LAST_MODIFIED[path];
+  if (!value) {
+    throw new Error(`Missing sitemap lastmod for ${path || '/'}`);
+  }
+  return new Date(`${value}T00:00:00.000Z`);
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   return SITEMAP_ENTRIES.map(({ path, changeFrequency, priority }) => ({
     url: path ? `${SITE_URL}${path}` : SITE_URL,
-    lastModified,
+    lastModified: lastModifiedFor(path),
     changeFrequency,
     priority,
   }));

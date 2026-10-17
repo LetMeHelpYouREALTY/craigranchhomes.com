@@ -33,7 +33,7 @@ export default async function DirectionsPage({
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Directions to the Craig Ranch Homes office
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             {SITE_NAP.addressLine}. {SITE_NAP.hoursLine}. Enter a starting
             address, then choose driving, transit, walking, or bicycling. The
             map shows the current estimated time to Suite 103.

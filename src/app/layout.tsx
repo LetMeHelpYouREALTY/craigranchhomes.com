@@ -4,13 +4,11 @@ import DeferredAnalytics from '@/components/analytics/deferred-analytics';
 import {
   generateOrganizationSchema,
   generateLocalBusinessSchema,
+  generatePersonSchema,
+  generateRealEstateAgentSchema,
   generateWebSiteSchema,
 } from '@/lib/metadata';
-import {
-  SITE_AGENT_PHOTO_URL,
-  SITE_LOGO_URL,
-  SITE_NAP,
-} from '@/lib/site-nap';
+import { SITE_NAP } from '@/lib/site-nap';
 import './globals.css';
 
 const googleSiteVerification =
@@ -53,8 +51,6 @@ function isValidFacebookPixelId(value: string | undefined): value is string {
 
 // Ensure these assets exist in /public to avoid 404s for crawlers.
 const ogImageUrl = `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`;
-const logoUrl = SITE_LOGO_URL;
-const agentPhotoUrl = SITE_AGENT_PHOTO_URL;
 
 // Optimize fonts with next/font
 const sourceSansPro = Source_Sans_3({
@@ -197,178 +193,22 @@ export default function RootLayout({
           }
         `}</style>
 
-        {/* Structured Data for Real Estate Business */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'RealEstateAgent',
-              '@id': `${siteUrl}#realestateagent`,
-              name: 'Dr. Jan Duffy',
-              description:
-                'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Craig Ranch, Las Vegas, North Las Vegas, and Henderson',
-              jobTitle: 'REALTOR®',
-              worksFor: {
-                '@type': 'Organization',
-                name: 'Berkshire Hathaway HomeServices Nevada',
-              },
-              url: siteUrl,
-              logo: {
-                '@type': 'ImageObject',
-                url: logoUrl,
-                width: 512,
-                height: 512,
-              },
-              image: agentPhotoUrl,
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '851 W Lone Mountain Rd, Suite 103',
-                addressLocality: 'North Las Vegas',
-                addressRegion: 'NV',
-                postalCode: '89032',
-                addressCountry: 'US',
-              },
-              areaServed: [
-                {
-                  '@type': 'City',
-                  name: 'North Las Vegas',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-                {
-                  '@type': 'City',
-                  name: 'Las Vegas',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-                {
-                  '@type': 'City',
-                  name: 'Henderson',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-              ],
-              serviceArea: {
-                '@type': 'Place',
-                name: 'Craig Ranch',
-                address: {
-                  '@type': 'PostalAddress',
-                  addressLocality: 'North Las Vegas',
-                  addressRegion: 'NV',
-                  postalCode: '89031',
-                  addressCountry: 'US',
-                },
-              },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+1-702-820-5408',
-                contactType: 'customer service',
-                areaServed: 'US',
-                availableLanguage: 'English',
-              },
-              memberOf: {
-                '@type': 'Organization',
-                name: 'Berkshire Hathaway HomeServices Nevada',
-              },
-              sameAs: [
-                SITE_NAP.facebookUrl,
-                'https://www.instagram.com/drjanduffy',
-                'https://www.youtube.com/@DrDuffy',
-                'https://twitter.com/drjanduffy',
-                'https://www.linkedin.com/in/lvrmembers',
-                'https://www.tiktok.com/@dr.janduffy',
-                'https://www.pinterest.com/bhhsluxury',
-              ],
-            }),
+            __html: JSON.stringify(generateRealEstateAgentSchema()),
           }}
         />
-
-        {/* Structured Data for Local Business */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              '@id': `${siteUrl}#localbusiness`,
-              name: 'Craig Ranch Homes',
-              description:
-                'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Craig Ranch homes and properties.',
-              url: siteUrl,
-              telephone: '+1-702-820-5408',
-              email: 'DrDuffy@CraigRanchHomes.com',
-              image: ogImageUrl,
-              logo: {
-                '@type': 'ImageObject',
-                url: logoUrl,
-                width: 512,
-                height: 512,
-              },
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '851 W Lone Mountain Rd, Suite 103',
-                addressLocality: 'North Las Vegas',
-                addressRegion: 'NV',
-                postalCode: '89032',
-                addressCountry: 'US',
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: SITE_NAP.latitude,
-                longitude: SITE_NAP.longitude,
-              },
-              hasMap:
-                'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+Suite+103+North+Las+Vegas+NV+89032',
-              openingHoursSpecification: [
-                {
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: [
-                    'Sunday',
-                    'Monday',
-                    'Tuesday',
-                    'Wednesday',
-                    'Thursday',
-                    'Friday',
-                    'Saturday',
-                  ],
-                  opens: '08:00',
-                  closes: '20:00',
-                },
-              ],
-              priceRange: '$$$',
-              currenciesAccepted: 'USD',
-              contactPoint: [
-                {
-                  '@type': 'ContactPoint',
-                  telephone: '+1-702-820-5408',
-                  contactType: 'customer service',
-                  areaServed: 'US',
-                  availableLanguage: ['English'],
-                  hoursAvailable: {
-                    '@type': 'OpeningHoursSpecification',
-                    dayOfWeek: [
-                      'Sunday',
-                      'Monday',
-                      'Tuesday',
-                      'Wednesday',
-                      'Thursday',
-                      'Friday',
-                      'Saturday',
-                    ],
-                    opens: '08:00',
-                    closes: '20:00',
-                  },
-                },
-                {
-                  '@type': 'ContactPoint',
-                  email: 'DrDuffy@CraigRanchHomes.com',
-                  contactType: 'customer service',
-                  areaServed: 'US',
-                  availableLanguage: ['English'],
-                },
-              ],
-            }),
+            __html: JSON.stringify(generatePersonSchema()),
+          }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateLocalBusinessSchema()),
           }}
         />
 
