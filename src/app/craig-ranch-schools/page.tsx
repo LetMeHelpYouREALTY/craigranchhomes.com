@@ -8,6 +8,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -76,7 +77,7 @@ export default function CraigRanchSchoolsPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Schools Guide
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             For many families, schools are a key part of the decision to buy in
             <strong> Craig Ranch</strong>. This page is a hyperlocal overview of how
             to evaluate school options near Craig Ranch, what questions to ask, and
@@ -320,6 +321,10 @@ export default function CraigRanchSchoolsPage() {
               { name: 'Home', url: baseUrl },
               { name: 'Craig Ranch Schools', url: `${baseUrl}/craig-ranch-schools` },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/craig-ranch-schools`,
+              name: 'Craig Ranch Schools Guide',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}

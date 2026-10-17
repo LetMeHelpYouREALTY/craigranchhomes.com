@@ -32,6 +32,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
+  generateSpeakableSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -137,7 +138,7 @@ export default function CommunityPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Community Guide
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             A master-planned community in North Las Vegas. Winner of &quot;Best
             Planned Community&quot; in 2020. Home to 5 miles of trails, 7 parks,
             and the 170-acre Craig Ranch Regional Park. Centrally located near
@@ -390,6 +391,10 @@ export default function CommunityPage() {
                 { name: 'Home', url: baseUrl },
                 { name: 'Community Guide', url: `${baseUrl}/community` },
               ],
+            }),
+            generateSpeakableSchema({
+              url: `${baseUrl}/community`,
+              name: 'Craig Ranch Community Guide',
             }),
             generateFAQPageSchema(COMMUNITY_PAGE_FAQS),
             {

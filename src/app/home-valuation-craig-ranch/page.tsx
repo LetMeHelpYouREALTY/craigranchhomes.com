@@ -8,6 +8,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -76,7 +77,7 @@ export default function CraigRanchHomeValuationPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Home Valuation
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Wondering <strong>what your Craig Ranch home is worth</strong>? A
             valuation should be more than a generic estimate—it should reflect how
             buyers are shopping Craig Ranch today. Dr. Jan Duffy, REALTOR®, provides
@@ -328,6 +329,10 @@ export default function CraigRanchHomeValuationPage() {
                 url: `${baseUrl}/home-valuation-craig-ranch`,
               },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/home-valuation-craig-ranch`,
+              name: 'Craig Ranch Home Valuation',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}

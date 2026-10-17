@@ -32,6 +32,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
+  generateSpeakableSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -112,7 +113,7 @@ export default function NeighborhoodsPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Neighborhoods & Collections
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Explore the distinct subdivisions and builder collections within the
             master-planned community of Craig Ranch in North Las Vegas. Each
             neighborhood offers unique housing options and amenities.
@@ -451,6 +452,10 @@ export default function NeighborhoodsPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateSpeakableSchema({
+              url: `${baseUrl}/neighborhoods`,
+              name: 'Craig Ranch Neighborhoods & Collections',
+            }),
             generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
             {
               '@context': 'https://schema.org',

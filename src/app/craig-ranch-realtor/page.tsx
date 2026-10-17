@@ -8,6 +8,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -78,7 +79,7 @@ export default function CraigRanchRealtorPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch REALTOR® Services
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             If you’re buying or selling in <strong>Craig Ranch</strong>, you want a
             REALTOR® who understands what makes the community valuable, what buyers
             are comparing right now, and what details change pricing. Dr. Jan Duffy
@@ -368,6 +369,10 @@ export default function CraigRanchRealtorPage() {
               { name: 'Home', url: baseUrl },
               { name: 'Craig Ranch REALTOR®', url: `${baseUrl}/craig-ranch-realtor` },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/craig-ranch-realtor`,
+              name: 'Craig Ranch REALTOR® Services',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}

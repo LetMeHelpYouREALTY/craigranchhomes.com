@@ -37,6 +37,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
+  generateSpeakableSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -350,6 +351,10 @@ export default function HomesPage() {
               description:
                 'Browse luxury homes for sale in Craig Ranch, Las Vegas. Floor plans from 1,519–2,638 sq ft near Craig Ranch Regional Park.',
               url: `${baseUrl}/homes`,
+            }),
+            generateSpeakableSchema({
+              url: `${baseUrl}/homes`,
+              name: 'Homes for Sale in Craig Ranch',
             }),
             generateFAQPageSchema(HOMES_PAGE_FAQS),
             {

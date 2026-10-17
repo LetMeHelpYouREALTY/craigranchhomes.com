@@ -78,7 +78,7 @@ export default function SellCraigRanchPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Sell Your Home in Craig Ranch
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Selling in <strong>Craig Ranch</strong> is about more than listing a
             property—it’s about positioning your home so it’s the clear best choice
             for buyers comparing Craig Ranch inventory right now. Dr. Jan Duffy,
@@ -329,7 +329,6 @@ export default function SellCraigRanchPage() {
             generateSpeakableSchema({
               url: `${baseUrl}/sell-craig-ranch`,
               name: 'Sell a Home in Craig Ranch | Dr. Jan Duffy, REALTOR®',
-              cssSelector: ['h1', '#craig-ranch-faqs'],
             }),
             generateHowToSchema({
               name: 'How to sell a home in Craig Ranch',

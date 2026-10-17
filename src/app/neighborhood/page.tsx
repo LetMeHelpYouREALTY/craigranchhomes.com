@@ -55,6 +55,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateFAQPageSchema,
+  generateSpeakableSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -139,7 +140,7 @@ export default function NeighborhoodPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Welcome to Craig Ranch
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             A master-planned community in North Las Vegas. Centrally located
             near shopping and dining, Nellis Air Force Base, and highways.
             Winner of &quot;Best Planned Community&quot; in 2020. Home to 5
@@ -710,6 +711,10 @@ export default function NeighborhoodPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateSpeakableSchema({
+              url: `${baseUrl}/neighborhood`,
+              name: 'Welcome to Craig Ranch',
+            }),
             generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
             {
             '@context': 'https://schema.org',

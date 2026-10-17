@@ -30,6 +30,7 @@ import {
   generateWebPageSchema,
   generateDatasetSchema,
   generateFAQPageSchema,
+  generateSpeakableSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
@@ -104,7 +105,7 @@ export default function MarketDataPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Market Data
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             August 2026 snapshot for Craig Ranch, North Las Vegas. These
             figures are not a live CMA.
           </p>
@@ -275,6 +276,10 @@ export default function MarketDataPage() {
               description:
                 'Comprehensive real estate market data and statistics for Craig Ranch, Las Vegas including average prices, days on market, inventory levels, and market trends.',
               url: `${baseUrl}/market-data`,
+            }),
+            generateSpeakableSchema({
+              url: `${baseUrl}/market-data`,
+              name: 'Craig Ranch Market Data',
             }),
             generateFAQPageSchema(MARKET_DATA_FAQS),
             generateBreadcrumbSchema([

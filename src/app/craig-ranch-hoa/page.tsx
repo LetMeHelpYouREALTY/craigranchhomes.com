@@ -5,6 +5,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -73,7 +74,7 @@ export default function CraigRanchHoaPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch HOA Guide
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             HOA details can change the outcome of a <strong>Craig Ranch</strong>{' '}
             transaction—especially for buyers who have specific needs (parking,
             exterior changes, rentals, and maintenance expectations). This guide
@@ -290,6 +291,10 @@ export default function CraigRanchHoaPage() {
               { name: 'Home', url: baseUrl },
               { name: 'Craig Ranch HOA', url: `${baseUrl}/craig-ranch-hoa` },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/craig-ranch-hoa`,
+              name: 'Craig Ranch HOA Guide',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}

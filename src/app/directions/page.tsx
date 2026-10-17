@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import PageLayout from '@/components/layout/page-layout';
 import SkipLink from '@/components/layout/skip-link';
 import VisitPlanner from '@/components/maps/visit-planner';
-import { generateMetadata as genMetadata } from '@/lib/metadata';
-import { SITE_NAP } from '@/lib/site-nap';
+import {
+  generateMetadata as genMetadata,
+  generateSpeakableSchema,
+} from '@/lib/metadata';
+import { SITE_NAP, SITE_URL } from '@/lib/site-nap';
 
 export const revalidate = 604800;
 
@@ -47,6 +51,19 @@ export default async function DirectionsPage({
           <VisitPlanner initialOrigin={from} />
         </div>
       </section>
+      <Script
+        id='directions-speakable'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateSpeakableSchema({
+              url: `${SITE_URL}/directions`,
+              name: 'Directions to the Craig Ranch Homes office',
+              cssSelector: ['h1', '#aeo-direct-answer'],
+            })
+          ),
+        }}
+      />
     </PageLayout>
   );
 }

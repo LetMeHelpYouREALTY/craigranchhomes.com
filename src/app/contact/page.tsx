@@ -311,7 +311,6 @@ export default function ContactPage() {
             generateSpeakableSchema({
               url: `${baseUrl}/contact`,
               name: 'Contact Dr. Jan Duffy | Craig Ranch Homes',
-              cssSelector: ['h1', '#craig-ranch-faqs'],
             }),
           ]),
         }}

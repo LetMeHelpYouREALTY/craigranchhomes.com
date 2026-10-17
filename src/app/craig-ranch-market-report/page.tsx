@@ -5,6 +5,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -73,7 +74,7 @@ export default function CraigRanchMarketReportPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Market Report
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             This Craig Ranch market report is designed for real decisions: buyers
             deciding when to act, sellers deciding how to price, and homeowners
             tracking equity. Instead of vague headlines, we focus on how Craig
@@ -302,6 +303,10 @@ export default function CraigRanchMarketReportPage() {
                 url: `${baseUrl}/craig-ranch-market-report`,
               },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/craig-ranch-market-report`,
+              name: 'Craig Ranch Market Report',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}

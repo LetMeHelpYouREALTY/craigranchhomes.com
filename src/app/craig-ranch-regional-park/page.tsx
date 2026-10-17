@@ -8,6 +8,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -76,7 +77,7 @@ export default function CraigRanchRegionalParkPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Regional Park Guide
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             For many buyers, <strong>Craig Ranch Regional Park</strong> is one of the
             biggest reasons to live in Craig Ranch. This guide explains how park
             proximity shapes lifestyle, what buyers tend to value, and how sellers
@@ -352,6 +353,10 @@ export default function CraigRanchRegionalParkPage() {
                 url: `${baseUrl}/craig-ranch-regional-park`,
               },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/craig-ranch-regional-park`,
+              name: 'Craig Ranch Regional Park Guide',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}

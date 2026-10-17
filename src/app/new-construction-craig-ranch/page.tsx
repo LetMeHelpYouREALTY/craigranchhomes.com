@@ -5,6 +5,7 @@ import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
+  generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -73,7 +74,7 @@ export default function NewConstructionCraigRanchPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             New Construction Near Craig Ranch
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Buyers shopping <strong>Craig Ranch</strong> often compare resale homes
             to nearby new construction. This guide explains how to evaluate that
             decision, what to watch for in builder contracts, and how to protect
@@ -296,6 +297,10 @@ export default function NewConstructionCraigRanchPage() {
                 url: `${baseUrl}/new-construction-craig-ranch`,
               },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/new-construction-craig-ranch`,
+              name: 'New Construction Near Craig Ranch',
+            }),
             generateFAQPageSchema(faqs),
           ]),
         }}
