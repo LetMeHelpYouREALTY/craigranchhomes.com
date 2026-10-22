@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Source_Sans_3, Open_Sans } from 'next/font/google';
 import DeferredAnalytics from '@/components/analytics/deferred-analytics';
 import {
@@ -257,6 +258,7 @@ export default function RootLayout({
         />
         {/* RealScout loads on-demand when a widget scrolls into view */}
         {children}
+        <Script src='/ads-conversions.js' strategy='afterInteractive' />
       </body>
     </html>
   );
