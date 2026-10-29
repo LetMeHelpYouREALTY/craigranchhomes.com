@@ -162,7 +162,7 @@ export default function NewConstructionCraigRanchPage() {
             Neighborhood feel
           </h3>
           <p className='text-gray-700 leading-relaxed'>
-            Craig Ranch is established, with mature community patterns and known
+            Craig Ranch is established, with older community patterns and known
             amenities. Some buyers prefer the stability of Craig Ranch, while
             others prefer the customization and warranty aspects of new builds.
           </p>
