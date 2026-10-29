@@ -11,14 +11,23 @@ import { SITE_URL } from '@/lib/site-nap';
 
 export const revalidate = 604800;
 
-export const metadata: Metadata = genMetadata({
-  title: 'Enter a Las Vegas Address | Craig Ranch Homes',
-  description:
-    'Type a street address and confirm the match before you request directions to the Craig Ranch Homes office or send a note to Dr. Jan Duffy. Call (702) 820-5408.',
-  keywords:
-    'Las Vegas address lookup, North Las Vegas address, Craig Ranch address, directions to 851 W Lone Mountain Rd',
-  path: '/find-address',
-});
+// Address-entry tool with no standalone content. Keep it out of the index
+// (GSC "Crawled - currently not indexed", 2026-10-25) but let links pass.
+export const metadata: Metadata = {
+  ...genMetadata({
+    title: 'Enter a Las Vegas Address | Craig Ranch Homes',
+    description:
+      'Type a street address and confirm the match before you request directions to the Craig Ranch Homes office or send a note to Dr. Jan Duffy. Call (702) 820-5408.',
+    keywords:
+      'Las Vegas address lookup, North Las Vegas address, Craig Ranch address, directions to 851 W Lone Mountain Rd',
+    path: '/find-address',
+  }),
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
+};
 
 export default function FindAddressPage() {
   return (

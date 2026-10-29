@@ -4,7 +4,7 @@ import { SITE_URL } from '@/lib/site-nap';
 /**
  * Canonical sitemap for GSC / AI crawlers.
  * Keep in sync with indexable App Router page routes.
- * /search is noindex — omit it.
+ * /search and /find-address are noindex — omit them.
  * Uses MetadataRoute.Sitemap url fields (not loc).
  */
 type SitemapEntry = {
@@ -40,7 +40,6 @@ const SITEMAP_ENTRIES: readonly SitemapEntry[] = [
   { path: '/community', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/amenities', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/directions', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/find-address', changeFrequency: 'monthly', priority: 0.7 },
 
   // Market
   { path: '/market-data', changeFrequency: 'daily', priority: 0.8 },
@@ -128,7 +127,6 @@ const LAST_MODIFIED: Record<string, string> = {
   '/community': '2026-10-17',
   '/amenities': '2026-10-14',
   '/directions': '2026-10-17',
-  '/find-address': '2026-10-17',
   '/market-data': '2026-10-17',
   '/market-insights': '2026-10-17',
   '/craig-ranch-market-report': '2026-10-17',
