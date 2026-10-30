@@ -66,8 +66,7 @@ export default function HomesPage() {
           </h1>
           <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
             Discover homes for sale in the Craig Ranch community in North Las
-            Vegas. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
-            HomeServices® Nevada, to find your perfect property. Prices range
+            Vegas. Work with Dr. Jan Duffy, REALTOR®, to find your perfect property. Prices range
             from $370,000 to $1.8 million. The August 2026 snapshot counted
             206 homes and an average value of $427,967. The grid below is
             office inventory, not a Craig Ranch-only feed.
@@ -86,14 +85,13 @@ export default function HomesPage() {
                 Working with Dr. Jan Duffy for Craig Ranch Homes
               </h2>
               <p className='text-lg text-gray-600 mb-6'>
-                Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices®
-                Nevada, specializing in various communities across Las Vegas and
+                Dr. Jan Duffy is a REALTOR® specializing in various communities across Las Vegas and
                 Henderson. She offers expert, data-driven advice and personalized
                 consultations.
               </p>
               <AgentPhoto
                 src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
-                alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
+                alt='Dr. Jan Duffy, REALTOR®'
                 sizes='(max-width: 1024px) 100vw, 50vw'
                 priority
                 className='shadow-lg'

@@ -41,7 +41,7 @@ export const revalidate = false; // Static page, no revalidation needed
 export const metadata = genMetadata({
   title: 'Contact Dr. Jan Duffy | Craig Ranch Homes',
   description:
-    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Craig Ranch, Las Vegas. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@CraigRanchHomes.com.',
+    'Contact Dr. Jan Duffy, REALTOR®. Get expert guidance for buying, selling, or investing in Craig Ranch, Las Vegas. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@CraigRanchHomes.com.',
   keywords:
     'contact real estate agent, Dr. Jan Duffy, Craig Ranch real estate agent, Las Vegas realtor, Berkshire Hathaway, contact form, real estate consultation',
   path: '/contact',
@@ -56,8 +56,7 @@ export default function ContactPage() {
             Contact Dr. Jan Duffy for Craig Ranch Homes
           </h1>
           <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
-            Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
-            HomeServices® Nevada. Get expert, data-driven advice and personalized
+            Work with Dr. Jan Duffy, REALTOR®. Get expert, data-driven advice and personalized
             consultations for homes in Craig Ranch and throughout Las Vegas.
           </p>
           <SkipLink href='#contact-form'>Skip to the contact form</SkipLink>
@@ -150,13 +149,11 @@ export default function ContactPage() {
                 <CardContent className='space-y-4'>
                   <AgentPhoto
                     src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
-                    alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
+                    alt='Dr. Jan Duffy, REALTOR®'
                     sizes='(max-width: 768px) 100vw, 50vw'
                   />
                   <p className='text-gray-700'>
-                    Dr. Jan Duffy is a REALTOR® with{' '}
-                    <strong>Berkshire Hathaway HomeServices® Nevada</strong>,
-                    specializing in luxury homes and estates across Las Vegas and
+                    Dr. Jan Duffy is a REALTOR® specializing in luxury homes and estates across Las Vegas and
                     Henderson.
                   </p>
                   <p className='text-gray-700'>

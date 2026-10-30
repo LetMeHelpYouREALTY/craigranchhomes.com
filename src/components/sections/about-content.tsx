@@ -12,8 +12,7 @@ export default function AboutContent() {
               About Dr. Jan Duffy - Your Craig Ranch Real Estate Expert
             </h2>
             <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
-              Dr. Jan Duffy is a REALTOR® with{' '}
-              <strong>Berkshire Hathaway HomeServices® Nevada</strong>, your
+              Dr. Jan Duffy is a REALTOR® and your
               trusted partner for buying and selling in Craig Ranch and across
               Las Vegas and Henderson. With years of local transaction experience,
               she focuses on pricing, comps, and property details that matter to
@@ -135,7 +134,7 @@ export default function AboutContent() {
             {/* Dr. Jan Duffy Photo */}
             <AgentPhoto
               src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
-              alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
+              alt='Dr. Jan Duffy, REALTOR®'
               sizes='(max-width: 1024px) 100vw, 50vw'
               className='shadow-lg'
             />

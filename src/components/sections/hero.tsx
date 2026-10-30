@@ -49,7 +49,7 @@ export default function Hero() {
             {SITE_NAP.agentName}
           </p>
           <p className='text-sm md:text-base text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]'>
-            REALTOR® · License #{SITE_NAP.license}
+            REALTOR®
           </p>
         </div>
 

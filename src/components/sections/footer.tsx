@@ -304,23 +304,10 @@ export default function Footer() {
             &copy; 2007-2026 Craig Ranch Homes. All rights
             reserved.
           </p>
-          <p>&copy; 2025 BHH Affiliates, LLC.</p>
-          <p className='text-xs text-gray-200 max-w-4xl mx-auto'>
-            Real Estate Brokerage Services are offered through the network member
-            franchisees of BHH Affiliates, LLC. Most franchisees are independently
-            owned and operated. Berkshire Hathaway HomeServices and the Berkshire
-            Hathaway HomeServices symbol are registered marks of Columbia Insurance
-            Company, a Berkshire Hathaway affiliate.
-          </p>
           <p className='text-xs text-gray-200'>
-            Dr. Jan Duffy | Nevada Real Estate License #S.0197614.
+            Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC
           </p>
           <p className='text-xs text-gray-200'>Equal Housing Opportunity</p>
-          <p className='text-xs text-gray-200'>
-            BHH Affiliates, LLC is a Delaware limited liability company. Its
-            principal office is located at 18500 Von Karman Ave, Suite 400, Irvine,
-            California 92612 USA.
-          </p>
         </div>
       </div>
     </footer>
