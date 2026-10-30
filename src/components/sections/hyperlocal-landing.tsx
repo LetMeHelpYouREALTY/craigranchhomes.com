@@ -126,7 +126,7 @@ export default function HyperlocalLanding({
             </Button>
           </div>
           <p className='mt-6 text-sm text-blue-100'>
-            {SITE_NAP.addressLine} · License #{SITE_NAP.license}
+            {SITE_NAP.addressLine}
           </p>
         </div>
       </div>
