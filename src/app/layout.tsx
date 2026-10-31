@@ -11,6 +11,8 @@ import {
 } from '@/lib/metadata';
 import { SITE_NAP } from '@/lib/site-nap';
 import './globals.css';
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const googleSiteVerification =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ??
@@ -259,6 +261,8 @@ export default function RootLayout({
         {/* RealScout loads on-demand when a widget scrolls into view */}
         {children}
         <Script src='/ads-conversions.js' strategy='afterInteractive' />
+        <VercelAnalytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
