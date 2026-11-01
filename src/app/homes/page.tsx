@@ -357,33 +357,6 @@ export default function HomesPage() {
               name: 'Homes for Sale in Craig Ranch',
             }),
             generateFAQPageSchema(HOMES_PAGE_FAQS),
-            {
-              '@context': 'https://schema.org',
-              '@type': 'ItemList',
-              name: 'Craig Ranch Homes for Sale',
-              description:
-                'August 2026 snapshot of Craig Ranch homes for sale in Las Vegas. Not a live inventory count.',
-              url: `${baseUrl}/homes`,
-              numberOfItems: 206,
-              itemListElement: {
-                '@type': 'ListItem',
-                position: 1,
-                item: {
-                  '@type': 'Product',
-                  '@id': `${baseUrl}/homes`,
-                  name: 'Craig Ranch Homes',
-                  description: 'Luxury homes in Craig Ranch ranging from $370,000 to $1.8 million',
-                  category: 'Real Estate',
-                  offers: {
-                    '@type': 'AggregateOffer',
-                    priceCurrency: 'USD',
-                    lowPrice: '370000',
-                    highPrice: '1800000',
-                    offerCount: '206',
-                  },
-                },
-              },
-            },
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Homes for Sale', url: `${baseUrl}/homes` },
