@@ -16,7 +16,7 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data: https: https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://www.realscout.com https://*.realscout.com https://cdn.realscout.com https://embed.homebotapp.com https://*.homebotapp.com https://maps.googleapis.com https://places.googleapis.com https://maps.gstatic.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://td.doubleclick.net",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://www.realscout.com https://*.realscout.com https://cdn.realscout.com https://embed.homebotapp.com https://*.homebotapp.com https://maps.googleapis.com https://places.googleapis.com https://maps.gstatic.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://td.doubleclick.net",
       "frame-src 'self' https://www.google.com https://www.google.com/maps https://embed.homebotapp.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://td.doubleclick.net",
       'upgrade-insecure-requests',
     ].join('; ');
