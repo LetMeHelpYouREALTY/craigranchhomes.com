@@ -38,8 +38,11 @@ export default function DeferredAnalytics({
         gtag?: (...args: unknown[]) => void;
       };
       w.dataLayer = w.dataLayer || [];
-      w.gtag = function gtag(...args: unknown[]) {
-        w.dataLayer?.push(args);
+      // gtag.js only reads Arguments objects from dataLayer; a rest-param
+      // array is ignored, so no hit is ever sent.
+      w.gtag = function gtag() {
+        // eslint-disable-next-line prefer-rest-params
+        w.dataLayer?.push(arguments);
       };
       w.gtag('js', new Date());
       w.gtag('config', gaMeasurementId);
