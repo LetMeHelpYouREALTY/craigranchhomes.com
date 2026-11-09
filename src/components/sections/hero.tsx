@@ -3,6 +3,9 @@ import { directionsHref, SITE_NAP } from '@/lib/site-nap';
 
 const AGENT_HEADSHOT = '/images/dr-jan-duffy-headshot.jpg';
 
+const CALENDLY_SHOWING_URL =
+  'https://calendly.com/drjanduffy/showing?utm_source=craigranchhomes.com&utm_medium=website&utm_content=home-hero';
+
 const HERO_WEBP_SRCSET =
   '/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w';
 const HERO_JPG_SRCSET =
@@ -101,12 +104,15 @@ export default function Hero() {
           >
             View Available Homes
           </Link>
-          <Link
-            href='/contact#contact-form'
+          <a
+            href={CALENDLY_SHOWING_URL}
+            target='_blank'
+            rel='noopener noreferrer'
             className='bg-white text-[#0A2540] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 border border-white'
           >
             Schedule a Tour
-          </Link>
+            <span className='sr-only'> (opens Calendly in a new tab)</span>
+          </a>
         </div>
       </div>
     </section>

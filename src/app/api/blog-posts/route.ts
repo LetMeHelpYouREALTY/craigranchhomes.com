@@ -37,6 +37,10 @@ export async function GET(request: NextRequest) {
     // Parse RSS feed
     const feed = parseRSSFeed(xmlString);
 
+    if (!feed.items?.length) {
+      return NextResponse.json({ blogPosts: [] }, { status: 200 });
+    }
+
     // Return first N items
     const blogPosts = feed.items.slice(0, limit).map((item) => {
       // Generate category link
@@ -58,29 +62,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ blogPosts }, { status: 200 });
   } catch (error) {
     console.error('Error fetching blog posts:', error);
-    
-    // Return fallback data on error
-    return NextResponse.json(
-      {
-        blogPosts: [
-          {
-            title: 'Understanding Today\'s Real Estate Market',
-            postLink: 'https://www.simplifyingthemarket.com/?a=956758-ef2edda2f940e018328655620ea05f18',
-            description: 'Expert analysis and trends to help you make informed real estate decisions',
-            category: 'Real Estate News',
-            categoryLink: 'https://www.simplifyingthemarket.com/?a=956758-ef2edda2f940e018328655620ea05f18',
-            author: 'Simplifying the Market',
-            date: new Date().toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            }),
-            imageUrl: '/placeholder-blog.jpg',
-          },
-        ],
-      },
-      { status: 200 }
-    );
+
+    return NextResponse.json({ blogPosts: [] }, { status: 200 });
   }
 }
 

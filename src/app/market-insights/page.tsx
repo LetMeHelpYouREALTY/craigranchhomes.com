@@ -76,6 +76,10 @@ async function getBlogPosts(limit: number): Promise<BlogPost[]> {
     const xmlString = await response.text();
     const feed = parseRSSFeed(xmlString);
 
+    if (!feed.items?.length) {
+      return [];
+    }
+
     // Return first N items
     return feed.items.slice(0, limit).map((item) => {
       const categorySlug = item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
@@ -157,6 +161,7 @@ export default async function MarketInsightsPage() {
       />
       </div>
 
+      {posts.length > 0 && (
       <section className='pb-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -228,6 +233,7 @@ export default async function MarketInsightsPage() {
           </div>
         </div>
       </section>
+      )}
 
       <RealtorServicesGrid
         title='Turn insights into Craig Ranch action'

@@ -68,6 +68,10 @@ async function getBlogPosts(limit: number = 3): Promise<BlogPost[]> {
     const xmlString = await response.text();
     const feed = parseRSSFeed(xmlString);
 
+    if (!feed.items?.length) {
+      return [];
+    }
+
     // Return first N items
     return feed.items.slice(0, limit).map((item) => {
       const categorySlug = item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
@@ -91,25 +95,7 @@ async function getBlogPosts(limit: number = 3): Promise<BlogPost[]> {
     });
   } catch (error) {
     console.error('Error fetching blog posts:', error);
-    // Return fallback data
-    return [
-      {
-        imageUrl: '/placeholder-blog.jpg',
-        category: 'Real Estate News',
-        categoryLink:
-          'https://www.simplifyingthemarket.com/?a=956758-ef2edda2f940e018328655620ea05f18',
-        title: 'Understanding Today\'s Real Estate Market',
-        postLink:
-          'https://www.simplifyingthemarket.com/?a=956758-ef2edda2f940e018328655620ea05f18',
-        author: 'Simplifying the Market',
-        date: new Date().toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        }),
-        description: 'Expert analysis and trends to help you make informed real estate decisions',
-      },
-    ];
+    return [];
   }
 }
 
@@ -181,6 +167,11 @@ const BlogPostCard = ({ post }: { post: BlogPost }) => {
 
 const BlogPosts = async () => {
   const blogPosts = await getBlogPosts(3);
+
+  if (blogPosts.length === 0) {
+    return null;
+  }
+
   const latestPosts = blogPosts;
 
   return (
