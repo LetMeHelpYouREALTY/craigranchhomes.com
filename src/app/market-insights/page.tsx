@@ -31,9 +31,9 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Las Vegas Homes Market Insights | Craig Ranch Homes',
+  title: 'Craig Ranch Market Insights',
   description:
-    'Read the latest real estate market insights and trends for Craig Ranch, North Las Vegas and Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 820-5408.',
+    'Craig Ranch and North Las Vegas market insights from Dr. Jan Duffy: what rates and inventory mean for your purchase or sale. Call (702) 820-5408.',
   keywords:
     'Craig Ranch market insights, Craig Ranch real estate news, Las Vegas market insights, North Las Vegas real estate trends',
   path: '/market-insights',
@@ -140,17 +140,23 @@ export default async function MarketInsightsPage() {
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               National and regional articles for context—then apply them to Craig
               Ranch, North Las Vegas 89031 with local comps from Dr. Jan Duffy
-              (source:{' '}
-              <Link
-                href='https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18'
-                target='_blank'
-                rel='noopener noreferrer'
-                prefetch={false}
-                className='text-[#3A8DDE] hover:underline'
-              >
-                Simplifying the Market
-              </Link>
-              ). Call (702) 820-5408 for address-level strategy.
+              {posts.length > 0 ? (
+                <>
+                  {' '}
+                  (source:{' '}
+                  <Link
+                    href='https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    prefetch={false}
+                    className='text-[#3A8DDE] hover:underline'
+                  >
+                    Simplifying the Market
+                  </Link>
+                  )
+                </>
+              ) : null}
+              . Call (702) 820-5408 for address-level strategy.
             </p>
           </div>
         </div>

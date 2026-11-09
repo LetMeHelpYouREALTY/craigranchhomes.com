@@ -58,7 +58,7 @@ export default function Hero() {
 
         <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight text-white'>
           <span className='block drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
-            Find Your Dream Home in
+            Find Your Dream Home in{' '}
           </span>
           <span className='block mt-2 text-[#7DFFC8] drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'>
             Craig Ranch
