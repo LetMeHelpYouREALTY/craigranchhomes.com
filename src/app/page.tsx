@@ -93,7 +93,7 @@ export default function Home() {
         <Hero />
         <AeoAnswerBlock
           question='What is Craig Ranch real estate in North Las Vegas?'
-          answer='Craig Ranch is a master-planned community in North Las Vegas ZIP 89031 with a 170-acre regional park, about 5 miles of trails, and homes commonly ranging from 1,519–2,638 sq ft. Dr. Jan Duffy, REALTOR® (Nevada license S.0197614.LLC), helps buyers and sellers compare listings, price with local comps, and close with clear timelines.'
+          answer='Craig Ranch is a master-planned community in North Las Vegas ZIP 89031 with a 170-acre regional park, about 5 miles of trails, and homes commonly ranging from 1,519–2,638 sq ft. Dr. Jan Duffy, REALTOR®, helps buyers and sellers compare listings, price with local comps, and close with clear timelines.'
           bullets={[
             'Price bands recently from about $370K to $1.8M depending on size and upgrades',
             `Office: ${SITE_NAP.addressLine} · ${SITE_NAP.phoneDisplay} · ${SITE_NAP.hoursLine}`,

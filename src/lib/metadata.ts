@@ -62,7 +62,7 @@ const siteConfig = {
   name: businessName,
   url: siteUrl,
   description:
-    'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada specializing in Craig Ranch properties.',
+    'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR®, specializing in Craig Ranch properties.',
   ogImage: '/54-DJI_20250707171528_0828_D.jpg',
   twitterHandle: '@craigranchvegas',
   locale: 'en_US',

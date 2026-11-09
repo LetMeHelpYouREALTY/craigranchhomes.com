@@ -25,7 +25,7 @@ export const metadata = genMetadata({
   title:
     'Craig Ranch REALTOR® | Dr. Jan Duffy Real Estate Agent (Las Vegas / North Las Vegas)',
   description:
-    'Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada, for expert Craig Ranch real estate services. Specializing in luxury homes, market analysis, and personalized guidance. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas. Call (702) 820-5408.',
+    'Work with Dr. Jan Duffy, REALTOR®, for expert Craig Ranch real estate services. Specializing in luxury homes, market analysis, and personalized guidance. Office: 851 W Lone Mountain Rd, Suite 103, North Las Vegas. Call (702) 820-5408.',
   keywords:
     'Craig Ranch REALTOR, Craig Ranch real estate agent, Craig Ranch homes, Craig Ranch Las Vegas, North Las Vegas REALTOR, Dr. Jan Duffy',
   path: '/craig-ranch-realtor',

@@ -35,7 +35,7 @@ export default function AgentPhoto({
           <div className='text-6xl mb-4'>👤</div>
           <h3 className='text-xl font-semibold mb-2'>Dr. Jan Duffy</h3>
           <p className='text-sm text-white/90'>
-            REALTOR® with Berkshire Hathaway HomeServices® Nevada
+            REALTOR®
           </p>
         </div>
       </div>
