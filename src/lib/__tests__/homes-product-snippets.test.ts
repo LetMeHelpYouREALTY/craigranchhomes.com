@@ -2,23 +2,27 @@ import {
   generateBreadcrumbSchema,
   generateCollectionPageSchema,
   generateFAQPageSchema,
+  generateHomesProductSchema,
   generateSpeakableSchema,
 } from '@/lib/metadata';
 import { HOMES_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
+import { SITE_AGENT_RATING } from '@/lib/site-nap';
 
-const baseUrl = 'https://www.craigranchvegashomes.com';
+const baseUrl = 'https://www.craigranchhomes.com';
 
 /**
- * Mirrors the JSON-LD array on /homes. Product + AggregateOffer without
- * aggregateRating triggered Search Console Product snippets failures; this
- * page must stay a CollectionPage hub, not a Product.
+ * Mirrors the JSON-LD array on /homes. Search Console Product snippets
+ * required aggregateRating when Product + AggregateOffer are present.
  */
 function buildHomesPageSchema() {
   return [
+    generateHomesProductSchema({
+      url: `${baseUrl}/homes`,
+    }),
     generateCollectionPageSchema({
       name: 'Homes for Sale in Craig Ranch, Las Vegas',
       description:
-        'Craig Ranch homes hub: office inventory widget plus buyer guides for ZIP 89031. Live MLS cards are rendered by RealScout—not duplicated as listing or Product schema here.',
+        'Craig Ranch homes hub with Product aggregateRating for Search Console.',
       url: `${baseUrl}/homes`,
       items: [
         {
@@ -55,44 +59,32 @@ function buildHomesPageSchema() {
   ];
 }
 
-function collectTypes(value: unknown, found = new Set<string>()): Set<string> {
-  if (Array.isArray(value)) {
-    for (const entry of value) {
-      collectTypes(entry, found);
-    }
-    return found;
-  }
-  if (value && typeof value === 'object') {
-    const record = value as Record<string, unknown>;
-    const typeValue = record['@type'];
-    if (typeof typeValue === 'string') {
-      found.add(typeValue);
-    } else if (Array.isArray(typeValue)) {
-      for (const entry of typeValue) {
-        if (typeof entry === 'string') {
-          found.add(entry);
-        }
-      }
-    }
-    for (const nested of Object.values(record)) {
-      collectTypes(nested, found);
-    }
-  }
-  return found;
-}
+describe('/homes Product snippets aggregateRating', () => {
+  it('emits Product with AggregateOffer and aggregateRating', () => {
+    const product = generateHomesProductSchema({
+      url: `${baseUrl}/homes`,
+    });
 
-describe('/homes Product snippets regression', () => {
-  it('does not emit Product or AggregateOffer (GSC Missing aggregateRating)', () => {
-    const schema = buildHomesPageSchema();
-    const types = collectTypes(schema);
-    expect(types.has('Product')).toBe(false);
-    expect(types.has('AggregateOffer')).toBe(false);
-    expect(types.has('Offer')).toBe(false);
-    expect(JSON.stringify(schema)).not.toMatch(/aggregateRating/);
+    expect(product['@type']).toBe('Product');
+    expect(product.name).toBe('Craig Ranch Homes');
+    expect(product.offers).toMatchObject({
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      lowPrice: '370000',
+      highPrice: '1800000',
+    });
+    expect(product.aggregateRating).toEqual({
+      '@type': 'AggregateRating',
+      ratingValue: String(SITE_AGENT_RATING.ratingValue),
+      reviewCount: String(SITE_AGENT_RATING.reviewCount),
+      bestRating: String(SITE_AGENT_RATING.bestRating),
+      worstRating: String(SITE_AGENT_RATING.worstRating),
+    });
   });
 
-  it('emits CollectionPage with crawlable hub links instead of listing Products', () => {
-    const collection = buildHomesPageSchema()[0] as {
+  it('keeps CollectionPage hub links alongside Product markup', () => {
+    const schema = buildHomesPageSchema();
+    const collection = schema[1] as {
       '@type': string;
       mainEntity?: {
         '@type': string;
@@ -101,12 +93,8 @@ describe('/homes Product snippets regression', () => {
       };
     };
     expect(collection['@type']).toBe('CollectionPage');
-    expect(collection.mainEntity).toMatchObject({
-      '@type': 'ItemList',
-      numberOfItems: 5,
-    });
-    const urls = collection.mainEntity?.itemListElement.map((item) => item.url);
-    expect(urls).toEqual([
+    expect(collection.mainEntity?.numberOfItems).toBe(5);
+    expect(collection.mainEntity?.itemListElement.map((item) => item.url)).toEqual([
       `${baseUrl}/buy-craig-ranch-homes`,
       `${baseUrl}/luxury-homes-craig-ranch-north-las-vegas`,
       `${baseUrl}/market-data`,
@@ -115,4 +103,3 @@ describe('/homes Product snippets regression', () => {
     ]);
   });
 });
-

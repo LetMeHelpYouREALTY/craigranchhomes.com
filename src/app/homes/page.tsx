@@ -35,10 +35,11 @@ import {
   generateMetadata as genMetadata,
   generateCollectionPageSchema,
   generateBreadcrumbSchema,
-  generateWebPageSchema,
   generateFAQPageSchema,
+  generateHomesProductSchema,
   generateSpeakableSchema,
 } from '@/lib/metadata';
+import { SITE_AGENT_RATING } from '@/lib/site-nap';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
@@ -90,6 +91,22 @@ export default function HomesPage() {
                 Nevada, specializing in various communities across Las Vegas and
                 Henderson. She offers expert, data-driven advice and personalized
                 consultations.
+              </p>
+              <p
+                id='craig-ranch-homes-rating'
+                className='text-base text-[#0A2540] font-medium mb-6'
+              >
+                {SITE_AGENT_RATING.ratingValue}★ from{' '}
+                {SITE_AGENT_RATING.reviewCount}{' '}
+                <a
+                  href={SITE_AGENT_RATING.sourceUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-[#3A8DDE] hover:underline'
+                >
+                  {SITE_AGENT_RATING.sourceName}
+                </a>{' '}
+                reviews (as of {SITE_AGENT_RATING.asOfLabel}).
               </p>
               <AgentPhoto
                 src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
@@ -346,10 +363,13 @@ export default function HomesPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
+            generateHomesProductSchema({
+              url: `${baseUrl}/homes`,
+            }),
             generateCollectionPageSchema({
               name: 'Homes for Sale in Craig Ranch, Las Vegas',
               description:
-                'Craig Ranch homes hub: office inventory widget plus buyer guides for ZIP 89031. Live MLS cards are rendered by RealScout—not duplicated as listing or Product schema here.',
+                'Craig Ranch homes hub: office inventory widget plus buyer guides for ZIP 89031. Live MLS cards are rendered by RealScout; Product markup covers the Craig Ranch Homes offer band and agent aggregateRating.',
               url: `${baseUrl}/homes`,
               items: [
                 {

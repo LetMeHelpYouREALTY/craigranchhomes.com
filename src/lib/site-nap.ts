@@ -34,6 +34,22 @@ export const SITE_NAP = {
   license: 'S.0197614.LLC',
 } as const;
 
+/**
+ * Agent rating for Product aggregateRating on /homes (Search Console).
+ * Source: Realtor.com agent card for Dr Jan Duffy / BHHS Nevada Properties.
+ * Verified 2026-11-10 — do not invent or round without a fresh check.
+ */
+export const SITE_AGENT_RATING = {
+  ratingValue: 4.9,
+  reviewCount: 51,
+  bestRating: 5,
+  worstRating: 1,
+  sourceName: 'Realtor.com',
+  sourceUrl: 'https://www.realtor.com/realestateagents/',
+  asOfLabel: 'November 10, 2026',
+  asOfIso: '2026-11-10',
+} as const;
+
 /** Canonical brand mark for schema, favicon, and header (512×512 PNG). */
 export const SITE_LOGO_PATH = '/logo.png' as const;
 export const SITE_LOGO_URL = `${SITE_URL}${SITE_LOGO_PATH}`;
