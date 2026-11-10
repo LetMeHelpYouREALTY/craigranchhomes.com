@@ -495,9 +495,15 @@ export function generateCollectionPageSchema({
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     ...(items && items.length > 0
       ? {
           mainEntity: {
@@ -533,9 +539,15 @@ export function generateWebPageSchema({
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     ...(breadcrumb && {
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -613,6 +625,11 @@ export function generateSpeakableSchema({
     '@id': `${url}#speakable`,
     url,
     name,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: [...cssSelector],

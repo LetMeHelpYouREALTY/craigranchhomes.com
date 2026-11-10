@@ -406,6 +406,7 @@ export default function CommunityPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'Place',
+              '@id': `${baseUrl}/amenities#craig-ranch-place`,
               name: 'Craig Ranch Community',
               description:
                 'Master-planned community in North Las Vegas with parks, trails, shopping, dining, and nearby schools including Eva G. Simmons Elementary, Findlay Middle, and Mojave High',

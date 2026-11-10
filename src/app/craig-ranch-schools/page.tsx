@@ -271,7 +271,7 @@ export default function CraigRanchSchoolsPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='craig-ranch-faqs' className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
             Craig Ranch school FAQs

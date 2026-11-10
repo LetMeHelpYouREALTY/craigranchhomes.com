@@ -11,6 +11,7 @@ import {
   generateWebPageSchema,
 } from '@/lib/metadata';
 import { CRAIG_RANCH_LONGFORM_PARAGRAPHS } from '@/lib/craig-ranch-longform';
+import { MARKET_SNAPSHOT } from '@/lib/market-snapshot';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
@@ -81,10 +82,11 @@ export default function CraigRanchMarketReportPage() {
             Craig Ranch Market Report
           </h1>
           <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
-            This Craig Ranch market report is designed for real decisions: buyers
-            deciding when to act, sellers deciding how to price, and homeowners
-            tracking equity. Instead of vague headlines, we focus on how Craig
-            Ranch trends translate into strategy.
+            As of the {MARKET_SNAPSHOT.asOfLabel}: Craig Ranch average home value{' '}
+            {MARKET_SNAPSHOT.averageValueShort}, median sale{' '}
+            {MARKET_SNAPSHOT.medianSale}, {MARKET_SNAPSHOT.daysOnMarket} days on
+            market. These figures are not a live CMA—call (702) 820-5408 for
+            current comps before you price or offer.
           </p>
         </div>
       </div>
@@ -243,7 +245,7 @@ export default function CraigRanchMarketReportPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='craig-ranch-faqs' className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
             Craig Ranch market FAQs
