@@ -85,7 +85,7 @@ export default function AmenityMap({
         Craig Ranch.{' '}
         <a
           href={googleMapsPlaceUrl(category.searchQuery)}
-          className='text-[#3A8DDE] hover:underline font-medium'
+          className='text-[#1E6BB8] hover:text-[#185A9C] hover:underline font-medium'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -116,7 +116,7 @@ export default function AmenityMap({
               ) : null}
               <a
                 href={googleMapsDirectionsUrl(place.address || place.name)}
-                className='inline-flex items-center gap-1 text-sm text-[#3A8DDE] hover:underline mt-2 font-medium'
+                className='inline-flex items-center gap-1 text-sm text-[#1E6BB8] hover:text-[#185A9C] hover:underline mt-2 font-medium'
                 target='_blank'
                 rel='noopener noreferrer'
               >
