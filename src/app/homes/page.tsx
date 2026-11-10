@@ -349,8 +349,30 @@ export default function HomesPage() {
             generateCollectionPageSchema({
               name: 'Homes for Sale in Craig Ranch, Las Vegas',
               description:
-                'Browse luxury homes for sale in Craig Ranch, Las Vegas. Floor plans from 1,519–2,638 sq ft near Craig Ranch Regional Park.',
+                'Craig Ranch homes hub: office inventory widget plus buyer guides for ZIP 89031. Live MLS cards are rendered by RealScout—not duplicated as listing or Product schema here.',
               url: `${baseUrl}/homes`,
+              items: [
+                {
+                  name: 'Buy Craig Ranch Homes',
+                  url: `${baseUrl}/buy-craig-ranch-homes`,
+                },
+                {
+                  name: 'Luxury Homes in Craig Ranch',
+                  url: `${baseUrl}/luxury-homes-craig-ranch-north-las-vegas`,
+                },
+                {
+                  name: 'Craig Ranch Market Data',
+                  url: `${baseUrl}/market-data`,
+                },
+                {
+                  name: 'New Construction in Craig Ranch',
+                  url: `${baseUrl}/new-construction-craig-ranch`,
+                },
+                {
+                  name: 'Home Valuation for Craig Ranch',
+                  url: `${baseUrl}/home-valuation-craig-ranch`,
+                },
+              ],
             }),
             generateSpeakableSchema({
               url: `${baseUrl}/homes`,
