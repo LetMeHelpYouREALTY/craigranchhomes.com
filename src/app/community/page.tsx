@@ -57,23 +57,23 @@ export default function CommunityPage() {
     {
       name: 'Eva G. Simmons Elementary School',
       type: 'Public Elementary',
-      rating: 'B (Niche)',
+      rating: 'Verify zoning',
       distance: 'Nearby',
-      features: 'Family picnics, book bus',
+      features: 'Confirm book-bus routes with the campus',
     },
     {
       name: 'Clifford O. Pete Findlay Middle School',
       type: 'Public Middle School',
-      rating: 'C (Niche)',
+      rating: 'Verify zoning',
       distance: 'Nearby',
-      features: 'Loved by alumni',
+      features: 'Confirm programs and boundaries yearly',
     },
     {
       name: 'Mojave High School',
       type: 'Public High School',
-      rating: 'C (Niche)',
+      rating: 'Verify zoning',
       distance: 'Nearby',
-      features: 'Guitar club, bowling team, boys basketball state champions (2022, 2023)',
+      features: 'Confirm athletics and clubs with the campus',
     },
   ];
 

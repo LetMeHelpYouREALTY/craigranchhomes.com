@@ -19,6 +19,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
 import { CONTACT_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
@@ -52,6 +53,14 @@ export default function ContactPage() {
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Contact', href: '/contact' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Contact Dr. Jan Duffy for Craig Ranch Homes
           </h1>

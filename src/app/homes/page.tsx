@@ -26,6 +26,7 @@ import { Home, MapPin, DollarSign, TrendingUp } from 'lucide-react';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
@@ -61,6 +62,14 @@ export default function HomesPage() {
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Homes for Sale', href: '/homes' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Homes for Sale in Craig Ranch
           </h1>

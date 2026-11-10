@@ -7,6 +7,7 @@ import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
 import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
@@ -68,6 +69,10 @@ export default function HyperlocalLanding({
   howTo,
 }: HyperlocalLandingProps) {
   const pageUrl = `${SITE_URL}${path}`;
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: h1, href: path },
+  ];
 
   const schemaGraph = [
     generateWebPageSchema({
@@ -101,6 +106,11 @@ export default function HyperlocalLanding({
       <div>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={breadcrumbItems}
+            tone='light'
+            className='mb-4'
+          />
           <p className='text-sm uppercase tracking-wide text-blue-100 mb-3'>
             {SITE_NAP.communityName} · North Las Vegas · {SITE_NAP.communityZip}
           </p>

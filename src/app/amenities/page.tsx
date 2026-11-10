@@ -3,6 +3,7 @@ import SkipLink from '@/components/layout/skip-link';
 import Link from 'next/link';
 import AmenityMapLazy from '@/components/sections/amenity-map-lazy';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
@@ -80,6 +81,14 @@ export default function AmenitiesPage() {
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Amenities', href: '/amenities' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Nearby Amenities in Craig Ranch, North Las Vegas
           </h1>

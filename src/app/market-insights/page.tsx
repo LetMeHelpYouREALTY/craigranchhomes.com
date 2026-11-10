@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/card';
 import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
@@ -23,6 +24,7 @@ import {
   generateWebPageSchema,
   generateBlogSchema,
   generateFAQPageSchema,
+  generateSpeakableSchema,
 } from '@/lib/metadata';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
@@ -133,6 +135,14 @@ export default async function MarketInsightsPage() {
       <div>
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='mb-6 flex justify-center'>
+            <Breadcrumbs
+              items={[
+                { name: 'Home', href: '/' },
+                { name: 'Market Insights', href: '/market-insights' },
+              ]}
+            />
+          </div>
           <div className='text-center'>
             <h1 className='text-4xl md:text-5xl font-bold text-[#0A2540] mb-4'>
               Craig Ranch Las Vegas Homes Market Insights
@@ -149,7 +159,7 @@ export default async function MarketInsightsPage() {
                     target='_blank'
                     rel='noopener noreferrer'
                     prefetch={false}
-                    className='text-[#3A8DDE] hover:underline'
+                    className='text-[#1E6BB8] hover:underline'
                   >
                     Simplifying the Market
                   </Link>
@@ -281,6 +291,10 @@ export default async function MarketInsightsPage() {
               { name: 'Home', url: baseUrl },
               { name: 'Market Insights', url: `${baseUrl}/market-insights` },
             ]),
+            generateSpeakableSchema({
+              url: `${baseUrl}/market-insights`,
+              name: 'Craig Ranch Las Vegas Homes Market Insights',
+            }),
           ]),
         }}
       />

@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import PageLayout from '@/components/layout/page-layout';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import GoogleMap from '@/components/sections/google-map';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
@@ -23,7 +24,7 @@ export const revalidate = 2592000; // monthly
 export const metadata = genMetadata({
   title: 'Craig Ranch Schools | Schools Near Craig Ranch (North Las Vegas)',
   description:
-    'Complete guide to schools near Craig Ranch: top-rated elementary, middle, and high schools serving the community. Learn about school districts, ratings, and how schools impact home values in Craig Ranch, North Las Vegas. Call (702) 820-5408.',
+    'Schools near Craig Ranch, North Las Vegas: named campuses (Eva G. Simmons Elementary, Findlay Middle, Mojave High), how to verify zoning, and how commute times affect your home search. Call (702) 820-5408.',
   keywords:
     'Craig Ranch schools, schools near Craig Ranch, Craig Ranch North Las Vegas schools, Craig Ranch homes school district, Dr. Jan Duffy REALTOR',
   path: '/craig-ranch-schools',
@@ -46,27 +47,27 @@ export default function CraigRanchSchoolsPage() {
     {
       question: 'Do schools affect Craig Ranch home values?',
       answer:
-        'Schools can influence buyer demand and therefore value. In Craig Ranch, many buyers consider commute, parks, and home features too. The best approach is to evaluate the full lifestyle package while confirming school options meet your needs.',
+        'Buyer demand near named campuses can affect list activity and days on market. In Craig Ranch, compare square footage, amenities, park access, and verified school boundaries together—not school labels alone.',
     },
     {
       question: 'Where can I verify school zoning for Craig Ranch?',
       answer:
-        'School boundaries can change. Always confirm current zoning with the appropriate district resources and the school itself. We can help you identify the most likely schools near Craig Ranch, but verification should come from official sources.',
+        'School boundaries can change. Confirm current zoning with Clark County School District resources and the campus office. We can help shortlist homes near Eva G. Simmons Elementary, Findlay Middle, or Mojave High, but official sources make the final call.',
     },
     {
-      question: 'What should families prioritize when buying in Craig Ranch?',
+      question: 'What should buyers prioritize when weighing schools near Craig Ranch?',
       answer:
-        'Families often prioritize safe commute routes, after-school options, nearby parks, and home layout functionality. Craig Ranch has strong lifestyle benefits (parks and access), so we match your family’s needs to the right home and timeline.',
+        'Define commute minutes, program needs, after-school logistics, floor-plan layout, and park access. Then match Craig Ranch listings to those facts and re-check zoning before you write an offer.',
     },
     {
       question: 'Are there private school options near Craig Ranch?',
       answer:
-        'Yes, there are private school options in the broader North Las Vegas and Las Vegas area. The best fit depends on grade level, commute, and program focus. We can help you plan location strategy so the drive remains practical.',
+        'Yes—private campuses serve parts of North Las Vegas and the broader Las Vegas Valley. Fit depends on grade level, program, and drive time from the specific Craig Ranch address you are considering.',
     },
     {
-      question: 'Can you help me buy a Craig Ranch home with a specific school goal?',
+      question: 'Can you help me buy a Craig Ranch home near a named campus?',
       answer:
-        'Yes. We can narrow your Craig Ranch search to homes that align with your commute and school priorities, and we’ll structure your search alerts so you can move quickly when the right property appears.',
+        'Yes. We can filter Craig Ranch inventory by drive time to Eva G. Simmons Elementary, Findlay Middle, or Mojave High, set alerts, and keep verification of current boundaries on every serious contender.',
     },
   ] as const;
 
@@ -74,14 +75,24 @@ export default function CraigRanchSchoolsPage() {
     <PageLayout>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Neighborhood', href: '/neighborhood' },
+              { name: 'Schools', href: '/craig-ranch-schools' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Schools Guide
           </h1>
           <p id='aeo-direct-answer' className='text-xl text-gray-200 max-w-3xl'>
-            For many families, schools are a key part of the decision to buy in
-            <strong> Craig Ranch</strong>. This page is a hyperlocal overview of how
-            to evaluate school options near Craig Ranch, what questions to ask, and
-            how school preferences can influence your home search strategy.
+            Homes in <strong>Craig Ranch</strong> (ZIP 89031) are commonly
+            associated with Eva G. Simmons Elementary, Clifford O. Pete Findlay
+            Middle School, and Mojave High School—always verify current zoning for
+            the exact address. Use commute minutes, square footage, and campus
+            programs to shape your search, then call (702) 820-5408 for local comps.
           </p>
         </div>
       </div>
@@ -95,7 +106,7 @@ export default function CraigRanchSchoolsPage() {
                 {nap.phoneDisplay}
               </a>
               <p className='mt-2 text-sm text-gray-600'>
-                Get Craig Ranch home guidance with family priorities in mind.
+                Get Craig Ranch comps tied to named campuses and drive times.
               </p>
             </div>
             <div className='rounded-lg border bg-white p-6 shadow-sm'>
@@ -113,11 +124,11 @@ export default function CraigRanchSchoolsPage() {
               </div>
             </div>
             <div className='rounded-lg border bg-white p-6 shadow-sm'>
-              <div className='text-sm text-gray-500'>Family search note</div>
+              <div className='text-sm text-gray-500'>Zoning note</div>
               <p className='mt-2 text-sm text-gray-700'>
-                Always verify current school zoning and enrollment options directly
-                with official sources. This guide helps you ask better questions
-                while shopping Craig Ranch.
+                Always verify current school zoning and enrollment with Clark County
+                School District and the campus office. This guide helps you ask
+                better address-level questions while shopping Craig Ranch.
               </p>
             </div>
           </div>
@@ -127,7 +138,7 @@ export default function CraigRanchSchoolsPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            Craig Ranch real estate context (family lens)
+            Craig Ranch real estate context for school searches
           </h2>
           <div className='space-y-4'>
             {CRAIG_RANCH_LONGFORM_PARAGRAPHS.map((p, idx) => (
@@ -142,35 +153,33 @@ export default function CraigRanchSchoolsPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            How families evaluate schools near Craig Ranch
+            How to evaluate schools near Craig Ranch
           </h2>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
-            Start with your real priorities
+            Start with measurable priorities
           </h3>
           <p className='text-gray-700 leading-relaxed mb-4'>
-            “Best school” is different for every family. When buying in Craig Ranch,
-            it helps to define what matters most: commute time, special programs,
-            extracurriculars, class size, after-school options, or campus culture.
-            With those priorities clear, your home search becomes easier and more
-            realistic.
+            When buying in Craig Ranch, define commute minutes, special programs,
+            extracurricular schedules, class-size preferences, and after-school
+            logistics. Clear criteria make the home search faster and keep decisions
+            tied to the address—not marketing labels.
           </p>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
             Use multiple data points
           </h3>
           <p className='text-gray-700 leading-relaxed mb-4'>
-            Ratings can be useful, but they aren’t the whole story. For Craig Ranch
-            families, visit campuses, talk to administrators, and check current
-            program offerings. The goal is a fit that works for your child and your
-            schedule.
+            Third-party ratings are one input, not the whole story. Visit campuses,
+            talk with administrators, and confirm current program offerings for Eva
+            G. Simmons Elementary, Findlay Middle, or Mojave High before you rely on
+            any single score.
           </p>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
-            Balance schools with lifestyle
+            Balance campuses with property facts
           </h3>
           <p className='text-gray-700 leading-relaxed'>
-            Craig Ranch is known for parks, trails, and access to community
-            amenities. Many families find that lifestyle factors—parks, room
-            layouts, and commute—matter as much as school preference. We help you
-            evaluate the total Craig Ranch lifestyle fit.
+            Craig Ranch buyers also weigh park acreage, trail access, square footage,
+            and lot orientation. Match those property facts to verified school
+            boundaries so the total package fits your schedule and budget.
           </p>
         </div>
       </section>
@@ -193,17 +202,18 @@ export default function CraigRanchSchoolsPage() {
             Timing and competition
           </h3>
           <p className='text-gray-700 leading-relaxed mb-4'>
-            In some seasons, family-focused buyers can increase competition. If you
-            are buying a Craig Ranch home around school-year timing, we’ll plan
-            ahead: showing availability, offer readiness, and clear priorities.
+            Inventory and showing activity can tighten around school-calendar
+            milestones. If you are buying a Craig Ranch home near those dates, plan
+            ahead: showing windows, offer readiness, and a short list of must-have
+            property facts.
           </p>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
             Resale consideration
           </h3>
           <p className='text-gray-700 leading-relaxed'>
-            Even if you don’t have kids in school, future buyers might. Homes in
-            Craig Ranch that align with common family priorities can see stronger
-            demand. We help you think ahead so your purchase remains flexible.
+            Address-level zoning and commute minutes stay relevant at resale. We
+            help you document those facts so your Craig Ranch purchase stays
+            flexible for the next buyer’s verification process.
           </p>
         </div>
       </section>
@@ -310,16 +320,24 @@ export default function CraigRanchSchoolsPage() {
             generateWebPageSchema({
               name: 'Craig Ranch Schools | Schools Near Craig Ranch',
               description:
-                'A hyperlocal guide to schools near Craig Ranch for families buying and selling in Craig Ranch.',
+                'Named campuses near Craig Ranch (ZIP 89031), zoning verification steps, and how commute times shape your home search.',
               url: `${baseUrl}/craig-ranch-schools`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
-                { name: 'Craig Ranch Schools', url: `${baseUrl}/craig-ranch-schools` },
+                { name: 'Neighborhood', url: `${baseUrl}/neighborhood` },
+                {
+                  name: 'Craig Ranch Schools',
+                  url: `${baseUrl}/craig-ranch-schools`,
+                },
               ],
             }),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
-              { name: 'Craig Ranch Schools', url: `${baseUrl}/craig-ranch-schools` },
+              { name: 'Neighborhood', url: `${baseUrl}/neighborhood` },
+              {
+                name: 'Craig Ranch Schools',
+                url: `${baseUrl}/craig-ranch-schools`,
+              },
             ]),
             generateSpeakableSchema({
               url: `${baseUrl}/craig-ranch-schools`,
