@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Source_Sans_3, Open_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import DeferredAnalytics from '@/components/analytics/deferred-analytics';
 import {
   generateOrganizationSchema,
@@ -258,6 +259,7 @@ export default function RootLayout({
         />
         {/* RealScout loads on-demand when a widget scrolls into view */}
         {children}
+        <Analytics />
         <Script src='/ads-conversions.js' strategy='afterInteractive' />
       </body>
     </html>
