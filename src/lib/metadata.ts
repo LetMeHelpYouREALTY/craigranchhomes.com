@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import {
   SITE_AGENT_PHOTO_URL,
+  SITE_AGENT_RATING,
   SITE_LOGO_URL,
   SITE_NAP,
   SITE_URL,
@@ -477,28 +478,89 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
 }
 
 /**
- * Generate CollectionPage schema for listings pages
+ * Product + AggregateOffer + aggregateRating for /homes Product snippets.
+ * Rating must stay in sync with the visible copy on the page and SITE_AGENT_RATING.
+ */
+export function generateHomesProductSchema({
+  url,
+}: {
+  url: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `${url}#craig-ranch-homes-product`,
+    name: 'Craig Ranch Homes',
+    description:
+      'Luxury homes in Craig Ranch ranging from $370,000 to $1.8 million',
+    url,
+    image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
+    brand: {
+      '@type': 'Brand',
+      name: businessName,
+    },
+    category: 'Real Estate',
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      lowPrice: '370000',
+      highPrice: '1800000',
+      offerCount: '206',
+      availability: 'https://schema.org/InStock',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: String(SITE_AGENT_RATING.ratingValue),
+      reviewCount: String(SITE_AGENT_RATING.reviewCount),
+      bestRating: String(SITE_AGENT_RATING.bestRating),
+      worstRating: String(SITE_AGENT_RATING.worstRating),
+    },
+  };
+}
+
+/**
+ * Generate CollectionPage schema for listings / resource hub pages.
+ * Only include ItemList members that are real, crawlable URLs on this site—
+ * never invent MLS listing entities the page does not render in HTML.
  */
 export function generateCollectionPageSchema({
   name,
   description,
   url,
+  items,
 }: {
   name: string;
   description: string;
   url: string;
+  items?: ReadonlyArray<{ name: string; url: string }>;
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
-    mainEntity: {
-      '@type': 'ItemList',
-      name,
-      description,
-    },
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
+    ...(items && items.length > 0
+      ? {
+          mainEntity: {
+            '@type': 'ItemList',
+            name,
+            numberOfItems: items.length,
+            itemListElement: items.map((item, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: item.name,
+              url: item.url,
+            })),
+          },
+        }
+      : {}),
   };
 }
 
@@ -519,9 +581,15 @@ export function generateWebPageSchema({
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     ...(breadcrumb && {
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -599,6 +667,11 @@ export function generateSpeakableSchema({
     '@id': `${url}#speakable`,
     url,
     name,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: [...cssSelector],
