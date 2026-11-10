@@ -27,7 +27,7 @@ import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
-import { NEIGHBORHOOD_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
+import { NEIGHBORHOODS_HUB_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
@@ -452,7 +452,10 @@ export default function NeighborhoodsPage() {
       </section>
 
       <RealtorServicesGrid />
-      <AeoFaqSection faqs={NEIGHBORHOOD_PAGE_FAQS} />
+      <AeoFaqSection
+        title='Craig Ranch subdivisions & collections FAQs'
+        faqs={NEIGHBORHOODS_HUB_FAQS}
+      />
       <HyperlocalRelatedLinks excludeHref='/neighborhoods' />
       <HyperlocalNapCta />
 
@@ -466,7 +469,7 @@ export default function NeighborhoodsPage() {
               url: `${baseUrl}/neighborhoods`,
               name: 'Craig Ranch Neighborhoods & Collections',
             }),
-            generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
+            generateFAQPageSchema(NEIGHBORHOODS_HUB_FAQS),
             {
               '@context': 'https://schema.org',
               '@type': 'ResidentialComplex',
