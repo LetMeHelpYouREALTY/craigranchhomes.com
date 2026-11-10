@@ -47,6 +47,33 @@ export default function RelocateCraigRanchPage() {
         href: '/nellis-afb-relocation-craig-ranch',
         label: 'Nellis AFB Relocation',
       }}
+      howTo={{
+        name: 'How to relocate and buy in Craig Ranch',
+        description:
+          'A remote-friendly process for out-of-state buyers purchasing in Craig Ranch, North Las Vegas ZIP 89031.',
+        steps: [
+          {
+            name: 'Share budget and arrival date',
+            text: 'Send your pre-approval range, must-haves, and target move-in week so the search matches your timeline.',
+          },
+          {
+            name: 'Tour remotely or in a focused trip',
+            text: 'Use video walkthroughs first, then schedule a condensed in-person tour of Craig Ranch shortlist homes.',
+          },
+          {
+            name: 'Verify zoning and HOA per address',
+            text: 'Confirm school assignment, HOA dues, and disclosures for each MLS number before you write.',
+          },
+          {
+            name: 'Write and negotiate the offer',
+            text: 'Use Craig Ranch comps, contingency strategy, and electronic signatures so distance does not slow you down.',
+          },
+          {
+            name: 'Close and plan move-in',
+            text: 'Coordinate inspection, appraisal, and closing from the North Las Vegas office—or remotely—around your travel dates.',
+          },
+        ],
+      }}
     />
   );
 }

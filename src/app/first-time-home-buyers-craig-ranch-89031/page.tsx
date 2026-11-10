@@ -48,6 +48,33 @@ export default function FirstTimeBuyersCraigRanchPage() {
       faqs={FIRST_TIME_BUYER_FAQS}
       primaryCta={{ href: '/buy-craig-ranch-homes', label: 'Craig Ranch Buyer Guide' }}
       secondaryCta={{ href: '/homes', label: 'See Homes for Sale' }}
+      howTo={{
+        name: 'How first-time buyers purchase in Craig Ranch 89031',
+        description:
+          'Plain-language steps from pre-approval to closing on a first Craig Ranch home.',
+        steps: [
+          {
+            name: 'Get a mortgage pre-approval',
+            text: 'Confirm monthly payment capacity including taxes, insurance, and any HOA dues before you tour.',
+          },
+          {
+            name: 'Set Craig Ranch search criteria',
+            text: 'Choose bed/bath count, square footage (often about 1,519–2,200+ sq ft), and ZIP 89031 focus.',
+          },
+          {
+            name: 'Tour with a clear shortlist',
+            text: 'Compare active Craig Ranch listings against comps so weekends are spent on realistic options.',
+          },
+          {
+            name: 'Write the first offer carefully',
+            text: 'Use local sales data, earnest money readiness, and inspection strategy—no guessing.',
+          },
+          {
+            name: 'Inspect, appraise, and close',
+            text: 'Complete contingencies on time and close with support from the North Las Vegas office.',
+          },
+        ],
+      }}
     />
   );
 }
