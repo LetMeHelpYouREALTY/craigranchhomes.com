@@ -1,4 +1,5 @@
 import PageLayout from '@/components/layout/page-layout';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import MarketDataSection from '@/components/sections/market-data';
 import {
   Card,
@@ -102,6 +103,11 @@ export default function MarketDataPage() {
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[{ name: 'Home', href: '/' }, { name: 'Market Data', href: '/market-data' }]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Market Data
           </h1>

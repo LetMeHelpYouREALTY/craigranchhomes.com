@@ -46,10 +46,11 @@ import Script from 'next/script';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
-import { NEIGHBORHOOD_PAGE_FAQS } from '@/lib/hyperlocal-faqs';
+import { NEIGHBORHOOD_GUIDE_FAQS } from '@/lib/hyperlocal-faqs';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
@@ -137,6 +138,14 @@ export default function NeighborhoodPage() {
         />
         <div className='absolute inset-0 bg-gradient-to-r from-[#0A2540]/90 via-[#0A2540]/75 to-[#3A8DDE]/60' />
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Neighborhood', href: '/neighborhood' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Welcome to Craig Ranch
           </h1>
@@ -278,8 +287,8 @@ export default function NeighborhoodPage() {
             </div>
             <div className='mt-6 text-center'>
               <p className='text-gray-600'>
-                Single and two-story homes with 2 bay garages, designed for
-                every family member
+                Single and two-story plans with 2-bay garages and up to 5
+                bedrooms / 3 bathrooms
               </p>
             </div>
           </div>
@@ -508,7 +517,7 @@ export default function NeighborhoodPage() {
                   <strong>Eva G. Simmons Elementary School</strong>
                   <br />
                   <span className='text-sm text-gray-500 mt-2 block'>
-                    B ranking on Niche • Family picnics • Book bus
+                    Verify zoning for the address • Book bus routes vary by year
                   </span>
                 </CardDescription>
               </CardContent>
@@ -525,7 +534,7 @@ export default function NeighborhoodPage() {
                   <strong>Clifford O. Pete Findlay Middle School</strong>
                   <br />
                   <span className='text-sm text-gray-500 mt-2 block'>
-                    C ranking on Niche • Loved by alumni
+                    Verify zoning for the address • Confirm programs with campus
                   </span>
                 </CardDescription>
               </CardContent>
@@ -542,8 +551,8 @@ export default function NeighborhoodPage() {
                   <strong>Mojave High School</strong>
                   <br />
                   <span className='text-sm text-gray-500 mt-2 block'>
-                    C ranking on Niche • Guitar club • Bowling team • Boys'
-                    basketball back-to-back state championships (2022, 2023)
+                    Verify zoning for the address • Campus clubs and athletics
+                    change by season—confirm with Mojave High
                   </span>
                 </CardDescription>
               </CardContent>
@@ -701,7 +710,10 @@ export default function NeighborhoodPage() {
       </section>
 
       <RealtorServicesGrid />
-      <AeoFaqSection faqs={NEIGHBORHOOD_PAGE_FAQS} />
+      <AeoFaqSection
+        title='Craig Ranch neighborhood FAQs'
+        faqs={NEIGHBORHOOD_GUIDE_FAQS}
+      />
       <HyperlocalRelatedLinks excludeHref='/neighborhood' />
       <HyperlocalNapCta />
 
@@ -715,7 +727,7 @@ export default function NeighborhoodPage() {
               url: `${baseUrl}/neighborhood`,
               name: 'Welcome to Craig Ranch',
             }),
-            generateFAQPageSchema(NEIGHBORHOOD_PAGE_FAQS),
+            generateFAQPageSchema(NEIGHBORHOOD_GUIDE_FAQS),
             {
             '@context': 'https://schema.org',
             '@type': 'ResidentialComplex',

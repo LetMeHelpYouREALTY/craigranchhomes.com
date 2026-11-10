@@ -5,6 +5,7 @@ import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Script from 'next/script';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
@@ -71,10 +72,37 @@ export default function SellCraigRanchPage() {
     },
   ] as const;
 
+  const howToSteps = [
+    {
+      name: 'Price with local comps',
+      text: 'Review recent Craig Ranch and 89031 sales to set a competitive list price.',
+    },
+    {
+      name: 'Prep the home',
+      text: 'Complete repairs, staging priorities, and photo-ready presentation.',
+    },
+    {
+      name: 'Market the listing',
+      text: 'Launch MLS exposure, RealScout distribution, and targeted buyer outreach.',
+    },
+    {
+      name: 'Negotiate and close',
+      text: 'Manage offers, inspections, and closing timelines with clear next steps.',
+    },
+  ] as const;
+
   return (
     <PageLayout>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Sell in Craig Ranch', href: '/sell-craig-ranch' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Sell Your Home in Craig Ranch
           </h1>
@@ -265,7 +293,36 @@ export default function SellCraigRanchPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='howto-steps' className='py-16 bg-[#F7F9FC]'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-3'>
+            How to sell a home in Craig Ranch
+          </h2>
+          <p className='text-lg text-gray-700 leading-relaxed mb-8'>
+            Listing steps for Craig Ranch sellers working with Dr. Jan Duffy.
+          </p>
+          <ol className='space-y-6'>
+            {howToSteps.map((step, index) => (
+              <li key={step.name} className='flex gap-4'>
+                <span
+                  className='flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6BB8] text-sm font-bold text-white'
+                  aria-hidden
+                >
+                  {index + 1}
+                </span>
+                <div>
+                  <h3 className='text-xl font-semibold text-[#0A2540] mb-1'>
+                    {step.name}
+                  </h3>
+                  <p className='text-gray-700 leading-relaxed'>{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id='craig-ranch-faqs' className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
             Craig Ranch seller FAQs
@@ -334,24 +391,7 @@ export default function SellCraigRanchPage() {
               name: 'How to sell a home in Craig Ranch',
               description:
                 'Listing steps for Craig Ranch sellers working with Dr. Jan Duffy.',
-              steps: [
-                {
-                  name: 'Price with local comps',
-                  text: 'Review recent Craig Ranch and 89031 sales to set a competitive list price.',
-                },
-                {
-                  name: 'Prep the home',
-                  text: 'Complete repairs, staging priorities, and photo-ready presentation.',
-                },
-                {
-                  name: 'Market the listing',
-                  text: 'Launch MLS exposure, RealScout distribution, and targeted buyer outreach.',
-                },
-                {
-                  name: 'Negotiate and close',
-                  text: 'Manage offers, inspections, and closing timelines with clear next steps.',
-                },
-              ],
+              steps: howToSteps,
             }),
           ]),
         }}

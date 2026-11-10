@@ -5,12 +5,14 @@ import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Script from 'next/script';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import {
   generateMetadata as genMetadata,
   generateFAQPageSchema,
   generateSpeakableSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateHowToSchema,
 } from '@/lib/metadata';
 import { CRAIG_RANCH_LONGFORM_PARAGRAPHS } from '@/lib/craig-ranch-longform';
 
@@ -70,10 +72,41 @@ export default function CraigRanchHomeValuationPage() {
     },
   ] as const;
 
+  const howToSteps = [
+    {
+      name: 'Share your Craig Ranch address and basics',
+      text: 'Provide address, bed/bath count, approximate square footage, key upgrades, and your timeline.',
+    },
+    {
+      name: 'Review recent comps and active competition',
+      text: 'We pull closed Craig Ranch / 89031 sales and compare them to what buyers can choose right now.',
+    },
+    {
+      name: 'Adjust for condition and layout',
+      text: 'Factor finishes, lot features, and presentation into a practical value range—not a generic Zestimate.',
+    },
+    {
+      name: 'Choose a pricing strategy',
+      text: 'Map top-price, fast-sale, or wait-and-see scenarios to your goals and net proceeds.',
+    },
+    {
+      name: 'Decide next steps',
+      text: 'Call (702) 820-5408 to lock a list price plan, prep list, or buyer consult if you are purchasing instead.',
+    },
+  ] as const;
+
   return (
     <PageLayout>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Home Valuation', href: '/home-valuation-craig-ranch' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Home Valuation
           </h1>
@@ -124,6 +157,36 @@ export default function CraigRanchHomeValuationPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id='howto-steps' className='py-16 bg-[#F7F9FC]'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-3'>
+            How to get a Craig Ranch home valuation
+          </h2>
+          <p className='text-lg text-gray-700 leading-relaxed mb-8'>
+            Step-by-step process Dr. Jan Duffy uses for Craig Ranch and ZIP 89031
+            pricing conversations.
+          </p>
+          <ol className='space-y-6'>
+            {howToSteps.map((step, index) => (
+              <li key={step.name} className='flex gap-4'>
+                <span
+                  className='flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6BB8] text-sm font-bold text-white'
+                  aria-hidden
+                >
+                  {index + 1}
+                </span>
+                <div>
+                  <h3 className='text-xl font-semibold text-[#0A2540] mb-1'>
+                    {step.name}
+                  </h3>
+                  <p className='text-gray-700 leading-relaxed'>{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -263,7 +326,7 @@ export default function CraigRanchHomeValuationPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='craig-ranch-faqs' className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
             Craig Ranch valuation FAQs
@@ -334,6 +397,12 @@ export default function CraigRanchHomeValuationPage() {
               name: 'Craig Ranch Home Valuation',
             }),
             generateFAQPageSchema(faqs),
+            generateHowToSchema({
+              name: 'How to get a Craig Ranch home valuation',
+              description:
+                'Step-by-step process Dr. Jan Duffy uses for Craig Ranch and ZIP 89031 pricing conversations.',
+              steps: howToSteps,
+            }),
           ]),
         }}
       />

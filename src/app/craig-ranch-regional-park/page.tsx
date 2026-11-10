@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import PageLayout from '@/components/layout/page-layout';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import GoogleMap from '@/components/sections/google-map';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
@@ -74,6 +75,11 @@ export default function CraigRanchRegionalParkPage() {
     <PageLayout>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[{ name: 'Home', href: '/' }, { name: 'Neighborhood', href: '/neighborhood' }, { name: 'Regional Park', href: '/craig-ranch-regional-park' }]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Regional Park Guide
           </h1>
@@ -287,7 +293,7 @@ export default function CraigRanchRegionalParkPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='craig-ranch-faqs' className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
             Craig Ranch Regional Park FAQs

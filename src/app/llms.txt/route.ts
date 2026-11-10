@@ -16,6 +16,7 @@ export async function GET() {
 - What is the phone number? (702) 820-5408.
 - What ZIP code is Craig Ranch? 89031. The office postal code is 89032.
 - Where are reviews? ${SITE_NAP.reviewsHref}
+- What is the latest Craig Ranch market snapshot? As of August 2026: average value about $428K, median sale $415K, 46 days on market (not a live CMA). See ${baseUrl}/craig-ranch-market-report and ${baseUrl}/market-data.
 
 ## About
 Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with Berkshire Hathaway HomeServices Nevada Properties. This site focuses on Craig Ranch buyer and seller services in North Las Vegas.
@@ -76,7 +77,6 @@ Craig Ranch and North Las Vegas 89031, plus nearby Las Vegas / Henderson as need
 - [Relocate to Craig Ranch](${baseUrl}/relocate-to-craig-ranch-north-las-vegas)
 - [Contact](${baseUrl}/contact)
 - [Directions to the office](${baseUrl}/directions)
-- [Enter an address](${baseUrl}/find-address)
 - [Sitemap](${baseUrl}/sitemap.xml)
 - [AI policy](${baseUrl}/ai.txt)
 - [Humans](${baseUrl}/humans.txt)

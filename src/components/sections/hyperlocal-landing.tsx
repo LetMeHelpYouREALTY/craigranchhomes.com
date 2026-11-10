@@ -7,6 +7,7 @@ import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
 import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
@@ -68,6 +69,10 @@ export default function HyperlocalLanding({
   howTo,
 }: HyperlocalLandingProps) {
   const pageUrl = `${SITE_URL}${path}`;
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: h1, href: path },
+  ];
 
   const schemaGraph = [
     generateWebPageSchema({
@@ -101,6 +106,11 @@ export default function HyperlocalLanding({
       <div>
       <div className='bg-linear-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={breadcrumbItems}
+            tone='light'
+            className='mb-4'
+          />
           <p className='text-sm uppercase tracking-wide text-blue-100 mb-3'>
             {SITE_NAP.communityName} · North Las Vegas · {SITE_NAP.communityZip}
           </p>
@@ -160,6 +170,40 @@ export default function HyperlocalLanding({
           </div>
         </section>
       ))}
+
+      {howTo ? (
+        <section
+          id='howto-steps'
+          className='py-12 bg-[#F7F9FC] border-t border-gray-100'
+        >
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <h2 className='text-3xl font-bold text-[#0A2540] mb-3'>
+              {howTo.name}
+            </h2>
+            <p className='text-lg text-gray-700 leading-relaxed mb-8'>
+              {howTo.description}
+            </p>
+            <ol className='space-y-6'>
+              {howTo.steps.map((step, index) => (
+                <li key={step.name} className='flex gap-4'>
+                  <span
+                    className='flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6BB8] text-sm font-bold text-white'
+                    aria-hidden
+                  >
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className='text-xl font-semibold text-[#0A2540] mb-1'>
+                      {step.name}
+                    </h3>
+                    <p className='text-gray-700 leading-relaxed'>{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ) : null}
 
       <RealtorServicesGrid />
       <AeoFaqSection title={`${SITE_NAP.communityName} FAQs`} faqs={faqs} />

@@ -477,28 +477,48 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
 }
 
 /**
- * Generate CollectionPage schema for listings pages
+ * Generate CollectionPage schema for listings / resource hub pages.
+ * Only include ItemList members that are real, crawlable URLs on this site—
+ * never invent MLS listing entities the page does not render in HTML.
  */
 export function generateCollectionPageSchema({
   name,
   description,
   url,
+  items,
 }: {
   name: string;
   description: string;
   url: string;
+  items?: ReadonlyArray<{ name: string; url: string }>;
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
-    mainEntity: {
-      '@type': 'ItemList',
-      name,
-      description,
-    },
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
+    ...(items && items.length > 0
+      ? {
+          mainEntity: {
+            '@type': 'ItemList',
+            name,
+            numberOfItems: items.length,
+            itemListElement: items.map((item, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: item.name,
+              url: item.url,
+            })),
+          },
+        }
+      : {}),
   };
 }
 
@@ -519,9 +539,15 @@ export function generateWebPageSchema({
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     ...(breadcrumb && {
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -599,6 +625,11 @@ export function generateSpeakableSchema({
     '@id': `${url}#speakable`,
     url,
     name,
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: [
+      { '@id': `${siteUrl}#realestateagent` },
+      { '@id': `${siteUrl}/amenities#craig-ranch-place` },
+    ],
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: [...cssSelector],

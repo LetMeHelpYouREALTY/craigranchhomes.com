@@ -253,18 +253,46 @@ export const HOMES_PAGE_FAQS: ReadonlyArray<FaqItem> = [
   },
 ];
 
-export const NEIGHBORHOOD_PAGE_FAQS: ReadonlyArray<FaqItem> = [
+/** Lifestyle / place guide at /neighborhood */
+export const NEIGHBORHOOD_GUIDE_FAQS: ReadonlyArray<FaqItem> = [
   {
     question: 'What defines the Craig Ranch neighborhood for home buyers?',
     answer:
-      'Craig Ranch is a North Las Vegas master-planned community known for park access, trail mileage, and a mix of single-story and two-story floor plans. Buyers compare park proximity, HOA, and school assignment when choosing a street.',
+      'Craig Ranch is a North Las Vegas master-planned community in ZIP 89031 with a 170-acre regional park, about 5 miles of trails, and homes commonly ranging from 1,519–2,638 sq ft. Buyers compare park proximity, HOA dues, and verified school assignment when choosing a street.',
   },
   {
-    question: 'How do I compare Craig Ranch to nearby North Las Vegas neighborhoods?',
+    question: 'What amenities sit inside Craig Ranch?',
     answer:
-      'Compare price per square foot, days on market, commute, and amenity access. Dr. Jan Duffy builds side-by-side comps so you see tradeoffs in dollars and minutes, not slogans.',
+      'Standouts include Craig Ranch Regional Park, neighborhood parks, and trail connections, plus shopping and dining along West Craig Road. Use the amenities map for restaurants, groceries, and healthcare near specific addresses.',
+  },
+  {
+    question: 'How do I start a Craig Ranch home search after reading this guide?',
+    answer:
+      'Call (702) 820-5408 or open the homes hub for office inventory, then filter by square footage, bed count, and commute. Dr. Jan Duffy pairs the lifestyle facts on this page with live comps before you tour.',
   },
 ];
+
+/** Subdivision / collection hub at /neighborhoods */
+export const NEIGHBORHOODS_HUB_FAQS: ReadonlyArray<FaqItem> = [
+  {
+    question: 'What subdivisions and collections make up Craig Ranch?',
+    answer:
+      'Craig Ranch includes pockets such as Jasmine Ranch, Centennial Crossing, and Seabreeze, plus Century Communities collections (Mohave, Essence, Serenity, Olympic, Monarch). Each differs by home type, lot size, and price band.',
+  },
+  {
+    question: 'How do I choose between Craig Ranch subdivisions?',
+    answer:
+      'Compare bed/bath count, condo vs single-family, lot size, HOA rules, and list price—not marketing labels. Dr. Jan Duffy builds side-by-side comps so tradeoffs show up in dollars, square footage, and minutes.',
+  },
+  {
+    question: 'Where should I go next after browsing Craig Ranch collections?',
+    answer:
+      'Read the Craig Ranch neighborhood lifestyle guide for parks and commute context, then browse homes for sale or call (702) 820-5408 for a shortlist matched to a specific collection.',
+  },
+];
+
+/** @deprecated Prefer NEIGHBORHOOD_GUIDE_FAQS or NEIGHBORHOODS_HUB_FAQS */
+export const NEIGHBORHOOD_PAGE_FAQS = NEIGHBORHOOD_GUIDE_FAQS;
 
 export const MARKET_DATA_FAQS: ReadonlyArray<FaqItem> = [
   {

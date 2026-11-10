@@ -26,6 +26,7 @@ import { Home, MapPin, DollarSign, TrendingUp } from 'lucide-react';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import HyperlocalNapCta from '@/components/sections/hyperlocal-nap-cta';
 import HyperlocalRelatedLinks from '@/components/sections/hyperlocal-related-links';
 import RealtorServicesGrid from '@/components/sections/realtor-services-grid';
@@ -61,6 +62,14 @@ export default function HomesPage() {
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Homes for Sale', href: '/homes' },
+            ]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Homes for Sale in Craig Ranch
           </h1>
@@ -349,8 +358,30 @@ export default function HomesPage() {
             generateCollectionPageSchema({
               name: 'Homes for Sale in Craig Ranch, Las Vegas',
               description:
-                'Browse luxury homes for sale in Craig Ranch, Las Vegas. Floor plans from 1,519–2,638 sq ft near Craig Ranch Regional Park.',
+                'Craig Ranch homes hub: office inventory widget plus buyer guides for ZIP 89031. Live MLS cards are rendered by RealScout—not duplicated as listing schema here.',
               url: `${baseUrl}/homes`,
+              items: [
+                {
+                  name: 'Buy Craig Ranch Homes',
+                  url: `${baseUrl}/buy-craig-ranch-homes`,
+                },
+                {
+                  name: 'Luxury Homes in Craig Ranch',
+                  url: `${baseUrl}/luxury-homes-craig-ranch-north-las-vegas`,
+                },
+                {
+                  name: 'Craig Ranch Market Data',
+                  url: `${baseUrl}/market-data`,
+                },
+                {
+                  name: 'New Construction in Craig Ranch',
+                  url: `${baseUrl}/new-construction-craig-ranch`,
+                },
+                {
+                  name: 'Home Valuation for Craig Ranch',
+                  url: `${baseUrl}/home-valuation-craig-ranch`,
+                },
+              ],
             }),
             generateSpeakableSchema({
               url: `${baseUrl}/homes`,

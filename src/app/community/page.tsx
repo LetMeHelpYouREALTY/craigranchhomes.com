@@ -1,4 +1,5 @@
 import PageLayout from '@/components/layout/page-layout';
+import Breadcrumbs from '@/components/sections/breadcrumbs';
 import {
   Card,
   CardContent,
@@ -57,23 +58,23 @@ export default function CommunityPage() {
     {
       name: 'Eva G. Simmons Elementary School',
       type: 'Public Elementary',
-      rating: 'B (Niche)',
+      rating: 'Verify zoning',
       distance: 'Nearby',
-      features: 'Family picnics, book bus',
+      features: 'Confirm book-bus routes with the campus',
     },
     {
       name: 'Clifford O. Pete Findlay Middle School',
       type: 'Public Middle School',
-      rating: 'C (Niche)',
+      rating: 'Verify zoning',
       distance: 'Nearby',
-      features: 'Loved by alumni',
+      features: 'Confirm programs and boundaries yearly',
     },
     {
       name: 'Mojave High School',
       type: 'Public High School',
-      rating: 'C (Niche)',
+      rating: 'Verify zoning',
       distance: 'Nearby',
-      features: 'Guitar club, bowling team, boys basketball state champions (2022, 2023)',
+      features: 'Confirm athletics and clubs with the campus',
     },
   ];
 
@@ -135,6 +136,11 @@ export default function CommunityPage() {
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Breadcrumbs
+            items={[{ name: 'Home', href: '/' }, { name: 'Community', href: '/community' }]}
+            tone='light'
+            className='mb-4'
+          />
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Craig Ranch Community Guide
           </h1>
@@ -400,6 +406,7 @@ export default function CommunityPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'Place',
+              '@id': `${baseUrl}/amenities#craig-ranch-place`,
               name: 'Craig Ranch Community',
               description:
                 'Master-planned community in North Las Vegas with parks, trails, shopping, dining, and nearby schools including Eva G. Simmons Elementary, Findlay Middle, and Mojave High',

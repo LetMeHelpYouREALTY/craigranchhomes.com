@@ -44,6 +44,33 @@ export default function NellisAfbRelocationPage() {
       faqs={NELLIS_FAQS}
       primaryCta={{ href: '/buy-craig-ranch-homes', label: 'Buyer Representation' }}
       secondaryCta={{ href: '/sell-craig-ranch', label: 'Sell Before PCS' }}
+      howTo={{
+        name: 'How to buy near Craig Ranch during a Nellis AFB PCS',
+        description:
+          'PCS-aware steps to purchase in Craig Ranch / ZIP 89031 around your Nellis report date.',
+        steps: [
+          {
+            name: 'Align financing with orders',
+            text: 'Get pre-approved (often VA-experienced lenders) as soon as orders are in hand and confirm BAH planning.',
+          },
+          {
+            name: 'Map commute to your gate',
+            text: 'Shortlist Craig Ranch streets by drive time to Nellis AFB, bed count, and closing window.',
+          },
+          {
+            name: 'Tour on a PCS calendar',
+            text: 'Book showings around temporary lodging and leave days so you can compete without rushing.',
+          },
+          {
+            name: 'Structure a timeline-aware offer',
+            text: 'Match contingencies and close date to your report date; plan temporary housing if dates diverge.',
+          },
+          {
+            name: 'Close and settle',
+            text: 'Complete inspections, appraisal, and closing with clear next steps—or list your current home if you are selling first.',
+          },
+        ],
+      }}
     />
   );
 }
