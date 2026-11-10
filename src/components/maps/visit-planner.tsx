@@ -167,7 +167,7 @@ export default function VisitPlanner({ initialOrigin = '' }: VisitPlannerProps) 
           {TRAVEL_MODES.map((item) => (
             <li key={item.id}>
               <a
-                className='text-[#3A8DDE] hover:underline font-medium'
+                className='text-[#1E6BB8] hover:text-[#185A9C] hover:underline font-medium'
                 href={googleMapsDirectionsUrl(activeOrigin, item.id)}
                 target='_blank'
                 rel='noopener noreferrer'

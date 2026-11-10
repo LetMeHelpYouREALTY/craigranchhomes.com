@@ -1,26 +1,28 @@
 import Link from 'next/link';
 import { directionsHref, SITE_NAP } from '@/lib/site-nap';
 
-const AGENT_HEADSHOT = '/images/dr-jan-duffy-headshot.jpg';
-
 const CALENDLY_SHOWING_URL =
   'https://calendly.com/drjanduffy/showing?utm_source=craigranchhomes.com&utm_medium=website&utm_content=home-hero';
 
+const HERO_AVIF_SRCSET =
+  '/hero-craig-ranch-480.avif 480w, /hero-craig-ranch-640.avif 640w, /hero-craig-ranch-828.avif 828w, /hero-craig-ranch-mobile.avif 1200w, /hero-craig-ranch.avif 1920w';
 const HERO_WEBP_SRCSET =
-  '/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w';
+  '/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-640.webp 640w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w';
 const HERO_JPG_SRCSET =
-  '/hero-craig-ranch-480.jpg 480w, /hero-craig-ranch-828.jpg 828w, /hero-craig-ranch-mobile.jpg 1200w, /hero-craig-ranch.jpg 1920w';
+  '/hero-craig-ranch-480.jpg 480w, /hero-craig-ranch-640.jpg 640w, /hero-craig-ranch-828.jpg 828w, /hero-craig-ranch-mobile.jpg 1200w, /hero-craig-ranch.jpg 1920w';
+
+const HEADSHOT_WEBP_SRCSET =
+  '/images/dr-jan-duffy-headshot-112.webp 112w, /images/dr-jan-duffy-headshot-176.webp 176w, /images/dr-jan-duffy-headshot-224.webp 224w';
+const HEADSHOT_JPG_SRCSET =
+  '/images/dr-jan-duffy-headshot-112.jpg 112w, /images/dr-jan-duffy-headshot-176.jpg 176w, /images/dr-jan-duffy-headshot-224.jpg 224w';
 
 export default function Hero() {
   return (
     <section className='relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
       <div className='absolute inset-0 w-full h-full bg-[#0A2540]'>
         <picture>
-          <source
-            type='image/webp'
-            srcSet={HERO_WEBP_SRCSET}
-            sizes='100vw'
-          />
+          <source type='image/avif' srcSet={HERO_AVIF_SRCSET} sizes='100vw' />
+          <source type='image/webp' srcSet={HERO_WEBP_SRCSET} sizes='100vw' />
           <img
             src='/hero-craig-ranch-828.jpg'
             srcSet={HERO_JPG_SRCSET}
@@ -39,15 +41,24 @@ export default function Hero() {
 
       <div className='relative z-10 text-center text-white max-w-4xl mx-auto px-4'>
         <div className='mb-6 flex flex-col items-center animate-fade-in'>
-          <img
-            src={AGENT_HEADSHOT}
-            alt={`${SITE_NAP.agentName}, REALTOR® for Craig Ranch homes in North Las Vegas`}
-            width={112}
-            height={112}
-            loading='lazy'
-            decoding='async'
-            className='h-24 w-24 md:h-28 md:w-28 rounded-full object-cover object-[center_20%] ring-2 ring-white/85 shadow-[0_8px_24px_rgba(0,0,0,0.35)]'
-          />
+          <picture>
+            <source
+              type='image/webp'
+              srcSet={HEADSHOT_WEBP_SRCSET}
+              sizes='(min-width: 768px) 112px, 96px'
+            />
+            <img
+              src='/images/dr-jan-duffy-headshot-224.jpg'
+              srcSet={HEADSHOT_JPG_SRCSET}
+              sizes='(min-width: 768px) 112px, 96px'
+              alt={`${SITE_NAP.agentName}, REALTOR® for Craig Ranch homes in North Las Vegas`}
+              width={112}
+              height={112}
+              loading='lazy'
+              decoding='async'
+              className='h-24 w-24 md:h-28 md:w-28 rounded-full object-cover object-[center_20%] ring-2 ring-white/85 shadow-[0_8px_24px_rgba(0,0,0,0.35)]'
+            />
+          </picture>
           <p className='mt-3 text-lg md:text-xl font-semibold tracking-wide text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]'>
             {SITE_NAP.agentName}
           </p>

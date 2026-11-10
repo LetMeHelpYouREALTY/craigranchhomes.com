@@ -167,13 +167,13 @@ export default function RootLayout({
         <link rel='icon' href='/logo.png' type='image/png' sizes='512x512' />
         <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
-        {/* LCP hero: preload responsive WebP with high priority */}
+        {/* LCP hero: preload responsive AVIF with high priority */}
         <link
           rel='preload'
           as='image'
-          href='/hero-craig-ranch-828.webp'
-          type='image/webp'
-          imageSrcSet='/hero-craig-ranch-480.webp 480w, /hero-craig-ranch-828.webp 828w, /hero-craig-ranch-mobile.webp 1200w, /hero-craig-ranch.webp 1920w'
+          href='/hero-craig-ranch-828.avif'
+          type='image/avif'
+          imageSrcSet='/hero-craig-ranch-480.avif 480w, /hero-craig-ranch-640.avif 640w, /hero-craig-ranch-828.avif 828w, /hero-craig-ranch-mobile.avif 1200w, /hero-craig-ranch.avif 1920w'
           imageSizes='100vw'
           fetchPriority='high'
         />
