@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LocalMarketPost from '@/components/sections/local-market-post';
 import { RSSImage } from '@/components/ui/rss-image';
 import PageLayout from '@/components/layout/page-layout';
 import { Badge } from '@/components/ui/badge';
@@ -106,7 +107,7 @@ export default async function MarketInsightsPage() {
             </h1>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Local market guidance for Craig Ranch, North Las Vegas 89031 from
-              Dr. Jan Duffy. New local updates are coming soon. Call (702) 820-5408 for address-level strategy.
+              Dr. Jan Duffy. This month's local update is below. Call (702) 820-5408 for address-level strategy.
             </p>
           </div>
         </div>
@@ -116,6 +117,10 @@ export default async function MarketInsightsPage() {
         answer='Use national rate and inventory articles for context, then confirm list price and offer strategy with Craig Ranch comps in North Las Vegas 89031. Dr. Jan Duffy translates headlines into local numbers—call (702) 820-5408 or open the Craig Ranch market report.'
       />
       </div>
+
+      <section className='py-12 px-4 sm:px-6 lg:px-8'>
+        <LocalMarketPost />
+      </section>
 
       {posts.length > 0 && (
       <section className='pb-16 bg-white'>
