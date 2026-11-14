@@ -6,13 +6,11 @@ import Hero from '@/components/sections/hero';
 import HomeEvaluationSection from '@/components/sections/home-evaluation';
 import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
-import BlogPosts from '@/components/sections/blog-posts';
 import GoogleMap from '@/components/sections/google-map';
 import AeoAnswerBlock from '@/components/sections/aeo-answer-block';
 import AeoFaqSection from '@/components/sections/aeo-faq-section';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
-import BlogPostsSkeleton from '@/components/skeletons/blog-posts-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Home as HomeIcon, MapPin, TrendingUp } from 'lucide-react';
@@ -62,14 +60,6 @@ const DynamicFeaturedCommunities = dynamic(
   () => import('@/components/sections/featured-communities'),
   {
     loading: () => <CommunitiesSkeleton />,
-    ssr: true,
-  }
-);
-
-const DynamicBlogPosts = dynamic(
-  () => import('@/components/sections/blog-posts'),
-  {
-    loading: () => <BlogPostsSkeleton />,
     ssr: true,
   }
 );
@@ -247,9 +237,6 @@ export default function Home() {
         <NearbyAmenitiesSection title={`Life Near ${SITE_NAP.communityName}`} />
 
         <DynamicHomeEvaluation />
-        <Suspense fallback={<BlogPostsSkeleton />}>
-          <DynamicBlogPosts />
-        </Suspense>
         
         {/* Strategic Internal Links for Sitelinks Optimization */}
         <section className='py-12 bg-gray-50 border-t border-gray-200'>

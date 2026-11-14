@@ -26,7 +26,6 @@ import {
   generateFAQPageSchema,
   generateSpeakableSchema,
 } from '@/lib/metadata';
-import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
@@ -57,52 +56,10 @@ type BlogPost = {
 export const dynamic = 'force-dynamic';
 export const revalidate = 3600; // Revalidate every hour
 
-async function getBlogPosts(limit: number): Promise<BlogPost[]> {
-  try {
-    // Fetch directly from RSS feed instead of API route to avoid build-time issues
-    const RSS_FEED_URL =
-      'https://www.simplifyingthemarket.com/en/feed/';
-    
-    const response = await fetch(RSS_FEED_URL, {
-      next: { revalidate: 3600 },
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; RSS Reader)',
-      },
-    });
-
-    if (!response.ok) {
-      console.error('Failed to fetch RSS feed:', response.statusText);
-      return [];
-    }
-
-    const xmlString = await response.text();
-    const feed = parseRSSFeed(xmlString);
-
-    if (!feed.items?.length) {
-      return [];
-    }
-
-    // Return first N items
-    return feed.items.slice(0, limit).map((item) => {
-      const categorySlug = item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
-      const categoryLink = `https://www.simplifyingthemarket.com/en/category/${categorySlug}/`;
-      
-      return {
-        title: item.title,
-        postLink: item.link,
-        description: item.description,
-        category: item.categories[0] || 'Market Insights',
-        categoryLink,
-        author: item.creator,
-        date: formatDate(item.pubDate),
-        isoDate: isoDate(item.pubDate),
-        imageUrl: item.imageUrl || '/placeholder-blog.jpg',
-      };
-    });
-  } catch (error) {
-    console.error('Error fetching blog posts:', error);
-    return [];
-  }
+// The Keeping Current Matters articles were removed on 2026-11-14: their terms
+// allow them on a website only during a paid membership, which has ended.
+async function getBlogPosts(_limit: number): Promise<BlogPost[]> {
+  return [];
 }
 
 /**
@@ -148,25 +105,8 @@ export default async function MarketInsightsPage() {
               Craig Ranch Las Vegas Homes Market Insights
             </h1>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              National and regional articles for context—then apply them to Craig
-              Ranch, North Las Vegas 89031 with local comps from Dr. Jan Duffy
-              {posts.length > 0 ? (
-                <>
-                  {' '}
-                  (source:{' '}
-                  <Link
-                    href='https://www.simplifyingthemarket.com/en/feed/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    prefetch={false}
-                    className='text-[#1E6BB8] hover:underline'
-                  >
-                    Simplifying the Market
-                  </Link>
-                  )
-                </>
-              ) : null}
-              . Call (702) 820-5408 for address-level strategy.
+              Local market guidance for Craig Ranch, North Las Vegas 89031 from
+              Dr. Jan Duffy. New local updates are coming soon. Call (702) 820-5408 for address-level strategy.
             </p>
           </div>
         </div>
