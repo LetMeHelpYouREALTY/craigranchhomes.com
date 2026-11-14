@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
 const RSS_FEED_URL =
-  'https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18';
+  'https://www.simplifyingthemarket.com/en/feed/';
 
 // Mark as dynamic route since we use request parameters
 export const dynamic = 'force-dynamic';
@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
     const blogPosts = feed.items.slice(0, limit).map((item) => {
       // Generate category link
       const categorySlug = item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
-      const categoryLink = `https://www.simplifyingthemarket.com/en/category/${categorySlug}/?a=956758-ef2edda2f940e018328655620ea05f18`;
+      const categoryLink = `https://www.simplifyingthemarket.com/en/category/${categorySlug}/`;
       
       return {
         title: item.title,

@@ -51,7 +51,7 @@ async function getBlogPosts(limit: number = 3): Promise<BlogPost[]> {
   try {
     // Fetch directly from RSS feed instead of API route to avoid build-time issues
     const RSS_FEED_URL =
-      'https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18';
+      'https://www.simplifyingthemarket.com/en/feed/';
     
     const response = await fetch(RSS_FEED_URL, {
       next: { revalidate: 3600 },
@@ -75,7 +75,7 @@ async function getBlogPosts(limit: number = 3): Promise<BlogPost[]> {
     // Return first N items
     return feed.items.slice(0, limit).map((item) => {
       const categorySlug = item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
-      const categoryLink = `https://www.simplifyingthemarket.com/en/category/${categorySlug}/?a=956758-ef2edda2f940e018328655620ea05f18`;
+      const categoryLink = `https://www.simplifyingthemarket.com/en/category/${categorySlug}/`;
       
       // Log image URL for debugging (only in development)
       if (process.env.NODE_ENV === 'development' && item.imageUrl) {
