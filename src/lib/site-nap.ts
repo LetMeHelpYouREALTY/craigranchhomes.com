@@ -37,7 +37,8 @@ export const SITE_NAP = {
 /** Canonical brand mark for schema, favicon, and header (512×512 PNG). */
 export const SITE_LOGO_PATH = '/logo.png' as const;
 export const SITE_LOGO_URL = `${SITE_URL}${SITE_LOGO_PATH}`;
-export const SITE_AGENT_PHOTO_PATH = '/images/dr-jan-duffy-headshot.jpg' as const;
+export const SITE_AGENT_PHOTO_PATH =
+  '/images/dr-jan-duffy-headshot-224.jpg' as const;
 export const SITE_AGENT_PHOTO_URL = `${SITE_URL}${SITE_AGENT_PHOTO_PATH}`;
 
 /** Directions links land on the planner, below the office listings band. */

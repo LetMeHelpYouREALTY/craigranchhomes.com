@@ -28,18 +28,15 @@ export default function Navigation() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo/Brand */}
-          <Link
-            href='/'
-            className='flex items-center gap-2.5 min-w-0'
-            aria-label={`${SITE_NAP.name} — call ${SITE_NAP.phoneDisplay}`}
-          >
+          <Link href='/' className='flex items-center gap-2.5 min-w-0'>
             <Image
               src={SITE_LOGO_PATH}
-              alt={`${SITE_NAP.agentName} — Craig Ranch Homes`}
+              alt=''
               width={40}
               height={40}
               priority
               className='h-10 w-10 rounded-full object-cover shrink-0'
+              aria-hidden
             />
             <span className='flex flex-col leading-tight min-w-0'>
               <span className='text-sm sm:text-base font-bold text-[#0A2540] truncate'>
@@ -94,10 +91,11 @@ export default function Navigation() {
                 <div className='flex items-center gap-3 mb-4'>
                   <Image
                     src={SITE_LOGO_PATH}
-                    alt={`${SITE_NAP.agentName} — Craig Ranch Homes`}
+                    alt=''
                     width={48}
                     height={48}
                     className='h-12 w-12 rounded-full object-cover'
+                    aria-hidden
                   />
                   <div>
                     <p className='text-lg font-bold text-[#0A2540]'>
