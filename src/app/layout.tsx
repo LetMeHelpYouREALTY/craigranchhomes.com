@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import Script from 'next/script';
-import { Source_Sans_3, Open_Sans } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import DeferredAnalytics from '@/components/analytics/deferred-analytics';
 import {
   generateOrganizationSchema,
@@ -53,17 +54,39 @@ function isValidFacebookPixelId(value: string | undefined): value is string {
 // Ensure these assets exist in /public to avoid 404s for crawlers.
 const ogImageUrl = `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`;
 
-// Optimize fonts with next/font
-const sourceSansPro = Source_Sans_3({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
+// Self-host fonts via next/font/local to avoid intermittent next/font/google
+// build failures when Google returns extensionless /l/font?kit= URLs
+// (vercel/next.js#99114; fixed on Next 16.4.3+, not yet on 15.5.x).
+const sourceSansPro = localFont({
+  src: [
+    {
+      path: '../fonts/source-sans-3-latin-300-normal.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/source-sans-3-latin-400-normal.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/source-sans-3-latin-500-normal.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
   display: 'swap',
   variable: '--font-source-sans-pro',
 });
 
-const openSans = Open_Sans({
-  weight: ['400'],
-  subsets: ['latin'],
+const openSans = localFont({
+  src: [
+    {
+      path: '../fonts/open-sans-latin-400-normal.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
   display: 'swap',
   variable: '--font-open-sans',
 });
@@ -184,8 +207,6 @@ export default function RootLayout({
         <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
         <link rel='dns-prefetch' href='https://embed.homebotapp.com' />
-        <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
-        <link rel='dns-prefetch' href='https://fonts.gstatic.com' />
 
         <style>{`
           realscout-office-listings {
@@ -258,6 +279,7 @@ export default function RootLayout({
         />
         {/* RealScout loads on-demand when a widget scrolls into view */}
         {children}
+        <SpeedInsights />
         <Script src='/ads-conversions.js' strategy='afterInteractive' />
       </body>
     </html>
