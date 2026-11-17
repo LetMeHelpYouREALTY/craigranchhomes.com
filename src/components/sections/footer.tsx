@@ -171,6 +171,15 @@ export default function Footer() {
                 >
                   View Google Reviews
                 </a>
+                {' · '}
+                <a
+                  href={SITE_NAP.writeReviewHref}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-white hover:underline'
+                >
+                  Leave a Review
+                </a>
               </li>
             </ul>
           </div>
