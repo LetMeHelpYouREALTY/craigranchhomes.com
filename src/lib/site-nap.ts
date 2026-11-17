@@ -29,6 +29,8 @@ export const SITE_NAP = {
   directionsPath: '/directions',
   findAddressPath: '/find-address#address-lookup',
   reviewsHref: 'https://share.google/b7iar6aMhBb9ayPkF',
+  /** Google Business Profile "write a review" form link. */
+  writeReviewHref: 'https://g.page/r/CbCCi_UR-ScAEBk/review',
   agentName: 'Dr. Jan Duffy',
   brokerage: 'Berkshire Hathaway HomeServices Nevada',
   license: 'S.0197614.LLC',

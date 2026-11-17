@@ -251,6 +251,24 @@ export default function ContactPage() {
               </Link>
             </Button>
           </div>
+          <div className='mt-8 rounded-lg border border-[#16B286]/30 bg-[#16B286]/5 p-6 text-center'>
+            <h3 className='text-xl font-semibold text-[#0A2540] mb-2'>
+              Worked with Dr. Jan Duffy?
+            </h3>
+            <p className='text-gray-600 mb-4'>
+              A short Google review helps other Craig Ranch buyers and sellers
+              find trusted local help. It takes about a minute.
+            </p>
+            <Button asChild className='bg-[#16B286] hover:bg-[#15A276] text-white'>
+              <a
+                href='https://g.page/r/CbCCi_UR-ScAEBk/review'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Leave a Google Review
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 

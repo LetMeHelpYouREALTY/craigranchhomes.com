@@ -59,6 +59,15 @@ export default function HyperlocalNapCta({
               >
                 View Google Reviews
               </a>
+              {' · '}
+              <a
+                className='underline hover:text-white'
+                href={SITE_NAP.writeReviewHref}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Leave a Review
+              </a>
             </p>
           </div>
         </div>
